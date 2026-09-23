@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=1920, initial-scale=1">
 <title>IA Aplicada à Produtividade: Apresentação Interna V4</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,451 +29,252 @@
 }
 
 html, body {
-  background: var(--bg);
+  background: #000;
   color: var(--text);
   font-family: 'Inter', -apple-system, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
-}
-
-body {
-  overflow-x: hidden;
-  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.02) 1px, transparent 0);
-  background-size: 40px 40px;
+  overflow: hidden;
 }
 
 ::selection { background: var(--red); color: white; }
 
-/* Progress + nav */
-.progress-bar {
-  position: fixed; top: 0; left: 0; height: 2px;
-  background: var(--red); z-index: 100; width: 0;
-  transition: width 0.1s ease;
+/* ── Estrutura de palco fixo 1920x1080, escala pra caber na tela ── */
+.deck { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: #000; }
+.stage { width: 1920px; height: 1080px; position: relative; transform-origin: center center; }
+
+section.slide {
+  position: absolute; inset: 0; width: 1920px; height: 1080px;
+  background: var(--bg); color: var(--text);
+  display: none; overflow-y: auto; overflow-x: hidden;
+  padding: 70px 90px;
 }
+section.slide.active { display: flex; flex-direction: column; }
+section.slide.center { justify-content: center; }
+section.slide.top { justify-content: flex-start; }
 
-.slide-nav {
-  position: fixed; right: 28px; top: 50%;
-  transform: translateY(-50%); z-index: 50;
-  display: flex; flex-direction: column; gap: 12px;
+.nav {
+  position: fixed; bottom: 24px; right: 34px; z-index: 9999;
+  display: flex; gap: 10px; align-items: center;
 }
-
-.slide-nav a {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--border-2); transition: all 0.3s ease;
-  display: block;
+.nav button {
+  background: var(--red); border: none; color: #fff; width: 44px; height: 44px;
+  font-size: 22px; cursor: pointer; font-weight: 900; border-radius: 4px;
 }
-
-.slide-nav a.active {
-  background: var(--red);
-  box-shadow: 0 0 0 5px rgba(225, 6, 0, 0.18);
-  transform: scale(1.2);
-}
-
-.slide-nav a:hover { background: var(--red); }
-
-@media (max-width: 900px) { .slide-nav { display: none; } }
-
-/* Slide base */
-.slide {
-  min-height: 100vh;
-  padding: 90px 70px 90px;
-  display: flex; flex-direction: column;
-  justify-content: center;
-  position: relative; overflow: hidden;
-}
-
-.slide.dense {
-  justify-content: flex-start;
-  padding-top: 100px; padding-bottom: 100px;
-}
-
-.slide > * { position: relative; z-index: 2; }
-
-@media (max-width: 768px) { .slide { padding: 70px 24px 70px; } }
-
-.slide-num {
-  position: absolute; top: 36px; left: 70px;
+.nav button:disabled { opacity: .3; cursor: default; }
+.nav .counter {
+  color: #fff; background: rgba(0,0,0,.6); padding: 8px 16px;
   font-family: 'Space Grotesk', monospace;
-  font-size: 12px; letter-spacing: 0.25em;
-  color: var(--text-3); z-index: 3;
+  font-size: 14px; letter-spacing: .1em; border-radius: 4px;
 }
 
-@media (max-width: 768px) { .slide-num { left: 24px; top: 24px; } }
+@media print {
+  html, body { overflow: visible; background: #fff; }
+  .deck { position: static; display: block; }
+  .stage { width: 1920px; height: auto; transform: none !important; }
+  section.slide { display: flex !important; position: relative; page-break-after: always; overflow: visible; }
+  .nav { display: none; }
+}
 
-/* Eyebrow + tipografia base */
+/* ── Tipografia base ── */
+.slide-num {
+  position: absolute; top: 34px; left: 90px;
+  font-family: 'Space Grotesk', monospace;
+  font-size: 13px; letter-spacing: 0.25em; color: var(--text-3);
+}
 .eyebrow {
   font-family: 'Space Grotesk', monospace;
-  font-size: 12px; letter-spacing: 0.25em;
+  font-size: 14px; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--red);
-  margin-bottom: 24px;
+  margin-bottom: 18px; margin-top: 30px;
   display: flex; align-items: center; gap: 12px;
 }
-
-.eyebrow::before {
-  content: ''; width: 24px; height: 1px;
-  background: var(--red); display: block;
-}
-
-.h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(56px, 9vw, 140px);
-  line-height: 0.92; letter-spacing: -0.005em; font-weight: 400;
-}
-
-.h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(40px, 5.5vw, 84px);
-  line-height: 0.95; letter-spacing: -0.005em;
-  margin-bottom: 28px; font-weight: 400;
-}
-
-.h3 {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(20px, 1.8vw, 26px);
-  font-weight: 700; line-height: 1.25;
-  margin-bottom: 12px; color: var(--text);
-}
-
-.lead {
-  font-size: clamp(16px, 1.35vw, 19px);
-  line-height: 1.6; color: var(--text-2);
-  max-width: 720px;
-}
-
+.eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--red); display: block; }
+.h1 { font-family: 'Bebas Neue', sans-serif; font-size: 128px; line-height: 0.92; letter-spacing: -0.005em; font-weight: 400; }
+.h1-md { font-family: 'Bebas Neue', sans-serif; font-size: 62px; line-height: 1.05; letter-spacing: -0.005em; font-weight: 400; max-width: 1500px; }
+.h2 { font-family: 'Bebas Neue', sans-serif; font-size: 58px; line-height: 1; letter-spacing: -0.005em; margin-bottom: 16px; font-weight: 400; }
+.lead { font-size: 20px; line-height: 1.5; color: var(--text-2); max-width: 1300px; margin-bottom: 6px; }
 .accent { color: var(--red); }
 .gold { color: var(--gold); }
 
 .callout {
-  border-left: 3px solid var(--red);
-  padding: 14px 0 14px 22px;
-  margin-top: 24px;
-  font-size: 15px; line-height: 1.55;
-  color: var(--text);
+  border-left: 3px solid var(--red); padding: 12px 0 12px 20px; margin-top: 18px;
+  font-size: 14px; line-height: 1.5; color: var(--text); max-width: 1500px;
   background: linear-gradient(90deg, rgba(225,6,0,0.06), transparent);
 }
 
-.divider { height: 1px; background: var(--border); margin: 32px 0; }
-
-.corner-mark {
-  position: absolute; bottom: 36px; right: 70px;
-  font-family: 'Space Grotesk', monospace;
-  font-size: 10px; letter-spacing: 0.3em;
-  color: var(--text-3);
-  display: flex; align-items: center; gap: 10px;
-}
-
-.corner-mark::before {
-  content: ''; width: 6px; height: 6px;
-  background: var(--red); border-radius: 50%;
-}
-
-@media (max-width: 768px) { .corner-mark { right: 24px; bottom: 20px; } }
-
-/* Reveal animation */
-.reveal {
-  opacity: 0; transform: translateY(28px);
-  transition:
-    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal.in { opacity: 1; transform: translateY(0); }
-
-.reveal-delay-1 { transition-delay: 0.06s; }
-.reveal-delay-2 { transition-delay: 0.12s; }
-.reveal-delay-3 { transition-delay: 0.18s; }
-.reveal-delay-4 { transition-delay: 0.24s; }
-
-/* ── cover-poster ── */
+/* ── cover ── */
 .cover {
   background:
     radial-gradient(ellipse 80% 60% at 90% 0%, rgba(225,6,0,0.18), transparent 60%),
     radial-gradient(ellipse 60% 50% at 10% 100%, rgba(212,175,55,0.06), transparent 60%),
     var(--bg);
-  justify-content: center;
 }
-.cover-grid { display: flex; flex-direction: column; gap: 56px; max-width: 1500px; }
-.cover-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(64px, 12vw, 190px);
-  line-height: 0.88; letter-spacing: -0.02em; font-weight: 400;
-}
+.cover-grid { display: flex; flex-direction: column; gap: 44px; max-width: 1600px; }
+.cover-title { font-family: 'Bebas Neue', sans-serif; font-size: 148px; line-height: 0.88; letter-spacing: -0.02em; font-weight: 400; }
 .cover-title span { display: block; }
 .cover-title .line-2 { color: var(--red); }
 .cover-meta {
-  display: flex; gap: 32px; flex-wrap: wrap;
-  font-family: 'Space Grotesk', monospace;
-  font-size: 12px; letter-spacing: 0.2em;
+  display: flex; gap: 36px; flex-wrap: wrap;
+  font-family: 'Space Grotesk', monospace; font-size: 14px; letter-spacing: 0.15em;
   text-transform: uppercase; color: var(--text-3);
-  border-top: 1px solid var(--border);
-  padding-top: 28px; max-width: 900px;
+  border-top: 1px solid var(--border); padding-top: 24px; max-width: 1200px;
 }
 .cover-meta span { display: flex; align-items: center; gap: 10px; }
-.cover-meta span::before {
-  content: ''; width: 6px; height: 6px;
-  background: var(--red); border-radius: 50%; flex-shrink: 0;
-}
-.scroll-hint {
-  position: absolute; bottom: 32px; left: 70px;
-  font-family: 'Space Grotesk', monospace;
-  font-size: 11px; letter-spacing: 0.3em;
-  color: var(--text-3);
-  display: flex; align-items: center; gap: 12px;
-  animation: pulse 2.5s ease-in-out infinite;
-}
-@keyframes pulse {
-  0%, 100% { opacity: 0.4; transform: translateY(0); }
-  50% { opacity: 1; transform: translateY(4px); }
-}
-.scroll-hint::after { content: '↓'; font-size: 14px; }
+.cover-meta span::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
 
-/* ── concept-vars-3 ── */
-.concept-hero {
-  max-width: 1500px;
-  display: grid; grid-template-columns: 1.4fr 1fr;
-  gap: 72px; align-items: end;
-  margin-bottom: 60px;
+/* ── conceito: grid 2 colunas para caber tudo ── */
+.concept-top { max-width: 1740px; margin-bottom: 8px; }
+.reasons-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; max-width: 1740px; }
+.reason-card {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px;
+  padding: 18px 22px; display: grid; grid-template-columns: 50px 1fr; gap: 16px; align-items: start;
 }
-@media (max-width: 1000px) { .concept-hero { grid-template-columns: 1fr; gap: 32px; } }
-.concept-explain { font-size: 17px; line-height: 1.6; color: var(--text-2); max-width: 540px; }
-.concept-explain strong { color: var(--text); }
-.concept-vars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-@media (max-width: 1000px) { .concept-vars { grid-template-columns: 1fr; } }
-.concept-card {
-  padding: 28px 26px; border: 1px solid var(--border); background: var(--bg-2);
-  border-radius: 4px; display: flex; flex-direction: column; gap: 14px;
-  transition: all 0.3s ease;
-}
-.concept-card:hover { border-color: var(--border-2); transform: translateY(-2px); }
-.concept-card.primary {
-  border-color: var(--red);
-  background: linear-gradient(180deg, rgba(225,6,0,0.06), var(--bg-2));
-}
-.concept-tag {
-  font-family: 'Space Grotesk', monospace; font-size: 10px; letter-spacing: 0.25em;
-  color: var(--text-3); font-weight: 700;
-}
-.concept-card.primary .concept-tag { color: var(--red); }
-.concept-tagline {
-  font-family: 'Bebas Neue', sans-serif; font-size: 24px; line-height: 1.05;
-  color: var(--text); letter-spacing: 0.005em;
-}
-.concept-meta {
-  display: flex; flex-direction: column; gap: 10px; margin-top: 4px; padding-top: 14px;
-  border-top: 1px solid var(--border); font-size: 13px; line-height: 1.5;
-}
-.concept-meta-row { display: grid; grid-template-columns: 80px 1fr; gap: 12px; }
-.concept-meta-row .key {
-  color: var(--text-3); font-family: 'Space Grotesk', monospace; font-size: 10px;
-  letter-spacing: 0.15em; text-transform: uppercase; padding-top: 2px;
-}
-.concept-meta-row .val { color: var(--text-2); }
+.reason-num { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: var(--red); line-height: 1; }
+.reason-text strong { display: block; font-size: 15px; color: var(--text); margin-bottom: 4px; font-weight: 700; }
+.reason-text span { font-size: 13px; color: var(--text-2); line-height: 1.45; }
 
 /* ── flow-horizontal (7 etapas) ── */
-.flow {
-  margin-top: 32px; display: grid; grid-template-columns: repeat(7, 1fr);
-  gap: 0; max-width: 1600px; border-top: 1px solid var(--border);
-}
-@media (max-width: 1300px) { .flow { grid-template-columns: repeat(4, 1fr); } }
-@media (max-width: 700px) { .flow { grid-template-columns: repeat(2, 1fr); } }
-.flow-step { padding: 24px 18px; border-right: 1px solid var(--border); position: relative; }
+.flow { margin-top: 20px; display: grid; grid-template-columns: repeat(7, 1fr); gap: 0; max-width: 1740px; border-top: 1px solid var(--border); }
+.flow-step { padding: 18px 14px; border-right: 1px solid var(--border); position: relative; }
 .flow-step:last-child { border-right: none; }
-.flow-num { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: var(--red); line-height: 1; margin-bottom: 10px; }
-.flow-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; line-height: 1.3; }
-.flow-desc { font-size: 12px; color: var(--text-2); line-height: 1.5; }
+.flow-num { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--red); line-height: 1; margin-bottom: 8px; }
+.flow-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 5px; line-height: 1.25; }
+.flow-desc { font-size: 11.5px; color: var(--text-2); line-height: 1.4; }
 .flow-step.highlight { background: rgba(212,175,55,0.05); }
 .flow-step.highlight .flow-num { color: var(--gold); }
 
-/* ── blocos de conteúdo (detalhe/storytelling) ── */
-.blocks-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;
-  margin-top: 40px; max-width: 1500px;
-}
-@media (max-width: 900px) { .blocks-grid { grid-template-columns: 1fr; } }
-.block-card {
-  background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px;
-  padding: 26px 24px; position: relative; overflow: hidden; transition: all 0.3s ease;
-}
-.block-card::before {
-  content: ''; position: absolute; top: 0; left: 0; width: 0; height: 2px;
-  background: var(--red); transition: width 0.4s ease;
-}
-.block-card:hover::before { width: 100%; }
-.block-card:hover { background: var(--bg-3); transform: translateY(-2px); }
-.block-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 12px; }
-.block-num { font-family: 'Bebas Neue', sans-serif; font-size: 38px; color: var(--red); line-height: 1; }
-.block-title { font-weight: 700; font-size: 17px; color: var(--text); line-height: 1.3; margin-bottom: 6px; }
-.block-row { display: grid; grid-template-columns: 90px 1fr; gap: 12px; padding: 8px 0; font-size: 13px; line-height: 1.5; border-top: 1px dashed var(--border); }
-.block-row:first-of-type { border-top: 1px solid var(--border); padding-top: 12px; margin-top: 4px; }
-.block-row .label { color: var(--text-3); font-family: 'Space Grotesk', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; padding-top: 1px; }
+/* ── bloco de conteúdo (uma tela por bloco) ── */
+.block-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px; padding: 22px 26px; max-width: 1500px; }
+.block-row { display: grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 10px 0; font-size: 15px; line-height: 1.5; border-top: 1px dashed var(--border); }
+.block-row:first-of-type { border-top: none; padding-top: 0; }
+.block-row .label { color: var(--text-3); font-family: 'Space Grotesk', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; padding-top: 2px; }
 .block-row .val { color: var(--text-2); }
 
-/* ── math-box ── */
-.math-box {
-  margin-top: 32px; background: var(--bg-2); border: 1px solid var(--border);
-  padding: 32px; border-radius: 4px; display: grid; grid-template-columns: auto 1fr;
-  gap: 36px; align-items: center; max-width: 1500px;
-}
-@media (max-width: 800px) { .math-box { grid-template-columns: 1fr; gap: 16px; } }
-.math-box .big-num { font-family: 'Bebas Neue', sans-serif; font-size: 100px; line-height: 0.9; color: var(--red); letter-spacing: -0.01em; }
-.math-box .label { font-family: 'Space Grotesk', monospace; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-3); margin-bottom: 10px; }
-.math-box .equation { font-size: 14px; color: var(--text-2); line-height: 1.6; }
-.math-box .equation strong { color: var(--text); }
-
-/* ── tabela de gargalos ── */
-.gargalo-table { background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-top: 24px; max-width: 1500px; }
-.gargalo-row { display: grid; grid-template-columns: 1fr 1.4fr; gap: 24px; padding: 14px 24px; border-bottom: 1px solid var(--border); align-items: baseline; }
-.gargalo-row:last-child { border-bottom: none; }
-.gargalo-row.head { background: var(--bg-3); font-family: 'Space Grotesk', monospace; font-size: 11px; letter-spacing: 0.2em; color: var(--text-3); text-transform: uppercase; font-weight: 700; }
-.gargalo-row .item { color: var(--text); font-size: 14px; font-weight: 600; }
-.gargalo-row .value { color: var(--text-2); font-size: 13px; }
-
 /* ── cases reais ── */
-.cases-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; max-width: 1600px; }
-@media (max-width: 1100px) { .cases-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 600px) { .cases-grid { grid-template-columns: 1fr; } }
-.case-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px; padding: 26px 22px; transition: all 0.3s ease; }
-.case-card:hover { border-color: var(--border-2); transform: translateY(-2px); }
-.case-tag { font-family: 'Space Grotesk', monospace; font-size: 10px; letter-spacing: 0.2em; color: var(--red); font-weight: 700; margin-bottom: 12px; text-transform: uppercase; }
-.case-title { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 10px; line-height: 1.3; }
-.case-desc { font-size: 13px; color: var(--text-2); line-height: 1.55; }
+.cases-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 14px; max-width: 1740px; }
+.case-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px; padding: 20px 18px; }
+.case-tag { font-family: 'Space Grotesk', monospace; font-size: 10px; letter-spacing: 0.2em; color: var(--red); font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
+.case-title { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 6px; line-height: 1.25; }
+.case-desc { font-size: 12.5px; color: var(--text-2); line-height: 1.45; }
 
-/* ── sys-flow-4 + upsides ── */
-.sys-header { max-width: 1500px; display: grid; grid-template-columns: auto 1fr; gap: 56px; align-items: end; margin: 8px 0 16px; }
-@media (max-width: 1000px) { .sys-header { grid-template-columns: 1fr; gap: 24px; align-items: start; } }
-.followers-num { font-family: 'Bebas Neue', sans-serif; font-size: clamp(96px, 13vw, 160px); line-height: 0.85; color: var(--gold); letter-spacing: -0.02em; }
-.followers-num small { font-size: 0.32em; color: var(--text-3); font-weight: 400; display: block; letter-spacing: 0.1em; }
-.sys-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 36px; max-width: 1500px; }
-@media (max-width: 1100px) { .sys-flow { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 600px) { .sys-flow { grid-template-columns: 1fr; } }
-.sys-block { padding: 28px 24px; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-2); transition: all 0.3s ease; }
-.sys-block:hover { border-color: var(--border-2); transform: translateY(-3px); }
-.sys-num { font-family: 'Space Grotesk', monospace; font-size: 11px; color: var(--red); letter-spacing: 0.25em; margin-bottom: 16px; font-weight: 700; }
-.sys-block h4 { font-size: 16px; margin-bottom: 10px; color: var(--text); line-height: 1.3; font-weight: 700; }
-.sys-block p { font-size: 13px; line-height: 1.55; color: var(--text-2); }
-.upsides { margin-top: 40px; max-width: 1500px; padding: 26px 30px; border: 1px dashed var(--border-2); border-radius: 4px; background: rgba(212, 175, 55, 0.03); }
-.upsides-title { font-family: 'Space Grotesk', monospace; font-size: 11px; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 18px; text-transform: uppercase; font-weight: 700; }
-.upsides-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
-@media (max-width: 900px) { .upsides-grid { grid-template-columns: 1fr; } }
-.upside h5 { font-size: 14px; color: var(--text); margin-bottom: 6px; font-weight: 700; }
-.upside p { font-size: 13px; line-height: 1.55; color: var(--text-2); }
+/* ── diagnóstico: 2 colunas (mecânica + tabela) ── */
+.diag-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 40px; margin-top: 14px; max-width: 1740px; align-items: start; }
+.math-box {
+  margin-top: 14px; background: var(--bg-2); border: 1px solid var(--border);
+  padding: 22px; border-radius: 4px; display: grid; grid-template-columns: auto 1fr;
+  gap: 20px; align-items: center;
+}
+.math-box .big-num { font-family: 'Bebas Neue', sans-serif; font-size: 64px; line-height: 0.9; color: var(--red); }
+.math-box .label { font-family: 'Space Grotesk', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-3); margin-bottom: 6px; }
+.math-box .equation { font-size: 12.5px; color: var(--text-2); line-height: 1.45; }
+.math-box .equation strong { color: var(--text); }
+.gargalo-table { background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.gargalo-row { display: grid; grid-template-columns: 1fr 1.3fr; gap: 16px; padding: 9px 18px; border-bottom: 1px solid var(--border); align-items: baseline; }
+.gargalo-row:last-child { border-bottom: none; }
+.gargalo-row.head { background: var(--bg-3); font-family: 'Space Grotesk', monospace; font-size: 10px; letter-spacing: 0.18em; color: var(--text-3); text-transform: uppercase; font-weight: 700; }
+.gargalo-row .item { color: var(--text); font-size: 13px; font-weight: 600; }
+.gargalo-row .value { color: var(--text-2); font-size: 12px; }
+
+/* ── pitch V4 em profundidade ── */
+.sys-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 18px; max-width: 1740px; }
+.sys-block { padding: 20px 20px; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-2); }
+.sys-num { font-family: 'Space Grotesk', monospace; font-size: 10px; color: var(--red); letter-spacing: 0.22em; margin-bottom: 10px; font-weight: 700; }
+.sys-block h4 { font-size: 16px; margin-bottom: 6px; color: var(--text); line-height: 1.25; font-weight: 700; }
+.sys-block p { font-size: 12.5px; line-height: 1.45; color: var(--text-2); }
+.upsides { margin-top: 18px; max-width: 1740px; padding: 18px 24px; border: 1px dashed var(--border-2); border-radius: 4px; background: rgba(212, 175, 55, 0.03); }
+.upsides-title { font-family: 'Space Grotesk', monospace; font-size: 11px; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 12px; text-transform: uppercase; font-weight: 700; }
+.upsides-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.upside h5 { font-size: 14px; color: var(--text); margin-bottom: 4px; font-weight: 700; }
+.upside p { font-size: 12.5px; line-height: 1.45; color: var(--text-2); }
 
 /* ── scripts (outbound + cliente) ── */
-.script-list { display: flex; flex-direction: column; margin-top: 36px; max-width: 1300px; }
-.script-item { padding: 20px 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 56px 1fr; gap: 24px; align-items: start; }
+.script-list { display: flex; flex-direction: column; margin-top: 14px; max-width: 1600px; gap: 2px; }
+.script-item { padding: 12px 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 50px 1fr; gap: 20px; align-items: start; }
 .script-item:last-child { border-bottom: none; }
-.script-num { font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: var(--red); line-height: 1; }
-.script-text strong { display: block; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; font-weight: 700; }
-.script-quote { font-size: 15px; line-height: 1.6; color: var(--text-2); font-style: italic; }
+.script-num { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: var(--red); line-height: 1; }
+.script-text strong { display: block; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; font-weight: 700; }
+.script-quote { font-size: 14.5px; line-height: 1.45; color: var(--text-2); font-style: italic; }
 .script-quote::before { content: '\201C'; color: var(--text-3); }
 .script-quote::after { content: '\201D'; color: var(--text-3); }
 
-/* ── decision / fechamento ── */
-.decision-list { display: flex; flex-direction: column; margin: 32px 0; max-width: 1100px; }
-.dec-item { padding: 22px 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 64px 1fr; gap: 28px; align-items: center; }
-.dec-item:hover { border-bottom-color: var(--red); }
-.dec-num { font-family: 'Bebas Neue', sans-serif; font-size: 40px; color: var(--red); line-height: 1; }
-.dec-text { color: var(--text); font-size: 16px; line-height: 1.4; }
+/* ── fechamento ── */
+.decision-list { display: flex; flex-direction: column; margin: 14px 0; max-width: 1500px; }
+.dec-item { padding: 14px 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 56px 1fr; gap: 22px; align-items: center; }
+.dec-num { font-family: 'Bebas Neue', sans-serif; font-size: 34px; color: var(--red); line-height: 1; }
+.dec-text { color: var(--text); font-size: 15px; line-height: 1.3; }
 .dec-text strong { font-weight: 700; }
-.dec-text small { display: block; font-size: 13px; color: var(--text-3); margin-top: 6px; font-weight: 400; line-height: 1.5; }
+.dec-text small { display: block; font-size: 12px; color: var(--text-3); margin-top: 3px; font-weight: 400; line-height: 1.4; }
 .deadline {
-  margin-top: 40px; padding: 32px 36px; border: 1px solid var(--red); border-radius: 4px;
+  margin-top: 18px; padding: 24px 30px; border: 1px solid var(--red); border-radius: 4px;
   background: linear-gradient(135deg, rgba(225,6,0,0.08), rgba(225,6,0,0.02)), var(--bg);
-  display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;
-  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap;
+  max-width: 1500px;
 }
-.deadline::before {
-  content: ''; position: absolute; top: 0; right: 0; width: 200px; height: 200px;
-  background: radial-gradient(circle, rgba(225,6,0,0.12), transparent 70%); pointer-events: none;
-}
-.deadline-text { flex: 1; min-width: 280px; position: relative; z-index: 2; }
-.deadline-text strong { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: var(--red); display: block; margin-bottom: 10px; font-weight: 400; }
-.deadline-text p { color: var(--text-2); font-size: 15px; line-height: 1.5; }
-.deadline-badge { font-family: 'Space Grotesk', monospace; font-size: 13px; letter-spacing: 0.25em; color: var(--red); font-weight: 700; position: relative; z-index: 2; }
+.deadline-text strong { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--red); display: block; margin-bottom: 6px; font-weight: 400; }
+.deadline-text p { color: var(--text-2); font-size: 14px; line-height: 1.4; }
+.deadline-badge { font-family: 'Space Grotesk', monospace; font-size: 13px; letter-spacing: 0.22em; color: var(--red); font-weight: 700; }
 
 </style>
 </head>
 <body>
 
-<div class="progress-bar" id="progress"></div>
-
-<nav class="slide-nav" id="nav" aria-label="Navegação">
-  <a href="#s1" aria-label="Capa"></a>
-  <a href="#s2" aria-label="Conceito"></a>
-  <a href="#s3" aria-label="Estrutura do evento"></a>
-  <a href="#s4" aria-label="Bloco 1: Abertura"></a>
-  <a href="#s5" aria-label="Bloco 2: Cases reais"></a>
-  <a href="#s6" aria-label="Bloco 3: Diagnóstico"></a>
-  <a href="#s7" aria-label="Bloco 4: Pitch V4"></a>
-  <a href="#s8" aria-label="O pitch da V4 em profundidade"></a>
-  <a href="#s9" aria-label="Script outbound"></a>
-  <a href="#s10" aria-label="Pitch cliente"></a>
-  <a href="#s11" aria-label="Fechamento"></a>
-</nav>
+<div class="deck"><div class="stage" id="stage">
 
 <!-- SLIDE 1 - COVER -->
-<section class="slide cover" id="s1">
+<section class="slide center" id="s1">
   <div class="slide-num">01 / 11</div>
   <div class="cover-grid">
-    <div class="eyebrow reveal">V4 Company × Apresentação Interna</div>
-    <h1 class="cover-title reveal reveal-delay-1">
+    <div class="eyebrow" style="margin-top:0;">V4 Company × Apresentação Interna</div>
+    <h1 class="cover-title">
       <span>IA APLICADA</span>
       <span>À PRODUTIVIDADE</span>
       <span class="line-2">MARGEM DE LUCRO.</span>
     </h1>
-    <div class="cover-meta reveal reveal-delay-2">
+    <div class="cover-meta">
       <span>Conceito de evento</span>
       <span>Como empresas escalam sua margem de lucro</span>
       <span>Flagship V4</span>
     </div>
   </div>
-  <div class="scroll-hint">Role para ver</div>
 </section>
 
 <!-- SLIDE 2 - CONCEITO CENTRAL -->
-<section class="slide dense" id="s2">
+<section class="slide top" id="s2">
   <div class="slide-num">02 / 11</div>
-  <div class="concept-hero">
-    <div>
-      <div class="eyebrow reveal">O conceito</div>
-      <h1 class="h1 reveal reveal-delay-1">Achar o gargalo certo <span class="accent">aumenta a margem.</span> A ferramenta certa, sozinha, não.</h1>
-    </div>
-    <div class="reveal reveal-delay-2">
-      <p class="concept-explain"><strong>Teoria das Restrições</strong> aplicada à produtividade e à IA: toda empresa tem, em cada momento, uma única restrição que limita seu crescimento ou sua eficiência. Investir em qualquer coisa que não seja essa restrição não muda o resultado final, só desloca o gargalo pra outro lugar. A IA e a automação entram depois de identificada essa restrição, como caminho para resolver, não como tema do evento.</p>
-    </div>
+  <div class="concept-top">
+    <div class="eyebrow" style="margin-top:0;">O conceito</div>
+    <h1 class="h1-md">Achar o gargalo certo <span class="accent">aumenta a margem.</span> A ferramenta certa, sozinha, não.</h1>
+    <p class="lead" style="margin-top:16px;"><strong style="color:var(--text)">Teoria das Restrições</strong> aplicada à produtividade e à IA: toda empresa tem, em cada momento, uma única restrição que limita seu crescimento. Investir em qualquer coisa que não seja essa restrição não muda o resultado final, só desloca o gargalo. A IA entra depois de identificada essa restrição, como caminho pra resolver, não como tema do evento.</p>
   </div>
-  <div class="reveal reveal-delay-3">
-    <div class="eyebrow">Por que fazer isso agora</div>
-    <p class="lead">Quatro razões sustentam a decisão de investir nesse formato.</p>
-  </div>
-  <div class="decision-list reveal reveal-delay-4">
-    <div class="dec-item">
-      <div class="dec-num">01</div>
-      <div class="dec-text"><strong>Diferenciação num mercado saturado.</strong><small>A maioria dos eventos de IA vende ferramenta sem entender o problema real da empresa. Partir do gargalo, não da tecnologia, é o que separa esse evento do resto.</small></div>
+  <div class="eyebrow">Por que fazer isso agora</div>
+  <div class="reasons-grid">
+    <div class="reason-card">
+      <div class="reason-num">01</div>
+      <div class="reason-text"><strong>Diferenciação num mercado saturado</strong><span>A maioria dos eventos de IA vende ferramenta sem entender o problema real. Partir do gargalo, não da tecnologia, separa esse evento do resto.</span></div>
     </div>
-    <div class="dec-item">
-      <div class="dec-num">02</div>
-      <div class="dec-text"><strong>Motor de geração de leads sem prospecção fria.</strong><small>O convite em cascata entrega uma sala de decisores B2B qualificados, com credibilidade emprestada de quem já é cliente V4.</small></div>
+    <div class="reason-card">
+      <div class="reason-num">02</div>
+      <div class="reason-text"><strong>Motor de leads sem prospecção fria</strong><span>O convite em cascata entrega uma sala de decisores B2B qualificados, com credibilidade emprestada de quem já é cliente V4.</span></div>
     </div>
-    <div class="dec-item">
-      <div class="dec-num">03</div>
-      <div class="dec-text"><strong>Fortalece o relacionamento com quem já é cliente.</strong><small>O cliente-anfitrião leva um ativo de alto valor pra própria carteira, sem custo nem esforço operacional da parte dele.</small></div>
+    <div class="reason-card">
+      <div class="reason-num">03</div>
+      <div class="reason-text"><strong>Fortalece quem já é cliente</strong><span>O cliente-anfitrião leva um ativo de alto valor pra própria carteira, sem custo nem esforço operacional da parte dele.</span></div>
     </div>
-    <div class="dec-item">
-      <div class="dec-num">04</div>
-      <div class="dec-text"><strong>Entrega algo tangível antes de qualquer pitch.</strong><small>O Mapa de Gargalos individual é a prova de valor que sustenta a credibilidade da V4 como parceira de margem, não só de mídia.</small></div>
+    <div class="reason-card">
+      <div class="reason-num">04</div>
+      <div class="reason-text"><strong>Entrega valor antes do pitch</strong><span>O Mapa de Gargalos individual é a prova que sustenta a credibilidade da V4 como parceira de margem, não só de mídia.</span></div>
     </div>
   </div>
 </section>
 
 <!-- SLIDE 3 - ESTRUTURA DO EVENTO -->
-<section class="slide dense" id="s3">
+<section class="slide top" id="s3">
   <div class="slide-num">03 / 11</div>
-  <div class="eyebrow reveal">Estrutura do evento</div>
-  <h2 class="h2 reveal reveal-delay-1">A jornada, do credenciamento ao <span class="accent">coffee</span> final.</h2>
-  <p class="lead reveal reveal-delay-2">Sete etapas, nesta ordem. O pitch da V4 só entra depois do diagnóstico, nunca antes.</p>
-  <div class="flow reveal reveal-delay-3">
+  <div class="eyebrow" style="margin-top:0;">Estrutura do evento</div>
+  <h2 class="h2">A jornada, do credenciamento ao <span class="accent">coffee</span> final.</h2>
+  <p class="lead">Sete etapas, nesta ordem. O pitch da V4 só entra depois do diagnóstico, nunca antes.</p>
+  <div class="flow">
     <div class="flow-step">
       <div class="flow-num">01</div>
       <div class="flow-title">Credenciamento</div>
@@ -492,12 +293,12 @@ body {
     <div class="flow-step highlight">
       <div class="flow-num">04</div>
       <div class="flow-title">Diagnóstico</div>
-      <div class="flow-desc">Formulário ao vivo: identificação + 10 dimensões de gargalo</div>
+      <div class="flow-desc">Formulário ao vivo: identificação + 10 dimensões</div>
     </div>
     <div class="flow-step highlight">
       <div class="flow-num">05</div>
       <div class="flow-title">Mapa entregue</div>
-      <div class="flow-desc">Cada participante recebe seu Mapa de Gargalos e Oportunidades</div>
+      <div class="flow-desc">Cada participante recebe seu Mapa de Gargalos</div>
     </div>
     <div class="flow-step">
       <div class="flow-num">06</div>
@@ -510,16 +311,16 @@ body {
       <div class="flow-desc">Encerramento com networking entre os participantes</div>
     </div>
   </div>
-  <div class="callout reveal reveal-delay-4">O coffee final não é só cortesia: é o espaço onde convidados, clientes-anfitriões e time V4 circulam juntos, reforça a percepção de relacionamento antes de qualquer follow-up comercial.</div>
+  <div class="callout">O coffee final não é só cortesia: é o espaço onde convidados, clientes-anfitriões e time V4 circulam juntos, reforça a percepção de relacionamento antes de qualquer follow-up comercial.</div>
 </section>
 
 <!-- SLIDE 4 - BLOCO 1: ABERTURA / TEORIA DAS RESTRIÇÕES -->
-<section class="slide dense" id="s4">
+<section class="slide top" id="s4">
   <div class="slide-num">04 / 11</div>
-  <div class="eyebrow reveal">Conteúdo do evento · Bloco 1 de 4</div>
-  <h2 class="h2 reveal reveal-delay-1">Abertura: <span class="accent">Teoria das Restrições</span>.</h2>
-  <p class="lead reveal reveal-delay-2">O bloco que instala o conceito antes de qualquer diagnóstico ou pitch.</p>
-  <div class="block-card reveal reveal-delay-3" style="max-width:1100px;">
+  <div class="eyebrow" style="margin-top:0;">Conteúdo do evento · Bloco 1 de 4</div>
+  <h2 class="h2">Abertura: <span class="accent">Teoria das Restrições</span>.</h2>
+  <p class="lead">O bloco que instala o conceito antes de qualquer diagnóstico ou pitch.</p>
+  <div class="block-card" style="margin-top:14px;">
     <div class="block-row"><span class="label">Formato</span><span class="val">Palestra de 20-25 minutos, apresentador V4</span></div>
     <div class="block-row"><span class="label">Objetivo</span><span class="val">Instalar a ideia de que o gargalo importa mais que a ferramenta, antes de o público olhar pra própria empresa</span></div>
     <div class="block-row"><span class="label">Conteúdo</span><span class="val">O que é uma restrição, por que otimizar tudo ao mesmo tempo não funciona, e a cadeia gargalo → impacto → oportunidade → IA/automação → prioridade (o público vê essa lógica aqui pela primeira vez, antes de aplicá-la a si mesmo no diagnóstico)</span></div>
@@ -528,16 +329,16 @@ body {
 </section>
 
 <!-- SLIDE 5 - BLOCO 2: CASES REAIS DE IA APLICADA -->
-<section class="slide dense" id="s5">
+<section class="slide top" id="s5">
   <div class="slide-num">05 / 11</div>
-  <div class="eyebrow reveal">Conteúdo do evento · Bloco 2 de 4</div>
-  <h2 class="h2 reveal reveal-delay-1">Cases reais: IA além do <span class="accent">óbvio</span>.</h2>
-  <p class="lead reveal reveal-delay-2">Prova social antes do diagnóstico, pra instalar "isso não é hipótese" antes de "e a minha empresa?".</p>
-  <div class="block-card reveal reveal-delay-3" style="max-width:1100px; margin-bottom:28px;">
+  <div class="eyebrow" style="margin-top:0;">Conteúdo do evento · Bloco 2 de 4</div>
+  <h2 class="h2">Cases reais: IA além do <span class="accent">óbvio</span>.</h2>
+  <p class="lead">Prova social antes do diagnóstico, pra instalar "isso não é hipótese" antes de "e a minha empresa?".</p>
+  <div class="block-card" style="margin-top:14px; max-width:1740px;">
     <div class="block-row"><span class="label">Formato</span><span class="val">Bloco de ~15 minutos, 3-4 exemplos curados</span></div>
     <div class="block-row"><span class="label">Objetivo</span><span class="val">Mostrar aplicações de IA e automação além do óbvio (atendimento ao cliente)</span></div>
   </div>
-  <div class="cases-grid reveal reveal-delay-4">
+  <div class="cases-grid">
     <div class="case-card">
       <div class="case-tag">Financeiro</div>
       <div class="case-title">Conciliação e previsão</div>
@@ -559,50 +360,53 @@ body {
       <div class="case-desc">Qualificação e follow-up automatizado de oportunidades</div>
     </div>
   </div>
-  <div class="callout reveal reveal-delay-4">[A CURAR] Estas são categorias-alvo, não cases fechados. Exemplos reais e verificáveis (próprios da V4 ou de mercado) precisam ser levantados antes da primeira edição.</div>
+  <div class="callout">[A CURAR] Estas são categorias-alvo, não cases fechados. Exemplos reais e verificáveis (próprios da V4 ou de mercado) precisam ser levantados antes da primeira edição.</div>
 </section>
 
 <!-- SLIDE 6 - BLOCO 3: DIAGNÓSTICO AO VIVO -->
-<section class="slide dense" id="s6">
+<section class="slide top" id="s6">
   <div class="slide-num">06 / 11</div>
-  <div class="eyebrow reveal">Conteúdo do evento · Bloco 3 de 4</div>
-  <h2 class="h2 reveal reveal-delay-1">Diagnóstico ao vivo: dez dimensões, <span class="accent">uma prioridade</span>.</h2>
-  <p class="lead reveal reveal-delay-2">O momento pessoal e emocional do evento, e o ponto onde todo participante vira um contato qualificado.</p>
-  <div class="block-card reveal reveal-delay-3" style="max-width:1100px; margin-bottom:28px;">
-    <div class="block-row"><span class="label">Formato</span><span class="val">Formulário individual via QR code, 8-10 minutos</span></div>
-    <div class="block-row"><span class="label">Parte 1</span><span class="val">Identificação: nome, empresa e telefone. Vira contato qualificado no CRM independente do resultado do diagnóstico</span></div>
-    <div class="block-row"><span class="label">Parte 2</span><span class="val">Perguntas cobrindo as 10 dimensões de gargalo (tabela abaixo)</span></div>
-    <div class="block-row"><span class="label">Objetivo</span><span class="val">Gerar o momento pessoal do evento: cada participante descobre o próprio gargalo, na frente de todo o grupo</span></div>
-  </div>
-  <div class="math-box reveal reveal-delay-4">
-    <div><div class="big-num">10</div></div>
+  <div class="eyebrow" style="margin-top:0;">Conteúdo do evento · Bloco 3 de 4</div>
+  <h2 class="h2">Diagnóstico ao vivo: dez dimensões, <span class="accent">uma prioridade</span>.</h2>
+  <p class="lead">O momento pessoal do evento, e o ponto onde todo participante vira um contato qualificado.</p>
+  <div class="diag-grid">
     <div>
-      <div class="label">Dimensões avaliadas no formulário</div>
-      <div class="equation"><strong>Gargalo → Impacto → Oportunidade → IA/Automação → Prioridade.</strong> A lógica é a mesma apresentada no bloco de abertura, aplicada agora à própria empresa de quem responde.</div>
+      <div class="block-card">
+        <div class="block-row"><span class="label">Formato</span><span class="val">Formulário via QR code, 8-10min</span></div>
+        <div class="block-row"><span class="label">Parte 1</span><span class="val">Identificação: nome, empresa, telefone. Vira contato qualificado no CRM independente do resultado</span></div>
+        <div class="block-row"><span class="label">Parte 2</span><span class="val">Perguntas cobrindo as 10 dimensões de gargalo</span></div>
+      </div>
+      <div class="math-box">
+        <div><div class="big-num">10</div></div>
+        <div>
+          <div class="label">Dimensões avaliadas</div>
+          <div class="equation"><strong>Gargalo → Impacto → Oportunidade → IA → Prioridade.</strong> Mesma lógica do bloco de abertura, aplicada agora à própria empresa de quem responde.</div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="gargalo-table reveal reveal-delay-4">
-    <div class="gargalo-row head"><div class="item">Tipo de gargalo</div><div class="value">Sintoma típico</div></div>
-    <div class="gargalo-row"><div class="item">Capacidade</div><div class="value">Equipe sempre no limite, atrasos recorrentes</div></div>
-    <div class="gargalo-row"><div class="item">Manual/repetitivo</div><div class="value">Horas em planilhas, copiar e colar entre sistemas</div></div>
-    <div class="gargalo-row"><div class="item">Informação</div><div class="value">"Isso está em algum lugar, mas não sei onde"</div></div>
-    <div class="gargalo-row"><div class="item">Decisão</div><div class="value">Reuniões que não terminam em ação</div></div>
-    <div class="gargalo-row"><div class="item">Processo</div><div class="value">Aprovações em cascata, retrabalho</div></div>
-    <div class="gargalo-row"><div class="item">Integração</div><div class="value">Dados duplicados entre sistemas que não conversam</div></div>
-    <div class="gargalo-row"><div class="item">Comunicação</div><div class="value">Agenda lotada de reuniões de status</div></div>
-    <div class="gargalo-row"><div class="item">Conhecimento</div><div class="value">"Só fulano sabe fazer isso"</div></div>
-    <div class="gargalo-row"><div class="item">Controle</div><div class="value">Decisões no feeling, sem dashboard confiável</div></div>
-    <div class="gargalo-row"><div class="item">Demanda/comercial</div><div class="value">Funil comercial não preenchido ou não converte</div></div>
+    <div class="gargalo-table">
+      <div class="gargalo-row head"><div class="item">Tipo de gargalo</div><div class="value">Sintoma típico</div></div>
+      <div class="gargalo-row"><div class="item">Capacidade</div><div class="value">Equipe sempre no limite, atrasos recorrentes</div></div>
+      <div class="gargalo-row"><div class="item">Manual/repetitivo</div><div class="value">Horas em planilhas, copiar e colar entre sistemas</div></div>
+      <div class="gargalo-row"><div class="item">Informação</div><div class="value">"Isso está em algum lugar, mas não sei onde"</div></div>
+      <div class="gargalo-row"><div class="item">Decisão</div><div class="value">Reuniões que não terminam em ação</div></div>
+      <div class="gargalo-row"><div class="item">Processo</div><div class="value">Aprovações em cascata, retrabalho</div></div>
+      <div class="gargalo-row"><div class="item">Integração</div><div class="value">Dados duplicados entre sistemas que não conversam</div></div>
+      <div class="gargalo-row"><div class="item">Comunicação</div><div class="value">Agenda lotada de reuniões de status</div></div>
+      <div class="gargalo-row"><div class="item">Conhecimento</div><div class="value">"Só fulano sabe fazer isso"</div></div>
+      <div class="gargalo-row"><div class="item">Controle</div><div class="value">Decisões no feeling, sem dashboard confiável</div></div>
+      <div class="gargalo-row"><div class="item">Demanda/comercial</div><div class="value">Funil comercial não preenchido ou não converte</div></div>
+    </div>
   </div>
 </section>
 
 <!-- SLIDE 7 - BLOCO 4: PITCH V4 -->
-<section class="slide dense" id="s7">
+<section class="slide top" id="s7">
   <div class="slide-num">07 / 11</div>
-  <div class="eyebrow reveal">Conteúdo do evento · Bloco 4 de 4</div>
-  <h2 class="h2 reveal reveal-delay-1">Pitch V4: a resposta pro gargalo que acabou de aparecer.</h2>
-  <p class="lead reveal reveal-delay-2">O último bloco, feito só depois que cada um já tem o próprio Mapa em mãos.</p>
-  <div class="block-card reveal reveal-delay-3" style="max-width:1100px;">
+  <div class="eyebrow" style="margin-top:0;">Conteúdo do evento · Bloco 4 de 4</div>
+  <h2 class="h2">Pitch V4: a resposta pro gargalo que acabou de aparecer.</h2>
+  <p class="lead">O último bloco, feito só depois que cada um já tem o próprio Mapa em mãos.</p>
+  <div class="block-card" style="margin-top:14px;">
     <div class="block-row"><span class="label">Formato</span><span class="val">Apresentação de 10-15 minutos, logo após a entrega do Mapa</span></div>
     <div class="block-row"><span class="label">Objetivo</span><span class="val">Conectar o gargalo de cada participante a uma solução da V4</span></div>
     <div class="block-row"><span class="label">Narrativa</span><span class="val">"Agora que você viu seu gargalo, deixa a gente te mostrar como resolvemos isso." O detalhamento estratégico desse pitch está no próximo slide</span></div>
@@ -610,12 +414,12 @@ body {
 </section>
 
 <!-- SLIDE 8 - O PITCH DA V4 EM PROFUNDIDADE -->
-<section class="slide dense" id="s8">
+<section class="slide top" id="s8">
   <div class="slide-num">08 / 11</div>
-  <div class="eyebrow reveal">O pitch da V4 em profundidade</div>
-  <h2 class="h2 reveal reveal-delay-1">A mesma lógica que a V4 usa no <span class="accent">dia a dia</span>.</h2>
-  <p class="lead reveal reveal-delay-2">A Teoria das Restrições não é só o conteúdo do evento: é como a V4 já opera com os próprios clientes. Identificar a restrição real antes de propor qualquer solução. A V4 entra como <strong style="color:var(--text)">parceira estratégica para resolver o gargalo identificado</strong>, não pra vender um pacote fechado, e o pitch só acontece depois que cada participante já viu o próprio resultado.</p>
-  <div class="sys-flow reveal reveal-delay-3">
+  <div class="eyebrow" style="margin-top:0;">O pitch da V4 em profundidade</div>
+  <h2 class="h2">A mesma lógica que a V4 usa no <span class="accent">dia a dia</span>.</h2>
+  <p class="lead">A Teoria das Restrições não é só o conteúdo do evento: é como a V4 já opera com os próprios clientes. Identificar a restrição real antes de propor qualquer solução. A V4 entra como <strong style="color:var(--text)">parceira estratégica para resolver o gargalo identificado</strong>, não pra vender um pacote fechado, e o pitch só acontece depois que cada participante já viu o próprio resultado.</p>
+  <div class="sys-flow">
     <div class="sys-block">
       <div class="sys-num">→ 01 · ESFORÇO</div>
       <h4>Reduz esforço</h4>
@@ -637,7 +441,7 @@ body {
       <p>O resultado financeiro sente, não só a operação</p>
     </div>
   </div>
-  <div class="upsides reveal reveal-delay-4">
+  <div class="upsides">
     <div class="upsides-title">Onde a V4 entra como parceira estratégica (depende do gargalo do Mapa)</div>
     <div class="upsides-grid">
       <div class="upside">
@@ -657,12 +461,12 @@ body {
 </section>
 
 <!-- SLIDE 9 - SCRIPT OUTBOUND -->
-<section class="slide dense" id="s9">
+<section class="slide top" id="s9">
   <div class="slide-num">09 / 11</div>
-  <div class="eyebrow reveal">Motor de prospecção</div>
-  <h2 class="h2 reveal reveal-delay-1">Como o Outbound <span class="accent">liga</span> pro lead.</h2>
-  <p class="lead reveal reveal-delay-2">IA no gancho, credibilidade do cliente-anfitrião logo em seguida.</p>
-  <div class="script-list reveal reveal-delay-3">
+  <div class="eyebrow" style="margin-top:0;">Motor de prospecção</div>
+  <h2 class="h2">Como o Outbound <span class="accent">liga</span> pro lead.</h2>
+  <p class="lead">IA no gancho, credibilidade do cliente-anfitrião logo em seguida.</p>
+  <div class="script-list">
     <div class="script-item">
       <div class="script-num">01</div>
       <div class="script-text">
@@ -702,12 +506,12 @@ body {
 </section>
 
 <!-- SLIDE 10 - PITCH DE RECRUTAMENTO DO CLIENTE-ANFITRIÃO -->
-<section class="slide dense" id="s10">
+<section class="slide top" id="s10">
   <div class="slide-num">10 / 11</div>
-  <div class="eyebrow reveal">Como vendemos pros nossos clientes</div>
-  <h2 class="h2 reveal reveal-delay-1">Recrutando o <span class="accent">cliente-anfitrião</span>.</h2>
-  <p class="lead reveal reveal-delay-2">Pitch do time de CS/Comercial da V4 pro cliente atual, pedindo que ele indique convidados.</p>
-  <div class="script-list reveal reveal-delay-3">
+  <div class="eyebrow" style="margin-top:0;">Como vendemos pros nossos clientes</div>
+  <h2 class="h2">Recrutando o <span class="accent">cliente-anfitrião</span>.</h2>
+  <p class="lead">Pitch do time de CS/Comercial da V4 pro cliente atual, pedindo que ele indique convidados.</p>
+  <div class="script-list">
     <div class="script-item">
       <div class="script-num">01</div>
       <div class="script-text">
@@ -740,11 +544,11 @@ body {
 </section>
 
 <!-- SLIDE 11 - FECHAMENTO -->
-<section class="slide dense" id="s11">
+<section class="slide top" id="s11">
   <div class="slide-num">11 / 11</div>
-  <div class="eyebrow reveal">Fechamento</div>
-  <h2 class="h2 reveal reveal-delay-1">O que precisa ser <span class="accent">validado</span> agora.</h2>
-  <div class="decision-list reveal reveal-delay-2">
+  <div class="eyebrow" style="margin-top:0;">Fechamento</div>
+  <h2 class="h2">O que precisa ser <span class="accent">validado</span> agora.</h2>
+  <div class="decision-list">
     <div class="dec-item">
       <div class="dec-num">01</div>
       <div class="dec-text"><strong>Validar o conceito e a mecânica de convite em cascata.</strong><small>Base de todo o resto do plano.</small></div>
@@ -762,7 +566,7 @@ body {
       <div class="dec-text"><strong>Aprovar os scripts de Outbound e de recrutamento de anfitriões.</strong><small>Para começar a execução operacional.</small></div>
     </div>
   </div>
-  <div class="deadline reveal reveal-delay-3">
+  <div class="deadline">
     <div class="deadline-text">
       <strong>Decisão nesta reunião.</strong>
       <p>Aprovar o conceito destrava o desenho operacional (data, orçamento, stack do diagnóstico) como próxima etapa.</p>
@@ -771,58 +575,49 @@ body {
   </div>
 </section>
 
+</div></div>
+
+<div class="nav">
+  <span class="counter" id="counter">1 / 11</span>
+  <button id="prev" aria-label="Slide anterior">‹</button>
+  <button id="next" aria-label="Próximo slide">›</button>
+</div>
+
 <script>
-const progress = document.getElementById('progress');
-const slides = document.querySelectorAll('.slide');
-const navLinks = document.querySelectorAll('.slide-nav a');
+const stage = document.getElementById('stage');
+const slides = Array.from(document.querySelectorAll('.slide'));
+const counter = document.getElementById('counter');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+let current = 0;
 
-window.addEventListener('scroll', () => {
-  const h = document.documentElement;
-  const total = h.scrollHeight - h.clientHeight;
-  const pct = total > 0 ? (h.scrollTop / total) * 100 : 0;
-  progress.style.width = pct + '%';
-}, { passive: true });
+function resize() {
+  const scale = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+  stage.style.transform = `scale(${scale})`;
+}
+window.addEventListener('resize', resize);
+resize();
 
-const navObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const idx = Array.from(slides).indexOf(entry.target);
-      navLinks.forEach(l => l.classList.remove('active'));
-      if (navLinks[idx]) navLinks[idx].classList.add('active');
-    }
-  });
-}, { threshold: 0.4 });
+function show(i) {
+  current = Math.max(0, Math.min(slides.length - 1, i));
+  slides.forEach(s => s.classList.remove('active'));
+  slides[current].classList.add('active');
+  counter.textContent = (current + 1) + ' / ' + slides.length;
+  prevBtn.disabled = current === 0;
+  nextBtn.disabled = current === slides.length - 1;
+  history.replaceState(null, '', '#s' + (current + 1));
+}
 
-slides.forEach(s => navObserver.observe(s));
-
-const revealEls = document.querySelectorAll('.reveal');
-const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('in');
-      revealObs.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
-
-revealEls.forEach(el => revealObs.observe(el));
+prevBtn.addEventListener('click', () => show(current - 1));
+nextBtn.addEventListener('click', () => show(current + 1));
 
 document.addEventListener('keydown', (e) => {
-  const current = Array.from(slides).find(s => {
-    const r = s.getBoundingClientRect();
-    return r.top <= 120 && r.bottom > 120;
-  });
-  if (!current) return;
-  const idx = Array.from(slides).indexOf(current);
-  if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
-    e.preventDefault();
-    if (slides[idx + 1]) slides[idx + 1].scrollIntoView({ behavior: 'smooth' });
-  }
-  if (e.key === 'ArrowUp' || e.key === 'PageUp') {
-    e.preventDefault();
-    if (slides[idx - 1]) slides[idx - 1].scrollIntoView({ behavior: 'smooth' });
-  }
+  if (['ArrowRight', 'ArrowDown', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); show(current + 1); }
+  if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); show(current - 1); }
 });
+
+const hashMatch = location.hash.match(/#s(\d+)/);
+show(hashMatch ? parseInt(hashMatch[1], 10) - 1 : 0);
 </script>
 
 </body>
