@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920, initial-scale=1">
+<title>IA Aplicada à Produtividade: Apresentação Interna V4</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0a0a0a;
+  --bg-2: #141414;
+  --bg-3: #1c1c1c;
+  --red: #E10600;
+  --red-soft: rgba(225, 6, 0, 0.12);
+  --gold: #D4AF37;
+  --green-soft: #4ade80;
+  --orange: #fb923c;
+  --text: #ffffff;
+  --text-2: #b8b8b8;
+  --text-3: #6b6b6b;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-2: rgba(255, 255, 255, 0.16);
+}
+
+html, body {
+  background: #000;
+  color: var(--text);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+::selection { background: var(--red); color: white; }
+
+/* ── Estrutura de palco fixo 1920x1080, escala pra caber na tela ── */
+.deck { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: #000; }
+.stage { width: 1920px; height: 1080px; position: relative; transform-origin: center center; }
+
+section.slide {
+  position: absolute; inset: 0; width: 1920px; height: 1080px;
+  background: var(--bg); color: var(--text);
+  display: none; overflow-y: auto; overflow-x: hidden;
+  padding: 70px 90px;
+}
+section.slide.active { display: flex; flex-direction: column; }
+section.slide.center { justify-content: center; }
+section.slide.top { justify-content: flex-start; }
+
+.nav {
+  position: fixed; bottom: 24px; right: 34px; z-index: 9999;
+  display: flex; gap: 10px; align-items: center;
+}
+.nav button {
+  background: var(--red); border: none; color: #fff; width: 44px; height: 44px;
+  font-size: 22px; cursor: pointer; font-weight: 900; border-radius: 4px;
+}
+.nav button:disabled { opacity: .3; cursor: default; }
+.nav .counter {
+  color: #fff; background: rgba(0,0,0,.6); padding: 8px 16px;
+  font-family: 'Space Grotesk', monospace;
+  font-size: 14px; letter-spacing: .1em; border-radius: 4px;
+}
+
+@media print {
+  html, body { overflow: visible; background: #fff; }
+  .deck { position: static; display: block; }
+  .stage { width: 1920px; height: auto; transform: none !important; }
+  section.slide { display: flex !important; position: relative; page-break-after: always; overflow: visible; }
+  .nav { display: none; }
+}
+
+/* ── Tipografia base ── */
+.slide-num {
+  position: absolute; top: 34px; left: 90px;
+  font-family: 'Space Grotesk', monospace;
+  font-size: 13px; letter-spacing: 0.25em; color: var(--text-3);
+}
+.eyebrow {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 14px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--red);
+  margin-bottom: 18px; margin-top: 30px;
+  display: flex; align-items: center; gap: 12px;
+}
+.eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--red); display: block; }
+.h1 { font-family: 'Bebas Neue', sans-serif; font-size: 128px; line-height: 0.92; letter-spacing: -0.005em; font-weight: 400; }
+.h1-md { font-family: 'Bebas Neue', sans-serif; font-size: 62px; line-height: 1.05; letter-spacing: -0.005em; font-weight: 400; max-width: 1500px; }
+.h2 { font-family: 'Bebas Neue', sans-serif; font-size: 58px; line-height: 1; letter-spacing: -0.005em; margin-bottom: 16px; font-weight: 400; }
+.lead { font-size: 20px; line-height: 1.5; color: var(--text-2); max-width: 1300px; margin-bottom: 6px; }
+.accent { color: var(--red); }
+.gold { color: var(--gold); }
+
+.callout {
+  border-left: 3px solid var(--red); padding: 12px 0 12px 20px; margin-top: 18px;
+  font-size: 14px; line-height: 1.5; color: var(--text); max-width: 1500px;
+  background: linear-gradient(90deg, rgba(225,6,0,0.06), transparent);
+}
+
+/* ── cover ── */
+.cover {
+  background:
+    radial-gradient(ellipse 80% 60% at 90% 0%, rgba(225,6,0,0.18), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 10% 100%, rgba(212,175,55,0.06), transparent 60%),
+    var(--bg);
+}
+.cover-grid { display: flex; flex-direction: column; gap: 44px; max-width: 1600px; }
+.cover-title { font-family: 'Bebas Neue', sans-serif; font-size: 148px; line-height: 0.88; letter-spacing: -0.02em; font-weight: 400; }
+.cover-title span { display: block; }
+.cover-title .line-2 { color: var(--red); }
+.cover-meta {
+  display: flex; gap: 36px; flex-wrap: wrap;
+  font-family: 'Space Grotesk', monospace; font-size: 14px; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--text-3);
+  border-top: 1px solid var(--border); padding-top: 24px; max-width: 1200px;
+}
+.cover-meta span { display: flex; align-items: center; gap: 10px; }
+.cover-meta span::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
+
+/* ── conceito: grid 2 colunas para caber tudo ── */
+.concept-top { max-width: 1740px; margin-bottom: 8px; }
+.reasons-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; max-width: 1740px; }
+.reason-card {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px;
+  padding: 18px 22px; display: grid; grid-template-columns: 50px 1fr; gap: 16px; align-items: start;
+}
+.reason-num { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: var(--red); line-height: 1; }
+.reason-text strong { display: block; font-size: 15px; color: var(--text); margin-bottom: 4px; font-weight: 700; }
+.reason-text span { font-size: 13px; color: var(--text-2); line-height: 1.45; }
+
+/* ── flow-horizontal (7 etapas) ── */
+.flow { margin-top: 20px; display: grid; grid-template-columns: repeat(7, 1fr); gap: 0; max-width: 1740px; border-top: 1px solid var(--border); }
+.flow-step { padding: 18px 14px; border-right: 1px solid var(--border); position: relative; }
+.flow-step:last-child { border-right: none; }
+.flow-num { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--red); line-height: 1; margin-bottom: 8px; }
+.flow-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 5px; line-height: 1.25; }
+.flow-desc { font-size: 11.5px; color: var(--text-2); line-height: 1.4; }
+.flow-step.highlight { background: rgba(212,175,55,0.05); }
+.flow-step.highlight .flow-num { color: var(--gold); }
+
+/* ── bloco de conteúdo (uma tela por bloco) ── */
+.block-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px; padding: 22px 26px; max-width: 1500px; }
+.block-row { display: grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 10px 0; font-size: 15px; line-height: 1.5; border-top: 1px dashed var(--border); }
+.block-row:first-of-type { border-top: none; padding-top: 0; }
+.block-row .label { color: var(--text-3); font-family: 'Space Grotesk', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; padding-top: 2px; }
+.block-row .val { color: var(--text-2); }
+
+/* ── cases reais ── */
+.cases-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 14px; max-width: 1740px; }
+.case-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px; padding: 20px 18px; }
+.case-tag { font-family: 'Space Grotesk', monospace; font-size: 10px; letter-spacing: 0.2em; color: var(--red); font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
+.case-title { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 6px; line-height: 1.25; }
+.case-desc { font-size: 12.5px; color: var(--text-2); line-height: 1.45; }
+
+/* ── diagnóstico: 2 colunas (mecânica + tabela) ── */
+.diag-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 40px; margin-top: 14px; max-width: 1740px; align-items: start; }
+.math-box {
+  margin-top: 14px; background: var(--bg-2); border: 1px solid var(--border);
+  padding: 22px; border-radius: 4px; display: grid; grid-template-columns: auto 1fr;
+  gap: 20px; align-items: center;
+}
+.math-box .big-num { font-family: 'Bebas Neue', sans-serif; font-size: 64px; line-height: 0.9; color: var(--red); }
+.math-box .label { font-family: 'Space Grotesk', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-3); margin-bottom: 6px; }
+.math-box .equation { font-size: 12.5px; color: var(--text-2); line-height: 1.45; }
+.math-box .equation strong { color: var(--text); }
+.gargalo-table { background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.gargalo-row { display: grid; grid-template-columns: 1fr 1.3fr; gap: 16px; padding: 9px 18px; border-bottom: 1px solid var(--border); align-items: baseline; }
+.gargalo-row:last-child { border-bottom: none; }
+.gargalo-row.head { background: var(--bg-3); font-family: 'Space Grotesk', monospace; font-size: 10px; letter-spacing: 0.18em; color: var(--text-3); text-transform: uppercase; font-weight: 700; }
+.gargalo-row .item { color: var(--text); font-size: 13px; font-weight: 600; }
+.gargalo-row .value { color: var(--text-2); font-size: 12px; }
+
+/* ── pitch V4 em profundidade ── */
+.sys-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 18px; max-width: 1740px; }
+.sys-block { padding: 20px 20px; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-2); }
+.sys-num { font-family: 'Space Grotesk', monospace; font-size: 10px; color: var(--red); letter-spacing: 0.22em; margin-bottom: 10px; font-weight: 700; }
+.sys-block h4 { font-size: 16px; margin-bottom: 6px; color: var(--text); line-height: 1.25; font-weight: 700; }
+.sys-block p { font-size: 12.5px; line-height: 1.45; color: var(--text-2); }
+.upsides { margin-top: 18px; max-width: 1740px; padding: 18px 24px; border: 1px dashed var(--border-2); border-radius: 4px; background: rgba(212, 175, 55, 0.03); }
+.upsides-title { font-family: 'Space Grotesk', monospace; font-size: 11px; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 12px; text-transform: uppercase; font-weight: 700; }
+.upsides-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.upside h5 { font-size: 14px; color: var(--text); margin-bottom: 4px; font-weight: 700; }
+.upside p { font-size: 12.5px; line-height: 1.45; color: var(--text-2); }
+
+/* ── scripts (outbound + cliente) ── */
+.script-list { display: flex; flex-direction: column; margin-top: 14px; max-width: 1600px; gap: 2px; }
+.script-item { padding: 12px 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 50px 1fr; gap: 20px; align-items: start; }
+.script-item:last-child { border-bottom: none; }
+.script-num { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: var(--red); line-height: 1; }
+.script-text strong { display: block; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; font-weight: 700; }
+.script-quote { font-size: 14.5px; line-height: 1.45; color: var(--text-2); font-style: italic; }
+.script-quote::before { content: '\201C'; color: var(--text-3); }
+.script-quote::after { content: '\201D'; color: var(--text-3); }
+
+/* ── fechamento ── */
+.decision-list { display: flex; flex-direction: column; margin: 14px 0; max-width: 1500px; }
+.dec-item { padding: 14px 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 56px 1fr; gap: 22px; align-items: center; }
+.dec-num { font-family: 'Bebas Neue', sans-serif; font-size: 34px; color: var(--red); line-height: 1; }
+.dec-text { color: var(--text); font-size: 15px; line-height: 1.3; }
+.dec-text strong { font-weight: 700; }
+.dec-text small { display: block; font-size: 12px; color: var(--text-3); margin-top: 3px; font-weight: 400; line-height: 1.4; }
+.deadline {
+  margin-top: 18px; padding: 24px 30px; border: 1px solid var(--red); border-radius: 4px;
+  background: linear-gradient(135deg, rgba(225,6,0,0.08), rgba(225,6,0,0.02)), var(--bg);
+  display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap;
+  max-width: 1500px;
+}
+.deadline-text strong { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--red); display: block; margin-bottom: 6px; font-weight: 400; }
+.deadline-text p { color: var(--text-2); font-size: 14px; line-height: 1.4; }
+.deadline-badge { font-family: 'Space Grotesk', monospace; font-size: 13px; letter-spacing: 0.22em; color: var(--red); font-weight: 700; }
+
+</style>
+</head>
+<body>
+
+<div class="deck"><div class="stage" id="stage">
+
+<!-- SLIDE 1 - COVER -->
+<section class="slide center" id="s1">
+  <div class="slide-num">01 / 11</div>
+  <div class="cover-grid">
+    <div class="eyebrow" style="margin-top:0;">V4 Company × Apresentação Interna</div>
+    <h1 class="cover-title">
+      <span>IA APLICADA</span>
+      <span>À PRODUTIVIDADE</span>
+      <span class="line-2">MARGEM DE LUCRO.</span>
+    </h1>
+    <div class="cover-meta">
+      <span>Conceito de evento</span>
+      <span>Como empresas escalam sua margem de lucro</span>
+      <span>Flagship V4</span>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 2 - CONCEITO CENTRAL -->
+<section class="slide top" id="s2">
+  <div class="slide-num">02 / 11</div>
+  <div class="concept-top">
+    <div class="eyebrow" style="margin-top:0;">O conceito</div>
+    <h1 class="h1-md">Achar o gargalo certo <span class="accent">aumenta a margem.</span> A ferramenta certa, sozinha, não.</h1>
+    <p class="lead" style="margin-top:16px;"><strong style="color:var(--text)">Teoria das Restrições</strong> aplicada à produtividade e à IA: toda empresa tem, em cada momento, uma única restrição que limita seu crescimento. Investir em qualquer coisa que não seja essa restrição não muda o resultado final, só desloca o gargalo. A IA entra depois de identificada essa restrição, como caminho pra resolver, não como tema do evento.</p>
+  </div>
+  <div class="eyebrow">Por que fazer isso agora</div>
+  <div class="reasons-grid">
+    <div class="reason-card">
+      <div class="reason-num">01</div>
+      <div class="reason-text"><strong>Diferenciação num mercado saturado</strong><span>A maioria dos eventos de IA vende ferramenta sem entender o problema real. Partir do gargalo, não da tecnologia, separa esse evento do resto.</span></div>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">02</div>
+      <div class="reason-text"><strong>Motor de leads sem prospecção fria</strong><span>O convite em cascata entrega uma sala de decisores B2B qualificados, com credibilidade emprestada de quem já é cliente V4.</span></div>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">03</div>
+      <div class="reason-text"><strong>Fortalece quem já é cliente</strong><span>O cliente-anfitrião leva um ativo de alto valor pra própria carteira, sem custo nem esforço operacional da parte dele.</span></div>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">04</div>
+      <div class="reason-text"><strong>Entrega valor antes do pitch</strong><span>O Mapa de Gargalos individual é a prova que sustenta a credibilidade da V4 como parceira de margem, não só de mídia.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 3 - ESTRUTURA DO EVENTO -->
+<section class="slide top" id="s3">
+  <div class="slide-num">03 / 11</div>
+  <div class="eyebrow" style="margin-top:0;">Estrutura do evento</div>
+  <h2 class="h2">A jornada, do credenciamento ao <span class="accent">coffee</span> final.</h2>
+  <p class="lead">Sete etapas, nesta ordem. O pitch da V4 só entra depois do diagnóstico, nunca antes.</p>
+  <div class="flow">
+    <div class="flow-step">
+      <div class="flow-num">01</div>
+      <div class="flow-title">Credenciamento</div>
+      <div class="flow-desc">Recepção na Flagship V4</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">02</div>
+      <div class="flow-title">Conteúdo</div>
+      <div class="flow-desc">Teoria das Restrições aplicada à produtividade</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">03</div>
+      <div class="flow-title">Cases reais</div>
+      <div class="flow-desc">Empresas usando IA no dia a dia, além do óbvio</div>
+    </div>
+    <div class="flow-step highlight">
+      <div class="flow-num">04</div>
+      <div class="flow-title">Diagnóstico</div>
+      <div class="flow-desc">Formulário ao vivo: identificação + 10 dimensões</div>
+    </div>
+    <div class="flow-step highlight">
+      <div class="flow-num">05</div>
+      <div class="flow-title">Mapa entregue</div>
+      <div class="flow-desc">Cada participante recebe seu Mapa de Gargalos</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">06</div>
+      <div class="flow-title">Pitch V4</div>
+      <div class="flow-desc">Como a V4 ajuda a resolver o gargalo identificado</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">07</div>
+      <div class="flow-title">Coffee &amp; Network</div>
+      <div class="flow-desc">Encerramento com networking entre os participantes</div>
+    </div>
+  </div>
+  <div class="callout">O coffee final não é só cortesia: é o espaço onde convidados, clientes-anfitriões e time V4 circulam juntos, reforça a percepção de relacionamento antes de qualquer follow-up comercial.</div>
+</section>
+
+<!-- SLIDE 4 - BLOCO 1: ABERTURA / TEORIA DAS RESTRIÇÕES -->
+<section class="slide top" id="s4">
+  <div class="slide-num">04 / 11</div>
+  <div class="eyebrow" style="margin-top:0;">Conteúdo do evento · Bloco 1 de 4</div>
+  <h2 class="h2">Abertura: <span class="accent">Teoria das Restrições</span>.</h2>
+  <p class="lead">O bloco que instala o conceito antes de qualquer diagnóstico ou pitch.</p>
+  <div class="block-card" style="margin-top:14px;">
+    <div class="block-row"><span class="label">Formato</span><span class="val">Palestra de 20-25 minutos, apresentador V4</span></div>
+    <div class="block-row"><span class="label">Objetivo</span><span class="val">Instalar a ideia de que o gargalo importa mais que a ferramenta, antes de o público olhar pra própria empresa</span></div>
+    <div class="block-row"><span class="label">Conteúdo</span><span class="val">O que é uma restrição, por que otimizar tudo ao mesmo tempo não funciona, e a cadeia gargalo → impacto → oportunidade → IA/automação → prioridade (o público vê essa lógica aqui pela primeira vez, antes de aplicá-la a si mesmo no diagnóstico)</span></div>
+    <div class="block-row"><span class="label">Narrativa</span><span class="val">Parte de um exemplo cotidiano de restrição (linha de produção, motor) antes de aplicar à própria empresa do público, gera o "isso também vale pra mim" antes do diagnóstico</span></div>
+  </div>
+</section>
+
+<!-- SLIDE 5 - BLOCO 2: CASES REAIS DE IA APLICADA -->
+<section class="slide top" id="s5">
+  <div class="slide-num">05 / 11</div>
+  <div class="eyebrow" style="margin-top:0;">Conteúdo do evento · Bloco 2 de 4</div>
+  <h2 class="h2">Cases reais: IA além do <span class="accent">óbvio</span>.</h2>
+  <p class="lead">Prova social antes do diagnóstico, pra instalar "isso não é hipótese" antes de "e a minha empresa?".</p>
+  <div class="block-card" style="margin-top:14px; max-width:1740px;">
+    <div class="block-row"><span class="label">Formato</span><span class="val">Bloco de ~15 minutos, 3-4 exemplos curados</span></div>
+    <div class="block-row"><span class="label">Objetivo</span><span class="val">Mostrar aplicações de IA e automação além do óbvio (atendimento ao cliente)</span></div>
+  </div>
+  <div class="cases-grid">
+    <div class="case-card">
+      <div class="case-tag">Financeiro</div>
+      <div class="case-title">Conciliação e previsão</div>
+      <div class="case-desc">Automação de conciliação bancária e previsão de fluxo de caixa</div>
+    </div>
+    <div class="case-card">
+      <div class="case-tag">Administrativo</div>
+      <div class="case-title">Documentos e contratos</div>
+      <div class="case-desc">Triagem de documentos e geração automática de contratos</div>
+    </div>
+    <div class="case-card">
+      <div class="case-tag">Operações</div>
+      <div class="case-title">Fluxo e estoque</div>
+      <div class="case-desc">Roteirização, controle de estoque e agendamento automatizado</div>
+    </div>
+    <div class="case-card">
+      <div class="case-tag">Comercial</div>
+      <div class="case-title">Qualificação de leads</div>
+      <div class="case-desc">Qualificação e follow-up automatizado de oportunidades</div>
+    </div>
+  </div>
+  <div class="callout">[A CURAR] Estas são categorias-alvo, não cases fechados. Exemplos reais e verificáveis (próprios da V4 ou de mercado) precisam ser levantados antes da primeira edição.</div>
+</section>
+
+<!-- SLIDE 6 - BLOCO 3: DIAGNÓSTICO AO VIVO -->
+<section class="slide top" id="s6">
+  <div class="slide-num">06 / 11</div>
+  <div class="eyebrow" style="margin-top:0;">Conteúdo do evento · Bloco 3 de 4</div>
+  <h2 class="h2">Diagnóstico ao vivo: dez dimensões, <span class="accent">uma prioridade</span>.</h2>
+  <p class="lead">O momento pessoal do evento, e o ponto onde todo participante vira um contato qualificado.</p>
+  <div class="diag-grid">
+    <div>
+      <div class="block-card">
+        <div class="block-row"><span class="label">Formato</span><span class="val">Formulário via QR code, 8-10min</span></div>
+        <div class="block-row"><span class="label">Parte 1</span><span class="val">Identificação: nome, empresa, telefone. Vira contato qualificado no CRM independente do resultado</span></div>
+        <div class="block-row"><span class="label">Parte 2</span><span class="val">Perguntas cobrindo as 10 dimensões de gargalo</span></div>
+      </div>
+      <div class="math-box">
+        <div><div class="big-num">10</div></div>
+        <div>
+          <div class="label">Dimensões avaliadas</div>
+          <div class="equation"><strong>Gargalo → Impacto → Oportunidade → IA → Prioridade.</strong> Mesma lógica do bloco de abertura, aplicada agora à própria empresa de quem responde.</div>
+        </div>
+      </div>
+    </div>
+    <div class="gargalo-table">
+      <div class="gargalo-row head"><div class="item">Tipo de gargalo</div><div class="value">Sintoma típico</div></div>
+      <div class="gargalo-row"><div class="item">Capacidade</div><div class="value">Equipe sempre no limite, atrasos recorrentes</div></div>
+      <div class="gargalo-row"><div class="item">Manual/repetitivo</div><div class="value">Horas em planilhas, copiar e colar entre sistemas</div></div>
+      <div class="gargalo-row"><div class="item">Informação</div><div class="value">"Isso está em algum lugar, mas não sei onde"</div></div>
+      <div class="gargalo-row"><div class="item">Decisão</div><div class="value">Reuniões que não terminam em ação</div></div>
+      <div class="gargalo-row"><div class="item">Processo</div><div class="value">Aprovações em cascata, retrabalho</div></div>
+      <div class="gargalo-row"><div class="item">Integração</div><div class="value">Dados duplicados entre sistemas que não conversam</div></div>
+      <div class="gargalo-row"><div class="item">Comunicação</div><div class="value">Agenda lotada de reuniões de status</div></div>
+      <div class="gargalo-row"><div class="item">Conhecimento</div><div class="value">"Só fulano sabe fazer isso"</div></div>
+      <div class="gargalo-row"><div class="item">Controle</div><div class="value">Decisões no feeling, sem dashboard confiável</div></div>
+      <div class="gargalo-row"><div class="item">Demanda/comercial</div><div class="value">Funil comercial não preenchido ou não converte</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 7 - BLOCO 4: PITCH V4 -->
+<section class="slide top" id="s7">
+  <div class="slide-num">07 / 11</div>
+  <div class="eyebrow" style="margin-top:0;">Conteúdo do evento · Bloco 4 de 4</div>
+  <h2 class="h2">Pitch V4: a resposta pro gargalo que acabou de aparecer.</h2>
+  <p class="lead">O último bloco, feito só depois que cada um já tem o próprio Mapa em mãos.</p>
+  <div class="block-card" style="margin-top:14px;">
+    <div class="block-row"><span class="label">Formato</span><span class="val">Apresentação de 10-15 minutos, logo após a entrega do Mapa</span></div>
+    <div class="block-row"><span class="label">Objetivo</span><span class="val">Conectar o gargalo de cada participante a uma solução da V4</span></div>
+    <div class="block-row"><span class="label">Narrativa</span><span class="val">"Agora que você viu seu gargalo, deixa a gente te mostrar como resolvemos isso." O detalhamento estratégico desse pitch está no próximo slide</span></div>
+  </div>
+</section>
+
+<!-- SLIDE 8 - O PITCH DA V4 EM PROFUNDIDADE -->
+<section class="slide top" id="s8">
+  <div class="slide-num">08 / 11</div>
+  <div class="eyebrow" style="margin-top:0;">O pitch da V4 em profundidade</div>
+  <h2 class="h2">A mesma lógica que a V4 usa no <span class="accent">dia a dia</span>.</h2>
+  <p class="lead">A Teoria das Restrições não é só o conteúdo do evento: é como a V4 já opera com os próprios clientes. Identificar a restrição real antes de propor qualquer solução. A V4 entra como <strong style="color:var(--text)">parceira estratégica para resolver o gargalo identificado</strong>, não pra vender um pacote fechado, e o pitch só acontece depois que cada participante já viu o próprio resultado.</p>
+  <div class="sys-flow">
+    <div class="sys-block">
+      <div class="sys-num">→ 01 · ESFORÇO</div>
+      <h4>Reduz esforço</h4>
+      <p>IA e automação tiram tarefas manuais do caminho</p>
+    </div>
+    <div class="sys-block">
+      <div class="sys-num">→ 02 · CAPACIDADE</div>
+      <h4>Libera capacidade</h4>
+      <p>Time humano sobra pra o que realmente importa</p>
+    </div>
+    <div class="sys-block">
+      <div class="sys-num">→ 03 · PRODUTIVIDADE</div>
+      <h4>Aumenta produtividade</h4>
+      <p>Mais output com a mesma estrutura</p>
+    </div>
+    <div class="sys-block">
+      <div class="sys-num">→ 04 · MARGEM</div>
+      <h4>Impacta margem</h4>
+      <p>O resultado financeiro sente, não só a operação</p>
+    </div>
+  </div>
+  <div class="upsides">
+    <div class="upsides-title">Onde a V4 entra como parceira estratégica (depende do gargalo do Mapa)</div>
+    <div class="upsides-grid">
+      <div class="upside">
+        <h5>Marketing &amp; Vendas</h5>
+        <p>Geração de demanda, tráfego e conversão</p>
+      </div>
+      <div class="upside">
+        <h5>Financeiro &amp; Administrativo</h5>
+        <p>Automação de processos, redução de retrabalho</p>
+      </div>
+      <div class="upside">
+        <h5>Operações</h5>
+        <p>Fluxos internos e integração entre sistemas</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 9 - SCRIPT OUTBOUND -->
+<section class="slide top" id="s9">
+  <div class="slide-num">09 / 11</div>
+  <div class="eyebrow" style="margin-top:0;">Motor de prospecção</div>
+  <h2 class="h2">Como o Outbound <span class="accent">liga</span> pro lead.</h2>
+  <p class="lead">IA no gancho, credibilidade do cliente-anfitrião logo em seguida.</p>
+  <div class="script-list">
+    <div class="script-item">
+      <div class="script-num">01</div>
+      <div class="script-text">
+        <strong>Abertura + gancho</strong>
+        <div class="script-quote">Oi, [nome], tudo bem? Aqui é o/a [nome], da V4 Company, te ligando sobre um encontro sobre IA aplicada de verdade na operação de uma empresa, não sobre ferramenta. A [Cliente-anfitrião] fez questão de te indicar uma vaga.</div>
+      </div>
+    </div>
+    <div class="script-item">
+      <div class="script-num">02</div>
+      <div class="script-text">
+        <strong>Reframe</strong>
+        <div class="script-quote">A ideia não é falar de tecnologia. É descobrir primeiro o que está travando o crescimento da sua empresa, e só depois, onde a IA entra.</div>
+      </div>
+    </div>
+    <div class="script-item">
+      <div class="script-num">03</div>
+      <div class="script-text">
+        <strong>Valor central</strong>
+        <div class="script-quote">No evento você passa por um diagnóstico ao vivo: perguntas rápidas sobre a operação, e sai de lá com um mapa mostrando o gargalo e o que fazer com ele.</div>
+      </div>
+    </div>
+    <div class="script-item">
+      <div class="script-num">04</div>
+      <div class="script-text">
+        <strong>Prova social</strong>
+        <div class="script-quote">A gente também traz cases reais de empresas usando IA no dia a dia, além do óbvio, tipo atendimento: financeiro, operação, administrativo.</div>
+      </div>
+    </div>
+    <div class="script-item">
+      <div class="script-num">05</div>
+      <div class="script-text">
+        <strong>Fechamento</strong>
+        <div class="script-quote">Posso confirmar sua presença? Preciso só do seu nome completo, empresa e um telefone de contato.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 10 - PITCH DE RECRUTAMENTO DO CLIENTE-ANFITRIÃO -->
+<section class="slide top" id="s10">
+  <div class="slide-num">10 / 11</div>
+  <div class="eyebrow" style="margin-top:0;">Como vendemos pros nossos clientes</div>
+  <h2 class="h2">Recrutando o <span class="accent">cliente-anfitrião</span>.</h2>
+  <p class="lead">Pitch do time de CS/Comercial da V4 pro cliente atual, pedindo que ele indique convidados.</p>
+  <div class="script-list">
+    <div class="script-item">
+      <div class="script-num">01</div>
+      <div class="script-text">
+        <strong>Abertura</strong>
+        <div class="script-quote">A V4 vai realizar um evento na nossa Flagship sobre produtividade e IA aplicada, e queremos que você seja um dos parceiros que trazem convidados.</div>
+      </div>
+    </div>
+    <div class="script-item">
+      <div class="script-num">02</div>
+      <div class="script-text">
+        <strong>Valor pro cliente</strong>
+        <div class="script-quote">Você indica alguns dos seus próprios clientes B2B, e a gente cuida de todo o resto: conteúdo, estrutura, ligação de convite, diagnóstico ao vivo. É uma forma de presentear sua carteira com uma experiência de alto nível, sem custo e sem esforço operacional da sua parte.</div>
+      </div>
+    </div>
+    <div class="script-item">
+      <div class="script-num">03</div>
+      <div class="script-text">
+        <strong>Diferenciação</strong>
+        <div class="script-quote">Não é evento comercial disfarçado de conteúdo. Cada convidado sai com um diagnóstico real da própria empresa, isso fortalece a percepção de que você, como parceiro dele, está sempre trazendo valor.</div>
+      </div>
+    </div>
+    <div class="script-item">
+      <div class="script-num">04</div>
+      <div class="script-text">
+        <strong>Fechamento</strong>
+        <div class="script-quote">Preciso só de uma lista com nome, empresa e telefone de quem você gostaria de indicar. A gente cuida do convite e da ligação.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 11 - FECHAMENTO -->
+<section class="slide top" id="s11">
+  <div class="slide-num">11 / 11</div>
+  <div class="eyebrow" style="margin-top:0;">Fechamento</div>
+  <h2 class="h2">O que precisa ser <span class="accent">validado</span> agora.</h2>
+  <div class="decision-list">
+    <div class="dec-item">
+      <div class="dec-num">01</div>
+      <div class="dec-text"><strong>Validar o conceito e a mecânica de convite em cascata.</strong><small>Base de todo o resto do plano.</small></div>
+    </div>
+    <div class="dec-item">
+      <div class="dec-num">02</div>
+      <div class="dec-text"><strong>Definir data, formato e capacidade da Flagship.</strong><small>Dimensiona produção e recrutamento.</small></div>
+    </div>
+    <div class="dec-item">
+      <div class="dec-num">03</div>
+      <div class="dec-text"><strong>Iniciar curadoria dos cases reais de IA/automação.</strong><small>Precisa de tempo de levantamento antes do evento.</small></div>
+    </div>
+    <div class="dec-item">
+      <div class="dec-num">04</div>
+      <div class="dec-text"><strong>Aprovar os scripts de Outbound e de recrutamento de anfitriões.</strong><small>Para começar a execução operacional.</small></div>
+    </div>
+  </div>
+  <div class="deadline">
+    <div class="deadline-text">
+      <strong>Decisão nesta reunião.</strong>
+      <p>Aprovar o conceito destrava o desenho operacional (data, orçamento, stack do diagnóstico) como próxima etapa.</p>
+    </div>
+    <div class="deadline-badge">GO ou NO-GO</div>
+  </div>
+</section>
+
+</div></div>
+
+<div class="nav">
+  <span class="counter" id="counter">1 / 11</span>
+  <button id="prev" aria-label="Slide anterior">‹</button>
+  <button id="next" aria-label="Próximo slide">›</button>
+</div>
+
+<script>
+const stage = document.getElementById('stage');
+const slides = Array.from(document.querySelectorAll('.slide'));
+const counter = document.getElementById('counter');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+let current = 0;
+
+function resize() {
+  const scale = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+  stage.style.transform = `scale(${scale})`;
+}
+window.addEventListener('resize', resize);
+resize();
+
+function show(i) {
+  current = Math.max(0, Math.min(slides.length - 1, i));
+  slides.forEach(s => s.classList.remove('active'));
+  slides[current].classList.add('active');
+  counter.textContent = (current + 1) + ' / ' + slides.length;
+  prevBtn.disabled = current === 0;
+  nextBtn.disabled = current === slides.length - 1;
+  history.replaceState(null, '', '#s' + (current + 1));
+}
+
+prevBtn.addEventListener('click', () => show(current - 1));
+nextBtn.addEventListener('click', () => show(current + 1));
+
+document.addEventListener('keydown', (e) => {
+  if (['ArrowRight', 'ArrowDown', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); show(current + 1); }
+  if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); show(current - 1); }
+});
+
+const hashMatch = location.hash.match(/#s(\d+)/);
+show(hashMatch ? parseInt(hashMatch[1], 10) - 1 : 0);
+</script>
+
+</body>
+</html>
