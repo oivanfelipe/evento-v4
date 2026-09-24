@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IA Aplicada à Produtividade: Apresentação Interna V4</title>
+<title>Evento Flagship: Apresentação Interna V4</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +41,7 @@ body { overflow-x: hidden; }
 
 ::selection { background: var(--red); color: white; }
 
-/* Progress + nav (scroll-based, como antes) */
+/* Progress + nav */
 .progress-bar {
   position: fixed; top: 0; left: 0; height: 3px;
   background: var(--red); z-index: 100; width: 0;
@@ -50,9 +50,9 @@ body { overflow-x: hidden; }
 .slide-nav {
   position: fixed; right: 22px; top: 50%;
   transform: translateY(-50%); z-index: 50;
-  display: flex; flex-direction: column; gap: 12px;
+  display: flex; flex-direction: column; gap: 10px;
 }
-.slide-nav a { width: 8px; height: 8px; border-radius: 50%; background: var(--border-2); transition: all 0.3s ease; display: block; }
+.slide-nav a { width: 7px; height: 7px; border-radius: 50%; background: var(--border-2); transition: all 0.3s ease; display: block; }
 .slide-nav a.active { background: var(--red); box-shadow: 0 0 0 5px rgba(225, 6, 0, 0.18); transform: scale(1.2); }
 .slide-nav a:hover { background: var(--red); }
 @media (max-width: 900px) { .slide-nav { display: none; } }
@@ -77,8 +77,6 @@ body { overflow-x: hidden; }
 .frame.top { justify-content: flex-start; }
 .frame > * { position: relative; z-index: 2; }
 
-/* O cabeçalho (eyebrow/título/lead) fica fixo no topo; o corpo ocupa
-   o espaço restante e centraliza o conteúdo nele, sem sobra embaixo */
 .frame-head { flex: 0 0 auto; }
 .body-fill { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 6px; }
 
@@ -89,7 +87,7 @@ body { overflow-x: hidden; }
   .progress-bar, .slide-nav { display: none; }
 }
 
-/* Reveal animation (on scroll into view) */
+/* Reveal animation */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
 .reveal.in { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: 0.06s; }
@@ -107,8 +105,8 @@ body { overflow-x: hidden; }
 .eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--red); display: block; }
 .h1 { font-family: 'Bebas Neue', sans-serif; font-size: 128px; line-height: 0.92; letter-spacing: -0.005em; font-weight: 400; }
 .h1-md { font-family: 'Bebas Neue', sans-serif; font-size: 62px; line-height: 1.05; letter-spacing: -0.005em; font-weight: 400; max-width: 1400px; }
-.h2 { font-family: 'Bebas Neue', sans-serif; font-size: 58px; line-height: 1; letter-spacing: -0.005em; margin-bottom: 16px; font-weight: 400; }
-.lead { font-size: 20px; line-height: 1.5; color: var(--text-2); max-width: 1250px; margin-bottom: 6px; }
+.h2 { font-family: 'Bebas Neue', sans-serif; font-size: 56px; line-height: 1; letter-spacing: -0.005em; margin-bottom: 16px; font-weight: 400; }
+.lead { font-size: 19px; line-height: 1.5; color: var(--text-2); max-width: 1250px; margin-bottom: 6px; }
 .accent { color: var(--red); }
 .gold { color: var(--gold); }
 
@@ -118,7 +116,7 @@ body { overflow-x: hidden; }
   background: linear-gradient(90deg, rgba(225,6,0,0.06), transparent);
 }
 
-/* cover */
+/* cover / reveal de tema (tipografia poster) */
 .cover {
   background:
     radial-gradient(ellipse 80% 60% at 90% 0%, rgba(225,6,0,0.18), transparent 60%),
@@ -126,7 +124,7 @@ body { overflow-x: hidden; }
     var(--bg);
 }
 .cover-grid { display: flex; flex-direction: column; gap: 44px; max-width: 1450px; }
-.cover-title { font-family: 'Bebas Neue', sans-serif; font-size: 128px; line-height: 0.88; letter-spacing: -0.02em; font-weight: 400; }
+.cover-title { font-family: 'Bebas Neue', sans-serif; font-size: 122px; line-height: 0.88; letter-spacing: -0.02em; font-weight: 400; }
 .cover-title span { display: block; }
 .cover-title .line-2 { color: var(--red); }
 .cover-meta {
@@ -137,41 +135,42 @@ body { overflow-x: hidden; }
 .cover-meta span { display: flex; align-items: center; gap: 10px; }
 .cover-meta span::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
 
-/* conceito: grid 2 colunas para caber tudo */
-.concept-top { max-width: 1448px; margin-bottom: 8px; }
-.reasons-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; max-width: 1448px; }
-.reason-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px; padding: 16px 20px; display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: start; }
-.reason-num { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: var(--red); line-height: 1; }
-.reason-text strong { display: block; font-size: 14.5px; color: var(--text); margin-bottom: 4px; font-weight: 700; }
-.reason-text span { font-size: 12.5px; color: var(--text-2); line-height: 1.4; }
+/* comparativo (não é / é) */
+.compare-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 8px; max-width: 1448px; }
+.compare-card { padding: 26px 28px; border-radius: 4px; border: 1px solid var(--border); background: var(--bg-2); border-top: 3px solid var(--text-3); }
+.compare-card.yes { border-top-color: var(--red); background: linear-gradient(180deg, rgba(225,6,0,0.06), var(--bg-2)); }
+.compare-tag { font-family: 'Space Grotesk', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 12px; color: var(--text-3); }
+.compare-card.yes .compare-tag { color: var(--red); }
+.compare-card p { font-size: 16px; line-height: 1.5; color: var(--text-2); }
+.compare-card p strong { color: var(--text); }
 
-/* flow-horizontal (7 etapas) */
-.flow { margin-top: 20px; display: grid; grid-template-columns: repeat(7, 1fr); gap: 0; max-width: 1448px; border-top: 1px solid var(--border); }
-.flow-step { padding: 16px 12px; border-right: 1px solid var(--border); position: relative; }
-.flow-step:last-child { border-right: none; }
-.flow-num { font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: var(--red); line-height: 1; margin-bottom: 8px; }
-.flow-title { font-size: 12.5px; font-weight: 700; color: var(--text); margin-bottom: 5px; line-height: 1.25; }
-.flow-desc { font-size: 11px; color: var(--text-2); line-height: 1.35; }
-.flow-step.highlight { background: rgba(212,175,55,0.05); }
-.flow-step.highlight .flow-num { color: var(--gold); }
-
-/* bloco de conteúdo (uma tela por bloco) */
+/* blocos de rows (usado em objetivo, como vamos levar, persona) */
 .block-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px; padding: 20px 24px; max-width: 1300px; }
-.block-row { display: grid; grid-template-columns: 120px 1fr; gap: 14px; padding: 9px 0; font-size: 14.5px; line-height: 1.45; border-top: 1px dashed var(--border); }
+.block-row { display: grid; grid-template-columns: 140px 1fr; gap: 14px; padding: 9px 0; font-size: 14.5px; line-height: 1.45; border-top: 1px dashed var(--border); }
 .block-row:first-of-type { border-top: none; padding-top: 0; }
 .block-row .label { color: var(--text-3); font-family: 'Space Grotesk', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; padding-top: 2px; }
 .block-row .val { color: var(--text-2); }
-/* Variante pra slides com um único block-card, evita cara de vazio */
 .block-card.roomy { padding: 34px 40px; max-width: 1448px; }
-.block-card.roomy .block-row { padding: 20px 0; font-size: 18px; grid-template-columns: 150px 1fr; }
+.block-card.roomy .block-row { padding: 20px 0; font-size: 18px; grid-template-columns: 170px 1fr; }
 .block-card.roomy .block-row .label { font-size: 12px; }
 
+/* flow-horizontal (storytelling do evento, 6 blocos) */
+.flow { margin-top: 20px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; max-width: 1448px; border-top: 1px solid var(--border); }
+.flow-step { padding: 18px 14px; border-right: 1px solid var(--border); position: relative; }
+.flow-step:last-child { border-right: none; }
+.flow-num { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--red); line-height: 1; margin-bottom: 8px; }
+.flow-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 5px; line-height: 1.25; }
+.flow-desc { font-size: 11.5px; color: var(--text-2); line-height: 1.4; }
+.flow-step.highlight { background: rgba(212,175,55,0.05); }
+.flow-step.highlight .flow-num { color: var(--gold); }
+
 /* cases reais */
-.cases-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 14px; max-width: 1448px; }
-.case-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px; padding: 18px 16px; }
-.case-tag { font-family: 'Space Grotesk', monospace; font-size: 9.5px; letter-spacing: 0.2em; color: var(--red); font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
-.case-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; line-height: 1.25; }
-.case-desc { font-size: 12px; color: var(--text-2); line-height: 1.4; }
+.cases-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; max-width: 1448px; }
+.case-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px; padding: 20px 22px; }
+.case-tag { font-family: 'Space Grotesk', monospace; font-size: 10px; letter-spacing: 0.2em; color: var(--red); font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
+.case-title { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 6px; line-height: 1.25; }
+.case-desc { font-size: 13px; color: var(--text-2); line-height: 1.45; }
+.case-source { font-size: 10.5px; color: var(--text-3); margin-top: 8px; font-style: italic; }
 
 /* diagnóstico: 2 colunas (mecânica + tabela) */
 .diag-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 34px; margin-top: 14px; max-width: 1448px; align-items: start; }
@@ -212,17 +211,26 @@ body { overflow-x: hidden; }
 .script-quote::before { content: '\201C'; color: var(--text-3); }
 .script-quote::after { content: '\201D'; color: var(--text-3); }
 
-/* fechamento */
+/* fechamento / decisões */
 .decision-list { display: flex; flex-direction: column; margin: 12px 0; max-width: 1350px; }
 .dec-item { padding: 12px 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 50px 1fr; gap: 20px; align-items: center; }
 .dec-num { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: var(--red); line-height: 1; }
 .dec-text { color: var(--text); font-size: 14px; line-height: 1.25; }
 .dec-text strong { font-weight: 700; }
 .dec-text small { display: block; font-size: 11.5px; color: var(--text-3); margin-top: 3px; font-weight: 400; line-height: 1.35; }
+
+/* projeção do convite (funil) */
+.funnel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; margin-top: 18px; max-width: 1448px; }
+.funnel-stage { padding: 30px 24px; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-2); text-align: center; position: relative; }
+.funnel-stage.highlight { border-color: var(--red); background: linear-gradient(180deg, rgba(225,6,0,0.06), var(--bg-2)); }
+.funnel-stage:not(:last-child)::after { content: '\2192'; position: absolute; right: -30px; top: 50%; transform: translateY(-50%); color: var(--red); font-size: 24px; font-weight: 900; }
+.funnel-num { font-family: 'Bebas Neue', sans-serif; font-size: 76px; color: var(--red); line-height: 1; }
+.funnel-label { font-family: 'Space Grotesk', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-3); margin-top: 10px; }
+.funnel-note { font-size: 12.5px; color: var(--text-2); margin-top: 8px; line-height: 1.4; }
 .deadline {
-  margin-top: 16px; padding: 20px 26px; border: 1px solid var(--red); border-radius: 4px;
+  margin-top: 18px; padding: 20px 26px; border: 1px solid var(--red); border-radius: 4px;
   background: linear-gradient(135deg, rgba(225,6,0,0.08), rgba(225,6,0,0.02)), var(--bg);
-  display: flex; align-items: center; justify-content: space-between; gap: 26px; flex-wrap: wrap; max-width: 1350px;
+  display: flex; align-items: center; justify-content: space-between; gap: 26px; flex-wrap: wrap; max-width: 1448px;
 }
 .deadline-text strong { font-family: 'Bebas Neue', sans-serif; font-size: 25px; color: var(--red); display: block; margin-bottom: 5px; font-weight: 400; }
 .deadline-text p { color: var(--text-2); font-size: 13px; line-height: 1.35; }
@@ -236,235 +244,292 @@ body { overflow-x: hidden; }
 
 <nav class="slide-nav" id="nav" aria-label="Navegação">
   <a href="#s1" aria-label="Capa"></a>
-  <a href="#s2" aria-label="Conceito"></a>
-  <a href="#s3" aria-label="Estrutura do evento"></a>
-  <a href="#s4" aria-label="Bloco 1: Abertura"></a>
-  <a href="#s5" aria-label="Bloco 2: Cases reais"></a>
-  <a href="#s6" aria-label="Bloco 3: Diagnóstico"></a>
-  <a href="#s7" aria-label="Bloco 4: Pitch V4"></a>
-  <a href="#s8" aria-label="O pitch da V4 em profundidade"></a>
-  <a href="#s9" aria-label="Script outbound"></a>
-  <a href="#s10" aria-label="Pitch cliente"></a>
-  <a href="#s11" aria-label="Fechamento"></a>
+  <a href="#s2" aria-label="Objetivo"></a>
+  <a href="#s3" aria-label="Como vamos levar"></a>
+  <a href="#s4" aria-label="Persona"></a>
+  <a href="#s5" aria-label="Tema do evento"></a>
+  <a href="#s6" aria-label="Storytelling do evento"></a>
+  <a href="#s7" aria-label="Bloco 1: IA e automação"></a>
+  <a href="#s8" aria-label="Bloco 2: Cases reais"></a>
+  <a href="#s9" aria-label="Bloco 3: Teoria das Restrições"></a>
+  <a href="#s10" aria-label="Bloco 4: Dinâmica"></a>
+  <a href="#s11" aria-label="Bloco 5: Pitch V4"></a>
+  <a href="#s12" aria-label="Pitch V4 em profundidade"></a>
+  <a href="#s13" aria-label="Bloco 6: Networking"></a>
+  <a href="#s14" aria-label="Script outbound"></a>
+  <a href="#s15" aria-label="Pitch cliente-anfitrião"></a>
+  <a href="#s16" aria-label="Fechamento"></a>
+  <a href="#s17" aria-label="Projeção do convite"></a>
 </nav>
 
-<!-- SLIDE 1 - COVER -->
+<!-- SLIDE 1 - COVER (sem revelar o tema) -->
 <section class="slide" id="s1"><div class="frame cover center">
-  <div class="slide-num">01 / 11</div>
+  <div class="slide-num">01 / 17</div>
   <div class="cover-grid">
     <div class="eyebrow reveal" style="margin-top:0;">V4 Company × Apresentação Interna</div>
+    <h1 class="cover-title reveal reveal-delay-1">
+      <span>EVENTO</span>
+      <span class="line-2">FLAGSHIP</span>
+    </h1>
+    <div class="cover-meta reveal reveal-delay-2">
+      <span>Conceito e execução</span>
+      <span>Flagship V4</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- SLIDE 2 - OBJETIVO -->
+<section class="slide" id="s2"><div class="frame top">
+  <div class="slide-num">02 / 17</div>
+  <div class="frame-head">
+    <div class="eyebrow reveal" style="margin-top:0;">Objetivo</div>
+    <h2 class="h2 reveal reveal-delay-1">Conectar com decisores de PMEs. <span class="accent">Sem parecer venda.</span></h2>
+    <p class="lead reveal reveal-delay-2">O evento existe pra chegar perto de quem decide em pequenas e médias empresas, o cliente do nosso cliente, com conteúdo que vale a pena por si só.</p>
+  </div>
+  <div class="body-fill">
+    <div class="compare-grid reveal reveal-delay-3">
+      <div class="compare-card">
+        <div class="compare-tag">Não é</div>
+        <p>Um pitch de vendas disfarçado de evento, com um discurso comercial logo na entrada.</p>
+      </div>
+      <div class="compare-card yes">
+        <div class="compare-tag">É</div>
+        <p><strong>Conteúdo de valor real</strong> pro cliente do nosso cliente, entregue antes de qualquer conversa comercial.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- SLIDE 3 - COMO VAMOS LEVAR -->
+<section class="slide" id="s3"><div class="frame top">
+  <div class="slide-num">03 / 17</div>
+  <div class="frame-head">
+    <div class="eyebrow reveal" style="margin-top:0;">Como vamos levar</div>
+    <h2 class="h2 reveal reveal-delay-1">Convite direto do nosso <span class="accent">Outbound</span>.</h2>
+    <p class="lead reveal reveal-delay-2">A V4 é quem convida, e quem é dona da narrativa com o cliente do nosso cliente, do primeiro contato ao dia do evento.</p>
+  </div>
+  <div class="body-fill">
+    <div class="block-card roomy reveal reveal-delay-3">
+      <div class="block-row"><span class="label">Quem liga</span><span class="val">Time de Outbound da V4, não o cliente-anfitrião</span></div>
+      <div class="block-row"><span class="label">Quem indica</span><span class="val">O cliente-anfitrião fornece o contato e empresta a credibilidade da relação</span></div>
+      <div class="block-row"><span class="label">Quem controla</span><span class="val">A V4 é dona da narrativa do início ao fim, nenhuma etapa fica só na mão do cliente-anfitrião</span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- SLIDE 4 - PERSONA -->
+<section class="slide" id="s4"><div class="frame top">
+  <div class="slide-num">04 / 17</div>
+  <div class="frame-head">
+    <div class="eyebrow reveal" style="margin-top:0;">Persona</div>
+    <h2 class="h2 reveal reveal-delay-1">Pra quem é esse evento.</h2>
+    <p class="lead reveal reveal-delay-2">O decisor de uma pequena ou média empresa, com pouco tempo e muita responsabilidade acumulada.</p>
+  </div>
+  <div class="body-fill">
+    <div class="block-card roomy reveal reveal-delay-3">
+      <div class="block-row"><span class="label">Perfil</span><span class="val">Sócio ou decisor de PME (10 a 200 funcionários), acumula funções operacionais e estratégicas</span></div>
+      <div class="block-row"><span class="label">Dores</span><span class="val">Pouco tempo pra pensar em estratégia, margem apertada, medo de ficar pra trás em IA sem saber por onde começar</span></div>
+      <div class="block-row"><span class="label">Busca</span><span class="val">Produtividade, aumento de margem de lucro e inovação aplicada, sem virar um projeto gigante de TI</span></div>
+      <div class="block-row"><span class="label">Gatilho</span><span class="val">Curiosidade genuína sobre IA, com ceticismo em relação a "mais um evento de tecnologia"</span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- SLIDE 5 - REVELAÇÃO DO TEMA -->
+<section class="slide" id="s5"><div class="frame cover center">
+  <div class="slide-num">05 / 17</div>
+  <div class="cover-grid">
+    <div class="eyebrow reveal" style="margin-top:0;">O tema do evento</div>
     <h1 class="cover-title reveal reveal-delay-1">
       <span>IA APLICADA</span>
       <span>À PRODUTIVIDADE</span>
       <span class="line-2">MARGEM DE LUCRO.</span>
     </h1>
     <div class="cover-meta reveal reveal-delay-2">
-      <span>Conceito de evento</span>
       <span>Como empresas escalam sua margem de lucro</span>
       <span>Flagship V4</span>
     </div>
   </div>
 </div></section>
 
-<!-- SLIDE 2 - CONCEITO CENTRAL -->
-<section class="slide" id="s2"><div class="frame top">
-  <div class="slide-num">02 / 11</div>
-  <div class="concept-top frame-head">
-    <div class="eyebrow reveal" style="margin-top:0;">O conceito</div>
-    <h1 class="h1-md reveal reveal-delay-1">Achar o gargalo certo <span class="accent">aumenta a margem.</span> A ferramenta certa, sozinha, não.</h1>
-    <p class="lead reveal reveal-delay-2" style="margin-top:14px;"><strong style="color:var(--text)">Teoria das Restrições</strong> aplicada à produtividade e à IA: toda empresa tem, em cada momento, uma única restrição que limita seu crescimento. Investir em qualquer coisa que não seja essa restrição não muda o resultado final, só desloca o gargalo. A IA entra depois de identificada essa restrição, como caminho pra resolver, não como tema do evento.</p>
-  </div>
-  <div class="body-fill">
-    <div class="eyebrow reveal reveal-delay-3">Por que fazer isso agora</div>
-    <div class="reasons-grid reveal reveal-delay-4">
-      <div class="reason-card">
-        <div class="reason-num">01</div>
-        <div class="reason-text"><strong>Diferenciação num mercado saturado</strong><span>A maioria dos eventos de IA vende ferramenta sem entender o problema real. Partir do gargalo, não da tecnologia, separa esse evento do resto.</span></div>
-      </div>
-      <div class="reason-card">
-        <div class="reason-num">02</div>
-        <div class="reason-text"><strong>Motor de leads sem prospecção fria</strong><span>O convite em cascata entrega uma sala de decisores B2B qualificados, com credibilidade emprestada de quem já é cliente V4.</span></div>
-      </div>
-      <div class="reason-card">
-        <div class="reason-num">03</div>
-        <div class="reason-text"><strong>Fortalece quem já é cliente</strong><span>O cliente-anfitrião leva um ativo de alto valor pra própria carteira, sem custo nem esforço operacional da parte dele.</span></div>
-      </div>
-      <div class="reason-card">
-        <div class="reason-num">04</div>
-        <div class="reason-text"><strong>Entrega valor antes do pitch</strong><span>O Mapa de Gargalos individual é a prova que sustenta a credibilidade da V4 como parceira de margem, não só de mídia.</span></div>
-      </div>
-    </div>
-  </div>
-</div></section>
-
-<!-- SLIDE 3 - ESTRUTURA DO EVENTO -->
-<section class="slide" id="s3"><div class="frame top">
-  <div class="slide-num">03 / 11</div>
+<!-- SLIDE 6 - STORYTELLING DO EVENTO (visão geral) -->
+<section class="slide" id="s6"><div class="frame top">
+  <div class="slide-num">06 / 17</div>
   <div class="frame-head">
-    <div class="eyebrow reveal" style="margin-top:0;">Estrutura do evento</div>
-    <h2 class="h2 reveal reveal-delay-1">A jornada, do credenciamento ao <span class="accent">coffee</span> final.</h2>
-    <p class="lead reveal reveal-delay-2">Sete etapas, nesta ordem. O pitch da V4 só entra depois do diagnóstico, nunca antes.</p>
+    <div class="eyebrow reveal" style="margin-top:0;">Storytelling do evento</div>
+    <h2 class="h2 reveal reveal-delay-1">Seis blocos, <span class="accent">nesta ordem</span>.</h2>
+    <p class="lead reveal reveal-delay-2">A Teoria das Restrições só entra depois de mostrar o que é IA/automação e provar que funciona.</p>
   </div>
   <div class="body-fill">
     <div class="flow reveal reveal-delay-3">
       <div class="flow-step">
         <div class="flow-num">01</div>
-        <div class="flow-title">Credenciamento</div>
-        <div class="flow-desc">Recepção na Flagship V4</div>
+        <div class="flow-title">IA e automação</div>
+        <div class="flow-desc">O que é cada uma, e onde se complementam</div>
       </div>
       <div class="flow-step">
         <div class="flow-num">02</div>
-        <div class="flow-title">Conteúdo</div>
-        <div class="flow-desc">Teoria das Restrições aplicada à produtividade</div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">03</div>
         <div class="flow-title">Cases reais</div>
-        <div class="flow-desc">Empresas usando IA no dia a dia, além do óbvio</div>
+        <div class="flow-desc">Como empresas já usam isso, com dado real</div>
+      </div>
+      <div class="flow-step highlight">
+        <div class="flow-num">03</div>
+        <div class="flow-title">Teoria das Restrições</div>
+        <div class="flow-desc">A metodologia pra escolher a prioridade certa</div>
       </div>
       <div class="flow-step highlight">
         <div class="flow-num">04</div>
-        <div class="flow-title">Diagnóstico</div>
-        <div class="flow-desc">Formulário ao vivo: identificação + 10 dimensões</div>
+        <div class="flow-title">Dinâmica</div>
+        <div class="flow-desc">Diagnóstico ao vivo da própria empresa</div>
       </div>
-      <div class="flow-step highlight">
+      <div class="flow-step">
         <div class="flow-num">05</div>
-        <div class="flow-title">Mapa entregue</div>
-        <div class="flow-desc">Cada participante recebe seu Mapa de Gargalos</div>
+        <div class="flow-title">Pitch V4</div>
+        <div class="flow-desc">A resposta pro gargalo identificado</div>
       </div>
       <div class="flow-step">
         <div class="flow-num">06</div>
-        <div class="flow-title">Pitch V4</div>
-        <div class="flow-desc">Como a V4 ajuda a resolver o gargalo identificado</div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">07</div>
-        <div class="flow-title">Coffee &amp; Network</div>
-        <div class="flow-desc">Encerramento com networking entre os participantes</div>
+        <div class="flow-title">Networking</div>
+        <div class="flow-desc">Coffee de encerramento</div>
       </div>
     </div>
-    <div class="callout reveal reveal-delay-4">O coffee final não é só cortesia: é o espaço onde convidados, clientes-anfitriões e time V4 circulam juntos, reforça a percepção de relacionamento antes de qualquer follow-up comercial.</div>
   </div>
 </div></section>
 
-<!-- SLIDE 4 - BLOCO 1: ABERTURA / TEORIA DAS RESTRIÇÕES -->
-<section class="slide" id="s4"><div class="frame top">
-  <div class="slide-num">04 / 11</div>
+<!-- SLIDE 7 - BLOCO 1: IA E AUTOMAÇÃO -->
+<section class="slide" id="s7"><div class="frame top">
+  <div class="slide-num">07 / 17</div>
   <div class="frame-head">
-    <div class="eyebrow reveal" style="margin-top:0;">Conteúdo do evento · Bloco 1 de 4</div>
-    <h2 class="h2 reveal reveal-delay-1">Abertura: <span class="accent">Teoria das Restrições</span>.</h2>
-    <p class="lead reveal reveal-delay-2">O bloco que instala o conceito antes de qualquer diagnóstico ou pitch.</p>
+    <div class="eyebrow reveal" style="margin-top:0;">Storytelling do evento · Bloco 1 de 6</div>
+    <h2 class="h2 reveal reveal-delay-1">IA e automação: <span class="accent">parecidas, não iguais</span>.</h2>
+    <p class="lead reveal reveal-delay-2">O bloco que instala o vocabulário certo antes de qualquer case ou diagnóstico.</p>
   </div>
   <div class="body-fill">
     <div class="block-card roomy reveal reveal-delay-3">
-      <div class="block-row"><span class="label">Formato</span><span class="val">Palestra de 20-25 minutos, apresentador V4</span></div>
-      <div class="block-row"><span class="label">Objetivo</span><span class="val">Instalar a ideia de que o gargalo importa mais que a ferramenta, antes de o público olhar pra própria empresa</span></div>
-      <div class="block-row"><span class="label">Conteúdo</span><span class="val">O que é uma restrição, por que otimizar tudo ao mesmo tempo não funciona, e a cadeia gargalo → impacto → oportunidade → IA/automação → prioridade (o público vê essa lógica aqui pela primeira vez, antes de aplicá-la a si mesmo no diagnóstico)</span></div>
-      <div class="block-row"><span class="label">Narrativa</span><span class="val">Parte de um exemplo cotidiano de restrição (linha de produção, motor) antes de aplicar à própria empresa do público, gera o "isso também vale pra mim" antes do diagnóstico</span></div>
+      <div class="block-row"><span class="label">Automação</span><span class="val">Executa regras e fluxos predefinidos sem intervenção humana: dispara, move, atualiza</span></div>
+      <div class="block-row"><span class="label">IA</span><span class="val">Aprende padrões e decide a partir de dados: prevê, classifica, gera, responde</span></div>
+      <div class="block-row"><span class="label">Complementaridade</span><span class="val">A automação executa o "o quê", a IA decide "o quê fazer" quando a regra não é óbvia. Juntas tiram trabalho manual e decisão repetitiva do caminho</span></div>
     </div>
   </div>
 </div></section>
 
-<!-- SLIDE 5 - BLOCO 2: CASES REAIS DE IA APLICADA -->
-<section class="slide" id="s5"><div class="frame top">
-  <div class="slide-num">05 / 11</div>
+<!-- SLIDE 8 - BLOCO 2: CASES REAIS -->
+<section class="slide" id="s8"><div class="frame top">
+  <div class="slide-num">08 / 17</div>
   <div class="frame-head">
-    <div class="eyebrow reveal" style="margin-top:0;">Conteúdo do evento · Bloco 2 de 4</div>
-    <h2 class="h2 reveal reveal-delay-1">Cases reais: IA além do <span class="accent">óbvio</span>.</h2>
-    <p class="lead reveal reveal-delay-2">Prova social antes do diagnóstico, pra instalar "isso não é hipótese" antes de "e a minha empresa?".</p>
+    <div class="eyebrow reveal" style="margin-top:0;">Storytelling do evento · Bloco 2 de 6</div>
+    <h2 class="h2 reveal reveal-delay-1">Como empresas já usam isso <span class="accent">no dia a dia</span>.</h2>
+    <p class="lead reveal reveal-delay-2">Dado real e resumido aqui, o detalhamento fica pra depois.</p>
   </div>
   <div class="body-fill">
-    <div class="block-card reveal reveal-delay-3" style="max-width:1448px;">
-      <div class="block-row"><span class="label">Formato</span><span class="val">Bloco de ~15 minutos, 3-4 exemplos curados</span></div>
-      <div class="block-row"><span class="label">Objetivo</span><span class="val">Mostrar aplicações de IA e automação além do óbvio (atendimento ao cliente)</span></div>
-    </div>
-    <div class="cases-grid reveal reveal-delay-4">
+    <div class="cases-grid reveal reveal-delay-3">
+      <div class="case-card">
+        <div class="case-tag">Adoção no Brasil</div>
+        <div class="case-title">44% dos pequenos negócios já usam IA</div>
+        <div class="case-desc">Salto de patamar em um ano, segundo levantamento nacional sobre transformação digital em pequenos negócios</div>
+        <div class="case-source">Fonte: Sebrae, Transformação Digital nos Pequenos Negócios, 2025</div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Produtividade</div>
+        <div class="case-title">+14% de produtividade, +9% de crescimento financeiro</div>
+        <div class="case-desc">Em empresas que adotaram IA generativa de forma estruturada, não só experimentando</div>
+        <div class="case-source">Fonte: Bain & Company, 2025</div>
+      </div>
       <div class="case-card">
         <div class="case-tag">Financeiro</div>
-        <div class="case-title">Conciliação e previsão</div>
-        <div class="case-desc">Automação de conciliação bancária e previsão de fluxo de caixa</div>
+        <div class="case-title">-60% em surpresas de caixa negativo</div>
+        <div class="case-desc">Empresa de serviços após implementar previsão de fluxo de caixa com IA</div>
+        <div class="case-source">Fonte: reportagem de mercado, 2025</div>
       </div>
       <div class="case-card">
-        <div class="case-tag">Administrativo</div>
-        <div class="case-title">Documentos e contratos</div>
-        <div class="case-desc">Triagem de documentos e geração automática de contratos</div>
-      </div>
-      <div class="case-card">
-        <div class="case-tag">Operações</div>
-        <div class="case-title">Fluxo e estoque</div>
-        <div class="case-desc">Roteirização, controle de estoque e agendamento automatizado</div>
-      </div>
-      <div class="case-card">
-        <div class="case-tag">Comercial</div>
-        <div class="case-title">Qualificação de leads</div>
-        <div class="case-desc">Qualificação e follow-up automatizado de oportunidades</div>
+        <div class="case-tag">Atendimento</div>
+        <div class="case-title">-60% no tempo médio de resposta</div>
+        <div class="case-desc">E-commerce de moda após inserir um agente inteligente no atendimento</div>
+        <div class="case-source">Fonte: reportagem de mercado, 2025</div>
       </div>
     </div>
-    <div class="callout reveal reveal-delay-4">[A CURAR] Estas são categorias-alvo, não cases fechados. Exemplos reais e verificáveis (próprios da V4 ou de mercado) precisam ser levantados antes da primeira edição.</div>
+    <div class="callout reveal reveal-delay-4">[Detalhar depois] Estes números já são reais e verificáveis; o aprofundamento de cada caso, com mais contexto e possíveis nomes de empresa, fica pra uma curadoria posterior.</div>
   </div>
 </div></section>
 
-<!-- SLIDE 6 - BLOCO 3: DIAGNÓSTICO AO VIVO -->
-<section class="slide" id="s6"><div class="frame top">
-  <div class="slide-num">06 / 11</div>
+<!-- SLIDE 9 - BLOCO 3: TEORIA DAS RESTRIÇÕES -->
+<section class="slide" id="s9"><div class="frame top">
+  <div class="slide-num">09 / 17</div>
   <div class="frame-head">
-    <div class="eyebrow reveal" style="margin-top:0;">Conteúdo do evento · Bloco 3 de 4</div>
-    <h2 class="h2 reveal reveal-delay-1">Diagnóstico ao vivo: dez dimensões, <span class="accent">uma prioridade</span>.</h2>
+    <div class="eyebrow reveal" style="margin-top:0;">Storytelling do evento · Bloco 3 de 6</div>
+    <h2 class="h2 reveal reveal-delay-1">A metodologia pra escolher <span class="accent">a prioridade certa</span>.</h2>
+    <p class="lead reveal reveal-delay-2">Agora que o público viu que IA e automação funcionam, a pergunta vira: por onde começar?</p>
+  </div>
+  <div class="body-fill">
+    <div class="block-card roomy reveal reveal-delay-3">
+      <div class="block-row"><span class="label">A ideia</span><span class="val">Toda empresa tem, em cada momento, uma única restrição que limita seu crescimento ou eficiência</span></div>
+      <div class="block-row"><span class="label">A consequência</span><span class="val">Investir em qualquer coisa que não seja essa restrição não muda o resultado final, só desloca o gargalo</span></div>
+      <div class="block-row"><span class="label">A adaptação da V4</span><span class="val">A V4 usa essa lógica pra auditar funis de marketing e vendas, encontrando a restrição que está limitando o resultado comercial antes de recomendar qualquer canal ou ferramenta</span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- SLIDE 10 - BLOCO 4: DINÂMICA -->
+<section class="slide" id="s10"><div class="frame top">
+  <div class="slide-num">10 / 17</div>
+  <div class="frame-head">
+    <div class="eyebrow reveal" style="margin-top:0;">Storytelling do evento · Bloco 4 de 6</div>
+    <h2 class="h2 reveal reveal-delay-1">Dinâmica: dez dimensões, <span class="accent">uma prioridade</span>.</h2>
     <p class="lead reveal reveal-delay-2">O momento pessoal do evento, e o ponto onde todo participante vira um contato qualificado.</p>
   </div>
   <div class="body-fill">
-  <div class="diag-grid reveal reveal-delay-3">
-    <div>
-      <div class="block-card">
-        <div class="block-row"><span class="label">Formato</span><span class="val">Formulário via QR code, 8-10min</span></div>
-        <div class="block-row"><span class="label">Parte 1</span><span class="val">Identificação: nome, empresa, telefone. Vira contato qualificado no CRM independente do resultado</span></div>
-        <div class="block-row"><span class="label">Parte 2</span><span class="val">Perguntas cobrindo as 10 dimensões de gargalo</span></div>
-      </div>
-      <div class="math-box">
-        <div><div class="big-num">10</div></div>
-        <div>
-          <div class="label">Dimensões avaliadas</div>
-          <div class="equation"><strong>Gargalo → Impacto → Oportunidade → IA → Prioridade.</strong> Mesma lógica do bloco de abertura, aplicada agora à própria empresa de quem responde.</div>
+    <div class="diag-grid reveal reveal-delay-3">
+      <div>
+        <div class="block-card">
+          <div class="block-row"><span class="label">Formato</span><span class="val">Formulário via QR code, 8-10min</span></div>
+          <div class="block-row"><span class="label">Parte 1</span><span class="val">Identificação: nome, empresa, telefone. Vira contato qualificado no CRM independente do resultado</span></div>
+          <div class="block-row"><span class="label">Parte 2</span><span class="val">Perguntas cobrindo as 10 dimensões de gargalo</span></div>
+        </div>
+        <div class="math-box">
+          <div><div class="big-num">10</div></div>
+          <div>
+            <div class="label">Dimensões avaliadas</div>
+            <div class="equation"><strong>Gargalo → Impacto → Oportunidade → IA → Prioridade.</strong> Mesma lógica do bloco 3, aplicada agora à própria empresa de quem responde.</div>
+          </div>
         </div>
       </div>
+      <div class="gargalo-table">
+        <div class="gargalo-row head"><div class="item">Tipo de gargalo</div><div class="value">Sintoma típico</div></div>
+        <div class="gargalo-row"><div class="item">Capacidade</div><div class="value">Equipe sempre no limite, atrasos recorrentes</div></div>
+        <div class="gargalo-row"><div class="item">Manual/repetitivo</div><div class="value">Horas em planilhas, copiar e colar entre sistemas</div></div>
+        <div class="gargalo-row"><div class="item">Informação</div><div class="value">"Isso está em algum lugar, mas não sei onde"</div></div>
+        <div class="gargalo-row"><div class="item">Decisão</div><div class="value">Reuniões que não terminam em ação</div></div>
+        <div class="gargalo-row"><div class="item">Processo</div><div class="value">Aprovações em cascata, retrabalho</div></div>
+        <div class="gargalo-row"><div class="item">Integração</div><div class="value">Dados duplicados entre sistemas que não conversam</div></div>
+        <div class="gargalo-row"><div class="item">Comunicação</div><div class="value">Agenda lotada de reuniões de status</div></div>
+        <div class="gargalo-row"><div class="item">Conhecimento</div><div class="value">"Só fulano sabe fazer isso"</div></div>
+        <div class="gargalo-row"><div class="item">Controle</div><div class="value">Decisões no feeling, sem dashboard confiável</div></div>
+        <div class="gargalo-row"><div class="item">Demanda/comercial</div><div class="value">Funil comercial não preenchido ou não converte</div></div>
+      </div>
     </div>
-    <div class="gargalo-table">
-      <div class="gargalo-row head"><div class="item">Tipo de gargalo</div><div class="value">Sintoma típico</div></div>
-      <div class="gargalo-row"><div class="item">Capacidade</div><div class="value">Equipe sempre no limite, atrasos recorrentes</div></div>
-      <div class="gargalo-row"><div class="item">Manual/repetitivo</div><div class="value">Horas em planilhas, copiar e colar entre sistemas</div></div>
-      <div class="gargalo-row"><div class="item">Informação</div><div class="value">"Isso está em algum lugar, mas não sei onde"</div></div>
-      <div class="gargalo-row"><div class="item">Decisão</div><div class="value">Reuniões que não terminam em ação</div></div>
-      <div class="gargalo-row"><div class="item">Processo</div><div class="value">Aprovações em cascata, retrabalho</div></div>
-      <div class="gargalo-row"><div class="item">Integração</div><div class="value">Dados duplicados entre sistemas que não conversam</div></div>
-      <div class="gargalo-row"><div class="item">Comunicação</div><div class="value">Agenda lotada de reuniões de status</div></div>
-      <div class="gargalo-row"><div class="item">Conhecimento</div><div class="value">"Só fulano sabe fazer isso"</div></div>
-      <div class="gargalo-row"><div class="item">Controle</div><div class="value">Decisões no feeling, sem dashboard confiável</div></div>
-      <div class="gargalo-row"><div class="item">Demanda/comercial</div><div class="value">Funil comercial não preenchido ou não converte</div></div>
-    </div>
-  </div>
   </div>
 </div></section>
 
-<!-- SLIDE 7 - BLOCO 4: PITCH V4 -->
-<section class="slide" id="s7"><div class="frame top">
-  <div class="slide-num">07 / 11</div>
+<!-- SLIDE 11 - BLOCO 5: PITCH V4 (teaser) -->
+<section class="slide" id="s11"><div class="frame top">
+  <div class="slide-num">11 / 17</div>
   <div class="frame-head">
-    <div class="eyebrow reveal" style="margin-top:0;">Conteúdo do evento · Bloco 4 de 4</div>
+    <div class="eyebrow reveal" style="margin-top:0;">Storytelling do evento · Bloco 5 de 6</div>
     <h2 class="h2 reveal reveal-delay-1">Pitch V4: a resposta pro gargalo que acabou de aparecer.</h2>
-    <p class="lead reveal reveal-delay-2">O último bloco, feito só depois que cada um já tem o próprio Mapa em mãos.</p>
+    <p class="lead reveal reveal-delay-2">O bloco final de conteúdo, feito só depois que cada um já tem o próprio Mapa em mãos.</p>
   </div>
   <div class="body-fill">
     <div class="block-card roomy reveal reveal-delay-3">
       <div class="block-row"><span class="label">Formato</span><span class="val">Apresentação de 10-15 minutos, logo após a entrega do Mapa</span></div>
       <div class="block-row"><span class="label">Objetivo</span><span class="val">Conectar o gargalo de cada participante a uma solução da V4</span></div>
-      <div class="block-row"><span class="label">Narrativa</span><span class="val">"Agora que você viu seu gargalo, deixa a gente te mostrar como resolvemos isso." O detalhamento estratégico desse pitch está no próximo slide</span></div>
+      <div class="block-row"><span class="label">Narrativa</span><span class="val">"Agora que você viu seu gargalo, deixa a gente te mostrar como resolvemos isso." O detalhamento estratégico está no próximo slide</span></div>
     </div>
   </div>
 </div></section>
 
-<!-- SLIDE 8 - O PITCH DA V4 EM PROFUNDIDADE -->
-<section class="slide" id="s8"><div class="frame top">
-  <div class="slide-num">08 / 11</div>
+<!-- SLIDE 12 - O PITCH DA V4 EM PROFUNDIDADE -->
+<section class="slide" id="s12"><div class="frame top">
+  <div class="slide-num">12 / 17</div>
   <div class="frame-head">
     <div class="eyebrow reveal" style="margin-top:0;">O pitch da V4 em profundidade</div>
     <h2 class="h2 reveal reveal-delay-1">A mesma lógica que a V4 usa no <span class="accent">dia a dia</span>.</h2>
@@ -513,11 +578,28 @@ body { overflow-x: hidden; }
   </div>
 </div></section>
 
-<!-- SLIDE 9 - SCRIPT OUTBOUND -->
-<section class="slide" id="s9"><div class="frame top">
-  <div class="slide-num">09 / 11</div>
+<!-- SLIDE 13 - BLOCO 6: NETWORKING -->
+<section class="slide" id="s13"><div class="frame top">
+  <div class="slide-num">13 / 17</div>
   <div class="frame-head">
-    <div class="eyebrow reveal" style="margin-top:0;">Motor de prospecção</div>
+    <div class="eyebrow reveal" style="margin-top:0;">Storytelling do evento · Bloco 6 de 6</div>
+    <h2 class="h2 reveal reveal-delay-1">Networking: o <span class="accent">fechamento social</span> do evento.</h2>
+    <p class="lead reveal reveal-delay-2">Não é só cortesia, é parte da estratégia de relacionamento.</p>
+  </div>
+  <div class="body-fill">
+    <div class="block-card roomy reveal reveal-delay-3">
+      <div class="block-row"><span class="label">O que é</span><span class="val">Coffee de encerramento, sem agenda formal</span></div>
+      <div class="block-row"><span class="label">Por quê</span><span class="val">É o espaço onde convidados, clientes-anfitriões e time V4 circulam juntos</span></div>
+      <div class="block-row"><span class="label">Efeito</span><span class="val">Reforça a percepção de relacionamento antes de qualquer follow-up comercial do Outbound</span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- SLIDE 14 - SCRIPT OUTBOUND -->
+<section class="slide" id="s14"><div class="frame top">
+  <div class="slide-num">14 / 17</div>
+  <div class="frame-head">
+    <div class="eyebrow reveal" style="margin-top:0;">Como será o pitch do convite</div>
     <h2 class="h2 reveal reveal-delay-1">Como o Outbound <span class="accent">liga</span> pro lead.</h2>
     <p class="lead reveal reveal-delay-2">IA no gancho, credibilidade do cliente-anfitrião logo em seguida.</p>
   </div>
@@ -562,13 +644,13 @@ body { overflow-x: hidden; }
   </div>
 </div></section>
 
-<!-- SLIDE 10 - PITCH DE RECRUTAMENTO DO CLIENTE-ANFITRIÃO -->
-<section class="slide" id="s10"><div class="frame top">
-  <div class="slide-num">10 / 11</div>
+<!-- SLIDE 15 - PITCH DE RECRUTAMENTO DO CLIENTE-ANFITRIÃO -->
+<section class="slide" id="s15"><div class="frame top">
+  <div class="slide-num">15 / 17</div>
   <div class="frame-head">
     <div class="eyebrow reveal" style="margin-top:0;">Como vendemos pros nossos clientes</div>
     <h2 class="h2 reveal reveal-delay-1">Recrutando o <span class="accent">cliente-anfitrião</span>.</h2>
-    <p class="lead reveal reveal-delay-2">Pitch do time de CS/Comercial da V4 pro cliente atual, pedindo que ele indique convidados.</p>
+    <p class="lead reveal reveal-delay-2">Pitch do time de CS/Comercial da V4 pro cliente atual, pedindo a lista de convidados.</p>
   </div>
   <div class="body-fill">
     <div class="script-list reveal reveal-delay-3">
@@ -604,9 +686,9 @@ body { overflow-x: hidden; }
   </div>
 </div></section>
 
-<!-- SLIDE 11 - FECHAMENTO -->
-<section class="slide" id="s11"><div class="frame top">
-  <div class="slide-num">11 / 11</div>
+<!-- SLIDE 16 - FECHAMENTO -->
+<section class="slide" id="s16"><div class="frame top">
+  <div class="slide-num">16 / 17</div>
   <div class="frame-head">
     <div class="eyebrow reveal" style="margin-top:0;">Fechamento</div>
     <h2 class="h2 reveal reveal-delay-1">O que precisa ser <span class="accent">validado</span> agora.</h2>
@@ -615,7 +697,7 @@ body { overflow-x: hidden; }
     <div class="decision-list reveal reveal-delay-2">
       <div class="dec-item">
         <div class="dec-num">01</div>
-        <div class="dec-text"><strong>Validar o conceito e a mecânica de convite em cascata.</strong><small>Base de todo o resto do plano.</small></div>
+        <div class="dec-text"><strong>Validar o objetivo, a persona e o mecanismo de convite direto pelo Outbound.</strong><small>Base de todo o resto do plano.</small></div>
       </div>
       <div class="dec-item">
         <div class="dec-num">02</div>
@@ -623,14 +705,43 @@ body { overflow-x: hidden; }
       </div>
       <div class="dec-item">
         <div class="dec-num">03</div>
-        <div class="dec-text"><strong>Iniciar curadoria dos cases reais de IA/automação.</strong><small>Precisa de tempo de levantamento antes do evento.</small></div>
+        <div class="dec-text"><strong>Aprofundar a curadoria dos cases reais de IA/automação.</strong><small>Os dados já são reais; falta aprofundar caso a caso.</small></div>
       </div>
       <div class="dec-item">
         <div class="dec-num">04</div>
         <div class="dec-text"><strong>Aprovar os scripts de Outbound e de recrutamento de anfitriões.</strong><small>Para começar a execução operacional.</small></div>
       </div>
     </div>
-    <div class="deadline reveal reveal-delay-3">
+  </div>
+</div></section>
+
+<!-- SLIDE 17 - PROJEÇÃO DO CONVITE -->
+<section class="slide" id="s17"><div class="frame top">
+  <div class="slide-num">17 / 17</div>
+  <div class="frame-head">
+    <div class="eyebrow reveal" style="margin-top:0;">Projeção do convite</div>
+    <h2 class="h2 reveal reveal-delay-1">Quantas ligações pra <span class="accent">lotar a sala</span>.</h2>
+    <p class="lead reveal reveal-delay-2">Meta de 40 comparecimentos, considerando a margem histórica de no-show.</p>
+  </div>
+  <div class="body-fill">
+    <div class="funnel-grid reveal reveal-delay-3">
+      <div class="funnel-stage">
+        <div class="funnel-num">300</div>
+        <div class="funnel-label">Ligações necessárias</div>
+        <div class="funnel-note">A uma conversão de 2 confirmações a cada 10 ligações (20%)</div>
+      </div>
+      <div class="funnel-stage">
+        <div class="funnel-num">60</div>
+        <div class="funnel-label">Confirmados</div>
+        <div class="funnel-note">Considerando uma margem de 40% a 50% de confirmados que não comparecem</div>
+      </div>
+      <div class="funnel-stage highlight">
+        <div class="funnel-num">40</div>
+        <div class="funnel-label">Comparecimentos (meta)</div>
+        <div class="funnel-note">O número de convidados que queremos ver na Flagship no dia</div>
+      </div>
+    </div>
+    <div class="deadline reveal reveal-delay-4">
       <div class="deadline-text">
         <strong>Decisão nesta reunião.</strong>
         <p>Aprovar o conceito destrava o desenho operacional (data, orçamento, stack do diagnóstico) como próxima etapa.</p>
