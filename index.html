@@ -77,6 +77,11 @@ body { overflow-x: hidden; }
 .frame.top { justify-content: flex-start; }
 .frame > * { position: relative; z-index: 2; }
 
+/* O cabeçalho (eyebrow/título/lead) fica fixo no topo; o corpo ocupa
+   o espaço restante e centraliza o conteúdo nele, sem sobra embaixo */
+.frame-head { flex: 0 0 auto; }
+.body-fill { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 6px; }
+
 @media print {
   html, body { overflow: visible; background: #fff; }
   .slide { min-height: auto; page-break-after: always; padding: 0; }
@@ -156,6 +161,10 @@ body { overflow-x: hidden; }
 .block-row:first-of-type { border-top: none; padding-top: 0; }
 .block-row .label { color: var(--text-3); font-family: 'Space Grotesk', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; padding-top: 2px; }
 .block-row .val { color: var(--text-2); }
+/* Variante pra slides com um único block-card, evita cara de vazio */
+.block-card.roomy { padding: 34px 40px; max-width: 1448px; }
+.block-card.roomy .block-row { padding: 20px 0; font-size: 18px; grid-template-columns: 150px 1fr; }
+.block-card.roomy .block-row .label { font-size: 12px; }
 
 /* cases reais */
 .cases-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 14px; max-width: 1448px; }
@@ -260,28 +269,30 @@ body { overflow-x: hidden; }
 <!-- SLIDE 2 - CONCEITO CENTRAL -->
 <section class="slide" id="s2"><div class="frame top">
   <div class="slide-num">02 / 11</div>
-  <div class="concept-top">
+  <div class="concept-top frame-head">
     <div class="eyebrow reveal" style="margin-top:0;">O conceito</div>
     <h1 class="h1-md reveal reveal-delay-1">Achar o gargalo certo <span class="accent">aumenta a margem.</span> A ferramenta certa, sozinha, não.</h1>
     <p class="lead reveal reveal-delay-2" style="margin-top:14px;"><strong style="color:var(--text)">Teoria das Restrições</strong> aplicada à produtividade e à IA: toda empresa tem, em cada momento, uma única restrição que limita seu crescimento. Investir em qualquer coisa que não seja essa restrição não muda o resultado final, só desloca o gargalo. A IA entra depois de identificada essa restrição, como caminho pra resolver, não como tema do evento.</p>
   </div>
-  <div class="eyebrow reveal reveal-delay-3">Por que fazer isso agora</div>
-  <div class="reasons-grid reveal reveal-delay-4">
-    <div class="reason-card">
-      <div class="reason-num">01</div>
-      <div class="reason-text"><strong>Diferenciação num mercado saturado</strong><span>A maioria dos eventos de IA vende ferramenta sem entender o problema real. Partir do gargalo, não da tecnologia, separa esse evento do resto.</span></div>
-    </div>
-    <div class="reason-card">
-      <div class="reason-num">02</div>
-      <div class="reason-text"><strong>Motor de leads sem prospecção fria</strong><span>O convite em cascata entrega uma sala de decisores B2B qualificados, com credibilidade emprestada de quem já é cliente V4.</span></div>
-    </div>
-    <div class="reason-card">
-      <div class="reason-num">03</div>
-      <div class="reason-text"><strong>Fortalece quem já é cliente</strong><span>O cliente-anfitrião leva um ativo de alto valor pra própria carteira, sem custo nem esforço operacional da parte dele.</span></div>
-    </div>
-    <div class="reason-card">
-      <div class="reason-num">04</div>
-      <div class="reason-text"><strong>Entrega valor antes do pitch</strong><span>O Mapa de Gargalos individual é a prova que sustenta a credibilidade da V4 como parceira de margem, não só de mídia.</span></div>
+  <div class="body-fill">
+    <div class="eyebrow reveal reveal-delay-3">Por que fazer isso agora</div>
+    <div class="reasons-grid reveal reveal-delay-4">
+      <div class="reason-card">
+        <div class="reason-num">01</div>
+        <div class="reason-text"><strong>Diferenciação num mercado saturado</strong><span>A maioria dos eventos de IA vende ferramenta sem entender o problema real. Partir do gargalo, não da tecnologia, separa esse evento do resto.</span></div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">02</div>
+        <div class="reason-text"><strong>Motor de leads sem prospecção fria</strong><span>O convite em cascata entrega uma sala de decisores B2B qualificados, com credibilidade emprestada de quem já é cliente V4.</span></div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">03</div>
+        <div class="reason-text"><strong>Fortalece quem já é cliente</strong><span>O cliente-anfitrião leva um ativo de alto valor pra própria carteira, sem custo nem esforço operacional da parte dele.</span></div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">04</div>
+        <div class="reason-text"><strong>Entrega valor antes do pitch</strong><span>O Mapa de Gargalos individual é a prova que sustenta a credibilidade da V4 como parceira de margem, não só de mídia.</span></div>
+      </div>
     </div>
   </div>
 </div></section>
@@ -289,104 +300,119 @@ body { overflow-x: hidden; }
 <!-- SLIDE 3 - ESTRUTURA DO EVENTO -->
 <section class="slide" id="s3"><div class="frame top">
   <div class="slide-num">03 / 11</div>
-  <div class="eyebrow reveal" style="margin-top:0;">Estrutura do evento</div>
-  <h2 class="h2 reveal reveal-delay-1">A jornada, do credenciamento ao <span class="accent">coffee</span> final.</h2>
-  <p class="lead reveal reveal-delay-2">Sete etapas, nesta ordem. O pitch da V4 só entra depois do diagnóstico, nunca antes.</p>
-  <div class="flow reveal reveal-delay-3">
-    <div class="flow-step">
-      <div class="flow-num">01</div>
-      <div class="flow-title">Credenciamento</div>
-      <div class="flow-desc">Recepção na Flagship V4</div>
-    </div>
-    <div class="flow-step">
-      <div class="flow-num">02</div>
-      <div class="flow-title">Conteúdo</div>
-      <div class="flow-desc">Teoria das Restrições aplicada à produtividade</div>
-    </div>
-    <div class="flow-step">
-      <div class="flow-num">03</div>
-      <div class="flow-title">Cases reais</div>
-      <div class="flow-desc">Empresas usando IA no dia a dia, além do óbvio</div>
-    </div>
-    <div class="flow-step highlight">
-      <div class="flow-num">04</div>
-      <div class="flow-title">Diagnóstico</div>
-      <div class="flow-desc">Formulário ao vivo: identificação + 10 dimensões</div>
-    </div>
-    <div class="flow-step highlight">
-      <div class="flow-num">05</div>
-      <div class="flow-title">Mapa entregue</div>
-      <div class="flow-desc">Cada participante recebe seu Mapa de Gargalos</div>
-    </div>
-    <div class="flow-step">
-      <div class="flow-num">06</div>
-      <div class="flow-title">Pitch V4</div>
-      <div class="flow-desc">Como a V4 ajuda a resolver o gargalo identificado</div>
-    </div>
-    <div class="flow-step">
-      <div class="flow-num">07</div>
-      <div class="flow-title">Coffee &amp; Network</div>
-      <div class="flow-desc">Encerramento com networking entre os participantes</div>
-    </div>
+  <div class="frame-head">
+    <div class="eyebrow reveal" style="margin-top:0;">Estrutura do evento</div>
+    <h2 class="h2 reveal reveal-delay-1">A jornada, do credenciamento ao <span class="accent">coffee</span> final.</h2>
+    <p class="lead reveal reveal-delay-2">Sete etapas, nesta ordem. O pitch da V4 só entra depois do diagnóstico, nunca antes.</p>
   </div>
-  <div class="callout reveal reveal-delay-4">O coffee final não é só cortesia: é o espaço onde convidados, clientes-anfitriões e time V4 circulam juntos, reforça a percepção de relacionamento antes de qualquer follow-up comercial.</div>
+  <div class="body-fill">
+    <div class="flow reveal reveal-delay-3">
+      <div class="flow-step">
+        <div class="flow-num">01</div>
+        <div class="flow-title">Credenciamento</div>
+        <div class="flow-desc">Recepção na Flagship V4</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">02</div>
+        <div class="flow-title">Conteúdo</div>
+        <div class="flow-desc">Teoria das Restrições aplicada à produtividade</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">03</div>
+        <div class="flow-title">Cases reais</div>
+        <div class="flow-desc">Empresas usando IA no dia a dia, além do óbvio</div>
+      </div>
+      <div class="flow-step highlight">
+        <div class="flow-num">04</div>
+        <div class="flow-title">Diagnóstico</div>
+        <div class="flow-desc">Formulário ao vivo: identificação + 10 dimensões</div>
+      </div>
+      <div class="flow-step highlight">
+        <div class="flow-num">05</div>
+        <div class="flow-title">Mapa entregue</div>
+        <div class="flow-desc">Cada participante recebe seu Mapa de Gargalos</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">06</div>
+        <div class="flow-title">Pitch V4</div>
+        <div class="flow-desc">Como a V4 ajuda a resolver o gargalo identificado</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">07</div>
+        <div class="flow-title">Coffee &amp; Network</div>
+        <div class="flow-desc">Encerramento com networking entre os participantes</div>
+      </div>
+    </div>
+    <div class="callout reveal reveal-delay-4">O coffee final não é só cortesia: é o espaço onde convidados, clientes-anfitriões e time V4 circulam juntos, reforça a percepção de relacionamento antes de qualquer follow-up comercial.</div>
+  </div>
 </div></section>
 
 <!-- SLIDE 4 - BLOCO 1: ABERTURA / TEORIA DAS RESTRIÇÕES -->
 <section class="slide" id="s4"><div class="frame top">
   <div class="slide-num">04 / 11</div>
-  <div class="eyebrow reveal" style="margin-top:0;">Conteúdo do evento · Bloco 1 de 4</div>
-  <h2 class="h2 reveal reveal-delay-1">Abertura: <span class="accent">Teoria das Restrições</span>.</h2>
-  <p class="lead reveal reveal-delay-2">O bloco que instala o conceito antes de qualquer diagnóstico ou pitch.</p>
-  <div class="block-card reveal reveal-delay-3" style="margin-top:14px;">
-    <div class="block-row"><span class="label">Formato</span><span class="val">Palestra de 20-25 minutos, apresentador V4</span></div>
-    <div class="block-row"><span class="label">Objetivo</span><span class="val">Instalar a ideia de que o gargalo importa mais que a ferramenta, antes de o público olhar pra própria empresa</span></div>
-    <div class="block-row"><span class="label">Conteúdo</span><span class="val">O que é uma restrição, por que otimizar tudo ao mesmo tempo não funciona, e a cadeia gargalo → impacto → oportunidade → IA/automação → prioridade (o público vê essa lógica aqui pela primeira vez, antes de aplicá-la a si mesmo no diagnóstico)</span></div>
-    <div class="block-row"><span class="label">Narrativa</span><span class="val">Parte de um exemplo cotidiano de restrição (linha de produção, motor) antes de aplicar à própria empresa do público, gera o "isso também vale pra mim" antes do diagnóstico</span></div>
+  <div class="frame-head">
+    <div class="eyebrow reveal" style="margin-top:0;">Conteúdo do evento · Bloco 1 de 4</div>
+    <h2 class="h2 reveal reveal-delay-1">Abertura: <span class="accent">Teoria das Restrições</span>.</h2>
+    <p class="lead reveal reveal-delay-2">O bloco que instala o conceito antes de qualquer diagnóstico ou pitch.</p>
+  </div>
+  <div class="body-fill">
+    <div class="block-card roomy reveal reveal-delay-3">
+      <div class="block-row"><span class="label">Formato</span><span class="val">Palestra de 20-25 minutos, apresentador V4</span></div>
+      <div class="block-row"><span class="label">Objetivo</span><span class="val">Instalar a ideia de que o gargalo importa mais que a ferramenta, antes de o público olhar pra própria empresa</span></div>
+      <div class="block-row"><span class="label">Conteúdo</span><span class="val">O que é uma restrição, por que otimizar tudo ao mesmo tempo não funciona, e a cadeia gargalo → impacto → oportunidade → IA/automação → prioridade (o público vê essa lógica aqui pela primeira vez, antes de aplicá-la a si mesmo no diagnóstico)</span></div>
+      <div class="block-row"><span class="label">Narrativa</span><span class="val">Parte de um exemplo cotidiano de restrição (linha de produção, motor) antes de aplicar à própria empresa do público, gera o "isso também vale pra mim" antes do diagnóstico</span></div>
+    </div>
   </div>
 </div></section>
 
 <!-- SLIDE 5 - BLOCO 2: CASES REAIS DE IA APLICADA -->
 <section class="slide" id="s5"><div class="frame top">
   <div class="slide-num">05 / 11</div>
-  <div class="eyebrow reveal" style="margin-top:0;">Conteúdo do evento · Bloco 2 de 4</div>
-  <h2 class="h2 reveal reveal-delay-1">Cases reais: IA além do <span class="accent">óbvio</span>.</h2>
-  <p class="lead reveal reveal-delay-2">Prova social antes do diagnóstico, pra instalar "isso não é hipótese" antes de "e a minha empresa?".</p>
-  <div class="block-card reveal reveal-delay-3" style="margin-top:12px; max-width:1448px;">
-    <div class="block-row"><span class="label">Formato</span><span class="val">Bloco de ~15 minutos, 3-4 exemplos curados</span></div>
-    <div class="block-row"><span class="label">Objetivo</span><span class="val">Mostrar aplicações de IA e automação além do óbvio (atendimento ao cliente)</span></div>
+  <div class="frame-head">
+    <div class="eyebrow reveal" style="margin-top:0;">Conteúdo do evento · Bloco 2 de 4</div>
+    <h2 class="h2 reveal reveal-delay-1">Cases reais: IA além do <span class="accent">óbvio</span>.</h2>
+    <p class="lead reveal reveal-delay-2">Prova social antes do diagnóstico, pra instalar "isso não é hipótese" antes de "e a minha empresa?".</p>
   </div>
-  <div class="cases-grid reveal reveal-delay-4">
-    <div class="case-card">
-      <div class="case-tag">Financeiro</div>
-      <div class="case-title">Conciliação e previsão</div>
-      <div class="case-desc">Automação de conciliação bancária e previsão de fluxo de caixa</div>
+  <div class="body-fill">
+    <div class="block-card reveal reveal-delay-3" style="max-width:1448px;">
+      <div class="block-row"><span class="label">Formato</span><span class="val">Bloco de ~15 minutos, 3-4 exemplos curados</span></div>
+      <div class="block-row"><span class="label">Objetivo</span><span class="val">Mostrar aplicações de IA e automação além do óbvio (atendimento ao cliente)</span></div>
     </div>
-    <div class="case-card">
-      <div class="case-tag">Administrativo</div>
-      <div class="case-title">Documentos e contratos</div>
-      <div class="case-desc">Triagem de documentos e geração automática de contratos</div>
+    <div class="cases-grid reveal reveal-delay-4">
+      <div class="case-card">
+        <div class="case-tag">Financeiro</div>
+        <div class="case-title">Conciliação e previsão</div>
+        <div class="case-desc">Automação de conciliação bancária e previsão de fluxo de caixa</div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Administrativo</div>
+        <div class="case-title">Documentos e contratos</div>
+        <div class="case-desc">Triagem de documentos e geração automática de contratos</div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Operações</div>
+        <div class="case-title">Fluxo e estoque</div>
+        <div class="case-desc">Roteirização, controle de estoque e agendamento automatizado</div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Comercial</div>
+        <div class="case-title">Qualificação de leads</div>
+        <div class="case-desc">Qualificação e follow-up automatizado de oportunidades</div>
+      </div>
     </div>
-    <div class="case-card">
-      <div class="case-tag">Operações</div>
-      <div class="case-title">Fluxo e estoque</div>
-      <div class="case-desc">Roteirização, controle de estoque e agendamento automatizado</div>
-    </div>
-    <div class="case-card">
-      <div class="case-tag">Comercial</div>
-      <div class="case-title">Qualificação de leads</div>
-      <div class="case-desc">Qualificação e follow-up automatizado de oportunidades</div>
-    </div>
+    <div class="callout reveal reveal-delay-4">[A CURAR] Estas são categorias-alvo, não cases fechados. Exemplos reais e verificáveis (próprios da V4 ou de mercado) precisam ser levantados antes da primeira edição.</div>
   </div>
-  <div class="callout reveal reveal-delay-4">[A CURAR] Estas são categorias-alvo, não cases fechados. Exemplos reais e verificáveis (próprios da V4 ou de mercado) precisam ser levantados antes da primeira edição.</div>
 </div></section>
 
 <!-- SLIDE 6 - BLOCO 3: DIAGNÓSTICO AO VIVO -->
 <section class="slide" id="s6"><div class="frame top">
   <div class="slide-num">06 / 11</div>
-  <div class="eyebrow reveal" style="margin-top:0;">Conteúdo do evento · Bloco 3 de 4</div>
-  <h2 class="h2 reveal reveal-delay-1">Diagnóstico ao vivo: dez dimensões, <span class="accent">uma prioridade</span>.</h2>
-  <p class="lead reveal reveal-delay-2">O momento pessoal do evento, e o ponto onde todo participante vira um contato qualificado.</p>
+  <div class="frame-head">
+    <div class="eyebrow reveal" style="margin-top:0;">Conteúdo do evento · Bloco 3 de 4</div>
+    <h2 class="h2 reveal reveal-delay-1">Diagnóstico ao vivo: dez dimensões, <span class="accent">uma prioridade</span>.</h2>
+    <p class="lead reveal reveal-delay-2">O momento pessoal do evento, e o ponto onde todo participante vira um contato qualificado.</p>
+  </div>
+  <div class="body-fill">
   <div class="diag-grid reveal reveal-delay-3">
     <div>
       <div class="block-card">
@@ -416,63 +442,72 @@ body { overflow-x: hidden; }
       <div class="gargalo-row"><div class="item">Demanda/comercial</div><div class="value">Funil comercial não preenchido ou não converte</div></div>
     </div>
   </div>
+  </div>
 </div></section>
 
 <!-- SLIDE 7 - BLOCO 4: PITCH V4 -->
 <section class="slide" id="s7"><div class="frame top">
   <div class="slide-num">07 / 11</div>
-  <div class="eyebrow reveal" style="margin-top:0;">Conteúdo do evento · Bloco 4 de 4</div>
-  <h2 class="h2 reveal reveal-delay-1">Pitch V4: a resposta pro gargalo que acabou de aparecer.</h2>
-  <p class="lead reveal reveal-delay-2">O último bloco, feito só depois que cada um já tem o próprio Mapa em mãos.</p>
-  <div class="block-card reveal reveal-delay-3" style="margin-top:14px;">
-    <div class="block-row"><span class="label">Formato</span><span class="val">Apresentação de 10-15 minutos, logo após a entrega do Mapa</span></div>
-    <div class="block-row"><span class="label">Objetivo</span><span class="val">Conectar o gargalo de cada participante a uma solução da V4</span></div>
-    <div class="block-row"><span class="label">Narrativa</span><span class="val">"Agora que você viu seu gargalo, deixa a gente te mostrar como resolvemos isso." O detalhamento estratégico desse pitch está no próximo slide</span></div>
+  <div class="frame-head">
+    <div class="eyebrow reveal" style="margin-top:0;">Conteúdo do evento · Bloco 4 de 4</div>
+    <h2 class="h2 reveal reveal-delay-1">Pitch V4: a resposta pro gargalo que acabou de aparecer.</h2>
+    <p class="lead reveal reveal-delay-2">O último bloco, feito só depois que cada um já tem o próprio Mapa em mãos.</p>
+  </div>
+  <div class="body-fill">
+    <div class="block-card roomy reveal reveal-delay-3">
+      <div class="block-row"><span class="label">Formato</span><span class="val">Apresentação de 10-15 minutos, logo após a entrega do Mapa</span></div>
+      <div class="block-row"><span class="label">Objetivo</span><span class="val">Conectar o gargalo de cada participante a uma solução da V4</span></div>
+      <div class="block-row"><span class="label">Narrativa</span><span class="val">"Agora que você viu seu gargalo, deixa a gente te mostrar como resolvemos isso." O detalhamento estratégico desse pitch está no próximo slide</span></div>
+    </div>
   </div>
 </div></section>
 
 <!-- SLIDE 8 - O PITCH DA V4 EM PROFUNDIDADE -->
 <section class="slide" id="s8"><div class="frame top">
   <div class="slide-num">08 / 11</div>
-  <div class="eyebrow reveal" style="margin-top:0;">O pitch da V4 em profundidade</div>
-  <h2 class="h2 reveal reveal-delay-1">A mesma lógica que a V4 usa no <span class="accent">dia a dia</span>.</h2>
-  <p class="lead reveal reveal-delay-2">A Teoria das Restrições não é só o conteúdo do evento: é como a V4 já opera com os próprios clientes. Identificar a restrição real antes de propor qualquer solução. A V4 entra como <strong style="color:var(--text)">parceira estratégica para resolver o gargalo identificado</strong>, não pra vender um pacote fechado, e o pitch só acontece depois que cada participante já viu o próprio resultado.</p>
-  <div class="sys-flow reveal reveal-delay-3">
-    <div class="sys-block">
-      <div class="sys-num">→ 01 · ESFORÇO</div>
-      <h4>Reduz esforço</h4>
-      <p>IA e automação tiram tarefas manuais do caminho</p>
-    </div>
-    <div class="sys-block">
-      <div class="sys-num">→ 02 · CAPACIDADE</div>
-      <h4>Libera capacidade</h4>
-      <p>Time humano sobra pra o que realmente importa</p>
-    </div>
-    <div class="sys-block">
-      <div class="sys-num">→ 03 · PRODUTIVIDADE</div>
-      <h4>Aumenta produtividade</h4>
-      <p>Mais output com a mesma estrutura</p>
-    </div>
-    <div class="sys-block">
-      <div class="sys-num">→ 04 · MARGEM</div>
-      <h4>Impacta margem</h4>
-      <p>O resultado financeiro sente, não só a operação</p>
-    </div>
+  <div class="frame-head">
+    <div class="eyebrow reveal" style="margin-top:0;">O pitch da V4 em profundidade</div>
+    <h2 class="h2 reveal reveal-delay-1">A mesma lógica que a V4 usa no <span class="accent">dia a dia</span>.</h2>
+    <p class="lead reveal reveal-delay-2">A Teoria das Restrições não é só o conteúdo do evento: é como a V4 já opera com os próprios clientes. Identificar a restrição real antes de propor qualquer solução. A V4 entra como <strong style="color:var(--text)">parceira estratégica para resolver o gargalo identificado</strong>, não pra vender um pacote fechado, e o pitch só acontece depois que cada participante já viu o próprio resultado.</p>
   </div>
-  <div class="upsides reveal reveal-delay-4">
-    <div class="upsides-title">Onde a V4 entra como parceira estratégica (depende do gargalo do Mapa)</div>
-    <div class="upsides-grid">
-      <div class="upside">
-        <h5>Marketing &amp; Vendas</h5>
-        <p>Geração de demanda, tráfego e conversão</p>
+  <div class="body-fill">
+    <div class="sys-flow reveal reveal-delay-3">
+      <div class="sys-block">
+        <div class="sys-num">→ 01 · ESFORÇO</div>
+        <h4>Reduz esforço</h4>
+        <p>IA e automação tiram tarefas manuais do caminho</p>
       </div>
-      <div class="upside">
-        <h5>Financeiro &amp; Administrativo</h5>
-        <p>Automação de processos, redução de retrabalho</p>
+      <div class="sys-block">
+        <div class="sys-num">→ 02 · CAPACIDADE</div>
+        <h4>Libera capacidade</h4>
+        <p>Time humano sobra pra o que realmente importa</p>
       </div>
-      <div class="upside">
-        <h5>Operações</h5>
-        <p>Fluxos internos e integração entre sistemas</p>
+      <div class="sys-block">
+        <div class="sys-num">→ 03 · PRODUTIVIDADE</div>
+        <h4>Aumenta produtividade</h4>
+        <p>Mais output com a mesma estrutura</p>
+      </div>
+      <div class="sys-block">
+        <div class="sys-num">→ 04 · MARGEM</div>
+        <h4>Impacta margem</h4>
+        <p>O resultado financeiro sente, não só a operação</p>
+      </div>
+    </div>
+    <div class="upsides reveal reveal-delay-4">
+      <div class="upsides-title">Onde a V4 entra como parceira estratégica (depende do gargalo do Mapa)</div>
+      <div class="upsides-grid">
+        <div class="upside">
+          <h5>Marketing &amp; Vendas</h5>
+          <p>Geração de demanda, tráfego e conversão</p>
+        </div>
+        <div class="upside">
+          <h5>Financeiro &amp; Administrativo</h5>
+          <p>Automação de processos, redução de retrabalho</p>
+        </div>
+        <div class="upside">
+          <h5>Operações</h5>
+          <p>Fluxos internos e integração entre sistemas</p>
+        </div>
       </div>
     </div>
   </div>
@@ -481,43 +516,47 @@ body { overflow-x: hidden; }
 <!-- SLIDE 9 - SCRIPT OUTBOUND -->
 <section class="slide" id="s9"><div class="frame top">
   <div class="slide-num">09 / 11</div>
-  <div class="eyebrow reveal" style="margin-top:0;">Motor de prospecção</div>
-  <h2 class="h2 reveal reveal-delay-1">Como o Outbound <span class="accent">liga</span> pro lead.</h2>
-  <p class="lead reveal reveal-delay-2">IA no gancho, credibilidade do cliente-anfitrião logo em seguida.</p>
-  <div class="script-list reveal reveal-delay-3">
-    <div class="script-item">
-      <div class="script-num">01</div>
-      <div class="script-text">
-        <strong>Abertura + gancho</strong>
-        <div class="script-quote">Oi, [nome], tudo bem? Aqui é o/a [nome], da V4 Company, te ligando sobre um encontro sobre IA aplicada de verdade na operação de uma empresa, não sobre ferramenta. A [Cliente-anfitrião] fez questão de te indicar uma vaga.</div>
+  <div class="frame-head">
+    <div class="eyebrow reveal" style="margin-top:0;">Motor de prospecção</div>
+    <h2 class="h2 reveal reveal-delay-1">Como o Outbound <span class="accent">liga</span> pro lead.</h2>
+    <p class="lead reveal reveal-delay-2">IA no gancho, credibilidade do cliente-anfitrião logo em seguida.</p>
+  </div>
+  <div class="body-fill">
+    <div class="script-list reveal reveal-delay-3">
+      <div class="script-item">
+        <div class="script-num">01</div>
+        <div class="script-text">
+          <strong>Abertura + gancho</strong>
+          <div class="script-quote">Oi, [nome], tudo bem? Aqui é o/a [nome], da V4 Company, te ligando sobre um encontro sobre IA aplicada de verdade na operação de uma empresa, não sobre ferramenta. A [Cliente-anfitrião] fez questão de te indicar uma vaga.</div>
+        </div>
       </div>
-    </div>
-    <div class="script-item">
-      <div class="script-num">02</div>
-      <div class="script-text">
-        <strong>Reframe</strong>
-        <div class="script-quote">A ideia não é falar de tecnologia. É descobrir primeiro o que está travando o crescimento da sua empresa, e só depois, onde a IA entra.</div>
+      <div class="script-item">
+        <div class="script-num">02</div>
+        <div class="script-text">
+          <strong>Reframe</strong>
+          <div class="script-quote">A ideia não é falar de tecnologia. É descobrir primeiro o que está travando o crescimento da sua empresa, e só depois, onde a IA entra.</div>
+        </div>
       </div>
-    </div>
-    <div class="script-item">
-      <div class="script-num">03</div>
-      <div class="script-text">
-        <strong>Valor central</strong>
-        <div class="script-quote">No evento você passa por um diagnóstico ao vivo: perguntas rápidas sobre a operação, e sai de lá com um mapa mostrando o gargalo e o que fazer com ele.</div>
+      <div class="script-item">
+        <div class="script-num">03</div>
+        <div class="script-text">
+          <strong>Valor central</strong>
+          <div class="script-quote">No evento você passa por um diagnóstico ao vivo: perguntas rápidas sobre a operação, e sai de lá com um mapa mostrando o gargalo e o que fazer com ele.</div>
+        </div>
       </div>
-    </div>
-    <div class="script-item">
-      <div class="script-num">04</div>
-      <div class="script-text">
-        <strong>Prova social</strong>
-        <div class="script-quote">A gente também traz cases reais de empresas usando IA no dia a dia, além do óbvio, tipo atendimento: financeiro, operação, administrativo.</div>
+      <div class="script-item">
+        <div class="script-num">04</div>
+        <div class="script-text">
+          <strong>Prova social</strong>
+          <div class="script-quote">A gente também traz cases reais de empresas usando IA no dia a dia, além do óbvio, tipo atendimento: financeiro, operação, administrativo.</div>
+        </div>
       </div>
-    </div>
-    <div class="script-item">
-      <div class="script-num">05</div>
-      <div class="script-text">
-        <strong>Fechamento</strong>
-        <div class="script-quote">Posso confirmar sua presença? Preciso só do seu nome completo, empresa e um telefone de contato.</div>
+      <div class="script-item">
+        <div class="script-num">05</div>
+        <div class="script-text">
+          <strong>Fechamento</strong>
+          <div class="script-quote">Posso confirmar sua presença? Preciso só do seu nome completo, empresa e um telefone de contato.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -526,36 +565,40 @@ body { overflow-x: hidden; }
 <!-- SLIDE 10 - PITCH DE RECRUTAMENTO DO CLIENTE-ANFITRIÃO -->
 <section class="slide" id="s10"><div class="frame top">
   <div class="slide-num">10 / 11</div>
-  <div class="eyebrow reveal" style="margin-top:0;">Como vendemos pros nossos clientes</div>
-  <h2 class="h2 reveal reveal-delay-1">Recrutando o <span class="accent">cliente-anfitrião</span>.</h2>
-  <p class="lead reveal reveal-delay-2">Pitch do time de CS/Comercial da V4 pro cliente atual, pedindo que ele indique convidados.</p>
-  <div class="script-list reveal reveal-delay-3">
-    <div class="script-item">
-      <div class="script-num">01</div>
-      <div class="script-text">
-        <strong>Abertura</strong>
-        <div class="script-quote">A V4 vai realizar um evento na nossa Flagship sobre produtividade e IA aplicada, e queremos que você seja um dos parceiros que trazem convidados.</div>
+  <div class="frame-head">
+    <div class="eyebrow reveal" style="margin-top:0;">Como vendemos pros nossos clientes</div>
+    <h2 class="h2 reveal reveal-delay-1">Recrutando o <span class="accent">cliente-anfitrião</span>.</h2>
+    <p class="lead reveal reveal-delay-2">Pitch do time de CS/Comercial da V4 pro cliente atual, pedindo que ele indique convidados.</p>
+  </div>
+  <div class="body-fill">
+    <div class="script-list reveal reveal-delay-3">
+      <div class="script-item">
+        <div class="script-num">01</div>
+        <div class="script-text">
+          <strong>Abertura</strong>
+          <div class="script-quote">A V4 vai realizar um evento na nossa Flagship sobre produtividade e IA aplicada, e queremos que você seja um dos parceiros que trazem convidados.</div>
+        </div>
       </div>
-    </div>
-    <div class="script-item">
-      <div class="script-num">02</div>
-      <div class="script-text">
-        <strong>Valor pro cliente</strong>
-        <div class="script-quote">Você indica alguns dos seus próprios clientes B2B, e a gente cuida de todo o resto: conteúdo, estrutura, ligação de convite, diagnóstico ao vivo. É uma forma de presentear sua carteira com uma experiência de alto nível, sem custo e sem esforço operacional da sua parte.</div>
+      <div class="script-item">
+        <div class="script-num">02</div>
+        <div class="script-text">
+          <strong>Valor pro cliente</strong>
+          <div class="script-quote">Você indica alguns dos seus próprios clientes B2B, e a gente cuida de todo o resto: conteúdo, estrutura, ligação de convite, diagnóstico ao vivo. É uma forma de presentear sua carteira com uma experiência de alto nível, sem custo e sem esforço operacional da sua parte.</div>
+        </div>
       </div>
-    </div>
-    <div class="script-item">
-      <div class="script-num">03</div>
-      <div class="script-text">
-        <strong>Diferenciação</strong>
-        <div class="script-quote">Não é evento comercial disfarçado de conteúdo. Cada convidado sai com um diagnóstico real da própria empresa, isso fortalece a percepção de que você, como parceiro dele, está sempre trazendo valor.</div>
+      <div class="script-item">
+        <div class="script-num">03</div>
+        <div class="script-text">
+          <strong>Diferenciação</strong>
+          <div class="script-quote">Não é evento comercial disfarçado de conteúdo. Cada convidado sai com um diagnóstico real da própria empresa, isso fortalece a percepção de que você, como parceiro dele, está sempre trazendo valor.</div>
+        </div>
       </div>
-    </div>
-    <div class="script-item">
-      <div class="script-num">04</div>
-      <div class="script-text">
-        <strong>Fechamento</strong>
-        <div class="script-quote">Preciso só de uma lista com nome, empresa e telefone de quem você gostaria de indicar. A gente cuida do convite e da ligação.</div>
+      <div class="script-item">
+        <div class="script-num">04</div>
+        <div class="script-text">
+          <strong>Fechamento</strong>
+          <div class="script-quote">Preciso só de uma lista com nome, empresa e telefone de quem você gostaria de indicar. A gente cuida do convite e da ligação.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -564,32 +607,36 @@ body { overflow-x: hidden; }
 <!-- SLIDE 11 - FECHAMENTO -->
 <section class="slide" id="s11"><div class="frame top">
   <div class="slide-num">11 / 11</div>
-  <div class="eyebrow reveal" style="margin-top:0;">Fechamento</div>
-  <h2 class="h2 reveal reveal-delay-1">O que precisa ser <span class="accent">validado</span> agora.</h2>
-  <div class="decision-list reveal reveal-delay-2">
-    <div class="dec-item">
-      <div class="dec-num">01</div>
-      <div class="dec-text"><strong>Validar o conceito e a mecânica de convite em cascata.</strong><small>Base de todo o resto do plano.</small></div>
-    </div>
-    <div class="dec-item">
-      <div class="dec-num">02</div>
-      <div class="dec-text"><strong>Definir data, formato e capacidade da Flagship.</strong><small>Dimensiona produção e recrutamento.</small></div>
-    </div>
-    <div class="dec-item">
-      <div class="dec-num">03</div>
-      <div class="dec-text"><strong>Iniciar curadoria dos cases reais de IA/automação.</strong><small>Precisa de tempo de levantamento antes do evento.</small></div>
-    </div>
-    <div class="dec-item">
-      <div class="dec-num">04</div>
-      <div class="dec-text"><strong>Aprovar os scripts de Outbound e de recrutamento de anfitriões.</strong><small>Para começar a execução operacional.</small></div>
-    </div>
+  <div class="frame-head">
+    <div class="eyebrow reveal" style="margin-top:0;">Fechamento</div>
+    <h2 class="h2 reveal reveal-delay-1">O que precisa ser <span class="accent">validado</span> agora.</h2>
   </div>
-  <div class="deadline reveal reveal-delay-3">
-    <div class="deadline-text">
-      <strong>Decisão nesta reunião.</strong>
-      <p>Aprovar o conceito destrava o desenho operacional (data, orçamento, stack do diagnóstico) como próxima etapa.</p>
+  <div class="body-fill">
+    <div class="decision-list reveal reveal-delay-2">
+      <div class="dec-item">
+        <div class="dec-num">01</div>
+        <div class="dec-text"><strong>Validar o conceito e a mecânica de convite em cascata.</strong><small>Base de todo o resto do plano.</small></div>
+      </div>
+      <div class="dec-item">
+        <div class="dec-num">02</div>
+        <div class="dec-text"><strong>Definir data, formato e capacidade da Flagship.</strong><small>Dimensiona produção e recrutamento.</small></div>
+      </div>
+      <div class="dec-item">
+        <div class="dec-num">03</div>
+        <div class="dec-text"><strong>Iniciar curadoria dos cases reais de IA/automação.</strong><small>Precisa de tempo de levantamento antes do evento.</small></div>
+      </div>
+      <div class="dec-item">
+        <div class="dec-num">04</div>
+        <div class="dec-text"><strong>Aprovar os scripts de Outbound e de recrutamento de anfitriões.</strong><small>Para começar a execução operacional.</small></div>
+      </div>
     </div>
-    <div class="deadline-badge">GO ou NO-GO</div>
+    <div class="deadline reveal reveal-delay-3">
+      <div class="deadline-text">
+        <strong>Decisão nesta reunião.</strong>
+        <p>Aprovar o conceito destrava o desenho operacional (data, orçamento, stack do diagnóstico) como próxima etapa.</p>
+      </div>
+      <div class="deadline-badge">GO ou NO-GO</div>
+    </div>
   </div>
 </div></section>
 
