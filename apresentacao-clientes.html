@@ -180,23 +180,20 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
 <section class="v-slide" id="slide-2">
   <div class="slide">
     <div class="header"><div class="header__logo"><i data-lucide="gift"></i>Por que você</div></div>
-    <div class="content">
-      <p class="kicker">01 // Por que você</p>
-      <h2>Um evento pra você presentear<br /><span class="accent-text">a sua própria carteira</span>.</h2>
-      <p class="lead" style="max-width: 820px;">A V4 Carvalho vai realizar um evento presencial na Flagship, e queremos que você seja um dos parceiros que trazem convidados: os seus próprios clientes B2B.</p>
-      <div class="grid-3" style="margin-top: 32px;">
-        <div class="card fragment fade-up">
-          <h4 class="card__title">O que é</h4>
-          <p class="card__text">Um encontro presencial de conteúdo e diagnóstico, feito pra gerar valor real pra quem participa.</p>
-        </div>
-        <div class="card fragment fade-up">
-          <h4 class="card__title">Quem convidamos</h4>
-          <p class="card__text">Você indica alguns dos seus próprios clientes B2B, e a gente cuida de todo o resto.</p>
-        </div>
-        <div class="card fragment fade-up">
-          <h4 class="card__title">O que você ganha</h4>
-          <p class="card__text">Uma experiência de alto nível pra presentear sua base, sem custo e sem esforço operacional da sua parte.</p>
-        </div>
+    <div class="split split--40-60">
+      <div>
+        <p class="kicker">01 // Por que você</p>
+        <h2>Sua credibilidade abre<br /><span class="accent-text">a porta certa</span>.</h2>
+        <p class="lead">A V4 Carvalho vai realizar um evento presencial na Flagship, e queremos que você seja um dos parceiros que trazem convidados: os seus próprios clientes B2B.</p>
+        <p class="lead" style="margin-top: 16px;">Um convite seu pesa mais do que qualquer prospecção fria. Quando você indica, o convidado já chega endossado por quem já confia na sua empresa.</p>
+      </div>
+      <div>
+        <ul class="list list--numbered">
+          <li class="fragment"><strong>Você indica</strong><br /><span class="muted">Passa pra V4 o nome, a empresa e o telefone de clientes seus que fariam sentido no evento</span></li>
+          <li class="fragment"><strong>A V4 liga</strong><br /><span class="muted">Nosso time entra em contato se apresentando com o seu endosso, não como prospecção fria</span></li>
+          <li class="fragment"><strong>Eles participam</strong><br /><span class="muted">Sem custo, sem compromisso, e sem venda disfarçada de conteúdo</span></li>
+          <li class="fragment"><strong>Você ganha</strong><br /><span class="muted">Um ativo de alto valor pra presentear sua base, fortalecendo a percepção de que você é um parceiro estratégico</span></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -204,28 +201,59 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
 
 <!-- SLIDE 3 - O QUE VAI ACONTECER -->
 <section class="v-slide" id="slide-3">
-  <div class="slide">
-    <div class="header"><div class="header__logo"><i data-lucide="sparkles"></i>O que vai acontecer</div></div>
+  <div class="slide" style="padding: 40px 70px;">
+    <div class="header" style="margin-bottom: 24px;"><div class="header__logo"><i data-lucide="sparkles"></i>O que vai acontecer no dia</div></div>
     <div class="content">
-      <p class="kicker">02 // O que vai acontecer</p>
-      <h2>O tema do evento:<br /><span class="accent-text">IA aplicada aos negócios</span>.</h2>
-      <p class="lead" style="max-width: 820px;">Como identificar os gargalos da sua empresa e usar tecnologia pra eliminá-los.</p>
-      <div class="grid-3" style="margin-top: 32px;">
-        <div class="card fragment fade-up">
-          <h4 class="card__title">Conteúdo e cases reais</h4>
-          <p class="card__text">Como empresas já usam IA e automação no dia a dia, além do óbvio.</p>
+      <p class="kicker" style="margin-bottom: 8px;">02 // O que vai acontecer</p>
+      <h2 style="font-size: 2.1rem; margin-bottom: 8px;">O tema do evento:<br /><span class="accent-text">IA aplicada aos negócios</span>.</h2>
+      <p class="lead" style="max-width: 820px; margin-bottom: 0;">Como identificar os gargalos da sua empresa e usar tecnologia pra eliminá-los. É esse conteúdo que cada um dos seus convidados vai levar pra casa.</p>
+      <div class="workflow" style="margin-top: 24px; gap: 14px;">
+        <div class="workflow__step fragment"><div class="workflow__box" style="min-width: 130px;"><div class="workflow__label">Conteúdo</div><div class="workflow__sublabel">IA aplicada aos negócios</div></div></div>
+        <div class="workflow__arrow">&rarr;</div>
+        <div class="workflow__step fragment"><div class="workflow__box" style="min-width: 130px;"><div class="workflow__label">Cases reais</div><div class="workflow__sublabel">Empresas já aplicando</div></div></div>
+        <div class="workflow__arrow">&rarr;</div>
+        <div class="workflow__step fragment"><div class="workflow__box" style="min-width: 130px;"><div class="workflow__label">Diagnóstico</div><div class="workflow__sublabel">Ao vivo, pelo celular</div></div></div>
+        <div class="workflow__arrow">&rarr;</div>
+        <div class="workflow__step fragment"><div class="workflow__box" style="min-width: 130px; border-color: var(--accent);"><div class="workflow__label">Mapa individual</div><div class="workflow__sublabel">O gargalo de cada um</div></div></div>
+        <div class="workflow__arrow">&rarr;</div>
+        <div class="workflow__step fragment"><div class="workflow__box" style="min-width: 130px;"><div class="workflow__label">Networking</div><div class="workflow__sublabel">Convidados, você e a V4</div></div></div>
+      </div>
+      <div class="grid-3" style="margin-top: 24px; gap: 14px;">
+        <div class="card fragment fade-up" style="padding: 16px 18px;">
+          <h4 class="card__title" style="font-size: 0.95rem;">Prova social</h4>
+          <p class="card__text" style="font-size: 0.85rem;">Cases publicados de empresas já usando IA e automação no dia a dia, além do óbvio.</p>
         </div>
-        <div class="card fragment fade-up">
-          <h4 class="card__title">Diagnóstico ao vivo</h4>
-          <p class="card__text">Cada convidado sai com um mapa real dos próprios gargalos e oportunidades.</p>
+        <div class="card fragment fade-up" style="padding: 16px 18px;">
+          <h4 class="card__title" style="font-size: 0.95rem;">O momento alto</h4>
+          <p class="card__text" style="font-size: 0.85rem;">Cada convidado sai com um mapa real dos próprios gargalos e oportunidades de produtividade.</p>
         </div>
-        <div class="card fragment fade-up">
-          <h4 class="card__title">Networking</h4>
-          <p class="card__text">Encerramento com coffee, convidados, clientes-anfitriões e time V4 juntos.</p>
+        <div class="card fragment fade-up" style="padding: 16px 18px;">
+          <h4 class="card__title" style="font-size: 0.95rem;">Sem venda disfarçada</h4>
+          <p class="card__text" style="font-size: 0.85rem;">O conteúdo vem antes de qualquer pitch comercial, e o convidado sai de lá com algo real pra própria empresa.</p>
         </div>
       </div>
-      <div class="quote-block fragment" style="margin-top: 28px; border: 1px solid var(--border); padding: var(--spacing-md);">
-        Não é um evento comercial disfarçado de conteúdo: cada convidado sai de lá com algo real pra própria empresa.
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 4 - PRÓXIMOS PASSOS -->
+<section class="v-slide" id="slide-4">
+  <div class="slide">
+    <div class="header"><div class="header__logo"><i data-lucide="check-circle"></i>Próximos passos</div></div>
+    <div class="split">
+      <div>
+        <p class="kicker">03 // Próximos passos</p>
+        <h2>O que a gente<br /><span class="accent-text">precisa de você agora</span>.</h2>
+        <p class="lead">Simples assim: você indica, a gente liga, e você acompanha quem confirmou.</p>
+        <div style="margin-top: 24px;"><span class="badge">Fale com seu time de relacionamento V4 Carvalho</span></div>
+      </div>
+      <div>
+        <ul class="list list--numbered">
+          <li class="fragment"><strong>A lista</strong><br /><span class="muted">Nome, empresa e telefone de quem você gostaria de indicar</span></li>
+          <li class="fragment"><strong>O contato</strong><br /><span class="muted">Nosso time liga pra cada indicado, citando o seu endosso</span></li>
+          <li class="fragment"><strong>A confirmação</strong><br /><span class="muted">Você acompanha quem confirmou presença, antes mesmo do dia do evento</span></li>
+          <li class="fragment"><strong>O dia do evento</strong><br /><span class="muted">Seus convidados vivem a experiência completa, na Flagship V4</span></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -236,7 +264,7 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
 <!-- Progress bar -->
 <div class="scroll-progress-track"><div class="scroll-progress-bar" id="progressBar"></div></div>
 <!-- Slide counter -->
-<div class="slide-counter" id="slideCounter">1 / 3</div>
+<div class="slide-counter" id="slideCounter">1 / 4</div>
 <!-- Navigation arrows -->
 <div class="nav-arrows">
   <button class="nav-arrow nav-arrow--up" id="navUp" aria-label="Slide anterior">
