@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evento Flagship: Apresentação para Clientes V4</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+/* ============ THEME: dark-editorial, accent recolorido pro vermelho V4 ============ */
+:root {
+  --bg-dark: #0a0a0a;
+  --bg-card: #111111;
+  --bg-card-hover: #1a1a1a;
+  --accent: #E10600;
+  --accent-light: #ff4a42;
+  --accent-glow: rgba(225, 6, 0, 0.16);
+  --success: #7b9a7b;
+  --warning: #D4AF37;
+  --error: #c97b7b;
+  --text-primary: #f5f4f0;
+  --text-secondary: #a8a8a8;
+  --text-muted: #666666;
+  --border: #2a2a2a;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 60px;
+}
+
+* { box-sizing: border-box; }
+
+.presentation-viewport {
+  background: var(--bg-dark) !important;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px) !important;
+  background-size: 60px 60px !important;
+}
+
+h1, .h1 { font-family: var(--font-serif); font-size: 3.5rem; font-weight: 400; font-style: italic; line-height: 1.1; color: var(--text-primary); }
+h2, .h2 { font-family: var(--font-serif); font-size: 2.5rem; font-weight: 400; line-height: 1.15; }
+h3, .h3 { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; line-height: 1.3; }
+h4, .h4 { font-family: var(--font-sans); font-size: 1.1rem; font-weight: 500; letter-spacing: 0.02em; }
+
+.slide--section::before {
+  content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+
+/* ============ COMMON STYLES ============ */
+html, body { background: var(--bg-dark) !important; color: var(--text-primary); margin: 0; height: 100%; }
+body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+
+.slide { height: 100%; width: 100%; padding: var(--spacing-xl); box-sizing: border-box; display: flex; flex-direction: column; background: transparent; position: relative; }
+.slide > * { position: relative; z-index: 1; }
+.slide--center { align-items: center; justify-content: center; text-align: center; }
+
+.header { display: flex; justify-content: space-between; align-items: center; padding-bottom: var(--spacing-md); margin-bottom: var(--spacing-lg); border-bottom: 1px solid var(--border); flex-shrink: 0; }
+.header__logo { font-family: var(--font-serif); font-size: 0.9rem; font-weight: 400; color: var(--text-secondary); display: flex; align-items: center; gap: 10px; letter-spacing: 0.02em; }
+.header__logo svg { width: 18px; height: 18px; color: var(--accent); }
+
+.kicker { font-size: 0.7rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.25em; margin-bottom: var(--spacing-sm); font-weight: 500; display: flex; align-items: center; gap: 12px; }
+.kicker::after { content: ""; width: 40px; height: 1px; background: var(--accent); opacity: 0.5; }
+
+.lead { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; max-width: 640px; }
+.muted { color: var(--text-muted); }
+.highlight, .accent-text { color: var(--accent); }
+
+.content { flex: 1; display: flex; flex-direction: column; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); align-items: center; flex: 1; }
+.split--60-40 { grid-template-columns: 1.5fr 1fr; }
+.split--40-60 { grid-template-columns: 1fr 1.5fr; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-md); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-md); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-md); }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+
+.card { background: transparent; border: 1px solid var(--border); padding: var(--spacing-md); transition: all 0.3s ease; }
+.card:hover { background: var(--bg-card); border-color: var(--accent); }
+.card--featured { border-color: var(--accent); }
+.card--danger { border-color: var(--error); }
+.card--success { border-color: var(--success); }
+.card--warning { border-color: var(--warning); }
+.card__title { font-family: var(--font-sans); font-size: 1rem; font-weight: 500; margin-bottom: var(--spacing-xs); }
+.card__text { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
+
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--spacing-md); }
+.metric { text-align: center; padding: var(--spacing-md); border: 1px solid var(--border); transition: all 0.3s ease; }
+.metric:hover { border-color: var(--accent); }
+.metric__value { font-family: var(--font-serif); font-size: 2.5rem; font-weight: 400; font-style: italic; color: var(--accent); line-height: 1; margin-bottom: var(--spacing-xs); }
+.metric__label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+
+.list { list-style: none; padding: 0; margin: 0; }
+.list li { padding: var(--spacing-sm) 0; padding-left: var(--spacing-lg); position: relative; border-bottom: 1px solid var(--border); }
+.list li:last-child { border-bottom: none; }
+.list li::before { content: "\2014"; position: absolute; left: 0; top: var(--spacing-sm); color: var(--accent); }
+.list--numbered { counter-reset: list-counter; }
+.list--numbered li { counter-increment: list-counter; }
+.list--numbered li::before { content: counter(list-counter, decimal-leading-zero); color: var(--accent); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; }
+
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.badge--danger { color: var(--error); border-color: var(--error); }
+
+.comparison-table { width: 100%; border-collapse: collapse; margin-top: var(--spacing-md); }
+.comparison-table th, .comparison-table td { padding: var(--spacing-sm); text-align: left; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+.comparison-table th { color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.7rem; }
+
+.workflow { display: flex; align-items: center; justify-content: center; gap: var(--spacing-md); margin-top: var(--spacing-lg); flex-wrap: wrap; }
+.workflow__step { display: flex; flex-direction: column; align-items: center; }
+.workflow__box { border: 1px solid var(--border); padding: var(--spacing-sm) var(--spacing-md); text-align: center; min-width: 120px; }
+.workflow__label { font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-light); }
+.workflow__sublabel { font-size: 0.7rem; color: var(--text-muted); margin-top: 4px; }
+.workflow__arrow { color: var(--accent); font-size: 1.5rem; }
+
+/* ============ VERTICAL SCROLL NAVIGATION ============ */
+.presentation-viewport { height: 100vh; overflow-y: scroll; scroll-snap-type: y mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+.v-slide { height: 100vh; width: 100%; scroll-snap-align: start; scroll-snap-stop: always; position: relative; overflow: hidden; }
+
+.v-slide .fragment { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.v-slide .fragment.visible { opacity: 1; transform: translateY(0); }
+.v-slide .fragment:nth-child(1) { transition-delay: 0.1s; }
+.v-slide .fragment:nth-child(2) { transition-delay: 0.2s; }
+.v-slide .fragment:nth-child(3) { transition-delay: 0.3s; }
+.v-slide .fragment:nth-child(4) { transition-delay: 0.4s; }
+.v-slide .fragment:nth-child(5) { transition-delay: 0.5s; }
+
+.scroll-progress-track { position: fixed; bottom: 0; left: 0; width: 100%; height: 3px; background: var(--border); z-index: 1000; }
+.scroll-progress-bar { height: 100%; background: var(--accent); width: 0%; transition: width 0.15s ease; }
+.slide-counter { position: fixed; bottom: 16px; right: 20px; font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); z-index: 1000; }
+.nav-arrows { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 8px; z-index: 1000; }
+.nav-arrow { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: transparent; border: 1px solid var(--border); color: var(--text-muted); cursor: pointer; transition: all 0.2s ease; padding: 0; }
+.nav-arrow:hover { border-color: var(--accent); color: var(--accent); }
+.nav-arrow:disabled { opacity: 0.3; cursor: default; }
+@media (max-width: 768px) { .nav-arrows { display: none; } }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1400px) { h1 { font-size: 3rem; } h2 { font-size: 2.2rem; } .slide { padding: var(--spacing-lg); } }
+@media (max-width: 1024px) {
+  h1 { font-size: 2.5rem; } h2 { font-size: 1.8rem; } .lead { font-size: 1rem; }
+  .split, .split--60-40, .split--40-60 { grid-template-columns: 1fr; gap: var(--spacing-md); }
+  .grid-4, .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .workflow { flex-wrap: wrap; }
+  .metrics { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; } h2 { font-size: 1.5rem; } .slide { padding: var(--spacing-md); }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .metrics { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="presentation-viewport" id="presentation">
+
+<!-- SLIDE 1 - CAPA -->
+<section class="v-slide" id="slide-1">
+  <div class="slide slide--section slide--center">
+    <div class="content flex-center" style="flex-direction: column; text-align: center;">
+      <p class="kicker" style="justify-content: center;">V4 Carvalho // Convite especial</p>
+      <h1>Evento<br /><span class="accent-text">Flagship</span></h1>
+      <p class="lead" style="max-width: 700px; margin: 0 auto;">Um convite pra você levar um ativo de valor real pra sua própria carteira de clientes.</p>
+      <div style="margin-top: 40px;"><span class="badge">Flagship V4</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 2 - POR QUE VOCÊ -->
+<section class="v-slide" id="slide-2">
+  <div class="slide">
+    <div class="header"><div class="header__logo"><i data-lucide="gift"></i>Por que você</div></div>
+    <div class="content">
+      <p class="kicker">01 // Por que você</p>
+      <h2>Um evento pra você presentear<br /><span class="accent-text">a sua própria carteira</span>.</h2>
+      <p class="lead" style="max-width: 820px;">A V4 Carvalho vai realizar um evento presencial na Flagship, e queremos que você seja um dos parceiros que trazem convidados: os seus próprios clientes B2B.</p>
+      <div class="grid-3" style="margin-top: 32px;">
+        <div class="card fragment fade-up">
+          <h4 class="card__title">O que é</h4>
+          <p class="card__text">Um encontro presencial de conteúdo e diagnóstico, feito pra gerar valor real pra quem participa.</p>
+        </div>
+        <div class="card fragment fade-up">
+          <h4 class="card__title">Quem convidamos</h4>
+          <p class="card__text">Você indica alguns dos seus próprios clientes B2B, e a gente cuida de todo o resto.</p>
+        </div>
+        <div class="card fragment fade-up">
+          <h4 class="card__title">O que você ganha</h4>
+          <p class="card__text">Uma experiência de alto nível pra presentear sua base, sem custo e sem esforço operacional da sua parte.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 3 - O QUE VAI ACONTECER -->
+<section class="v-slide" id="slide-3">
+  <div class="slide">
+    <div class="header"><div class="header__logo"><i data-lucide="sparkles"></i>O que vai acontecer</div></div>
+    <div class="content">
+      <p class="kicker">02 // O que vai acontecer</p>
+      <h2>O tema do evento:<br /><span class="accent-text">IA aplicada aos negócios</span>.</h2>
+      <p class="lead" style="max-width: 820px;">Como identificar os gargalos da sua empresa e usar tecnologia pra eliminá-los.</p>
+      <div class="grid-3" style="margin-top: 32px;">
+        <div class="card fragment fade-up">
+          <h4 class="card__title">Conteúdo e cases reais</h4>
+          <p class="card__text">Como empresas já usam IA e automação no dia a dia, além do óbvio.</p>
+        </div>
+        <div class="card fragment fade-up">
+          <h4 class="card__title">Diagnóstico ao vivo</h4>
+          <p class="card__text">Cada convidado sai com um mapa real dos próprios gargalos e oportunidades.</p>
+        </div>
+        <div class="card fragment fade-up">
+          <h4 class="card__title">Networking</h4>
+          <p class="card__text">Encerramento com coffee, convidados, clientes-anfitriões e time V4 juntos.</p>
+        </div>
+      </div>
+      <div class="quote-block fragment" style="margin-top: 28px; border: 1px solid var(--border); padding: var(--spacing-md);">
+        Não é um evento comercial disfarçado de conteúdo: cada convidado sai de lá com algo real pra própria empresa.
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- Progress bar -->
+<div class="scroll-progress-track"><div class="scroll-progress-bar" id="progressBar"></div></div>
+<!-- Slide counter -->
+<div class="slide-counter" id="slideCounter">1 / 3</div>
+<!-- Navigation arrows -->
+<div class="nav-arrows">
+  <button class="nav-arrow nav-arrow--up" id="navUp" aria-label="Slide anterior">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15" /></svg>
+  </button>
+  <button class="nav-arrow nav-arrow--down" id="navDown" aria-label="Próximo slide">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9" /></svg>
+  </button>
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+lucide.createIcons();
+
+(function () {
+  const viewport = document.getElementById("presentation");
+  const slides = document.querySelectorAll(".v-slide");
+  const progressBar = document.getElementById("progressBar");
+  const slideCounter = document.getElementById("slideCounter");
+  const navUp = document.getElementById("navUp");
+  const navDown = document.getElementById("navDown");
+  const totalSlides = slides.length;
+  let currentSlide = 0;
+  let isScrolling = false;
+  let scrollTimeout;
+
+  function goToSlide(index) {
+    if (index < 0 || index >= totalSlides || isScrolling) return;
+    isScrolling = true;
+    currentSlide = index;
+    slides[index].scrollIntoView({ behavior: "smooth" });
+    updateUI();
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => { isScrolling = false; }, 600);
+  }
+  function nextSlide() { goToSlide(currentSlide + 1); }
+  function prevSlide() { goToSlide(currentSlide - 1); }
+
+  function updateUI() {
+    const progress = ((currentSlide + 1) / totalSlides) * 100;
+    progressBar.style.width = progress + "%";
+    slideCounter.textContent = currentSlide + 1 + " / " + totalSlides;
+    navUp.disabled = currentSlide === 0;
+    navDown.disabled = currentSlide === totalSlides - 1;
+  }
+
+  document.addEventListener("keydown", function (e) {
+    switch (e.key) {
+      case "ArrowDown": case "ArrowRight": case " ": case "PageDown":
+        e.preventDefault(); nextSlide(); break;
+      case "ArrowUp": case "ArrowLeft": case "PageUp":
+        e.preventDefault(); prevSlide(); break;
+      case "Home": e.preventDefault(); goToSlide(0); break;
+      case "End": e.preventDefault(); goToSlide(totalSlides - 1); break;
+    }
+  });
+
+  let wheelTimeout;
+  viewport.addEventListener("wheel", function (e) {
+    e.preventDefault();
+    clearTimeout(wheelTimeout);
+    wheelTimeout = setTimeout(() => {
+      if (e.deltaY > 0) nextSlide(); else if (e.deltaY < 0) prevSlide();
+    }, 50);
+  }, { passive: false });
+
+  let touchStartY = 0, touchEndY = 0;
+  viewport.addEventListener("touchstart", function (e) { touchStartY = e.changedTouches[0].screenY; }, { passive: true });
+  viewport.addEventListener("touchend", function (e) {
+    touchEndY = e.changedTouches[0].screenY;
+    const diff = touchStartY - touchEndY;
+    if (Math.abs(diff) > 50) { if (diff > 0) nextSlide(); else prevSlide(); }
+  }, { passive: true });
+
+  navUp.addEventListener("click", prevSlide);
+  navDown.addEventListener("click", nextSlide);
+
+  const slideObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+        const index = Array.from(slides).indexOf(entry.target);
+        if (index !== -1) { currentSlide = index; updateUI(); }
+      }
+    });
+  }, { root: viewport, threshold: 0.5 });
+  slides.forEach((slide) => slideObserver.observe(slide));
+
+  const fragmentObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const fragments = entry.target.querySelectorAll(".fragment");
+        fragments.forEach((frag, i) => { setTimeout(() => frag.classList.add("visible"), i * 150); });
+      } else {
+        const fragments = entry.target.querySelectorAll(".fragment");
+        fragments.forEach((frag) => frag.classList.remove("visible"));
+      }
+    });
+  }, { root: viewport, threshold: 0.3 });
+  slides.forEach((slide) => fragmentObserver.observe(slide));
+
+  updateUI();
+})();
+</script>
+
+</body>
+</html>
