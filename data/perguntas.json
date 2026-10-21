@@ -1,0 +1,178 @@
+{
+  "versao": 1,
+  "gargalos": {
+    "capacidade": "Capacidade",
+    "manual_repetitivo": "Manual/repetitivo",
+    "informacao": "Informação",
+    "decisao": "Decisão",
+    "processo": "Processo",
+    "integracao": "Integração",
+    "comunicacao": "Comunicação",
+    "conhecimento": "Conhecimento",
+    "controle": "Controle",
+    "demanda_comercial": "Demanda/comercial"
+  },
+  "escala_frequencia": [
+    { "valor": 0, "label": "Quase nunca" },
+    { "valor": 1, "label": "Às vezes" },
+    { "valor": 2, "label": "Com frequência" },
+    { "valor": 3, "label": "Todo dia" }
+  ],
+  "etapas": [
+    {
+      "id": "perfil",
+      "titulo": "Sobre a sua empresa",
+      "perguntas": [
+        {
+          "id": "porte",
+          "tipo": "escolha_unica",
+          "texto": "Quantas pessoas trabalham na sua empresa?",
+          "opcoes": [
+            { "valor": "pequena", "label": "Até 50" },
+            { "valor": "media", "label": "51 a 500" },
+            { "valor": "grande", "label": "Mais de 500" }
+          ]
+        },
+        {
+          "id": "setor",
+          "tipo": "escolha_unica",
+          "texto": "Em que setor você atua?",
+          "opcoes": [
+            { "valor": "servicos_b2b", "label": "Serviços B2B / consultoria / agência" },
+            { "valor": "industria", "label": "Indústria" },
+            { "valor": "varejo_ecommerce", "label": "Varejo / e-commerce" },
+            { "valor": "saude", "label": "Saúde" },
+            { "valor": "logistica", "label": "Logística / transporte" },
+            { "valor": "construcao_imoveis", "label": "Construção / imobiliário" },
+            { "valor": "educacao", "label": "Educação" },
+            { "valor": "tecnologia", "label": "Tecnologia / software" },
+            { "valor": "outro", "label": "Outro" }
+          ]
+        },
+        {
+          "id": "area_dor",
+          "tipo": "escolha_unica",
+          "texto": "Qual área hoje mais te dá dor de cabeça?",
+          "opcoes": [
+            { "valor": "comercial", "label": "Comercial / vendas" },
+            { "valor": "marketing", "label": "Marketing" },
+            { "valor": "financeiro", "label": "Financeiro" },
+            { "valor": "administrativo", "label": "Administrativo / RH" },
+            { "valor": "operacoes", "label": "Operações / produção" },
+            { "valor": "atendimento", "label": "Atendimento / pós-venda" },
+            { "valor": "ti", "label": "TI / dados" }
+          ]
+        },
+        {
+          "id": "maturidade_ia",
+          "tipo": "escolha_unica",
+          "texto": "Como a sua empresa usa IA hoje?",
+          "opcoes": [
+            { "valor": "nenhuma", "label": "Ainda não usamos" },
+            { "valor": "individual", "label": "Algumas pessoas usam ChatGPT/similares por conta própria" },
+            { "valor": "alguns_processos", "label": "Já temos alguns processos com IA ou automação" },
+            { "valor": "estruturado", "label": "Temos uma estratégia de IA estruturada" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diagnostico",
+      "titulo": "Onde o trabalho trava",
+      "instrucao": "Para cada frase, escolha com que frequência ela é verdade na sua empresa.",
+      "perguntas": [
+        { "id": "q_cap", "tipo": "escala", "gargalo": "capacidade", "texto": "A equipe está sempre no limite e os prazos escorregam por falta de braço." },
+        { "id": "q_man", "tipo": "escala", "gargalo": "manual_repetitivo", "texto": "Gente qualificada perde horas copiando, colando e digitando dados entre planilhas e sistemas." },
+        { "id": "q_inf", "tipo": "escala", "gargalo": "informacao", "texto": "Para achar um dado, contrato ou histórico, alguém precisa procurar em vários lugares ou perguntar para alguém." },
+        { "id": "q_dec", "tipo": "escala", "gargalo": "decisao", "texto": "Temos os números, mas a decisão demora ou depende de várias reuniões." },
+        { "id": "q_pro", "tipo": "escala", "gargalo": "processo", "texto": "Aprovações em cascata, retrabalho e etapas que ninguém sabe por que existem." },
+        { "id": "q_int", "tipo": "escala", "gargalo": "integracao", "texto": "Nossos sistemas não conversam e alguém faz a ponte manualmente (exporta, importa, refaz)." },
+        { "id": "q_com", "tipo": "escala", "gargalo": "comunicacao", "texto": "A agenda é tomada por alinhamentos, cobranças de status e perguntas repetidas." },
+        { "id": "q_con", "tipo": "escala", "gargalo": "conhecimento", "texto": "Tem coisa que só uma ou duas pessoas sabem fazer, e se saírem a operação sofre." },
+        { "id": "q_ctl", "tipo": "escala", "gargalo": "controle", "texto": "Decidimos no feeling porque não existe um painel confiável da operação." },
+        { "id": "q_dem", "tipo": "escala", "gargalo": "demanda_comercial", "texto": "Faltam oportunidades no funil, ou elas chegam e não viram venda por falta de follow-up." }
+      ]
+    },
+    {
+      "id": "priorizacao",
+      "titulo": "O que pesa mais",
+      "perguntas": [
+        {
+          "id": "maior_dor",
+          "tipo": "escolha_unica",
+          "texto": "Se você pudesse resolver só UMA dessas coisas amanhã, qual seria?",
+          "opcoes_de": "gargalos"
+        },
+        {
+          "id": "impacto",
+          "tipo": "escolha_unica",
+          "texto": "Esse problema hoje custa principalmente…",
+          "opcoes": [
+            { "valor": "receita", "label": "Receita que deixamos de ganhar" },
+            { "valor": "custo", "label": "Custo e horas pagas para trabalho que não gera valor" },
+            { "valor": "risco", "label": "Risco: erro, multa, perda de cliente ou de gente" },
+            { "valor": "crescimento", "label": "Trava o crescimento" }
+          ]
+        },
+        {
+          "id": "horas_perdidas",
+          "tipo": "escolha_unica",
+          "texto": "Quantas horas por semana a equipe gasta nesse problema?",
+          "opcoes": [
+            { "valor": 5, "label": "Até 10 h" },
+            { "valor": 20, "label": "10 a 30 h" },
+            { "valor": 50, "label": "30 a 80 h" },
+            { "valor": 100, "label": "Mais de 80 h" }
+          ]
+        },
+        {
+          "id": "ferramentas",
+          "tipo": "multipla",
+          "texto": "O que vocês já usam no dia a dia?",
+          "opcoes": [
+            { "valor": "planilhas", "label": "Planilhas (Excel/Sheets)" },
+            { "valor": "crm", "label": "CRM" },
+            { "valor": "erp", "label": "ERP / sistema de gestão" },
+            { "valor": "whatsapp", "label": "WhatsApp como canal principal" },
+            { "valor": "bi", "label": "Dashboards / BI" },
+            { "valor": "helpdesk", "label": "Sistema de atendimento" },
+            { "valor": "nada", "label": "Quase tudo no papel/cabeça" }
+          ]
+        },
+        {
+          "id": "prazo",
+          "tipo": "escolha_unica",
+          "texto": "Em que ritmo vocês querem começar?",
+          "opcoes": [
+            { "valor": "rapido", "label": "Quero uma vitória em até 30 dias" },
+            { "valor": "medio", "label": "Projeto estruturado em 2 a 3 meses" },
+            { "valor": "explorando", "label": "Ainda estou explorando" }
+          ]
+        },
+        {
+          "id": "texto_livre",
+          "tipo": "texto",
+          "opcional": true,
+          "texto": "Em uma frase: qual é o maior desperdício de tempo ou dinheiro hoje na sua empresa?"
+        }
+      ]
+    }
+  ],
+  "captura": {
+    "momento": "inicio",
+    "campos": ["nome", "empresa", "cargo", "whatsapp", "email"],
+    "consentimento": "Autorizo a V4 Company a entrar em contato sobre o resultado do meu diagnóstico (LGPD)."
+  },
+  "regras_pontuacao": {
+    "descricao": "Score de cada gargalo = resposta da escala (0 a 3) x 10, +20 se for a 'maior_dor', +10 se a area_dor mapear para ele. Ranking top 3 vira o Mapa. Impacto financeiro estimado = horas_perdidas x 4,3 semanas x custo/hora de referência (editável), exibido sempre como faixa estimada.",
+    "area_para_gargalos": {
+      "comercial": ["demanda_comercial"],
+      "marketing": ["demanda_comercial", "controle"],
+      "financeiro": ["manual_repetitivo", "informacao", "controle"],
+      "administrativo": ["manual_repetitivo", "processo", "conhecimento"],
+      "operacoes": ["capacidade", "processo", "integracao"],
+      "atendimento": ["comunicacao", "capacidade", "conhecimento"],
+      "ti": ["integracao", "informacao", "controle"]
+    }
+  }
+}
