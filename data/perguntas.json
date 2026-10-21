@@ -20,6 +20,25 @@
   ],
   "etapas": [
     {
+      "id": "identificacao",
+      "titulo": "Quem está respondendo",
+      "instrucao": "Seu Mapa de Gargalos é individual. Precisamos saber para quem enviar.",
+      "salvar_imediatamente": true,
+      "perguntas": [
+        { "id": "nome", "tipo": "texto", "obrigatoria": true, "texto": "Seu nome" },
+        { "id": "empresa", "tipo": "texto", "obrigatoria": true, "texto": "Nome da empresa" },
+        { "id": "cargo", "tipo": "texto", "obrigatoria": true, "texto": "Qual o seu cargo / papel na empresa?" },
+        { "id": "telefone", "tipo": "telefone", "obrigatoria": true, "texto": "WhatsApp (com DDD)" },
+        { "id": "email", "tipo": "email", "obrigatoria": false, "texto": "E-mail (opcional)" },
+        {
+          "id": "consentimento",
+          "tipo": "aceite",
+          "obrigatoria": true,
+          "texto": "Autorizo a V4 Company a entrar em contato comigo por WhatsApp, telefone e e-mail sobre o resultado do meu diagnóstico e sobre novidades e conteúdos futuros (LGPD)."
+        }
+      ]
+    },
+    {
       "id": "perfil",
       "titulo": "Sobre a sua empresa",
       "perguntas": [
@@ -159,9 +178,9 @@
     }
   ],
   "captura": {
-    "momento": "inicio",
-    "campos": ["nome", "empresa", "cargo", "whatsapp", "email"],
-    "consentimento": "Autorizo a V4 Company a entrar em contato sobre o resultado do meu diagnóstico (LGPD)."
+    "uso": "Etapa 'identificacao' grava o lead assim que enviada, antes do diagnóstico. Entra no CRM mesmo se a pessoa abandonar. Base para reativação posterior (WhatsApp/e-mail) e para o SDR abordar com o Mapa em mãos.",
+    "campos_lead": ["nome", "empresa", "cargo", "telefone", "email", "consentimento", "origem_cliente_anfitriao", "data_evento"],
+    "origem_cliente_anfitriao": "Campo preenchido pelo link/QR (ex.: ?anfitriao=slug), não perguntado. Mede quais clientes-anfitriões trouxeram quem."
   },
   "regras_pontuacao": {
     "descricao": "Score de cada gargalo = resposta da escala (0 a 3) x 10, +20 se for a 'maior_dor', +10 se a area_dor mapear para ele. Ranking top 3 vira o Mapa. Impacto financeiro estimado = horas_perdidas x 4,3 semanas x custo/hora de referência (editável), exibido sempre como faixa estimada.",
