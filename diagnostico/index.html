@@ -104,11 +104,28 @@ a { color: var(--accent-l); }
 .nota { color: var(--muted); font-size: .78rem; line-height: 1.5; margin: 14px 0; }
 .acoes { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 28px; }
 @media (prefers-reduced-motion: reduce) { .bolha, .ponto, .giro { animation: none; } .digitando span { animation: none; opacity: .7; } }
+.so-impressao { display: none; }
 @media print {
-  html, body { background: #fff; color: #111; height: auto; } #app { height: auto; max-width: none; }
-  header, #dock, .acoes { display: none; } main { overflow: visible; }
-  .cartao, .caso, .est { background: #fff; border-color: #bbb; } .passo p, .passo li, .caso p { color: #222; }
-  .mapa .resumo, .nota { color: #444; } .cartao { break-inside: avoid; }
+  @page { margin: 14mm 12mm; }
+  html, body { background: #fff !important; color: #111; height: auto !important; overflow: visible !important; }
+  #app { display: block; height: auto !important; max-width: none; }
+  header, #dock, .acoes { display: none !important; }
+  main { display: block; overflow: visible !important; padding: 0; }
+  /* só o Mapa: toda a conversa (balões, etapas, indicador) fica fora do PDF */
+  #chat > :not(.mapa) { display: none !important; }
+  .so-impressao { display: flex !important; align-items: baseline; justify-content: space-between; gap: 12px; border-bottom: 2px solid #E10600; padding-bottom: 8px; margin-bottom: 14px; font-size: 10pt; color: #444; }
+  .so-impressao b { color: #E10600; letter-spacing: .06em; font-size: 11pt; }
+  .mapa h2 { font-size: 20pt; margin-top: 0; color: #111; }
+  .mapa .resumo, .nota { color: #444; }
+  .cartao, .caso, .est { background: #fff !important; border-color: #bbb; box-shadow: none; }
+  .cartao { break-inside: auto; }
+  .cartao h3, .passo h4 { break-after: avoid; }
+  .caso, .passo p, .passo li { break-inside: avoid; }
+  .passo p, .passo li, .caso p { color: #222; }
+  .tag, .tag.p { color: #333; border-color: #999; }
+  .caso a { color: #1a4fb3; text-decoration: none; }
+  .caso a::after { content: attr(href); display: block; font-size: 7.5pt; color: #555; word-break: break-all; }
+  .est b { color: #b30500; }
 }
 </style>
 </head>
