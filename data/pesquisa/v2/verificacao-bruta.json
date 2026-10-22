@@ -1,5 +1,25 @@
 [
  {
+  "id": "L-004",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "L-005",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "Q-027",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "L-006",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
   "id": "P-006",
   "status": "trecho_ok",
   "http": "200"
@@ -15,12 +35,7 @@
   "http": "200"
  },
  {
-  "id": "P-032",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "Q-003",
+  "id": "Q-024",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -50,21 +65,6 @@
   "http": "200"
  },
  {
-  "id": "M-006",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "M-007",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "T-017",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
   "id": "G-001",
   "status": "trecho_ok",
   "http": "200"
@@ -75,27 +75,22 @@
   "http": "200"
  },
  {
+  "id": "G-029",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "S-020",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
   "id": "G-004",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "G-005",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "G-006",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "T-022",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "T-031",
+  "id": "M-008",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -115,25 +110,12 @@
   "http": "200"
  },
  {
-  "id": "P-020",
-  "status": "nao_encontrado",
-  "http": "200",
-  "frac": 0.23,
-  "numeros_resultado": [],
-  "numeros_achados": []
- },
- {
   "id": "P-024",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "P-030",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "P-034",
+  "id": "Q-001",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -143,17 +125,37 @@
   "http": "200"
  },
  {
-  "id": "Q-026",
+  "id": "Q-003",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "Q-028",
+  "id": "Q-008",
   "status": "trecho_ok",
   "http": "200"
+ },
+ {
+  "id": "Q-034",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "S-018",
+  "status": "indisponivel",
+  "http": "403"
  },
  {
   "id": "T-010",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "T-029",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "T-034",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -168,7 +170,42 @@
   "http": "200"
  },
  {
+  "id": "M-014",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "R-001",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "S-040",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
   "id": "M-001",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "M-006",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "M-007",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "M-009",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "M-025",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -178,7 +215,17 @@
   "http": "200"
  },
  {
+  "id": "S-036",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
   "id": "T-002",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "T-003",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -193,98 +240,7 @@
   "http": "200"
  },
  {
-  "id": "G-008",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
   "id": "G-010",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "G-012",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "G-007",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "G-009",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "M-008",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "P-014",
-  "status": "nao_encontrado",
-  "http": "200",
-  "frac": 0.07,
-  "numeros_resultado": [],
-  "numeros_achados": []
- },
- {
-  "id": "P-018",
-  "status": "nao_encontrado",
-  "http": "200",
-  "frac": 0.08,
-  "numeros_resultado": [],
-  "numeros_achados": []
- },
- {
-  "id": "Q-001",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "Q-005",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "Q-006",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "T-040",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "R-007",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "R-010",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "M-009",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "S-035",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "T-012",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "T-016",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -294,27 +250,52 @@
   "http": "200"
  },
  {
+  "id": "M-020",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "S-013",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "G-007",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "M-004",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "T-031",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "R-010",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "M-026",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
   "id": "S-003",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "S-009",
+  "id": "G-017",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "S-025",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "S-026",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "S-037",
+  "id": "G-018",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -324,17 +305,19 @@
   "http": "200"
  },
  {
-  "id": "M-011",
+  "id": "S-027",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "P-015",
-  "status": "nao_encontrado",
-  "http": "200",
-  "frac": 0.0,
-  "numeros_resultado": [],
-  "numeros_achados": []
+  "id": "L-001",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "M-011",
+  "status": "trecho_ok",
+  "http": "200"
  },
  {
   "id": "S-014",
@@ -343,6 +326,61 @@
  },
  {
   "id": "R-013",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "T-012",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "H-002",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "S-028",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "H-009",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "S-029",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "P-008",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "T-027",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "T-035",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "R-002",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "R-008",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "T-001",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -358,7 +396,12 @@
   "frac": 0.0
  },
  {
-  "id": "S-036",
+  "id": "T-007",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "T-008",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -368,111 +411,17 @@
   "http": "200"
  },
  {
-  "id": "S-028",
+  "id": "H-001",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "G-020",
-  "status": "trecho_parcial",
-  "http": "200",
-  "frac": 0.78
- },
- {
-  "id": "G-021",
+  "id": "H-003",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "G-022",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "S-027",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "S-029",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "P-008",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "S-018",
-  "status": "indisponivel",
-  "http": "403"
- },
- {
-  "id": "P-019",
-  "status": "nao_encontrado",
-  "http": "200",
-  "frac": 0.23,
-  "numeros_resultado": [],
-  "numeros_achados": []
- },
- {
-  "id": "Q-018",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "Q-034",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "T-027",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "T-035",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "M-014",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "R-002",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "R-006",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "R-008",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "S-005",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "S-007",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "T-001",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "G-025",
+  "id": "H-006",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -482,17 +431,17 @@
   "http": "200"
  },
  {
-  "id": "S-021",
-  "status": "indisponivel",
-  "http": "403"
- },
- {
   "id": "T-018",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "G-024",
+  "id": "H-007",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "H-008",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -517,28 +466,7 @@
   "http": "200"
  },
  {
-  "id": "P-033",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "Q-008",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "Q-019",
-  "status": "numeros_ok",
-  "http": "200",
-  "frac": 0.0
- },
- {
-  "id": "S-019",
-  "status": "indisponivel",
-  "http": "403"
- },
- {
-  "id": "T-034",
+  "id": "Q-010",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -553,17 +481,12 @@
   "http": "200"
  },
  {
-  "id": "S-040",
+  "id": "S-005",
   "status": "trecho_ok",
   "http": "200"
  },
  {
   "id": "S-006",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "S-041",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -583,47 +506,17 @@
   "http": "200"
  },
  {
-  "id": "S-039",
+  "id": "S-021",
   "status": "indisponivel",
   "http": "403"
  },
  {
-  "id": "G-026",
-  "status": "numeros_ok",
-  "http": "200",
-  "frac": 0.0
+  "id": "L-003",
+  "status": "trecho_ok",
+  "http": "200"
  },
  {
   "id": "P-011",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "P-017",
-  "status": "nao_encontrado",
-  "http": "200",
-  "frac": 0.25,
-  "numeros_resultado": [],
-  "numeros_achados": []
- },
- {
-  "id": "P-031",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "Q-010",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "Q-035",
-  "status": "numeros_ok",
-  "http": "200",
-  "frac": 0.38
- },
- {
-  "id": "Q-036",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -633,93 +526,7 @@
   "http": "200"
  },
  {
-  "id": "R-001",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
   "id": "R-012",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "M-021",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "T-037",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "T-038",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "G-029",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "S-012",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "S-013",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "S-020",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "S-038",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "G-028",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "Q-027",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "P-012",
-  "status": "nao_encontrado",
-  "http": "200",
-  "frac": 0.1,
-  "numeros_resultado": [],
-  "numeros_achados": []
- },
- {
-  "id": "P-013",
-  "status": "nao_encontrado",
-  "http": "200",
-  "frac": 0.4,
-  "numeros_resultado": [],
-  "numeros_achados": []
- },
- {
-  "id": "Q-024",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "Q-030",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "T-029",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -729,22 +536,12 @@
   "http": "200"
  },
  {
-  "id": "M-027",
+  "id": "M-021",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "R-011",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "T-007",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "T-008",
+  "id": "T-017",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -754,27 +551,92 @@
   "http": "200"
  },
  {
-  "id": "M-026",
+  "id": "S-012",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "S-010",
+  "id": "S-038",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "G-017",
+  "id": "K-009",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "G-018",
+  "id": "K-010",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "T-030",
+  "id": "K-001",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "K-003",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "K-005",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "K-008",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "K-011",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "K-002",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "K-004",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "K-006",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "K-007",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "K-012",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "K-014",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "M-027",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "K-013",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "L-009",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -794,7 +656,12 @@
   "http": "200"
  },
  {
-  "id": "R-005",
+  "id": "T-040",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "R-007",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -804,22 +671,7 @@
   "http": "200"
  },
  {
-  "id": "T-003",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "G-030",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "M-020",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "S-008",
+  "id": "T-016",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -829,22 +681,12 @@
   "http": "200"
  },
  {
-  "id": "G-031",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
   "id": "G-032",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "G-033",
-  "status": "trecho_ok",
-  "http": "200"
- },
- {
-  "id": "M-004",
+  "id": "T-030",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -852,16 +694,6 @@
   "id": "P-004",
   "status": "trecho_ok",
   "http": "200"
- },
- {
-  "id": "P-025",
-  "status": "nao_encontrado",
-  "http": "200",
-  "frac": 0.0,
-  "numeros_resultado": [
-   "10"
-  ],
-  "numeros_achados": []
  },
  {
   "id": "Q-011",
@@ -894,17 +726,74 @@
   "http": "200"
  },
  {
+  "id": "Q-018",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "Q-019",
+  "status": "numeros_ok",
+  "http": "200",
+  "frac": 0.0
+ },
+ {
+  "id": "Q-026",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "Q-028",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "Q-030",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
   "id": "Q-031",
   "status": "trecho_ok",
   "http": "200"
  },
  {
-  "id": "M-025",
+  "id": "Q-035",
+  "status": "numeros_ok",
+  "http": "200",
+  "frac": 0.38
+ },
+ {
+  "id": "S-019",
+  "status": "indisponivel",
+  "http": "403"
+ },
+ {
+  "id": "N-001",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "N-002",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "N-003",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "N-004",
   "status": "trecho_ok",
   "http": "200"
  },
  {
   "id": "G-035",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "H-004",
   "status": "trecho_ok",
   "http": "200"
  },
@@ -929,7 +818,12 @@
   "http": "200"
  },
  {
-  "id": "G-036",
+  "id": "H-005",
+  "status": "trecho_ok",
+  "http": "200"
+ },
+ {
+  "id": "T-022",
   "status": "trecho_ok",
   "http": "200"
  },

@@ -1,5 +1,123 @@
 [
  {
+  "id": "L-004",
+  "porte": "pequena",
+  "gargalo": "capacidade",
+  "gargalos_secundarios": [
+   "manual_repetitivo",
+   "controle"
+  ],
+  "area": "operacoes",
+  "setor": "seguros (corretagem de sinistros)",
+  "tipo": "nominal",
+  "empresa": "Top Tier Public Adjusters",
+  "pais": "Estados Unidos",
+  "titulo": "Empresa de 35 funcionários automatiza 70% das tarefas de sinistros para absorver picos de volume pós-furacão",
+  "problema": "O volume de sinistros oscila 200% a 300% depois de grandes furacões, e processos manuais e falta de visibilidade geravam inconsistências no acompanhamento dos clientes.",
+  "solucao": "A empresa reconfigurou o CRM com etapas detalhadas e automações por webhook que movem o caso de etapa, criam a próxima tarefa, enviam e-mails e documentos e sinalizam casos parados.",
+  "ferramentas": [
+   "Pipedrive",
+   "PandaDoc",
+   "QuickBooks Online"
+  ],
+  "resultado": "Sete em cada dez tarefas passaram a ser automatizadas e a equipe cresceu de 3 para 35 funcionários em três anos, segundo a fonte.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Pipedrive (case de cliente)",
+  "fonte_url": "https://www.pipedrive.com/en/case-studies/top-tier-public-adjusters-case-study",
+  "ano": 2025,
+  "confianca": "alta",
+  "setor_chave": "financeiro_seguros",
+  "funcionarios": 35,
+  "porte_confirmado": true,
+  "data_fonte": "2025-01",
+  "metricas": [
+   {
+    "indicador": "Tarefas automatizadas",
+    "antes": null,
+    "depois": "70%",
+    "variacao": null
+   },
+   {
+    "indicador": "Funcionários",
+    "antes": "3",
+    "depois": "35",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Migração para uma nova instância do CRM em 2023 com scripts próprios; exigiu perfil técnico interno (diretor de operações e tecnologia).",
+  "como_replicar": [
+   "Mapear as etapas reais de cada caso e o tempo médio de cada uma.",
+   "Automatizar a passagem de etapa e a criação da próxima tarefa quando a anterior for concluída.",
+   "Configurar alerta para casos parados além do tempo médio da etapa.",
+   "Medir semanalmente carga e produção por etapa para decidir quando reforçar a equipe."
+  ],
+  "trecho_comprovante": "Seven in ten tasks are now automated by Pipedrive",
+  "verificado": true,
+  "forca": "forte",
+  "observacao": "O ganho em tarefas automatizadas é número da empresa publicado pelo fornecedor; o crescimento de equipe não é atribuído só à automação.",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "L-005",
+  "porte": "pequena",
+  "gargalo": "capacidade",
+  "gargalos_secundarios": [
+   "manual_repetitivo"
+  ],
+  "area": "comercial",
+  "setor": "serviços financeiros (planejamento financeiro)",
+  "tipo": "nominal",
+  "empresa": "Network Financial Planning",
+  "pais": "Austrália",
+  "titulo": "Consultoria financeira com equipe de seis pessoas passa a concluir mais de 50% mais atividades",
+  "problema": "Com o fundador sem tempo para aprofundar o uso do CRM, a jornada do cliente era tratada de forma pouco padronizada por uma equipe pequena que crescia.",
+  "solucao": "A empresa centralizou a jornada do cliente no CRM, com projetos-modelo por tipo de serviço, chatbot e formulários no site, e-mails padronizados e relatórios de previsão de receita.",
+  "ferramentas": [
+   "Pipedrive",
+   "Pipedrive Projects",
+   "LeadBooster",
+   "Smart Docs"
+  ],
+  "resultado": "A equipe, que cresceu de uma para seis pessoas, passou a concluir mais de 50% mais atividades, e quase 85% dos processos rodam no CRM, segundo a fonte.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Pipedrive (case de cliente)",
+  "fonte_url": "https://www.pipedrive.com/en/case-studies/network-financial-planning-case-study",
+  "ano": 2024,
+  "confianca": "alta",
+  "setor_chave": "financeiro_seguros",
+  "funcionarios": 6,
+  "porte_confirmado": true,
+  "data_fonte": "2024-05",
+  "metricas": [
+   {
+    "indicador": "Atividades concluídas pela equipe",
+    "antes": null,
+    "depois": null,
+    "variacao": "mais de 50% a mais"
+   },
+   {
+    "indicador": "Processos rodando no CRM",
+    "antes": null,
+    "depois": "85%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A fonte não informa prazo ou custo; o trabalho foi conduzido pela gerente de desenvolvimento de negócios.",
+  "como_replicar": [
+   "Reunir contatos, propostas e andamento de cada cliente em um único sistema.",
+   "Criar modelos de projeto por tipo de serviço, com tarefas e e-mails padrão.",
+   "Capturar leads do site direto nos campos do sistema, sem digitação.",
+   "Usar relatórios de previsão para planejar a carga de trabalho antes de contratar."
+  ],
+  "trecho_comprovante": "The team now completes over 50% more activities",
+  "verificado": true,
+  "forca": "forte",
+  "observacao": "Solução é CRM com automações; o caso não usa IA generativa.",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
   "id": "Q-027",
   "porte": "pequena",
   "gargalo": "capacidade",
@@ -48,6 +166,64 @@
   "verificacao_bruta": "trecho_ok",
   "relevancia_pme": 3,
   "gargalo_original": "conhecimento"
+ },
+ {
+  "id": "L-006",
+  "porte": "pequena",
+  "gargalo": "capacidade",
+  "gargalos_secundarios": [
+   "manual_repetitivo"
+  ],
+  "area": "operacoes",
+  "setor": "indústria (prensagem de discos de vinil)",
+  "tipo": "nominal",
+  "empresa": "Gold Rush Vinyl",
+  "pais": "Estados Unidos",
+  "titulo": "Fábrica de discos libera mais de 2.000 horas por ano com 76 automações de atendimento e vendas",
+  "problema": "Com 10 a 50 vezes mais clientes do que outros fabricantes, a equipe fazia atendimento e vendas manualmente e não dava conta.",
+  "solucao": "A fundadora criou 76 automações que tratam cerca de 18 mil tarefas por ano, como salvar PDFs de e-mails no Drive, filtrar e-mails e atualizar registros de clientes.",
+  "ferramentas": [
+   "Zapier",
+   "Gmail",
+   "Google Drive"
+  ],
+  "resultado": "A fonte informa 2.285 horas de trabalho automatizadas e mais de 2.000 horas liberadas por ano para a fundadora e os funcionários.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Zapier (história de cliente)",
+  "fonte_url": "https://zapier.com/customer-stories/gold-rush-vinyl",
+  "ano": 2024,
+  "confianca": "media",
+  "setor_chave": "industria",
+  "funcionarios": null,
+  "porte_confirmado": true,
+  "data_fonte": "2024",
+  "metricas": [
+   {
+    "indicador": "Horas de trabalho automatizadas por ano",
+    "antes": null,
+    "depois": "2.285",
+    "variacao": null
+   },
+   {
+    "indicador": "Automações ativas",
+    "antes": null,
+    "depois": "76",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Montado pela própria fundadora, em etapas, sem equipe de TI citada.",
+  "como_replicar": [
+   "Listar as tarefas repetidas de atendimento e vendas que seguem regra fixa.",
+   "Automatizar primeiro o fluxo mais frequente (ex.: salvar anexos de e-mail na pasta do cliente).",
+   "Adicionar filtros e atrasos para o fluxo só agir quando a condição for atendida.",
+   "Somar mensalmente as horas liberadas e reinvestir em novas linhas de produto ou vendas."
+  ],
+  "trecho_comprovante": "freeing up 2,000+ hours for herself and for her employees",
+  "verificado": true,
+  "forca": "media",
+  "observacao": "Faixa de porte 1-50 informada pela Zapier. Sem data de publicação no HTML; captura mais antiga no Internet Archive em 2024-12 (limite superior). Automação por regras, sem IA generativa.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "P-006",
@@ -1131,6 +1307,49 @@
   "forca": "media",
   "verificacao_bruta": "trecho_ok",
   "relevancia_pme": 2
+ },
+ {
+  "id": "P-020",
+  "porte": "pequena",
+  "gargalo": "manual_repetitivo",
+  "gargalos_secundarios": [
+   "demanda_comercial"
+  ],
+  "area": "administrativo",
+  "setor": "meio ambiente/bioeconomia",
+  "tipo": "nominal",
+  "empresa": "Ecoporé (Porto Velho, RO)",
+  "pais": "Brasil",
+  "titulo": "Organização ambiental gera o primeiro rascunho de propostas de projeto no Google Docs",
+  "problema": "Redigir propostas de projeto do zero consumia tempo.",
+  "solucao": "Usa o recurso 'Ajude-me a escrever' do Google Docs para criar um rascunho estruturado das propostas.",
+  "ferramentas": [
+   "Google Docs",
+   "Gemini"
+  ],
+  "resultado": "Rascunho gerado 'em segundos' (relato qualitativo; sem métrica de tempo).",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "dias",
+  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "outro",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2025-10",
+  "metricas": [],
+  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+  "como_replicar": [
+   "Reunir objetivo, público e orçamento do projeto.",
+   "Pedir ao Google Docs o rascunho estruturado.",
+   "Complementar com dados e a linguagem do edital.",
+   "Revisar antes de enviar."
+  ],
+  "trecho_comprovante": "utiliza o 'Ajude-me a Escrever' no Google Docs para, em segundos, criar uma primeira versão",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "nao_checado"
  },
  {
   "id": "P-024",
@@ -3124,6 +3343,180 @@
   "gargalo_original": "capacidade"
  },
  {
+  "id": "P-012",
+  "porte": "pequena",
+  "gargalo": "informacao",
+  "gargalos_secundarios": [
+   "informacao"
+  ],
+  "area": "administrativo",
+  "setor": "assinatura de cafés especiais",
+  "tipo": "nominal",
+  "empresa": "Moka Clube (Curitiba, PR)",
+  "pais": "Brasil",
+  "titulo": "Clube de café encontra informações em e-mails e anexos com o Gemini no Gmail",
+  "problema": "Informações importantes ficavam espalhadas em muitos e-mails e anexos.",
+  "solucao": "Usa o Gemini no Gmail para buscar e resgatar informações na caixa de e-mail.",
+  "ferramentas": [
+   "Google Workspace",
+   "Gemini no Gmail"
+  ],
+  "resultado": "Facilidade para buscar informações no e-mail (relato qualitativo; sem métrica na fonte).",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "dias",
+  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "varejo_ecommerce",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2025-10",
+  "metricas": [],
+  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+  "como_replicar": [
+   "Ativar o Gemini no Gmail (Google Workspace).",
+   "Perguntar em linguagem natural por contratos, pedidos ou datas.",
+   "Conferir a resposta no e-mail original.",
+   "Padronizar rótulos para facilitar buscas."
+  ],
+  "trecho_comprovante": "a empresa usa o Gemini no Gmail para facilitar a busca por informações",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "nao_checado",
+  "relevancia_pme": 3,
+  "gargalo_original": "conhecimento"
+ },
+ {
+  "id": "P-013",
+  "porte": "pequena",
+  "gargalo": "informacao",
+  "gargalos_secundarios": [],
+  "area": "operacoes",
+  "setor": "reciclagem de resíduos da construção",
+  "tipo": "nominal",
+  "empresa": "RNV Resíduos (Aparecida de Goiânia, GO)",
+  "pais": "Brasil",
+  "titulo": "Recicladora cruza laudos e documentos técnicos com o NotebookLM",
+  "problema": "As respostas precisas estavam espalhadas em laudos de laboratório, documentos técnicos e relatórios.",
+  "solucao": "Usa o NotebookLM para cruzar laudos, documentos técnicos e relatórios e chegar rápido às respostas.",
+  "ferramentas": [
+   "NotebookLM"
+  ],
+  "resultado": "Respostas obtidas rapidamente (relato qualitativo; sem métrica na fonte).",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "dias",
+  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "construcao_imoveis",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2025-10",
+  "metricas": [],
+  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+  "como_replicar": [
+   "Reunir laudos e relatórios em PDF em um caderno do NotebookLM.",
+   "Fazer perguntas de cruzamento (ex.: parâmetros fora do limite).",
+   "Conferir as citações nos documentos originais.",
+   "Atualizar o caderno a cada novo laudo."
+  ],
+  "trecho_comprovante": "A empresa utiliza o NotebookLM para cruzar dados de laudos, documentos técnicos, relatórios",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "nao_checado",
+  "relevancia_pme": 2,
+  "gargalo_original": "conhecimento"
+ },
+ {
+  "id": "P-014",
+  "porte": "pequena",
+  "gargalo": "informacao",
+  "gargalos_secundarios": [
+   "decisao"
+  ],
+  "area": "operacoes",
+  "setor": "irrigação agrícola",
+  "tipo": "nominal",
+  "empresa": "3V3 (Fortaleza, CE)",
+  "pais": "Brasil",
+  "titulo": "Empresa de irrigação tira insights de planilhas com uma pergunta ao Gemini",
+  "problema": "Dificuldade de transformar dados em insights sem analista dedicado.",
+  "solucao": "Usa o Gemini no Google Planilhas para obter insights dos dados com uma única pergunta.",
+  "ferramentas": [
+   "Google Planilhas",
+   "Gemini"
+  ],
+  "resultado": "Insights obtidos com uma pergunta (relato qualitativo; sem métrica na fonte).",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "dias",
+  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "agro",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2025-10",
+  "metricas": [],
+  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+  "como_replicar": [
+   "Organizar os dados de vendas ou operação em uma planilha com cabeçalhos claros.",
+   "Pedir ao Gemini no Planilhas os principais insights.",
+   "Validar os números por amostragem.",
+   "Salvar as perguntas úteis como rotina."
+  ],
+  "trecho_comprovante": "Com o Gemini no Google Planilhas, a empresa transforma os dados em insights com apenas uma pergunta",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "nao_checado"
+ },
+ {
+  "id": "P-018",
+  "porte": "pequena",
+  "gargalo": "informacao",
+  "gargalos_secundarios": [
+   "comunicacao",
+   "demanda_comercial"
+  ],
+  "area": "comercial",
+  "setor": "chocolate/cacau",
+  "tipo": "nominal",
+  "empresa": "Cacauaré (Mocajuba, PA)",
+  "pais": "Brasil",
+  "titulo": "Produtora de cacau resume e-mails para achar ideias e parcerias com o Gemini no Gmail",
+  "problema": "Dificuldade de identificar novas ideias e parcerias em meio ao volume de e-mails.",
+  "solucao": "Usa o Gemini no Gmail para resumir os pontos principais das mensagens.",
+  "ferramentas": [
+   "Gmail",
+   "Gemini"
+  ],
+  "resultado": "Pontos principais (ideias, parcerias) identificados por resumo automático (relato qualitativo; sem métrica na fonte).",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "dias",
+  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "agro",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2025-10",
+  "metricas": [],
+  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+  "como_replicar": [
+   "Ativar o Gemini no Gmail.",
+   "Pedir resumos de threads longos.",
+   "Marcar oportunidades de parceria para acompanhamento.",
+   "Responder às mais relevantes primeiro."
+  ],
+  "trecho_comprovante": "A empresa usa o Gemini no Gmail para obter um resumo dos pontos mais importantes",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "nao_checado"
+ },
+ {
   "id": "R-010",
   "porte": "media",
   "gargalo": "informacao",
@@ -3528,6 +3921,57 @@
   "gargalo_original": "decisao"
  },
  {
+  "id": "L-001",
+  "porte": "pequena",
+  "gargalo": "decisao",
+  "gargalos_secundarios": [
+   "controle"
+  ],
+  "area": "administrativo",
+  "setor": "mídia e software de IA",
+  "tipo": "nominal",
+  "empresa": "Every",
+  "pais": "Estados Unidos",
+  "titulo": "Equipe de 20 pessoas troca ciclo de planejamento trimestral de semanas por conversa com agente de IA",
+  "problema": "O planejamento trimestral dependia de ciclos longos de documentos e reuniões de alinhamento, atrasando a decisão sobre prioridades.",
+  "solucao": "Um agente de IA dentro do Notion entrevistou cada pessoa sobre seus planos, cruzou com as prioridades definidas pela liderança e devolveu um plano padronizado para aprovação do gestor. Um segundo agente publica todo dia às 7h um placar de metas no Slack.",
+  "ferramentas": [
+   "Notion",
+   "Notion Custom Agents",
+   "Slack"
+  ],
+  "resultado": "O ciclo de planejamento, antes de semanas, foi concluído em cerca de um dia no Q1; o planejamento do Q2 levou cerca de 20 minutos, segundo a empresa.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Notion (história de cliente)",
+  "fonte_url": "https://www.notion.com/customers/every",
+  "ano": 2026,
+  "confianca": "alta",
+  "setor_chave": "tecnologia",
+  "funcionarios": 20,
+  "porte_confirmado": true,
+  "data_fonte": "2026-05",
+  "metricas": [
+   {
+    "indicador": "Tempo de planejamento trimestral",
+    "antes": "ciclo de várias semanas",
+    "depois": "cerca de 1 dia (Q1) e cerca de 20 minutos (Q2)",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A fonte não informa prazo ou custo; o gestor de crescimento diz que descreve o que quer a um assistente de código, que monta agentes e bancos de dados.",
+  "como_replicar": [
+   "Reunir metas da empresa, notas de reunião e conversas importantes em um único espaço de trabalho que a IA consiga ler (ex.: Notion, Google Drive).",
+   "Criar um agente que entreviste cada responsável com as mesmas perguntas e gere um plano em formato padrão.",
+   "Definir que o gestor apenas revisa e aprova o plano gerado, em vez de redigir e alinhar em reuniões.",
+   "Opcional: publicar um placar diário de metas em canal de mensagens para a liderança enxergar atrasos cedo."
+  ],
+  "trecho_comprovante": "Q2 planning took about 20 minutes.",
+  "verificado": true,
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
   "id": "M-011",
   "porte": "pequena",
   "gargalo": "decisao",
@@ -3592,6 +4036,49 @@
   "nota_verificacao": "Página lida (16/05/2025); números confirmados. Número principal e ganhos das imobiliárias são autodeclarados e a fonte é imprensa de startups (secundária ao Google). Porte corrigido para pequena: perfil da Startupi indica 17 funcionários (provavelmente 2023); fora da faixa média, recomenda-se realocar.",
   "verificacao_bruta": "trecho_ok",
   "relevancia_pme": 3
+ },
+ {
+  "id": "P-015",
+  "porte": "pequena",
+  "gargalo": "decisao",
+  "gargalos_secundarios": [
+   "informacao"
+  ],
+  "area": "operacoes",
+  "setor": "brinquedos de madeira (fabricação artesanal)",
+  "tipo": "nominal",
+  "empresa": "Ateliê Materno (Florianópolis, SC)",
+  "pais": "Brasil",
+  "titulo": "Fabricante de brinquedos gera gráficos de vendas e previsão de demanda com o Gemini no Planilhas",
+  "problema": "Dificuldade para prever a demanda a partir dos números de venda.",
+  "solucao": "Usa o Gemini no Google Planilhas para gerar gráficos de vendas automaticamente e melhorar a previsão de demanda.",
+  "ferramentas": [
+   "Google Planilhas",
+   "Gemini"
+  ],
+  "resultado": "Gráficos automáticos e previsão de demanda melhor (relato qualitativo; sem métrica na fonte).",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "dias",
+  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "industria",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2025-10",
+  "metricas": [],
+  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+  "como_replicar": [
+   "Consolidar o histórico de vendas mensal por produto em planilha.",
+   "Pedir ao Gemini gráficos de sazonalidade e produtos de maior giro.",
+   "Usar a leitura para planejar a produção.",
+   "Comparar o previsto com o vendido a cada mês."
+  ],
+  "trecho_comprovante": "utiliza o Gemini no Google Planilhas para gerar gráficos de vendas automaticamente",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "nao_checado"
  },
  {
   "id": "S-014",
@@ -3784,6 +4271,76 @@
   "gargalo_original": "informacao"
  },
  {
+  "id": "H-002",
+  "porte": "grande",
+  "gargalo": "decisao",
+  "gargalos_secundarios": [
+   "controle",
+   "manual_repetitivo"
+  ],
+  "area": "financeiro",
+  "setor": "distribuição de gás (GLP)",
+  "tipo": "nominal",
+  "empresa": "Copa Energia",
+  "pais": "Brasil",
+  "titulo": "Copa Energia automatiza decisões recorrentes de crédito e reavalia toda a carteira de clientes todo mês",
+  "problema": "Os dados de crédito ficavam em sistemas diferentes e a análise dependia de avaliação manual, com baixa rastreabilidade e pouca visibilidade do risco da carteira.",
+  "solucao": "Um motor de crédito com dados e IA, desenvolvido pela Indicium AI, automatiza decisões recorrentes, registra auditoria e traz um painel de gestão da carteira; analistas ficam com exceções e decisões estratégicas.",
+  "ferramentas": [
+   "Databricks (Lakehouse)",
+   "Mosaic AI",
+   "Indicium AI"
+  ],
+  "resultado": "Redução de R$ 13,5 milhões por ano no risco potencial; capital de crédito exposto à inadimplência caiu de cerca de 21% para 19%; o processo manual consumia mais de 270 horas por mês e cobria cerca de 1,1 mil análises, e hoje toda a base é reavaliada mensalmente.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete",
+  "fonte_url": "https://www.baguete.com.br/noticias/copa-energia-automatiza-analise-de-credito-com-indicium-ai",
+  "ano": 2026,
+  "confianca": "alta",
+  "setor_chave": "outro",
+  "funcionarios": 3700,
+  "porte_confirmado": true,
+  "data_fonte": "2026-04",
+  "metricas": [
+   {
+    "indicador": "Análises de crédito revisadas por mês",
+    "antes": "cerca de 1,1 mil",
+    "depois": "toda a base reavaliada mensalmente",
+    "variacao": null
+   },
+   {
+    "indicador": "Horas mensais do processo manual",
+    "antes": "mais de 270 horas",
+    "depois": null,
+    "variacao": null
+   },
+   {
+    "indicador": "Capital de crédito exposto à inadimplência",
+    "antes": "cerca de 21%",
+    "depois": "19%",
+    "variacao": null
+   },
+   {
+    "indicador": "Risco potencial",
+    "antes": null,
+    "depois": null,
+    "variacao": "redução de R$ 13,5 milhões por ano"
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Reúna num só lugar histórico de pagamento, atraso e limite de cada cliente (pode começar numa planilha consolidada).",
+   "Defina regras e faixas de risco para as decisões repetidas (manter, reduzir ou elevar limite) e automatize só os casos claros.",
+   "Encaminhe para análise humana apenas as exceções e registre o motivo de cada decisão.",
+   "Acompanhe mensalmente um painel com inadimplência por faixa de risco e reavalie a carteira inteira, não só uma amostra."
+  ],
+  "trecho_comprovante": "O processo manual consumia mais de 270 horas por mês e permitia revisar cerca de 1,1 mil análises mensais.",
+  "verificado": true,
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
   "id": "S-028",
   "porte": "grande",
   "gargalo": "decisao",
@@ -3833,6 +4390,66 @@
   "verificado": true,
   "verificacao_bruta": "trecho_ok",
   "relevancia_pme": 2
+ },
+ {
+  "id": "H-009",
+  "porte": "grande",
+  "gargalo": "decisao",
+  "gargalos_secundarios": [
+   "controle",
+   "manual_repetitivo"
+  ],
+  "area": "operacoes",
+  "setor": "distribuição e varejo de pneus",
+  "tipo": "nominal",
+  "empresa": "Cantu Inc.",
+  "pais": "Brasil",
+  "titulo": "Cantu Inc. reduz de duas semanas para seis horas o tempo da previsão inicial de demanda",
+  "problema": "A previsão manual levava até 14 dias para sair, tinha erro de 62% (WMAPE) e a base de cadastro de produtos era ruim, para mais de 5 mil SKUs em mais de 40 filiais e centros de distribuição.",
+  "solucao": "Nova arquitetura de dados com aprendizado de máquina tradicional, implantada pela A3Data, que gera previsão por SKU e por estado.",
+  "ferramentas": [
+   "AWS Glue",
+   "Amazon S3",
+   "Databricks",
+   "AWS Step Functions",
+   "AWS Lambda"
+  ],
+  "resultado": "Tempo da previsão inicial de demanda de cerca de duas semanas para seis horas; erro de previsão (WMAPE) reduzido em 15% em cerca de 5 meses; a empresa cita economia de dezenas de milhões de reais em caixa, estoques parados e logística, sem valor exato.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "TI Inside",
+  "fonte_url": "https://tiinside.com.br/24/09/2026/cantu-inc-automatiza-gestao-e-reduz-erro-de-previsao-em-15-com-ia/",
+  "ano": 2026,
+  "confianca": "media",
+  "setor_chave": "varejo_ecommerce",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2026-09",
+  "metricas": [
+   {
+    "indicador": "Tempo da previsão inicial de demanda",
+    "antes": "cerca de 2 semanas",
+    "depois": "6 horas",
+    "variacao": null
+   },
+   {
+    "indicador": "Erro de previsão (WMAPE)",
+    "antes": "62%",
+    "depois": null,
+    "variacao": "redução de 15%"
+   }
+  ],
+  "esforco_implantacao": "Cerca de 5 meses para chegar à melhoria de 15% no forecast, segundo a empresa.",
+  "como_replicar": [
+   "Limpe primeiro o cadastro de produtos: sem código e descrição consistentes qualquer previsão sai ruim.",
+   "Reúna o histórico de vendas por produto e filial numa base única e atualizada automaticamente.",
+   "Gere a previsão inicial por modelo estatístico simples (ex.: planilha ou BI com previsão) e deixe o comprador ajustar só as exceções.",
+   "Meça o erro de previsão e o tempo gasto a cada ciclo e passe a decidir compras com a base mais frequente."
+  ],
+  "trecho_comprovante": "O tempo necessário para elaborar a previsão inicial de demanda também caiu de cerca de duas semanas para apenas seis horas",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-029",
@@ -3946,6 +4563,49 @@
   "forca": "forte",
   "verificacao_bruta": "trecho_ok",
   "relevancia_pme": 2
+ },
+ {
+  "id": "P-019",
+  "porte": "pequena",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "comunicacao"
+  ],
+  "area": "administrativo",
+  "setor": "papel reciclado com sementes",
+  "tipo": "nominal",
+  "empresa": "Papel Semente (São Gonçalo, RJ)",
+  "pais": "Brasil",
+  "titulo": "Empresa organiza decisões e próximos passos de reuniões com o Gemini no Meet",
+  "problema": "Dificuldade de organizar resultados e próximos passos das reuniões.",
+  "solucao": "Usa o Gemini no Google Meet para anotar, resumir e organizar os próximos passos.",
+  "ferramentas": [
+   "Google Meet",
+   "Gemini"
+  ],
+  "resultado": "Atas e próximos passos gerados automaticamente (relato qualitativo; sem métrica na fonte).",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "dias",
+  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "outro",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2025-10",
+  "metricas": [],
+  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+  "como_replicar": [
+   "Ativar a anotação com Gemini no Meet.",
+   "Revisar a ata ao fim da reunião.",
+   "Enviar os próximos passos ao grupo com responsáveis.",
+   "Acompanhar os itens na reunião seguinte."
+  ],
+  "trecho_comprovante": "A empresa usa o Gemini no Meet para anotar tudo o que é discutido em reunião",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "nao_checado"
  },
  {
   "id": "T-027",
@@ -4530,6 +5190,189 @@
   "gargalo_original": "decisao"
  },
  {
+  "id": "H-001",
+  "porte": "grande",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "manual_repetitivo"
+  ],
+  "area": "financeiro",
+  "setor": "financeiro (banco do varejo)",
+  "tipo": "nominal",
+  "empresa": "Banco Carrefour",
+  "pais": "Brasil",
+  "titulo": "Banco Carrefour passa a conferir faturas com IA e o prazo cai de cerca de cinco dias para 24 horas",
+  "problema": "A fiscalização, verificação e apontamento de discrepâncias nas faturas era feita manualmente e levava cerca de cinco dias.",
+  "solucao": "O banco automatizou a análise das cerca de 800 faturas mensais com a UiPath AI, e o funcionário passou a atuar sobre o que o sistema aponta.",
+  "ferramentas": [
+   "UiPath AI"
+  ],
+  "resultado": "Prazo de análise de faturas reduzido de cerca de cinco dias para 24 horas; a empresa estima economia de R$ 100 mil por ano. Volume: cerca de 800 faturas por mês.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete",
+  "fonte_url": "https://www.baguete.com.br/noticias/banco-carrefour-analisa-de-faturas-com-uipath",
+  "ano": 2025,
+  "confianca": "alta",
+  "setor_chave": "financeiro_seguros",
+  "funcionarios": 95000,
+  "porte_confirmado": true,
+  "data_fonte": "2025-01",
+  "metricas": [
+   {
+    "indicador": "Prazo de conferência das faturas",
+    "antes": "cerca de 5 dias",
+    "depois": "24 horas",
+    "variacao": null
+   },
+   {
+    "indicador": "Economia estimada",
+    "antes": null,
+    "depois": "R$ 100 mil por ano",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Liste o processo de conferência que hoje é feito linha a linha por uma pessoa (faturas, notas, extratos) e meça quantas horas ou dias ele consome por ciclo.",
+   "Escreva as regras que definem uma discrepância (valor, fornecedor, prazo) e entregue ao software de automação ou à IA só a primeira triagem.",
+   "Mantenha a pessoa responsável revisando apenas as exceções apontadas, em vez do lote inteiro.",
+   "Compare prazo e horas antes e depois por dois ciclos mensais antes de ampliar para outros documentos."
+  ],
+  "trecho_comprovante": "demorava cerca de cinco dias para ser concluído. Com a ferramenta, o tempo necessário foi reduzido para apenas 24 horas.",
+  "verificado": true,
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "H-003",
+  "porte": "grande",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "demanda_comercial",
+   "capacidade"
+  ],
+  "area": "atendimento",
+  "setor": "varejo de moda e serviços financeiros",
+  "tipo": "nominal",
+  "empresa": "Riachuelo e Midway",
+  "pais": "Brasil",
+  "titulo": "Riachuelo e Midway levam o atendimento para canais digitais e a retenção sai de 30% para 84%",
+  "problema": "Mais de 20% da base ligava todo mês para o call center, a retenção digital era baixa e cada canal tinha um fornecedor diferente, com custo alto e atrito para clientes e atendentes.",
+  "solucao": "Unificaram produto, operação e planejamento, consolidaram fornecedores numa plataforma única, ampliaram o autoatendimento (WhatsApp, app) e depois aplicaram IA a poucas jornadas, com copiloto de atendimento e agentes de cobrança.",
+  "ferramentas": [
+   "Genesys",
+   "WhatsApp",
+   "IA generativa",
+   "Speech Analytics"
+  ],
+  "resultado": "Retenção em canais digitais de 30% para 84% e CSAT +60 pontos; custo do call center de R$ 122 milhões (2022) para meta de R$ 83–85 milhões em 2026, cerca de R$ 20 milhões por ano de economia; venda de empréstimo no canal físico caiu de 90% para 60%; copiloto reduz o tempo médio de atendimento em 25% a 30%.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "IT Forum",
+  "fonte_url": "https://itforum.com.br/noticias/retencao-riachuelo-midway-ia-generativa/",
+  "ano": 2026,
+  "confianca": "alta",
+  "setor_chave": "varejo_ecommerce",
+  "funcionarios": 40000,
+  "porte_confirmado": true,
+  "data_fonte": "2026-09",
+  "metricas": [
+   {
+    "indicador": "Retenção em canais digitais",
+    "antes": "30%",
+    "depois": "84%",
+    "variacao": null
+   },
+   {
+    "indicador": "Custo do call center",
+    "antes": "R$ 122 milhões (2022)",
+    "depois": "R$ 83–85 milhões (meta 2026)",
+    "variacao": "economia de cerca de R$ 20 milhões por ano"
+   },
+   {
+    "indicador": "Venda de empréstimo no canal físico",
+    "antes": "90%",
+    "depois": "60%",
+    "variacao": null
+   },
+   {
+    "indicador": "Tempo médio de atendimento com copiloto",
+    "antes": null,
+    "depois": null,
+    "variacao": "redução de 25% a 30%"
+   }
+  ],
+  "esforco_implantacao": "Plataforma única implantada entre 2024 e início de 2025, após reorganização e consolidação de fornecedores em 2023; a IA veio depois, em poucas jornadas.",
+  "como_replicar": [
+   "Meça por que os clientes ligam e escolha as 2 ou 3 dúvidas mais frequentes para resolver por autoatendimento (menu de WhatsApp ou app).",
+   "Concentre os canais de contato em uma única ferramenta e um único fornecedor para parar de pagar e gerir várias frentes.",
+   "Só depois aplique IA a jornadas específicas (cobrança, troca, segunda via), com um responsável por tema.",
+   "Acompanhe retenção digital, custo por contato e satisfação todo mês e transfira atendentes liberados para tarefas de maior valor."
+  ],
+  "trecho_comprovante": "a retenção em canais digitais saltou de 30% para 84% e o índice de satisfação do cliente (CSAT) subiu 60 pontos.",
+  "verificado": true,
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "H-006",
+  "porte": "grande",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "manual_repetitivo",
+   "capacidade"
+  ],
+  "area": "rh",
+  "setor": "logística ferroviária",
+  "tipo": "nominal",
+  "empresa": "MRS Logística",
+  "pais": "Brasil",
+  "titulo": "MRS Logística usa IA no recrutamento e reduz em média 60% o tempo de triagem de candidatos",
+  "problema": "Vagas técnicas recebem muitas candidaturas, e analisar e priorizar currículos exigia grande esforço manual.",
+  "solucao": "Recursos de IA do módulo de recrutamento leem e filtram currículos com critérios objetivos, e a equipe foca em entrevistas e avaliação.",
+  "ferramentas": [
+   "SAP SuccessFactors",
+   "Joule"
+  ],
+  "resultado": "Redução média de 60% no tempo de triagem e retorno garantido a 100% dos participantes dos processos seletivos.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Sala de Imprensa SAP Brasil",
+  "fonte_url": "https://news.sap.com/brazil/2026/07/mrs-adota-ia-nos-processos-de-selecao-e-reduz-tempo-de-triagem-em-60/",
+  "ano": 2026,
+  "confianca": "alta",
+  "setor_chave": "logistica",
+  "funcionarios": 6000,
+  "porte_confirmado": true,
+  "data_fonte": "2026-07",
+  "metricas": [
+   {
+    "indicador": "Tempo de triagem de candidatos",
+    "antes": null,
+    "depois": null,
+    "variacao": "redução média de 60%"
+   },
+   {
+    "indicador": "Candidatos com retorno garantido",
+    "antes": null,
+    "depois": "100%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Funcionalidade embutida no módulo de recrutamento já usado pela empresa.",
+  "como_replicar": [
+   "Escreva por vaga os 4 ou 5 critérios objetivos que definem um currículo aderente (experiência, certificação, localidade).",
+   "Use a triagem assistida por IA do seu sistema de recrutamento (ex.: ferramentas de ATS) ou uma planilha com IA para ordenar candidatos por aderência.",
+   "Reserve o tempo do RH para entrevistas e avaliação de qualidade, e confira por amostragem os currículos descartados.",
+   "Responda a todos os candidatos com mensagem padrão para manter a marca empregadora."
+  ],
+  "trecho_comprovante": "Tivemos uma redução média de 60% no tempo de triagem, o que libera o time para focar em etapas mais estratégicas",
+  "verificado": true,
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
   "id": "S-002",
   "porte": "grande",
   "gargalo": "processo",
@@ -4650,6 +5493,120 @@
   "confianca": "alta",
   "verificacao_bruta": "trecho_ok",
   "relevancia_pme": 2
+ },
+ {
+  "id": "H-007",
+  "porte": "grande",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "capacidade",
+   "demanda_comercial"
+  ],
+  "area": "marketing",
+  "setor": "varejo farmacêutico (retail media)",
+  "tipo": "nominal",
+  "empresa": "Raia Drogasil (Impulso, retail media)",
+  "pais": "Brasil",
+  "titulo": "Impulso, do grupo Raia Drogasil, reduz o prazo de criação de campanhas de três dias para cinco minutos com IA generativa",
+  "problema": "Produzir as peças de cada campanha levava cerca de três dias, o que limitava a escala e os testes A/B para as marcas anunciantes.",
+  "solucao": "IA generativa cria as peças mantendo o tom de voz de Raia e Drogasil; uma pessoa revisa todas as peças e as correções realimentam a ferramenta. Começou por e-commerce e segue para e-mail, push, SMS e vídeo.",
+  "ferramentas": [
+   "IA generativa"
+  ],
+  "resultado": "Prazo de entrega das campanhas de três dias para cinco minutos (o título da matéria diz 3 minutos), o que ampliou a capacidade de testes A/B.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Mercado & Consumo",
+  "fonte_url": "https://mercadoeconsumo.com.br/30/10/2025/retail-media/raia-e-drogasil-reduzem-prazo-de-entrega-de-campanhas-para-3-minutos-com-ia-generativa/",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "varejo_ecommerce",
+  "funcionarios": 65000,
+  "porte_confirmado": true,
+  "data_fonte": "2025-10",
+  "metricas": [
+   {
+    "indicador": "Prazo de entrega de campanha",
+    "antes": "3 dias",
+    "depois": "5 minutos",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Implantação em fases: e-commerce primeiro, depois e-mail, push e SMS, e vídeo a partir do fim de 2025.",
+  "como_replicar": [
+   "Documente o tom de voz, as regras de marca e 5 a 10 exemplos de peças aprovadas.",
+   "Use uma ferramenta de IA generativa para gerar variações de texto e imagem a partir desse guia, começando por um canal (ex.: e-mail).",
+   "Mantenha uma revisão humana de cada peça e anote as correções para melhorar as instruções.",
+   "Use o tempo ganho para rodar mais testes A/B e meça conversão por variação."
+  ],
+  "trecho_comprovante": "reduziu o prazo de entrega das campanhas de três dias para cinco minutos",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "H-008",
+  "porte": "grande",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "manual_repetitivo",
+   "controle"
+  ],
+  "area": "financeiro",
+  "setor": "antifraude e meios de pagamento",
+  "tipo": "nominal",
+  "empresa": "ClearSale",
+  "pais": "Brasil",
+  "titulo": "ClearSale moderniza o faturamento e otimiza 52% no tempo de execução e 60% nos chamados por falhas cadastrais",
+  "problema": "Modelos de cálculo e customizações acumulados em cerca de 20 anos, com cadastro manual de contratos que gerava risco e baixa qualidade de dados.",
+  "solucao": "Migração para SAP S/4HANA e projeto CLARA, com integração por APIs padrão e fluxo automatizado de cadastro de contratos com validação de governança, com análises no SAP Analytics Cloud.",
+  "ferramentas": [
+   "SAP S/4HANA",
+   "SAP BRIM",
+   "SAP Analytics Cloud"
+  ],
+  "resultado": "52% de otimização no tempo de execução do faturamento, 60% menos chamados por falhas cadastrais, 70% da capacidade do time de contratos liberada e 44% de otimização no tempo de apuração de chargeback, segundo a SAP.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Sala de Imprensa SAP Brasil",
+  "fonte_url": "https://news.sap.com/brazil/2025/09/clearsale-otimiza-52-no-tempo-de-execucao-do-faturamento-com-sap-s-4hana/",
+  "ano": 2025,
+  "confianca": "alta",
+  "setor_chave": "tecnologia",
+  "funcionarios": 3000,
+  "porte_confirmado": true,
+  "data_fonte": "2025-09",
+  "metricas": [
+   {
+    "indicador": "Tempo de execução do faturamento",
+    "antes": null,
+    "depois": null,
+    "variacao": "otimização de 52%"
+   },
+   {
+    "indicador": "Chamados por falhas cadastrais",
+    "antes": null,
+    "depois": null,
+    "variacao": "redução de 60%"
+   },
+   {
+    "indicador": "Capacidade do time de contratos",
+    "antes": null,
+    "depois": null,
+    "variacao": "70% liberada"
+   }
+  ],
+  "esforco_implantacao": "S/4HANA a partir de 2022; projeto CLARA iniciado em fevereiro de 2024, primeira entrada em operação em outubro de 2024 e segunda onda em março de 2025.",
+  "como_replicar": [
+   "Mapeie onde o cadastro de contrato ou cliente é digitado à mão e quais erros de cadastro geram retrabalho e chamados no faturamento.",
+   "Troque a digitação por um fluxo com campos obrigatórios e validação antes de o contrato entrar no sistema.",
+   "Automatize o faturamento recorrente por regra, deixando a equipe só com exceções.",
+   "Meça tempo de faturamento e número de chamados por erro de cadastro antes e depois."
+  ],
+  "trecho_comprovante": "ClearSale otimiza 52% no tempo de execução do faturamento com SAP S/4HANA",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-015",
@@ -5500,6 +6457,63 @@
   "gargalo_original": "processo"
  },
  {
+  "id": "L-003",
+  "porte": "pequena",
+  "gargalo": "comunicacao",
+  "gargalos_secundarios": [
+   "capacidade"
+  ],
+  "area": "atendimento",
+  "setor": "educação e tecnologia",
+  "tipo": "nominal",
+  "empresa": "Learn It Live",
+  "pais": "Estados Unidos",
+  "titulo": "Chatbot de IA com base de conhecimento responde dúvidas repetidas e reduz chamados de suporte em 40%",
+  "problema": "Uma onda de novos usuários gerou muitos chamados de suporte, e a equipe pequena tinha dificuldade de responder rápido e com qualidade.",
+  "solucao": "A empresa criou, em menos de uma hora, um chatbot de IA no site que usa uma tabela como base de conhecimento para responder perguntas simples e repetitivas.",
+  "ferramentas": [
+   "Zapier Chatbots",
+   "Zapier Tables"
+  ],
+  "resultado": "A equipe de suporte passou a receber 40% menos chamados; a fonte informa implantação do chatbot em menos de uma hora.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "dias",
+  "fonte_nome": "Zapier (história de cliente)",
+  "fonte_url": "https://zapier.com/customer-stories/learn-it-live",
+  "ano": 2024,
+  "confianca": "media",
+  "setor_chave": "educacao",
+  "funcionarios": null,
+  "porte_confirmado": true,
+  "data_fonte": "2024",
+  "metricas": [
+   {
+    "indicador": "Chamados de suporte",
+    "antes": null,
+    "depois": null,
+    "variacao": "-40%"
+   },
+   {
+    "indicador": "Tempo de implantação do chatbot",
+    "antes": null,
+    "depois": "menos de 1 hora",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Chatbot montado em menos de uma hora por uma pessoa da área de parcerias e inovação.",
+  "como_replicar": [
+   "Listar as 20 perguntas que mais geram chamados e escrever as respostas em uma tabela ou documento.",
+   "Conectar essa base a um chatbot de IA e publicá-lo no site ou no canal de atendimento.",
+   "Definir regra clara de encaminhamento para uma pessoa quando o bot não souber responder.",
+   "Revisar mensalmente as perguntas sem resposta e ampliar a base."
+  ],
+  "trecho_comprovante": "The Support team now receives 40% fewer tickets",
+  "verificado": true,
+  "forca": "media",
+  "observacao": "Faixa de porte 1-50 informada pela página da Zapier. A página não traz data de publicação no HTML; a captura mais antiga no Internet Archive é de 2024-05, então a data 2024 é um limite superior, não uma data comprovada. O caso é de suporte ao cliente, não de dúvidas internas.",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
   "id": "P-011",
   "porte": "pequena",
   "gargalo": "comunicacao",
@@ -5548,6 +6562,47 @@
   "forca": "media",
   "verificacao_bruta": "trecho_ok",
   "relevancia_pme": 3
+ },
+ {
+  "id": "P-017",
+  "porte": "pequena",
+  "gargalo": "comunicacao",
+  "gargalos_secundarios": [],
+  "area": "administrativo",
+  "setor": "agricultura (hortifruti com loja própria)",
+  "tipo": "nominal",
+  "empresa": "Sítio Geranium (Taguatinga, DF)",
+  "pais": "Brasil",
+  "titulo": "Sítio agiliza a comunicação com fornecedores usando 'Ajude-me a escrever' no Gmail",
+  "problema": "A comunicação com fornecedores era lenta.",
+  "solucao": "Usa o recurso de escrita assistida do Gemini no Gmail para redigir mensagens a fornecedores.",
+  "ferramentas": [
+   "Gmail",
+   "Gemini"
+  ],
+  "resultado": "Comunicação com fornecedores mais rápida (relato qualitativo; sem métrica na fonte).",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "dias",
+  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "agro",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2025-10",
+  "metricas": [],
+  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+  "como_replicar": [
+   "Ativar o 'Ajude-me a escrever' no Gmail.",
+   "Descrever em uma frase o pedido ao fornecedor.",
+   "Revisar tom e valores antes de enviar.",
+   "Guardar modelos de pedido recorrentes."
+  ],
+  "trecho_comprovante": "Utiliza o 'Ajude-me a Escrever' no Gmail para agilizar a comunicação com os fornecedores",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "nao_checado"
  },
  {
   "id": "T-020",
@@ -6069,6 +7124,737 @@
   "relevancia_pme": 2
  },
  {
+  "id": "K-009",
+  "porte": "pequena",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "processo"
+  ],
+  "area": "rh",
+  "setor": "serviços automotivos (reparo e funilaria)",
+  "tipo": "nominal",
+  "empresa": "Matt's Automotive",
+  "pais": "Estados Unidos",
+  "titulo": "Oficina com 10 unidades troca SOP de 17 páginas por módulos e vídeos curtos feitos pelo instrutor e reduz o onboarding de 3-4 para 1-2 semanas",
+  "problema": "O instrutor mais experiente, que treinou mais de 100 pessoas, escrevia SOPs enormes que ninguém lia, e o treinamento variava conforme quem ensinava.",
+  "solucao": "Ele passou a gravar vídeos curtos mostrando o trabalho em contexto e a montar módulos de 5 a 10 minutos em uma plataforma de treinamento, e a cada pergunta repetida cria um novo módulo.",
+  "ferramentas": [
+   "Trainual",
+   "Loom"
+  ],
+  "resultado": "Onboarding caiu de 3 a 4 semanas para 1 a 2 semanas e o tempo de criar um módulo caiu de um dia para 5 a 10 minutos.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Trainual (história de cliente)",
+  "fonte_url": "https://trainual.com/manual/matts-automotive",
+  "ano": 2026,
+  "confianca": "alta",
+  "setor_chave": "servicos_b2b",
+  "funcionarios": 30,
+  "porte_confirmado": true,
+  "data_fonte": "2026-07",
+  "metricas": [
+   {
+    "indicador": "Tempo até o novo funcionário ficar pronto",
+    "antes": "3 a 4 semanas",
+    "depois": "1 a 2 semanas",
+    "variacao": null
+   },
+   {
+    "indicador": "Tempo para criar um módulo de treinamento",
+    "antes": "um dia",
+    "depois": "5 a 10 minutos",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Contratada em 2021 e subutilizada por dois anos; a virada veio quando o próprio instrutor assumiu e fez o curso da ferramenta (a fonte pede que se complete antes de julgar).",
+  "como_replicar": [
+   "Peça ao seu melhor instrutor que grave, no celular ou Loom, o passo a passo das 5 tarefas mais repetidas, sem roteiro.",
+   "Publique cada vídeo como módulo curto (3 a 5 minutos) numa plataforma de treinamento ou pasta pesquisável.",
+   "Sempre que uma dúvida se repetir, crie um módulo e mande o link em vez de explicar de novo.",
+   "Meça quantas semanas o novato leva para atender sozinho."
+  ],
+  "trecho_comprovante": "Onboarding cut from 3-4 weeks to 1-2 weeks",
+  "verificado": true,
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "K-010",
+  "porte": "pequena",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "decisao"
+  ],
+  "area": "comercial",
+  "setor": "tecnologia (créditos de carbono)",
+  "tipo": "nominal",
+  "empresa": "Patch",
+  "pais": "Estados Unidos",
+  "titulo": "Startup coloca o saber de seus especialistas em clima em agentes para o time comercial, que passa a usar o banco de dados proprietário em 70% das ligações",
+  "problema": "O conhecimento climático dos especialistas era escasso e o time de vendas não sabia avaliar compromissos de sustentabilidade de clientes nem acessar os dados escondidos em telas administrativas.",
+  "solucao": "Foram criados agentes que atuam como estrategista de clima para analisar relatórios de sustentabilidade de prospects, consultar o banco de preços e compras e recomendar projetos entre mais de 25 mil opções.",
+  "ferramentas": [
+   "Dust"
+  ],
+  "resultado": "O uso do banco de dados proprietário passou de cerca de 10% para cerca de 70% das conversas de vendas, e a adoção semanal chegou a 70% do time em 3 meses.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Dust (história de cliente)",
+  "fonte_url": "https://dust.tt/customers/how-patch-empowered-70-of-its-team-to-use-ai-agents-weekly",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "tecnologia",
+  "funcionarios": null,
+  "porte_confirmado": true,
+  "data_fonte": "2025-10",
+  "metricas": [
+   {
+    "indicador": "Conversas de vendas que usam o banco de dados proprietário",
+    "antes": "cerca de 10%",
+    "depois": "cerca de 70%",
+    "variacao": null
+   },
+   {
+    "indicador": "Uso semanal de agentes no time",
+    "antes": null,
+    "depois": "70% em 3 meses",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "O responsável recriou seu caso de uso anterior em cerca de 20 minutos; a fonte não informa custo.",
+  "como_replicar": [
+   "Peça ao especialista que escreva como ele avalia uma proposta ou um prospect (critérios, sinais de alerta, exemplos bons e ruins).",
+   "Transforme isso em instruções de um agente de IA que analisa os documentos públicos do prospect como o especialista faria.",
+   "Conecte o agente aos dados internos que hoje só o time técnico consulta, em linguagem natural.",
+   "Peça ao especialista que revise os primeiros resultados e acompanhe em quantas conversas o dado é usado."
+  ],
+  "trecho_comprovante": "to now using it in around 70% of calls",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "K-001",
+  "porte": "media",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "processo"
+  ],
+  "area": "operacoes",
+  "setor": "serviços de TI / integração de ERP",
+  "tipo": "nominal",
+  "empresa": "SYXPERIANE",
+  "pais": "França",
+  "titulo": "Consultoria de ERP coloca o saber dos seniores em agentes e reduz de 4 h para 30 min o preparo de material de treinamento do cliente",
+  "problema": "O conhecimento sobre os ERPs vivia na cabeça de consultores seniores que estavam sempre alocados em clientes, e os juniores esperavam respostas e retrabalhavam documentos.",
+  "solucao": "A empresa criou agentes especialistas por produto ERP, alimentados com a documentação espalhada em SharePoint e OneDrive, para orientação funcional, redação de especificações e checagem de qualidade, implantados em três fases por unidade de negócio, com gestores como multiplicadores.",
+  "ferramentas": [
+   "Dust",
+   "SharePoint",
+   "OneDrive"
+  ],
+  "resultado": "Preparo de documento de treinamento contextualizado para o cliente caiu de 4 horas para 30 minutos (redução de 87%) e mais de 80% dos cerca de 200 funcionários adotaram a ferramenta em 3 meses.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Dust (história de cliente)",
+  "fonte_url": "https://dust.tt/customers/syxperiane-achieved-ai-adoption",
+  "ano": 2026,
+  "confianca": "alta",
+  "setor_chave": "tecnologia",
+  "funcionarios": 200,
+  "porte_confirmado": true,
+  "data_fonte": "2026-05",
+  "metricas": [
+   {
+    "indicador": "Tempo de preparo de documento de treinamento para o cliente",
+    "antes": "4 horas",
+    "depois": "30 minutos",
+    "variacao": "-87%"
+   },
+   {
+    "indicador": "Adoção da ferramenta na empresa",
+    "antes": null,
+    "depois": "mais de 80% em 3 meses",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Implantação em 3 meses e 3 fases (maior unidade de negócio no mês 1, segunda unidade no mês 2, empresa toda no mês 3); uma tentativa anterior com Microsoft Copilot não avançou.",
+  "como_replicar": [
+   "Liste as 5 a 10 perguntas que os juniores mais fazem aos seniores e os documentos que eles consultam para responder.",
+   "Conecte essas pastas (ex.: SharePoint ou Google Drive) a um assistente de IA e crie um agente por produto ou serviço, com instruções do especialista sobre como responder.",
+   "Comece por uma unidade ou time, peça a um gestor para ser o multiplicador e corrija o agente com as respostas erradas da primeira semana.",
+   "Meça o tempo de uma tarefa recorrente (ex.: preparar material de treinamento) antes e depois para provar o ganho."
+  ],
+  "trecho_comprovante": "Previously a 4-hour task. With Dust: 30 minutes.",
+  "verificado": true,
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "K-003",
+  "porte": "media",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "informacao"
+  ],
+  "area": "ti",
+  "setor": "fintech",
+  "tipo": "nominal",
+  "empresa": "Wayflyer",
+  "pais": "Irlanda",
+  "titulo": "Fintech irlandesa faz agente rascunhar runbooks de suporte a partir de cada chamado resolvido e corta mais de 90% do tempo de manutenção",
+  "problema": "O contexto de suporte estava espalhado em Notion, Slack, Jira e na memória de cada engenheiro, que gastava tempo investigando cada chamado do zero.",
+  "solucao": "Dois agentes: um faz a triagem do chamado novo consultando histórico, runbooks e conversas; outro, quando o chamado fecha, verifica se a solução revela lacuna e rascunha automaticamente a atualização do runbook.",
+  "ferramentas": [
+   "Dust",
+   "Jira",
+   "Notion",
+   "Slack"
+  ],
+  "resultado": "O agente de documentação reduziu em mais de 90% o tempo de criação e manutenção de runbooks, e a triagem passou a levar cerca de um minuto.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Dust (história de cliente)",
+  "fonte_url": "https://dust.tt/customers/how-wayflyer-built-a-self-tuning-support-flywheel-with-dust",
+  "ano": 2026,
+  "confianca": "alta",
+  "setor_chave": "financeiro_seguros",
+  "funcionarios": null,
+  "porte_confirmado": true,
+  "data_fonte": "2026-08",
+  "metricas": [
+   {
+    "indicador": "Tempo de criação e manutenção de runbooks",
+    "antes": null,
+    "depois": null,
+    "variacao": "mais de -90%"
+   },
+   {
+    "indicador": "Tempo de triagem de um chamado novo",
+    "antes": null,
+    "depois": "cerca de 1 minuto",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A fonte não informa prazo nem custo; descreve a construção por engenheiros de suporte, sem fila central de TI.",
+  "como_replicar": [
+   "Escolha o tipo de chamado que mais consome o time e junte os runbooks, tickets antigos e conversas relacionadas.",
+   "Crie um agente que, a cada chamado novo, resuma o histórico e sugira os passos de triagem com as fontes citadas.",
+   "Crie um segundo agente que, ao fechar o chamado, compare a solução com o runbook e proponha o rascunho de atualização.",
+   "Deixe um engenheiro revisar e aprovar cada rascunho antes de publicar."
+  ],
+  "trecho_comprovante": "cutting runbook creation and maintenance time by over 90%",
+  "verificado": true,
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "K-005",
+  "porte": "media",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "informacao"
+  ],
+  "area": "juridico",
+  "setor": "seguros",
+  "tipo": "nominal",
+  "empresa": "Wakam",
+  "pais": "França",
+  "titulo": "Seguradora com 250 funcionários usa agentes para analisar contratos e a equipe jurídica processa o dobro no mesmo tempo",
+  "problema": "O time jurídico passava horas extraindo cláusulas de contratos, o conhecimento estava espalhado entre sistemas e as checagens de conformidade atrasavam aprovações, em inglês e francês.",
+  "solucao": "Três agentes: um analisa, redige, traduz e checa conformidade de contratos; outro extrai prazos, termos financeiros e cláusulas de responsabilidade; um terceiro monitora mudanças regulatórias.",
+  "ferramentas": [
+   "Dust"
+  ],
+  "resultado": "A análise de contratos caiu pela metade, a busca de documentos ficou 40% a 60% mais rápida e a equipe jurídica processa o dobro de contratos no mesmo tempo.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Dust (história de cliente)",
+  "fonte_url": "https://dust.tt/customers/how-wakam-cut-legal-contract-analysis-time-by-50-with-dust",
+  "ano": 2025,
+  "confianca": "alta",
+  "setor_chave": "financeiro_seguros",
+  "funcionarios": 250,
+  "porte_confirmado": true,
+  "data_fonte": "2025-07",
+  "metricas": [
+   {
+    "indicador": "Tempo de análise de contratos",
+    "antes": null,
+    "depois": null,
+    "variacao": "-50%"
+   },
+   {
+    "indicador": "Tempo de busca de documentos",
+    "antes": null,
+    "depois": null,
+    "variacao": "-40% a -60%"
+   },
+   {
+    "indicador": "Contratos processados no mesmo tempo",
+    "antes": "1x",
+    "depois": "2x",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A empresa tentou construir uma solução própria de dezembro de 2023 a junho de 2024, achou o ritmo lento e migrou para uma plataforma pronta.",
+  "como_replicar": [
+   "Reúna 10 a 20 contratos já revisados e a lista de cláusulas que o jurídico sempre confere.",
+   "Crie um agente que extrai prazos, valores e cláusulas de risco e compara com o contrato-padrão, mostrando a página de origem.",
+   "Peça ao advogado para revisar as primeiras respostas e ajustar as instruções do agente.",
+   "Meça o tempo médio por contrato antes e depois."
+  ],
+  "trecho_comprovante": "twice as many contracts in the same amount of time",
+  "verificado": true,
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "K-008",
+  "porte": "media",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "processo"
+  ],
+  "area": "rh",
+  "setor": "seguros (corretora)",
+  "tipo": "nominal",
+  "empresa": "Trailstone Insurance Group",
+  "pais": "Estados Unidos",
+  "titulo": "Corretora de seguros em que o dono respondia tudo grava vídeos curtos de processos e reduz o onboarding de novos agentes de 3 a 5 dias para 1,5 dia",
+  "problema": "O conhecimento da operação ficava no Google Drive e no Dropbox e os agentes remotos procuravam documentos desatualizados ou chamavam o dono fora do horário.",
+  "solucao": "O dono gravou vídeos de 2 a 3 minutos dos processos mais perguntados, incorporou-os em SOPs pesquisáveis na plataforma de treinamento e transformou isso na trilha de onboarding de novos agentes.",
+  "ferramentas": [
+   "Trainual",
+   "Loom",
+   "RingCentral"
+  ],
+  "resultado": "O onboarding passou de 3 a 5 dias para no máximo um dia e meio (redução de 60%, segundo a fonte), enquanto a equipe cresceu de cerca de 10 para 68 funcionários.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Trainual (história de cliente)",
+  "fonte_url": "https://trainual.com/manual/providing-searchable-sops-and-self-sufficient-onboarding",
+  "ano": 2026,
+  "confianca": "alta",
+  "setor_chave": "financeiro_seguros",
+  "funcionarios": 68,
+  "porte_confirmado": true,
+  "data_fonte": "2026-02",
+  "metricas": [
+   {
+    "indicador": "Tempo de onboarding de novos agentes",
+    "antes": "3 a 5 dias",
+    "depois": "1,5 dia no máximo",
+    "variacao": "-60%"
+   },
+   {
+    "indicador": "Funcionários",
+    "antes": "cerca de 10 (2021)",
+    "depois": "68 (2026)",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Migração do Drive e Dropbox descrita pela fonte como simples (copiar, colar, polir, publicar); a ferramenta é de SOP e treinamento, não de IA generativa.",
+  "como_replicar": [
+   "Liste as 10 perguntas que seus novos funcionários mais fazem e grave um vídeo de 2 a 3 minutos mostrando cada processo na tela.",
+   "Publique os vídeos e os passos escritos em uma base pesquisável (ex.: ferramenta de SOP, wiki ou Notion).",
+   "Monte uma trilha de onboarding com esses itens para os primeiros 30 a 90 dias.",
+   "Revise periodicamente o que está desatualizado e meça o tempo até o novato trabalhar sozinho."
+  ],
+  "trecho_comprovante": "Before, it took 3 to 5 days. With Trainual, it takes one and a half days at the most!",
+  "verificado": true,
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "K-011",
+  "porte": "media",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "processo"
+  ],
+  "area": "rh",
+  "setor": "serviços residenciais (hidráulica, ar-condicionado e elétrica)",
+  "tipo": "nominal",
+  "empresa": "High 5 Plumbing, HVAC & Electric",
+  "pais": "Estados Unidos",
+  "titulo": "Empresa de serviços com mais de 70 funcionários troca manuais impressos por treinamento digital e reduz o onboarding de 7 horas para 90 minutos",
+  "problema": "Cada novo funcionário levava em média 7 horas de onboarding, com gerentes ensinando todos os sistemas e procedimentos, em manuais impressos desatualizados.",
+  "solucao": "Os manuais foram migrados para uma plataforma pesquisável de treinamento, com materiais e quizzes que o novato faz no próprio ritmo e que dão retorno imediato aos gestores.",
+  "ferramentas": [
+   "Trainual"
+  ],
+  "resultado": "O onboarding caiu de 7 horas para 90 minutos (a fonte fala em redução de 80%).",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Trainual (história de cliente)",
+  "fonte_url": "https://trainual.com/manual/high-five",
+  "ano": 2025,
+  "confianca": "alta",
+  "setor_chave": "servicos_b2b",
+  "funcionarios": 70,
+  "porte_confirmado": true,
+  "data_fonte": "2025-04",
+  "metricas": [
+   {
+    "indicador": "Tempo de onboarding por funcionário",
+    "antes": "7 horas",
+    "depois": "90 minutos",
+    "variacao": "-80% (segundo a fonte)"
+   }
+  ],
+  "esforco_implantacao": "A fonte não informa prazo nem custo de implantação.",
+  "como_replicar": [
+   "Pegue o manual que os gerentes repetem para cada contratado e divida em módulos curtos por tarefa.",
+   "Publique numa base pesquisável e acrescente um quiz de 3 a 5 perguntas por módulo.",
+   "Faça o novato completar o treinamento sozinho e use o resultado do quiz para o gerente corrigir só as lacunas.",
+   "Meça as horas de gerente por contratação antes e depois."
+  ],
+  "trecho_comprovante": "dropping from 7 hours to just 90 minutes",
+  "verificado": true,
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "K-002",
+  "porte": "media",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "comunicacao"
+  ],
+  "area": "comercial",
+  "setor": "software B2B (go-to-market)",
+  "tipo": "nominal",
+  "empresa": "Clay",
+  "pais": "Estados Unidos",
+  "titulo": "Clay usa agente sobre sua base de playbooks para novos contratados tirarem dúvidas sem depender de um 'buddy' de onboarding",
+  "problema": "Com 10 novos contratados por mês e lançamentos de integrações toda semana, o time não conseguia que cada novato tivesse alguém disponível para desbloquear dúvidas.",
+  "solucao": "A responsável de operações conectou um agente de IA ao centro de vendas e aos 100+ materiais (playbooks, decks) e o colocou como canal único de perguntas dos novos engenheiros de go-to-market.",
+  "ferramentas": [
+   "Dust"
+  ],
+  "resultado": "O time de go-to-market de 20 pessoas economiza cerca de 58 horas por mês com o agente de onboarding e enablement, com 100% de adoção no time.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "dias",
+  "fonte_nome": "Dust (história de cliente)",
+  "fonte_url": "https://dust.tt/customers/clay-scaling-gtme-team",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "tecnologia",
+  "funcionarios": null,
+  "porte_confirmado": true,
+  "data_fonte": "2025-06",
+  "metricas": [
+   {
+    "indicador": "Horas economizadas por mês pelo time de GTM (20 pessoas)",
+    "antes": null,
+    "depois": "cerca de 58 horas",
+    "variacao": null
+   },
+   {
+    "indicador": "Adoção no time GTME",
+    "antes": null,
+    "depois": "100%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Agente funcionando em 24 horas após a decisão, conforme a fonte; uma pessoa de operações como construtora.",
+  "como_replicar": [
+   "Reúna playbooks, apresentações e FAQs do time num único lugar (pasta ou wiki) e identifique a fonte principal.",
+   "Conecte essa fonte a um assistente de IA e publique-o no canal onde os novatos já perguntam (ex.: Slack ou Teams).",
+   "Peça ao novato que pergunte ao agente antes de chamar um colega e registre as perguntas mais comuns.",
+   "Use o resumo mensal das perguntas para decidir que treinamento ou documento criar a seguir."
+  ],
+  "trecho_comprovante": "58 hours each month",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "K-004",
+  "porte": "media",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "informacao"
+  ],
+  "area": "atendimento",
+  "setor": "software B2B",
+  "tipo": "nominal",
+  "empresa": "Profound",
+  "pais": "Estados Unidos",
+  "titulo": "Profound centraliza em agentes o conhecimento de 400+ clientes do time de pós-venda e encurta a rampa de novos contratados",
+  "problema": "Os gerentes de engajamento caçavam dados em vários sistemas, respondiam as mesmas perguntas e os novatos passavam semanas absorvendo conhecimento tribal.",
+  "solucao": "Dois agentes: um responde dúvidas sobre cada cliente (histórico, uso, conversas) consultando Salesforce, tickets e notas de reunião; outro gera os relatórios trimestrais e decks.",
+  "ferramentas": [
+   "Dust",
+   "Salesforce",
+   "Pylon"
+  ],
+  "resultado": "Segundo a empresa, o que antes levava meses para o novato ficar produtivo passou a levar dias; ela estima ainda 1.800 horas por mês recuperadas no time de 20 pessoas (cálculo da própria fonte: 20 pessoas x 3 h x 30 dias).",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Dust (história de cliente)",
+  "fonte_url": "https://dust.tt/customers/profound-post-sales-team-reclaimed-1800-hours",
+  "ano": 2026,
+  "confianca": "media",
+  "setor_chave": "tecnologia",
+  "funcionarios": null,
+  "porte_confirmado": true,
+  "data_fonte": "2026-04",
+  "metricas": [
+   {
+    "indicador": "Tempo de rampa de novos contratados",
+    "antes": "meses",
+    "depois": "dias",
+    "variacao": null
+   },
+   {
+    "indicador": "Horas recuperadas por mês no time de pós-venda (20 pessoas)",
+    "antes": null,
+    "depois": "1.800+ (estimativa da empresa)",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A fonte informa que o uso se espalhou em semanas; não detalha custo nem prazo de construção.",
+  "como_replicar": [
+   "Junte em um só lugar os dados por cliente (CRM, tickets, notas de reunião) que hoje só a equipe sênior sabe cruzar.",
+   "Crie um agente de perguntas e respostas sobre clientes e deixe novos contratados usarem desde o primeiro dia.",
+   "Automatize os relatórios recorrentes (ex.: revisão trimestral) com um segundo agente que monta o rascunho.",
+   "Registre quanto tempo o novato leva para atender sozinho antes e depois."
+  ],
+  "trecho_comprovante": "What used to take months now takes days.",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "K-006",
+  "porte": "media",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "capacidade"
+  ],
+  "area": "comercial",
+  "setor": "agência de comunicação e design",
+  "tipo": "nominal",
+  "empresa": "Insign",
+  "pais": "França",
+  "titulo": "Agência alimenta agentes com 20 anos de trabalhos e a análise de editais fica 30% mais rápida",
+  "problema": "A agência precisava escalar o atendimento sem perder a qualidade e analisar editais de 500 páginas levava dias, com risco de perder requisitos.",
+  "solucao": "Alimentou a plataforma com cerca de 20 anos de histórico da agência e criou 42 agentes, entre eles um especialista em editais que cruza legislação, exigências e a resposta da agência, e um planejador que ensinou o vocabulário interno.",
+  "ferramentas": [
+   "Dust"
+  ],
+  "resultado": "Análise de editais 30% mais rápida e 50% de economia de tempo na criação de cronogramas de projeto, com 92% das equipes usando IA diariamente.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Dust (história de cliente)",
+  "fonte_url": "https://dust.tt/customers/how-42-ai-agents-transformed-insigns-end-to-end-consulting-workflow",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "servicos_b2b",
+  "funcionarios": null,
+  "porte_confirmado": true,
+  "data_fonte": "2025-10",
+  "metricas": [
+   {
+    "indicador": "Tempo de análise de editais",
+    "antes": null,
+    "depois": null,
+    "variacao": "-30%"
+   },
+   {
+    "indicador": "Tempo de planejamento de projetos",
+    "antes": null,
+    "depois": null,
+    "variacao": "-50%"
+   },
+   {
+    "indicador": "Equipes que usam IA diariamente",
+    "antes": null,
+    "depois": "92%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Menos de um ano para sair de processos manuais para 42 agentes, conforme a fonte; cerca de 30 pessoas atuaram como construtoras/embaixadoras.",
+  "como_replicar": [
+   "Selecione propostas, editais respondidos e projetos entregues dos últimos anos e organize em pastas por tipo.",
+   "Crie um agente para a tarefa mais lenta (ex.: ler o edital e listar requisitos e inconsistências) usando esse histórico como base.",
+   "Ensine o vocabulário e as siglas internas nas instruções do agente.",
+   "Escolha um grupo de pessoas para criar novos agentes e acompanhe o uso diário."
+  ],
+  "trecho_comprovante": "30% faster tender analysis",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "K-007",
+  "porte": "media",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "comunicacao"
+  ],
+  "area": "juridico",
+  "setor": "tecnologia (privacidade e compliance)",
+  "tipo": "nominal",
+  "empresa": "Didomi",
+  "pais": "França",
+  "titulo": "Diretor de privacidade que era o único a responder dúvidas legais cria agente com suas respostas de dois anos e estima ganhar 50% do tempo",
+  "problema": "O responsável por privacidade respondia sozinho às mesmas dúvidas legais no Slack, funcionando como um sistema de chamados, e um colega-chave estava saindo.",
+  "solucao": "Conectou um agente às respostas que ele deu nos últimos dois anos para responder dúvidas em seu lugar, criou agentes por jurisdição com as leis locais e um agente que revisa os textos de banners de cookies.",
+  "ferramentas": [
+   "Dust",
+   "Slack",
+   "Notion",
+   "Google Drive"
+  ],
+  "resultado": "O diretor estima que 50% do seu tempo foi economizado com a IA; os funcionários passaram a obter respostas preliminares sem esperar por ele.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Dust (história de cliente)",
+  "fonte_url": "https://dust.tt/customers/how-thomas-uses-ai-assistants-to-manage-legal-and-data-privacy-at-didomi",
+  "ano": 2024,
+  "confianca": "media",
+  "setor_chave": "tecnologia",
+  "funcionarios": 100,
+  "porte_confirmado": true,
+  "data_fonte": "2024-07",
+  "metricas": [
+   {
+    "indicador": "Tempo do diretor de privacidade (estimativa dele)",
+    "antes": null,
+    "depois": null,
+    "variacao": "-50%"
+   }
+  ],
+  "esforco_implantacao": "Começou com assinatura pessoal de teste e depois conectou ao canal do Slack; a fonte não informa prazo nem custo.",
+  "como_replicar": [
+   "Exporte as respostas que o especialista já deu (Slack, e-mail, tickets) dos últimos 1 a 2 anos.",
+   "Conecte esse histórico a um assistente de IA e publique-o no canal onde as dúvidas chegam.",
+   "Peça às pessoas que usem o agente primeiro e deixe o especialista só confirmar as respostas a cada poucos dias.",
+   "Crie agentes adicionais para as leis ou normas que ele mais consulta."
+  ],
+  "trecho_comprovante": "50% of my time was saved using AI",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "K-012",
+  "porte": "media",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "capacidade"
+  ],
+  "area": "operacoes",
+  "setor": "controle de pragas",
+  "tipo": "nominal",
+  "empresa": "Debug Pest Control",
+  "pais": "Estados Unidos",
+  "titulo": "Empresa de controle de pragas com mais de 50 funcionários substitui o aprendizado por 'sombra' por trilha de treinamento e o técnico fica pronto em 3-4 semanas, não 6-8",
+  "problema": "Os técnicos aprendiam acompanhando um colega, o que funcionava com 10 pessoas mas fazia a primeira experiência variar conforme o técnico escolhido.",
+  "solucao": "O conhecimento foi documentado em módulos de treinamento e playbook pesquisável, incluindo módulos feitos com ajuda de IA, e a trilha de onboarding foi padronizada para técnicos, vendas e atendimento.",
+  "ferramentas": [
+   "Trainual"
+  ],
+  "resultado": "O onboarding de técnicos caiu de 6 a 8 semanas para 3 a 4, e as notas de segurança dos motoristas subiram cerca de 30% em 18 meses.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Trainual (história de cliente)",
+  "fonte_url": "https://trainual.com/manual/debug-pest-control",
+  "ano": 2026,
+  "confianca": "media",
+  "setor_chave": "servicos_b2b",
+  "funcionarios": 50,
+  "porte_confirmado": false,
+  "data_fonte": "2026-08",
+  "metricas": [
+   {
+    "indicador": "Tempo de onboarding de técnicos",
+    "antes": "6 a 8 semanas",
+    "depois": "3 a 4 semanas",
+    "variacao": null
+   },
+   {
+    "indicador": "Nota de segurança dos motoristas",
+    "antes": null,
+    "depois": null,
+    "variacao": "cerca de +30% em 18 meses"
+   }
+  ],
+  "esforco_implantacao": "A fonte não informa prazo nem custo; descreve o trabalho de um diretor de pessoas ao longo de cerca de dois anos e meio.",
+  "como_replicar": [
+   "Liste o que o técnico veterano ensina na prática e grave ou escreva cada tarefa como módulo curto.",
+   "Monte uma trilha única e obrigatória para todo novo técnico, com quiz por etapa.",
+   "Use buscas sem resposta como sinal do que falta documentar e atualize o playbook.",
+   "Compare as semanas até o técnico estar apto a sair sozinho em rota."
+  ],
+  "trecho_comprovante": "Onboarding cut from 6–8 weeks to 3–4",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "K-014",
+  "porte": "media",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "capacidade"
+  ],
+  "area": "atendimento",
+  "setor": "software (RH)",
+  "tipo": "nominal",
+  "empresa": "HireVue",
+  "pais": "Estados Unidos",
+  "titulo": "HireVue treina novos agentes de suporte com agente de conhecimento no Slack e reduz o onboarding de cinco para duas semanas",
+  "problema": "O onboarding levava cerca de cinco semanas e os novatos dependiam de agentes sêniores para responder, já que nenhum agente era especialista em todos os quatro produtos.",
+  "solucao": "Os novatos recebem acesso à base de conhecimento no primeiro dia, um agente de IA treinado na documentação responde no Slack e a base fica integrada ao Zendesk; a equipe revisou mais de 900 perguntas para ajustar o conteúdo.",
+  "ferramentas": [
+   "Guru",
+   "Slack",
+   "Zendesk",
+   "Lessonly"
+  ],
+  "resultado": "Tempo de rampa reduzido em 60% (de cinco para duas semanas) e perguntas no Slack caíram 40% enquanto os casos de suporte cresceram mais de 500.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Guru (história de cliente)",
+  "fonte_url": "https://www.getguru.com/customers/hirevue-cuts-onboarding-time",
+  "ano": 2026,
+  "confianca": "media",
+  "setor_chave": "tecnologia",
+  "funcionarios": 385,
+  "porte_confirmado": false,
+  "data_fonte": "2026-04",
+  "metricas": [
+   {
+    "indicador": "Tempo de onboarding do suporte",
+    "antes": "5 semanas",
+    "depois": "2 semanas",
+    "variacao": "-60%"
+   },
+   {
+    "indicador": "Perguntas no Slack",
+    "antes": null,
+    "depois": null,
+    "variacao": "-40%"
+   }
+  ],
+  "esforco_implantacao": "A fonte informa a revisão de mais de 900 perguntas nas primeiras semanas; não informa custo. Headcount (cerca de 385) é estimativa de terceiros, não da fonte.",
+  "como_replicar": [
+   "Junte a documentação e as respostas verificadas do suporte numa única base.",
+   "Crie um agente no canal onde os novatos perguntam, restrito a essa base, e dê acesso a ele no primeiro dia.",
+   "Revise as perguntas das primeiras semanas para corrigir conteúdo e instruções do agente.",
+   "Meça semanas até o novato atender sozinho e o volume de perguntas aos sêniores."
+  ],
+  "trecho_comprovante": "Ramp Time Cut by 60%",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
   "id": "M-027",
   "porte": "media",
   "gargalo": "conhecimento",
@@ -6136,6 +7922,112 @@
   "nota_verificacao": "Fonte primária encontrada e lida (página oficial do Google Cloud, via download direto; a ferramenta de leitura devolveu só o título). Números confirmados. A página não traz data visível (o texto cita gravações desde jan/2025 e dois anos desde out/2023, logo é de fins de 2025 ou posterior): data_fonte fica null e a força, média. O 84% é de custo de infraestrutura (créditos de startup e arquiteturas autogerenciadas), não de IA. A lista do blog Google citava '75%' no tempo de análise; esse número não consta da página primária. Funcionários não achados (LeadIQ estima 51-200, terceiro): porte média plausível, não confirmado.",
   "verificacao_bruta": "trecho_ok",
   "relevancia_pme": 2
+ },
+ {
+  "id": "K-013",
+  "porte": "grande",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "juridico"
+  ],
+  "area": "juridico",
+  "setor": "segurança patrimonial",
+  "tipo": "nominal",
+  "empresa": "Prosegur",
+  "pais": "Espanha / Brasil",
+  "titulo": "Prosegur desenvolve a LexIA para analisar contratos complexos e diz multiplicar por quatro a capacidade de análise",
+  "problema": "Áreas jurídica, de compras e de TI precisavam analisar documentos contratuais complexos, comparar com contratos-padrão e avaliar impacto de mudanças regulatórias.",
+  "solucao": "Engenheiros da própria empresa criaram a LexIA, que usa processamento de linguagem natural e busca semântica para estruturar dados e interagir com usuários e sistemas na análise de contratos; o Brasil foi um dos quatro primeiros países.",
+  "ferramentas": [
+   "processamento de linguagem natural",
+   "busca semântica"
+  ],
+  "resultado": "Segundo a Prosegur, a LexIA multiplica por quatro a capacidade de análise; a fase inicial atende 98 mil colaboradores e a meta é passar de 175 mil em 36 países em 2026.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete",
+  "fonte_url": "https://www.baguete.com.br/noticias/grupo-prosegur-desenvolve-sua-propria-ia",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "servicos_b2b",
+  "funcionarios": 175000,
+  "porte_confirmado": true,
+  "data_fonte": "2025-08",
+  "metricas": [
+   {
+    "indicador": "Capacidade de análise de contratos",
+    "antes": "1x",
+    "depois": "4x",
+    "variacao": "x4 (segundo a empresa)"
+   }
+  ],
+  "esforco_implantacao": "Desenvolvimento próprio; a fonte não informa prazo nem custo. Solução própria de grande empresa, replicável em escala menor por assistentes de mercado.",
+  "como_replicar": [
+   "Reúna seus contratos-padrão e a lista de cláusulas que o jurídico sempre confere.",
+   "Use um assistente de IA para comparar cada contrato novo com o padrão e destacar desvios, citando o trecho.",
+   "Mantenha o advogado como revisor final e registre o tempo por contrato antes e depois.",
+   "Expanda depois para outras áreas (compras, TI) com os mesmos modelos."
+  ],
+  "trecho_comprovante": "multiplica por quatro a capacidade de análise",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "L-009",
+  "porte": "pequena",
+  "gargalo": "controle",
+  "gargalos_secundarios": [
+   "manual_repetitivo"
+  ],
+  "area": "comercial",
+  "setor": "saúde e tecnologia (higiene bucal)",
+  "tipo": "nominal",
+  "empresa": "Y-Brush",
+  "pais": "França",
+  "titulo": "Fabricante de escovas passa de planilhas a relatórios comerciais em tempo real e estima 30% de tempo poupado por lead",
+  "problema": "Desde 2018 a empresa não conseguia mais acompanhar leads e vendedores de campo em planilhas Excel, sem relatórios confiáveis.",
+  "solucao": "Centralizou leads no CRM com aplicativo móvel para os vendedores registrarem dados no local e passou a ter relatórios gerenciais atualizados em tempo real.",
+  "ferramentas": [
+   "Pipedrive"
+  ],
+  "resultado": "Equipe cresceu de 5 para 30 funcionários e a empresa estima 30% de tempo poupado por lead; gestores consultam relatórios em tempo real.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Pipedrive (case de cliente)",
+  "fonte_url": "https://www.pipedrive.com/en/case-studies/y-brush-case-study",
+  "ano": 2024,
+  "confianca": "media",
+  "setor_chave": "saude",
+  "funcionarios": 30,
+  "porte_confirmado": true,
+  "data_fonte": "2024-07",
+  "metricas": [
+   {
+    "indicador": "Tempo por lead",
+    "antes": null,
+    "depois": null,
+    "variacao": "30% de economia (estimada pela empresa)"
+   },
+   {
+    "indicador": "Funcionários",
+    "antes": "5",
+    "depois": "30",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A fonte não informa prazo ou custo da implantação.",
+  "como_replicar": [
+   "Migrar a planilha de leads para um sistema único com app móvel.",
+   "Definir os 3 a 5 indicadores que o gestor quer ver toda semana.",
+   "Montar o relatório uma vez e deixá-lo atualizado automaticamente.",
+   "Revisar a carteira com base nesse painel, não em relatos."
+  ],
+  "trecho_comprovante": "Estimated time saved per lead",
+  "verificado": true,
+  "forca": "media",
+  "observacao": "O número (30%) é estimativa autodeclarada; o foco da fonte é gestão de leads, e controle é gargalo secundário-principal por causa dos relatórios em tempo real.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "P-005",
@@ -6741,6 +8633,56 @@
   "forca": "forte",
   "verificacao_bruta": "trecho_ok",
   "relevancia_pme": 2
+ },
+ {
+  "id": "P-025",
+  "porte": "pequena",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [
+   "comunicacao"
+  ],
+  "area": "atendimento",
+  "setor": "varejo de móveis",
+  "tipo": "nominal",
+  "empresa": "Bordinho Moveis (MG)",
+  "pais": "Brasil",
+  "titulo": "Loja de móveis testa agente de IA do WhatsApp Business para responder clientes 24 horas por dia",
+  "problema": "Clientes que chegam pelo WhatsApp e não são respondidos rápido se perdem antes da venda.",
+  "solucao": "Testou o Business AI da Meta, agente do WhatsApp Business que responde clientes e sugere itens do catálogo, com o dono podendo assumir a conversa.",
+  "ferramentas": [
+   "WhatsApp Business AI (Meta)"
+  ],
+  "resultado": "Segundo a Meta, o agente respondeu praticamente todos os clientes já nas primeiras interações e ajudou na conversão; sem números para o Brasil (no piloto do México, empresas registraram aumento de 10% nos negócios).",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "dias",
+  "fonte_nome": "Exame - WhatsApp Business lanca IA para PMEs atenderem clientes 24 horas por dia",
+  "fonte_url": "https://exame.com/negocios/whatsapp-business-lanca-ia-para-pmes-atenderem-clientes-24-horas-por-dia/",
+  "ano": 2026,
+  "confianca": "media",
+  "setor_chave": "varejo_ecommerce",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2026-02",
+  "metricas": [
+   {
+    "indicador": "Negócios (piloto no México, não Bordinho)",
+    "antes": null,
+    "depois": null,
+    "variacao": "+10%"
+   }
+  ],
+  "esforco_implantacao": "Não informado; o porte da Bordinho Móveis também não consta na matéria.",
+  "como_replicar": [
+   "Migrar o atendimento para o WhatsApp Business com catálogo cadastrado.",
+   "Ativar o agente de IA com as regras da loja.",
+   "Definir quando o dono assume a conversa.",
+   "Medir respostas e vendas."
+  ],
+  "trecho_comprovante": "conseguiu responder praticamente todos os clientes nas primeiras interações",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "nao_checado",
+  "relevancia_pme": 3
  },
  {
   "id": "Q-011",
@@ -7530,6 +9472,261 @@
   "gargalo_original": "integracao"
  },
  {
+  "id": "N-001",
+  "gargalos_secundarios": [
+   "controle"
+  ],
+  "tipo": "nominal",
+  "pais": "Brasil",
+  "verificado": true,
+  "esforco_implantacao": null,
+  "funcionarios": 65,
+  "porte_confirmado": true,
+  "porte": "media",
+  "gargalo": "demanda_comercial",
+  "area": "comercial",
+  "setor": "indústria de cacau (B2B)",
+  "setor_chave": "industria",
+  "empresa": "Fralía Cacau Brasil",
+  "titulo": "Fralía integra marketing e CRM e passa a gerir 935% mais vendas na plataforma",
+  "problema": "Marketing e vendas não conversavam, com dados dispersos e ferramentas subutilizadas, o que travava a geração e o acompanhamento de oportunidades.",
+  "solucao": "Implantou RD Station Marketing e RD Station CRM com funis personalizados, lembretes automáticos, segmentações, réguas de relacionamento automatizadas e novo site focado em SEO, com apoio da agência OUTMarketing.",
+  "ferramentas": [
+   "RD Station Marketing",
+   "RD Station CRM"
+  ],
+  "resultado": "Segundo a fonte: leads na base +115%, conversões orgânicas +222%, leads qualificados para marketing +205%, vendas gerenciadas na plataforma +935% e mais de R$ 5,2 milhões em faturamento gerado por inbound, 148% acima do período anterior. Números divulgados pela RD Station/agência.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete (release RD Station/OUTMarketing)",
+  "fonte_url": "https://www.baguete.com.br/noticias/fralia-adota-solucoes-da-rd-station",
+  "ano": 2026,
+  "data_fonte": "2026-10",
+  "metricas": [
+   {
+    "indicador": "Volume de leads na base",
+    "antes": null,
+    "depois": null,
+    "variacao": "+115%"
+   },
+   {
+    "indicador": "Leads qualificados para marketing",
+    "antes": null,
+    "depois": null,
+    "variacao": "+205%"
+   },
+   {
+    "indicador": "Vendas gerenciadas pela plataforma",
+    "antes": null,
+    "depois": null,
+    "variacao": "+935%"
+   },
+   {
+    "indicador": "Faturamento gerado por inbound",
+    "antes": null,
+    "depois": "R$ 5,2 milhões",
+    "variacao": "+148% vs período anterior"
+   }
+  ],
+  "como_replicar": [
+   "Unifique contatos, funil comercial e formulários do site em um único CRM com etapas padronizadas.",
+   "Defina o critério de lead qualificado entre marketing e vendas e envie ao vendedor só quem o atinge.",
+   "Crie réguas automáticas de relacionamento e lembretes de follow-up por etapa do funil.",
+   "Meça mensalmente leads, conversão por etapa e receita por origem para ajustar o funil."
+  ],
+  "trecho_comprovante": "As vendas gerenciadas cresceram 935% pela plataforma.",
+  "forca": "forte",
+  "confianca": "alta",
+  "observacao_porte_data": "Porte: 65 postos de trabalho segundo Diário do Comércio (2025-09), https://diariodocomercio.com.br/negocios/fralia-expansao-producao-cacau-minas-2026/",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "N-002",
+  "gargalos_secundarios": [
+   "manual_repetitivo"
+  ],
+  "tipo": "nominal",
+  "pais": "Brasil",
+  "verificado": true,
+  "esforco_implantacao": null,
+  "funcionarios": 75,
+  "porte_confirmado": true,
+  "porte": "media",
+  "gargalo": "demanda_comercial",
+  "area": "comercial",
+  "setor": "fintech de pagamentos e incentivos",
+  "setor_chave": "financeiro_seguros",
+  "empresa": "Bluepay Solutions",
+  "titulo": "Bluepay unifica pré-vendas e vendas na HubSpot e reporta até 5 vezes mais produtividade em pré-vendas",
+  "problema": "Ferramentas desconectadas (Meetime e Digitalk), tarefas manuais, oportunidades duplicadas e conflito entre BDRs e vendedores, sem separar leads em qualificação de oportunidades reais.",
+  "solucao": "Migrou para a HubSpot, criou o objeto Lead com pipelines separados, tarefas automáticas por etapa e status e dashboards por time, com apoio da consultoria Nexforce.",
+  "ferramentas": [
+   "HubSpot Sales Hub",
+   "HubSpot Service Hub",
+   "HubSpot Marketing Hub",
+   "HubSpot Data Hub"
+  ],
+  "resultado": "A fonte reporta produtividade do time de pré-vendas até 5 vezes maior, fim dos conflitos entre BDRs e vendedores e dashboards em tempo real por time (dados do case publicado pela HubSpot).",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "HubSpot Brasil (estudo de caso)",
+  "fonte_url": "https://br.hubspot.com/case-studies/bluepay-solutions",
+  "ano": 2026,
+  "data_fonte": "2026-09",
+  "metricas": [
+   {
+    "indicador": "Produtividade do time de pré-vendas",
+    "antes": null,
+    "depois": null,
+    "variacao": "até 5x"
+   }
+  ],
+  "como_replicar": [
+   "Separe no CRM o estágio de lead em qualificação do de oportunidade real, com pipelines distintos.",
+   "Crie tarefas automáticas por etapa e status para o time de pré-vendas.",
+   "Defina regra clara de passagem de lead entre BDR e vendedor para evitar duplicidade.",
+   "Monte um dashboard por time com backlog, no-show e conversão por etapa."
+  ],
+  "trecho_comprovante": "A produtividade da equipe de Pré-Vendas aumentou em até 5 vezes",
+  "forca": "forte",
+  "confianca": "alta",
+  "observacao_porte_data": "Porte: a própria página informa 'time entre 50 e 100 colaboradores'. Data: metadado hs_published_at da página (2026-09); a página não exibe data visível.",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "N-003",
+  "gargalos_secundarios": [
+   "manual_repetitivo"
+  ],
+  "tipo": "nominal",
+  "pais": "Brasil",
+  "verificado": true,
+  "esforco_implantacao": null,
+  "funcionarios": 100,
+  "porte_confirmado": true,
+  "porte": "media",
+  "gargalo": "demanda_comercial",
+  "area": "comercial",
+  "setor": "fintech para condomínios",
+  "setor_chave": "financeiro_seguros",
+  "empresa": "CondoConta",
+  "titulo": "CondoConta migra CRM e reduz de 30 para 2 minutos o registro comercial dos vendedores",
+  "problema": "CRM engessado exigia checklist de cerca de 30 minutos por oportunidade registrada, havia perda de UTMs e pouca visibilidade de funil e de campanhas.",
+  "solucao": "Migrou do Salesforce para a HubSpot em menos de dois meses, com automações, integração do banco de dados via Data Hub e fluxos de WhatsApp para vendas, onboarding e marketing.",
+  "ferramentas": [
+   "HubSpot Sales Hub",
+   "HubSpot Marketing Hub",
+   "HubSpot Data Hub",
+   "WhatsApp"
+  ],
+  "resultado": "Segundo a fonte: tempo de registro comercial caiu de 30 para 2 minutos (+90% de redução), conversão de lead para oportunidade subiu 76% e 45% das mensagens automáticas de WhatsApp são lidas.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "HubSpot Brasil (estudo de caso)",
+  "fonte_url": "https://br.hubspot.com/case-studies/condoconta",
+  "ano": 2026,
+  "data_fonte": "2026-09",
+  "metricas": [
+   {
+    "indicador": "Tempo de registro comercial no CRM",
+    "antes": "30 min",
+    "depois": "2 min",
+    "variacao": "-93% (fonte cita +90% de redução)"
+   },
+   {
+    "indicador": "Conversão de lead para oportunidade",
+    "antes": null,
+    "depois": null,
+    "variacao": "+76%"
+   },
+   {
+    "indicador": "Leitura de mensagens automáticas no WhatsApp",
+    "antes": null,
+    "depois": "45%",
+    "variacao": null
+   }
+  ],
+  "como_replicar": [
+   "Simplifique o registro de oportunidade a um formulário curto, em vez de cadeia lead-contato-empresa-negócio.",
+   "Preserve UTMs e origem do lead na integração entre site, mídia e CRM.",
+   "Automatize o primeiro contato e a nutrição por WhatsApp para leads novos.",
+   "Revise o funil mensalmente pela taxa de lead para oportunidade."
+  ],
+  "trecho_comprovante": "reduziu de 30 para 2 minutos o tempo de registro comercial",
+  "forca": "forte",
+  "confianca": "alta",
+  "observacao_porte_data": "Porte: 100 funcionários segundo Baguete (2021-09, https://www.baguete.com.br/noticias/condoconta-levanta-mais-r-6-milhoes); número pode estar defasado. Data: metadado hs_published_at da página; o case cita migração do Salesforce em 2025/2026.",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "N-004",
+  "gargalos_secundarios": [
+   "processo"
+  ],
+  "tipo": "nominal",
+  "pais": "Brasil",
+  "verificado": true,
+  "esforco_implantacao": null,
+  "funcionarios": 450,
+  "porte_confirmado": true,
+  "porte": "media",
+  "gargalo": "demanda_comercial",
+  "area": "comercial",
+  "setor": "implementos rodoviários e unidades móveis",
+  "setor_chave": "industria",
+  "empresa": "Truckvan",
+  "titulo": "Truckvan adota CRM Ploomes e reduz de até 90 para 25 a 30 dias o tempo de fechamento",
+  "problema": "Informações sobre clientes e oportunidades dispersas em vários sistemas dificultavam acompanhar negociações e a gestão do pipeline.",
+  "solucao": "Centralizou clientes, oportunidades e propostas no CRM da Ploomes, com gerador de propostas e visibilidade gerencial do funil.",
+  "ferramentas": [
+   "Ploomes CRM"
+  ],
+  "resultado": "Segundo a empresa: ciclo de vendas caiu de até 90 dias para média de 25 a 30 dias (-67%), geração de negócios +60%, cadastro de clientes +80% e volume de propostas enviadas até +50%.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete",
+  "fonte_url": "https://www.baguete.com.br/noticias/truckvan-adota-crm-da-ploomes",
+  "ano": 2026,
+  "data_fonte": "2026-07",
+  "metricas": [
+   {
+    "indicador": "Ciclo de vendas",
+    "antes": "até 90 dias",
+    "depois": "25 a 30 dias",
+    "variacao": "-67%"
+   },
+   {
+    "indicador": "Geração de negócios",
+    "antes": null,
+    "depois": null,
+    "variacao": "+60%"
+   },
+   {
+    "indicador": "Cadastro de clientes",
+    "antes": null,
+    "depois": null,
+    "variacao": "+80%"
+   },
+   {
+    "indicador": "Propostas enviadas",
+    "antes": null,
+    "depois": null,
+    "variacao": "até +50%"
+   }
+  ],
+  "como_replicar": [
+   "Reúna clientes, oportunidades e propostas em um único CRM com funil por tipo de negócio.",
+   "Padronize modelos de proposta gerados a partir do cadastro de produtos.",
+   "Meça o ciclo de vendas por etapa para achar onde o negócio fica parado.",
+   "Dê ao gestor um painel único de pipeline e conversão."
+  ],
+  "trecho_comprovante": "uma redução de 67% no ciclo de vendas",
+  "forca": "forte",
+  "confianca": "alta",
+  "observacao_porte_data": "Porte: 450 colaboradores segundo Vamos, na compra de 2022 (Bloomberg Línea, https://www.bloomberglinea.com.br/2022/03/06/vamos-compra-truckvan-e-inclui-implementos-rodoviarios-em-portfolio/); outras fontes citam 350 a 600; pode estar defasado.",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
   "id": "G-035",
   "porte": "grande",
   "gargalo": "demanda_comercial",
@@ -7586,6 +9783,66 @@
   "forca": "forte",
   "verificacao_bruta": "trecho_ok",
   "relevancia_pme": 2
+ },
+ {
+  "id": "H-004",
+  "porte": "grande",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [
+   "conhecimento"
+  ],
+  "area": "comercial",
+  "setor": "construção e incorporação",
+  "tipo": "nominal",
+  "empresa": "MRV&Co",
+  "pais": "Brasil",
+  "titulo": "MRV dá aos corretores um assistente de IA e novatos que o usam vendem 23% mais",
+  "problema": "A fonte não descreve um problema explícito; o objetivo era dar aos corretores respostas rápidas sobre empreendimentos, crédito imobiliário e serviços da MRV.",
+  "solucao": "A MRV criou o assistente Marco, que combina vários modelos de IA, e o oferece a mais de 5 mil corretores para tirar dúvidas e apoiar a venda, junto com capacitação intensiva.",
+  "ferramentas": [
+   "Grok 4",
+   "GPT-4.1",
+   "GPT-4o",
+   "Gemini 2.5 Pro",
+   "Claude Opus 4",
+   "DeepSeek"
+  ],
+  "resultado": "Corretores iniciantes que usam o Marco registram 27% mais produtividade e vendem 23% mais do que os que ainda não adotaram; mais de 5 mil corretores usam o assistente e trocaram mais de 70 mil mensagens no último ano.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete",
+  "fonte_url": "https://www.baguete.com.br/noticias/mrv-faz-selecao-de-ias-para-seu-assistente",
+  "ano": 2025,
+  "confianca": "alta",
+  "setor_chave": "construcao_imoveis",
+  "funcionarios": 30000,
+  "porte_confirmado": true,
+  "data_fonte": "2025-09",
+  "metricas": [
+   {
+    "indicador": "Produtividade de corretores iniciantes (com vs. sem o assistente)",
+    "antes": null,
+    "depois": null,
+    "variacao": "+27%"
+   },
+   {
+    "indicador": "Vendas de corretores iniciantes (com vs. sem o assistente)",
+    "antes": null,
+    "depois": null,
+    "variacao": "+23%"
+   }
+  ],
+  "esforco_implantacao": "A fonte atribui o resultado à combinação de tecnologia, capacitação intensiva e cultura de performance.",
+  "como_replicar": [
+   "Reúna as perguntas que os vendedores novatos mais fazem (produto, preço, condições, financiamento) e a resposta aprovada para cada uma.",
+   "Coloque essas respostas num assistente de IA acessível pelo celular ou WhatsApp, limitado ao material da empresa.",
+   "Dê o acesso primeiro aos vendedores novos e compare vendas e produtividade com quem ainda não usa.",
+   "Mantenha treinamento e meta de performance junto: a própria fonte diz que a ferramenta sozinha não explica o ganho."
+  ],
+  "trecho_comprovante": "corretores iniciantes que utilizam o Marco registram 27% mais produtividade e vendem 23% mais do que os que ainda não adotaram a solução",
+  "verificado": true,
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-023",
@@ -7837,6 +10094,62 @@
   "forca": "media",
   "verificacao_bruta": "trecho_ok",
   "relevancia_pme": 2
+ },
+ {
+  "id": "H-005",
+  "porte": "grande",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [
+   "capacidade"
+  ],
+  "area": "comercial",
+  "setor": "alimentos (indústria de consumo)",
+  "tipo": "nominal",
+  "empresa": "Mondelēz Brasil",
+  "pais": "Brasil",
+  "titulo": "Mondelēz vende mais de 15% a mais no B2B pelo WhatsApp com agentes de IA de vendas, segundo a Yalo",
+  "problema": "Os varejistas já são digitais, e o desafio era encontrá-los nos canais em que estão ativos, sem sobrecarregar a equipe de vendas.",
+  "solucao": "Agentes de IA da Yalo automatizam e personalizam a jornada de compra B2B pelo WhatsApp, liberando os representantes para tarefas mais estratégicas.",
+  "ferramentas": [
+   "Yalo",
+   "WhatsApp"
+  ],
+  "resultado": "Vendas B2B via WhatsApp cresceram mais de 15% e o ticket médio das compras no espaço físico subiu 34%, segundo a Yalo; o número é declarado pelo fornecedor em painel do APAS Show 2025.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "IT Forum",
+  "fonte_url": "https://itforum.com.br/noticias/vendas-mondelez-crescem-34-ia-whatsapp/",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "industria",
+  "funcionarios": 7500,
+  "porte_confirmado": true,
+  "data_fonte": "2025-06",
+  "metricas": [
+   {
+    "indicador": "Vendas B2B via WhatsApp",
+    "antes": null,
+    "depois": null,
+    "variacao": "mais de 15%"
+   },
+   {
+    "indicador": "Ticket médio das compras no espaço físico",
+    "antes": null,
+    "depois": null,
+    "variacao": "+34%"
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Identifique os clientes B2B pequenos que compram por telefone ou mensagem e que consomem muito tempo do representante.",
+   "Ofereça a eles um canal de pedido por WhatsApp com catálogo, preços e reposição sugerida (ex.: WhatsApp Business com um bot de pedidos).",
+   "Use a IA para sugerir itens e lembrar recompras, e deixe o representante para negociação e clientes maiores.",
+   "Compare vendas e ticket médio dos clientes atendidos pelo canal com um grupo que continua no modelo antigo."
+  ],
+  "trecho_comprovante": "A parceria com a Yalo permitiu que a Mondelēz aumentasse suas vendas B2B em mais de 15% via WhatsApp",
+  "verificado": true,
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-022",
