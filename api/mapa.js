@@ -3,7 +3,8 @@
 // aqui a IA só reescreve. Qualquer falha devolve erro e o front usa o texto por regras.
 
 const GROQ_URL = "https://api.groq.com/openai/v1/chat/completions";
-const MODEL = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
+// llama-3.3-70b-versatile foi desligado pela Groq em 16/08/2026; substituto indicado: gpt-oss-120b.
+const MODEL = process.env.GROQ_MODEL || "openai/gpt-oss-120b";
 const MAX_BODY = 40_000;
 
 const cut = (v, n) => String(v == null ? "" : v).replace(/\s+/g, " ").trim().slice(0, n);
@@ -99,7 +100,8 @@ module.exports = async function handler(req, res) {
       body: JSON.stringify({
         model: MODEL,
         temperature: 0.4,
-        max_tokens: 1200,
+        reasoning_effort: "low",
+        max_tokens: 3000, // modelos de raciocínio gastam parte disso pensando
         response_format: { type: "json_object" },
         messages: [
           { role: "system", content: SISTEMA },
