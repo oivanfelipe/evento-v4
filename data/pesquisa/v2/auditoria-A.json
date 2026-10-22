@@ -1,0 +1,1118 @@
+[
+ {
+  "id": "P-006",
+  "empresa": "Small Business Owners Community (Pat Miller)",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Resultado é depoimento autodeclarado, sem base de cálculo das 21 horas"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Dono solo sobrecarregado delegando rotina a IA é o retrato exato de capacidade e reconhecível por qualquer PME."
+ },
+ {
+  "id": "P-007",
+  "empresa": "Chief of Minds",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Sem número exato do ganho (dois dias para horas)",
+   "Secundário comunicacao não se justifica"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Equipe pequena limitada pelo prazo de entrega; IA faz e equipe revisa, direto no gargalo de capacidade."
+ },
+ {
+  "id": "P-010",
+  "empresa": "The Knowledge Society",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Tempos vêm de depoimento, sem período de medição"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Fila de tickets lenta numa equipe enxuta resolvida por agente de IA; número claro e replicável."
+ },
+ {
+  "id": "P-032",
+  "empresa": null,
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 0,
+  "consistencia_ok": false,
+  "problemas": [
+   "Pesquisa de adoção encomendada pela Microsoft, sem caso nem resultado",
+   "Passos de como_replicar genéricos (\"Treinar a equipe\")",
+   "Não há solução nominal: ferramentas vazias"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Estatística de adoção de IA sem caso real nem resultado de negócio."
+ },
+ {
+  "id": "Q-003",
+  "empresa": "Virei Contador",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Problema é transferência manual de dados, não falta de braço",
+   "\"Crescimento de 300%\" sem dizer do quê (receita, carteira?) e causalidade não sustentada",
+   "como_replicar com apenas 3 passos genéricos"
+  ],
+  "acao": "reclassificar",
+  "correcoes": {
+   "titulo": "Escritório contábil online elimina a transferência manual de dados e relata crescimento de 300%, com 305 clientes ativos"
+  },
+  "justificativa": "A dor descrita e resolvida é digitação/transferência manual de dados; o crescimento é consequência alegada."
+ },
+ {
+  "id": "Q-025",
+  "empresa": "São Caetano Assessoria Contábil",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Problema (\"plataforma instável e sem governança entre departamentos\") não tem relação com a solução nem com o resultado",
+   "como_replicar genérico e telegráfico",
+   "Depoimento do fornecedor (SleekFlow)"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "como_replicar": [
+    "Medir quantos contatos iniciais a equipe atende por dia e quantos chegam fora do horário.",
+    "Colocar um agente de IA no canal de mensagens para atender 24h, qualificar o cliente e rotear ao departamento certo.",
+    "Definir regras de transbordo para uma pessoa e revisar as conversas nos primeiros dias (a fonte cita ajuste em 2 a 3 dias).",
+    "Comparar o volume atendido antes e depois para confirmar o ganho de capacidade sem contratar."
+   ]
+  },
+  "justificativa": "O ganho de +50% de capacidade sem contratar é capacidade de verdade, mas o texto do problema e os passos precisam ser refeitos."
+ },
+ {
+  "id": "Q-032",
+  "empresa": "Arena Sul Sports",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Título cita 3.573 atendimentos automatizados, que é volume e não resultado",
+   "Conversão de 31% não bate com 1.322/3.573 (cerca de 37%); a base do cálculo não está explicada",
+   "como_replicar telegráfico (frases de 2 palavras)"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "como_replicar": [
+    "Levantar as perguntas que o dono responde todo dia (horários, preços, disponibilidade).",
+    "Montar um fluxo de reserva por menu no canal de mensagens, para o cliente reservar sem falar com uma pessoa.",
+    "Disparar mensagens de renovação ou retorno aos clientes que já reservaram.",
+    "Acompanhar quantos atendimentos o fluxo resolve e quantos viram reserva."
+   ]
+  },
+  "justificativa": "Sócio atendendo sozinho é capacidade típica de PME, mas o número de conversão é ambíguo e os passos são fracos."
+ },
+ {
+  "id": "M-005",
+  "empresa": "Alfaneo",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Taxa de êxito 40% para 60% atribuída à plataforma sem prova de causalidade",
+   "Redução \"mais de 50%\" vs 30-40 min para 8-10 min (70-80%) \"em alguns casos\": mistura de bases",
+   "Módulo de fraude e 20 mil contestações não ligam ao gargalo"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Prazo e volume em contencioso de massa resolvidos com agentes; replicável por escritórios e departamentos jurídicos com adaptação."
+ },
+ {
+  "id": "R-003",
+  "empresa": "Banlek",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultado lista os saques 4x como se fosse efeito da IA, mas é o contexto de crescimento",
+   "Stack AWS pesada para PME"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "resultado": "Redução de 70% no esforço de atendimento e de 60% no trabalho manual de análise de risco; com o volume de saques passando de cerca de 20 mil para mais de 80 mil em um mês (4x), a liberação passou a levar cerca de um minuto."
+  },
+  "justificativa": "Escalar sem multiplicar a equipe é capacidade; só falta separar contexto de resultado."
+ },
+ {
+  "id": "R-004",
+  "empresa": "Mecanizou",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Alguns números (99% de sucesso nos turnos) estão só no resultado, não nas métricas"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Cotação por WhatsApp sem ampliar o time de vendas é dor reconhecível por qualquer distribuidor de autopeças."
+ },
+ {
+  "id": "M-006",
+  "empresa": "Sami Saúde",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Problema central é digitar/resumir notas e áudios em relatórios, que é trabalho manual repetitivo",
+   "Projeções (+50%, -30%) já foram corretamente excluídas das métricas",
+   "Ferramenta Verificare (busca de contratos) mistura outro gargalo"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "A dor é horas transformando notas em relatório; capacidade é consequência."
+ },
+ {
+  "id": "M-007",
+  "empresa": "Gimba",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Padronizar e redigir descrições manualmente é manual_repetitivo",
+   "\"Custo da solução reduzido em mais de 50%\" sem base nem contexto",
+   "Expectativa de +10% de buscas orgânicas não é resultado",
+   "Usa Claude-2 (modelo antigo)"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Cadastro de catálogo caindo de 13 para 2 minutos é digitação repetitiva; relevante para qualquer e-commerce."
+ },
+ {
+  "id": "T-017",
+  "empresa": "Clínica Dimeg",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "comunicacao",
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Falta de confirmação de consulta é problema de comunicação/ocupação de agenda, não de falta de braço",
+   "Antes/depois nas métricas compara meses (junho vs setembro), não situação pré e pós"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Confirmar, cancelar e remarcar consultas por mensagem é comunicação com o paciente; capacidade não é o gargalo descrito."
+ },
+ {
+  "id": "G-001",
+  "empresa": "Klarna",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Campo solucao contém instrução interna (\"Núcleo replicável: ...\")",
+   "Dados autodeclarados pela empresa (US$ 40 mi é estimativa)",
+   "Escala (3.000 agentes, 35 idiomas) distante de PME"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "solucao": "Assistente de IA generativa responde chats de suporte 24/7 em 35 idiomas, com escalonamento a humanos."
+  },
+  "justificativa": "Bot de primeiro nível é a base do caso e é replicável; só precisa limpar o texto."
+ },
+ {
+  "id": "G-003",
+  "empresa": "Bradesco",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Problema genérico (\"grande base de clientes\")",
+   "Casos de uso de IA em andamento (450) não ligam ao gargalo",
+   "Fonte é fala de executiva, não dado auditado"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Resolução de 82% no primeiro nível dá referência concreta de capacidade de atendimento, com adaptação."
+ },
+ {
+  "id": "G-004",
+  "empresa": "Nubank",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Números repassados por portal sem confirmação oficial",
+   "Resultado mistura 50% das dúvidas sem humano, -70% no tempo de resposta e 2,3x na resolução sem dizer base",
+   "Campo solucao contém instrução interna (\"Núcleo replicável\")"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "solucao": "Chat de IA para clientes (repasse a humano após até 5 interações automatizadas), copiloto para agentes (texto e voz) que sugere respostas a partir da base de conhecimento e do histórico, e busca corporativa interna com RAG."
+  },
+  "justificativa": "Copiloto de agente sobre FAQ é replicável, mas a mistura de métricas e o texto precisam de limpeza."
+ },
+ {
+  "id": "G-005",
+  "empresa": "Mercado Livre",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultado mistura temas sem relação com o gargalo (acurácia de fraude 99%, 20% do código com IA)",
+   "\"NPS melhor que o humano\" sem número",
+   "Problema genérico e sem ferramentas",
+   "Agente próprio de marketplace gigante, não replicável"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Afirmações dispersas de executivo, métricas fora do tema e solução não replicável."
+ },
+ {
+  "id": "G-006",
+  "empresa": "Salesforce",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Autopromoção da Salesforce usando o próprio produto",
+   "Gargalo secundário demanda_comercial sem base",
+   "Campo solucao contém instrução interna"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Propaganda do próprio produto e redundante com outros casos de bot de atendimento."
+ },
+ {
+  "id": "T-022",
+  "empresa": "Vitru Educação (Uniasselvi e UniCesumar)",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "demanda_comercial",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Problema descrito é captação/qualificação de leads e oportunidades perdidas no funil",
+   "\"Ganho de 9x em eficiência operacional\" e \"5% de ganho adicional\" sem base de comparação",
+   "Dados autodeclarados"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "O caso é conversão de leads em matrícula, dor de demanda_comercial."
+ },
+ {
+  "id": "T-031",
+  "empresa": "Copel",
+  "gargalo_atual": "capacidade",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "O problema é cadastro manual repetitivo de processos; o texto tem peso em prever pico de volume",
+   "Combina RPA, ERP e BPO (três fornecedores)"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "RPA nas etapas repetitivas do cadastro reduziu 90% do tempo; manual_repetitivo é mais fiel, com capacidade como secundário."
+ },
+ {
+  "id": "P-023",
+  "empresa": "Inside the Box (Florianopolis, SC)",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Autodeclarado em página do fornecedor (Conta Azul)",
+   "Título diz \"startup\" mas porte/funcionários não informados"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Conciliação bancária 100% automática e contas em 5 a 10 minutos mostra bem a dor de digitação financeira."
+ },
+ {
+  "id": "T-033",
+  "empresa": "Dipaz Consultoria Contábil",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Depoimento do próprio fornecedor (Jettax)",
+   "240 h/semana só para organizar documentos fiscais é número alto e não explica a base"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Escritório contábil reduz as horas do fiscal e a equipe; dor e solução reconhecíveis por qualquer contabilidade."
+ },
+ {
+  "id": "P-016",
+  "empresa": "Acervo Utimura (São Paulo, SP)",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Sem métrica na fonte",
+   "Passo \"colar em planilha\" não consta na fonte"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Catalogar acervo a partir de foto é dor concreta de PME, mas o ganho não é medido."
+ },
+ {
+  "id": "P-024",
+  "empresa": "Pallotino Advocacia",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Depoimento publicado pelo próprio fornecedor",
+   "Risco de jurisprudência incorreta (já mencionado no passo 3)"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Redação de petição de 2 h para 20 min é caso nítido de trabalho repetitivo qualificado."
+ },
+ {
+  "id": "P-030",
+  "empresa": null,
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Pesquisa de diagnóstico, não é caso de solução",
+   "Sem empresa, sem ferramenta, sem resultado"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Estatística de dor sem solução; serve para contexto, não para o banco de casos."
+ },
+ {
+  "id": "P-034",
+  "empresa": null,
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 0,
+  "consistencia_ok": false,
+  "problemas": [
+   "Lançamento de produto com números internos da Nuvemshop",
+   "Sem caso concreto de lojista com número",
+   "como_replicar vazio de conteúdo (\"Usar o copiloto\")",
+   "Data da fonte indisponível"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Anúncio de produto com métricas de engajamento da própria plataforma, sem resultado de cliente."
+ },
+ {
+  "id": "Q-002",
+  "empresa": "Brugnerotto Contadores Associados",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "\"Antes levava dias\" sem número",
+   "Poucos passos e genéricos"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Fechar a folha até o dia 2 é resultado concreto de rotina manual; faltam números de antes."
+ },
+ {
+  "id": "Q-026",
+  "empresa": "Clínica Lucas Miranda",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "demanda_comercial",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "O resultado principal (+40% de receita por campanhas de aniversário) é de vendas, não de trabalho manual",
+   "Problema (\"plataformas rígidas e atendimento reativo\") vago",
+   "\"-30% do trabalho operacional\" sem base",
+   "como_replicar telegráfico"
+  ],
+  "acao": "reclassificar",
+  "correcoes": {
+   "como_replicar": [
+    "Cadastrar a data de aniversário dos clientes na base de contatos.",
+    "Programar uma campanha mensal automática de aniversário com oferta ou convite para agendar.",
+    "Usar um chatbot para qualificar o contato e marcar o agendamento.",
+    "Medir a receita da campanha e o tempo operacional economizado."
+   ]
+  },
+  "justificativa": "O número de destaque é receita de campanha, dor de demanda_comercial."
+ },
+ {
+  "id": "Q-028",
+  "empresa": "Checkmob",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "demanda_comercial",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Título \"-70% no tempo de resposta\" sem dizer a que se refere",
+   "O foco é qualificar leads e agendar demos, dor de funil",
+   "\"30% de economia de tempo\" no resultado, ausente nas métricas",
+   "como_replicar telegráfico"
+  ],
+  "acao": "reclassificar",
+  "correcoes": {
+   "titulo": "Checkmob corta 70% do tempo de resposta a leads e eleva em 20% as demos qualificadas com agente de IA no WhatsApp",
+   "como_replicar": [
+    "Medir quanto leva hoje a primeira resposta a um lead e quantas horas os SDRs gastam qualificando.",
+    "Automatizar no WhatsApp o primeiro contato e as perguntas de qualificação.",
+    "Agendar as demonstrações automaticamente e registrar o lead no CRM.",
+    "Comparar tempo de resposta e demos qualificadas antes e depois."
+   ]
+  },
+  "justificativa": "Qualificar lead e agendar demo é funil comercial; a dor de digitação é secundária."
+ },
+ {
+  "id": "T-010",
+  "empresa": "JCP Logística",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "60% x \"até 30 min para menos de 10 min\" (67%) é arredondamento",
+   "Secundário integracao é plausível"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Montar carga em menos de 10 minutos em vez de 30 é ganho claro para transportadoras pequenas."
+ },
+ {
+  "id": "M-002",
+  "empresa": "Veloe (Alelo)",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "1.000 chamados x 45 min dá cerca de 750 h, não 1,8 mil h/mês: número não bate",
+   "Campo variacao com \"-\" inválido",
+   "É chamado de TI: relevância parcial"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "metricas": [
+    {
+     "indicador": "Horas economizadas por mês",
+     "antes": null,
+     "depois": "cerca de 1,8 mil (segundo a fonte)",
+     "variacao": null
+    },
+    {
+     "indicador": "Chamados tratados por robôs por mês",
+     "antes": null,
+     "depois": "cerca de 1.000",
+     "variacao": null
+    },
+    {
+     "indicador": "Cumprimento de SLA",
+     "antes": "cerca de 96% (humanos)",
+     "depois": "100% (robô)",
+     "variacao": null
+    },
+    {
+     "indicador": "Tempo médio por atendimento humano",
+     "antes": "45 min",
+     "depois": null,
+     "variacao": null
+    }
+   ]
+  },
+  "justificativa": "RPA em chamados repetitivos é válido, mas a conta de horas é inconsistente e deve ser conferida na fonte."
+ },
+ {
+  "id": "M-003",
+  "empresa": "Faceponto",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "+95% de velocidade de contratação sem definição",
+   "Ranking automático de currículos exige cuidado com viés"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Triagem de 4 horas para 2 minutos é dor óbvia de RH em qualquer PME."
+ },
+ {
+  "id": "M-001",
+  "empresa": "Seculus da Amazônia",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Fonte de 2022",
+   "Fornecedor (Triad Systems) apresenta o resultado"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Digitação de planilha para ERP eliminada com RPA é o exemplo clássico de manual_repetitivo."
+ },
+ {
+  "id": "R-009",
+  "empresa": "IESDE (com a Maestra)",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Estimativa (\"mais de 5 mil horas estimadas\") como base",
+   "Fonte de apoio é a consultoria DT Consult"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "RPA com OCR em rotinas acadêmicas tira milhares de horas; replicável com adaptação."
+ },
+ {
+  "id": "T-002",
+  "empresa": "Arplast",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Métricas de atividade (639 Profilers, 114 avaliações, 21 promoções) não são resultado do gargalo",
+   "Mistura triagem de currículos com avaliação comportamental",
+   "Período 2022-2023 com ano 2025"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Triagem manual de currículos e 47% menos tempo de contratação sustentam o gargalo, mas as métricas auxiliares dispersam."
+ },
+ {
+  "id": "T-004",
+  "empresa": "Central dos Benefícios",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "93,75% no texto e 93% no título: pequena divergência de arredondamento"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Fechar o ponto de 2 dias para 1 hora numa empresa de 69 colaboradores é altamente reconhecível."
+ },
+ {
+  "id": "T-032",
+  "empresa": "Omni&Co",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Stack AWS pesada (XGBoost, EMR, RDS) para uma PME",
+   "250 horas é só do último mês"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Classificação automática de intimações economiza trabalho manual jurídico; replicável com adaptação."
+ },
+ {
+  "id": "G-008",
+  "empresa": "Livelo",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Solução vaga (\"seção do comunicado\") sem como",
+   "Número de 20 mil horas sem base e como_replicar inventado (moderação com regras e IA)",
+   "Campo solucao contém instrução interna"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Comunicado de imprensa sem mecanismo; os passos de replicação não estão sustentados."
+ },
+ {
+  "id": "G-010",
+  "empresa": "Localiza&Co",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Problema genérico",
+   "Métricas de produtividade usam antes/depois de forma errada (4,5% e 10,6% são ganhos)",
+   "Campo solucao contém instrução interna"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "solucao": "Implantação do Microsoft 365 Copilot (início com 300 licenças em 2023), com treinamento em prompts, hackathons e mapeamento de 42 casos de uso.",
+   "metricas": [
+    {
+     "indicador": "Horas de trabalho por funcionário/mês",
+     "antes": null,
+     "depois": null,
+     "variacao": "-8,3 h (média)"
+    },
+    {
+     "indicador": "Horas por usuário intenso/mês",
+     "antes": null,
+     "depois": null,
+     "variacao": "-19 h"
+    },
+    {
+     "indicador": "Aumento de produtividade (média dos usuários)",
+     "antes": null,
+     "depois": "4,5%",
+     "variacao": null
+    },
+    {
+     "indicador": "Aumento de produtividade (usuários intensivos)",
+     "antes": null,
+     "depois": "10,6%",
+     "variacao": null
+    }
+   ]
+  },
+  "justificativa": "Horas por funcionário com Copilot é manual_repetitivo/capacidade, mas métricas e texto precisam de correção."
+ },
+ {
+  "id": "G-012",
+  "empresa": "Cielo",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Variação calculada é 52,1% (1.934/3.710), não 52,2%",
+   "Atribuição causal do período jul/2025-abr/2026 ao agente",
+   "Chamados de TI interna e Copilot Studio: distante de PME",
+   "Campo solucao contém instrução interna"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "solucao": "Agente no Copilot Studio, disponível no Teams 24/7, que executa ações (restaurar conta, chave BitLocker, VPN, revogar MFA).",
+   "resultado": "Chamados ao Service Desk caíram de 3.710 (jul/2025) para 1.776 (abr/2026), redução de cerca de 52,1% (Microsoft Latam, 17/08/2026).",
+   "metricas": [
+    {
+     "indicador": "Chamados ao Service Desk",
+     "antes": "3.710",
+     "depois": "1.776",
+     "variacao": "-52,1%"
+    }
+   ]
+  },
+  "justificativa": "Ticket de TI reduzido pela metade é referência de autoatendimento, mas a relevância é limitada."
+ },
+ {
+  "id": "G-007",
+  "empresa": "Itau Unibanco",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Fonte de segunda mão (Let's Money citando AWS)",
+   "Campo solucao contém instrução interna",
+   "Problema vago"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "solucao": "IA generativa lê documentos, organiza dados e redige rascunhos sobre bases proprietárias; analistas revisam e fazem a interpretação."
+  },
+  "justificativa": "Rascunho automático de relatório recorrente com revisão humana é replicável; só limpar o texto."
+ },
+ {
+  "id": "G-009",
+  "empresa": "Siemens (Smart Infrastructure)",
+  "gargalo_atual": "manual_repetitivo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "A fonte não traz ganho de tempo medido",
+   "Resultado são só volumes (1,4 milhão de relatórios, 10 mil técnicos)",
+   "Escala Siemens distante de PME"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Não há resultado; apenas escala e piloto."
+ },
+ {
+  "id": "M-008",
+  "empresa": "Maestro ABM",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Pesquisa manual de dados públicos para montar dossiê é trabalho manual, não \"dado que ninguém acha\"",
+   "Implantação de 4 meses para 6 semanas é métrica interna do produto",
+   "Resultados autodeclarados pela empresa",
+   "Empresa é fornecedora de software, não cliente"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Montar dossiê de 8 horas em 5 minutos é pesquisa e digitação repetitivas."
+ },
+ {
+  "id": "Q-001",
+  "empresa": "Contabilidade Luiz Corrêa",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Atraso do balanço vem de coleta manual de dados, tratada pela automação",
+   "Métrica \"depois: tempo real\" não é valor",
+   "\"Estrutura cresceu para 3 empresas\" não tem relação com o resultado",
+   "como_replicar com 3 passos genéricos"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Automatizar a coleta eliminou o atraso; a dor é manual_repetitivo, com informação em tempo real como efeito."
+ },
+ {
+  "id": "Q-005",
+  "empresa": "Syhus Contabilidade",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultado é porte da carteira, não melhoria",
+   "Problema (\"sem diferencial\") fora dos gargalos",
+   "Depoimento de fornecedor sem antes/depois"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Descreve tamanho da carteira e posicionamento, sem resultado atribuível."
+ },
+ {
+  "id": "Q-006",
+  "empresa": "Softcon Contabilidade",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultado (\"atende 300 clientes mantendo relação consultiva\") não mede nada",
+   "Sem antes/depois",
+   "Depoimento de fornecedor"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Sem resultado mensurável e sem relação clara com falta de informação."
+ },
+ {
+  "id": "T-040",
+  "empresa": "Estância Ouro Branco e Sítio Santo Antônio",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "controle",
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Dor é custo por talhão desconhecido e decisões no achismo (controle)",
+   "Título atribui os 40% de redução ao rateio de gastos, causalidade não sustentada e sem base de cálculo",
+   "Fechamento de safra de 1 mês para 1 hora é métrica forte, ausente do título"
+  ],
+  "acao": "reclassificar",
+  "correcoes": {
+   "titulo": "Fazendas passam a ratear custos por talhão no Aegro, relatam queda de 40% nos custos de produção e fecham a safra em cerca de uma hora"
+  },
+  "justificativa": "Rateio de custo por talhão resolve falta de controle; título afirmava causalidade além da fonte."
+ },
+ {
+  "id": "R-007",
+  "empresa": "Centroflora",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "controle",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Dor é visão integrada do chão de fábrica e manutenção reativa",
+   "PRTG é ferramenta de infraestrutura de TI",
+   "Queda de 3-4% de energia sem relação direta"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Monitoramento integrado com alertas é falta de painel confiável (controle), não busca de informação."
+ },
+ {
+  "id": "R-010",
+  "empresa": "Coprel",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Mistura relatórios em Power BI com IoT/HoloLens para serviço de campo",
+   "\"Até 95%\" é teto, não média",
+   "+40% de agilidade no chamado sem relação demonstrada com a solução de dados"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Dados descentralizados e relatórios lentos centralizados em Power BI é bom exemplo de informação."
+ },
+ {
+  "id": "M-009",
+  "empresa": "Humanizadas",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Dor é classificação manual de comentários e extração de PDFs",
+   "Stack GKE/Cloud Run é distante de PME",
+   "\"Zero falsos negativos\" restrito a verificações"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Classificar comentários e extrair dados de PDF com IA reduz trabalho manual de pesquisa."
+ },
+ {
+  "id": "S-035",
+  "empresa": "#makeitfuture (cliente não nomeado)",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 0,
+  "consistencia_ok": false,
+  "problemas": [
+   "Cliente não nomeado",
+   "Dor (qualidade das respostas de assistente) não é informacao",
+   "como_replicar de 4 palavras soltas",
+   "Resultado sem explicação do que \"resolução\" mede"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Cliente anônimo, métricas obscuras e passos sem conteúdo."
+ },
+ {
+  "id": "T-012",
+  "empresa": "Nilo Maia Distribuidora",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "decisao",
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Dor é dimensionar estoque ideal e decidir compras, mais decisão do que informação",
+   "Título liga +26,7% de faturamento à ferramenta sem prova de causalidade",
+   "Ganhos de caixa sem percentual"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Estoque ideal calculado por item e filial é apoio à decisão de compra."
+ },
+ {
+  "id": "T-016",
+  "empresa": "Acrilex",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "controle",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Dor é falta de visão ampla da produção",
+   "Resultado é infraestrutura (32 pontos de coleta) e não ganho",
+   "Sem percentual de OEE"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Painel de produção em tempo real é falta de controle; ainda sem resultado medido."
+ },
+ {
+  "id": "G-015",
+  "empresa": "Bradesco",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Revisar documentos de 1 hora para 5 minutos é trabalho manual repetitivo",
+   "Fonte é comunicado do Google Cloud",
+   "Problema genérico",
+   "Campo solucao contém instrução interna"
+  ],
+  "acao": "reclassificar",
+  "correcoes": {
+   "solucao": "Gemini Enterprise automatiza a análise desses documentos."
+  },
+  "justificativa": "Revisão de documentos fiscais e contratuais com IA corta horas de leitura repetitiva."
+ },
+ {
+  "id": "S-003",
+  "empresa": "Bemol",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "A redução de churn não tem percentual",
+   "Dois agentes distintos no mesmo caso"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Ligações que ninguém lia, agora lidas e roteadas por IA, ilustram informação escondida em dados existentes."
+ },
+ {
+  "id": "S-009",
+  "empresa": "The Stepstone Group",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Dor é governança do uso de automação, não busca de informação",
+   "Empresa alemã de 3.000 pessoas distante de PME brasileira",
+   "Métricas (workflows, documentos parseados) dispersas"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Caso sobre governança de plataforma de automação interna, sem encaixe no gargalo."
+ },
+ {
+  "id": "S-025",
+  "empresa": "Sicoob",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Problema declarado é custo de licenças e segurança, não informação",
+   "LLMs próprios em nuvem privada inviáveis para PME",
+   "como_replicar telegráfico",
+   "\"~2 horas por profissional\" sem período"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Escolha de infraestrutura de IA para 60 mil funcionários, longe do dia a dia de PME."
+ },
+ {
+  "id": "S-026",
+  "empresa": "Azul Linhas Aéreas",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Métrica contraditória (\"antes: até 3 dias a mais\")",
+   "Problema genérico",
+   "como_replicar telegráfico",
+   "Empresa grande, ferramenta sem detalhes"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Resultado mal formulado e sem mecanismo claro."
+ },
+ {
+  "id": "S-037",
+  "empresa": "Remote",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Dor é suporte de TI interno, não informação",
+   "Empresa estrangeira (US$ 500 mil)",
+   "como_replicar telegráfico"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Help desk de TI de empresa estrangeira com passos vazios."
+ },
+ {
+  "id": "S-015",
+  "empresa": "Vivo (Telefônica Brasil)",
+  "gargalo_atual": "informacao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Redução de 9% e 4% no tempo de atendimento é modesta",
+   "Escala de 11 mil atendentes e 30 sistemas distante de PME"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Atendentes buscando em vários sistemas é a definição de informação difícil de achar; replicável por tela única."
+ }
+]
