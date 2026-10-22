@@ -13,10 +13,22 @@
     "demanda_comercial": "Demanda/comercial"
   },
   "escala_frequencia": [
-    { "valor": 0, "label": "Quase nunca" },
-    { "valor": 1, "label": "Às vezes" },
-    { "valor": 2, "label": "Com frequência" },
-    { "valor": 3, "label": "Todo dia" }
+    {
+      "valor": 0,
+      "label": "Quase nunca"
+    },
+    {
+      "valor": 1,
+      "label": "Às vezes"
+    },
+    {
+      "valor": 2,
+      "label": "Com frequência"
+    },
+    {
+      "valor": 3,
+      "label": "Todo dia"
+    }
   ],
   "etapas": [
     {
@@ -25,14 +37,38 @@
       "salvar_imediatamente": true,
       "abertura": [
         "Oi! Eu sou o assistente da V4 Company.",
-        "Em cerca de 7 minutos eu monto o Mapa de Gargalos da sua empresa, com ideias reais de IA e automação e casos de quem já fez.",
+        "Em cerca de 5 minutos eu monto o Mapa de Gargalos da sua empresa, com ideias reais de IA e automação e casos de quem já fez.",
         "Primeiro, deixa eu te conhecer."
       ],
       "perguntas": [
-        { "id": "nome", "tipo": "texto", "obrigatoria": true, "texto": "Como posso te chamar?", "placeholder": "Seu nome" },
-        { "id": "empresa", "tipo": "texto", "obrigatoria": true, "texto": "Prazer, {nome}! Qual o nome da sua empresa?", "placeholder": "Nome da empresa" },
-        { "id": "cargo", "tipo": "texto", "obrigatoria": true, "texto": "E qual é o seu papel por lá?", "placeholder": "Ex.: sócio, diretor, gerente" },
-        { "id": "telefone", "tipo": "telefone", "obrigatoria": true, "texto": "Qual o seu WhatsApp com DDD? É por ele que a nossa equipe fala com você depois do evento.", "placeholder": "(11) 91234-5678" },
+        {
+          "id": "nome",
+          "tipo": "texto",
+          "obrigatoria": true,
+          "texto": "Como posso te chamar?",
+          "placeholder": "Seu nome"
+        },
+        {
+          "id": "empresa",
+          "tipo": "texto",
+          "obrigatoria": true,
+          "texto": "Prazer, {nome}! Qual o nome da sua empresa?",
+          "placeholder": "Nome da empresa"
+        },
+        {
+          "id": "cargo",
+          "tipo": "texto",
+          "obrigatoria": true,
+          "texto": "E qual é o seu papel por lá?",
+          "placeholder": "Ex.: sócio, diretor, gerente"
+        },
+        {
+          "id": "telefone",
+          "tipo": "telefone",
+          "obrigatoria": true,
+          "texto": "Qual o seu WhatsApp com DDD? É por ele que a nossa equipe fala com você depois do evento.",
+          "placeholder": "(11) 91234-5678"
+        },
         {
           "id": "consentimento",
           "tipo": "aceite",
@@ -45,16 +81,27 @@
     {
       "id": "perfil",
       "titulo": "Sobre a empresa",
-      "abertura": ["Perfeito, {nome}. Agora um pouco sobre a empresa."],
+      "abertura": [
+        "Perfeito, {nome}. Agora um pouco sobre a empresa."
+      ],
       "perguntas": [
         {
           "id": "porte",
           "tipo": "escolha_unica",
           "texto": "Quantas pessoas trabalham aí?",
           "opcoes": [
-            { "valor": "pequena", "label": "Até 50" },
-            { "valor": "media", "label": "51 a 500" },
-            { "valor": "grande", "label": "Mais de 500" }
+            {
+              "valor": "pequena",
+              "label": "Até 50"
+            },
+            {
+              "valor": "media",
+              "label": "51 a 500"
+            },
+            {
+              "valor": "grande",
+              "label": "Mais de 500"
+            }
           ]
         },
         {
@@ -62,15 +109,42 @@
           "tipo": "escolha_unica",
           "texto": "Em que setor vocês atuam?",
           "opcoes": [
-            { "valor": "servicos_b2b", "label": "Serviços B2B" },
-            { "valor": "industria", "label": "Indústria" },
-            { "valor": "varejo_ecommerce", "label": "Varejo / e-commerce" },
-            { "valor": "saude", "label": "Saúde" },
-            { "valor": "logistica", "label": "Logística" },
-            { "valor": "construcao_imoveis", "label": "Construção / imóveis" },
-            { "valor": "educacao", "label": "Educação" },
-            { "valor": "tecnologia", "label": "Tecnologia" },
-            { "valor": "outro", "label": "Outro" }
+            {
+              "valor": "servicos_b2b",
+              "label": "Serviços B2B"
+            },
+            {
+              "valor": "industria",
+              "label": "Indústria"
+            },
+            {
+              "valor": "varejo_ecommerce",
+              "label": "Varejo / e-commerce"
+            },
+            {
+              "valor": "saude",
+              "label": "Saúde"
+            },
+            {
+              "valor": "logistica",
+              "label": "Logística"
+            },
+            {
+              "valor": "construcao_imoveis",
+              "label": "Construção / imóveis"
+            },
+            {
+              "valor": "educacao",
+              "label": "Educação"
+            },
+            {
+              "valor": "tecnologia",
+              "label": "Tecnologia"
+            },
+            {
+              "valor": "outro",
+              "label": "Outro"
+            }
           ]
         },
         {
@@ -79,12 +153,30 @@
           "opcional": true,
           "texto": "Mais ou menos, qual o faturamento anual? É só para dimensionar as sugestões.",
           "opcoes": [
-            { "valor": "ate_1mi", "label": "Até R$ 1 mi" },
-            { "valor": "1_5mi", "label": "R$ 1 a 5 mi" },
-            { "valor": "5_20mi", "label": "R$ 5 a 20 mi" },
-            { "valor": "20_100mi", "label": "R$ 20 a 100 mi" },
-            { "valor": "100mi_mais", "label": "Mais de R$ 100 mi" },
-            { "valor": "nao_dizer", "label": "Prefiro não dizer" }
+            {
+              "valor": "ate_1mi",
+              "label": "Até R$ 1 mi"
+            },
+            {
+              "valor": "1_5mi",
+              "label": "R$ 1 a 5 mi"
+            },
+            {
+              "valor": "5_20mi",
+              "label": "R$ 5 a 20 mi"
+            },
+            {
+              "valor": "20_100mi",
+              "label": "R$ 20 a 100 mi"
+            },
+            {
+              "valor": "100mi_mais",
+              "label": "Mais de R$ 100 mi"
+            },
+            {
+              "valor": "nao_dizer",
+              "label": "Prefiro não dizer"
+            }
           ]
         },
         {
@@ -92,13 +184,34 @@
           "tipo": "escolha_unica",
           "texto": "Qual área mais te dá dor de cabeça hoje?",
           "opcoes": [
-            { "valor": "comercial", "label": "Comercial / vendas" },
-            { "valor": "marketing", "label": "Marketing" },
-            { "valor": "financeiro", "label": "Financeiro" },
-            { "valor": "administrativo", "label": "Administrativo / RH" },
-            { "valor": "operacoes", "label": "Operações" },
-            { "valor": "atendimento", "label": "Atendimento" },
-            { "valor": "ti", "label": "TI / dados" }
+            {
+              "valor": "comercial",
+              "label": "Comercial / vendas"
+            },
+            {
+              "valor": "marketing",
+              "label": "Marketing"
+            },
+            {
+              "valor": "financeiro",
+              "label": "Financeiro"
+            },
+            {
+              "valor": "administrativo",
+              "label": "Administrativo / RH"
+            },
+            {
+              "valor": "operacoes",
+              "label": "Operações"
+            },
+            {
+              "valor": "atendimento",
+              "label": "Atendimento"
+            },
+            {
+              "valor": "ti",
+              "label": "TI / dados"
+            }
           ]
         },
         {
@@ -106,10 +219,22 @@
           "tipo": "escolha_unica",
           "texto": "E como vocês usam IA hoje?",
           "opcoes": [
-            { "valor": "nenhuma", "label": "Ainda não usamos" },
-            { "valor": "individual", "label": "Algumas pessoas usam por conta própria" },
-            { "valor": "alguns_processos", "label": "Temos alguns processos com IA" },
-            { "valor": "estruturado", "label": "Temos uma estratégia estruturada" }
+            {
+              "valor": "nenhuma",
+              "label": "Ainda não usamos"
+            },
+            {
+              "valor": "individual",
+              "label": "Algumas pessoas usam por conta própria"
+            },
+            {
+              "valor": "alguns_processos",
+              "label": "Temos alguns processos com IA"
+            },
+            {
+              "valor": "estruturado",
+              "label": "Temos uma estratégia estruturada"
+            }
           ]
         }
       ]
@@ -117,7 +242,9 @@
     {
       "id": "conversa",
       "titulo": "Ouvindo você",
-      "abertura": ["Agora a parte mais importante: ouvir você."],
+      "abertura": [
+        "Agora a parte mais importante: ouvir você."
+      ],
       "perguntas": [
         {
           "id": "dor_aberta",
@@ -131,24 +258,78 @@
     {
       "id": "diagnostico",
       "titulo": "Onde trava",
-      "abertura": ["Anotado. Agora vou te mostrar 10 situações. Me diga o quanto cada uma acontece aí."],
+      "abertura": [
+        "Anotado. Agora vou te mostrar 10 situações. Me diga o quanto cada uma acontece aí."
+      ],
       "perguntas": [
-        { "id": "q_cap", "tipo": "escala", "gargalo": "capacidade", "texto": "A equipe vive no limite e os prazos escorregam." },
-        { "id": "q_man", "tipo": "escala", "gargalo": "manual_repetitivo", "texto": "Gente qualificada perde horas copiando e colando dados entre planilhas e sistemas." },
-        { "id": "q_inf", "tipo": "escala", "gargalo": "informacao", "texto": "Para achar um dado ou contrato, alguém precisa procurar em vários lugares." },
-        { "id": "q_dec", "tipo": "escala", "gargalo": "decisao", "texto": "Temos os números, mas decidir demora ou exige várias reuniões." },
-        { "id": "q_pro", "tipo": "escala", "gargalo": "processo", "texto": "Aprovações em cascata, retrabalho e etapas que ninguém sabe por que existem." },
-        { "id": "q_int", "tipo": "escala", "gargalo": "integracao", "texto": "Os sistemas não conversam e alguém faz a ponte na mão." },
-        { "id": "q_com", "tipo": "escala", "gargalo": "comunicacao", "texto": "A agenda vive tomada por alinhamentos e cobranças de status." },
-        { "id": "q_con", "tipo": "escala", "gargalo": "conhecimento", "texto": "Tem coisa que só uma ou duas pessoas sabem fazer." },
-        { "id": "q_ctl", "tipo": "escala", "gargalo": "controle", "texto": "Decidimos no feeling porque não existe um painel confiável." },
-        { "id": "q_dem", "tipo": "escala", "gargalo": "demanda_comercial", "texto": "Faltam oportunidades no funil, ou elas chegam e não viram venda." }
+        {
+          "id": "q_cap",
+          "tipo": "escala",
+          "gargalo": "capacidade",
+          "texto": "A equipe vive no limite e os prazos escorregam."
+        },
+        {
+          "id": "q_man",
+          "tipo": "escala",
+          "gargalo": "manual_repetitivo",
+          "texto": "Gente qualificada perde horas copiando e colando dados entre planilhas e sistemas."
+        },
+        {
+          "id": "q_inf",
+          "tipo": "escala",
+          "gargalo": "informacao",
+          "texto": "Para achar um dado ou contrato, alguém precisa procurar em vários lugares."
+        },
+        {
+          "id": "q_dec",
+          "tipo": "escala",
+          "gargalo": "decisao",
+          "texto": "Temos os números, mas decidir demora ou exige várias reuniões."
+        },
+        {
+          "id": "q_pro",
+          "tipo": "escala",
+          "gargalo": "processo",
+          "texto": "Aprovações em cascata, retrabalho e etapas que ninguém sabe por que existem."
+        },
+        {
+          "id": "q_int",
+          "tipo": "escala",
+          "gargalo": "integracao",
+          "texto": "Os sistemas não conversam e alguém faz a ponte na mão."
+        },
+        {
+          "id": "q_com",
+          "tipo": "escala",
+          "gargalo": "comunicacao",
+          "texto": "A agenda vive tomada por alinhamentos e cobranças de status."
+        },
+        {
+          "id": "q_con",
+          "tipo": "escala",
+          "gargalo": "conhecimento",
+          "texto": "Tem coisa que só uma ou duas pessoas sabem fazer."
+        },
+        {
+          "id": "q_ctl",
+          "tipo": "escala",
+          "gargalo": "controle",
+          "texto": "Decidimos no feeling porque não existe um painel confiável."
+        },
+        {
+          "id": "q_dem",
+          "tipo": "escala",
+          "gargalo": "demanda_comercial",
+          "texto": "Faltam oportunidades no funil, ou elas chegam e não viram venda."
+        }
       ]
     },
     {
       "id": "prioridade",
       "titulo": "O que pesa mais",
-      "abertura": ["Boa. Já tenho uma leitura inicial do que mais pesa."],
+      "abertura": [
+        "Boa. Já tenho uma leitura inicial do que mais pesa."
+      ],
       "perguntas": [
         {
           "id": "maior_dor",
@@ -161,10 +342,22 @@
           "tipo": "escolha_unica",
           "texto": "E esse problema custa principalmente…",
           "opcoes": [
-            { "valor": "receita", "label": "Receita que deixamos de ganhar" },
-            { "valor": "custo", "label": "Custo e horas pagas à toa" },
-            { "valor": "risco", "label": "Risco: erro, multa ou perda de cliente" },
-            { "valor": "crescimento", "label": "Trava o nosso crescimento" }
+            {
+              "valor": "receita",
+              "label": "Receita que deixamos de ganhar"
+            },
+            {
+              "valor": "custo",
+              "label": "Custo e horas pagas à toa"
+            },
+            {
+              "valor": "risco",
+              "label": "Risco: erro, multa ou perda de cliente"
+            },
+            {
+              "valor": "crescimento",
+              "label": "Trava o nosso crescimento"
+            }
           ]
         },
         {
@@ -172,11 +365,26 @@
           "tipo": "escolha_unica",
           "texto": "Quantas horas por semana o time gasta com isso?",
           "opcoes": [
-            { "valor": 5, "label": "Até 10 h" },
-            { "valor": 20, "label": "10 a 30 h" },
-            { "valor": 50, "label": "30 a 80 h" },
-            { "valor": 100, "label": "Mais de 80 h" },
-            { "valor": 0, "label": "Não faço ideia" }
+            {
+              "valor": 5,
+              "label": "Até 10 h"
+            },
+            {
+              "valor": 20,
+              "label": "10 a 30 h"
+            },
+            {
+              "valor": 50,
+              "label": "30 a 80 h"
+            },
+            {
+              "valor": 100,
+              "label": "Mais de 80 h"
+            },
+            {
+              "valor": 0,
+              "label": "Não faço ideia"
+            }
           ]
         }
       ]
@@ -184,45 +392,47 @@
     {
       "id": "aprofundar",
       "titulo": "Sua história",
-      "abertura": ["Agora três perguntas em que a sua resposta vale mais do que qualquer opção marcada."],
+      "abertura": [
+        "Uma última pergunta aberta, e é a que mais me ajuda a entender o seu caso."
+      ],
       "perguntas": [
         {
-          "id": "ultima_vez",
+          "id": "historia",
           "tipo": "aberta",
           "opcional": true,
-          "texto": "Qual foi a última vez que esse problema te custou caro? Conta o que aconteceu.",
-          "dica": "Áudio ou texto, como preferir."
-        },
-        {
-          "id": "ja_tentou",
-          "tipo": "aberta",
-          "opcional": true,
-          "texto": "O que vocês já tentaram para resolver isso? O que não funcionou?",
-          "dica": "Pode ser uma ferramenta, um fornecedor, uma contratação…"
-        },
-        {
-          "id": "varinha",
-          "tipo": "aberta",
-          "opcional": true,
-          "texto": "Se você pudesse automatizar UMA tarefa da empresa amanhã, qual seria?",
-          "dica": "Escolha a que mais te tira do sério."
+          "texto": "Conta pra gente: qual foi a última vez que esse problema te custou caro, e o que vocês já tentaram para resolver?",
+          "dica": "Áudio ou texto, como preferir. Pode ser uma história curta."
         }
       ]
     },
     {
       "id": "decisao",
       "titulo": "Próximos passos",
-      "abertura": ["Últimas perguntas, são rápidas."],
+      "abertura": [
+        "Últimas perguntas, são rápidas."
+      ],
       "perguntas": [
         {
           "id": "quem_decide",
           "tipo": "escolha_unica",
           "texto": "Quem decide sobre investir em automação e IA aí?",
           "opcoes": [
-            { "valor": "sozinho", "label": "Eu decido sozinho(a)" },
-            { "valor": "com_socios", "label": "Eu e meus sócios" },
-            { "valor": "comite", "label": "Preciso levar para a diretoria" },
-            { "valor": "outra_area", "label": "Outra pessoa ou área decide" }
+            {
+              "valor": "sozinho",
+              "label": "Eu decido sozinho(a)"
+            },
+            {
+              "valor": "com_socios",
+              "label": "Eu e meus sócios"
+            },
+            {
+              "valor": "comite",
+              "label": "Preciso levar para a diretoria"
+            },
+            {
+              "valor": "outra_area",
+              "label": "Outra pessoa ou área decide"
+            }
           ]
         },
         {
@@ -230,11 +440,26 @@
           "tipo": "escolha_unica",
           "texto": "Para resolver isso, que faixa de investimento mensal faria sentido?",
           "opcoes": [
-            { "valor": "ate_2k", "label": "Até R$ 2 mil" },
-            { "valor": "2_5k", "label": "R$ 2 a 5 mil" },
-            { "valor": "5_15k", "label": "R$ 5 a 15 mil" },
-            { "valor": "15k_mais", "label": "Mais de R$ 15 mil" },
-            { "valor": "nao_sei", "label": "Ainda não sei" }
+            {
+              "valor": "ate_2k",
+              "label": "Até R$ 2 mil"
+            },
+            {
+              "valor": "2_5k",
+              "label": "R$ 2 a 5 mil"
+            },
+            {
+              "valor": "5_15k",
+              "label": "R$ 5 a 15 mil"
+            },
+            {
+              "valor": "15k_mais",
+              "label": "Mais de R$ 15 mil"
+            },
+            {
+              "valor": "nao_sei",
+              "label": "Ainda não sei"
+            }
           ]
         },
         {
@@ -242,9 +467,18 @@
           "tipo": "escolha_unica",
           "texto": "Em que ritmo vocês querem começar?",
           "opcoes": [
-            { "valor": "rapido", "label": "Uma vitória em até 30 dias" },
-            { "valor": "medio", "label": "Projeto em 2 a 3 meses" },
-            { "valor": "explorando", "label": "Ainda estou explorando" }
+            {
+              "valor": "rapido",
+              "label": "Uma vitória em até 30 dias"
+            },
+            {
+              "valor": "medio",
+              "label": "Projeto em 2 a 3 meses"
+            },
+            {
+              "valor": "explorando",
+              "label": "Ainda estou explorando"
+            }
           ]
         },
         {
@@ -252,40 +486,87 @@
           "tipo": "multipla",
           "texto": "O que vocês já usam no dia a dia? Pode marcar vários.",
           "opcoes": [
-            { "valor": "planilhas", "label": "Planilhas" },
-            { "valor": "crm", "label": "CRM" },
-            { "valor": "erp", "label": "ERP / gestão" },
-            { "valor": "whatsapp", "label": "WhatsApp" },
-            { "valor": "bi", "label": "Dashboards / BI" },
-            { "valor": "helpdesk", "label": "Sistema de atendimento" },
-            { "valor": "nada", "label": "Quase tudo no papel" }
+            {
+              "valor": "planilhas",
+              "label": "Planilhas"
+            },
+            {
+              "valor": "crm",
+              "label": "CRM"
+            },
+            {
+              "valor": "erp",
+              "label": "ERP / gestão"
+            },
+            {
+              "valor": "whatsapp",
+              "label": "WhatsApp"
+            },
+            {
+              "valor": "bi",
+              "label": "Dashboards / BI"
+            },
+            {
+              "valor": "helpdesk",
+              "label": "Sistema de atendimento"
+            },
+            {
+              "valor": "nada",
+              "label": "Quase tudo no papel"
+            }
           ]
-        },
-        {
-          "id": "extra_final",
-          "tipo": "aberta",
-          "opcional": true,
-          "texto": "Quer deixar mais alguma coisa para a gente saber?",
-          "dica": "Opcional. Se não, é só pular."
         }
       ]
     }
   ],
   "captura": {
     "uso": "Etapa 'identificacao' grava o lead assim que o consentimento é dado, antes do diagnóstico. Entra no CRM mesmo se a pessoa abandonar. Base para reativação posterior (WhatsApp) e para o SDR abordar com o Mapa em mãos.",
-    "campos_lead": ["nome", "empresa", "cargo", "telefone", "consentimento", "origem_cliente_anfitriao", "data_evento"],
+    "campos_lead": [
+      "nome",
+      "empresa",
+      "cargo",
+      "telefone",
+      "consentimento",
+      "origem_cliente_anfitriao",
+      "data_evento"
+    ],
     "origem_cliente_anfitriao": "Preenchido pelo link/QR (ex.: ?anfitriao=slug), não perguntado."
   },
   "regras_pontuacao": {
     "descricao": "Score de cada gargalo = resposta da escala (0 a 3) x 10, +20 se for a 'maior_dor', +10 se a area_dor mapear para ele. Ranking top 3 vira o Mapa. A pergunta 'maior_dor' oferece só os 4 gargalos que mais pontuaram na escala. Impacto financeiro estimado = horas_perdidas x 4,3 semanas x custo/hora de referência, exibido sempre como estimativa.",
     "area_para_gargalos": {
-      "comercial": ["demanda_comercial"],
-      "marketing": ["demanda_comercial", "controle"],
-      "financeiro": ["manual_repetitivo", "informacao", "controle"],
-      "administrativo": ["manual_repetitivo", "processo", "conhecimento"],
-      "operacoes": ["capacidade", "processo", "integracao"],
-      "atendimento": ["comunicacao", "capacidade", "conhecimento"],
-      "ti": ["integracao", "informacao", "controle"]
+      "comercial": [
+        "demanda_comercial"
+      ],
+      "marketing": [
+        "demanda_comercial",
+        "controle"
+      ],
+      "financeiro": [
+        "manual_repetitivo",
+        "informacao",
+        "controle"
+      ],
+      "administrativo": [
+        "manual_repetitivo",
+        "processo",
+        "conhecimento"
+      ],
+      "operacoes": [
+        "capacidade",
+        "processo",
+        "integracao"
+      ],
+      "atendimento": [
+        "comunicacao",
+        "capacidade",
+        "conhecimento"
+      ],
+      "ti": [
+        "integracao",
+        "informacao",
+        "controle"
+      ]
     }
   }
 }

@@ -27,8 +27,9 @@ const brl = (n) => Number(n).toLocaleString("pt-BR", { style: "currency", curren
 const dataBR = (iso) => new Date(iso).toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
 
 const ABERTAS = [
-  ["dor_aberta", "Onde o tempo/dinheiro vaza"], ["ultima_vez", "Última vez que custou caro"], ["ja_tentou", "O que já tentaram"],
-  ["varinha", "Tarefa que automatizaria amanhã"], ["extra_final", "Recado final"],
+  ["dor_aberta", "Onde o tempo/dinheiro vaza"], ["historia", "Última vez que custou caro e o que já tentaram"],
+  // perguntas de versões anteriores do questionário (leads antigos)
+  ["ultima_vez", "Última vez que custou caro"], ["ja_tentou", "O que já tentaram"], ["varinha", "Tarefa que automatizaria amanhã"], ["extra_final", "Recado final"],
 ];
 let leads = [];
 
@@ -188,12 +189,12 @@ const celula = (v) => {
   return `"${s.replace(/"/g, '""')}"`;
 };
 function exportarCSV() {
-  const cab = ["data", "nome", "empresa", "cargo", "telefone", "email", "anfitriao", "status", "gargalo_1", "pontos_1", "gargalo_2", "gargalo_3", "porte", "setor", "area_dor", "maior_dor", "impacto", "horas_semana", "prazo", "faturamento", "quem_decide", "investimento", "dor_aberta", "ultima_vez", "ja_tentou", "varinha", "extra_final", "autorizou_contato"];
+  const cab = ["data", "nome", "empresa", "cargo", "telefone", "email", "anfitriao", "status", "gargalo_1", "pontos_1", "gargalo_2", "gargalo_3", "porte", "setor", "area_dor", "maior_dor", "impacto", "horas_semana", "prazo", "faturamento", "quem_decide", "investimento", "dor_aberta", "historia", "ultima_vez", "ja_tentou", "varinha", "extra_final", "autorizou_contato"];
   const linhas = filtrados().map((l) => {
     const a = (l.resp && l.resp.respostas) || {}, t = top3(l.resp);
     return [l.created_at, l.nome, l.empresa, l.cargo, l.telefone, l.email, l.anfitriao, l.resp ? "concluiu" : "abandonou",
       t[0] ? nomeGargalo(t[0][0]) : "", t[0] ? t[0][1] : "", t[1] ? nomeGargalo(t[1][0]) : "", t[2] ? nomeGargalo(t[2][0]) : "",
-      a.porte, a.setor, a.area_dor, a.maior_dor ? nomeGargalo(a.maior_dor) : "", a.impacto, a.horas_perdidas, a.prazo, a.faturamento, a.quem_decide, a.investimento, a.dor_aberta || a.texto_livre, a.ultima_vez, a.ja_tentou, a.varinha, a.extra_final, l.consentimento ? "sim" : "nao"].map(celula).join(",");
+      a.porte, a.setor, a.area_dor, a.maior_dor ? nomeGargalo(a.maior_dor) : "", a.impacto, a.horas_perdidas, a.prazo, a.faturamento, a.quem_decide, a.investimento, a.dor_aberta || a.texto_livre, a.historia, a.ultima_vez, a.ja_tentou, a.varinha, a.extra_final, l.consentimento ? "sim" : "nao"].map(celula).join(",");
   });
   const blob = new Blob(["﻿" + [cab.join(","), ...linhas].join("\r\n")], { type: "text/csv;charset=utf-8" });
   const a = el("a", { href: URL.createObjectURL(blob), download: `leads-evento-${new Date().toISOString().slice(0, 10)}.csv` });

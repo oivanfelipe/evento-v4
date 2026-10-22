@@ -297,7 +297,7 @@ async function transcrever(blob) {
 
 // ---------- resultado ----------
 function relatoParaIA() {
-  return [resp.dor_aberta, resp.ultima_vez, resp.varinha].filter(Boolean).join(" | ").slice(0, 650);
+  return [resp.dor_aberta, resp.historia].filter(Boolean).join(" | ").slice(0, 650);
 }
 
 async function personalizar(mapa) {
@@ -342,13 +342,14 @@ async function finalizar() {
 
 const FORCA = { forte: "Verificado na fonte", media: "Relato com ressalva" };
 const PORTE = { pequena: "pequena", media: "média", grande: "grande" };
+// Só a faixa do porte confirmado: o número exato de funcionários nem sempre é confiável nas fontes.
+const FAIXA = { pequena: "até 50 funcionários", media: "51 a 500 funcionários", grande: "mais de 500 funcionários" };
 
 function cartaoCaso(c) {
   const nome = c.empresa || c.titulo;
-  const func = c.funcionarios && c.porte_confirmado ? `, ~${c.funcionarios.toLocaleString("pt-BR")} funcionários` : "";
   const mets = (c.metricas || []).filter((m) => m.indicador && (m.depois || m.variacao)).slice(0, 3);
   return h("div", { class: "caso" },
-    h("strong", {}, nome + func),
+    h("strong", {}, nome),
     h("p", {}, h("b", {}, "Problema: "), c.problema),
     h("p", {}, h("b", {}, "O que fizeram: "), c.solucao),
     h("p", {}, h("b", {}, "Resultado: "), c.resultado),
@@ -357,14 +358,27 @@ function cartaoCaso(c) {
     c.esforco_implantacao ? h("p", {}, h("b", {}, "Esforço: "), c.esforco_implantacao) : null,
     h("span", { class: "tag" }, FORCA[c.forca] || c.forca),
     h("span", { class: "tag" }, `${c.pais}${c.data_fonte ? ", " + String(c.data_fonte).slice(0, 4) : ""}`),
-    h("span", { class: "tag" }, c.porte_confirmado ? `Empresa ${PORTE[c.porte]}` : `Porte ${PORTE[c.porte]} (estimado)`),
+    h("span", { class: "tag" }, c.porte_confirmado ? `Empresa ${PORTE[c.porte]} (${FAIXA[c.porte]})` : `Porte ${PORTE[c.porte]} (estimado)`),
     c.outro_porte ? h("span", { class: "tag" }, "Porte diferente do seu: o princípio se adapta") : null,
     h("div", {}, h("a", { href: c.fonte_url, target: "_blank", rel: "noopener noreferrer" }, c.fonte_nome || "Fonte")));
 }
 
+// Só o Mapa vai para o PDF: o CSS de impressão esconde a conversa, o cabeçalho e os botões.
+// O título da página vira o nome do arquivo sugerido ao salvar.
+function salvarPDF() {
+  const original = document.title;
+  const limpo = (resp.empresa || "empresa").replace(/[^\p{L}\p{N} ]/gu, "").trim().slice(0, 40);
+  document.title = `Mapa de Gargalos - ${limpo}`;
+  const restaurar = () => { document.title = original; window.removeEventListener("afterprint", restaurar); };
+  window.addEventListener("afterprint", restaurar);
+  window.print();
+}
+
 function renderMapa(m) {
   const nome = primeiroNome();
+  const hoje = new Date().toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
   const el = h("section", { class: "mapa" },
+    h("div", { class: "so-impressao cabecalho-pdf" }, h("b", {}, "V4 Company"), h("span", {}, `Mapa de Gargalos e Oportunidades · ${resp.empresa} · ${hoje}`)),
     h("div", { class: "etapa" }, "Seu resultado"),
     h("h2", {}, `${nome ? nome + ", este" : "Este"} é o Mapa de Gargalos de ${resp.empresa}`),
     h("p", { class: "resumo" }, m.resumo || `Suas respostas apontam ${m.itens.map((i) => i.nome.toLowerCase()).join(", ")} como os três pontos que mais seguram a empresa. A ordem abaixo é a ordem em que vale atacar.`),
@@ -379,7 +393,7 @@ function renderMapa(m) {
       h("div", { class: "passo" }, h("h4", {}, "Primeiro passo (próxima semana)"), h("p", {}, i.primeiro_passo)),
       h("div", { class: "passo" }, h("h4", {}, "Quem já fez, com fonte"), i.casos.map(cartaoCaso)))),
     h("p", { class: "nota" }, "Os resultados dos casos foram reportados pelas próprias empresas ou fornecedores nas fontes indicadas e não são promessa de resultado. O texto deste Mapa foi " + (m.ia ? "personalizado com IA a partir" : "montado a partir") + " das suas respostas e do banco de casos da V4 Company."),
-    h("div", { class: "acoes" }, h("button", { class: "btn", type: "button", onclick: () => window.print() }, "Salvar como PDF")));
+    h("div", { class: "acoes" }, h("button", { class: "btn", type: "button", onclick: salvarPDF }, "Salvar o Mapa em PDF")));
   $chat.append(el);
   $chat.scrollTop = el.offsetTop - 12;
 }
@@ -409,7 +423,7 @@ async function iniciar() {
   reenviarFila();
   $chat.append(h("div", { class: "capa" },
     h("h1", {}, "Onde a sua empresa trava?"),
-    h("p", {}, "Responda por toque, texto ou áudio. Em cerca de 7 minutos você recebe o seu Mapa de Gargalos e Oportunidades, com aplicações reais de IA e automação e casos de quem já fez.")));
+    h("p", {}, "Responda por toque, texto ou áudio. Em cerca de 5 minutos você recebe o seu Mapa de Gargalos e Oportunidades, com aplicações reais de IA e automação e casos de quem já fez.")));
   montarDock(h("button", { class: "btn", type: "button", onclick: () => { $chat.replaceChildren(); proximo(); } }, "Começar"));
 }
 iniciar();
