@@ -201,7 +201,27 @@ async function finalizar() {
   renderMapa(mapa);
 }
 
-const CONF = { alta: "Fonte primária", media: "Resultado autodeclarado" };
+const FORCA = { forte: "Verificado na fonte", media: "Relato com ressalva" };
+const PORTE = { pequena: "pequena", media: "média", grande: "grande" };
+
+function cartaoCaso(c) {
+  const nome = c.empresa || c.titulo;
+  const func = c.funcionarios ? `, ~${c.funcionarios.toLocaleString("pt-BR")} funcionários` : "";
+  const mets = (c.metricas || []).filter((m) => m.indicador && (m.depois || m.variacao)).slice(0, 3);
+  return h("div", { class: "caso" },
+    h("strong", {}, nome + func),
+    h("p", {}, h("b", {}, "Problema: "), c.problema),
+    h("p", {}, h("b", {}, "O que fizeram: "), c.solucao),
+    h("p", {}, h("b", {}, "Resultado: "), c.resultado),
+    mets.length ? h("div", {}, mets.map((m) => h("span", { class: "tag p" }, `${m.indicador}: ${m.antes ? m.antes + " → " : ""}${m.depois || m.variacao}`))) : null,
+    c.como_replicar && c.como_replicar.length ? h("div", { class: "passo" }, h("h4", {}, "Como replicar"), h("ul", {}, c.como_replicar.map((p) => h("li", {}, p)))) : null,
+    c.esforco_implantacao ? h("p", {}, h("b", {}, "Esforço: "), c.esforco_implantacao) : null,
+    h("span", { class: "tag" }, FORCA[c.forca] || c.forca),
+    h("span", { class: "tag" }, `${c.pais}${c.data_fonte ? ", " + String(c.data_fonte).slice(0, 4) : ""}`),
+    h("span", { class: "tag" }, c.porte_confirmado ? `Empresa ${PORTE[c.porte]}` : `Porte ${PORTE[c.porte]} (estimado)`),
+    c.outro_porte ? h("span", { class: "tag" }, "Porte diferente do seu: o princípio se adapta") : null,
+    h("div", {}, h("a", { href: c.fonte_url, target: "_blank", rel: "noopener noreferrer" }, c.fonte_nome || "Fonte")));
+}
 
 function renderMapa(m) {
   const primeiro = (resp.nome || "").split(" ")[0];
@@ -218,14 +238,7 @@ function renderMapa(m) {
       h("div", { class: "passo" }, h("h4", {}, "Oportunidade"), h("p", {}, i.oportunidade)),
       h("div", { class: "passo" }, h("h4", {}, "Onde aplicar IA e automação"), h("ul", {}, i.aplicacoes.map((a) => h("li", {}, a)))),
       h("div", { class: "passo" }, h("h4", {}, "Primeiro passo (próxima semana)"), h("p", {}, i.primeiro_passo)),
-      h("div", { class: "passo" }, h("h4", {}, "Quem já fez, com fonte"), i.casos.map((c) => h("div", { class: "caso" },
-        h("strong", {}, c.empresa || c.titulo),
-        h("p", {}, c.solucao),
-        h("p", {}, h("b", {}, "Resultado: "), c.resultado),
-        h("span", { class: "tag" }, CONF[c.confianca] || c.confianca),
-        h("span", { class: "tag" }, `${c.pais}, ${c.ano}`),
-        c.outro_porte ? h("span", { class: "tag" }, `Empresa de porte ${c.porte}: o princípio se adapta ao seu`) : null,
-        h("div", {}, h("a", { href: c.fonte_url, target: "_blank", rel: "noopener noreferrer" }, c.fonte_nome || "Fonte"))))))),
+      h("div", { class: "passo" }, h("h4", {}, "Quem já fez, com fonte"), i.casos.map(cartaoCaso))),
     h("p", { class: "nota" }, "Os resultados dos casos foram reportados pelas próprias empresas ou fornecedores nas fontes indicadas e não são promessa de resultado. O texto deste Mapa foi " + (m.ia ? "personalizado com IA a partir" : "montado a partir") + " das suas respostas e do banco de casos da V4 Company."),
     h("div", { class: "acoes" }, h("button", { class: "btn", type: "button", onclick: () => window.print() }, "Salvar como PDF")));
   $chat.append(el);
@@ -237,7 +250,7 @@ async function iniciar() {
   try {
     [perguntas, casos] = await Promise.all([
       fetch("../data/perguntas.json").then((r) => r.json()),
-      fetch("../data/pesquisa/casos-todos.json").then((r) => r.json()),
+      fetch("../data/pesquisa/casos-final.json").then((r) => r.json()),
     ]);
   } catch {
     $chat.append(h("p", { class: "erro" }, "Não consegui carregar o diagnóstico. Verifique a conexão e recarregue."));

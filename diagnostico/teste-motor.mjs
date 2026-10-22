@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { montarMapa } from "./motor.mjs";
 const perguntas = JSON.parse(readFileSync(new URL("../data/perguntas.json", import.meta.url)));
-const casos = JSON.parse(readFileSync(new URL("../data/pesquisa/casos-todos.json", import.meta.url)));
+const casos = JSON.parse(readFileSync(new URL("../data/pesquisa/casos-final.json", import.meta.url)));
 const resp = { porte: "pequena", setor: "servicos_b2b", area_dor: "financeiro", maturidade_ia: "individual",
   q_cap: 1, q_man: 3, q_inf: 2, q_dec: 0, q_pro: 1, q_int: 3, q_com: 0, q_con: 1, q_ctl: 2, q_dem: 1,
   maior_dor: "manual_repetitivo", impacto: "custo", horas_perdidas: 20, prazo: "rapido" };

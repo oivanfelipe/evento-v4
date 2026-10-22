@@ -27,12 +27,13 @@ export function pontuar(resp, perguntas) {
 function pesoCaso(c, g, resp) {
   let s = 0;
   if (c.gargalo !== g) s -= 3; // veio por gargalo secundário
-  if (c.porte === resp.porte) s += 4;
-  else if ((ADJACENTE[resp.porte] || []).includes(c.porte)) s += 2;
+  // porte só pesa cheio quando é confirmado por fonte
+  const cheio = c.porte_confirmado ? 1 : 0.5;
+  if (c.porte === resp.porte) s += 4 * cheio;
+  else if ((ADJACENTE[resp.porte] || []).includes(c.porte)) s += 2 * cheio;
   const areas = AREA_CASO[resp.area_dor] || [resp.area_dor];
   if (areas.includes(c.area)) s += 2;
-  if (c.confianca === "alta") s += 2;
-  if (c.tipo === "nominal") s += 1;
+  if (c.setor_chave && c.setor_chave === resp.setor) s += 3;
   if (c.pais === "Brasil") s += 1;
   if (resp.prazo === "rapido") {
     if (c.complexidade_implantacao === "baixa") s += 2;
@@ -42,12 +43,13 @@ function pesoCaso(c, g, resp) {
   return s;
 }
 
+// Casos fortes sempre antes dos médios; médios só completam quando faltam fortes.
 export function escolherCasos(g, resp, casos, n = 2, excluir = new Set()) {
   const cand = casos
-    .filter((c) => !excluir.has(c.id))
+    .filter((c) => c.tipo === "nominal" && !excluir.has(c.id))
     .filter((c) => c.gargalo === g || (c.gargalos_secundarios || []).includes(g))
     .map((c) => ({ c, s: pesoCaso(c, g, resp) }))
-    .sort((a, b) => b.s - a.s);
+    .sort((a, b) => (b.c.forca === "forte") - (a.c.forca === "forte") || b.s - a.s);
   const out = [];
   const usadas = new Set();
   for (const { c } of cand) {
