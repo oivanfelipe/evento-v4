@@ -1,0 +1,1711 @@
+[
+ {
+  "id": "M-001",
+  "porte": "media",
+  "gargalo": "manual_repetitivo",
+  "gargalos_secundarios": [
+   "capacidade"
+  ],
+  "area": "operacoes",
+  "setor": "indústria (relógios)",
+  "setor_chave": "industria",
+  "tipo": "nominal",
+  "empresa": "Seculus da Amazônia",
+  "pais": "Brasil",
+  "titulo": "Robôs RPA eliminam digitação manual de pedidos e cadastro de produtos",
+  "problema": "Trade marketing e cadastro de produtos eram 100% manuais, em planilhas e digitação no ERP, com erros (cerca de 100 h/mês só na remessa).",
+  "solucao": "RPA entregue pela Triad Systems consulta os dados, gera ordens de remessa no ERP e lê especificações técnicas de planilhas para cadastrar produtos.",
+  "ferramentas": [
+   "UiPath",
+   "SAP",
+   "Triad Systems"
+  ],
+  "resultado": "Economia de cerca de 130 horas por mês de trabalho nos dois processos digitalizados (antes, cerca de 100 h/mês só na remessa); menos erros de digitação.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Baguete - Seculus implementa RPA",
+  "fonte_url": "https://www.baguete.com.br/noticias/seculus-implementa-rpa",
+  "ano": 2022,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2022-03",
+  "metricas": [
+   {
+    "indicador": "Horas de trabalho por mês nos dois processos",
+    "antes": null,
+    "depois": null,
+    "variacao": "economia de cerca de 130 h/mês"
+   },
+   {
+    "indicador": "Horas/mês só na remessa (trade marketing)",
+    "antes": "cerca de 100 h",
+    "depois": null,
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A matéria não informa prazo, custo ou equipe; cita a integradora Triad Systems e a plataforma UiPath integrada ao SAP.",
+  "como_replicar": [
+   "Liste os processos em que alguém copia dados de planilha para o ERP e meça as horas/mês.",
+   "Escolha um processo estável e de regras claras (ex.: gerar ordem de remessa a partir de planilha).",
+   "Automatize com RPA (ex.: UiPath, Power Automate) lendo a planilha padronizada e lançando no ERP.",
+   "Compare horas e erros antes/depois e só então replique para o processo seguinte."
+  ],
+  "trecho_comprovante": "A digitalização dos dois processos que foram aprimorados economizou em torno de 130 horas por mês de trabalho.",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida; número e data (17/03/2022) confirmados. Funcionários não informados na fonte nem achados em busca; porte mantido como média sem confirmação. Data 2022 limita a força a média."
+ },
+ {
+  "id": "M-002",
+  "porte": "media",
+  "gargalo": "manual_repetitivo",
+  "gargalos_secundarios": [
+   "processo"
+  ],
+  "area": "ti",
+  "setor": "serviços financeiros (mobilidade/pagamentos)",
+  "setor_chave": "financeiro_seguros",
+  "tipo": "nominal",
+  "empresa": "Veloe (Alelo)",
+  "pais": "Brasil",
+  "titulo": "Robôs tratam chamados de TI repetitivos com SLA de 100%",
+  "problema": "Muitos chamados de TI abertos por clientes eram repetitivos e pressionavam o cumprimento do SLA.",
+  "solucao": "Centro de Operações Robóticas gerenciado pela Proative, com RPA da AutomationEdge, resolve tipos padronizados de chamado.",
+  "ferramentas": [
+   "AutomationEdge",
+   "Proative"
+  ],
+  "resultado": "Cerca de 1.000 chamados/mês tratados por robôs, com cerca de 1,8 mil horas/mês economizadas (atendimento humano médio de 45 min); SLA de 100% nos robôs contra cerca de 96% nos humanos; 100% de assertividade nos chamados do robô.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete - Veloe: RPA com AutomationEdge",
+  "fonte_url": "https://www.baguete.com.br/noticias/veloe-rpa-com-automationedge",
+  "ano": 2024,
+  "confianca": "alta",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2024-01",
+  "metricas": [
+   {
+    "indicador": "Horas economizadas por mês",
+    "antes": null,
+    "depois": "cerca de 1,8 mil",
+    "variacao": "-"
+   },
+   {
+    "indicador": "Chamados tratados por robôs por mês",
+    "antes": null,
+    "depois": "cerca de 1.000",
+    "variacao": null
+   },
+   {
+    "indicador": "Cumprimento de SLA",
+    "antes": "cerca de 96% (humanos)",
+    "depois": "100% (robô)",
+    "variacao": null
+   },
+   {
+    "indicador": "Tempo médio por atendimento humano",
+    "antes": "45 min",
+    "depois": null,
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A matéria não informa prazo, custo ou equipe; o projeto foi entregue pela Proative como Centro de Operações Robóticas.",
+  "como_replicar": [
+   "Extraia do service desk os tipos de chamado mais repetitivos (reset de senha, acessos, etc.).",
+   "Documente o passo a passo de 2 ou 3 tipos com regras claras e sem exceções.",
+   "Automatize esses tipos com RPA (ex.: AutomationEdge, Power Automate) ligado à ferramenta de chamados.",
+   "Meça SLA e horas por tipo de chamado e vá incluindo novos tipos."
+  ],
+  "trecho_comprovante": "totalizando cerca de 1,8 mil horas economizadas mensalmente",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida (30/01/2024); números confirmados. Veloe integra o grupo Elopar (Alelo, Livelo, Veloe), estimado em cerca de 2.058 funcionários (Revelio Labs, set/2025), mas o quadro só da Veloe não foi achado: porte não confirmado e possivelmente diferente de média. Números autodeclarados pelo integrador e pela empresa."
+ },
+ {
+  "id": "M-003",
+  "porte": "media",
+  "gargalo": "manual_repetitivo",
+  "gargalos_secundarios": [
+   "capacidade",
+   "demanda_comercial"
+  ],
+  "area": "rh",
+  "setor": "software de RH / ponto",
+  "setor_chave": "tecnologia",
+  "tipo": "nominal",
+  "empresa": "Faceponto",
+  "pais": "Brasil",
+  "titulo": "Assistente de RH com IA ranqueia currículos em minutos",
+  "problema": "A triagem manual de 30 currículos levava cerca de 4 horas e a de 100 candidatos de 2 a 3 dias; bons candidatos eram contratados por concorrentes antes.",
+  "solucao": "O assistente Lexia (multiagente) ranqueia currículos contra os critérios da vaga, pontua DISC, analisa áudios e gera documentos trabalhistas, com chatbot no WhatsApp.",
+  "ferramentas": [
+   "Amazon Bedrock",
+   "Claude",
+   "Amazon Nova Pro",
+   "Amazon Textract",
+   "Amazon Transcribe",
+   "AWS Lambda"
+  ],
+  "resultado": "Análise de 30 currículos de 4 horas para 2 minutos; velocidade de contratação +95%; tempo até a primeira entrevista -50% (números declarados pela empresa na publicação da AWS). A plataforma atende clientes de 10 a mais de 12.000 colaboradores.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "AWS Brasil Blog - Faceponto",
+  "fonte_url": "https://aws.amazon.com/pt/blogs/aws-brasil/como-a-faceponto-esta-transformando-a-gestao-de-rh-com-ia-generativa-usando-amazon-bedrock-e-amazon-nova/",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2026-05",
+  "metricas": [
+   {
+    "indicador": "Tempo de análise de 30 currículos",
+    "antes": "4 horas",
+    "depois": "2 minutos",
+    "variacao": "-99,17% (segundo a fonte)"
+   },
+   {
+    "indicador": "Velocidade de contratação",
+    "antes": null,
+    "depois": null,
+    "variacao": "+95%"
+   },
+   {
+    "indicador": "Tempo até a primeira entrevista",
+    "antes": null,
+    "depois": null,
+    "variacao": "-50%"
+   }
+  ],
+  "esforco_implantacao": "A fonte não informa prazo, custo ou equipe de implantação.",
+  "como_replicar": [
+   "Defina por escrito os critérios objetivos de cada vaga (requisitos e peso).",
+   "Use um modelo de linguagem para extrair dados do currículo e pontuar contra os critérios, devolvendo ranking dos 5 melhores.",
+   "Mantenha o recrutador decidindo: a IA só ordena e justifica.",
+   "Meça tempo de triagem e tempo até a primeira entrevista antes e depois."
+  ],
+  "trecho_comprovante": "reduzindo o tempo de análise de currículos de 4 horas para 2 minutos",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida (14/05/2026); números confirmados e autodeclarados. Quadro da Faceponto não informado (empresa potiguar de ponto eletrônico); os 'de 10 a 12.000 colaboradores' referem-se aos clientes. Porte não confirmado; forte exigiria porte confirmado."
+ },
+ {
+  "id": "M-004",
+  "porte": "grande",
+  "gargalo": "controle",
+  "gargalos_secundarios": [
+   "manual_repetitivo"
+  ],
+  "area": "financeiro",
+  "setor": "administração de condomínios (fiscal)",
+  "setor_chave": "construcao_imoveis",
+  "tipo": "nominal",
+  "empresa": "Guarida",
+  "pais": "Brasil",
+  "titulo": "Captura automática de notas fiscais e aprovação via WhatsApp",
+  "problema": "O processamento manual de notas fiscais levava mais de 3 minutos por documento, em cerca de 30 mil notas por mês.",
+  "solucao": "Captura automatizada de documentos fiscais e fluxo de aprovação automatizado (inclusive via WhatsApp) com a Qive.",
+  "ferramentas": [
+   "Qive",
+   "WhatsApp"
+  ],
+  "resultado": "Tempo por documento de mais de 3 min para cerca de 1 min (cerca de dois terços a menos); economia de mais de 1.000 horas de trabalho por mês; documentos disponíveis em até 24 h da emissão. Administra mais de 2.300 condomínios.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Rádio Caiçara - Guarida acelera gestão fiscal com automação",
+  "fonte_url": "https://www.radiocaicara.com.br/guarida-acelera-gestao-fiscal-com-automacao/",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2026-10",
+  "metricas": [
+   {
+    "indicador": "Tempo de processamento por nota fiscal",
+    "antes": "mais de 3 min",
+    "depois": "cerca de 1 min",
+    "variacao": "cerca de -2/3"
+   },
+   {
+    "indicador": "Horas de trabalho economizadas por mês",
+    "antes": null,
+    "depois": "mais de 1.000",
+    "variacao": null
+   },
+   {
+    "indicador": "Notas processadas por mês",
+    "antes": null,
+    "depois": "cerca de 30.000",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A fonte não informa prazo, custo ou equipe.",
+  "como_replicar": [
+   "Meça o tempo médio por nota fiscal e o volume mensal.",
+   "Automatize a captura das notas (e-mail, portal, SEFAZ) com uma plataforma de gestão de documentos fiscais (ex.: Qive).",
+   "Monte o fluxo de aprovação por alçada, com aviso por WhatsApp ou e-mail ao aprovador.",
+   "Acompanhe tempo por documento e pendências por semana."
+  ],
+  "trecho_comprovante": "reduziu em cerca de dois terços o tempo de processamento de notas fiscais",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida (07/10/2026). Porte corrigido para grande por indício: InfoJobs lista a Guarida como 'Grande (acima de 500 funcionários)' (cadastro sem data), além de ~2.300 condomínios e ~110 mil clientes; fonte oficial de funcionários não achada. Fonte é rádio regional (release); força limitada a média."
+ },
+ {
+  "id": "M-005",
+  "porte": "media",
+  "gargalo": "capacidade",
+  "gargalos_secundarios": [
+   "manual_repetitivo"
+  ],
+  "area": "juridico",
+  "setor": "legaltech (contencioso de massa)",
+  "setor_chave": "tecnologia",
+  "tipo": "nominal",
+  "empresa": "Alfaneo",
+  "pais": "Brasil",
+  "titulo": "Agentes de IA redigem defesas judiciais em massa",
+  "problema": "No contencioso de massa não se pode perder prazo, e a redação manual de defesas é lenta e repetitiva.",
+  "solucao": "Plataforma multiagente responde até 150 perguntas por defesa em paralelo, com RAG híbrido sobre os autos, e tem módulo de detecção de fraude.",
+  "ferramentas": [
+   "Amazon Bedrock",
+   "Bedrock AgentCore"
+  ],
+  "resultado": "Tempo de elaboração reduzido em mais de 50% (defesas de 30 a 40 min para 8 a 10 min em alguns casos); taxa de êxito de 40% para 60%; mais de 20.000 contestações protocoladas na plataforma.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "AWS Brasil Blog - Alfaneo",
+  "fonte_url": "https://aws.amazon.com/pt/blogs/aws-brasil/como-a-alfaneo-reduz-processos-judiciais-de-horas-a-minutos-com-amazon-bedrock/",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2026-05",
+  "metricas": [
+   {
+    "indicador": "Tempo de preparação de defesa",
+    "antes": "30 a 40 min",
+    "depois": "8 a 10 min (em alguns casos)",
+    "variacao": "mais de -50%"
+   },
+   {
+    "indicador": "Taxa de êxito (arquivados/improcedentes)",
+    "antes": "40%",
+    "depois": "60%",
+    "variacao": "+20 p.p."
+   },
+   {
+    "indicador": "Contestações protocoladas",
+    "antes": null,
+    "depois": "mais de 20.000",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A fonte não informa prazo de implantação, custo ou equipe (descreve a equipe apenas como 'enxuta').",
+  "como_replicar": [
+   "Padronize as teses e perguntas recorrentes das defesas mais comuns.",
+   "Indexe os documentos do processo e use um modelo para responder cada pergunta citando o trecho de origem.",
+   "Gere a minuta e deixe o advogado revisar e assinar.",
+   "Meça tempo por peça e taxa de êxito antes de ampliar para outras ações."
+  ],
+  "trecho_comprovante": "reduzindo em mais de 50% o tempo operacional dos escritórios de advocacia de massa",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida (22/05/2026); números confirmados e autodeclarados. A fonte descreve a equipe como 'enxuta' (startup fundada em 2019): é provável que seja pequena, mas não há número; porte não confirmado."
+ },
+ {
+  "id": "M-006",
+  "porte": "media",
+  "gargalo": "capacidade",
+  "gargalos_secundarios": [
+   "conhecimento",
+   "manual_repetitivo"
+  ],
+  "area": "operacoes",
+  "setor": "saúde (plano/atenção primária)",
+  "setor_chave": "saude",
+  "tipo": "nominal",
+  "empresa": "Sami Saúde",
+  "pais": "Brasil",
+  "titulo": "IA resume atendimentos e libera horas de coordenadores de cuidado",
+  "problema": "Enfermeiros gastavam horas transformando notas e áudios em relatórios; chats precisavam de resumo manual e o jurídico buscava contratos manualmente.",
+  "solucao": "Gemini no Workspace gera resumos de pacientes; um copiloto em Vertex AI dá informação ao enfermeiro; a ferramenta Verificare (hackathon de 48 h) busca contratos.",
+  "ferramentas": [
+   "Vertex AI",
+   "Gemini for Google Workspace",
+   "Google Cloud",
+   "CI&T"
+  ],
+  "resultado": "100% dos resumos de pacientes gerados por IA, 81% aprovados sem edição; mais de 900 horas/mês economizadas para coordenadores de cuidado (+13% de produtividade). Projeções (+50% de pessoas atendidas por dia, -30% de encaminhamentos) são expectativas, não medições.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Google Workspace - caso Sami",
+  "fonte_url": "https://workspace.google.com/customers/sami",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": 300,
+  "porte_confirmado": true,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Horas economizadas por mês",
+    "antes": null,
+    "depois": "mais de 900",
+    "variacao": "+13% de produtividade"
+   },
+   {
+    "indicador": "Resumos de pacientes gerados por IA",
+    "antes": null,
+    "depois": "100%",
+    "variacao": null
+   },
+   {
+    "indicador": "Resumos aprovados sem edição",
+    "antes": null,
+    "depois": "81%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A página não informa prazo geral de implantação; cita um hackathon de 48 horas que criou a ferramenta Verificare.",
+  "como_replicar": [
+   "Escolha um fluxo de documentação com notas e áudios longos (ex.: relatórios de atendimento).",
+   "Ative um assistente de IA do seu pacote de escritório (ex.: Gemini no Workspace) para gerar o resumo padronizado.",
+   "Deixe o profissional revisar e meça a taxa de aprovação sem edição.",
+   "Evolua para uma ferramenta própria (ex.: busca em contratos) só depois de provar o ganho."
+  ],
+  "trecho_comprovante": "900+ hours saved monthly for care coordinators, equal to a 13% increase in productivity",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida; números e equipe de 300 pessoas ('Sami's team of 300') confirmados, então porte média confirmado. A página não mostra data de publicação, por isso a força fica em média (forte exigiria data >= 2023 visível). Atenção: o texto fala de enfermeiros e os resultados de coordenadores de cuidado."
+ },
+ {
+  "id": "M-007",
+  "porte": "media",
+  "gargalo": "capacidade",
+  "gargalos_secundarios": [
+   "manual_repetitivo"
+  ],
+  "area": "comercial",
+  "setor": "varejo/suprimentos B2B",
+  "setor_chave": "varejo_ecommerce",
+  "tipo": "nominal",
+  "empresa": "Gimba",
+  "pais": "Brasil",
+  "titulo": "IA generativa cadastra produtos no catálogo em 2 minutos",
+  "problema": "Fabricantes enviavam dados em formatos diferentes e a equipe padronizava e redigia descrições manualmente (catálogo de cerca de 30 mil itens).",
+  "solucao": "Plataforma com Amazon Bedrock (Claude) gera descrições no padrão de comunicação da Gimba, com HTML, via engenharia de prompt, implantada com o parceiro Flexa Cloud.",
+  "ferramentas": [
+   "Amazon Bedrock",
+   "Claude-2",
+   "Amazon SageMaker",
+   "Flexa Cloud"
+  ],
+  "resultado": "Tempo de cadastro por produto de 13 para 2 minutos (-84%); cerca de 300 novos produtos por mês; custo da solução reduzido em mais de 50%; expectativa de +10% de buscas orgânicas online.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "AWS - caso Gimba",
+  "fonte_url": "https://aws.amazon.com/solutions/case-studies/gimba-case-study/",
+  "ano": 2024,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Tempo de cadastro por produto",
+    "antes": "13 min",
+    "depois": "2 min",
+    "variacao": "-84%"
+   },
+   {
+    "indicador": "Custo da solução",
+    "antes": null,
+    "depois": null,
+    "variacao": "mais de -50%"
+   },
+   {
+    "indicador": "Busca orgânica online",
+    "antes": null,
+    "depois": null,
+    "variacao": "+10% (expectativa)"
+   }
+  ],
+  "esforco_implantacao": "A página não informa prazo, custo ou equipe; cita 900 produtos de amostra no treinamento inicial e o parceiro Flexa Cloud.",
+  "como_replicar": [
+   "Separe uma amostra de produtos já bem descritos como modelo de padrão.",
+   "Escreva o prompt com o padrão de comunicação e o formato (HTML) desejados.",
+   "Rode o modelo sobre os dados brutos dos fabricantes e faça revisão humana por amostragem.",
+   "Meça minutos por cadastro e erros antes de automatizar todo o catálogo."
+  ],
+  "trecho_comprovante": "reduces product registration time by 84%",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida; número confirmado. Sem data de publicação (apenas copyright 2026); o ano 2024 era inferência do modelo Claude-2 e não é confirmado. Porte em dúvida: estimativas de terceiros variam de 385 (RocketReach) a 501-1.000 (Indeed) e 'acima de 500' (InfoJobs); pode ser grande."
+ },
+ {
+  "id": "M-008",
+  "porte": "pequena",
+  "gargalo": "informacao",
+  "gargalos_secundarios": [
+   "demanda_comercial",
+   "manual_repetitivo"
+  ],
+  "area": "comercial",
+  "setor": "software (ABM B2B)",
+  "setor_chave": "tecnologia",
+  "tipo": "nominal",
+  "empresa": "Maestro ABM",
+  "pais": "Brasil",
+  "titulo": "IA gera dossiês de contas e pitches para vendas B2B",
+  "problema": "Montar um dossiê de conta estratégica levava cerca de 8 horas e o time vendia menos do que pesquisava.",
+  "solucao": "Agentes em Amazon Bedrock/Nova geram dossiês a partir de dados públicos e da estrutura organizacional, além de pitches personalizados e campanhas multicanal.",
+  "ferramentas": [
+   "Amazon Bedrock",
+   "Amazon Nova Light",
+   "Amazon Titan",
+   "DocumentDB"
+  ],
+  "resultado": "Dossiê de 8 horas para 5 minutos; cadastro de contas 50% mais rápido; implantação de 4 meses para 6 semanas; +15% de eficiência de vendas nos times que usam (declarado pela empresa).",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "AWS Brasil Blog - Maestro ABM",
+  "fonte_url": "https://aws.amazon.com/pt/blogs/aws-brasil/como-a-maestro-abm-esta-transformando-vendas-b2b-complexas-com-ia-generativa-usando-amazon-bedrock-e-amazon-nova-e-amazon-titan/",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": 8,
+  "porte_confirmado": false,
+  "data_fonte": "2026-03",
+  "metricas": [
+   {
+    "indicador": "Tempo para gerar dossiê de conta",
+    "antes": "8 horas",
+    "depois": "5 minutos",
+    "variacao": "mais de -95%"
+   },
+   {
+    "indicador": "Velocidade de cadastro de novas contas",
+    "antes": null,
+    "depois": null,
+    "variacao": "+50%"
+   },
+   {
+    "indicador": "Tempo de implantação do produto",
+    "antes": "4 meses",
+    "depois": "6 semanas",
+    "variacao": null
+   },
+   {
+    "indicador": "Eficiência de vendas (times usuários)",
+    "antes": null,
+    "depois": null,
+    "variacao": "+15%"
+   }
+  ],
+  "esforco_implantacao": "Segundo a fonte, a implantação da solução caiu de 4 meses para 6 semanas.",
+  "como_replicar": [
+   "Defina o modelo de dossiê (dados da conta, decisores, dores, gatilhos) que o vendedor precisa.",
+   "Alimente um modelo de linguagem com fontes públicas (site, notícias, LinkedIn) para preencher o modelo.",
+   "Gere um pitch por decisor e revise antes do contato.",
+   "Meça horas de pesquisa por conta e taxa de reunião agendada."
+  ],
+  "trecho_comprovante": "redução de 8 horas para 5 minutos no tempo de geração de um dossiê completo de conta estratégica",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida (16/03/2026); números confirmados. Porte provavelmente pequeno: reportagem de 2022 (Startupi) cita equipe de 8 pessoas após pré-seed de US$ 130 mil; dado antigo, por isso porte_confirmado=false. Fora da faixa média (51-500) a menos que tenha crescido muito: recomenda-se realocar para o banco de pequenas."
+ },
+ {
+  "id": "M-009",
+  "porte": "media",
+  "gargalo": "informacao",
+  "gargalos_secundarios": [
+   "manual_repetitivo"
+  ],
+  "area": "outro",
+  "setor": "inteligência de dados (ESG)",
+  "setor_chave": "tecnologia",
+  "tipo": "nominal",
+  "empresa": "Humanizadas",
+  "pais": "Brasil",
+  "titulo": "Gemini classifica comentários de stakeholders e reduz 95% do esforço de pesquisa",
+  "problema": "Classificar milhares de comentários de stakeholders (tom, temas, toxicidade, identificação de pessoas) e extrair dados de PDFs era trabalho manual do time de Pesquisa.",
+  "solucao": "A Hu Platform, hospedada no Google Cloud, usa Vertex AI e Gemini para classificar comentários (SWOT, sentimento, 150 temas), detectar toxicidade e identificação de pessoas e extrair dados de documentos; o time só valida os possíveis positivos.",
+  "ferramentas": [
+   "Gemini",
+   "Vertex AI",
+   "Google Kubernetes Engine",
+   "App Engine",
+   "Cloud Run",
+   "Dialogflow"
+  ],
+  "resultado": "Economia de 95% do esforço do time de Pesquisa na análise de comentários de stakeholders; redução de 50% das atividades manuais com Vertex AI; mais de 13 mil comentários processados sem nenhum falso negativo nas checagens de toxicidade e identificação de pessoas; uptime acima de 99,3%.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Google Cloud - Caso de sucesso Humanizadas",
+  "fonte_url": "https://cloud.google.com/customers/intl/pt-br/humanizadas",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Esforço do time de Pesquisa na análise de comentários",
+    "antes": null,
+    "depois": null,
+    "variacao": "-95%"
+   },
+   {
+    "indicador": "Atividades manuais do time de Pesquisa",
+    "antes": null,
+    "depois": null,
+    "variacao": "-50%"
+   },
+   {
+    "indicador": "Falsos negativos em mais de 13 mil comentários",
+    "antes": null,
+    "depois": "0",
+    "variacao": null
+   },
+   {
+    "indicador": "Uptime",
+    "antes": null,
+    "depois": "acima de 99,3%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Segundo a página, a empresa entrou no Google for Startups em agosto de 2023 e o ambiente entrou em produção em novembro de 2023 (cerca de 3 meses).",
+  "como_replicar": [
+   "Defina as categorias que importam (tema, sentimento, toxicidade) e rotule uma amostra de comentários.",
+   "Use um modelo de linguagem para classificar o restante e extrair dados de PDFs com saída estruturada.",
+   "Mande para revisão humana só o que foi marcado como possível positivo.",
+   "Meça o esforço de revisão e os falsos negativos em um lote de teste."
+  ],
+  "trecho_comprovante": "Economia de 95% do esforço do time de Pesquisa na análise de comentaríos de stakeholders",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Fonte primária encontrada e lida (página de caso do Google Cloud, lida via download direto), substituindo a lista do blog Google. O 95% é a redução conjunta do esforço da pesquisa; a lista dizia '95% do tempo'. A página não tem data visível (lista do blog: 20/03/2025). Startup spin-off da USP; número de funcionários não achado (porte provavelmente pequeno, não confirmado)."
+ },
+ {
+  "id": "M-010",
+  "porte": "pequena",
+  "gargalo": "controle",
+  "gargalos_secundarios": [
+   "informacao"
+  ],
+  "area": "financeiro",
+  "setor": "tributário (software)",
+  "setor_chave": "tecnologia",
+  "tipo": "nominal",
+  "empresa": "Tributei",
+  "pais": "Brasil",
+  "titulo": "IA monitora mudanças do ICMS e automatiza cálculos",
+  "problema": "Acompanhar mudanças na legislação do ICMS e calcular tributos manualmente é arriscado e lento.",
+  "solucao": "IA do Google Cloud monitora alterações da legislação de ICMS e automatiza cálculos e a gestão do imposto.",
+  "ferramentas": [
+   "Google Cloud"
+  ],
+  "resultado": "Desempenho dos cálculos +400%; atende mais de 19 mil empresas (conforme lista de casos do Google Cloud).",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Google Cloud (blog Google BR) - 90 casos de IA na América Latina",
+  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/google-cloud-90-casos-de-ia-na-america-latina-que-estao-moldando-o-futuro-da-inovacao/",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": 25,
+  "porte_confirmado": false,
+  "data_fonte": "2025-03",
+  "metricas": [
+   {
+    "indicador": "Performance de cálculo",
+    "antes": null,
+    "depois": null,
+    "variacao": "+400%"
+   },
+   {
+    "indicador": "Empresas atendidas",
+    "antes": null,
+    "depois": "mais de 19 mil",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Liste as regras fiscais que mudam com frequência e que hoje são conferidas à mão.",
+   "Automatize a coleta/leitura das normas e atualize as regras de cálculo em um único lugar.",
+   "Valide o cálculo automático contra uma amostra conferida por contador antes de colocar em produção.",
+   "Meça tempo de cálculo e erros por competência."
+  ],
+  "trecho_comprovante": "a startup aumentou sua performance de cálculo em 400%, auxiliando mais de 19 mil empresas",
+  "verificado": true,
+  "forca": "fraca",
+  "nota_verificacao": "Só há a lista do blog Google (lida, 20/03/2025); não achei página primária do caso (a matéria do contadores.cnt.br retornou 403). Porte corrigido para pequena: perfil da Startupi indica 25 funcionários (sem data); é fora da faixa média, recomenda-se realocar. Fraca por ser lista de resumo e sem fonte primária."
+ },
+ {
+  "id": "M-011",
+  "porte": "pequena",
+  "gargalo": "decisao",
+  "gargalos_secundarios": [
+   "manual_repetitivo"
+  ],
+  "area": "operacoes",
+  "setor": "fintech imobiliária (aluguel)",
+  "setor_chave": "construcao_imoveis",
+  "tipo": "nominal",
+  "empresa": "AlugaMais",
+  "pais": "Brasil",
+  "titulo": "Análise cadastral de inquilino cai de 90 minutos para 24 segundos",
+  "problema": "A análise cadastral para aluguel era manual e burocrática (cerca de 90 min por caso), limitando a decisão de aprovação.",
+  "solucao": "O Gemini analisa dados e cria o perfil financeiro (inclusive consulta a processos), com Cloud Run e dashboards em Looker Studio.",
+  "ferramentas": [
+   "Gemini",
+   "Google Cloud",
+   "Cloud Run",
+   "Looker Studio"
+  ],
+  "resultado": "Análise cadastral de 90 minutos para 24 segundos; imobiliárias parceiras com até +85% de receita e +63% de contratos assinados (dados da própria startup).",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Startupi - AlugaMais",
+  "fonte_url": "https://startupi.com.br/?p=255001",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": 17,
+  "porte_confirmado": false,
+  "data_fonte": "2025-05",
+  "metricas": [
+   {
+    "indicador": "Tempo da análise cadastral",
+    "antes": "90 min",
+    "depois": "24 s",
+    "variacao": null
+   },
+   {
+    "indicador": "Receita das imobiliárias parceiras",
+    "antes": null,
+    "depois": null,
+    "variacao": "até +85% (dado da startup)"
+   },
+   {
+    "indicador": "Contratos assinados",
+    "antes": null,
+    "depois": null,
+    "variacao": "+63% (dado da startup)"
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Mapeie os dados e consultas que o analista faz em cada cadastro.",
+   "Automatize a coleta e peça ao modelo um resumo do perfil financeiro com a justificativa.",
+   "Mantenha regra de decisão e limites sob responsabilidade humana.",
+   "Meça minutos por análise e taxa de aprovação/inadimplência."
+  ],
+  "trecho_comprovante": "que passou de 90 minutos para 24 segundos com o uso do modelo Gemini",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida (16/05/2025); números confirmados. Número principal e ganhos das imobiliárias são autodeclarados e a fonte é imprensa de startups (secundária ao Google). Porte corrigido para pequena: perfil da Startupi indica 17 funcionários (provavelmente 2023); fora da faixa média, recomenda-se realocar."
+ },
+ {
+  "id": "M-012",
+  "porte": "media",
+  "gargalo": "decisao",
+  "gargalos_secundarios": [
+   "comunicacao",
+   "capacidade"
+  ],
+  "area": "operacoes",
+  "setor": "gestão de frotas/manutenção",
+  "setor_chave": "logistica",
+  "tipo": "nominal",
+  "empresa": "CS Frotas (via Triggo.ai)",
+  "pais": "Brasil",
+  "titulo": "Agente de IA agiliza ordens de serviço numa rede de mais de 1.000 oficinas",
+  "problema": "A gestão de manutenção e de ordens de serviço dependia de muitas interações humanas, era lenta e exigia muito esforço.",
+  "solucao": "Agente de IA agêntico (modelos Claude) participa de etapas da operação e apoia a gestão de manutenção e ordens de serviço.",
+  "ferramentas": [
+   "Claude",
+   "Triggo.ai"
+  ],
+  "resultado": "Redução superior a 50% no esforço de atendimento e redução 'significativa' no tempo de decisão (sem valor informado); rede com mais de mil oficinas.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Exame - Parceira da Anthropic corta esforço com agentes de IA",
+  "fonte_url": "https://exame.com/inteligencia-artificial/parceira-da-anthropic-empresa-brasileira-corta-mais-de-50-do-esforco-com-agentes-de-ia/",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2026-08",
+  "metricas": [
+   {
+    "indicador": "Esforço de atendimento",
+    "antes": null,
+    "depois": null,
+    "variacao": "mais de -50%"
+   },
+   {
+    "indicador": "Oficinas atendidas pelo agente",
+    "antes": null,
+    "depois": "mais de 1.000",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A matéria não informa prazo do projeto; diz apenas que as aplicações de IA generativa começaram em 2022-2023 e projeta mudanças para os próximos dois anos.",
+  "como_replicar": [
+   "Mapeie as etapas de uma ordem de serviço em que o humano só repassa informação (cotação, aprovação, status).",
+   "Coloque um agente de IA com acesso à base de oficinas e regras de aprovação para essas etapas.",
+   "Mantenha aprovação humana em decisões acima de um valor.",
+   "Meça esforço por ordem de serviço e tempo até a decisão."
+  ],
+  "trecho_comprovante": "uma redução superior a 50% no esforço de atendimento",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida via WebFetch (12/08/2026); a verificação por download direto foi bloqueada (paywall), então o trecho vem apenas da leitura da ferramenta. Quadro de funcionários da CS Frotas/Triggo não informado; porte não confirmado (a Triggo foi fundada em 2021 segundo a matéria). Sem valor para o tempo de decisão."
+ },
+ {
+  "id": "M-013",
+  "porte": "media",
+  "gargalo": "decisao",
+  "gargalos_secundarios": [
+   "informacao"
+  ],
+  "area": "logistica",
+  "setor": "tecnologia para varejo (supply chain)",
+  "setor_chave": "tecnologia",
+  "tipo": "nominal",
+  "empresa": "Indikatore",
+  "pais": "Brasil",
+  "titulo": "IA de planejamento de reposição e estoque para varejistas",
+  "problema": "Varejistas desperdiçam insumos e produtos na cadeia por falta de planejamento.",
+  "solucao": "Plataforma em Azure com módulo DRP, algoritmo de IA que planeja a reposição de SKUs promocionais e módulo de compras.",
+  "ferramentas": [
+   "Microsoft Azure",
+   "Azure DevOps",
+   "Microsoft Teams"
+  ],
+  "resultado": "Segundo a Microsoft, reduziu custos operacionais e aumentou faturamento e margem de contribuição dos clientes, sem valores quantificados.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Microsoft News Brasil - Indikatore",
+  "fonte_url": "https://news.microsoft.com/pt-br/com-recursos-da-nuvem-azure-e-inteligencia-artificial-indikatore-cria-solucao-para-gerenciamento-de-demanda-e-de-estoque-para-varejistas/",
+  "ano": 2021,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2021-09",
+  "metricas": [],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Consolide vendas por SKU, estoque e prazos de reposição em uma única base.",
+   "Comece pelos itens promocionais, com demanda mais volátil, e gere sugestão de reposição por loja.",
+   "Compare a sugestão com o que o comprador faria e ajuste as regras.",
+   "Meça ruptura, sobra de estoque e margem."
+  ],
+  "trecho_comprovante": "resultou na redução de custo operacional e aumento do faturamento e da margem de contribuição de seus clientes",
+  "verificado": true,
+  "forca": "fraca",
+  "nota_verificacao": "Página lida (01/09/2021), sem números. Caso antigo (2021) e sem métrica: não atende nem a 'média'. Funcionários não achados em busca; porte não confirmado. Candidato a remoção do banco."
+ },
+ {
+  "id": "M-014",
+  "porte": "media",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "manual_repetitivo",
+   "integracao"
+  ],
+  "area": "administrativo",
+  "setor": "saúde ocupacional",
+  "setor_chave": "saude",
+  "tipo": "nominal",
+  "empresa": "Maxipas",
+  "pais": "Brasil",
+  "titulo": "RPA e gestão documental automatizam 14 processos de SST",
+  "problema": "Os processos de eSocial e ASO exigiam muita mão de obra e digitação em vários sistemas; o preenchimento de laudos levava cerca de 3 horas.",
+  "solucao": "14 processos automatizados com RPA AutomationEdge e ECM/BPMS SmartShare, pela integradora Selbetti, em 3 meses.",
+  "ferramentas": [
+   "AutomationEdge",
+   "Selbetti SmartShare"
+  ],
+  "resultado": "Preenchimento de laudo técnico de cerca de 3 horas para 3 minutos; 14 processos automatizados em 3 meses; 11 escritórios em 10 cidades e mais de 8 mil empresas na carteira.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete - Maxipas: RPA com AutomationEdge",
+  "fonte_url": "https://www.baguete.com.br/noticias/maxipas-rpa-com-automationedge",
+  "ano": 2023,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2023-07",
+  "metricas": [
+   {
+    "indicador": "Tempo de preenchimento do laudo técnico",
+    "antes": "cerca de 3 horas",
+    "depois": "3 minutos",
+    "variacao": null
+   },
+   {
+    "indicador": "Processos automatizados",
+    "antes": null,
+    "depois": "14",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Projeto entregue em 3 meses pela Selbetti, com RPA da AutomationEdge e plataforma SmartShare.",
+  "como_replicar": [
+   "Liste os processos em que a pessoa redigita dados entre sistemas (ex.: laudos, guias, eSocial).",
+   "Priorize os de maior volume e regras estáveis.",
+   "Automatize com RPA e um repositório de documentos com fluxo (ex.: SmartShare, ou alternativas de BPM).",
+   "Entregue em lotes de 3 a 5 processos e meça tempo por laudo."
+  ],
+  "trecho_comprovante": "Antes da automação, o preenchimento de laudos técnicos levava cerca de três horas. Agora, o processo é concluído em três minutos.",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida (06/07/2023); números confirmados. A matéria cita 11 escritórios e mais de 8 mil empresas clientes, mas não o quadro de funcionários da Maxipas (só os ~1,4 mil da Selbetti); franquia com 16 unidades segundo o Portal do Franchising. Porte não confirmado."
+ },
+ {
+  "id": "M-015",
+  "porte": "grande",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "integracao",
+   "controle",
+   "manual_repetitivo"
+  ],
+  "area": "comercial",
+  "setor": "alimentos (holding)",
+  "setor_chave": "industria",
+  "tipo": "nominal",
+  "empresa": "Costa Foods Brasil",
+  "pais": "Brasil",
+  "titulo": "Portal B2B e mesa de negociação automatizada para 220 vendedores",
+  "problema": "Aprovações de preço manuais e lentas, sem analytics em tempo real e com risco de parar as vendas na troca de ERP.",
+  "solucao": "Salesforce B2B Commerce com 3 portais, mesa de negociação automatizada e Service/Sales Cloud; o canal de vendas continuou durante a migração de ERP.",
+  "ferramentas": [
+   "Salesforce B2B Commerce",
+   "Sales Cloud",
+   "Service Cloud",
+   "Agentforce for Sales"
+  ],
+  "resultado": "100 horas/mês economizadas na equipe de Pricing; 1.219 pedidos (925 t) captados durante a troca de ERP, protegendo cerca de 10 dias de faturamento; 100% de visibilidade pedido-estoque em armazéns de terceiros. Projeto de cerca de 8 meses.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Salesforce Brasil - Costa Foods",
+  "fonte_url": "https://www.salesforce.com/br/customer-stories/costa-foods/",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Horas/mês da equipe de Pricing",
+    "antes": null,
+    "depois": null,
+    "variacao": "100 h/mês economizadas"
+   },
+   {
+    "indicador": "Pedidos captados na troca de ERP",
+    "antes": null,
+    "depois": "1.219 (925 t)",
+    "variacao": null
+   },
+   {
+    "indicador": "Visibilidade pedido-estoque em armazéns de terceiros",
+    "antes": null,
+    "depois": "100%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Projeto de cerca de 8 meses; a troca de ERP ocorreu de dezembro de 2025 a janeiro de 2026.",
+  "como_replicar": [
+   "Mapeie as aprovações de preço e desconto e defina alçadas por regra.",
+   "Monte um portal B2B de pedidos para o cliente e um fluxo de negociação com aprovação automática dentro da regra.",
+   "Integre o portal ao ERP/estoque para dar visibilidade de pedido.",
+   "Se for trocar de ERP, mantenha o portal como canal contínuo de pedidos."
+  ],
+  "trecho_comprovante": "1.219 pedidos captados (925 toneladas de produtos)",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida; números confirmados. Sem data de publicação (texto indica troca de ERP em dez/2025-jan/2026, logo >= 2026). Porte corrigido para grande por indício: faturamento de cerca de R$ 1,3 bi em 2024 (Diário do Comércio) e 220 vendedores; quadro de funcionários não achado, por isso porte_confirmado=false. Fora da faixa média, recomenda-se realocar."
+ },
+ {
+  "id": "M-016",
+  "porte": "media",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "decisao",
+   "manual_repetitivo"
+  ],
+  "area": "operacoes",
+  "setor": "tecnologia (visão computacional e leitura de documentos)",
+  "setor_chave": "tecnologia",
+  "tipo": "nominal",
+  "empresa": "Pix Force",
+  "pais": "Brasil",
+  "titulo": "IA lê documentos e autorizações em 15 minutos",
+  "problema": "A leitura de documentos e autorizações pessoais e a inspeção visual levavam dias.",
+  "solucao": "IA generativa do Google Cloud para leitura de documentos, em complemento à inspeção visual, colaborando em cerca de 80% dos serviços de leitura de documentos.",
+  "ferramentas": [
+   "Google Cloud",
+   "IA generativa"
+  ],
+  "resultado": "Tempo de leitura de documentos e autorizações pessoais de 3 dias para 15 minutos (conforme lista de casos do Google Cloud).",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Google Cloud (blog Google BR) - 90 casos de IA na América Latina",
+  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/google-cloud-90-casos-de-ia-na-america-latina-que-estao-moldando-o-futuro-da-inovacao/",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2025-03",
+  "metricas": [
+   {
+    "indicador": "Tempo de leitura de documentos e autorizações",
+    "antes": "3 dias",
+    "depois": "15 minutos",
+    "variacao": null
+   },
+   {
+    "indicador": "Parcela dos serviços de leitura com apoio da IA",
+    "antes": null,
+    "depois": "cerca de 80%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Meça o tempo atual de leitura/conferência de documentos e autorizações.",
+   "Use um modelo de linguagem multimodal para extrair os campos e verificar o que falta.",
+   "Deixe a conferência humana apenas nas exceções.",
+   "Meça tempo por documento e taxa de erro em um lote de teste."
+  ],
+  "trecho_comprovante": "A empresa reduziu o tempo de leitura de documentos e autorizações pessoais de 3 dias para 15 minutos.",
+  "verificado": true,
+  "forca": "fraca",
+  "nota_verificacao": "Só a lista do blog Google (lida, 20/03/2025); sem página primária do caso. O setor foi corrigido: a lista diz 'Fintech', mas outras fontes (Startup Energy Transition, Jornal do Comércio) mostram a Pix Force (Porto Alegre, fundada em 2016) como empresa de visão computacional. Funcionários não achados; porte não confirmado."
+ },
+ {
+  "id": "M-017",
+  "porte": "media",
+  "gargalo": "integracao",
+  "gargalos_secundarios": [
+   "controle",
+   "processo"
+  ],
+  "area": "financeiro",
+  "setor": "distribuição de combustíveis",
+  "setor_chave": "outro",
+  "tipo": "nominal",
+  "empresa": "Grupo Dislub Equador",
+  "pais": "Brasil",
+  "titulo": "BPM orquestra OCR de IA, RPA e ERP no recebimento de notas",
+  "problema": "A entrada e o lançamento de notas era manual, com retrabalho e baixa rastreabilidade; RPA e OCR existiam, mas sem camada de governança.",
+  "solucao": "A plataforma BPM Lecom orquestra OCR com IA, validações (CNPJ, duplicidade, validade) e RPA que lança no ERP.",
+  "ferramentas": [
+   "Lecom",
+   "RPA",
+   "OCR com IA",
+   "ERP"
+  ],
+  "resultado": "Em 6 meses, carga de trabalho -80% para assistentes, -30% para analistas e -10% na gestão; mais de 78 processos mapeados na plataforma.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete - Dislub Equador lança notas com Lecom",
+  "fonte_url": "https://www.baguete.com.br/noticias/dislub-equador-lanca-notas-com-lecom",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2025-05",
+  "metricas": [
+   {
+    "indicador": "Carga de trabalho dos assistentes",
+    "antes": null,
+    "depois": null,
+    "variacao": "-80%"
+   },
+   {
+    "indicador": "Carga de trabalho dos analistas",
+    "antes": null,
+    "depois": null,
+    "variacao": "-30%"
+   },
+   {
+    "indicador": "Carga de trabalho da gestão",
+    "antes": null,
+    "depois": null,
+    "variacao": "-10%"
+   },
+   {
+    "indicador": "Processos mapeados na plataforma",
+    "antes": null,
+    "depois": "mais de 78",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Resultados medidos após 6 meses de operação; a matéria não informa custo ou equipe.",
+  "como_replicar": [
+   "Mapeie o fluxo de recebimento de nota (entrada, validação, lançamento) e os pontos de retrabalho.",
+   "Coloque OCR/IA para ler a nota e regras de validação (CNPJ, duplicidade, validade).",
+   "Orquestre o fluxo num BPM (ex.: Lecom ou alternativa) e use RPA só para lançar no ERP.",
+   "Meça carga por perfil (assistente, analista, gestão) em 6 meses."
+  ],
+  "trecho_comprovante": "Processo automatizado elimina trabalho manual em até 80%.",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida (13/05/2025); números confirmados. Funcionários: Exame (2013) cita 371 em 2012 (176 em 2010); atualmente o grupo está em mais de 100 cidades, então o quadro atual pode ser maior: porte não confirmado, possivelmente próximo ou acima de 500."
+ },
+ {
+  "id": "M-018",
+  "porte": "media",
+  "gargalo": "integracao",
+  "gargalos_secundarios": [
+   "comunicacao",
+   "manual_repetitivo"
+  ],
+  "area": "atendimento",
+  "setor": "cobrança/recuperação de crédito",
+  "setor_chave": "financeiro_seguros",
+  "tipo": "nominal",
+  "empresa": "Rede Brasil",
+  "pais": "Brasil",
+  "titulo": "Robô RPA liga o bot de WhatsApp a sistema sem API",
+  "problema": "Operadores usavam vários sistemas e o sistema de dívidas não tinha API, gerando filas em 3 a 4 mil contatos por dia.",
+  "solucao": "Robô RPA da Yank conectado ao bot de IA no WhatsApp valida o CPF, consulta o sistema de dívidas e devolve boleto/informação.",
+  "ferramentas": [
+   "Yank",
+   "RPA",
+   "WhatsApp",
+   "chatbot de IA"
+  ],
+  "resultado": "Cerca de 85% dos atendimentos resolvidos automaticamente; mais de 40 mil atendimentos/mês; processo em 5 a 6 min; melhora de cerca de 10% no desempenho da carteira (relatado pela empresa).",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete - Rede Brasil automatiza cobranças com Yank",
+  "fonte_url": "https://www.baguete.com.br/noticias/rede-brasil-automatiza-cobrancas-com-yank",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2026-10",
+  "metricas": [
+   {
+    "indicador": "Atendimentos resolvidos automaticamente",
+    "antes": null,
+    "depois": "cerca de 85%",
+    "variacao": null
+   },
+   {
+    "indicador": "Atendimentos por mês",
+    "antes": null,
+    "depois": "mais de 40 mil",
+    "variacao": null
+   },
+   {
+    "indicador": "Desempenho da carteira",
+    "antes": null,
+    "depois": null,
+    "variacao": "cerca de +10%"
+   },
+   {
+    "indicador": "Tempo por processo",
+    "antes": null,
+    "depois": "5 a 6 min",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A matéria não informa prazo, custo ou equipe.",
+  "como_replicar": [
+   "Identifique o sistema legado sem API que trava o atendimento.",
+   "Crie um robô RPA que faz a consulta na tela e devolve o resultado ao chatbot.",
+   "Valide o CPF antes de qualquer consulta e limite o que o bot pode devolver.",
+   "Meça a taxa de resolução sem humano e o tempo por atendimento."
+  ],
+  "trecho_comprovante": "Ferramenta permite que cerca de 85% dos atendimentos sejam resolvidos automaticamente.",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida (02/10/2026); números confirmados, autodeclarados (Baguete, release do integrador). Funcionários não informados nem achados; porte não confirmado."
+ },
+ {
+  "id": "M-019",
+  "porte": "grande",
+  "gargalo": "integracao",
+  "gargalos_secundarios": [
+   "comunicacao",
+   "processo"
+  ],
+  "area": "atendimento",
+  "setor": "telecom/provedores regionais",
+  "setor_chave": "tecnologia",
+  "tipo": "nominal",
+  "empresa": "Brasil TecPar",
+  "pais": "Brasil",
+  "titulo": "Zendesk e IA unificam atendimento herdado de 59 aquisições",
+  "problema": "Sistemas fragmentados: atendentes consultavam 5 a 6 aplicativos e os clientes gastavam 7 a 8 min em menus (grupo regional com mais de 1,5 milhão de clientes).",
+  "solucao": "Plataforma Zendesk com AI Agents (roteamento em linguagem natural), Copilot, QA e WFM, projeto da Zenital; mais de 1.200 profissionais treinados.",
+  "ferramentas": [
+   "Zendesk AI Agents",
+   "Zendesk Copilot",
+   "Zendesk QA",
+   "Zendesk WFM"
+  ],
+  "resultado": "TMA -28%; cerca de 85% das solicitações tratadas por IA resolvidas sem transbordo; CSAT de 73% para 90% em 6 meses; roteamento de 7 a 8 min para cerca de 30 s; espera de cerca de 5 min para 3 min 30 s.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "IT Show - Brasil TecPar e Zendesk",
+  "fonte_url": "https://itshow.com.br/brasil-tecpar-e-zendesk-zenital/",
+  "ano": 2026,
+  "confianca": "alta",
+  "funcionarios": null,
+  "porte_confirmado": true,
+  "data_fonte": "2026-10",
+  "metricas": [
+   {
+    "indicador": "Tempo médio de atendimento (TMA)",
+    "antes": null,
+    "depois": null,
+    "variacao": "-28%"
+   },
+   {
+    "indicador": "Solicitações resolvidas por IA sem transbordo",
+    "antes": null,
+    "depois": "cerca de 85%",
+    "variacao": null
+   },
+   {
+    "indicador": "CSAT",
+    "antes": "73%",
+    "depois": "90%",
+    "variacao": "+17 p.p. em 6 meses"
+   },
+   {
+    "indicador": "Tempo de direcionamento inicial",
+    "antes": "7 a 8 min",
+    "depois": "cerca de 30 s",
+    "variacao": null
+   },
+   {
+    "indicador": "Tempo médio de espera",
+    "antes": "cerca de 5 min",
+    "depois": "3 min 30 s",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A matéria não informa prazo de implantação; cita mais de 1.200 profissionais treinados em sessões de cerca de 40 minutos e 6 meses para a evolução do CSAT.",
+  "como_replicar": [
+   "Unifique os canais de atendimento em uma única plataforma de tickets.",
+   "Ative um agente de IA para identificar a intenção do cliente e rotear (ou resolver) os assuntos mais comuns.",
+   "Dê ao atendente um copiloto com histórico e respostas sugeridas.",
+   "Treine a equipe em sessões curtas e acompanhe TMA, CSAT e transbordo."
+  ],
+  "trecho_comprovante": "A iniciativa resultou em uma redução de 28% no tempo médio de atendimento (TMA)",
+  "verificado": true,
+  "forca": "forte",
+  "nota_verificacao": "Página lida (19/10/2026); números confirmados. Porte corrigido para grande: a própria matéria cita mais de 1,5 milhão de clientes, atuação em mais de 390 cidades e mais de 1.200 profissionais treinados (quadro exato não informado). Caso fora da faixa média: realocar para o banco de grandes. Forte apenas pelos critérios de qualidade da fonte."
+ },
+ {
+  "id": "M-020",
+  "porte": "grande",
+  "gargalo": "controle",
+  "gargalos_secundarios": [
+   "integracao",
+   "manual_repetitivo"
+  ],
+  "area": "administrativo",
+  "setor": "concessionárias de veículos",
+  "setor_chave": "varejo_ecommerce",
+  "tipo": "nominal",
+  "empresa": "Grupo Revemar",
+  "pais": "Brasil",
+  "titulo": "Bots controlam viagens corporativas e faturamento de veículos",
+  "problema": "A liberação de viagens era manual e descentralizada (risco de liberações indevidas) e o faturamento de veículos tinha muitos erros e horas extras.",
+  "solucao": "Mais de 200 processos com RPA AutomationEdge integrados a Onfly, Uber Empresas e ERP; bots emitem faturas e liberam/bloqueiam acesso 24 h antes/depois da viagem, com registros auditáveis e dashboard.",
+  "ferramentas": [
+   "AutomationEdge",
+   "Onfly",
+   "Uber Empresas",
+   "NBS ERP",
+   "BI"
+  ],
+  "resultado": "Faturamento por operação de cerca de 3 min para cerca de 50 s (redução superior a 70%); cerca de 10.000 faturamentos/mês; mais de 20 profissionais antes dedicados ao faturamento.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete - Revemar automatiza 200 processos",
+  "fonte_url": "https://www.baguete.com.br/noticias/revemar-automatiza-200-processos-com-automationedge",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2026-05",
+  "metricas": [
+   {
+    "indicador": "Tempo médio por operação de faturamento",
+    "antes": "cerca de 3 min",
+    "depois": "cerca de 50 s",
+    "variacao": "mais de -70%"
+   },
+   {
+    "indicador": "Faturamentos por mês",
+    "antes": null,
+    "depois": "cerca de 10.000",
+    "variacao": null
+   },
+   {
+    "indicador": "Processos automatizados",
+    "antes": null,
+    "depois": "mais de 200",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A matéria não informa prazo de projeto, custo ou equipe.",
+  "como_replicar": [
+   "Liste os processos de back-office com mais retrabalho e horas extras (ex.: faturamento).",
+   "Comece por um processo com regras claras e automatize-o com RPA integrado ao ERP.",
+   "Gere logs auditáveis de cada ação do robô e um dashboard de acompanhamento.",
+   "Expanda por ondas, mantendo medição de tempo por operação."
+  ],
+  "trecho_comprovante": "o tempo médio por operação caiu para cerca de 50 segundos, resultando em uma redução superior a 70%",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida (20/05/2026); números confirmados. Porte corrigido para grande por indício: nota da GWM (2024) diz que o grupo tem 96 revendas em 15 estados e 44 anos de mercado; o quadro exato não foi achado (a matéria cita só 'mais de 20 profissionais' no faturamento), por isso porte_confirmado=false. Fora da faixa média: realocar."
+ },
+ {
+  "id": "M-021",
+  "porte": "media",
+  "gargalo": "comunicacao",
+  "gargalos_secundarios": [
+   "manual_repetitivo",
+   "integracao"
+  ],
+  "area": "atendimento",
+  "setor": "saúde (cooperativa)",
+  "setor_chave": "saude",
+  "tipo": "nominal",
+  "empresa": "Unimed Caruaru",
+  "pais": "Brasil",
+  "titulo": "Bot de WhatsApp integrado ao ERP hospitalar autoatende beneficiários",
+  "problema": "O atendimento dependia de call center e site para agendamentos, boletos, tokens e status de exames.",
+  "solucao": "Bot no WhatsApp (Dr. Mobile sobre Take Blip) integrado ao ERP Soul MV.",
+  "ferramentas": [
+   "Take Blip",
+   "Dr. Mobile",
+   "Soul MV",
+   "WhatsApp"
+  ],
+  "resultado": "Em 2 anos: mais de 7 mil agendamentos de consulta 100% digitais, mais de 17 mil segundas vias de boleto, mais de 9 mil tokens e mais de 8 mil consultas de status de exames. Cerca de 68 mil vidas e mais de 400 médicos cooperados.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Mobile Time - Unimed Caruaru",
+  "fonte_url": "https://www.mobiletime.com.br/?p=724776",
+  "ano": 2022,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2022-06",
+  "metricas": [
+   {
+    "indicador": "Agendamentos de consulta digitais em 2 anos",
+    "antes": null,
+    "depois": "mais de 7 mil",
+    "variacao": null
+   },
+   {
+    "indicador": "Segundas vias de boleto",
+    "antes": null,
+    "depois": "mais de 17 mil",
+    "variacao": null
+   },
+   {
+    "indicador": "Tokens de atendimento",
+    "antes": null,
+    "depois": "mais de 9 mil",
+    "variacao": null
+   },
+   {
+    "indicador": "Consultas de status de exame",
+    "antes": null,
+    "depois": "mais de 8 mil",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A matéria cita 2 anos de operação; não informa custo ou equipe de implantação.",
+  "como_replicar": [
+   "Liste os 4 a 5 pedidos mais frequentes do call center (boleto, agendamento, status).",
+   "Crie um bot de WhatsApp com plataforma de chatbot (ex.: Take Blip) para esses pedidos.",
+   "Integre o bot ao sistema de gestão por API para consultar e gravar dados.",
+   "Meça volume por tipo de pedido e queda de chamadas no call center."
+  ],
+  "trecho_comprovante": "alcançou mais de 7 mil agendamentos de consulta de forma totalmente digitalizados em dois anos",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida (27/06/2022); números confirmados (todos cumulativos em 2 anos, sem comparação antes/depois). Data 2022 limita a força a média. Quadro de funcionários não achado (478 médicos cooperados e 68 mil vidas segundo o site da Unimed Caruaru); porte não confirmado."
+ },
+ {
+  "id": "M-022",
+  "porte": "media",
+  "gargalo": "comunicacao",
+  "gargalos_secundarios": [
+   "informacao"
+  ],
+  "area": "atendimento",
+  "setor": "saúde (seguros / corretores)",
+  "setor_chave": "financeiro_seguros",
+  "tipo": "nominal",
+  "empresa": "Bliss Health",
+  "pais": "Brasil",
+  "titulo": "Canal digital para corretores reduz SLA de horas para segundos",
+  "problema": "As consultas transacionais de corretores dependiam de atendimento com SLA de horas.",
+  "solucao": "Canal digital para corretores integrado ao Google Cloud, com Dialogflow e Gemini Pro.",
+  "ferramentas": [
+   "Google Cloud",
+   "Dialogflow",
+   "Gemini Pro"
+  ],
+  "resultado": "SLA de consultas transacionais de 4 horas para segundos (conforme lista de casos do Google Cloud).",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Google Cloud (blog Google BR) - 90 casos de IA na América Latina",
+  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/google-cloud-90-casos-de-ia-na-america-latina-que-estao-moldando-o-futuro-da-inovacao/",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": 80,
+  "porte_confirmado": false,
+  "data_fonte": "2025-03",
+  "metricas": [
+   {
+    "indicador": "SLA de consultas transacionais",
+    "antes": "4 horas",
+    "depois": "segundos",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Liste as consultas repetitivas que corretores ou parceiros fazem ao atendimento (status, segunda via, elegibilidade).",
+   "Exponha essas consultas em um canal digital (chat/WhatsApp/portal) ligado ao sistema.",
+   "Use um assistente de IA para entender a pergunta e responder só com dados do sistema.",
+   "Meça tempo de resposta e volume que não chega mais ao atendimento."
+  ],
+  "trecho_comprovante": "A solução reduz o SLA de 4 horas para segundos em consultas transacionais",
+  "verificado": true,
+  "forca": "fraca",
+  "nota_verificacao": "Só a lista do blog Google (lida, 20/03/2025); sem página primária de caso. Bliss/Saúde Bliss (insurtech de São Paulo): reportagem de 24/03/2026 (Startups.com.br) confirma a captação de R$ 57 mi mas não cita Google Cloud; a LatamFintech cita time de 80 pessoas (fonte única, só vista em resumo de busca). Não confirmo que a empresa da lista seja a mesma da captação."
+ },
+ {
+  "id": "M-023",
+  "porte": "grande",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [
+   "comunicacao"
+  ],
+  "area": "comercial",
+  "setor": "varejo (móveis e decoração)",
+  "setor_chave": "varejo_ecommerce",
+  "tipo": "nominal",
+  "empresa": "Mobly",
+  "pais": "Brasil",
+  "titulo": "WhatsApp vira canal oficial de vendas com atendimento integrado",
+  "problema": "Até setembro de 2024 o WhatsApp não era canal oficial; os vendedores usavam celulares pessoais sem processo.",
+  "solucao": "Atendimento integrado na OmniChat testado em 2 lojas e expandido: campanhas clique-para-WhatsApp, roteamento por CEP e treinamento. IA planejada como próximo passo.",
+  "ferramentas": [
+   "OmniChat",
+   "WhatsApp"
+  ],
+  "resultado": "Faturamento via WhatsApp +630% em 4 meses; tempo médio de resposta de 2 h para 30 min; conversão de menos de 1% para 6,2%.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Mobile Time - Mobly vendas WhatsApp",
+  "fonte_url": "https://www.mobiletime.com.br/noticias/01/09/2025/mobly-vendas-whatsapp/",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": 957,
+  "porte_confirmado": false,
+  "data_fonte": "2025-09",
+  "metricas": [
+   {
+    "indicador": "Faturamento via WhatsApp",
+    "antes": null,
+    "depois": null,
+    "variacao": "+630% em 4 meses"
+   },
+   {
+    "indicador": "Tempo médio de resposta",
+    "antes": "2 horas",
+    "depois": "30 min",
+    "variacao": null
+   },
+   {
+    "indicador": "Taxa de conversão",
+    "antes": "menos de 1%",
+    "depois": "6,2%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Piloto em 2 lojas e expansão; resultados medidos em 4 meses após a implantação. A matéria não informa custo ou equipe.",
+  "como_replicar": [
+   "Oficialize o WhatsApp como canal com número único da empresa (não celulares pessoais).",
+   "Teste em 2 lojas ou 1 equipe com plataforma de atendimento integrada (ex.: OmniChat ou similar).",
+   "Crie campanhas que levam ao WhatsApp e roteie o contato (ex.: por CEP) ao vendedor certo.",
+   "Meça tempo de resposta, conversão e faturamento do canal."
+  ],
+  "trecho_comprovante": "registrou aumento de 630% no faturamento",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida (01/09/2025); números confirmados. Porte corrigido para grande por indício: Revelio Labs estima cerca de 957 funcionários (set/2025) e a Mobly é controlada pelo Grupo Toky (Tok&Stok, cerca de 2.500 colaboradores segundo a própria empresa). Estimativa de terceiro, por isso porte_confirmado=false. Fora da faixa média: realocar."
+ },
+ {
+  "id": "M-024",
+  "porte": "grande",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [
+   "comunicacao",
+   "capacidade"
+  ],
+  "area": "comercial",
+  "setor": "varejo (brinquedos, rede)",
+  "setor_chave": "varejo_ecommerce",
+  "tipo": "nominal",
+  "empresa": "Ri Happy",
+  "pais": "Brasil",
+  "titulo": "Agente de IA vendedor no WhatsApp leva conversão de 4% a 70%",
+  "problema": "As vendas no WhatsApp dependiam de vendedores livres nas lojas e de horário comercial; os contatos esperavam horas.",
+  "solucao": "Agente de IA (Whizz Agent da Omnichat) cuida da jornada: recomendação por idade, pagamento e pós-venda; 3 meses de treinamento do catálogo (cerca de 10 mil SKUs).",
+  "ferramentas": [
+   "Whizz Agent (Omnichat)",
+   "WhatsApp"
+  ],
+  "resultado": "Conversão no canal de 4% para 70% (dado fornecido via Omnichat; outros clientes da Omnichat chegam a cerca de 25%); respostas de horas para segundos.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Mobile Time - Ri Happy / Omnichat",
+  "fonte_url": "https://www.mobiletime.com.br/?p=866722",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": 3000,
+  "porte_confirmado": false,
+  "data_fonte": "2026-10",
+  "metricas": [
+   {
+    "indicador": "Conversão no canal WhatsApp",
+    "antes": "4%",
+    "depois": "70%",
+    "variacao": "número fornecido via Omnichat"
+   },
+   {
+    "indicador": "Tempo de resposta",
+    "antes": "horas",
+    "depois": "segundos",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Cerca de 3 meses de treinamento do agente sobre um catálogo de cerca de 10 mil SKUs; em uso desde o 4º trimestre do ano anterior.",
+  "como_replicar": [
+   "Organize o catálogo (descrição, faixa etária, preço, estoque) e corrija cadastros ruins.",
+   "Treine/configure um agente de IA de vendas para recomendar, fechar pagamento e fazer pós-venda.",
+   "Passe ao humano os casos fora do roteiro.",
+   "Meça conversão e tempo de resposta do canal."
+  ],
+  "trecho_comprovante": "fez a rede de lojas de brinquedos Ri Happy aumentar a sua conversão no canal de 4% para 70%",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida (16/10/2026); número confirmado, mas fornecido via fornecedor (Omnichat) e muito acima dos 25% de outros clientes: tratar com cautela. Porte corrigido para grande por indício: matérias de 2022 citam mais de 3.000 funcionários e mais de 150 lojas (Infojobs/Movimento Econômico), dado antigo, por isso porte_confirmado=false. Fora da faixa média: realocar."
+ },
+ {
+  "id": "M-025",
+  "porte": "media",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [
+   "manual_repetitivo",
+   "comunicacao"
+  ],
+  "area": "atendimento",
+  "setor": "saúde (clínica)",
+  "setor_chave": "saude",
+  "tipo": "nominal",
+  "empresa": "Clínica Ancre",
+  "pais": "Brasil",
+  "titulo": "Agendamento online 24h e confirmações automáticas numa clínica",
+  "problema": "Atendimento fragmentado e rotina administrativa que consumia tempo da equipe.",
+  "solucao": "Salesforce Health Cloud centraliza prontuários, agenda online 24 h e confirmações automáticas; Slack para discussão de casos.",
+  "ferramentas": [
+   "Salesforce Health Cloud",
+   "Slack",
+   "Tableau"
+  ],
+  "resultado": "Crescimento de 27% em receita desde a implantação; cerca de 3.000 cliques por semana a menos no fluxo de confirmação; tempo diário de atendimento/administração de 3 h para no máximo 1 h.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Salesforce Brasil - Clínica Ancre",
+  "fonte_url": "https://www.salesforce.com/br/customer-stories/clinica-ancre/",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Receita",
+    "antes": null,
+    "depois": null,
+    "variacao": "+27% desde a implantação"
+   },
+   {
+    "indicador": "Cliques semanais no fluxo de confirmação",
+    "antes": null,
+    "depois": null,
+    "variacao": "-3.000 por semana"
+   },
+   {
+    "indicador": "Tempo diário no atendimento",
+    "antes": "3 horas",
+    "depois": "no máximo 1 hora",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A página não informa prazo, custo ou equipe; descreve a Tableau como próxima etapa.",
+  "como_replicar": [
+   "Centralize agenda e dados de pacientes em um único sistema.",
+   "Abra o agendamento online 24 h.",
+   "Automatize lembretes e confirmações de consulta (WhatsApp/SMS).",
+   "Meça faltas, tempo administrativo e receita por mês."
+  ],
+  "trecho_comprovante": "Desde a implantação do Salesforce nós já tivemos um crescimento de 27% em receita.",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida; números confirmados (depoimento da cofundadora, autodeclarado, vendor story). Sem data de publicação; a clínica tem 8 anos. Quadro de funcionários não informado; pelo perfil (clínica com cofundadoras na gestão) pode ser pequena, mas não há número: porte não confirmado. O aumento de receita não é atribuível só à IA."
+ },
+ {
+  "id": "M-026",
+  "porte": "grande",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "controle"
+  ],
+  "area": "juridico",
+  "setor": "energia renovável",
+  "setor_chave": "outro",
+  "tipo": "nominal",
+  "empresa": "Casa dos Ventos",
+  "pais": "Brasil",
+  "titulo": "Plataforma de IA mapeia obrigações contratuais e acelera análise",
+  "problema": "A análise manual de contratos levava cerca de 40 min por contrato, com risco jurídico.",
+  "solucao": "Plataforma C3 em Vertex AI mapeia obrigações contratuais; Gemini no Workspace para documentos e minutas.",
+  "ferramentas": [
+   "Vertex AI",
+   "Gemini",
+   "Google Workspace",
+   "C3"
+  ],
+  "resultado": "Tempo médio de análise -80% (de cerca de 40 para 8 min); quase 1.000 contratos integrados e mais de 8.000 obrigações identificadas.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete - Casa dos Ventos analisa contratos com IA do Google",
+  "fonte_url": "https://www.baguete.com.br/noticias/casa-dos-ventos-analisa-contratos-com-ia-do-google",
+  "ano": 2025,
+  "confianca": "alta",
+  "funcionarios": 1588,
+  "porte_confirmado": false,
+  "data_fonte": "2025-05",
+  "metricas": [
+   {
+    "indicador": "Tempo médio de análise de contrato",
+    "antes": "cerca de 40 min",
+    "depois": "8 min",
+    "variacao": "-80%"
+   },
+   {
+    "indicador": "Contratos integrados à plataforma",
+    "antes": null,
+    "depois": "quase 1.000",
+    "variacao": null
+   },
+   {
+    "indicador": "Obrigações contratuais identificadas",
+    "antes": null,
+    "depois": "mais de 8.000",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A matéria não informa prazo, custo ou equipe.",
+  "como_replicar": [
+   "Reúna os contratos mais recorrentes e defina as obrigações que interessa monitorar.",
+   "Use um modelo de linguagem para extrair obrigações, prazos e responsáveis em formato estruturado.",
+   "Cadastre os resultados numa base com alertas de prazo.",
+   "Meça minutos por contrato e obrigações perdidas."
+  ],
+  "trecho_comprovante": "reduziu em 80% o tempo médio para análise de contratos complexos",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Página lida (26/05/2025); números confirmados. Porte corrigido para grande: Revelio Labs estima cerca de 1.588 funcionários (set/2025), com portfólio de cerca de 35 GW e quase 20 anos de mercado; estimativa de terceiro, por isso porte_confirmado=false. Fora da faixa média: realocar. Força média porque o porte não está confirmado."
+ },
+ {
+  "id": "M-027",
+  "porte": "media",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "controle",
+   "manual_repetitivo"
+  ],
+  "area": "juridico",
+  "setor": "legaltech (contratos)",
+  "setor_chave": "tecnologia",
+  "tipo": "nominal",
+  "empresa": "Contraktor",
+  "pais": "Brasil",
+  "titulo": "IA compara contratos com playbook e acelera revisão",
+  "problema": "A revisão de contratos complexos e a checagem de conformidade dependiam de análise manual de especialistas e levavam de 15 a 30 dias.",
+  "solucao": "Agente de Revisão de Contratos com playbook configurável (2 a 10 contratos-modelo) em que o Gemini extrai cláusulas e regras de conformidade; a decisão final fica com o advogado. Infraestrutura migrada para o Google Cloud.",
+  "ferramentas": [
+   "Gemini",
+   "Gemini Notebook",
+   "Google Kubernetes Engine",
+   "Cloud Run",
+   "Cloud SQL",
+   "Google Workspace"
+  ],
+  "resultado": "Diminuição de 84% nos custos de infraestrutura de TI em dois anos e redução do tempo de revisões contratuais complexas e checagem de conformidade de até 30 dias (15 a 30 dias no corpo do texto) para poucos minutos; mais de 2.500 clientes atendidos sem aumentar a equipe técnica.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Google Cloud - Caso de sucesso Contraktor",
+  "fonte_url": "https://cloud.google.com/customers/intl/pt-br/contraktor",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Custos de infraestrutura de TI (2 anos)",
+    "antes": null,
+    "depois": null,
+    "variacao": "-84%"
+   },
+   {
+    "indicador": "Tempo de revisão contratual complexa",
+    "antes": "15 a 30 dias",
+    "depois": "poucos minutos",
+    "variacao": null
+   },
+   {
+    "indicador": "Clientes atendidos sem aumentar a equipe técnica",
+    "antes": null,
+    "depois": "mais de 2.500",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A jornada no Google Cloud começou em outubro de 2023, impulsionada pelo programa Google for Startups; o resultado de custo cobre dois anos de implementação.",
+  "como_replicar": [
+   "Selecione 2 a 10 contratos-modelo aprovados pelo jurídico como referência.",
+   "Use um modelo de linguagem para extrair as cláusulas padrão e regras de conformidade desse conjunto.",
+   "Compare cada novo contrato com o playbook e liste os desvios com a cláusula de origem.",
+   "Mantenha o advogado decidindo e meça dias/horas por revisão."
+  ],
+  "trecho_comprovante": "Diminuição de 84% nos custos de infraestrutura de TI em dois anos, com arquiteturas autogerenciadas da nuvem",
+  "verificado": true,
+  "forca": "media",
+  "nota_verificacao": "Fonte primária encontrada e lida (página oficial do Google Cloud, via download direto; a ferramenta de leitura devolveu só o título). Números confirmados. A página não traz data visível (o texto cita gravações desde jan/2025 e dois anos desde out/2023, logo é de fins de 2025 ou posterior): data_fonte fica null e a força, média. O 84% é de custo de infraestrutura (créditos de startup e arquiteturas autogerenciadas), não de IA. A lista do blog Google citava '75%' no tempo de análise; esse número não consta da página primária. Funcionários não achados (LeadIQ estima 51-200, terceiro): porte média plausível, não confirmado."
+ }
+]

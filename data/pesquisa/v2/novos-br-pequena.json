@@ -1,0 +1,1861 @@
+[
+ {
+  "id": "Q-001",
+  "porte": "pequena",
+  "gargalo": "informacao",
+  "gargalos_secundarios": [],
+  "area": "financeiro",
+  "setor": "contabilidade",
+  "setor_chave": "servicos_b2b",
+  "tipo": "nominal",
+  "empresa": "Contabilidade Luiz Corrêa",
+  "pais": "Brasil",
+  "titulo": "Contabilidade Luiz Corrêa: Até 4 meses de atraso contábil eliminados",
+  "problema": "Escritório entregava balanço com meses de atraso",
+  "solucao": "Adotou o Conta Azul Mais para automatizar a coleta de dados e ter informação financeira em tempo real, eliminando o atraso nos demonstrativos.",
+  "ferramentas": [
+   "Conta Azul Mais"
+  ],
+  "resultado": "Até 4 meses de atraso contábil eliminados; estrutura cresceu para 3 empresas no grupo.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Conta Azul (case de sucesso)",
+  "fonte_url": "https://contaazul.com/cases-de-sucesso/contabilidade-luiz-correa/",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Atraso do balanço aos clientes",
+    "antes": "até 4 meses",
+    "depois": "tempo real",
+    "variacao": "até 4 meses eliminados"
+   },
+   {
+    "indicador": "Empresas na estrutura",
+    "antes": null,
+    "depois": "3",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Mapeie quais dados chegam atrasados ao fechamento contábil.",
+   "Conecte banco e lançamentos a um sistema em nuvem com coleta automática.",
+   "Entregue ao cliente o demonstrativo mensal em dia, em vez de acumulado."
+  ],
+  "trecho_comprovante": "Hoje isso vira número: até 4 meses de atraso eliminados, numa estrutura que já são 3 empresas.",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-002",
+  "porte": "pequena",
+  "gargalo": "manual_repetitivo",
+  "gargalos_secundarios": [],
+  "area": "financeiro",
+  "setor": "contabilidade",
+  "setor_chave": "servicos_b2b",
+  "tipo": "nominal",
+  "empresa": "Brugnerotto Contadores Associados",
+  "pais": "Brasil",
+  "titulo": "Brugnerotto Contadores Associados: Folha de pagamento, que antes levava dias, passou a ficar fechada até o dia 2 do mês",
+  "problema": "Rotina contábil manual desgastava o escritório e a percepção dos clientes",
+  "solucao": "Passou a usar a plataforma do Conta Azul, que processa grande parte dos dados automaticamente e dá informação em tempo real ao escritório e aos clientes.",
+  "ferramentas": [
+   "Conta Azul"
+  ],
+  "resultado": "Folha de pagamento, que antes levava dias, passou a ficar fechada até o dia 2 do mês.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Conta Azul (case de sucesso)",
+  "fonte_url": "https://contaazul.com/cases-de-sucesso/brugnerotto-contadores-associados/",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Fechamento da folha de pagamento",
+    "antes": "dias",
+    "depois": "até o dia 2 do mês",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Liste as tarefas de digitação que consomem o fechamento mensal.",
+   "Troque a digitação por importação automática de dados (banco, notas).",
+   "Fixe uma data-limite de fechamento (ex.: dia 2) e meça mensalmente."
+  ],
+  "trecho_comprovante": "Folha de pagamento fechada até o dia 2",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-003",
+  "porte": "pequena",
+  "gargalo": "capacidade",
+  "gargalos_secundarios": [],
+  "area": "operacoes",
+  "setor": "contabilidade",
+  "setor_chave": "servicos_b2b",
+  "tipo": "nominal",
+  "empresa": "Virei Contador",
+  "pais": "Brasil",
+  "titulo": "Virei Contador: Crescimento de 300% após a adoção",
+  "problema": "Transferência manual de dados limitava o crescimento do contábil online",
+  "solucao": "Adotou o sistema 100% online do Conta Azul, eliminando a transferência manual de dados e criando base para escalar a carteira.",
+  "ferramentas": [
+   "Conta Azul"
+  ],
+  "resultado": "Crescimento de 300% após a adoção; carteira de 305 clientes ativos.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Conta Azul (case de sucesso)",
+  "fonte_url": "https://contaazul.com/cases-de-sucesso/virei-contador/",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Crescimento do escritório",
+    "antes": null,
+    "depois": "300%",
+    "variacao": null
+   },
+   {
+    "indicador": "Clientes ativos",
+    "antes": null,
+    "depois": "305",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Identifique onde dados são repassados manualmente entre cliente e escritório.",
+   "Migre para plataforma online com coleta automática.",
+   "Use a folga de capacidade para captar novos clientes."
+  ],
+  "trecho_comprovante": "o crescimento da Virei Contador foi de 300%, e a carteira chegou a 305 clientes ativos",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-004",
+  "porte": "pequena",
+  "gargalo": "controle",
+  "gargalos_secundarios": [],
+  "area": "financeiro",
+  "setor": "contabilidade",
+  "setor_chave": "servicos_b2b",
+  "tipo": "nominal",
+  "empresa": "Tactus Contabilidade",
+  "pais": "Brasil",
+  "titulo": "Tactus Contabilidade: Pelo menos 15 novos clientes por mês, com gestão financeira 100% online e acesso em tempo real",
+  "problema": "Crescimento da carteira exigia estrutura e controle da gestão financeira dos clientes, com processos em papel",
+  "solucao": "Centralizou a gestão financeira dos clientes no Conta Azul e passou o fluxo de documentos para o ambiente online.",
+  "ferramentas": [
+   "Conta Azul"
+  ],
+  "resultado": "Pelo menos 15 novos clientes por mês, com gestão financeira 100% online e acesso em tempo real.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Conta Azul (case de sucesso)",
+  "fonte_url": "https://contaazul.com/cases-de-sucesso/tactus-contabilidade/",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Novos clientes por mês",
+    "antes": null,
+    "depois": "pelo menos 15",
+    "variacao": null
+   },
+   {
+    "indicador": "Gestão financeira online",
+    "antes": null,
+    "depois": "100%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Centralize a gestão financeira dos clientes em um único sistema.",
+   "Elimine o papel: documentos enviados e conferidos online.",
+   "Dê acesso em tempo real a cliente e equipe."
+  ],
+  "trecho_comprovante": "pelo menos 15 novos clientes por mês",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-005",
+  "porte": "pequena",
+  "gargalo": "informacao",
+  "gargalos_secundarios": [],
+  "area": "financeiro",
+  "setor": "contabilidade",
+  "setor_chave": "servicos_b2b",
+  "tipo": "nominal",
+  "empresa": "Syhus Contabilidade",
+  "pais": "Brasil",
+  "titulo": "Syhus Contabilidade: Atende 200 clientes que somam R$ 600 milhões em faturamento, com visibilidade em tempo real",
+  "problema": "Modelo contábil convencional, sem diferencial e com processamento manual de dados",
+  "solucao": "Segmentou o atendimento para empresas de tecnologia e passou a operar um modelo digital em tempo real no Conta Azul, com dados compartilhados com cada cliente.",
+  "ferramentas": [
+   "Conta Azul"
+  ],
+  "resultado": "Atende 200 clientes que somam R$ 600 milhões em faturamento, com visibilidade em tempo real.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Conta Azul (case de sucesso)",
+  "fonte_url": "https://contaazul.com/cases-de-sucesso/syhus-contabilidade/",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Clientes atendidos",
+    "antes": null,
+    "depois": "200",
+    "variacao": null
+   },
+   {
+    "indicador": "Faturamento somado dos clientes",
+    "antes": null,
+    "depois": "R$ 600 milhões",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Escolha um nicho e padronize os dados que ele exige.",
+   "Compartilhe um painel em tempo real com cada cliente.",
+   "Troque processamento manual por integração e conciliação automática."
+  ],
+  "trecho_comprovante": "Hoje a Syhus atende 200 clientes, que juntos somam R$ 600 milhões em faturamento.",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-006",
+  "porte": "pequena",
+  "gargalo": "informacao",
+  "gargalos_secundarios": [],
+  "area": "financeiro",
+  "setor": "contabilidade",
+  "setor_chave": "servicos_b2b",
+  "tipo": "nominal",
+  "empresa": "Softcon Contabilidade",
+  "pais": "Brasil",
+  "titulo": "Softcon Contabilidade: Atende cerca de 300 clientes mantendo relação consultiva",
+  "problema": "Controles em planilhas e volume crescente de obrigações acessórias",
+  "solucao": "Passou a usar um sistema único em nuvem no Conta Azul, com contas a pagar conciliadas em tempo real com nota fiscal e boleto.",
+  "ferramentas": [
+   "Conta Azul"
+  ],
+  "resultado": "Atende cerca de 300 clientes mantendo relação consultiva; visão de lançamentos passados e futuros em um único dia.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Conta Azul (case de sucesso)",
+  "fonte_url": "https://contaazul.com/cases-de-sucesso/softcon-contabilidade/",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Clientes atendidos",
+    "antes": null,
+    "depois": "cerca de 300",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Abandone planilhas e centralize documentos em um sistema.",
+   "Concilie contas a pagar com nota e boleto automaticamente.",
+   "Use o tempo liberado para atendimento consultivo."
+  ],
+  "trecho_comprovante": "Hoje a Softcon atua com cerca de 300 clientes",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-007",
+  "porte": "pequena",
+  "gargalo": "controle",
+  "gargalos_secundarios": [],
+  "area": "financeiro",
+  "setor": "contabilidade",
+  "setor_chave": "servicos_b2b",
+  "tipo": "nominal",
+  "empresa": "São Lucas Assessoria Contábil",
+  "pais": "Brasil",
+  "titulo": "São Lucas Assessoria Contábil: A página relata o fim dos 40% de inadimplência, sem informar o índice atual",
+  "problema": "Inadimplência de cerca de 40% e cerca de R$ 700 mil a receber entre 2011 e 2015, sem tecnologia",
+  "solucao": "Adotou o Conta Azul, integrou o trabalho contábil e fiscal em um sistema e estendeu a ferramenta aos clientes.",
+  "ferramentas": [
+   "Conta Azul"
+  ],
+  "resultado": "A página relata o fim dos 40% de inadimplência, sem informar o índice atual.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Conta Azul (case de sucesso)",
+  "fonte_url": "https://contaazul.com/cases-de-sucesso/sao-lucas-assessoria-contabil/",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Inadimplência do escritório",
+    "antes": "cerca de 40% (2011–2015)",
+    "depois": "fim da inadimplência (sem percentual atual)",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Registre receitas e cobranças em sistema com boleto e régua de cobrança.",
+   "Acompanhe inadimplência mensalmente.",
+   "Estenda o sistema aos clientes para padronizar o fluxo."
+  ],
+  "trecho_comprovante": "Cheguei a ter 40% de inadimplência no escritório entre 2011 e 2015, um rombo de 700 mil reais para receber.",
+  "verificado": true,
+  "forca": "fraca"
+ },
+ {
+  "id": "Q-008",
+  "porte": "pequena",
+  "gargalo": "integracao",
+  "gargalos_secundarios": [],
+  "area": "financeiro",
+  "setor": "contabilidade",
+  "setor_chave": "servicos_b2b",
+  "tipo": "nominal",
+  "empresa": "Anexo Gestão Contábil",
+  "pais": "Brasil",
+  "titulo": "Anexo Gestão Contábil: Passou a oferecer 5 novos serviços além da contabilidade, de marketing a consultoria",
+  "problema": "Processos manuais em papel e balancete sem valor real para o cliente",
+  "solucao": "Usou o Conta Azul com integração automática ao banco e fim do papel; liberou os sócios para atuar de forma consultiva.",
+  "ferramentas": [
+   "Conta Azul"
+  ],
+  "resultado": "Passou a oferecer 5 novos serviços além da contabilidade, de marketing a consultoria.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Conta Azul (case de sucesso)",
+  "fonte_url": "https://contaazul.com/cases-de-sucesso/anexo-gestao-contabil/",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Novos serviços oferecidos",
+    "antes": null,
+    "depois": "5",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Conecte o banco do cliente ao sistema para importar lançamentos.",
+   "Elimine o papel do fluxo de balancete.",
+   "Reinvista as horas liberadas em serviços consultivos."
+  ],
+  "trecho_comprovante": "a Anexo passou a oferecer 5 novos serviços, de marketing a consultoria",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-009",
+  "porte": "pequena",
+  "gargalo": "integracao",
+  "gargalos_secundarios": [],
+  "area": "operacoes",
+  "setor": "e-commerce de produtos para pets",
+  "setor_chave": "varejo_ecommerce",
+  "tipo": "nominal",
+  "empresa": "RicaPet",
+  "pais": "Brasil",
+  "titulo": "RicaPet: Cerca de 12 mil pedidos despachados por mês (partiu de cerca de 40 vendas por dia)",
+  "problema": "Sistemas sem relatórios financeiros e fiscais, integração instável e etiquetas lentas",
+  "solucao": "Adotou o Omie ERP e o Omie.Hub para integrar marketplaces e loja virtual, emissão de notas e gestão financeira em um só lugar.",
+  "ferramentas": [
+   "Omie ERP",
+   "Omie.Hub",
+   "Shopee",
+   "Americanas",
+   "Magalu",
+   "Amazon"
+  ],
+  "resultado": "Cerca de 12 mil pedidos despachados por mês (partiu de cerca de 40 vendas por dia); faturamento cresceu 40% entre dezembro de 2023 e julho de 2024.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Omie (blog, case de sucesso)",
+  "fonte_url": "https://www.omie.com.br/blog/case-de-sucesso-ricapet/",
+  "ano": 2024,
+  "confianca": "alta",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2024-09",
+  "metricas": [
+   {
+    "indicador": "Faturamento (dez/2023 a jul/2024)",
+    "antes": null,
+    "depois": null,
+    "variacao": "+40%"
+   },
+   {
+    "indicador": "Pedidos despachados por mês",
+    "antes": "cerca de 40 vendas/dia no início",
+    "depois": "cerca de 12 mil",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Empresa criada em 2021 como renda extra; a fonte não detalha prazo de implantação.",
+  "como_replicar": [
+   "Escolha um ERP que integre os marketplaces em que você vende.",
+   "Automatize emissão de nota e etiqueta a partir do pedido.",
+   "Use os relatórios financeiros e fiscais do ERP para decidir estoque e preço."
+  ],
+  "trecho_comprovante": "ele cresceu 40%",
+  "verificado": true,
+  "forca": "forte"
+ },
+ {
+  "id": "Q-010",
+  "porte": "pequena",
+  "gargalo": "comunicacao",
+  "gargalos_secundarios": [],
+  "area": "atendimento",
+  "setor": "varejo esportivo (corrida), 3 lojas físicas e e-commerce",
+  "setor_chave": "varejo_ecommerce",
+  "tipo": "nominal",
+  "empresa": "Velocità",
+  "pais": "Brasil",
+  "titulo": "Velocità: +15% nas vendas do site",
+  "problema": "Atendimento fragmentado entre e-mail, WhatsApp, Instagram e Facebook, sem visão única",
+  "solucao": "Centralizou os canais no Octadesk, integrou vendedores das lojas ao digital e passou a usar painéis de produtividade.",
+  "ferramentas": [
+   "Octadesk"
+  ],
+  "resultado": "+15% nas vendas do site; 400 interações por atendente por mês.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Octadesk (case de sucesso)",
+  "fonte_url": "https://www.octadesk.com/cases/velocita",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Vendas do site",
+    "antes": null,
+    "depois": null,
+    "variacao": "+15%"
+   },
+   {
+    "indicador": "Interações por atendente por mês",
+    "antes": null,
+    "depois": "400",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Seis meses de negociação com fornecedores anteriores sem solução, segundo a página.",
+  "como_replicar": [
+   "Reúna WhatsApp, Instagram e e-mail em uma caixa de entrada única.",
+   "Inclua vendedores das lojas físicas no atendimento digital.",
+   "Acompanhe produtividade por atendente em painel."
+  ],
+  "trecho_comprovante": "+15% nas vendas do site",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-011",
+  "porte": "pequena",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [],
+  "area": "marketing",
+  "setor": "varejo de moda íntima/modeladores",
+  "setor_chave": "varejo_ecommerce",
+  "tipo": "nominal",
+  "empresa": "Esbelt",
+  "pais": "Brasil",
+  "titulo": "Esbelt: CAC caiu de R$ 100 para R$ 38 (-62%) em poucos meses",
+  "problema": "CAC de R$ 100, dependência de mídia paga e relacionamento manual com clientes",
+  "solucao": "Automatizou e-mail, WhatsApp e SMS com cupom de primeira compra, dicas pós-compra e cashback no RD Station Marketing para e-commerce.",
+  "ferramentas": [
+   "RD Station Marketing"
+  ],
+  "resultado": "CAC caiu de R$ 100 para R$ 38 (-62%) em poucos meses.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "RD Station (história de sucesso)",
+  "fonte_url": "https://www.rdstation.com/historias-de-sucesso/esbelt",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "CAC",
+    "antes": "R$ 100",
+    "depois": "R$ 38",
+    "variacao": "-62%"
+   }
+  ],
+  "esforco_implantacao": "Equipe enxuta, segundo a página; prazo: poucos meses.",
+  "como_replicar": [
+   "Crie fluxos automáticos de boas-vindas, pós-compra e recompra.",
+   "Ofereça cupom de primeira compra e cashback.",
+   "Meça o CAC antes e depois."
+  ],
+  "trecho_comprovante": "reduzir seu CAC de R$ 100 para R$ 38",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-012",
+  "porte": "pequena",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [],
+  "area": "marketing",
+  "setor": "contabilidade/finanças (software tributário)",
+  "setor_chave": "tecnologia",
+  "tipo": "nominal",
+  "empresa": "Tributei",
+  "pais": "Brasil",
+  "titulo": "Tributei: Faturamento +53% em 2024 sobre o ano anterior",
+  "problema": "Captar e reter clientes de forma automatizada e educar o mercado",
+  "solucao": "Estruturou fluxos de automação, segmentação e integração marketing-comercial no RD Station Marketing.",
+  "ferramentas": [
+   "RD Station Marketing"
+  ],
+  "resultado": "Faturamento +53% em 2024 sobre o ano anterior; conversão de leads qualificados +28%; leads +24%.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "RD Station (história de sucesso)",
+  "fonte_url": "https://www.rdstation.com/historias-de-sucesso/tributei",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2025",
+  "metricas": [
+   {
+    "indicador": "Faturamento 2024 vs. 2023",
+    "antes": null,
+    "depois": null,
+    "variacao": "+53%"
+   },
+   {
+    "indicador": "Conversão de leads qualificados",
+    "antes": null,
+    "depois": null,
+    "variacao": "+28%"
+   },
+   {
+    "indicador": "Volume de leads",
+    "antes": null,
+    "depois": null,
+    "variacao": "+24%"
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Segmente a base por estágio de jornada.",
+   "Crie fluxos de nutrição automáticos.",
+   "Integre marketing e comercial para passar leads qualificados."
+  ],
+  "trecho_comprovante": "Com a implementação, a Tributei alcançou um aumento de 53% no faturamento de 2024 frente ao ano anterior",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-013",
+  "porte": "pequena",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [],
+  "area": "marketing",
+  "setor": "consultoria previdenciária",
+  "setor_chave": "servicos_b2b",
+  "tipo": "nominal",
+  "empresa": "Prev Fácil",
+  "pais": "Brasil",
+  "titulo": "Prev Fácil: +39% em vendas, +33% em oportunidades geradas e +50% em conversão sem novos custos",
+  "problema": "Qualificar leads para escalar contratos mensais",
+  "solucao": "Fluxos de nutrição por e-mail segmentados por interesse e comportamento no RD Station Marketing, com mídia paga e remarketing otimizados.",
+  "ferramentas": [
+   "RD Station Marketing"
+  ],
+  "resultado": "+39% em vendas, +33% em oportunidades geradas e +50% em conversão sem novos custos.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "RD Station (história de sucesso)",
+  "fonte_url": "https://www.rdstation.com/historias-de-sucesso/prev-facil",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2025",
+  "metricas": [
+   {
+    "indicador": "Vendas",
+    "antes": null,
+    "depois": null,
+    "variacao": "+39%"
+   },
+   {
+    "indicador": "Oportunidades geradas",
+    "antes": null,
+    "depois": null,
+    "variacao": "+33%"
+   },
+   {
+    "indicador": "Conversão",
+    "antes": null,
+    "depois": null,
+    "variacao": "+50%"
+   }
+  ],
+  "esforco_implantacao": "Parceria de 4 anos com agência; não informa custo.",
+  "como_replicar": [
+   "Segmente leads por interesse.",
+   "Automatize e-mails por estágio.",
+   "Reaproveite o tráfego com remarketing."
+  ],
+  "trecho_comprovante": "Como a Prev Fácil aumentou suas vendas em 39% com o RD Station Marketing",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-014",
+  "porte": "pequena",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [],
+  "area": "marketing",
+  "setor": "distribuidor de vidraria para laboratório",
+  "setor_chave": "varejo_ecommerce",
+  "tipo": "nominal",
+  "empresa": "Qualividros",
+  "pais": "Brasil",
+  "titulo": "Qualividros: Receita da loja online 14x maior",
+  "problema": "Loja online quase sem vendas e sem estratégia digital",
+  "solucao": "Inbound com SEO, conteúdo, mídia paga e e-mail automatizado no RD Station Marketing para reativar base de contatos de mais de 20 anos.",
+  "ferramentas": [
+   "RD Station Marketing"
+  ],
+  "resultado": "Receita da loja online 14x maior; conversões de e-commerce +267% ao ano; ROAS médio de 12x.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "RD Station (história de sucesso)",
+  "fonte_url": "https://www.rdstation.com/historias-de-sucesso/qualividros",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2025",
+  "metricas": [
+   {
+    "indicador": "Receita da loja online",
+    "antes": null,
+    "depois": null,
+    "variacao": "14x"
+   },
+   {
+    "indicador": "Conversões de e-commerce",
+    "antes": null,
+    "depois": null,
+    "variacao": "+267% a.a."
+   },
+   {
+    "indicador": "ROAS médio",
+    "antes": null,
+    "depois": "12x",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Reative a base antiga com e-mail segmentado.",
+   "Publique conteúdo para busca orgânica.",
+   "Meça ROAS por campanha."
+  ],
+  "trecho_comprovante": "Como a Qualividros aumentou sua receita em mais de 14x com o RD Station Marketing",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-015",
+  "porte": "pequena",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [],
+  "area": "marketing",
+  "setor": "plataforma de ingressos para eventos",
+  "setor_chave": "tecnologia",
+  "tipo": "nominal",
+  "empresa": "Tycket",
+  "pais": "Brasil",
+  "titulo": "Tycket: Mais de 5.000 vendas recuperadas em 90 dias",
+  "problema": "Alto abandono de carrinho na etapa final de pagamento",
+  "solucao": "Fluxos automáticos de e-mail disparados 30 minutos após o abandono, com texto que trata objeções, no RD Station Marketing.",
+  "ferramentas": [
+   "RD Station Marketing"
+  ],
+  "resultado": "Mais de 5.000 vendas recuperadas em 90 dias; recuperação acima de 10% dos carrinhos, cerca de 3x a média do mercado, sem gasto extra com mídia.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "RD Station (história de sucesso)",
+  "fonte_url": "https://www.rdstation.com/historias-de-sucesso/tycket",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2025",
+  "metricas": [
+   {
+    "indicador": "Vendas recuperadas em 90 dias",
+    "antes": null,
+    "depois": "mais de 5.000",
+    "variacao": null
+   },
+   {
+    "indicador": "Recuperação de carrinhos abandonados",
+    "antes": "média de mercado 3% a 5%",
+    "depois": "acima de 10%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Sem investimento adicional em mídia.",
+  "como_replicar": [
+   "Dispare e-mail automático 30 minutos após o abandono.",
+   "Escreva copy que responda objeções do checkout.",
+   "Meça a recuperação e compare com a média."
+  ],
+  "trecho_comprovante": "Em apenas 90 dias, a estratégia conseguiu recuperar mais de 5.000 vendas que antes seriam perdidas no checkout.",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-016",
+  "porte": "pequena",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [],
+  "area": "comercial",
+  "setor": "construção civil (Recife)",
+  "setor_chave": "construcao_imoveis",
+  "tipo": "nominal",
+  "empresa": "Construtora Ceta",
+  "pais": "Brasil",
+  "titulo": "Construtora Ceta: Leads de 100 para mais de 3.000 em menos de um ano",
+  "problema": "Canal digital gerou só 100 leads em 10 meses, sem qualificação automática e com WhatsApp pulverizado",
+  "solucao": "RD Station Marketing, CRM com IA generativa e Conversas com WhatsApp oficial e SDR com IA.",
+  "ferramentas": [
+   "RD Station Marketing",
+   "RD Station CRM",
+   "RD Station Conversas"
+  ],
+  "resultado": "Leads de 100 para mais de 3.000 em menos de um ano; canal faturou quase R$ 9 milhões; ROI de 46x; IA identificou 314 MQLs.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "RD Station (história de sucesso)",
+  "fonte_url": "https://www.rdstation.com/historias-de-sucesso/construtora-ceta",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Leads",
+    "antes": "100",
+    "depois": "mais de 3.000",
+    "variacao": "+3.000%"
+   },
+   {
+    "indicador": "Receita do canal digital",
+    "antes": null,
+    "depois": "quase R$ 9 milhões",
+    "variacao": null
+   },
+   {
+    "indicador": "ROI",
+    "antes": null,
+    "depois": "46x",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Centralize o WhatsApp em número oficial.",
+   "Use SDR com IA para qualificar em minutos.",
+   "Envie só MQLs ao corretor."
+  ],
+  "trecho_comprovante": "O canal que antes não gerava nenhuma venda faturou quase 9 milhões em menos de um ano.",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-017",
+  "porte": "pequena",
+  "gargalo": "capacidade",
+  "gargalos_secundarios": [],
+  "area": "atendimento",
+  "setor": "concessionária de veículos usados (Grupo Marajó)",
+  "setor_chave": "varejo_ecommerce",
+  "tipo": "nominal",
+  "empresa": "Seminovos Marajó",
+  "pais": "Brasil",
+  "titulo": "Seminovos Marajó: Conversão +40%",
+  "problema": "Processos de venda manuais, lentos e desconectados, com perda de leads",
+  "solucao": "Qualificação automática por WhatsApp com consulta à API do DETRAN, distribuição de leads no CRM e IA para cruzar com o estoque.",
+  "ferramentas": [
+   "RD Station Marketing",
+   "RD Station Conversas",
+   "RD Station CRM",
+   "Mentor IA"
+  ],
+  "resultado": "Conversão +40%; CAC -25%; 35% do atendimento de leads 100% automatizado; mais de 900 atendimentos, o equivalente ao trabalho de três funcionários.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "RD Station (história de sucesso)",
+  "fonte_url": "https://www.rdstation.com/historias-de-sucesso/seminovos-marajo",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Taxa de conversão",
+    "antes": null,
+    "depois": null,
+    "variacao": "+40%"
+   },
+   {
+    "indicador": "CAC",
+    "antes": null,
+    "depois": null,
+    "variacao": "-25%"
+   },
+   {
+    "indicador": "Atendimento de leads totalmente automatizado",
+    "antes": null,
+    "depois": "35%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Qualifique leads por WhatsApp com perguntas fixas.",
+   "Cruze o interesse com o estoque.",
+   "Distribua leads automaticamente aos vendedores."
+  ],
+  "trecho_comprovante": "+40% na taxa de conversão",
+  "verificado": true,
+  "forca": "fraca"
+ },
+ {
+  "id": "Q-018",
+  "porte": "pequena",
+  "gargalo": "processo",
+  "gargalos_secundarios": [],
+  "area": "comercial",
+  "setor": "incorporadora",
+  "setor_chave": "construcao_imoveis",
+  "tipo": "nominal",
+  "empresa": "VIIV Empreendimentos",
+  "pais": "Brasil",
+  "titulo": "VIIV Empreendimentos: Vendas de 129 unidades em 2024 para 303 em 2025 (+135%)",
+  "problema": "Leads geridos em planilhas, com retrabalho, leads esfriando e sem previsão de vendas",
+  "solucao": "Integrou RD Station Marketing, CRM e Conversas, com tarefas por etapa, distribuição de leads por resposta lenta e cadências de follow-up.",
+  "ferramentas": [
+   "RD Station Marketing",
+   "RD Station CRM",
+   "RD Station Conversas"
+  ],
+  "resultado": "Vendas de 129 unidades em 2024 para 303 em 2025 (+135%); receita de R$ 78,8 milhões para R$ 95,6 milhões.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "RD Station (história de sucesso)",
+  "fonte_url": "https://www.rdstation.com/historias-de-sucesso/viiv-empreendimentos",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Unidades vendidas",
+    "antes": "129 (2024)",
+    "depois": "303 (2025)",
+    "variacao": "+135%"
+   },
+   {
+    "indicador": "Receita",
+    "antes": "R$ 78,8 milhões",
+    "depois": "R$ 95,6 milhões",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Período de 2025 ainda sem dois meses concluídos, segundo a página.",
+  "como_replicar": [
+   "Substitua a planilha por CRM com etapas.",
+   "Automatize tarefas e cadências de follow-up.",
+   "Redistribua leads sem resposta."
+  ],
+  "trecho_comprovante": "o volume de vendas cresceu 135%, passando de 129 unidades em 2024 para 303 unidades em 2025",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-019",
+  "porte": "pequena",
+  "gargalo": "integracao",
+  "gargalos_secundarios": [],
+  "area": "comercial",
+  "setor": "farmácia de manipulação (injetáveis)",
+  "setor_chave": "saude",
+  "tipo": "nominal",
+  "empresa": "Health Tech",
+  "pais": "Brasil",
+  "titulo": "Health Tech: Geração de leads +3.000%, custo por lead -85%, vendas digitais 70x",
+  "problema": "Baixa geração de leads, CPL alto e CRM sem conexão com o ERP",
+  "solucao": "RD Station Marketing, CRM e Conversas integrados ao ERP, com campanhas por WhatsApp.",
+  "ferramentas": [
+   "RD Station Marketing",
+   "RD Station CRM",
+   "RD Station Conversas"
+  ],
+  "resultado": "Geração de leads +3.000%, custo por lead -85%, vendas digitais 70x; 172 vendas fechadas em um mês.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "RD Station (história de sucesso)",
+  "fonte_url": "https://www.rdstation.com/historias-de-sucesso/health-tech",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Geração de leads",
+    "antes": null,
+    "depois": null,
+    "variacao": "+3.000%"
+   },
+   {
+    "indicador": "Custo por lead",
+    "antes": null,
+    "depois": null,
+    "variacao": "-85%"
+   },
+   {
+    "indicador": "Vendas digitais",
+    "antes": null,
+    "depois": null,
+    "variacao": "70x"
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Ligue o CRM ao ERP para ver receita por origem.",
+   "Use WhatsApp para campanhas segmentadas.",
+   "Corte canais com CPL alto."
+  ],
+  "trecho_comprovante": "+3k% geração de leads",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-020",
+  "porte": "pequena",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [],
+  "area": "marketing",
+  "setor": "fabricante de painéis de madeira",
+  "setor_chave": "industria",
+  "tipo": "nominal",
+  "empresa": "Bonardi Painéis de Madeira",
+  "pais": "Brasil",
+  "titulo": "Bonardi Painéis de Madeira: Conversão de leads +185%",
+  "problema": "Marca conhecida offline sem demanda digital estruturada e sem processo automatizado",
+  "solucao": "RD Station Marketing, CRM e Conversas, com Google/Meta Ads e painéis diários.",
+  "ferramentas": [
+   "RD Station Marketing",
+   "RD Station CRM",
+   "RD Station Conversas"
+  ],
+  "resultado": "Conversão de leads +185%; leads avançando a oportunidade +70%; receita de leads digitais +62% (a página também exibe +60%).",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "RD Station (história de sucesso)",
+  "fonte_url": "https://www.rdstation.com/historias-de-sucesso/bonardi-paineis-de-madeira",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Conversão de leads",
+    "antes": null,
+    "depois": null,
+    "variacao": "+185%"
+   },
+   {
+    "indicador": "Receita de leads digitais",
+    "antes": null,
+    "depois": null,
+    "variacao": "+62%"
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Crie landing pages de captura.",
+   "Automatize atendimento inicial no WhatsApp.",
+   "Acompanhe dashboard diário."
+  ],
+  "trecho_comprovante": "um aumento de 62% na receita gerada por leads digitais",
+  "verificado": true,
+  "forca": "fraca"
+ },
+ {
+  "id": "Q-021",
+  "porte": "pequena",
+  "gargalo": "decisao",
+  "gargalos_secundarios": [],
+  "area": "marketing",
+  "setor": "rede de ensino odontológico",
+  "setor_chave": "educacao",
+  "tipo": "nominal",
+  "empresa": "Rede IOA",
+  "pais": "Brasil",
+  "titulo": "Rede IOA: Receita +60%, ROI de quase 7x, leads +39%, novos clientes +127%, conversão de oportunidades +177%",
+  "problema": "Dificuldade de comprovar ROI da captação e leads indo a celulares pessoais dos vendedores",
+  "solucao": "RD Station Marketing, Conversas e CRM, com mais de 40 fluxos de e-mail.",
+  "ferramentas": [
+   "RD Station Marketing",
+   "RD Station Conversas",
+   "RD Station CRM"
+  ],
+  "resultado": "Receita +60%, ROI de quase 7x, leads +39%, novos clientes +127%, conversão de oportunidades +177%.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "RD Station (história de sucesso)",
+  "fonte_url": "https://www.rdstation.com/historias-de-sucesso/rede-ioa",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Receita",
+    "antes": null,
+    "depois": null,
+    "variacao": "+60%"
+   },
+   {
+    "indicador": "Novos clientes",
+    "antes": null,
+    "depois": null,
+    "variacao": "+127%"
+   },
+   {
+    "indicador": "Conversão de oportunidades",
+    "antes": null,
+    "depois": null,
+    "variacao": "+177%"
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Centralize leads no CRM.",
+   "Meça ROI por campanha.",
+   "Direcione verba ao que converte."
+  ],
+  "trecho_comprovante": "+60% em receita",
+  "verificado": true,
+  "forca": "fraca"
+ },
+ {
+  "id": "Q-022",
+  "porte": "pequena",
+  "gargalo": "decisao",
+  "gargalos_secundarios": [],
+  "area": "comercial",
+  "setor": "residenciais sênior",
+  "setor_chave": "saude",
+  "tipo": "nominal",
+  "empresa": "Terça da Serra",
+  "pais": "Brasil",
+  "titulo": "Terça da Serra: Leads +240%, vendas +90%, faturamento +80%",
+  "problema": "Sem visibilidade dos dados de vendas; leads copiados em planilhas",
+  "solucao": "RD Station CRM integrado ao RD Station Marketing.",
+  "ferramentas": [
+   "RD Station CRM",
+   "RD Station Marketing"
+  ],
+  "resultado": "Leads +240%, vendas +90%, faturamento +80%.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "RD Station (história de sucesso)",
+  "fonte_url": "https://www.rdstation.com/historias-de-sucesso/terca-da-serra",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Geração de leads",
+    "antes": null,
+    "depois": null,
+    "variacao": "+240%"
+   },
+   {
+    "indicador": "Vendas",
+    "antes": null,
+    "depois": null,
+    "variacao": "+90%"
+   },
+   {
+    "indicador": "Faturamento",
+    "antes": null,
+    "depois": null,
+    "variacao": "+80%"
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Leve leads direto ao CRM.",
+   "Veja funil por origem.",
+   "Decida orçamento com dados."
+  ],
+  "trecho_comprovante": "Os principais resultados que a gente obteve foi um aumento de 240% na geração de leads",
+  "verificado": true,
+  "forca": "fraca"
+ },
+ {
+  "id": "Q-023",
+  "porte": "pequena",
+  "gargalo": "processo",
+  "gargalos_secundarios": [],
+  "area": "comercial",
+  "setor": "franquia de salões",
+  "setor_chave": "servicos_b2b",
+  "tipo": "nominal",
+  "empresa": "Fast Escova",
+  "pais": "Brasil",
+  "titulo": "Fast Escova: R$ 180 mil de receita recuperada em cerca de 10 meses",
+  "problema": "Leads perdidos por demora ou desengajamento não voltavam ao funil",
+  "solucao": "Sequência de 3 e-mails no RD Station Marketing para leads perdidos, integrada ao CRM com tarefa para o vendedor.",
+  "ferramentas": [
+   "RD Station CRM",
+   "RD Station Marketing"
+  ],
+  "resultado": "R$ 180 mil de receita recuperada em cerca de 10 meses; mais de 5 mil contatos de volta ao funil, sem mídia adicional.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "RD Station (história de sucesso)",
+  "fonte_url": "https://www.rdstation.com/historias-de-sucesso/fast-escova",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Receita recuperada",
+    "antes": "R$ 0",
+    "depois": "R$ 180 mil",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Classifique motivos de perda.",
+   "Crie sequência de reengajamento.",
+   "Gere tarefa ao vendedor no clique."
+  ],
+  "trecho_comprovante": "Ver oportunidades que já considerávamos encerradas voltarem e gerarem mais de R$ 180 mil foi transformador.",
+  "verificado": true,
+  "forca": "fraca"
+ },
+ {
+  "id": "Q-024",
+  "porte": "pequena",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [],
+  "area": "atendimento",
+  "setor": "e-commerce de perucas",
+  "setor_chave": "varejo_ecommerce",
+  "tipo": "nominal",
+  "empresa": "Aura Afro",
+  "pais": "Brasil",
+  "titulo": "Aura Afro: Espera média -70% (resposta em menos de 30 s)",
+  "problema": "Mais de 100 leads por dia no WhatsApp e Instagram atendidos manualmente",
+  "solucao": "Agente de IA AurIA no SleekFlow AgentFlow, treinado com catálogo, políticas e playbook, com automações e handoff humano.",
+  "ferramentas": [
+   "SleekFlow AgentFlow",
+   "SleekFlow Flow Builder"
+  ],
+  "resultado": "Espera média -70% (resposta em menos de 30 s); atendimento -42%; resolução no primeiro contato 88%.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "SleekFlow (customer story)",
+  "fonte_url": "https://sleekflow.io/pt-br/customer-stories/aura-afro",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Tempo médio de espera",
+    "antes": null,
+    "depois": null,
+    "variacao": "-70%"
+   },
+   {
+    "indicador": "Tempo médio de atendimento",
+    "antes": null,
+    "depois": null,
+    "variacao": "-42%"
+   },
+   {
+    "indicador": "Resolução no primeiro contato",
+    "antes": null,
+    "depois": "88%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Implantação gradual.",
+  "como_replicar": [
+   "Organize catálogo e regras de envio.",
+   "Treine a IA e teste.",
+   "Defina quando passar ao humano."
+  ],
+  "trecho_comprovante": "A empresa recebia mais de 100 novos leads por dia",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-025",
+  "porte": "pequena",
+  "gargalo": "capacidade",
+  "gargalos_secundarios": [],
+  "area": "atendimento",
+  "setor": "assessoria contábil e fiscal",
+  "setor_chave": "servicos_b2b",
+  "tipo": "nominal",
+  "empresa": "São Caetano Assessoria Contábil",
+  "pais": "Brasil",
+  "titulo": "São Caetano Assessoria Contábil: +50% de capacidade de atendimento inicial sem contratar",
+  "problema": "Plataforma instável e sem governança entre departamentos",
+  "solucao": "Agente de IA Ana no SleekFlow, que atende 24h, qualifica e roteia.",
+  "ferramentas": [
+   "SleekFlow AgentFlow",
+   "SleekFlow Automation"
+  ],
+  "resultado": "+50% de capacidade de atendimento inicial sem contratar; 100% das conversas respondidas na hora; ajuste em 2 a 3 dias.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "dias",
+  "fonte_nome": "SleekFlow (customer story)",
+  "fonte_url": "https://sleekflow.io/pt-br/customer-stories/sao-caetano-assessoria-contabil",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Capacidade de atendimento inicial",
+    "antes": null,
+    "depois": null,
+    "variacao": "+50%"
+   }
+  ],
+  "esforco_implantacao": "Afinação em 2 a 3 dias.",
+  "como_replicar": [
+   "Coloque IA na primeira triagem.",
+   "Roteie por departamento.",
+   "Treine a equipe."
+  ],
+  "trecho_comprovante": "Em 2-3 dias, os resultados já eram visíveis",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-026",
+  "porte": "pequena",
+  "gargalo": "manual_repetitivo",
+  "gargalos_secundarios": [],
+  "area": "atendimento",
+  "setor": "clínica de estética",
+  "setor_chave": "saude",
+  "tipo": "nominal",
+  "empresa": "Clínica Lucas Miranda",
+  "pais": "Brasil",
+  "titulo": "Clínica Lucas Miranda: +40% de receita com campanhas mensais de aniversário",
+  "problema": "Plataformas rígidas e atendimento reativo",
+  "solucao": "SleekFlow com chatbot de qualificação, agendamentos e campanhas.",
+  "ferramentas": [
+   "SleekFlow"
+  ],
+  "resultado": "+40% de receita com campanhas mensais de aniversário; -30% do trabalho operacional.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "SleekFlow (customer story)",
+  "fonte_url": "https://sleekflow.io/pt-br/customer-stories/clinica-lucas-miranda",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Receita das campanhas de aniversário",
+    "antes": null,
+    "depois": null,
+    "variacao": "+40%"
+   },
+   {
+    "indicador": "Trabalho operacional",
+    "antes": null,
+    "depois": null,
+    "variacao": "-30%"
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Use chatbot para filtrar leads.",
+   "Automatize confirmações.",
+   "Envie campanhas de aniversário."
+  ],
+  "trecho_comprovante": "–30% de redução no trabalho operacional, graças ao chatbot que filtra e qualifica os leads antes do atendimento humano",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-027",
+  "porte": "pequena",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [],
+  "area": "atendimento",
+  "setor": "insurtech de seguros fotovoltaicos",
+  "setor_chave": "financeiro_seguros",
+  "tipo": "nominal",
+  "empresa": "Elétron Seguros",
+  "pais": "Brasil",
+  "titulo": "Elétron Seguros: Cerca de 80% das conversas resolvidas pela IA e 20% transferidas",
+  "problema": "WhatsApp instável e respostas repetitivas",
+  "solucao": "Agente de IA Aurora com mais de 100 guardrails.",
+  "ferramentas": [
+   "SleekFlow AgentFlow",
+   "WhatsApp Business API",
+   "Google Calendar"
+  ],
+  "resultado": "Cerca de 80% das conversas resolvidas pela IA e 20% transferidas; sem novas contratações.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "SleekFlow (customer story)",
+  "fonte_url": "https://sleekflow.io/pt-br/customer-stories/eletron-seguros-customer-story",
+  "ano": 2026,
+  "confianca": "alta",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2026-01",
+  "metricas": [
+   {
+    "indicador": "Conversas resolvidas pela IA",
+    "antes": null,
+    "depois": "cerca de 80%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Cerca de 3 meses.",
+  "como_replicar": [
+   "Documente regras.",
+   "Configure guardrails.",
+   "Passe ao humano com contexto."
+  ],
+  "trecho_comprovante": "Hoje, cerca de 80% dos atendimentos ficam com a IA, e apenas 20% são transferidos para o time",
+  "verificado": true,
+  "forca": "forte"
+ },
+ {
+  "id": "Q-028",
+  "porte": "pequena",
+  "gargalo": "manual_repetitivo",
+  "gargalos_secundarios": [],
+  "area": "comercial",
+  "setor": "software de gestão de vendas externas",
+  "setor_chave": "tecnologia",
+  "tipo": "nominal",
+  "empresa": "Checkmob",
+  "pais": "Brasil",
+  "titulo": "Checkmob: -70% no tempo de resposta",
+  "problema": "SDRs qualificavam leads manualmente",
+  "solucao": "AgentFlow no WhatsApp para primeiro contato, qualificação e agendamento de demos.",
+  "ferramentas": [
+   "SleekFlow AgentFlow",
+   "WhatsApp",
+   "CRM"
+  ],
+  "resultado": "-70% no tempo de resposta; +20% em demos qualificadas; 30% de economia de tempo.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "SleekFlow (customer story)",
+  "fonte_url": "https://sleekflow.io/pt-br/customer-stories/checkmob",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Tempo de resposta",
+    "antes": null,
+    "depois": null,
+    "variacao": "-70%"
+   },
+   {
+    "indicador": "Agendamento de demos qualificadas",
+    "antes": null,
+    "depois": null,
+    "variacao": "+20%"
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Automatize o primeiro contato.",
+   "Qualifique por perguntas.",
+   "Envie ao CRM."
+  ],
+  "trecho_comprovante": "70% de redução do tempo de resposta com AgentFlow",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-029",
+  "porte": "pequena",
+  "gargalo": "controle",
+  "gargalos_secundarios": [],
+  "area": "financeiro",
+  "setor": "e-commerce de casa e decoração",
+  "setor_chave": "varejo_ecommerce",
+  "tipo": "nominal",
+  "empresa": "Let's Eat It",
+  "pais": "Brasil",
+  "titulo": "Let's Eat It: Mais de 15.000 recuperações de carrinhos",
+  "problema": "WhatsApp instável",
+  "solucao": "Migrou para SleekFlow com carrinho abandonado e lembrete de PIX.",
+  "ferramentas": [
+   "SleekFlow Flow Builder"
+  ],
+  "resultado": "Mais de 15.000 recuperações de carrinhos; mais de 20.000 lembretes de PIX; mais de 20.000 pedidos.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "SleekFlow (customer story)",
+  "fonte_url": "https://sleekflow.io/pt-br/customer-stories/lets-eat-it-customer-story",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Recuperações de carrinho",
+    "antes": null,
+    "depois": "mais de 15.000",
+    "variacao": null
+   },
+   {
+    "indicador": "Lembretes de PIX",
+    "antes": null,
+    "depois": "mais de 20.000",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Automatize carrinho.",
+   "Lembre PIX pendente.",
+   "Venda por link."
+  ],
+  "trecho_comprovante": "Para a gente, um downtime de 10 minutos era inaceitável.",
+  "verificado": true,
+  "forca": "fraca"
+ },
+ {
+  "id": "Q-030",
+  "porte": "pequena",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [],
+  "area": "atendimento",
+  "setor": "escola privada K-12",
+  "setor_chave": "educacao",
+  "tipo": "nominal",
+  "empresa": "Colégio Cognos",
+  "pais": "Brasil",
+  "titulo": "Colégio Cognos: +150% de visitas confirmadas",
+  "problema": "Bots com menus rígidos e filas em matrículas",
+  "solucao": "Agente de IA treinado com Google Sheets, mini CRM.",
+  "ferramentas": [
+   "SleekFlow AgentFlow",
+   "Google Sheets"
+  ],
+  "resultado": "+150% de visitas confirmadas; -50% na fila; -90% de carga em dias de evento.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "SleekFlow (customer story)",
+  "fonte_url": "https://sleekflow.io/pt-br/customer-stories/colegio-cognos-customer-story",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2026-01",
+  "metricas": [
+   {
+    "indicador": "Visitas confirmadas",
+    "antes": null,
+    "depois": null,
+    "variacao": "+150%"
+   },
+   {
+    "indicador": "Fila",
+    "antes": null,
+    "depois": null,
+    "variacao": "-50%"
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Treine IA com FAQ.",
+   "Agende visitas.",
+   "Aplique regras de follow-up."
+  ],
+  "trecho_comprovante": "A IA é tão humana que muitos acham que estão falando com uma pessoa.",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-031",
+  "porte": "pequena",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [],
+  "area": "marketing",
+  "setor": "e-commerce de cafés",
+  "setor_chave": "varejo_ecommerce",
+  "tipo": "nominal",
+  "empresa": "Coffee ++ (Coffee Mais)",
+  "pais": "Brasil",
+  "titulo": "Coffee ++ (Coffee Mais): Faturamento via WhatsApp dobrou em relação ao e-mail",
+  "problema": "Faltava canal estratégico",
+  "solucao": "Disparos por perfil de compra via API oficial do WhatsApp.",
+  "ferramentas": [
+   "SleekFlow",
+   "Shopify"
+  ],
+  "resultado": "Faturamento via WhatsApp dobrou em relação ao e-mail; 70% do faturamento de CRM vem do WhatsApp.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "SleekFlow (customer story)",
+  "fonte_url": "https://sleekflow.io/pt-br/customer-stories/coffee-mais-customer-story",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Faturamento WhatsApp vs. e-mail",
+    "antes": null,
+    "depois": "2x",
+    "variacao": null
+   },
+   {
+    "indicador": "Participação do WhatsApp no CRM",
+    "antes": "30% e-mail",
+    "depois": "70% WhatsApp",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Segmente por compra.",
+   "Dispare campanhas.",
+   "Compare com e-mail."
+  ],
+  "trecho_comprovante": "Hoje, 70% do faturamento do setor de CRM da empresa vem do WhatsApp, contra 30% do e-mail.",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-032",
+  "porte": "pequena",
+  "gargalo": "capacidade",
+  "gargalos_secundarios": [],
+  "area": "atendimento",
+  "setor": "arena esportiva",
+  "setor_chave": "outro",
+  "tipo": "nominal",
+  "empresa": "Arena Sul Sports",
+  "pais": "Brasil",
+  "titulo": "Arena Sul Sports: 3.573 atendimentos automatizados",
+  "problema": "O sócio atendia todos os clientes sozinho",
+  "solucao": "Fluxos de reserva e campanhas no SleekFlow.",
+  "ferramentas": [
+   "SleekFlow"
+  ],
+  "resultado": "3.573 atendimentos automatizados; 1.322 escolheram reservar; conversão de 31%.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "SleekFlow (customer story)",
+  "fonte_url": "https://sleekflow.io/pt-br/customer-stories/arena-sul-sports-customer-story",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Atendimentos automatizados",
+    "antes": null,
+    "depois": "3.573",
+    "variacao": null
+   },
+   {
+    "indicador": "Conversão",
+    "antes": null,
+    "depois": "31%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Automatize perguntas.",
+   "Faça reservas por menu.",
+   "Dispare renovação."
+  ],
+  "trecho_comprovante": "3573 atendimentos automatizados",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-033",
+  "porte": "pequena",
+  "gargalo": "decisao",
+  "gargalos_secundarios": [],
+  "area": "operacoes",
+  "setor": "consultoria de comunicação",
+  "setor_chave": "servicos_b2b",
+  "tipo": "nominal",
+  "empresa": "Temple",
+  "pais": "Brasil",
+  "titulo": "Temple: 80% de satisfação",
+  "problema": "Acompanhamento fragmentado e manual",
+  "solucao": "Canal no WhatsApp com cadastro automático.",
+  "ferramentas": [
+   "SleekFlow"
+  ],
+  "resultado": "80% de satisfação; crescimento mensal médio de 254,8% de usuários.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "SleekFlow (customer story)",
+  "fonte_url": "https://sleekflow.io/pt-br/customer-stories/temple-customer-story",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Satisfação",
+    "antes": null,
+    "depois": "80%",
+    "variacao": null
+   },
+   {
+    "indicador": "Crescimento mensal de usuários",
+    "antes": null,
+    "depois": "254,8%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Projeto de 10 meses.",
+  "como_replicar": [
+   "Cadastre por WhatsApp.",
+   "Faça diagnósticos.",
+   "Segmente conteúdo."
+  ],
+  "trecho_comprovante": "80% de satisfação dos usuários com o canal de informações via WhatsApp",
+  "verificado": true,
+  "forca": "fraca"
+ },
+ {
+  "id": "Q-034",
+  "porte": "pequena",
+  "gargalo": "processo",
+  "gargalos_secundarios": [],
+  "area": "atendimento",
+  "setor": "clínica popular de saúde",
+  "setor_chave": "saude",
+  "tipo": "nominal",
+  "empresa": "Clínica Dimeg",
+  "pais": "Brasil",
+  "titulo": "Clínica Dimeg: 3.075 horários remanejados em quatro meses",
+  "problema": "Faltas sem aviso e horários ociosos",
+  "solucao": "IA da Nina Tecnologia integrada ao prontuário Doctoralia confirma e remarca consultas.",
+  "ferramentas": [
+   "Nina Tecnologia",
+   "Doctoralia"
+  ],
+  "resultado": "3.075 horários remanejados em quatro meses; presença acima de 95%; resposta de 90%.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Baguete (imprensa)",
+  "fonte_url": "https://www.baguete.com.br/public/noticias/dimeg-confirma-consultas-com-nina-tecnologia",
+  "ano": 2025,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2025-11",
+  "metricas": [
+   {
+    "indicador": "Horários remanejados em 4 meses",
+    "antes": null,
+    "depois": "3.075",
+    "variacao": null
+   },
+   {
+    "indicador": "Taxa de presença",
+    "antes": null,
+    "depois": "acima de 95%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Confirme por WhatsApp.",
+   "Integre ao prontuário.",
+   "Reocupe horários."
+  ],
+  "trecho_comprovante": "A plataforma chegou para preencher uma lacuna.",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-035",
+  "porte": "pequena",
+  "gargalo": "comunicacao",
+  "gargalos_secundarios": [],
+  "area": "atendimento",
+  "setor": "imobiliária",
+  "setor_chave": "construcao_imoveis",
+  "tipo": "nominal",
+  "empresa": "Imóveis Crédito Real",
+  "pais": "Brasil",
+  "titulo": "Imóveis Crédito Real: Quase 30% dos contratos de 2023 vieram de leads do WhatsApp",
+  "problema": "Demanda digital crescente e contatos sem registro",
+  "solucao": "Chatbots com mais de 14 jornadas no WhatsApp via Zenvia.",
+  "ferramentas": [
+   "Zenvia"
+  ],
+  "resultado": "Quase 30% dos contratos de 2023 vieram de leads do WhatsApp; mais de 139 mil mensagens em julho de 2023.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Zenvia (blog)",
+  "fonte_url": "https://zenvia.com/en/blog/credito-real-case-study/",
+  "ano": 2023,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2023-10",
+  "metricas": [
+   {
+    "indicador": "Contratos de 2023 originados no WhatsApp",
+    "antes": null,
+    "depois": "quase 30%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Mapeie jornadas.",
+   "Registre contatos.",
+   "Permita humano."
+  ],
+  "trecho_comprovante": "Almost 30% of contracts signed in 2023 came from WhatsApp leads.",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "Q-036",
+  "porte": "pequena",
+  "gargalo": "comunicacao",
+  "gargalos_secundarios": [],
+  "area": "atendimento",
+  "setor": "fintech antigolpe",
+  "setor_chave": "financeiro_seguros",
+  "tipo": "nominal",
+  "empresa": "Silverguard",
+  "pais": "Brasil",
+  "titulo": "Silverguard: 1.400 atendimentos em um mês",
+  "problema": "Golpes de PIX",
+  "solucao": "SOS Golpe via WhatsApp com automação e NPS.",
+  "ferramentas": [
+   "SleekFlow"
+  ],
+  "resultado": "1.400 atendimentos em um mês; resposta de NPS de 50%; leitura de 72,5%.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "SleekFlow (customer story)",
+  "fonte_url": "https://sleekflow.io/pt-br/customer-stories/silverguard-succes-story",
+  "ano": 2026,
+  "confianca": "media",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Atendimentos em um mês",
+    "antes": null,
+    "depois": "1.400",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Crie fluxo.",
+   "Gere protocolo.",
+   "Meça NPS."
+  ],
+  "trecho_comprovante": "Em apenas um mês, a Silverguard conseguiu realizar 1.400 atendimentos via WhatsApp.",
+  "verificado": true,
+  "forca": "media"
+ }
+]
