@@ -13,3 +13,10 @@ Documento completo: [`docs/evento-teoria-das-restricoes-ia.md`](docs/evento-teor
 - Regras de qualidade do banco: `data/pesquisa/SCHEMA2.md` e `data/pesquisa/LICOES.md`. `verificar_trechos.py` confere o trecho comprovante no HTML bruto da fonte.
 - Testes locais: `bash diagnostico/testar.sh`.
 - Dados dos participantes: tabelas `evento_leads` e `evento_respostas` no Supabase (RLS: o anon só insere).
+
+## Painel do comercial (`/comercial/`)
+
+- Página separada, só para a equipe V4: login com Google ou link por e-mail, e só **e-mail confirmado `@v4company.com`** vê os leads. A regra é aplicada no banco (função `evento_is_v4()` + RLS em `evento_leads` e `evento_respostas`), não só na tela.
+- Mostra leads, status (concluiu/abandonou), gargalos, anfitrião, botão de WhatsApp com mensagem pronta e exportação CSV para o CRM.
+- Biblioteca `supabase-js` embutida em `comercial/vendor/` (MIT), sem CDN.
+- Configuração única no Supabase (Authentication): em **URL Configuration** adicionar `https://<dominio-do-site>/comercial/` em Redirect URLs; para o botão Google, ativar o provedor **Google** (Client ID e Secret do Google Cloud). O link por e-mail funciona sem o Google.

@@ -5,6 +5,7 @@ cd "$(dirname "$0")/.."
 for f in app.js motor.mjs gargalos.mjs; do
   node --input-type=module --check < "diagnostico/$f" && echo "sintaxe (módulo) ok: $f"
 done
+node --input-type=module --check < comercial/app.js && echo "sintaxe (módulo) ok: comercial/app.js"
 node --check api/mapa.js && echo "sintaxe ok: api/mapa.js"
 node diagnostico/teste-motor.mjs | tail -1
 node diagnostico/teste-cobertura.mjs | tail -1
