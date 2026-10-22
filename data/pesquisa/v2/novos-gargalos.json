@@ -1,0 +1,2403 @@
+[
+  {
+    "id": "S-001",
+    "porte": "grande",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "comercial",
+    "setor": "seguros",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "Icatu Seguros",
+    "pais": "Brasil",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "titulo": "Assistente no WhatsApp cota seguro de vida em 40 segundos para corretores",
+    "problema": "Corretores precisavam de um computador para gerar cotações de seguro de vida, o que levava vários minutos, e dúvidas sobre produtos podiam demorar horas.",
+    "solucao": "A Icatu e a parceira ED criaram o A.V.I., assistente de IA generativa no WhatsApp que interpreta texto, áudio ou foto, consulta as APIs internas e devolve a cotação, salvando-a automaticamente no sistema.",
+    "ferramentas": [
+      "n8n",
+      "OpenAI (tool calls)",
+      "Redis",
+      "WhatsApp",
+      "APIs internas Icatu"
+    ],
+    "resultado": "Tempo de cotação caiu de cerca de 5 minutos para cerca de 40 segundos (~85%); mais de 1.000 corretores usam diariamente; da ideia à produção em 7 semanas.",
+    "metricas": [
+      {
+        "indicador": "Tempo de cotação",
+        "antes": "~5 minutos",
+        "depois": "~40 segundos",
+        "variacao": "~85%"
+      },
+      {
+        "indicador": "Corretores ativos por dia",
+        "antes": null,
+        "depois": "mais de 1.000",
+        "variacao": null
+      },
+      {
+        "indicador": "Prazo ideia-produção",
+        "antes": null,
+        "depois": "7 semanas",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "7 semanas da ideia à produção, com parceira de desenvolvimento (ED).",
+    "como_replicar": [
+      "Mapear a tarefa de maior fricção de quem está fora do escritório (ex.: cotação, consulta de preço).",
+      "Expor a regra de negócio como API/consulta interna e orquestrar com uma ferramenta de fluxos (ex.: n8n, Make).",
+      "Colocar um assistente de IA no canal que a equipe já usa (WhatsApp/Teams) com autenticação e guardrails.",
+      "Gravar cada resultado automaticamente no sistema de origem para não haver retrabalho."
+    ],
+    "trecho_comprovante": "We jumped from quotations in five minutes to 40 seconds,",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "n8n - Case study Icatu Seguros",
+    "fonte_url": "https://n8n.io/case-studies/icatu-seguros/",
+    "ano": 2025,
+    "data_fonte": "2025",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-002",
+    "porte": "grande",
+    "gargalo": "processo",
+    "gargalos_secundarios": [
+      "integracao"
+    ],
+    "area": "operacoes",
+    "setor": "seguros e saúde",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "Seguros Bolívar",
+    "pais": "Colômbia",
+    "funcionarios": 3000,
+    "porte_confirmado": true,
+    "titulo": "Autorização prévia médica passa de 3-4 semanas para quase tempo real com n8n e Gemini",
+    "problema": "Pedidos médicos eram revisados manualmente e a autorização levava de três a quatro semanas, com um sistema central de mais de 20 anos difícil de alterar.",
+    "solucao": "Fluxo n8n fora do sistema legado usa nós de IA (Gemini) para ler pedidos, extrair dados, aplicar regras de negócio e gerar a autorização, conectado a bancos e APIs internos; n8n foi liberado a todos os funcionários com treinamento.",
+    "ferramentas": [
+      "n8n Enterprise",
+      "Gemini",
+      "Lab10 (parceiro)"
+    ],
+    "resultado": "Autorização prévia foi de 3-4 semanas para quase tempo real; mais de 300 workflows ativos; adoção plena em 3 a 6 meses.",
+    "metricas": [
+      {
+        "indicador": "Tempo de autorização prévia",
+        "antes": "3 a 4 semanas",
+        "depois": "quase tempo real",
+        "variacao": null
+      },
+      {
+        "indicador": "Workflows ativos",
+        "antes": null,
+        "depois": "mais de 300",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Adoção plena em 3 a 6 meses a partir de early adopters e workshops.",
+    "como_replicar": [
+      "Escolher um processo de aprovação lento que depende de ler documentos.",
+      "Construir o fluxo ao lado do sistema legado (sem alterá-lo), lendo/gravando via banco ou API.",
+      "Usar IA para extrair dados do documento e aplicar as regras de aprovação, com revisão humana nas exceções.",
+      "Treinar early adopters e abrir a plataforma gradualmente para outras áreas."
+    ],
+    "trecho_comprovante": "The prior authorization process went from three to four weeks to near real time",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "n8n - Case study Seguros Bolívar",
+    "fonte_url": "https://n8n.io/case-studies/seguros-bolivar/",
+    "ano": 2025,
+    "data_fonte": "2025",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-003",
+    "porte": "grande",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "controle"
+    ],
+    "area": "atendimento",
+    "setor": "varejo",
+    "setor_chave": "varejo_ecommerce",
+    "empresa": "Bemol",
+    "pais": "Brasil",
+    "funcionarios": 5500,
+    "porte_confirmado": true,
+    "titulo": "Agentes de IA no Make leem mais de 100 mil ligações de cobrança por mês e detectam reclamações",
+    "problema": "Milhares de ligações e respostas de cobrança continham reclamações (defeito, garantia) que ninguém lia, levando clientes válidos ao churn.",
+    "solucao": "Um analista montou dois agentes de IA no Make: um transcreve e classifica as ligações, roteando feedback acionável ao time responsável; outro lê respostas a SMS de cobrança e sinaliza as que exigem humano.",
+    "ferramentas": [
+      "Make",
+      "Whisper",
+      "ChatGPT"
+    ],
+    "resultado": "Os agentes saíram de um piloto para mais de 100.000 ligações por mês; a fonte diz que reduziu churn mas não informa percentual.",
+    "metricas": [
+      {
+        "indicador": "Ligações processadas por mês",
+        "antes": "piloto pequeno",
+        "depois": "mais de 100.000",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Construído por um único analista sênior de cobrança, sem time de desenvolvimento citado.",
+    "como_replicar": [
+      "Juntar as gravações/respostas que hoje só servem à cobrança ou ao atendimento.",
+      "Transcrever o áudio e pedir à IA que classifique o tipo de problema e a urgência.",
+      "Rotear automaticamente cada categoria ao responsável (qualidade, garantia, comercial).",
+      "Medir mensalmente quantos casos viraram ação e o impacto no cancelamento."
+    ],
+    "trecho_comprovante": "Nelson's AI agents have since grown from a small pilot to over 100,000 calls a month",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Make - Success story Bemol",
+    "fonte_url": "https://www.make.com/success-stories/make-bemol",
+    "ano": 2026,
+    "data_fonte": "2026-10",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-004",
+    "porte": "grande",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "financeiro",
+    "setor": "tecnologia (delivery)",
+    "setor_chave": "tecnologia",
+    "empresa": "iFood",
+    "pais": "Brasil",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "titulo": "Agente Toqan + Make rastreiam notas fiscais bloqueadas em 4 sistemas e poupam 2,5 h por dia",
+    "problema": "Cerca de 10% das notas de fornecedores caíam fora do portal e eram bloqueadas; compras procurava o solicitante em quatro sistemas (15 min por caso, 10-15 casos/dia).",
+    "solucao": "O agente interno Toqan consulta o data lake e envia o resultado por webhook ao Make, que abre ticket no Jira, localiza o PDF no Gmail e posta no Slack marcando o responsável.",
+    "ferramentas": [
+      "Toqan",
+      "Make",
+      "Databricks",
+      "Gmail",
+      "Jira",
+      "Slack"
+    ],
+    "resultado": "Cerca de 2,5 horas por dia economizadas pela equipe de Compras; o fluxo passou de dezenas para milhares de notas, sem limite declarado.",
+    "metricas": [
+      {
+        "indicador": "Tempo por nota bloqueada",
+        "antes": "~15 minutos",
+        "depois": "roteamento automático",
+        "variacao": null
+      },
+      {
+        "indicador": "Horas poupadas por dia",
+        "antes": "~2,5 h de trabalho manual",
+        "depois": "~2,5 h poupadas",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Montado por um analista de Compras; prazo não informado.",
+    "como_replicar": [
+      "Listar o caminho manual que o analista percorre entre sistemas para achar o dono de uma pendência.",
+      "Fazer uma consulta (ou agente de IA) que traga os dados da pendência e dispare um webhook.",
+      "Usar uma ferramenta de integração (ex.: Make, n8n) para abrir ticket, anexar o documento e avisar o responsável no chat.",
+      "Padronizar o texto das mensagens para reduzir custo de IA e erros."
+    ],
+    "trecho_comprovante": "We could handle ten invoices. Now it's thousands",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Make - Success story iFood",
+    "fonte_url": "https://www.make.com/success-stories/make-ifood-success-story",
+    "ano": 2026,
+    "data_fonte": "2026-08",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-005",
+    "porte": "media",
+    "gargalo": "processo",
+    "gargalos_secundarios": [
+      "integracao",
+      "comunicacao"
+    ],
+    "area": "ti",
+    "setor": "banco digital",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "Kroo Bank",
+    "pais": "Reino Unido",
+    "funcionarios": 225,
+    "porte_confirmado": true,
+    "titulo": "Banco digital com ~225 pessoas automatiza onboarding, incidentes e conciliação no Make",
+    "problema": "Onboarding/offboarding exigia mexer em sistemas desconectados um a um, e a carga crescia a cada contratação.",
+    "solucao": "Sem desenvolvedores, o time de TI ligou o sistema de tickets a cenários no Make que criam/removem usuários no Google Workspace e Slack, abrem incidentes e usam IA para limpar dados não estruturados na conciliação.",
+    "ferramentas": [
+      "Make",
+      "Slack",
+      "Google Workspace Admin",
+      "sistema de tickets"
+    ],
+    "resultado": "Resposta a incidentes caiu de 20-30 minutos para 2-3; um cenário com IA economiza até 500 horas por ano; cerca de 120 cenários ativos.",
+    "metricas": [
+      {
+        "indicador": "Tempo de resposta a incidente",
+        "antes": "20-30 minutos",
+        "depois": "2-3 minutos",
+        "variacao": null
+      },
+      {
+        "indicador": "Horas economizadas por cenário de IA",
+        "antes": null,
+        "depois": "até 500 h/ano",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Feito pela equipe de TI sem desenvolvedores; prazo não informado.",
+    "como_replicar": [
+      "Escolher o gatilho único (ticket de RH/TI) que inicia onboarding e offboarding.",
+      "Automatizar criação/remoção de contas nos 2-3 sistemas mais usados.",
+      "Automatizar abertura e notificação de incidentes no chat.",
+      "Medir minutos por tarefa antes e depois para priorizar o próximo cenário."
+    ],
+    "trecho_comprovante": "one AI-powered scenario now saves up to 500 hours a year",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Make - Success story Kroo Bank",
+    "fonte_url": "https://www.make.com/success-stories/kroo-bank-make",
+    "ano": 2026,
+    "data_fonte": "2026-09",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-006",
+    "porte": "media",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "controle"
+    ],
+    "area": "administrativo",
+    "setor": "pesquisa e terceiro setor",
+    "setor_chave": "outro",
+    "empresa": "CMCC Foundation",
+    "pais": "Itália",
+    "funcionarios": 350,
+    "porte_confirmado": true,
+    "titulo": "Centro de pesquisa conecta formulários, Monday e SAP e corta erros de digitação em até 78%",
+    "problema": "Formulários em Excel, e-mails e sistemas separados exigiam digitação repetida, gerando erros e tarefas perdidas.",
+    "solucao": "Uso do Make para ligar JotForm, Monday.com, MongoDB e SAP S/4HANA (cada formulário cria uma tarefa) e do Make Grid para mapear dependências entre cenários.",
+    "ferramentas": [
+      "Make",
+      "Make Grid",
+      "MongoDB",
+      "JotForm",
+      "Monday.com",
+      "SAP S/4HANA"
+    ],
+    "resultado": "65% menos erros de digitação em RH, 78% menos em compras, 85% mais rápido o registro de pedidos de compra, 50% menos tempo mapeando dependências.",
+    "metricas": [
+      {
+        "indicador": "Erros de digitação em compras",
+        "antes": null,
+        "depois": null,
+        "variacao": "-78%"
+      },
+      {
+        "indicador": "Erros de digitação em RH",
+        "antes": null,
+        "depois": null,
+        "variacao": "-65%"
+      },
+      {
+        "indicador": "Registro de pedido de compra",
+        "antes": null,
+        "depois": null,
+        "variacao": "85% mais rápido"
+      },
+      {
+        "indicador": "Chamadas de status",
+        "antes": null,
+        "depois": null,
+        "variacao": "-60%"
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Escolher um formulário que hoje é redigitado em outro sistema.",
+      "Fazer cada envio criar automaticamente a tarefa/registro no sistema de destino.",
+      "Documentar quais cenários dependem de quais sistemas antes de alterar um campo.",
+      "Medir erros e e-mails de acompanhamento antes e depois."
+    ],
+    "trecho_comprovante": "Make Grid gave us the visibility and control we needed.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Make - Success story CMCC Foundation",
+    "fonte_url": "https://www.make.com/success-stories/cmcc-speeds-up-workflow-mapping-make-grid",
+    "ano": 2025,
+    "data_fonte": "2025-06",
+    "forca": "media",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-007",
+    "porte": "media",
+    "gargalo": "processo",
+    "gargalos_secundarios": [
+      "integracao"
+    ],
+    "area": "operacoes",
+    "setor": "tecnologia (estacionamento)",
+    "setor_chave": "tecnologia",
+    "empresa": "Wemolo",
+    "pais": "Alemanha",
+    "funcionarios": 350,
+    "porte_confirmado": true,
+    "titulo": "Empresa de 201-500 pessoas gerencia 7 vezes mais projetos com 900 cenários no Make",
+    "problema": "Automações interligadas quebravam com pequenas mudanças organizacionais e a equipe evitava alterar fluxos por medo de retrabalho manual.",
+    "solucao": "Centralizou automações no Make e usou o Make Grid para mapear dependências entre cenários antes de alterar qualquer fluxo.",
+    "ferramentas": [
+      "Make",
+      "Make Grid"
+    ],
+    "resultado": "7 vezes mais projetos geridos desde 2021; mais de 900 cenários criados, 500+ usados diariamente; atualização de fluxos de dias para horas.",
+    "metricas": [
+      {
+        "indicador": "Projetos geridos",
+        "antes": null,
+        "depois": null,
+        "variacao": "7x"
+      },
+      {
+        "indicador": "Tempo de atualização de fluxo",
+        "antes": "dias",
+        "depois": "horas",
+        "variacao": null
+      },
+      {
+        "indicador": "Cenários criados",
+        "antes": null,
+        "depois": "900+",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Time de Excelência Operacional dedicado; resultados acumulados desde 2021.",
+    "como_replicar": [
+      "Centralizar as automações em uma única plataforma com nomes padronizados.",
+      "Manter um mapa de dependências entre fluxos e sistemas.",
+      "Pesquisar o impacto antes de renomear times/campos.",
+      "Revisar mensalmente fluxos com falha para manter confiança."
+    ],
+    "trecho_comprovante": "manage 7 times more projects",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Make - Success story Wemolo",
+    "fonte_url": "https://www.make.com/success-stories/wemolo-scales-faster-with-make-grid",
+    "ano": 2025,
+    "data_fonte": "2025-06",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-008",
+    "porte": "grande",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "processo"
+    ],
+    "area": "ti",
+    "setor": "telecomunicações",
+    "setor_chave": "tecnologia",
+    "empresa": "Vodafone UK",
+    "pais": "Reino Unido",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "titulo": "Vodafone usa n8n como SOAR e evita £2,2 milhões em custos de segurança",
+    "problema": "Para cumprir a Telecom Security Act, precisava estender retenção de logs de 90 dias para 13 meses sem aumentar equipe, com 3-5 bilhões de eventos por mês.",
+    "solucao": "Adotou n8n como plataforma low-code de SOAR, com módulos reutilizáveis, ambientes com CI/CD e monitores (ex.: feed crítico a cada 5 minutos que triagem falhas e abre tickets).",
+    "ferramentas": [
+      "n8n Enterprise",
+      "Bounteous (integrador)"
+    ],
+    "resultado": "33 workflows desde agosto/2024: 5.000+ pessoas-dia economizadas, £2,2 milhões em custos evitados e ~£300 mil/mês de economia contínua em 2025.",
+    "metricas": [
+      {
+        "indicador": "Pessoas-dia economizadas",
+        "antes": null,
+        "depois": "5.000+",
+        "variacao": null
+      },
+      {
+        "indicador": "Custos evitados",
+        "antes": null,
+        "depois": "£2,2 milhões",
+        "variacao": null
+      },
+      {
+        "indicador": "Economia mensal 2025",
+        "antes": null,
+        "depois": "~£300 mil",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "33 workflows criados desde agosto de 2024, com apoio da Bounteous.",
+    "como_replicar": [
+      "Listar triagens repetitivas de alertas de segurança/monitoramento.",
+      "Automatizar a triagem e a abertura de tickets em plataforma de fluxos.",
+      "Criar módulos reutilizáveis (e-mail, ticket) e versionar os fluxos.",
+      "Medir pessoas-dia poupadas por workflow."
+    ],
+    "trecho_comprovante": "This has saved Vodafone 5,000 person-days, avoiding £2.2M in costs, and driven continued savings of ~£300k per month in 2025.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "n8n - Case study Vodafone",
+    "fonte_url": "https://n8n.io/case-studies/vodafone/",
+    "ano": 2025,
+    "data_fonte": "2025",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-009",
+    "porte": "grande",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "integracao",
+      "conhecimento"
+    ],
+    "area": "ti",
+    "setor": "tecnologia (recrutamento)",
+    "setor_chave": "tecnologia",
+    "empresa": "The Stepstone Group",
+    "pais": "Alemanha",
+    "funcionarios": 3000,
+    "porte_confirmado": true,
+    "titulo": "Stepstone escala n8n para 3.000 pessoas e processa milhões de documentos por mês",
+    "problema": "Conta única compartilhada, credenciais sem dono e pouco monitoramento limitavam o uso de automação por não engenheiros.",
+    "solucao": "Migrou para n8n Enterprise com controle de acesso, piloto de marketing com curso de automação e um chatbot que avalia a viabilidade de ideias de automação.",
+    "ferramentas": [
+      "n8n Enterprise",
+      "Okta",
+      "Claude",
+      "Confluence",
+      "Jira"
+    ],
+    "resultado": "Mais de 700 workflows ativos (200 um ano antes); 2-3 milhões de documentos parseados por mês; lote diário de 60-70 itens (2-3 min cada) foi para cerca de 20 segundos.",
+    "metricas": [
+      {
+        "indicador": "Workflows ativos",
+        "antes": "~200",
+        "depois": "700+",
+        "variacao": null
+      },
+      {
+        "indicador": "Documentos parseados por mês",
+        "antes": null,
+        "depois": "2-3 milhões",
+        "variacao": null
+      },
+      {
+        "indicador": "Lote diário de mapeamento de contratos",
+        "antes": "60-70 itens, 2-3 min cada",
+        "depois": "~20 segundos",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Quatro anos na edição Community; migração para Enterprise a partir do início de 2025.",
+    "como_replicar": [
+      "Começar com um grupo-piloto treinado em automação.",
+      "Dar a cada time seu projeto com credenciais controladas.",
+      "Criar um assistente que avalie a viabilidade e o ganho de cada ideia.",
+      "Acompanhar workflows em produção e horas poupadas."
+    ],
+    "trecho_comprovante": "Stepstone has crossed 700 active workflows, more than three times the volume from a year earlier.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "n8n - Case study Stepstone",
+    "fonte_url": "https://n8n.io/case-studies/stepstone/",
+    "ano": 2025,
+    "data_fonte": "2025",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-010",
+    "porte": "grande",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "integracao"
+    ],
+    "area": "ti",
+    "setor": "e-commerce",
+    "setor_chave": "varejo_ecommerce",
+    "empresa": "Trendyol",
+    "pais": "Turquia",
+    "funcionarios": 10000,
+    "porte_confirmado": true,
+    "titulo": "Trendyol dá n8n a ~200 times de tecnologia: 1.000 usuários e 700 workflows em menos de um ano",
+    "problema": "Engenheiros tinham pouca capacidade para pequenas automações internas e áreas não técnicas não conseguiam atender seu próprio backlog.",
+    "solucao": "n8n self-hosted com um projeto isolado por time, programa de conscientização em IA com RH, RAG sobre documentos jurídicos internos e chatbot para vendedores.",
+    "ferramentas": [
+      "n8n Enterprise",
+      "Slack",
+      "RAG",
+      "LLMs"
+    ],
+    "resultado": "Mais de 1.000 usuários ativos, 700 workflows em produção e cerca de 500 mil execuções por trimestre.",
+    "metricas": [
+      {
+        "indicador": "Usuários ativos",
+        "antes": null,
+        "depois": "1.000+",
+        "variacao": null
+      },
+      {
+        "indicador": "Workflows em produção",
+        "antes": null,
+        "depois": "700",
+        "variacao": null
+      },
+      {
+        "indicador": "Execuções por trimestre",
+        "antes": null,
+        "depois": "~500 mil",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Piloto e, depois, primeira licença Enterprise assinada em junho de 2025.",
+    "como_replicar": [
+      "Rodar um piloto com um time e depois ampliar.",
+      "Isolar acesso e credenciais por time.",
+      "Criar um assistente interno com RAG sobre base de políticas/jurídico.",
+      "Apoiar com treinamento e um time central para casos complexos."
+    ],
+    "trecho_comprovante": "more than 1,000 active users at Trendyol.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "n8n - Case study Trendyol",
+    "fonte_url": "https://n8n.io/case-studies/trendyol/",
+    "ano": 2025,
+    "data_fonte": "2025",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-011",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "outro",
+    "setor": "alimentos e bebidas (DTC)",
+    "setor_chave": "varejo_ecommerce",
+    "empresa": "Huel",
+    "pais": "Reino Unido",
+    "funcionarios": 350,
+    "porte_confirmado": true,
+    "titulo": "Marca com ~350 pessoas cultiva cultura de IA com n8n e cancela £100 mil em licenças",
+    "problema": "Assistentes de IA isolados não se conectavam aos sistemas do dia a dia e muitas ferramentas SaaS eram caras e rígidas.",
+    "solucao": "n8n Enterprise com time central de IA (3 pessoas), 'AI Champions' em cada área, treinamento recorrente e governança.",
+    "ferramentas": [
+      "n8n Enterprise",
+      "Slack",
+      "Airtable",
+      "ChatGPT",
+      "Claude"
+    ],
+    "resultado": "Cerca de £100.000 em licenças anuais canceladas; mais de 1.000 horas de trabalho manual poupadas em nove meses; 75 workflows em seis meses, quase 200 depois.",
+    "metricas": [
+      {
+        "indicador": "Licenças de software canceladas",
+        "antes": null,
+        "depois": "~£100.000/ano",
+        "variacao": null
+      },
+      {
+        "indicador": "Horas poupadas em 9 meses",
+        "antes": null,
+        "depois": "1.000+",
+        "variacao": null
+      },
+      {
+        "indicador": "Workflows ativos",
+        "antes": "75 (6 meses)",
+        "depois": "~200",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Time central de IA com 3 pessoas em tempo integral; resultados em nove meses.",
+    "como_replicar": [
+      "Designar um pequeno time central e campeões em cada área.",
+      "Substituir ferramentas SaaS pontuais por fluxos próprios quando possível.",
+      "Criar assistentes no Slack para dúvidas recorrentes.",
+      "Treinar com regularidade e monitorar execuções."
+    ],
+    "trecho_comprovante": "cancel approximately £100,000 worth of annual software licenses",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "n8n - Case study Huel",
+    "fonte_url": "https://n8n.io/case-studies/huel/",
+    "ano": 2025,
+    "data_fonte": null,
+    "forca": "fraca",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-012",
+    "porte": "grande",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "administrativo",
+    "setor": "financeiro",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "XP Inc.",
+    "pais": "Brasil",
+    "funcionarios": 7000,
+    "porte_confirmado": true,
+    "titulo": "XP Inc. economiza mais de 9 mil horas com Copilot em reuniões, atas e auditoria",
+    "problema": "A auditoria reunia informações manualmente e a consolidação de reuniões e atas consumia muito tempo.",
+    "solucao": "Adoção do Copilot para Microsoft 365 com apoio da Avanade, usando transcrição e atas no Teams e casos de uso por área.",
+    "ferramentas": [
+      "Microsoft 365 Copilot",
+      "Microsoft Teams",
+      "Avanade"
+    ],
+    "resultado": "Mais de 9 mil horas economizadas; +30% de eficiência na auditoria interna; -7% no tempo de consolidação de reuniões na governança.",
+    "metricas": [
+      {
+        "indicador": "Horas economizadas",
+        "antes": null,
+        "depois": "9.000+",
+        "variacao": null
+      },
+      {
+        "indicador": "Eficiência da auditoria interna",
+        "antes": null,
+        "depois": null,
+        "variacao": "+30%"
+      },
+      {
+        "indicador": "Tempo de consolidação de reuniões",
+        "antes": null,
+        "depois": null,
+        "variacao": "-7%"
+      }
+    ],
+    "esforco_implantacao": "Adoção inicial de 3 a 4 meses (licenças, workshops, mentorias), depois expansão com a Avanade.",
+    "como_replicar": [
+      "Ativar transcrição e resumo nas reuniões recorrentes.",
+      "Padronizar o modelo de ata e itens de ação.",
+      "Medir tempo de consolidação antes e depois.",
+      "Treinar por área e documentar os casos de uso."
+    ],
+    "trecho_comprovante": "resultou em uma economia de mais de 9 mil horas",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Microsoft Brasil - História de cliente XP Inc.",
+    "fonte_url": "https://www.microsoft.com/pt-br/customers/story/19729-xp-inc-microsoft-365-copilot",
+    "ano": 2024,
+    "data_fonte": "2024-12",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-013",
+    "porte": "grande",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "administrativo",
+    "setor": "mercado de capitais",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "B3",
+    "pais": "Brasil",
+    "funcionarios": null,
+    "porte_confirmado": true,
+    "titulo": "B3 reduz materiais de 2-3 semanas para 2-3 horas e economiza 33 h/mês em reuniões diárias",
+    "problema": "Dificuldade no processamento de dados, na produção de resumos de reuniões e na acessibilidade de colaboradores.",
+    "solucao": "Adoção do Microsoft 365 Copilot com Avanade e Microsoft: 170 pessoas em 17 áreas, usando Excel, Word, PowerPoint e Chat.",
+    "ferramentas": [
+      "Microsoft 365 Copilot",
+      "Copilot Chat",
+      "Excel",
+      "Word",
+      "PowerPoint"
+    ],
+    "resultado": "Material com dados do Excel passou de 2-3 semanas para 2-3 horas (+2600% a 4000%); ~33 h/mês em reuniões diárias; planejamento cibernético de quase 2 meses para 10 dias.",
+    "metricas": [
+      {
+        "indicador": "Geração de material",
+        "antes": "2-3 semanas",
+        "depois": "2-3 horas",
+        "variacao": "+2600% a 4000%"
+      },
+      {
+        "indicador": "Reuniões diárias de projeto",
+        "antes": null,
+        "depois": "~33 h/mês economizadas",
+        "variacao": null
+      },
+      {
+        "indicador": "Planejamento cibernético",
+        "antes": "~2 meses",
+        "depois": "10 dias",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Oportunidade em out/2023; casos de uso desde mar/2024; 170 pessoas em 17 áreas.",
+    "como_replicar": [
+      "Escolher 15-20 pessoas por área para um piloto.",
+      "Mapear as tarefas de resumo/ata e relatório.",
+      "Cronometrar antes e depois.",
+      "Expandir para as áreas com maior ganho."
+    ],
+    "trecho_comprovante": "Isso representa um aumento de produtividade de 2600% a 4000%.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Microsoft Brasil - A jornada da B3 com o Microsoft 365 Copilot",
+    "fonte_url": "https://www.microsoft.com/pt-br/customers/story/24301-b3-microsoft-365-copilot",
+    "ano": 2025,
+    "data_fonte": "2025-06",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-014",
+    "porte": "pequena",
+    "gargalo": "decisao",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "financeiro",
+    "setor": "fintech de crédito",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "Base39",
+    "pais": "Brasil",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "titulo": "Fintech corta 96% do custo de análise de empréstimo com IA generativa e RAG",
+    "problema": "Cada analista fazia no máximo 50 análises por dia e a aprovação demorava até 3 dias.",
+    "solucao": "Arquitetura serverless na AWS com Claude (Bedrock), LangGraph e MongoDB Atlas Vector Search para analisar propostas de crédito.",
+    "ferramentas": [
+      "Amazon Bedrock",
+      "Claude 3.5 Sonnet",
+      "Claude 3 Haiku",
+      "LangGraph",
+      "MongoDB Atlas Vector Search"
+    ],
+    "resultado": "Custo de análise -96%; decisão de até 3 dias para menos de 1 hora (AWS); infraestrutura -84% e desenvolvimento -75%.",
+    "metricas": [
+      {
+        "indicador": "Custo de análise",
+        "antes": null,
+        "depois": null,
+        "variacao": "-96%"
+      },
+      {
+        "indicador": "Tempo de decisão",
+        "antes": "até 3 dias",
+        "depois": "< 1 hora",
+        "variacao": null
+      },
+      {
+        "indicador": "Custo de infraestrutura",
+        "antes": null,
+        "depois": null,
+        "variacao": "-84%"
+      }
+    ],
+    "esforco_implantacao": "Do zero à produção em cerca de duas semanas (AWS).",
+    "como_replicar": [
+      "Listar os documentos e regras da análise.",
+      "Indexar políticas e histórico em base vetorial.",
+      "Pedir à IA um parecer com justificativa; humano decide exceções.",
+      "Medir custo por análise e tempo de decisão."
+    ],
+    "trecho_comprovante": "reduziu os custos de análise de empréstimos em 96%",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Baguete - Base39 analisa empréstimos com IA generativa",
+    "fonte_url": "https://www.baguete.com.br/noticias/base39-analisa-emprestimos-com-ia-generativa",
+    "ano": 2024,
+    "data_fonte": "2024-12",
+    "forca": "media",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-015",
+    "porte": "grande",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "conhecimento",
+      "comunicacao"
+    ],
+    "area": "atendimento",
+    "setor": "telecomunicações",
+    "setor_chave": "tecnologia",
+    "empresa": "Vivo (Telefônica Brasil)",
+    "pais": "Brasil",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "titulo": "Vivo dá a 11 mil atendentes um copiloto de IA que consulta mais de 30 sistemas",
+    "problema": "Atendentes buscavam manualmente informações em vários sistemas durante o atendimento.",
+    "solucao": "I.Ajuda, chat de IA generativa (Azure OpenAI) que responde a partir de uma tela única, alimentada por mais de 30 sistemas e 2 mil processos, com equipe que calibra respostas.",
+    "ferramentas": [
+      "Azure OpenAI Service",
+      "Telefónica Tech"
+    ],
+    "resultado": "Usada por 11 mil agentes; tempo médio de atendimento -9% (pessoa física) e -4% (empresas); informações em até 10 segundos.",
+    "metricas": [
+      {
+        "indicador": "Tempo médio de atendimento PF",
+        "antes": null,
+        "depois": null,
+        "variacao": "-9%"
+      },
+      {
+        "indicador": "Tempo médio de atendimento PJ",
+        "antes": null,
+        "depois": null,
+        "variacao": "-4%"
+      },
+      {
+        "indicador": "Agentes usuários",
+        "antes": null,
+        "depois": "11 mil",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Projeto desde meados de 2023; impacto em poucos meses; equipe de 26 pessoas calibra a ferramenta.",
+    "como_replicar": [
+      "Consolidar a base de conhecimento do atendimento.",
+      "Entregar respostas em uma tela única ao atendente.",
+      "Coletar feedback positivo/negativo nas respostas.",
+      "Ter um time pequeno para calibrar."
+    ],
+    "trecho_comprovante": "já é usada por 11 mil agentes de atendimento da Vivo",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Microsoft News Brasil - Vivo e Microsoft",
+    "fonte_url": "https://news.microsoft.com/pt-br/vivo-em-colaboracao-com-microsoft-cria-ia-generativa-para-assistente-do-atendente-de-call-center/",
+    "ano": 2024,
+    "data_fonte": "2024-06",
+    "forca": "media",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-016",
+    "porte": "media",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [
+      "conhecimento",
+      "processo"
+    ],
+    "area": "operacoes",
+    "setor": "saúde e bem-estar",
+    "setor_chave": "saude",
+    "empresa": "Wellness Coach",
+    "pais": "Estados Unidos",
+    "funcionarios": 350,
+    "porte_confirmado": true,
+    "titulo": "Time usa Zapier e IA para responder dúvidas técnicas, tarefas e follow-ups: 550+ h/ano",
+    "problema": "Engenheiros repetiam perguntas aos seniores, tarefas se perdiam em threads do Slack e follow-ups de reuniões eram esquecidos.",
+    "solucao": "Workflows no Zapier: assistente de IA responde dúvidas no Slack, reações em emoji viram cards no Trello e resumos de reunião geram tarefas com lembretes.",
+    "ferramentas": [
+      "Zapier",
+      "ChatGPT",
+      "Slack",
+      "Trello",
+      "Gmail",
+      "Google Calendar"
+    ],
+    "resultado": "10,6 horas poupadas por semana (550+ h/ano, US$ 27,5 mil); 100% dos follow-ups e check-ins em dia.",
+    "metricas": [
+      {
+        "indicador": "Horas poupadas por semana",
+        "antes": null,
+        "depois": "10,6 h",
+        "variacao": null
+      },
+      {
+        "indicador": "Horas por ano",
+        "antes": null,
+        "depois": "550+",
+        "variacao": null
+      },
+      {
+        "indicador": "Follow-ups em dia",
+        "antes": null,
+        "depois": "100%",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Uma pessoa automatizou 158 tarefas em 30 dias, sem novos contratados.",
+    "como_replicar": [
+      "Registrar as perguntas repetidas do time.",
+      "Criar assistente no Slack com a documentação.",
+      "Transformar reação de emoji em tarefa.",
+      "Gerar tarefas dos resumos de reunião."
+    ],
+    "trecho_comprovante": "Wellness Coach automated 550+ hours of work using Zapier and AI",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Zapier - Wellness Coach",
+    "fonte_url": "https://zapier.com/blog/how-wellness-coach-scales-with-automation-and-ai/",
+    "ano": 2025,
+    "data_fonte": null,
+    "forca": "fraca",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-017",
+    "porte": "pequena",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "processo"
+    ],
+    "area": "logistica",
+    "setor": "bens de consumo (DTC)",
+    "setor_chave": "varejo_ecommerce",
+    "empresa": "Dude Wipes",
+    "pais": "Estados Unidos",
+    "funcionarios": 40,
+    "porte_confirmado": true,
+    "titulo": "Empresa de 40 pessoas liga NetSuite e SaaS via Make e automatiza mais de 100 processos",
+    "problema": "Processos internos manuais ameaçavam o controle durante o crescimento acelerado.",
+    "solucao": "Iniciativa C.R.A.P. com Make integrado ao NetSuite e a outros SaaS; primeiro agente de IA planeja embarques de entrada.",
+    "ferramentas": [
+      "Make",
+      "NetSuite",
+      "Make AI agents",
+      "Begin Automation"
+    ],
+    "resultado": "100+ processos automatizados em dois anos; ~200 horas/ano poupadas por membro da cadeia de suprimentos; 600 horas devolvidas a uma pessoa de marketing.",
+    "metricas": [
+      {
+        "indicador": "Processos automatizados",
+        "antes": null,
+        "depois": "100+ em 2 anos",
+        "variacao": null
+      },
+      {
+        "indicador": "Horas por ano (cadeia de suprimentos)",
+        "antes": null,
+        "depois": "~200 por pessoa",
+        "variacao": null
+      },
+      {
+        "indicador": "Horas devolvidas ao marketing",
+        "antes": null,
+        "depois": "600",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Reuniões mensais com líderes para mapear processos; parceiro Begin Automation.",
+    "como_replicar": [
+      "Reunir mensalmente líderes para listar rotinas.",
+      "Priorizar as que tocam o ERP.",
+      "Construir cenários no Make.",
+      "Registrar horas devolvidas por automação."
+    ],
+    "trecho_comprovante": "That's 200 hours they can use to make value-added decisions for our supply chain efforts instead of planning shipments.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Make - Success story Dude Wipes",
+    "fonte_url": "https://www.make.com/success-stories/how-make-helped-dude-wipes-build-a-culture-that-fuels-rapid-growth",
+    "ano": 2025,
+    "data_fonte": "2025-12",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-018",
+    "porte": "pequena",
+    "gargalo": "processo",
+    "gargalos_secundarios": [
+      "integracao",
+      "manual_repetitivo"
+    ],
+    "area": "administrativo",
+    "setor": "terceiro setor",
+    "setor_chave": "outro",
+    "empresa": "OCC (Obras de Caridade, ONG para migrantes e refugiados)",
+    "pais": "Grécia",
+    "funcionarios": 20,
+    "porte_confirmado": true,
+    "titulo": "ONG de 20 pessoas automatiza folha, despesas e conciliação bancária com Make e Airtable",
+    "problema": "Com equipe e verba limitadas, o backoffice consumia tempo que deveria ir para os programas.",
+    "solucao": "Make e Airtable automatizam recibos de pagamento, lembretes de despesas, emissão e arquivamento de faturas e sincronização com transações bancárias.",
+    "ferramentas": [
+      "Make",
+      "Airtable"
+    ],
+    "resultado": "Economia estimada de 8 a 10 horas por semana.",
+    "metricas": [
+      {
+        "indicador": "Horas poupadas por semana",
+        "antes": null,
+        "depois": "8-10 h (estimativa)",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Listar as tarefas administrativas recorrentes.",
+      "Centralizar dados em Airtable/planilha.",
+      "Automatizar documentos e lembretes.",
+      "Sincronizar com extratos bancários."
+    ],
+    "trecho_comprovante": "They confidently estimate about an 8-10 hour-per-week time savings thanks to their use of Airtable and Make.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Make - OCC",
+    "fonte_url": "https://www.make.com/en/success-stories/refugees-automation-project",
+    "ano": 2023,
+    "data_fonte": "2023-08",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-019",
+    "porte": "pequena",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "demanda_comercial",
+      "informacao"
+    ],
+    "area": "comercial",
+    "setor": "tecnologia (compliance)",
+    "setor_chave": "tecnologia",
+    "empresa": "AUDITSU",
+    "pais": "Reino Unido",
+    "funcionarios": 6,
+    "porte_confirmado": true,
+    "titulo": "Startup de 2-10 pessoas monta 18 cenários no Make para prospectar e levantou £200 mil",
+    "problema": "Pré-lançamento, sem como prospectar milhares de empresas manualmente e sem tração para investidores.",
+    "solucao": "Fundador montou 18 cenários que monitoram vagas, enriquecem e qualificam empresas, verificam contatos e disparam e-mails; outro fluxo gera posts com IA.",
+    "ferramentas": [
+      "Make",
+      "Airtable",
+      "Apollo",
+      "Apify",
+      "Customer.io",
+      "OpenAI",
+      "Templated.io"
+    ],
+    "resultado": "Pré-seed de £200.000; lista de espera com 1.200 empresas; fonte diz equivaler a uma equipe de vendas de 10 pessoas; ~90 min poupados por conteúdo.",
+    "metricas": [
+      {
+        "indicador": "Lista de espera antes do lançamento",
+        "antes": null,
+        "depois": "1.200 empresas",
+        "variacao": null
+      },
+      {
+        "indicador": "Tempo por conteúdo",
+        "antes": null,
+        "depois": "~90 min poupados",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Cerca de duas semanas de trabalho do fundador, sem experiência prévia em Make.",
+    "como_replicar": [
+      "Definir o sinal de compra.",
+      "Automatizar coleta, enriquecimento e qualificação.",
+      "Verificar contatos e disparar e-mails.",
+      "Medir respostas e lista de espera."
+    ],
+    "trecho_comprovante": "A few weeks later, AUDITSU secured a £200,000 pre-seed investment.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Make - Success story AUDITSU",
+    "fonte_url": "https://www.make.com/en/success-stories/startup-used-make-to-secure-funding",
+    "ano": 2026,
+    "data_fonte": "2026-03",
+    "forca": "media",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-020",
+    "porte": "grande",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [
+      "integracao",
+      "manual_repetitivo"
+    ],
+    "area": "atendimento",
+    "setor": "automotivo (concessionárias)",
+    "setor_chave": "varejo_ecommerce",
+    "empresa": "Stellantis &You UK",
+    "pais": "Reino Unido",
+    "funcionarios": 1500,
+    "porte_confirmado": true,
+    "titulo": "Agente de voz com Make atende 20 mil ligações por mês e economiza £200 mil por ano",
+    "problema": "Ligações sem resposta iam a um call center externo, só em horário comercial e com qualidade variável.",
+    "solucao": "Agente de voz próprio (ElevenLabs); o Make consulta o banco de clientes pelo telefone para que o agente saiba quem liga e o veículo.",
+    "ferramentas": [
+      "Make",
+      "ElevenLabs",
+      "ClickSend"
+    ],
+    "resultado": "£200.000 por ano economizados e 20.000 ligações por mês tratadas; piloto com ~500 ligações e 95% de sucesso.",
+    "metricas": [
+      {
+        "indicador": "Economia anual",
+        "antes": null,
+        "depois": "£200.000",
+        "variacao": null
+      },
+      {
+        "indicador": "Ligações por mês",
+        "antes": null,
+        "depois": "20.000",
+        "variacao": null
+      },
+      {
+        "indicador": "Sucesso no piloto",
+        "antes": null,
+        "depois": "95%",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Piloto em uma concessionária antes de expandir; sem desenvolvedores.",
+    "como_replicar": [
+      "Piloto em uma unidade.",
+      "Identificar o cliente pelo telefone.",
+      "Ligar o agente a calendário e CRM.",
+      "Escalar após taxa de sucesso."
+    ],
+    "trecho_comprovante": "The AI agent now saves the business £200,000 a year and handles 20,000 calls a month on this use case alone.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Make - Success story Stellantis &You UK",
+    "fonte_url": "https://www.make.com/success-stories/how-stellantis-scaled-an-ai-voice-agent-with-make",
+    "ano": 2026,
+    "data_fonte": "2026-09",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-021",
+    "porte": "grande",
+    "gargalo": "processo",
+    "gargalos_secundarios": [
+      "integracao"
+    ],
+    "area": "ti",
+    "setor": "serviços de treinamento",
+    "setor_chave": "educacao",
+    "empresa": "FranklinCovey",
+    "pais": "Estados Unidos",
+    "funcionarios": 3000,
+    "porte_confirmado": true,
+    "titulo": "FranklinCovey substitui barramento de 15 anos por Make: processo de RH cai de 30 dias para 2 horas",
+    "problema": "Barramento de serviços com 15 anos, caro e difícil de manter, e processos manuais; um app financeiro custaria ~US$ 60 mil/ano.",
+    "solucao": "Usou o Make como integração e automação sem mudar sistemas centrais, evitou comprar o app financeiro e criou automações por área.",
+    "ferramentas": [
+      "Make",
+      "Make AI Agents"
+    ],
+    "resultado": "~US$ 60 mil/ano evitados; um processo de RH de 30 dias para 2 horas; centenas de milhares de dólares economizados.",
+    "metricas": [
+      {
+        "indicador": "Processo anual de RH",
+        "antes": "30 dias",
+        "depois": "2 horas",
+        "variacao": null
+      },
+      {
+        "indicador": "Software evitado",
+        "antes": null,
+        "depois": "~US$ 60 mil/ano",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Inventariar integrações legadas.",
+      "Reimplementar as de maior custo em plataforma visual.",
+      "Customizar ferramentas em vez de comprar novas.",
+      "Medir dias e horas por processo."
+    ],
+    "trecho_comprovante": "When evaluating a new finance application, FranklinCovey found it would cost around $60,000 per year.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Make - Success story FranklinCovey",
+    "fonte_url": "https://www.make.com/en/success-stories/franklin-covey-make-success-story",
+    "ano": 2025,
+    "data_fonte": "2025-09",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-022",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "processo",
+      "manual_repetitivo"
+    ],
+    "area": "ti",
+    "setor": "fintech (impostos)",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "Tax Management New Zealand (TMNZ)",
+    "pais": "Nova Zelândia",
+    "funcionarios": 60,
+    "porte_confirmado": true,
+    "titulo": "Fintech de ~60 pessoas ganha 400 horas por mês com n8n e IA",
+    "problema": "Zapier e Make só suportavam fluxos isolados e faltava plataforma self-hosted segura e acessível.",
+    "solucao": "n8n Enterprise self-hosted com SSO e versionamento, mais agentes de IA (OpenAI, Azure, Anthropic) para fatura e enriquecimento de dados.",
+    "ferramentas": [
+      "n8n Enterprise",
+      "OpenAI",
+      "Azure",
+      "Anthropic",
+      "PostgreSQL",
+      "Open WebUI"
+    ],
+    "resultado": "~400 horas de produtividade ganhas por mês; ~150 mil execuções por mês; até 1 hora poupada por execução de IA.",
+    "metricas": [
+      {
+        "indicador": "Horas ganhas por mês",
+        "antes": null,
+        "depois": "~400",
+        "variacao": null
+      },
+      {
+        "indicador": "Execuções por mês",
+        "antes": null,
+        "depois": "~150.000",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Escolher plataforma self-hosted.",
+      "Dar acesso por papéis.",
+      "Começar com fluxos de ligação e passar a agentes de IA.",
+      "Medir horas por execução."
+    ],
+    "trecho_comprovante": "a big proportion of the 400 hours savings gained each month",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "n8n - Case study TMNZ",
+    "fonte_url": "https://n8n.io/case-studies/tmnz/",
+    "ano": 2025,
+    "data_fonte": null,
+    "forca": "fraca",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-023",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "processo",
+      "manual_repetitivo"
+    ],
+    "area": "administrativo",
+    "setor": "software (logística)",
+    "setor_chave": "tecnologia",
+    "empresa": "TUP GmbH & Co. KG",
+    "pais": "Alemanha",
+    "funcionarios": 160,
+    "porte_confirmado": true,
+    "titulo": "Software house de ~160 pessoas automatiza atestados e home office e cria chatbot de projetos",
+    "problema": "Atestados e pedidos de trabalho remoto dependiam de e-mails e calendários manuais; o conhecimento ficava espalhado no Confluence.",
+    "solucao": "Fluxos n8n com IA processam atestados, validam pedidos de home office e alimentam chatbot (OpenWebUI) sobre a base de conhecimento.",
+    "ferramentas": [
+      "n8n",
+      "OpenWebUI",
+      "Confluence"
+    ],
+    "resultado": "26 horas poupadas em 30 dias; 1.282 execuções com 12 falhas (0,94%).",
+    "metricas": [
+      {
+        "indicador": "Horas poupadas em 30 dias",
+        "antes": null,
+        "depois": "26",
+        "variacao": null
+      },
+      {
+        "indicador": "Taxa de falha",
+        "antes": null,
+        "depois": "0,94%",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Automatizar rotinas de RH.",
+      "Validar pedidos com regras.",
+      "Conectar chatbot à wiki.",
+      "Acompanhar execuções e falhas."
+    ],
+    "trecho_comprovante": "In the last 30 days, TUP ran 1,282 executions with only 12 failures — a 0.94% failure rate — while saving 26 hours of work.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "n8n - Case study TUP",
+    "fonte_url": "https://n8n.io/case-studies/tup/",
+    "ano": 2025,
+    "data_fonte": null,
+    "forca": "fraca",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-024",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "comunicacao"
+    ],
+    "area": "comercial",
+    "setor": "tecnologia (automotivo)",
+    "setor_chave": "tecnologia",
+    "empresa": "Impel",
+    "pais": "Estados Unidos",
+    "funcionarios": 500,
+    "porte_confirmado": true,
+    "titulo": "Agente de simulação de vendas reduz ramp-up de novos produtos de 3-6 meses para ~1 mês",
+    "problema": "Representantes levavam 3 a 6 meses para vender novos produtos com segurança e passavam horas montando revisões mensais.",
+    "solucao": "Agente de roleplay treinado em 150 mil ligações e dados do Salesforce, mais agentes que preparam as revisões de negócio.",
+    "ferramentas": [
+      "Claude",
+      "Salesforce",
+      "Snowflake",
+      "Gong",
+      "Slack"
+    ],
+    "resultado": "Ramp-up de 3-6 meses para ~1 mês; preparo de revisão de 3-4 horas para ~30 minutos; ~1.000 revisões em uma semana.",
+    "metricas": [
+      {
+        "indicador": "Ramp-up de produto",
+        "antes": "3-6 meses",
+        "depois": "~1 mês",
+        "variacao": null
+      },
+      {
+        "indicador": "Preparo de revisão mensal",
+        "antes": "3-4 horas",
+        "depois": "~30 minutos",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Agente de roleplay em cerca de 3 semanas; alinhar cenários levou 1-2 meses.",
+    "como_replicar": [
+      "Reunir gravações e CRM.",
+      "Criar agente de roleplay com rubrica.",
+      "Dar feedback pontuado.",
+      "Automatizar relatórios recorrentes."
+    ],
+    "trecho_comprovante": "Ramp time on new products, which used to run 3 to 6 months, now averages 1 month of structured roleplay and certification",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Anthropic - Impel",
+    "fonte_url": "https://claude.com/customers/impel",
+    "ano": 2026,
+    "data_fonte": null,
+    "forca": "fraca",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-025",
+    "porte": "grande",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "conhecimento"
+    ],
+    "area": "juridico",
+    "setor": "cooperativas financeiras",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "Sicoob",
+    "pais": "Brasil",
+    "funcionarios": 60000,
+    "porte_confirmado": true,
+    "titulo": "Sicoob lança assistente com LLMs open source e RAG usado por quase 30 mil funcionários",
+    "problema": "Licenças de IA de mercado seriam caras para 60 mil funcionários e havia preocupações de segurança.",
+    "solucao": "Assistente Inteligente no Sisbr com Llama, Mistral e PHY3 em nuvem privada AWS, com RAG e upload de documentos.",
+    "ferramentas": [
+      "Llama",
+      "Mistral",
+      "PHY3",
+      "AWS",
+      "RAG",
+      "Sisbr"
+    ],
+    "resultado": "Quase 30 mil funcionários usam diariamente; ~2 horas por profissional no jurídico; ~R$ 300 mil/ano contra ~R$ 100 milhões estimados do Copilot.",
+    "metricas": [
+      {
+        "indicador": "Usuários diários",
+        "antes": null,
+        "depois": "~30 mil",
+        "variacao": null
+      },
+      {
+        "indicador": "Economia no jurídico",
+        "antes": null,
+        "depois": "~2 h por profissional",
+        "variacao": null
+      },
+      {
+        "indicador": "Custo anual",
+        "antes": "~R$ 100 mi (estimado)",
+        "depois": "~R$ 300 mil",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Maio a setembro de 2024, com time dedicado de 10 pessoas.",
+    "como_replicar": [
+      "Comparar custo por usuário.",
+      "Hospedar modelo em nuvem privada.",
+      "Usar RAG para limitar a temas do negócio.",
+      "Começar com áreas de maior leitura."
+    ],
+    "trecho_comprovante": "Desde que nós lançamos, quase que 30 mil funcionários já interagem com esse módulo no dia a dia.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Baguete - Sicoob aposta em LLMs open source",
+    "fonte_url": "https://www.baguete.com.br/noticias/sicoob-aposta-em-llms-open-source-para-ia-generativa",
+    "ano": 2024,
+    "data_fonte": "2024-12",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-026",
+    "porte": "grande",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "comunicacao",
+      "conhecimento"
+    ],
+    "area": "administrativo",
+    "setor": "aviação",
+    "setor_chave": "outro",
+    "empresa": "Azul Linhas Aéreas",
+    "pais": "Brasil",
+    "funcionarios": 16000,
+    "porte_confirmado": true,
+    "titulo": "AzulGPT corta até 3 dias na criação de materiais e análises de NPS passam de semanas a minutos",
+    "problema": "Era preciso integrar informações entre bases e acelerar a elaboração de materiais e formulários.",
+    "solucao": "AzulGPT, plataforma de IA generativa da Azul com a Avanade sobre Azure OpenAI.",
+    "ferramentas": [
+      "Azure OpenAI Service",
+      "Avanade"
+    ],
+    "resultado": "Redução de até 3 dias no tempo de materiais, campanhas e formulários; análises de NPS de semanas para minutos.",
+    "metricas": [
+      {
+        "indicador": "Elaboração de materiais",
+        "antes": "até 3 dias a mais",
+        "depois": "reduzido em até 3 dias",
+        "variacao": null
+      },
+      {
+        "indicador": "Análise de NPS",
+        "antes": "semanas",
+        "depois": "minutos",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Carregar manuais e dados de NPS.",
+      "Padronizar modelos.",
+      "Treinar equipes.",
+      "Medir dias de elaboração."
+    ],
+    "trecho_comprovante": "reduzindo o tempo dedicado a essas tarefas em até três dias",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Baguete - Azul usa IA generativa com Microsoft",
+    "fonte_url": "https://www.baguete.com.br/noticias/azul-usa-ia-generativa-com-microsoft",
+    "ano": 2024,
+    "data_fonte": "2024-05",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-027",
+    "porte": "grande",
+    "gargalo": "decisao",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "operacoes",
+    "setor": "gestão hospitalar",
+    "setor_chave": "saude",
+    "empresa": "Agir Saúde",
+    "pais": "Brasil",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "titulo": "Gestora hospitalar usa Bedrock: -40% em tarefas administrativas e +25% na previsão de altas",
+    "problema": "Grande volume de dados dificultava a busca de informações e a agilidade interna.",
+    "solucao": "Chatbot de IA generativa (AWS, Nublify) sobre informações institucionais que depois apoiou a gestão preditiva de leitos.",
+    "ferramentas": [
+      "Amazon Bedrock",
+      "Nublify"
+    ],
+    "resultado": "-40% no tempo de tarefas administrativas; +25% na previsão de altas; mais de 1.500 leitos; replicado em 5 hospitais.",
+    "metricas": [
+      {
+        "indicador": "Tempo de tarefas administrativas",
+        "antes": null,
+        "depois": null,
+        "variacao": "-40%"
+      },
+      {
+        "indicador": "Previsão de altas",
+        "antes": null,
+        "depois": null,
+        "variacao": "+25%"
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Começar por chatbot de documentos.",
+      "Treinar com dados históricos de altas.",
+      "Medir acerto da previsão.",
+      "Replicar em outras unidades."
+    ],
+    "trecho_comprovante": "reduzir em 40% o tempo médio em tarefas administrativas",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Baguete - Agir Saúde adota IA generativa com AWS",
+    "fonte_url": "https://www.baguete.com.br/noticias/agir-saude-adota-ia-generativa-com-aws",
+    "ano": 2025,
+    "data_fonte": "2025-08",
+    "forca": "media",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-028",
+    "porte": "grande",
+    "gargalo": "decisao",
+    "gargalos_secundarios": [
+      "processo"
+    ],
+    "area": "financeiro",
+    "setor": "cooperativas financeiras",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "Sicredi",
+    "pais": "Brasil",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "titulo": "Sicredi usa OCR e IA generativa e reduz a análise de crédito de consórcio de 6 para 2 dias",
+    "problema": "Análise manual de documentos de consórcios era lenta.",
+    "solucao": "OCR extrai dados e IA generativa interpreta, valida regras e decide o aceite documental.",
+    "ferramentas": [
+      "OCR",
+      "IA generativa"
+    ],
+    "resultado": "Prazo médio de ~6 para ~2 dias; piloto com 17 cooperativas, 357 pagamentos e R$ 38 milhões em créditos.",
+    "metricas": [
+      {
+        "indicador": "Prazo da análise",
+        "antes": "~6 dias",
+        "depois": "~2 dias",
+        "variacao": "até 3x mais rápido"
+      }
+    ],
+    "esforco_implantacao": "Piloto de abril a junho, depois todo o sistema.",
+    "como_replicar": [
+      "Escolher produto de documentos padronizados.",
+      "Aplicar OCR e IA.",
+      "Piloto em poucas unidades.",
+      "Expandir."
+    ],
+    "trecho_comprovante": "Inovação reduziu o tempo de análise de documentação em até 3 vezes.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Portal do Cooperativismo Financeiro - Sicredi",
+    "fonte_url": "https://cooperativismodecredito.coop.br/2025/10/sicredi-adota-solucao-com-uso-de-ia-para-acelerar-liberacao-de-creditos-de-consorcios/",
+    "ano": 2025,
+    "data_fonte": "2025-10",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-029",
+    "porte": "grande",
+    "gargalo": "decisao",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "comercial",
+    "setor": "alimentos (indústria)",
+    "setor_chave": "industria",
+    "empresa": "Nestlé Brasil",
+    "pais": "Brasil",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "titulo": "Plataforma SISO com IA sugere pedidos e reduz 35% das rupturas",
+    "problema": "Rupturas nas prateleiras dos clientes varejistas.",
+    "solucao": "SISO (DataLab) sugere pedidos e recomenda redistribuição entre lojas.",
+    "ferramentas": [
+      "SISO (plataforma interna)"
+    ],
+    "resultado": "-35% nas rupturas; 90%+ das causas identificadas; +1,5% nas vendas ao varejo.",
+    "metricas": [
+      {
+        "indicador": "Rupturas",
+        "antes": null,
+        "depois": null,
+        "variacao": "-35%"
+      },
+      {
+        "indicador": "Vendas ao varejo",
+        "antes": null,
+        "depois": null,
+        "variacao": "+1,5%"
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Cruzar sell-in e sell-out.",
+      "Gerar sugestão de pedido por política.",
+      "Automatizar causas.",
+      "Medir rupturas."
+    ],
+    "trecho_comprovante": "reduziu em 35% as rupturas nas prateleiras de clientes",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Varejo S.A. / CNDL",
+    "fonte_url": "https://cndl.org.br/varejosa/gestao-de-estoque-inteligente-previsibilidade-e-eficiencia-com-ia/",
+    "ano": 2025,
+    "data_fonte": "2025-06",
+    "forca": "media",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-030",
+    "porte": "grande",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "decisao"
+    ],
+    "area": "financeiro",
+    "setor": "banco",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "Bradesco",
+    "pais": "Brasil",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "titulo": "Bradesco e FICO reduzem 89% das transações Pix retidas para análise",
+    "problema": "Modelos tradicionais retinham transações legítimas e exigiam confirmação do cliente.",
+    "solucao": "Plataforma Safer (FICO) com IA e machine learning para detectar fraude em tempo real.",
+    "ferramentas": [
+      "FICO Platform",
+      "Safer"
+    ],
+    "resultado": "-89% de transações retidas (outro trecho cita 50%); até 25 milhões de Pix/dia; +11% novas contas; -25% rejeições.",
+    "metricas": [
+      {
+        "indicador": "Transações retidas",
+        "antes": null,
+        "depois": null,
+        "variacao": "-89% (ou -50%)"
+      },
+      {
+        "indicador": "Rejeições",
+        "antes": null,
+        "depois": null,
+        "variacao": "-25%"
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Medir falsos positivos.",
+      "Modelo de risco por transação.",
+      "Decisão em tempo real.",
+      "Reduzir fila de análise."
+    ],
+    "trecho_comprovante": "o que permitiu reduzir em 89% o número de transações retidas para análise posterior",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "IT Forum - Bradesco adota Fico",
+    "fonte_url": "https://itforum.com.br/ciberseguranca/bradesco-fico-transacoes-retidas/",
+    "ano": 2025,
+    "data_fonte": "2025-05",
+    "forca": "media",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-031",
+    "porte": "grande",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "operacoes",
+    "setor": "organização humanitária",
+    "setor_chave": "saude",
+    "empresa": "International Rescue Committee (IRC)",
+    "pais": "Estados Unidos",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "titulo": "IRC usa Claude para dashboards: análise para a diretoria em menos de 30 minutos",
+    "problema": "Dados de saúde em registros de papel exigiam digitação em Excel e tendências apareciam tarde.",
+    "solucao": "Dashboards HTML offline com mais de 15 indicadores, criados com Claude Enterprise.",
+    "ferramentas": [
+      "Claude Enterprise",
+      "HTML",
+      "Excel"
+    ],
+    "resultado": "Análise de um dia para menos de 30 minutos; síntese de mais de um mês para imediata; metade dos usuários poupa 4+ h/mês.",
+    "metricas": [
+      {
+        "indicador": "Análise para a diretoria",
+        "antes": "~1 dia",
+        "depois": "< 30 minutos",
+        "variacao": null
+      },
+      {
+        "indicador": "Síntese de portfólio",
+        "antes": "> 1 mês",
+        "depois": "imediata",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Piloto de cerca de seis meses em Burkina Faso, sem engenharia.",
+    "como_replicar": [
+      "Padronizar indicadores.",
+      "Gerar painel local.",
+      "Arrastar planilha.",
+      "Medir tempo."
+    ],
+    "trecho_comprovante": "One program user now prepares analysis and slides for senior management in under 30 minutes",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Anthropic - IRC",
+    "fonte_url": "https://claude.com/customers/irc",
+    "ano": 2025,
+    "data_fonte": "2025",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-032",
+    "porte": "grande",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "conhecimento",
+      "processo"
+    ],
+    "area": "ti",
+    "setor": "saúde (suplementos)",
+    "setor_chave": "saude",
+    "empresa": "Fullscript",
+    "pais": "Canadá",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "titulo": "Fullscript: investigações de segurança -97% e 3.600 horas por ano com n8n",
+    "problema": "Investigações de segurança levavam semanas e 13 mil ligações mensais eram revisadas manualmente.",
+    "solucao": "n8n em toda a empresa com hackathon; agente de IA monta relatórios de auditoria.",
+    "ferramentas": [
+      "n8n Enterprise",
+      "Slack",
+      "Google Docs"
+    ],
+    "resultado": "-97% nas investigações; 3.600 h/ano; 200+ funcionários usam n8n (mais de 30%).",
+    "metricas": [
+      {
+        "indicador": "Investigações de segurança",
+        "antes": null,
+        "depois": null,
+        "variacao": "-97%"
+      },
+      {
+        "indicador": "Horas de engenharia por ano",
+        "antes": null,
+        "depois": "3.600",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Do PoC à produção em três meses; workflow em dois dias.",
+    "como_replicar": [
+      "Hackathon.",
+      "Auditoria de investigação.",
+      "Agente de IA para relatório.",
+      "Ambientes de staging."
+    ],
+    "trecho_comprovante": "set to save 3600 hours of engineering time each year, by reducing security investigations by 97%.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "n8n - Case study Fullscript",
+    "fonte_url": "https://n8n.io/case-studies/fullscript/",
+    "ano": 2025,
+    "data_fonte": null,
+    "forca": "fraca",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-033",
+    "porte": "media",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "financeiro",
+    "setor": "fintech (banco para PMEs)",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "Qonto",
+    "pais": "França",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "titulo": "Qonto lança agentes de IA para pagamentos em lote e análise de fluxo de caixa",
+    "problema": "Clientes PME gastavam até 8 horas por mês com administração financeira.",
+    "solucao": "Dois agentes: operador (folha, faturas) e analista (transações e caixa), com confirmação do cliente.",
+    "ferramentas": [
+      "Claude",
+      "Amazon Bedrock"
+    ],
+    "resultado": "Transferências 2x mais rápidas, faturas com 3x menos tempo, folha 5x mais rápida.",
+    "metricas": [
+      {
+        "indicador": "Transferências",
+        "antes": null,
+        "depois": null,
+        "variacao": "2x"
+      },
+      {
+        "indicador": "Faturas",
+        "antes": null,
+        "depois": null,
+        "variacao": "3x menos tempo"
+      },
+      {
+        "indicador": "Folha",
+        "antes": null,
+        "depois": null,
+        "variacao": "5x"
+      }
+    ],
+    "esforco_implantacao": "Início em novembro de 2025; primeiro agente em ~6 semanas.",
+    "como_replicar": [
+      "Automatizar pagamentos em lote.",
+      "Agente analista.",
+      "Confirmação humana.",
+      "Medir tempo."
+    ],
+    "trecho_comprovante": "Client invoices take 3x less time to create, drafted by the agents and confirmed by the customer before sending.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Anthropic - Qonto",
+    "fonte_url": "https://claude.com/customers/qonto",
+    "ano": 2026,
+    "data_fonte": null,
+    "forca": "fraca",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-034",
+    "porte": "media",
+    "gargalo": "processo",
+    "gargalos_secundarios": [
+      "integracao",
+      "controle"
+    ],
+    "area": "administrativo",
+    "setor": "serviços financeiros",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "Evoluservices",
+    "pais": "Brasil",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "titulo": "Evoluservices automatiza onboarding e validação cadastral com Pipefy e reduz aprovação de 53 h para 2 h26",
+    "problema": "Onboarding e validação cadastral eram manuais.",
+    "solucao": "Automação com Pipefy, Risk AI Studio e biometria.",
+    "ferramentas": [
+      "Pipefy",
+      "Risk AI Studio"
+    ],
+    "resultado": "Análise de cadastros -70%; aprovação -95%, de 53 horas para 2 h26; 100% das consultas automatizadas.",
+    "metricas": [
+      {
+        "indicador": "SLA total de aprovação",
+        "antes": "53 horas",
+        "depois": "2 h 26 min",
+        "variacao": "-95%"
+      },
+      {
+        "indicador": "Análise de cadastros",
+        "antes": null,
+        "depois": null,
+        "variacao": "-70%"
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Mapear etapas.",
+      "Automatizar consultas.",
+      "Regras de risco.",
+      "Medir SLA."
+    ],
+    "trecho_comprovante": "reduzindo em 70% o tempo de análise de cadastros para onboarding de clientes",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Baguete - Evoluservices automatiza onboarding com Pipefy",
+    "fonte_url": "https://www.baguete.com.br/noticias/evoluservices-automatiza-onboarding-com-pipefy",
+    "ano": 2025,
+    "data_fonte": "2025-12",
+    "forca": "media",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-035",
+    "porte": "media",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "decisao"
+    ],
+    "area": "atendimento",
+    "setor": "serviços de automação",
+    "setor_chave": "servicos_b2b",
+    "empresa": "#makeitfuture (cliente não nomeado)",
+    "pais": "Romênia",
+    "funcionarios": 75,
+    "porte_confirmado": true,
+    "titulo": "Ranking de respostas de IA no Make eleva a resolução de casos de 34% para 92%",
+    "problema": "O assistente de IA de um cliente dava respostas imprecisas e cada ajuste exigia código manual.",
+    "solucao": "Filtragem de dados e ranqueamento de respostas no Make, com OpenAI.",
+    "ferramentas": [
+      "Make",
+      "OpenAI"
+    ],
+    "resultado": "Resolução de 34% para 92%; precisão +55%; 11 estratégias em 3 semanas em vez de 6 meses.",
+    "metricas": [
+      {
+        "indicador": "Resolução de casos",
+        "antes": "34%",
+        "depois": "92%",
+        "variacao": "~3x"
+      },
+      {
+        "indicador": "Precisão",
+        "antes": null,
+        "depois": null,
+        "variacao": "+55%"
+      }
+    ],
+    "esforco_implantacao": "Cerca de seis meses; testes em 2-3 semanas.",
+    "como_replicar": [
+      "Medir acerto.",
+      "Filtrar dados.",
+      "Ranquear respostas.",
+      "Iterar."
+    ],
+    "trecho_comprovante": "The AI-powered case resolution rate tripled, jumping from 34% to an impressive 92%",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Make - #makeitfuture",
+    "fonte_url": "https://www.make.com/success-stories/how-makeitfuture-tripled-ai-accuracy-with-make",
+    "ano": 2025,
+    "data_fonte": "2025-03",
+    "forca": "media",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-036",
+    "porte": "media",
+    "gargalo": "decisao",
+    "gargalos_secundarios": [
+      "processo"
+    ],
+    "area": "rh",
+    "setor": "tecnologia (recrutamento)",
+    "setor_chave": "servicos_b2b",
+    "empresa": "GoJob",
+    "pais": "França",
+    "funcionarios": 200,
+    "porte_confirmado": false,
+    "titulo": "GoJob pré-tria candidatos com IA: tempo médio de contratação de 3 dias para 15 minutos",
+    "problema": "Recrutadores gastavam horas revisando CVs e ligando.",
+    "solucao": "Bot por SMS com ChatGPT e Mistral escolhe dois finalistas no Make.",
+    "ferramentas": [
+      "Make",
+      "ChatGPT",
+      "Mistral",
+      "Airtable",
+      "Notion"
+    ],
+    "resultado": "Ligações por contratação de 50 para 2; tempo mediano de 3 dias para 15 minutos; receita líquida +30-50% ao ano.",
+    "metricas": [
+      {
+        "indicador": "Ligações por contratação",
+        "antes": "50",
+        "depois": "2",
+        "variacao": null
+      },
+      {
+        "indicador": "Tempo mediano",
+        "antes": "3 dias",
+        "depois": "15 minutos",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Expansão UK/US em ~2 semanas.",
+    "como_replicar": [
+      "Perguntas por SMS.",
+      "Resumo por IA.",
+      "Escolher finalistas.",
+      "Medir tempo."
+    ],
+    "trecho_comprovante": "How Make's AI helps GoJob fuel up to a 50% increase in yearly net revenue",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Make - GoJob",
+    "fonte_url": "https://www.make.com/success-stories/gojob-increases-yearly-revenue-with-make",
+    "ano": 2024,
+    "data_fonte": "2024-12",
+    "forca": "media",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-037",
+    "porte": "grande",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "conhecimento",
+      "processo"
+    ],
+    "area": "ti",
+    "setor": "tecnologia (RH global)",
+    "setor_chave": "tecnologia",
+    "empresa": "Remote",
+    "pais": "Estados Unidos",
+    "funcionarios": 1800,
+    "porte_confirmado": true,
+    "titulo": "Help desk de TI com Zapier e IA fecha 27,5% dos tickets automaticamente",
+    "problema": "Suporte de TI reativo, com pedidos no Slack sem rastreamento, para 1.800 funcionários.",
+    "solucao": "Help desk de IA no Zapier com triagem, tickets, resoluções sugeridas e Tables como base de conhecimento.",
+    "ferramentas": [
+      "Zapier",
+      "Slack",
+      "Okta",
+      "ChatGPT",
+      "Notion"
+    ],
+    "resultado": "27,5% dos tickets fechados automaticamente; 616 h/mês; US$ 500 mil em contratações evitadas.",
+    "metricas": [
+      {
+        "indicador": "Tickets resolvidos automaticamente",
+        "antes": null,
+        "depois": "27,5%",
+        "variacao": null
+      },
+      {
+        "indicador": "Horas por mês",
+        "antes": null,
+        "depois": "616",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Canal único.",
+      "Triagem por IA.",
+      "Tabela de resoluções.",
+      "Medir % automático."
+    ],
+    "trecho_comprovante": "About 27.5% of all help desk tickets are closed automatically,",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Zapier - Remote",
+    "fonte_url": "https://zapier.com/blog/remote-automates-millions-of-tasks-with-ai-automation/",
+    "ano": 2025,
+    "data_fonte": "2025",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-038",
+    "porte": "grande",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [
+      "controle",
+      "informacao"
+    ],
+    "area": "operacoes",
+    "setor": "tecnologia",
+    "setor_chave": "tecnologia",
+    "empresa": "IBM (Systems Assurance)",
+    "pais": "Estados Unidos",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "titulo": "IBM substitui reuniões de status por app de IA: 50% menos reuniões",
+    "problema": "Líderes gastavam 2-4 horas por semana em reuniões de status.",
+    "solucao": "App GPS com watsonx Orchestrate, notificações no Slack e resumos por IA.",
+    "ferramentas": [
+      "watsonx Orchestrate",
+      "Slack"
+    ],
+    "resultado": "Mais de 50% de redução nas reuniões de status (autodeclarado); ~45 usuários.",
+    "metricas": [
+      {
+        "indicador": "Reuniões de status",
+        "antes": null,
+        "depois": null,
+        "variacao": "-50%+ (autodeclarado)"
+      }
+    ],
+    "esforco_implantacao": "PoC em 2025, produção em outubro.",
+    "como_replicar": [
+      "Registrar atualizações em formulário.",
+      "Notificar interessados.",
+      "Resumos por IA.",
+      "Medir reuniões."
+    ],
+    "trecho_comprovante": "50%+ reduction in recurring status meetings self-reported by participating project leads",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "IBM - Client Zero GPS",
+    "fonte_url": "https://www.ibm.com/case-studies/ibm-client-zero-gps-reporting",
+    "ano": 2025,
+    "data_fonte": "2025",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-039",
+    "porte": "grande",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "manual_repetitivo",
+      "processo"
+    ],
+    "area": "financeiro",
+    "setor": "tecnologia (software)",
+    "setor_chave": "tecnologia",
+    "empresa": "Celonis",
+    "pais": "Alemanha",
+    "funcionarios": null,
+    "porte_confirmado": true,
+    "titulo": "Celonis liga Brightflag a Workday via Make: fatura sem toque em ~5 min",
+    "problema": "Faturas jurídicas eram redigitadas no Workday e cada integração exigia código.",
+    "solucao": "Pipeline com Make e apps customizados para OpenAI, Gemini e Vertex AI.",
+    "ferramentas": [
+      "Make",
+      "Workday",
+      "Brightflag"
+    ],
+    "resultado": "Integrações 5x mais rápidas; setup -80%; fatura em ~5 minutos.",
+    "metricas": [
+      {
+        "indicador": "Velocidade de integração",
+        "antes": null,
+        "depois": null,
+        "variacao": "5x"
+      },
+      {
+        "indicador": "Setup",
+        "antes": null,
+        "depois": null,
+        "variacao": "-80%"
+      }
+    ],
+    "esforco_implantacao": "Primeiro app em um fim de semana.",
+    "como_replicar": [
+      "Mapear redigitação.",
+      "Fluxo entre sistemas.",
+      "Templates.",
+      "Medir."
+    ],
+    "trecho_comprovante": "Make lets us deliver integrations about 5× faster than legacy tools like Workday Studio.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Make - Celonis",
+    "fonte_url": "https://www.make.com/en/success-stories/celonis-business-system-integrations-make",
+    "ano": 2025,
+    "data_fonte": "2025-07",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-040",
+    "porte": "media",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "marketing",
+    "setor": "educação (tecnologia)",
+    "setor_chave": "educacao",
+    "empresa": "TripleTen",
+    "pais": "Estados Unidos",
+    "funcionarios": 125,
+    "porte_confirmado": true,
+    "titulo": "TripleTen automatiza pipeline de criativos e reduz setup de anúncios em até 7x",
+    "problema": "Pesquisa de concorrentes manual e upload repetitivo de criativos.",
+    "solucao": "Três cenários no Make com agente de IA, Gemini para marcar criativos e upload em um clique.",
+    "ferramentas": [
+      "Make",
+      "Gemini",
+      "Meta",
+      "TikTok",
+      "Google Ads"
+    ],
+    "resultado": "Setup até 7x mais rápido; 1.000+ criativos por ano; centenas de horas por mês.",
+    "metricas": [
+      {
+        "indicador": "Setup de anúncios",
+        "antes": null,
+        "depois": null,
+        "variacao": "5-7x mais rápido"
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Monitorar concorrentes.",
+      "Marcar criativos.",
+      "Upload padronizado.",
+      "Cruzar com métricas."
+    ],
+    "trecho_comprovante": "TripleTen uses Make to automate its full creative intelligence pipeline and cut ad setup time by up to 7x.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Make - TripleTen",
+    "fonte_url": "https://www.make.com/success-stories/make-helps-tripleten-reduce-ad-setup-time",
+    "ano": 2026,
+    "data_fonte": "2026-05",
+    "forca": "forte",
+    "confianca": "alta",
+    "tipo": "nominal",
+    "verificado": true
+  },
+  {
+    "id": "S-041",
+    "porte": "media",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "processo"
+    ],
+    "area": "ti",
+    "setor": "energia (recarga)",
+    "setor_chave": "outro",
+    "empresa": "ChargeGuru",
+    "pais": "França",
+    "funcionarios": 300,
+    "porte_confirmado": true,
+    "titulo": "ChargeGuru migra dois sistemas em ~6 semanas com Make: de dois meses para dois dias",
+    "problema": "Unir dois sistemas legados até 15 de agosto, com entregas de ~3 meses.",
+    "solucao": "Migração no Make com Make Grid e IA para categorizar e-mails.",
+    "ferramentas": [
+      "Make",
+      "Make Grid"
+    ],
+    "resultado": "Trabalho de dois meses refeito em dois dias; migração em ~6 semanas.",
+    "metricas": [
+      {
+        "indicador": "Entrega",
+        "antes": "~2 meses",
+        "depois": "2 dias",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "~6 semanas.",
+    "como_replicar": [
+      "Prototipar no Make.",
+      "Mapa visual.",
+      "Automatizar nas áreas.",
+      "Medir entregas."
+    ],
+    "trecho_comprovante": "Build something that took two months in two days.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Make - ChargeGuru",
+    "fonte_url": "https://www.make.com/success-stories/head-of-engineering-used-make-to-fuel-company-wide-transformation",
+    "ano": 2026,
+    "data_fonte": "2026-01",
+    "forca": "media",
+    "confianca": "media",
+    "tipo": "nominal",
+    "verificado": true
+  }
+]
