@@ -1,0 +1,823 @@
+[
+ {
+  "id": "Q-027",
+  "empresa": "Elétron Seguros",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "capacidade",
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Bot de atendimento no WhatsApp não trata saber concentrado em poucas pessoas",
+   "como_replicar genérico e telegráfico (3 passos de uma frase só)"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "O ganho é absorver ~80% das conversas sem contratar, ou seja, capacidade de atendimento, não dependência de pessoa-chave."
+ },
+ {
+  "id": "P-012",
+  "empresa": "Moka Clube (Curitiba, PR)",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "informacao",
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Problema é dado espalhado em e-mails/anexos, não saber concentrado em pessoas",
+   "Resultado só qualitativo"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Achar informação em vários e-mails é exatamente o gargalo de informação."
+ },
+ {
+  "id": "P-013",
+  "empresa": "RNV Resíduos (Aparecida de Goiânia, GO)",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "informacao",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Problema é dado espalhado em laudos/relatórios, não saber concentrado em pessoas",
+   "Resultado só qualitativo"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Cruzar laudos e documentos dispersos é busca de informação, não transferência de know-how."
+ },
+ {
+  "id": "Q-024",
+  "empresa": "Aura Afro",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "capacidade",
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Problema é volume de leads atendidos à mão, não saber concentrado",
+   "Resultado \"Espera média -70%\" no título sem valor base; data_fonte ausente",
+   "como_replicar telegráfico"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Atendimento de 100+ leads/dia por IA com handoff é ganho de capacidade de atendimento."
+ },
+ {
+  "id": "Q-030",
+  "empresa": "Colégio Cognos",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "demanda_comercial",
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultado central (+150% de visitas confirmadas, follow-up) é de funil de matrícula, não de conhecimento",
+   "Título cita só uma métrica; \"Treine IA com FAQ\" não explicita o follow-up que gera o resultado",
+   "como_replicar telegráfico"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Visitas confirmadas e follow-up em matrículas são demanda/comercial."
+ },
+ {
+  "id": "T-029",
+  "empresa": "Meirelles Ramos Advocacia",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "O problema é controladoria manual diária e dispersão de dados, não saber só de uma pessoa (embora dependa da sócia)",
+   "Redução de 90% é valor informado pelo artigo, sem prova independente"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Agentes de IA que eliminam horas de conferência de andamentos atacam trabalho manual repetitivo."
+ },
+ {
+  "id": "R-014",
+  "empresa": "Petronect",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "comunicacao",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Bot de FAQ para fornecedores é atendimento/perguntas repetidas, não saber concentrado",
+   "Plataforma proprietária de integrador, pouco replicável por PME"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Absorver 22% dos atendimentos com bot encaixa em perguntas repetidas (comunicação)."
+ },
+ {
+  "id": "M-027",
+  "empresa": "Contraktor",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultado mistura queda de 84% nos custos de TI (migração de infra) com ganho na revisão de contratos: causalidade não sustentada",
+   "Texto confuso: \"até 30 dias (15 a 30 dias no corpo do texto)\"",
+   "Empresa é fornecedora de legaltech; relevância via playbook de cláusulas",
+   "data_fonte ausente"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "resultado": "Tempo de revisão de contratos complexos e checagem de conformidade caiu de 15 a 30 dias para poucos minutos; mais de 2.500 clientes atendidos sem aumentar a equipe técnica. Em separado, a migração para o Google Cloud reduziu em 84% os custos de infraestrutura de TI em dois anos."
+  },
+  "justificativa": "Playbook que codifica o critério do especialista encaixa em conhecimento, mas o resultado mistura ganhos de infraestrutura."
+ },
+ {
+  "id": "R-011",
+  "empresa": "180 Seguros",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "integracao",
+  "relevancia_pme": 1,
+  "consistencia_ok": true,
+  "problemas": [
+   "Copiloto que gera código de API é ferramenta de desenvolvedor",
+   "Gargalo real é integração com APIs, não saber concentrado",
+   "Resultado de um único parceiro (2 dias)"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "O problema é integrar parceiros às APIs, e a solução é para desenvolvedores."
+ },
+ {
+  "id": "T-007",
+  "empresa": "Estasa",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "processo",
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Turnover/alocação errada de pessoas é gestão de RH, não saber concentrado",
+   "Atribuição causal da redução de turnover a uma única plataforma não é comprovada"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Mapeamento comportamental e PDI redesenham o processo de gestão de pessoas, sem relação com concentração de saber."
+ },
+ {
+  "id": "T-008",
+  "empresa": "Delfim",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "processo",
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Digitalização de processos de RH (papel para online) não é saber concentrado",
+   "Cita só o ciclo de recrutamento como número"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Trata-se de digitalizar e padronizar processos de RH."
+ },
+ {
+  "id": "G-019",
+  "empresa": "IBM",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "comunicacao",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Agente de perguntas rotineiras de RH é perguntas repetidas, não saber concentrado",
+   "Muitos números autodeclarados pela IBM misturados (94%, 40%, 75% desde 2016)",
+   "Escala IBM distante de PME"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Contenção de dúvidas rotineiras de RH é comunicação/perguntas repetidas."
+ },
+ {
+  "id": "M-026",
+  "empresa": "Casa dos Ventos",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "informacao",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Extração de obrigações de contratos é gargalo de informação, não de saber concentrado",
+   "como_replicar cita alertas de prazo que a fonte não descreve"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Mapear obrigações em contratos dispersos é extração de informação."
+ },
+ {
+  "id": "S-010",
+  "empresa": "Trendyol",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "capacidade",
+  "relevancia_pme": 1,
+  "consistencia_ok": true,
+  "problemas": [
+   "Resultados são estatísticas de adoção (usuários, workflows, execuções) sem ganho de negócio",
+   "Empresa de 10 mil funcionários e time de engenharia, distante da PME",
+   "Solução de n8n self-hosted para times de tecnologia"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Adoção de ferramenta sem resultado de negócio e fora do perfil de PME."
+ },
+ {
+  "id": "G-017",
+  "empresa": "Morgan Stanley",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "informacao",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Consultores buscando em PDFs é problema de informação, não saber concentrado",
+   "Sem métrica de ganho (só 200 usuários diários)",
+   "Título afirma resposta sem sustentar resultado"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Busca conversacional em base documental é gargalo de informação."
+ },
+ {
+  "id": "G-018",
+  "empresa": "Siemens",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "informacao",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Operadores procurando respostas em manuais é informação, não saber concentrado",
+   "Sem métrica agregada; \"até 10 minutos\" é citação de engenheiro"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Achar resposta em ~600 documentos é gargalo de informação."
+ },
+ {
+  "id": "T-030",
+  "empresa": "Grupo Savegnago",
+  "gargalo_atual": "conhecimento",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "controle",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Dados desatualizados, planilhas e comunicação dispersa com escritórios: é visibilidade (controle), não saber concentrado",
+   "Porte de rede grande com sistema jurídico específico"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Centralizar dados de processos para provisionamento mensal confiável é controle."
+ },
+ {
+  "id": "P-005",
+  "empresa": "Rebel Cheese",
+  "gargalo_atual": "controle",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Fonte é depoimento em página de marketing da Anthropic; valor autodeclarado",
+   "data_fonte ausente"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Auditar faturas para achar cobranças indevidas dá visibilidade sobre vazamento de custo, e é replicável por PME."
+ },
+ {
+  "id": "Q-004",
+  "empresa": "Tactus Contabilidade",
+  "gargalo_atual": "controle",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Título e resultado destacam \"15 novos clientes por mês\", crescimento que a fonte não liga ao controle financeiro",
+   "Resultado \"100% online\" é descrição, não ganho",
+   "data_fonte ausente"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "titulo": "Tactus Contabilidade centraliza a gestão financeira dos clientes no Conta Azul, 100% online e com acesso em tempo real",
+   "resultado": "Gestão financeira dos clientes 100% online e com acesso em tempo real; a empresa relata ao menos 15 novos clientes por mês (atribuição ao sistema declarada pela própria fonte)."
+  },
+  "justificativa": "Painel e acesso em tempo real encaixam em controle, mas o título atribui crescimento sem sustentação."
+ },
+ {
+  "id": "T-039",
+  "empresa": "Fazenda Graça de Deus",
+  "gargalo_atual": "controle",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Fonte é página do fornecedor (Aegro)"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Histórico de máquinas e custos por equipamento substitui o feeling na manutenção, e é muito reconhecível."
+ },
+ {
+  "id": "R-005",
+  "empresa": "Colab",
+  "gargalo_atual": "controle",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "capacidade",
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Desempenho de CPU e refatoração de código com agente: infraestrutura de TI, exatamente o que controle NÃO é",
+   "Título mistura 48h para 2h de refatoração com 180% de CPU",
+   "Ferramenta de desenvolvedor"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Caso de engenharia de software e performance de infraestrutura, fora do gargalo e da PME."
+ },
+ {
+  "id": "T-011",
+  "empresa": "SIMASLOG",
+  "gargalo_atual": "controle",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Parte do ganho (7 para 4 dias) é automação do ponto, além do painel",
+   "\"economia de 42%\" confere (3/7)"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Painel de inconsistências no fechamento do ponto dá a visibilidade que a analista não tinha."
+ },
+ {
+  "id": "T-003",
+  "empresa": "Who (whoid.com)",
+  "gargalo_atual": "controle",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultado mistura 70% de custo de DP em seis meses com \"meta\" de fechamento de 2 dias, que não é resultado medido",
+   "Título afirma corte de 70% sem base de cálculo clara",
+   "Problema é registro manual em planilhas, não falta de painel"
+  ],
+  "acao": "reclassificar",
+  "correcoes": {
+   "resultado": "Redução de 70% nos custos de DP em seis meses, segundo a fonte; a meta é fechar o ponto em cerca de 2 dias úteis, contra cerca de 7 dias úteis antes (355 colaboradores registram ponto, 35 gestores)."
+  },
+  "justificativa": "Troca de relógios e planilhas por ponto digital é automação de tarefa manual."
+ },
+ {
+  "id": "G-030",
+  "empresa": "Mastercard",
+  "gargalo_atual": "controle",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "decisao",
+  "relevancia_pme": 1,
+  "consistencia_ok": true,
+  "problemas": [
+   "Modelo próprio treinado em 125 bi de transações é inviável fora de big tech",
+   "Alegações da empresa; \"bancos poderiam economizar\" é projeção",
+   "Detecção de fraude em milissegundos não é painel de controle"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Tecnologia de rede de pagamentos, sem aplicação para PME e fora do conceito de controle."
+ },
+ {
+  "id": "M-020",
+  "empresa": "Grupo Revemar",
+  "gargalo_atual": "controle",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Faturamento com 200+ processos de RPA é automação manual, não falta de painel",
+   "Liberação de viagens com logs auditáveis é secundária",
+   "\"mais de 20 profissionais antes dedicados\" sem contexto no resultado"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "O ganho central é tempo por faturamento via RPA."
+ },
+ {
+  "id": "S-008",
+  "empresa": "Vodafone UK",
+  "gargalo_atual": "controle",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 1,
+  "consistencia_ok": true,
+  "problemas": [
+   "SOAR e retenção de logs de segurança sob a Telecom Security Act é TI/segurança",
+   "Escala de 3 a 5 bilhões de eventos por mês, fora da PME"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Caso de segurança de infraestrutura de operadora, sem relevância para PME e sem encaixe em controle."
+ },
+ {
+  "id": "S-031",
+  "empresa": "International Rescue Committee (IRC)",
+  "gargalo_atual": "controle",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "como_replicar telegráfico (\"Arrastar planilha.\", \"Medir tempo.\")",
+   "\"para a diretoria\" no título não aparece em problema/resultado",
+   "Fonte é a própria Anthropic"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "titulo": "IRC usa Claude para criar dashboards offline e reduz a análise de dados de um dia para menos de 30 minutos",
+   "como_replicar": [
+    "Padronizar a lista de indicadores que a equipe precisa acompanhar.",
+    "Pedir à IA um painel simples (arquivo HTML) que funcione sem internet.",
+    "Colar ou arrastar a planilha atualizada para o painel e ler as tendências.",
+    "Medir o tempo de análise antes e depois."
+   ]
+  },
+  "justificativa": "Painel de indicadores a partir de dados em papel dá visibilidade, com como_replicar a reescrever."
+ },
+ {
+  "id": "G-031",
+  "empresa": "Mercado Livre",
+  "gargalo_atual": "controle",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "decisao",
+  "relevancia_pme": 1,
+  "consistencia_ok": true,
+  "problemas": [
+   "Quase 99% de acurácia é declaração da empresa, sem ganho de negócio",
+   "Sem ferramentas nem solução; modelo de plataforma de marketplace, fora da PME",
+   "Texto genérico"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Estatística de empresa gigante sem resultado de negócio nem replicabilidade."
+ },
+ {
+  "id": "G-032",
+  "empresa": "Bradesco",
+  "gargalo_atual": "controle",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultado mistura \"R$ 400 milhões em benefícios\" de escopo incerto com as 18 mil ligações",
+   "Banco grande, tecnologia pouco replicável por PME",
+   "Gargalo secundário demanda_comercial justificável"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "resultado": "Cerca de 18.000 ligações de cobrança analisadas por dia pela IA, que orienta os operadores sobre abordagens e condições mais eficazes. A fonte cita ainda \"mais de R$ 400 milhões em benefícios capturados em 2025\" para uma iniciativa, sem deixar claro se vale só para cobrança (Bloomberg Linea, 28/10/2025)."
+  },
+  "justificativa": "Análise automática das ligações dá visibilidade sobre a cobrança, mas o benefício financeiro está mal atribuído."
+ },
+ {
+  "id": "G-033",
+  "empresa": "Procter & Gamble",
+  "gargalo_atual": "controle",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "processo",
+  "relevancia_pme": 1,
+  "consistencia_ok": true,
+  "problemas": [
+   "Visão computacional na linha com Siemens Industrial Edge é viável só para grandes",
+   "Meta de US$ 1,5 bi não verificada",
+   "Inspeção visual é qualidade de processo, não painel de controle"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Caso de grande indústria, com dados não verificados e fora do conceito de controle."
+ },
+ {
+  "id": "M-004",
+  "empresa": "Guarida",
+  "gargalo_atual": "controle",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Captura de notas fiscais e aprovação é automação de tarefa manual",
+   "Redução de 3 min para 1 min é bem sustentada"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "O ganho é tempo por nota fiscal, ou seja, trabalho manual repetitivo."
+ },
+ {
+  "id": "P-004",
+  "empresa": "Beach Cities Builder",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Contatos +25% e \"seis dígitos de receita\" são estimativas do dono",
+   "Empresa americana, mas SEO local é facilmente adaptável"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "SEO local para gerar contatos de entrada atende diretamente à falta de oportunidades."
+ },
+ {
+  "id": "P-025",
+  "empresa": "Bordinho Moveis (MG)",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "empresa e fonte_nome sem acento (\"Moveis\", \"lanca\")",
+   "Resultado qualitativo e vem da Meta; o número de 10% é do México",
+   "Título diz \"testa\", coerente, mas sem prova de venda"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "empresa": "Bordinho Móveis (MG)",
+   "fonte_nome": "Exame - WhatsApp Business lança IA para PMEs atenderem clientes 24 horas por dia"
+  },
+  "justificativa": "Responder rápido no WhatsApp evita perder leads; só falta acentuar campos."
+ },
+ {
+  "id": "Q-011",
+  "empresa": "Esbelt",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Fonte é caso do fornecedor RD Station; data ausente",
+   "como_replicar de 3 passos curtos"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Automação de recompra e pós-venda reduz o CAC, e qualquer e-commerce reconhece o problema."
+ },
+ {
+  "id": "Q-012",
+  "empresa": "Tributei",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Título atribui +53% de faturamento à automação sem causalidade comprovada",
+   "Problema (\"educar o mercado\") vago"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "titulo": "Tributei estrutura automação de marketing e vendas no RD Station: conversão de leads qualificados +28% e faturamento +53% em 2024"
+  },
+  "justificativa": "Funil automatizado encaixa em demanda, mas o título deve citar primeiro o ganho de funil."
+ },
+ {
+  "id": "Q-013",
+  "empresa": "Prev Fácil",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Fonte é caso do fornecedor",
+   "\"sem novos custos\" é autodeclarado"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Nutrição segmentada de leads transforma oportunidades em vendas."
+ },
+ {
+  "id": "Q-014",
+  "empresa": "Qualividros",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Receita de loja online 14x é de base muito baixa; fonte do fornecedor"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Reativar base antiga com e-mail e conteúdo é replicável por qualquer varejista."
+ },
+ {
+  "id": "Q-015",
+  "empresa": "Tycket",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Fonte é caso do fornecedor"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Recuperação de carrinho abandonado por e-mail é follow-up clássico."
+ },
+ {
+  "id": "Q-016",
+  "empresa": "Construtora Ceta",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Muitos números (R$ 9 mi, ROI 46x) autodeclarados; porte pequeno não confirmado",
+   "data ausente"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "SDR com IA e WhatsApp oficial qualificam leads e o corretor só recebe MQLs."
+ },
+ {
+  "id": "Q-031",
+  "empresa": "Coffee ++ (Coffee Mais)",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Problema \"Faltava canal estratégico\" é vago",
+   "como_replicar telegráfico",
+   "Resultado ambíguo: compara WhatsApp com e-mail, sem valor absoluto"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "problema": "A empresa não tinha um canal estratégico para vender de forma direta e recorrente à base de clientes.",
+   "como_replicar": [
+    "Segmentar a base de clientes por perfil e histórico de compra.",
+    "Disparar campanhas pela API oficial do WhatsApp para cada segmento.",
+    "Comparar a receita do WhatsApp com a do e-mail e ajustar a frequência."
+   ]
+  },
+  "justificativa": "Campanhas segmentadas no WhatsApp geram vendas, mas texto vago."
+ },
+ {
+  "id": "M-025",
+  "empresa": "Clínica Ancre",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultado mistura receita +27% com tempo administrativo de 3h para 1h, sem causalidade",
+   "\"3.000 cliques por semana a menos\" não é medida de demanda",
+   "Salesforce Health Cloud é pesado para clínica pequena",
+   "data ausente"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "O ganho documentado é de tempo administrativo e confirmações automáticas, não de geração de oportunidades."
+ },
+ {
+  "id": "G-035",
+  "empresa": "Grupo Boticario",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Stack AWS/Bedrock pouco acessível a PME",
+   "Conversão +46% no primeiro mês é declaração da AWS"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Assistente de vendas que emula a consultora aumenta conversão e ticket; a ideia é adaptável."
+ },
+ {
+  "id": "M-023",
+  "empresa": "Mobly",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Faturamento +630% parte de base baixa, mas coerente com conversão <1% para 6,2%"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Oficializar o WhatsApp com roteamento e resposta rápida é replicável por qualquer varejista."
+ },
+ {
+  "id": "M-024",
+  "empresa": "Ri Happy",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Conversão de 4% para 70% é dado do fornecedor e implausível; título afirma como fato",
+   "Ri Happy é grande, com catálogo de 10 mil SKUs"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "titulo": "Ri Happy usa agente de IA vendedor no WhatsApp; fornecedor informa conversão do canal de 4% para 70%"
+  },
+  "justificativa": "Agente que responde em segundos e fecha vendas atende ao funil, mas o título precisa atribuir o número ao fornecedor."
+ },
+ {
+  "id": "T-021",
+  "empresa": "Estácio (Yduqs)",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Título diz \"92% dos contatos do canal matriculam sem humano\", mas o resultado diz 92% das matrículas do canal sem interação humana",
+   "Escala de Yduqs distante da PME"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "titulo": "Estácio conduz matrículas por agentes de IA no WhatsApp: 92% das matrículas do canal ocorrem sem interação humana"
+  },
+  "justificativa": "Matrícula via WhatsApp é funil comercial, mas o título distorce o número."
+ },
+ {
+  "id": "G-034",
+  "empresa": "Casas Bahia",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultado mistura métricas sem relação (taxa de acerto em redes sociais, \"mais de 70 milhões por mês\" sem moeda)",
+   "Escala de 10 mil vendedores"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "resultado": "Conversão do canal \"Me Chama no Zap\" mais de 50% maior com o copiloto Bah.IA, usado por mais de 10 mil vendedores (Baguete, 12/09/2025)."
+  },
+  "justificativa": "Copiloto de vendas aumenta conversão, mas o resultado traz números desconexos."
+ },
+ {
+  "id": "G-036",
+  "empresa": "Magazine Luiza",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "comunicacao",
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Conversão ~10% maior é de testes preliminares; custo -15 a 20% é estimativa de analista (BTG)",
+   "É anúncio de produto da Lu, não resultado",
+   "Luizalabs com Meta e Google: inviável para PME"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Estimativa de analista sobre lançamento ainda inicial, sem resultado nem replicabilidade."
+ },
+ {
+  "id": "T-041",
+  "empresa": "Agro Amazônia",
+  "gargalo_atual": "demanda_comercial",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Resultado é de atividade (conversas ativas), não de vendas; título é honesto",
+   "Porte \"grande\" não confirmado"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "SDR de IA no WhatsApp qualifica e encaminha leads, e o distribuidor agro é bastante reconhecível."
+ }
+]
