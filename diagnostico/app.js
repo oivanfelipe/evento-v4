@@ -206,7 +206,7 @@ const PORTE = { pequena: "pequena", media: "média", grande: "grande" };
 
 function cartaoCaso(c) {
   const nome = c.empresa || c.titulo;
-  const func = c.funcionarios ? `, ~${c.funcionarios.toLocaleString("pt-BR")} funcionários` : "";
+  const func = c.funcionarios && c.porte_confirmado ? `, ~${c.funcionarios.toLocaleString("pt-BR")} funcionários` : "";
   const mets = (c.metricas || []).filter((m) => m.indicador && (m.depois || m.variacao)).slice(0, 3);
   return h("div", { class: "caso" },
     h("strong", {}, nome + func),
