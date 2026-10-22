@@ -1,21 +1,21 @@
 # Cobertura do banco de casos
 
-Gerado por `consolidar.py`. Total no app: **172** casos (67 fortes, 105 médios). Fora do app: 51 (fracos, não verificados ou incompletos) + 9 removidos por verificação bruta/auditoria. Duplicados removidos: 4. Promovidos a forte: 11.
+Gerado por `consolidar.py`. Total no app: **133** casos (54 fortes, 79 médios). Fora do app: 51 (fracos, não verificados ou incompletos) + 48 removidos por verificação bruta/auditoria. Duplicados removidos: 4. Promovidos a forte: 11.
 
 ## Gargalo × porte (forte / total)
 
 | Gargalo | Pequena | Média | Grande | Total |
 |---|---|---|---|---|
-| capacidade | 0/7 | 3/6 | 2/7 | 5/20 |
-| manual_repetitivo | 2/10 | 2/7 | 3/5 | 7/22 |
-| informacao | 1/5 | 2/6 | 6/7 | 9/18 |
-| decisao | 0/2 | 2/5 | 1/6 | 3/13 |
-| processo | 1/6 | 7/7 | 3/6 | 11/19 |
-| integracao | 3/8 | 3/5 | 3/5 | 9/18 |
-| comunicacao | 0/6 | 2/5 | 5/6 | 7/17 |
-| conhecimento | 1/4 | 1/5 | 3/6 | 5/15 |
-| controle | 0/3 | 2/3 | 4/8 | 6/14 |
-| demanda_comercial | 1/8 | 0/1 | 4/7 | 5/16 |
+| capacidade | 1/7 | 3/3 | 4/5 | 8/15 |
+| manual_repetitivo | 3/14 | 5/16 | 4/7 | 12/37 |
+| informacao | 0/0 | 1/1 | 2/6 | 3/7 |
+| decisao | 0/2 | 1/2 | 1/2 | 2/6 |
+| processo | 1/3 | 4/8 | 2/3 | 7/14 |
+| integracao | 3/4 | 3/4 | 3/4 | 9/12 |
+| comunicacao | 0/2 | 2/4 | 3/3 | 5/9 |
+| conhecimento | 0/0 | 0/1 | 0/0 | 0/1 |
+| controle | 0/4 | 2/3 | 1/3 | 3/10 |
+| demanda_comercial | 1/15 | 0/0 | 4/7 | 5/22 |
 
 ## Setor × porte (total)
 
@@ -24,36 +24,40 @@ Gerado por `consolidar.py`. Total no app: **172** casos (67 fortes, 105 médios)
 | agro | 2 | 1 | 1 | 4 |
 | construcao_imoveis | 7 | 1 | 1 | 9 |
 | educacao | 2 | 2 | 3 | 7 |
-| financeiro_seguros | 4 | 7 | 20 | 31 |
-| industria | 0 | 6 | 5 | 11 |
+| financeiro_seguros | 2 | 5 | 13 | 20 |
+| industria | 0 | 6 | 3 | 9 |
 | logistica | 3 | 5 | 0 | 8 |
-| outro | 3 | 5 | 3 | 11 |
+| outro | 3 | 4 | 2 | 9 |
 | saude | 4 | 5 | 3 | 12 |
-| servicos_b2b | 17 | 3 | 1 | 21 |
-| tecnologia | 7 | 11 | 12 | 30 |
-| varejo_ecommerce | 10 | 4 | 14 | 28 |
+| servicos_b2b | 14 | 2 | 1 | 17 |
+| tecnologia | 6 | 7 | 5 | 18 |
+| varejo_ecommerce | 8 | 4 | 8 | 20 |
 
 ## Brasil × exterior
 
-Brasil: 130 · Exterior: 42
+Brasil: 108 · Exterior: 25
 
 ## Células gargalo × porte com menos de 2 casos fortes (lacunas)
 
-- capacidade × pequena: 0 forte(s)
-- informacao × pequena: 1 forte(s)
+- capacidade × pequena: 1 forte(s)
+- informacao × pequena: 0 forte(s)
+- informacao × media: 1 forte(s)
 - decisao × pequena: 0 forte(s)
+- decisao × media: 1 forte(s)
 - decisao × grande: 1 forte(s)
 - processo × pequena: 1 forte(s)
 - comunicacao × pequena: 0 forte(s)
-- conhecimento × pequena: 1 forte(s)
-- conhecimento × media: 1 forte(s)
+- conhecimento × pequena: 0 forte(s)
+- conhecimento × media: 0 forte(s)
+- conhecimento × grande: 0 forte(s)
 - controle × pequena: 0 forte(s)
+- controle × grande: 1 forte(s)
 - demanda_comercial × pequena: 1 forte(s)
 - demanda_comercial × media: 0 forte(s)
 
 ## Casos fortes com porte confirmado
 
-33 de 67 fortes.
+24 de 54 fortes.
 
 ## Fora do app
 

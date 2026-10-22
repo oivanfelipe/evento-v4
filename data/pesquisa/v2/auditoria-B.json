@@ -1,0 +1,1191 @@
+[
+ {
+  "id": "M-011",
+  "empresa": "AlugaMais",
+  "gargalo_atual": "decisao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Receita +85% e contratos +63% são dados da própria startup, sem prova de causalidade com a análise rápida"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Análise de crédito/cadastro lenta que trava a aprovação é gargalo de decisão reconhecível por imobiliárias pequenas."
+ },
+ {
+  "id": "S-014",
+  "empresa": "Base39",
+  "gargalo_atual": "decisao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Arquitetura AWS/LangGraph/vetorial é pesada para PME; aproveitável só como ideia",
+   "Desenvolvimento -75% aparece no resultado mas não nas métricas"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Decisão de crédito que caiu de até 3 dias para menos de 1 hora é exatamente gargalo de decisão; a fintech é pequena."
+ },
+ {
+  "id": "R-013",
+  "empresa": "WPX Locação",
+  "gargalo_atual": "decisao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Prazo de 30 dias para cobrança e lead time de 65 dias aparecem juntos; deixar claro que são etapas diferentes"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Parecer técnico sobre laudo que atrasava a cobrança é decisão lenta; empresa média com ferramenta acessível (Copilot Studio)."
+ },
+ {
+  "id": "T-005",
+  "empresa": "Grupo Salsa",
+  "gargalo_atual": "decisao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "processo",
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Causalidade forte: turnover 10% para 0,5% atribuído só à troca de software, sem período nem outros fatores",
+   "Problema é RH em Excel/Word e recrutamento por indicação (processo e dados dispersos), não decisão lenta"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "O caso trata de digitalizar e padronizar o RH, não de decisão que demora com dados disponíveis."
+ },
+ {
+  "id": "M-012",
+  "empresa": "CS Frotas (via Triggo.ai)",
+  "gargalo_atual": "decisao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "processo",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Fonte só informa redução >50% do esforço de atendimento; \"tempo de decisão\" sem valor",
+   "Métrica \"oficinas atendidas\" é escala da rede, não resultado",
+   "Problema descrito (muitas interações humanas em OS) é de processo/fluxo"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Agilizar ordens de serviço por agente é gargalo de processo; a evidência de decisão é inexistente."
+ },
+ {
+  "id": "S-036",
+  "empresa": "GoJob",
+  "gargalo_atual": "decisao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Título diz \"tempo médio\" e métrica diz \"tempo mediano\"",
+   "Trecho comprovante é manchete e não sustenta ligações 50 para 2",
+   "\"Receita líquida +30-50%\" é atribuição causal duvidosa",
+   "Título com erro de digitação (\"pré-tria\")",
+   "como_replicar são fragmentos sem sentido"
+  ],
+  "acao": "reclassificar",
+  "correcoes": {
+   "titulo": "GoJob faz a triagem de candidatos com IA: tempo mediano de contratação cai de 3 dias para 15 minutos",
+   "resultado": "Ligações por contratação de 50 para 2; tempo mediano de 3 dias para 15 minutos; a fonte também cita aumento de receita líquida anual de até 50% (autodeclarado, sem causalidade demonstrada).",
+   "como_replicar": [
+    "Fazer a triagem inicial dos candidatos por SMS, com perguntas padronizadas.",
+    "Usar IA para resumir as respostas de cada candidato.",
+    "Deixar a automação escolher os finalistas para o recrutador entrevistar.",
+    "Medir ligações por contratação e tempo mediano até a contratação."
+   ]
+  },
+  "justificativa": "O núcleo é tirar ligações e leitura de CV do recrutador (trabalho repetitivo), não decisão que demora."
+ },
+ {
+  "id": "T-009",
+  "empresa": "Liv Up",
+  "gargalo_atual": "decisao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "processo",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Roteirizar rotas é planejamento operacional, não decisão com dados disponíveis",
+   "Implantação em 2022: dado antigo"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Otimização de rotas encaixa melhor em processo (como Pedroso R-008); decisão não é o gargalo."
+ },
+ {
+  "id": "S-028",
+  "empresa": "Sicredi",
+  "gargalo_atual": "decisao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "como_replicar são fragmentos genéricos (\"Expandir.\")",
+   "Piloto com 17 cooperativas/357 pagamentos não é métrica do resultado de 6 para 2 dias"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "como_replicar": [
+    "Escolher um produto cuja documentação seja padronizada (aqui, consórcio).",
+    "Usar OCR para extrair os dados dos documentos e IA para validar as regras de aceite.",
+    "Rodar um piloto em poucas unidades, com revisão humana das exceções.",
+    "Medir o prazo de análise antes e depois e só então expandir."
+   ]
+  },
+  "justificativa": "Aceite documental mais rápido é decisão acelerada; texto de replicação precisa ficar utilizável."
+ },
+ {
+  "id": "G-020",
+  "empresa": "Walmart",
+  "gargalo_atual": "decisao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "capacidade",
+  "relevancia_pme": 1,
+  "consistencia_ok": true,
+  "problemas": [
+   "Negociação autônoma com até 2.000 fornecedores só é viável para grande varejista",
+   "Dados da Pactum via imprensa (fornecedor), economia de 3% modesta",
+   "Problema real é falta de tempo da equipe de compras (capacidade)"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Gargalo de capacidade da equipe de compras; distante da realidade de PME."
+ },
+ {
+  "id": "G-021",
+  "empresa": "C6 Bank",
+  "gargalo_atual": "decisao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 1,
+  "consistencia_ok": true,
+  "problemas": [
+   "Banco grande; fonte é entrevista com número autodeclarado",
+   "ferramentas vazio"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Aprovação de abertura de conta caindo de 1 dia para 10 min é decisão acelerada; replicável só como ideia."
+ },
+ {
+  "id": "G-022",
+  "empresa": "Serasa",
+  "gargalo_atual": "decisao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "informacao",
+  "relevancia_pme": 0,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultado é um \"10x\" sem base, de coluna sobre evento do fornecedor (propaganda)",
+   "Sem antes/depois, 500 milhões de transações é escala de big tech",
+   "como_replicar genérico (\"Consolidar dados em nuvem\")"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Propaganda de fornecedor sem métrica verificável nem relevância para PME."
+ },
+ {
+  "id": "S-027",
+  "empresa": "Agir Saúde",
+  "gargalo_atual": "decisao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "informacao",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Problema é busca de informação institucional (chatbot de documentos), não decisão",
+   "\"+25% na previsão de altas\" é ambíguo (acurácia? ocupação?)"
+  ],
+  "acao": "reclassificar",
+  "correcoes": {
+   "resultado": "-40% no tempo médio de tarefas administrativas; +25% na previsão de altas (a fonte não detalha o critério); mais de 1.500 leitos; replicado em 5 hospitais."
+  },
+  "justificativa": "Chatbot sobre dados institucionais resolve acesso à informação; a previsão de altas é extensão secundária."
+ },
+ {
+  "id": "S-029",
+  "empresa": "Nestlé Brasil",
+  "gargalo_atual": "decisao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "como_replicar são fragmentos (\"Automatizar causas.\")",
+   "Redução de 35% das rupturas atribuída à plataforma sem baseline"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "como_replicar": [
+    "Cruzar as vendas da indústria para o varejo (sell-in) com as vendas do varejo ao consumidor (sell-out).",
+    "Gerar uma sugestão de pedido por loja segundo a política de estoque.",
+    "Identificar automaticamente as causas de cada ruptura e recomendar redistribuição entre lojas.",
+    "Acompanhar o índice de rupturas por cliente antes e depois."
+   ]
+  },
+  "justificativa": "Sugestão de pedido é decisão apoiada por dados; texto de replicação precisa ser reescrito."
+ },
+ {
+  "id": "P-008",
+  "empresa": "Empresa de compliance de caminhoneiros (Tennessee, não nomeada; 5 funcionários)",
+  "gargalo_atual": "processo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Contexto específico dos EUA (imposto sobre combustível, IFTA); o núcleo (reconstruir sistema com IA) é transferível",
+   "Métrica de pico \"antes: pico anterior\" é vaga"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Reconstruir o sistema para zerar erros e dobrar o volume com a mesma equipe é melhoria de processo."
+ },
+ {
+  "id": "S-018",
+  "empresa": "OCC (Obras de Caridade, ONG para migrantes e refugiados)",
+  "gargalo_atual": "processo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Folha, despesas e conciliação automatizadas são tarefas manuais repetitivas, não etapas/aprovações excessivas",
+   "Horas poupadas são estimativa"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "O problema central é backoffice manual; processo é só secundário."
+ },
+ {
+  "id": "Q-018",
+  "empresa": "VIIV Empreendimentos",
+  "gargalo_atual": "processo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "demanda_comercial",
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Vendas +135% mas receita só +21% (R$ 78,8 para R$ 95,6 mi): números sem explicação",
+   "Causalidade atribuída ao CRM sem outros fatores",
+   "Problema (leads esfriando, follow-up) é demanda comercial"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "CRM com cadência de follow-up resolve leads que esfriam, não excesso de etapas."
+ },
+ {
+  "id": "Q-034",
+  "empresa": "Clínica Dimeg",
+  "gargalo_atual": "processo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Trecho comprovante (\"A plataforma chegou para preencher uma lacuna\") não sustenta nenhum número",
+   "\"Resposta de 90%\" sem base",
+   "como_replicar fragmentos"
+  ],
+  "acao": "reclassificar",
+  "correcoes": {
+   "resultado": "3.075 horários remanejados em quatro meses; presença acima de 95%; resposta de 90% (a fonte não detalha a base).",
+   "como_replicar": [
+    "Confirmar as consultas por WhatsApp com mensagens automáticas.",
+    "Integrar a ferramenta ao prontuário eletrônico para enxergar a agenda atualizada.",
+    "Oferecer os horários desmarcados a outros pacientes (remanejamento).",
+    "Acompanhar a taxa de presença e o número de horários reocupados."
+   ]
+  },
+  "justificativa": "Confirmar e remarcar consultas manualmente é trabalho repetitivo; processo não é o gargalo."
+ },
+ {
+  "id": "T-027",
+  "empresa": "Argentino Imóveis",
+  "gargalo_atual": "processo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Título atribui o ganho de 85% também à \"IA de análise\", mas o resultado vem da assinatura eletrônica/fluxo",
+   "Dado de pandemia, data da fonte antiga"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "titulo": "Imobiliária de alto padrão reduz em 85% o tempo de formalização de contratos com assinatura eletrônica"
+  },
+  "justificativa": "Formalização de contrato mais curta é processo; o título superestima o papel da IA."
+ },
+ {
+  "id": "T-035",
+  "empresa": "Diretrizes Contabilidade",
+  "gargalo_atual": "processo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Mensalidade \"cai pela metade\" em um cliente é anedota"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Eliminar papel e encurtar o fechamento contábil é melhoria de processo muito reconhecível."
+ },
+ {
+  "id": "M-014",
+  "empresa": "Maxipas",
+  "gargalo_atual": "processo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Digitação em vários sistemas e laudos manuais apontam para manual_repetitivo/integração"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "O problema declarado é redigitação, e RPA resolve isso; processo é secundário."
+ },
+ {
+  "id": "R-002",
+  "empresa": "EvoluServices",
+  "gargalo_atual": "processo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Variação \"-70%\" no SLA de análise confere (26 para 8 min)"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Onboarding e aprovação de cadastro com SLA de 53h para 2h26 é gargalo de processo bem comprovado."
+ },
+ {
+  "id": "R-006",
+  "empresa": "Colab",
+  "gargalo_atual": "processo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "capacidade",
+  "relevancia_pme": 1,
+  "consistencia_ok": true,
+  "problemas": [
+   "Caso de produto do fornecedor (Colab) para prefeituras, não de empresa-cliente",
+   "Métricas de uso (prompts, serviços/cliente) são adoção, não resultado",
+   "Stack AWS/LangChain irreplicável para PME"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Lançamento de funcionalidade de plataforma govtech; um gestor de PME não se reconhece."
+ },
+ {
+  "id": "R-008",
+  "empresa": "Pedroso",
+  "gargalo_atual": "processo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Título atribui -20% do tempo de entrega ao roteirizador E ao ponto digital, mas a fonte atribui só ao roteirizador"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "titulo": "Roteirizador reduz em 20% o tempo de entrega e o ponto digital do motorista elimina a folha de papel"
+  },
+  "justificativa": "Corrigir a atribuição do resultado; caso útil para média empresa de distribuição."
+ },
+ {
+  "id": "S-005",
+  "empresa": "Kroo Bank",
+  "gargalo_atual": "processo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "integracao",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Problema é sistemas desconectados mexidos um a um (integração)",
+   "Título cita onboarding/conciliação, mas só o ganho em incidentes tem número"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Criação/remoção de contas em vários sistemas via ticket é integração."
+ },
+ {
+  "id": "S-007",
+  "empresa": "Wemolo",
+  "gargalo_atual": "processo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "integracao",
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Problema é fragilidade e dependências entre automações (governança de integrações)",
+   "\"7x mais projetos\" sem relação causal com Make Grid",
+   "Tema de gestão de automações é distante para a maioria das PMEs"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Mapear dependências entre cenários é gargalo de integração, de relevância limitada."
+ },
+ {
+  "id": "T-001",
+  "empresa": "Cooperabaeté",
+  "gargalo_atual": "processo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Economia R$ 1.703,44/mês = 2 processos x R$ 851,72; contexto de pequeno volume"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Centralizar a seleção no RH com perfil comportamental encurta o ciclo; ótimo para PME."
+ },
+ {
+  "id": "G-025",
+  "empresa": "Amazon",
+  "gargalo_atual": "processo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 0,
+  "consistencia_ok": false,
+  "problemas": [
+   "Ferramenta de desenvolvedor (migração Java 17) de big tech",
+   "\"4.500 anos\" e US$ 260 mi/ano são marketing da AWS",
+   "Sem relação com processo de negócio de PME"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Anúncio de produto de desenvolvedor sem relevância para o público."
+ },
+ {
+  "id": "S-002",
+  "empresa": "Seguros Bolívar",
+  "gargalo_atual": "processo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Seguradora de 3.000 pessoas, mas a ideia (fluxo ao lado do legado) é transferível"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Autorização prévia de semanas para quase tempo real é processo, com mecanismo claro."
+ },
+ {
+  "id": "S-021",
+  "empresa": "FranklinCovey",
+  "gargalo_atual": "processo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "integracao",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Título diz \"substitui barramento\" mas solução diz \"sem mudar sistemas centrais\"",
+   "Trecho comprovante sustenta só US$ 60 mil/ano, não o 30 dias para 2 horas",
+   "Mistura de economia evitada com ganho de prazo"
+  ],
+  "acao": "reclassificar",
+  "correcoes": {
+   "titulo": "FranklinCovey integra sistemas com o Make, evita um app financeiro de ~US$ 60 mil por ano e reduz processo de RH de 30 dias para 2 horas"
+  },
+  "justificativa": "Cerne é integração via Make; o título confunde substituição com camada de integração."
+ },
+ {
+  "id": "T-018",
+  "empresa": "Rede Mater Dei de Saúde",
+  "gargalo_atual": "processo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "ROI de 517% e -34% do ciclo (esperado) misturam resultado real e expectativa",
+   "Rede grande, mas a lógica de agentes por etapa é transferível"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Faturamento e autorização com glosas e demora são processo; resultado claro."
+ },
+ {
+  "id": "G-024",
+  "empresa": "Itau Unibanco",
+  "gargalo_atual": "processo",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "processo",
+  "relevancia_pme": 0,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultado é de simulação (Pix por voz), não implantação real",
+   "Estatísticas de adoção (56 mil usuários, 760 produtos) não são resultado",
+   "Realidade de banco gigante, irreplicável"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Simulação e números de adoção de grande banco, sem valor para o diagnóstico."
+ },
+ {
+  "id": "M-015",
+  "empresa": "Costa Foods Brasil",
+  "gargalo_atual": "processo",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Título descreve a solução e não o resultado",
+   "Resultado mistura economia de pricing com pedidos na troca de ERP"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "titulo": "Costa Foods automatiza aprovações de preço com portal B2B e economiza 100 horas por mês no time de Pricing"
+  },
+  "justificativa": "Aprovações de preço manuais e lentas são processo; título precisa mostrar o ganho."
+ },
+ {
+  "id": "P-003",
+  "empresa": "Beach Cities Builder",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Título diz \"lança no sistema contábil\", mas a solução descrita só lê, identifica e arquiva (lançamento no Zoho ambíguo)",
+   "\"100% preciso\" é opinião do dono"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Ponte manual entre e-mail, Drive e contabilidade em obra pequena é o exemplo clássico."
+ },
+ {
+  "id": "Q-009",
+  "empresa": "RicaPet",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Trecho \"ele cresceu 40%\" não sustenta os 12 mil pedidos do título",
+   "Crescimento de ~10x em pedidos versus +40% de faturamento: períodos diferentes sem esclarecer",
+   "Atribuição de causalidade à ferramenta"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "titulo": "RicaPet integra marketplaces, notas fiscais e financeiro no Omie e chega a cerca de 12 mil pedidos despachados por mês",
+   "resultado": "Cerca de 12 mil pedidos despachados por mês (no início eram cerca de 40 vendas por dia); faturamento +40% entre dezembro de 2023 e julho de 2024 (relato da empresa; os períodos não são equivalentes)."
+  },
+  "justificativa": "Integração de marketplaces com ERP é caso muito reconhecível; texto precisa evitar comparação enganosa."
+ },
+ {
+  "id": "S-017",
+  "empresa": "Dude Wipes",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Métricas em horas/ano por pessoa são estimativas da empresa"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Liga NetSuite a SaaS por automação em empresa de 40 pessoas."
+ },
+ {
+  "id": "P-033",
+  "empresa": null,
+  "gargalo_atual": "integracao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 0,
+  "consistencia_ok": false,
+  "problemas": [
+   "Pesquisa de fornecedor (Salesforce), não um caso",
+   "Métrica \"antes 32% / depois 66%\" compara grupos, não antes e depois",
+   "Correlação (crescimento versus stack integrado) vendida como causa",
+   "empresa null"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Estatística de adoção sem caso nem resultado; remover."
+ },
+ {
+  "id": "Q-008",
+  "empresa": "Anexo Gestão Contábil",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "O resultado (5 novos serviços) não mede o ganho de integração",
+   "Problema é papel e processos manuais"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Integração bancária no Conta Azul serve para eliminar lançamento manual; resultado é de reposicionamento."
+ },
+ {
+  "id": "Q-019",
+  "empresa": "Health Tech",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "demanda_comercial",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultados (+3.000% leads, CPL -85%, vendas digitais 70x) são de marketing e vendas",
+   "Empresa anônima (\"Health Tech\"), sem como saber se é nominal",
+   "Números extremos sem baseline"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Geração de leads e CPL são demanda comercial; a integração com ERP é secundária."
+ },
+ {
+  "id": "S-019",
+  "empresa": "AUDITSU",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "demanda_comercial",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Problema é prospecção de clientes",
+   "Título liga os £200 mil à automação, sem causalidade",
+   "Startup pré-lançamento no Reino Unido"
+  ],
+  "acao": "reclassificar",
+  "correcoes": {
+   "titulo": "Startup de 2-10 pessoas monta 18 cenários no Make para prospectar clientes e forma lista de espera com 1.200 empresas"
+  },
+  "justificativa": "Automatizar prospecção é gargalo comercial; integração é meio."
+ },
+ {
+  "id": "T-034",
+  "empresa": "Virei Contador (Newcont)",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Crescimento de 300% é atribuído à ferramenta sem outros fatores",
+   "Problema é transferência manual de dados"
+  ],
+  "acao": "reclassificar",
+  "correcoes": {
+   "titulo": "Contabilidade online do ES elimina a transferência manual de dados com a Conta Azul e relata crescimento de 300%",
+   "resultado": "Crescimento de 300% e 305 clientes ativos na carteira (relato da empresa, sem separar outros fatores)."
+  },
+  "justificativa": "Trabalho manual de copiar dados do cliente é o centro do problema."
+ },
+ {
+  "id": "M-017",
+  "empresa": "Grupo Dislub Equador",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Reduções de carga por perfil não dizem o período-base"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Integra OCR, RPA e ERP num fluxo de notas, caso de integração/orquestração."
+ },
+ {
+  "id": "M-018",
+  "empresa": "Rede Brasil",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "3 a 4 mil contatos/dia no problema versus mais de 40 mil/mês no resultado: bases diferentes",
+   "Tempo por processo sem baseline"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "RPA como ponte para sistema sem API é integração; inconsistência de volume é menor."
+ },
+ {
+  "id": "S-040",
+  "empresa": "TripleTen",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Métrica diz 5-7x e título/resultado \"até 7x\"",
+   "\"Centenas de horas por mês\" não quantificado",
+   "como_replicar fragmentos"
+  ],
+  "acao": "reclassificar",
+  "correcoes": {
+   "resultado": "Tempo de setup de anúncios até 7x menor; mais de 1.000 criativos por ano; a fonte fala em centenas de horas por mês poupadas.",
+   "como_replicar": [
+    "Monitorar os anúncios dos concorrentes de forma automática.",
+    "Usar IA para marcar e classificar os criativos.",
+    "Padronizar o upload dos criativos para as plataformas de anúncio.",
+    "Cruzar os criativos com as métricas de desempenho e medir o tempo de setup."
+   ]
+  },
+  "justificativa": "Upload e pesquisa repetitivos de criativos são manuais; o fator integração é secundário."
+ },
+ {
+  "id": "S-006",
+  "empresa": "CMCC Foundation",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Métrica \"chamadas de status -60%\" não aparece no resultado; \"50% menos tempo mapeando dependências\" não está nas métricas",
+   "Trecho comprovante não sustenta os números",
+   "como_replicar fala em \"e-mails de acompanhamento\", métrica fala em chamadas"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "resultado": "65% menos erros de digitação em RH e 78% menos em compras; registro de pedidos de compra 85% mais rápido; 60% menos chamadas de status; 50% menos tempo mapeando dependências entre cenários."
+  },
+  "justificativa": "Formulário que cria tarefa e registro no SAP é integração; consistência interna precisa ser ajustada."
+ },
+ {
+  "id": "S-041",
+  "empresa": "ChargeGuru",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Título \"de dois meses para dois dias\" mistura migração de ~6 semanas com protótipo",
+   "Projeto de TI sem resultado de negócio claro",
+   "como_replicar fragmentos"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "titulo": "ChargeGuru refaz em dois dias o que levaria dois meses e migra dois sistemas em cerca de 6 semanas com Make",
+   "como_replicar": [
+    "Prototipar a integração entre os dois sistemas no Make antes de definir o escopo final.",
+    "Usar um mapa visual das dependências (Make Grid) entre os fluxos.",
+    "Automatizar tarefas das áreas com o mesmo método, como categorizar e-mails com IA.",
+    "Medir o tempo de entrega de cada etapa e comparar com o prazo anterior."
+   ]
+  },
+  "justificativa": "Unir sistemas legados é integração, mas o caso é de TI e o título é ambíguo."
+ },
+ {
+  "id": "M-019",
+  "empresa": "Brasil TecPar",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Grupo de 1,5 milhão de clientes; métricas de atendimento (CSAT, TMA) mais que de integração"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Atendentes em 5 a 6 aplicativos unificados em uma plataforma é integração com resultados fortes."
+ },
+ {
+  "id": "S-001",
+  "empresa": "Icatu Seguros",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Seguradora grande, mas corretores são pequenos negócios e o padrão (WhatsApp + API interna) é replicável",
+   "Prazo de 7 semanas não é resultado"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Assistente que consulta API interna e grava no sistema é integração; ganho de 5 min para 40 s."
+ },
+ {
+  "id": "S-004",
+  "empresa": "iFood",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultado diz \"dezenas\" de notas e o trecho diz dez (\"We could handle ten\")",
+   "Métrica de horas poupadas é circular (antes e depois são o mesmo valor)"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "resultado": "Cerca de 2,5 horas por dia economizadas pela equipe de Compras; o fluxo passou de cerca de dez para milhares de notas."
+  },
+  "justificativa": "Cruzamento de 4 sistemas por Make e agente é integração com resultado claro; ajustar números."
+ },
+ {
+  "id": "S-039",
+  "empresa": "Celonis",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Trecho sustenta apenas \"5x mais rápido\"",
+   "como_replicar fragmentos (\"Medir.\")",
+   "Contexto enterprise (Workday, Brightflag)"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "como_replicar": [
+    "Mapear onde dados são redigitados entre sistemas (aqui, faturas jurídicas e Workday).",
+    "Montar o fluxo entre os sistemas em uma plataforma visual, sem código para cada integração.",
+    "Reaproveitar modelos (templates) de integração nos próximos casos.",
+    "Medir o tempo para entregar cada integração e o tempo até a fatura ser processada."
+   ]
+  },
+  "justificativa": "Fatura sem redigitação entre sistemas é integração; texto de replicação fraco."
+ },
+ {
+  "id": "G-026",
+  "empresa": "Bradesco",
+  "gargalo_atual": "integracao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 0,
+  "consistencia_ok": false,
+  "problemas": [
+   "Engenharia reversa de código COBOL em banco gigante é ferramenta de desenvolvedor",
+   "Entrevista com números \"não auditados\"",
+   "Não trata de sistemas que não conversam no dia a dia de uma PME"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Tema de TI de big tech, sem relevância para o público."
+ },
+ {
+  "id": "P-011",
+  "empresa": "Mon Kit Solaire",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "Sem métrica de volume; só tempo de configuração"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Pequena equipe consumida por chats repetitivos é gargalo de comunicação; 2-3 h de setup é inspirador."
+ },
+ {
+  "id": "P-031",
+  "empresa": null,
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 0,
+  "consistencia_ok": false,
+  "problemas": [
+   "Pesquisa de adoção (Sebrae), sem resultado",
+   "Não é um caso; empresa null",
+   "como_replicar não deriva do estudo"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Estatística de adoção de chatbots sem resultado."
+ },
+ {
+  "id": "Q-010",
+  "empresa": "Velocità",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "integracao",
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Problema é canais separados sem visão única (integração/omnichannel)",
+   "+15% nas vendas do site: causalidade não demonstrada",
+   "400 interações/atendente sem baseline"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Centralizar WhatsApp, Instagram, e-mail em um painel é integração de canais."
+ },
+ {
+  "id": "Q-035",
+  "empresa": "Imóveis Crédito Real",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "demanda_comercial",
+  "relevancia_pme": 3,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultado mede origem de contratos (leads), não menos reuniões ou alinhamentos",
+   "como_replicar fragmentos"
+  ],
+  "acao": "reclassificar",
+  "correcoes": {
+   "como_replicar": [
+    "Mapear as jornadas de atendimento mais comuns no WhatsApp e criar um chatbot para cada uma.",
+    "Registrar todos os contatos e leads recebidos em um CRM.",
+    "Permitir a passagem do chatbot para um atendente humano.",
+    "Acompanhar quantos contratos nascem de leads do WhatsApp."
+   ]
+  },
+  "justificativa": "O ganho é captar e converter leads pelo WhatsApp, que é demanda comercial."
+ },
+ {
+  "id": "Q-036",
+  "empresa": "Silverguard",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "capacidade",
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Resultado é volume de atendimentos (atividade), sem benefício medido",
+   "Problema \"golpes de PIX\" descreve serviço da empresa, não gargalo interno",
+   "como_replicar fragmentos"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Estatística de atividade de um serviço de atendimento; sem resultado transferível."
+ },
+ {
+  "id": "T-020",
+  "empresa": "Clínica Lucas Miranda",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 3,
+  "consistencia_ok": true,
+  "problemas": [
+   "+40% do faturamento é autodeclarado pelo fornecedor e atribuído a campanhas, não ao atendimento"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Fila única, agenda automática e fim dos grupos paralelos reduzem ruído de comunicação; relevante para clínicas."
+ },
+ {
+  "id": "R-001",
+  "empresa": "Segware",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Preencher à mão milhões de descrições é tarefa repetitiva",
+   "Título liga padronização de descrição a redução >50% do tempo de resposta sem explicar o mecanismo"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "O núcleo é automatizar texto repetitivo dos operadores."
+ },
+ {
+  "id": "R-012",
+  "empresa": "EstrelaBet",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Retenção +20 p.p. aparece só no resultado",
+   "Setor de apostas pode causar ressalva"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Bot que responde 64% dos chamados e corta a espera de 16 para 3 minutos ataca perguntas repetidas."
+ },
+ {
+  "id": "M-021",
+  "empresa": "Unimed Caruaru",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Resultados são volumes (sem antes), não redução do call center"
+  ],
+  "acao": "manter",
+  "correcoes": null,
+  "justificativa": "Autoatendimento de boletos, agendamentos e status resolve perguntas repetidas."
+ },
+ {
+  "id": "T-037",
+  "empresa": "Simplifica+ (Adapcon)",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 1,
+  "consistencia_ok": false,
+  "problemas": [
+   "Números agregados do fornecedor (1 milhão de horas, R$ 1 bi/mês), peça de marketing",
+   "Sem resultado verificável de empresa específica",
+   "\"Até 92%\" é alegação"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Propaganda de plataforma com métricas agregadas."
+ },
+ {
+  "id": "T-038",
+  "empresa": "Celcoin",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "demanda_comercial",
+  "relevancia_pme": 0,
+  "consistencia_ok": false,
+  "problemas": [
+   "Conteúdo patrocinado que \"promete\" até 50%",
+   "Sem cliente nem caso concreto",
+   "Cobrança/inadimplência não é comunicação"
+  ],
+  "acao": "remover",
+  "correcoes": null,
+  "justificativa": "Alegação promocional sem evidência."
+ },
+ {
+  "id": "G-029",
+  "empresa": "Finastra",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "capacidade",
+  "relevancia_pme": 2,
+  "consistencia_ok": true,
+  "problemas": [
+   "Problema é demora de produzir conteúdo de campanha, não alinhamentos ou reuniões",
+   "Resultado compara com estimativa de seis meses, não com medição"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Transcrever e resumir entrevistas libera capacidade da equipe de marketing."
+ },
+ {
+  "id": "S-012",
+  "empresa": "XP Inc.",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Título atribui 9 mil horas a reuniões, atas e auditoria, mas a fonte apresenta total geral",
+   "-7% no tempo de consolidação é ganho pequeno",
+   "Grande empresa"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "titulo": "XP Inc. economiza mais de 9 mil horas com o Copilot; auditoria interna ganha 30% de eficiência e consolidação de reuniões fica 7% mais rápida"
+  },
+  "justificativa": "Atas e transcrição em reuniões atacam comunicação, mas o título mistura resultados."
+ },
+ {
+  "id": "S-013",
+  "empresa": "B3",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "manual_repetitivo",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "O resultado forte é gerar material com dados do Excel (2-3 semanas para 2-3 horas)",
+   "\"+2600% a 4000%\" é métrica de produtividade confusa",
+   "Só 33 h/mês de reuniões diárias"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Produzir material com dados é trabalho manual; reuniões são ganho menor."
+ },
+ {
+  "id": "S-020",
+  "empresa": "Stellantis &You UK",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "capacidade",
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Ligações sem resposta e call center externo apontam para capacidade de atendimento",
+   "como_replicar fragmentos"
+  ],
+  "acao": "reclassificar",
+  "correcoes": {
+   "como_replicar": [
+    "Pilotar o agente de voz em uma unidade.",
+    "Identificar o cliente pelo telefone consultando a base de clientes.",
+    "Ligar o agente à agenda e ao CRM para marcar atendimentos.",
+    "Escalar após atingir a taxa de sucesso desejada no piloto."
+   ]
+  },
+  "justificativa": "O ganho é atender mais ligações com menos custo; comunicação interna não é o tema."
+ },
+ {
+  "id": "S-038",
+  "empresa": "IBM (Systems Assurance)",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": true,
+  "gargalo_sugerido": null,
+  "relevancia_pme": 2,
+  "consistencia_ok": false,
+  "problemas": [
+   "Título diz \"substitui reuniões\", mas a redução é de 50%+ e autodeclarada por cerca de 45 usuários",
+   "como_replicar fragmentos"
+  ],
+  "acao": "corrigir_texto",
+  "correcoes": {
+   "titulo": "IBM reduz em mais de 50% as reuniões de status com um app de IA (autodeclarado por líderes de projeto)",
+   "como_replicar": [
+    "Pedir que cada responsável registre a atualização do projeto em um formulário simples.",
+    "Notificar automaticamente os interessados no chat (ex.: Slack).",
+    "Gerar resumos por IA das atualizações para substituir parte das reuniões.",
+    "Medir quantas reuniões de status recorrentes deixam de ser necessárias."
+   ]
+  },
+  "justificativa": "Reuniões de status são o exemplo literal de comunicação; texto precisa ser mais honesto."
+ },
+ {
+  "id": "G-028",
+  "empresa": "Telstra",
+  "gargalo_atual": "comunicacao",
+  "gargalo_correto": false,
+  "gargalo_sugerido": "informacao",
+  "relevancia_pme": 1,
+  "consistencia_ok": true,
+  "problemas": [
+   "Resumo de conversas e busca interna são acesso à informação",
+   "Telco grande, tecnologia Azure OpenAI",
+   "Testes de 2023, relato de fornecedor (ITWire)"
+  ],
+  "acao": "reclassificar",
+  "correcoes": null,
+  "justificativa": "Resumo de contexto de contato e busca de conhecimento são informação."
+ }
+]
