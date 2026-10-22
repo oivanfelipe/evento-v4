@@ -44,27 +44,29 @@ function sanitizar(body) {
 
 const numeros = (t) => (String(t).match(/\d[\d.,]*/g) || []).filter((n) => n.replace(/\D/g, "").length > 1);
 
-function validar(saida, entrada) {
-  if (!saida || typeof saida.resumo !== "string" || !Array.isArray(saida.itens)) return null;
+function validar(saida, entrada, falha) {
+  const rejeitar = (m) => { falha.motivo = m; return null; };
+  if (!saida || typeof saida.resumo !== "string" || !Array.isArray(saida.itens)) return rejeitar("formato: resumo/itens ausentes; chaves=" + Object.keys(saida || {}).join(","));
   const digitos = (n) => n.replace(/\D/g, "");
   const permitidos = new Set((JSON.stringify({ ...entrada, perfil: { ...entrada.perfil, relato: "" } }).match(/\d[\d.,]*/g) || []).map(digitos));
   const limpo = { resumo: cut(saida.resumo, 450), itens: [] };
   for (const e of entrada.itens) {
     const s = saida.itens.find((x) => x && x.gargalo === e.gargalo);
-    if (!s) return null;
+    if (!s) return rejeitar("item ausente para gargalo " + e.gargalo + "; recebidos=" + saida.itens.map((x) => x && x.gargalo).join(","));
     const item = {
       gargalo: e.gargalo,
       impacto: cut(s.impacto, 420),
       oportunidade: cut(s.oportunidade, 420),
       primeiro_passo: cut(s.primeiro_passo, 380),
     };
-    if (!item.impacto || !item.oportunidade || !item.primeiro_passo) return null;
+    if (!item.impacto || !item.oportunidade || !item.primeiro_passo) return rejeitar("campo vazio em " + e.gargalo);
     limpo.itens.push(item);
   }
   // Anti-alucinação: números com 2+ dígitos só valem se estiverem nos dados do motor
   // (o relato livre do participante não conta como fonte).
   const todo = [limpo.resumo, ...limpo.itens.flatMap((i) => [i.impacto, i.oportunidade, i.primeiro_passo])].join(" ");
-  for (const n of numeros(todo)) if (!permitidos.has(digitos(n))) return null;
+  const novos = numeros(todo).filter((n) => !permitidos.has(digitos(n)));
+  if (novos.length) return rejeitar("numeros fora dos dados: " + novos.join(" | "));
   return limpo;
 }
 
@@ -114,8 +116,12 @@ module.exports = async function handler(req, res) {
     const texto = data && data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content;
     let saida;
     try { saida = JSON.parse(texto); } catch { return res.status(502).json({ erro: "formato" }); }
-    const ok = validar(saida, entrada);
-    if (!ok) return res.status(502).json({ erro: "validacao" });
+    const falha = {};
+    const ok = validar(saida, entrada, falha);
+    if (!ok) {
+      console.error("mapa: validacao rejeitou a saida da IA:", falha.motivo);
+      return res.status(502).json({ erro: "validacao" });
+    }
     return res.status(200).json(ok);
   } catch (e) {
     return res.status(504).json({ erro: "timeout" });
