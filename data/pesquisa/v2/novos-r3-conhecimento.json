@@ -1,0 +1,831 @@
+[
+  {
+    "id": "K-001",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "processo"
+    ],
+    "area": "operacoes",
+    "setor": "serviços de TI / integração de ERP",
+    "tipo": "nominal",
+    "empresa": "SYXPERIANE",
+    "pais": "França",
+    "titulo": "Consultoria de ERP coloca o saber dos seniores em agentes e reduz de 4 h para 30 min o preparo de material de treinamento do cliente",
+    "problema": "O conhecimento sobre os ERPs vivia na cabeça de consultores seniores que estavam sempre alocados em clientes, e os juniores esperavam respostas e retrabalhavam documentos.",
+    "solucao": "A empresa criou agentes especialistas por produto ERP, alimentados com a documentação espalhada em SharePoint e OneDrive, para orientação funcional, redação de especificações e checagem de qualidade, implantados em três fases por unidade de negócio, com gestores como multiplicadores.",
+    "ferramentas": [
+      "Dust",
+      "SharePoint",
+      "OneDrive"
+    ],
+    "resultado": "Preparo de documento de treinamento contextualizado para o cliente caiu de 4 horas para 30 minutos (redução de 87%) e mais de 80% dos cerca de 200 funcionários adotaram a ferramenta em 3 meses.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Dust (história de cliente)",
+    "fonte_url": "https://dust.tt/customers/syxperiane-achieved-ai-adoption",
+    "ano": 2026,
+    "confianca": "alta",
+    "setor_chave": "tecnologia",
+    "funcionarios": 200,
+    "porte_confirmado": true,
+    "data_fonte": "2026-05",
+    "metricas": [
+      {
+        "indicador": "Tempo de preparo de documento de treinamento para o cliente",
+        "antes": "4 horas",
+        "depois": "30 minutos",
+        "variacao": "-87%"
+      },
+      {
+        "indicador": "Adoção da ferramenta na empresa",
+        "antes": null,
+        "depois": "mais de 80% em 3 meses",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Implantação em 3 meses e 3 fases (maior unidade de negócio no mês 1, segunda unidade no mês 2, empresa toda no mês 3); uma tentativa anterior com Microsoft Copilot não avançou.",
+    "como_replicar": [
+      "Liste as 5 a 10 perguntas que os juniores mais fazem aos seniores e os documentos que eles consultam para responder.",
+      "Conecte essas pastas (ex.: SharePoint ou Google Drive) a um assistente de IA e crie um agente por produto ou serviço, com instruções do especialista sobre como responder.",
+      "Comece por uma unidade ou time, peça a um gestor para ser o multiplicador e corrija o agente com as respostas erradas da primeira semana.",
+      "Meça o tempo de uma tarefa recorrente (ex.: preparar material de treinamento) antes e depois para provar o ganho."
+    ],
+    "trecho_comprovante": "Previously a 4-hour task. With Dust: 30 minutes.",
+    "verificado": true,
+    "forca": "forte"
+  },
+  {
+    "id": "K-002",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "comunicacao"
+    ],
+    "area": "comercial",
+    "setor": "software B2B (go-to-market)",
+    "tipo": "nominal",
+    "empresa": "Clay",
+    "pais": "Estados Unidos",
+    "titulo": "Clay usa agente sobre sua base de playbooks para novos contratados tirarem dúvidas sem depender de um 'buddy' de onboarding",
+    "problema": "Com 10 novos contratados por mês e lançamentos de integrações toda semana, o time não conseguia que cada novato tivesse alguém disponível para desbloquear dúvidas.",
+    "solucao": "A responsável de operações conectou um agente de IA ao centro de vendas e aos 100+ materiais (playbooks, decks) e o colocou como canal único de perguntas dos novos engenheiros de go-to-market.",
+    "ferramentas": [
+      "Dust"
+    ],
+    "resultado": "O time de go-to-market de 20 pessoas economiza cerca de 58 horas por mês com o agente de onboarding e enablement, com 100% de adoção no time.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Dust (história de cliente)",
+    "fonte_url": "https://dust.tt/customers/clay-scaling-gtme-team",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "tecnologia",
+    "funcionarios": null,
+    "porte_confirmado": true,
+    "data_fonte": "2025-06",
+    "metricas": [
+      {
+        "indicador": "Horas economizadas por mês pelo time de GTM (20 pessoas)",
+        "antes": null,
+        "depois": "cerca de 58 horas",
+        "variacao": null
+      },
+      {
+        "indicador": "Adoção no time GTME",
+        "antes": null,
+        "depois": "100%",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Agente funcionando em 24 horas após a decisão, conforme a fonte; uma pessoa de operações como construtora.",
+    "como_replicar": [
+      "Reúna playbooks, apresentações e FAQs do time num único lugar (pasta ou wiki) e identifique a fonte principal.",
+      "Conecte essa fonte a um assistente de IA e publique-o no canal onde os novatos já perguntam (ex.: Slack ou Teams).",
+      "Peça ao novato que pergunte ao agente antes de chamar um colega e registre as perguntas mais comuns.",
+      "Use o resumo mensal das perguntas para decidir que treinamento ou documento criar a seguir."
+    ],
+    "trecho_comprovante": "58 hours each month",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "K-003",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "ti",
+    "setor": "fintech",
+    "tipo": "nominal",
+    "empresa": "Wayflyer",
+    "pais": "Irlanda",
+    "titulo": "Fintech irlandesa faz agente rascunhar runbooks de suporte a partir de cada chamado resolvido e corta mais de 90% do tempo de manutenção",
+    "problema": "O contexto de suporte estava espalhado em Notion, Slack, Jira e na memória de cada engenheiro, que gastava tempo investigando cada chamado do zero.",
+    "solucao": "Dois agentes: um faz a triagem do chamado novo consultando histórico, runbooks e conversas; outro, quando o chamado fecha, verifica se a solução revela lacuna e rascunha automaticamente a atualização do runbook.",
+    "ferramentas": [
+      "Dust",
+      "Jira",
+      "Notion",
+      "Slack"
+    ],
+    "resultado": "O agente de documentação reduziu em mais de 90% o tempo de criação e manutenção de runbooks, e a triagem passou a levar cerca de um minuto.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Dust (história de cliente)",
+    "fonte_url": "https://dust.tt/customers/how-wayflyer-built-a-self-tuning-support-flywheel-with-dust",
+    "ano": 2026,
+    "confianca": "alta",
+    "setor_chave": "financeiro_seguros",
+    "funcionarios": null,
+    "porte_confirmado": true,
+    "data_fonte": "2026-08",
+    "metricas": [
+      {
+        "indicador": "Tempo de criação e manutenção de runbooks",
+        "antes": null,
+        "depois": null,
+        "variacao": "mais de -90%"
+      },
+      {
+        "indicador": "Tempo de triagem de um chamado novo",
+        "antes": null,
+        "depois": "cerca de 1 minuto",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "A fonte não informa prazo nem custo; descreve a construção por engenheiros de suporte, sem fila central de TI.",
+    "como_replicar": [
+      "Escolha o tipo de chamado que mais consome o time e junte os runbooks, tickets antigos e conversas relacionadas.",
+      "Crie um agente que, a cada chamado novo, resuma o histórico e sugira os passos de triagem com as fontes citadas.",
+      "Crie um segundo agente que, ao fechar o chamado, compare a solução com o runbook e proponha o rascunho de atualização.",
+      "Deixe um engenheiro revisar e aprovar cada rascunho antes de publicar."
+    ],
+    "trecho_comprovante": "cutting runbook creation and maintenance time by over 90%",
+    "verificado": true,
+    "forca": "forte"
+  },
+  {
+    "id": "K-004",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "atendimento",
+    "setor": "software B2B",
+    "tipo": "nominal",
+    "empresa": "Profound",
+    "pais": "Estados Unidos",
+    "titulo": "Profound centraliza em agentes o conhecimento de 400+ clientes do time de pós-venda e encurta a rampa de novos contratados",
+    "problema": "Os gerentes de engajamento caçavam dados em vários sistemas, respondiam as mesmas perguntas e os novatos passavam semanas absorvendo conhecimento tribal.",
+    "solucao": "Dois agentes: um responde dúvidas sobre cada cliente (histórico, uso, conversas) consultando Salesforce, tickets e notas de reunião; outro gera os relatórios trimestrais e decks.",
+    "ferramentas": [
+      "Dust",
+      "Salesforce",
+      "Pylon"
+    ],
+    "resultado": "Segundo a empresa, o que antes levava meses para o novato ficar produtivo passou a levar dias; ela estima ainda 1.800 horas por mês recuperadas no time de 20 pessoas (cálculo da própria fonte: 20 pessoas x 3 h x 30 dias).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Dust (história de cliente)",
+    "fonte_url": "https://dust.tt/customers/profound-post-sales-team-reclaimed-1800-hours",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "tecnologia",
+    "funcionarios": null,
+    "porte_confirmado": true,
+    "data_fonte": "2026-04",
+    "metricas": [
+      {
+        "indicador": "Tempo de rampa de novos contratados",
+        "antes": "meses",
+        "depois": "dias",
+        "variacao": null
+      },
+      {
+        "indicador": "Horas recuperadas por mês no time de pós-venda (20 pessoas)",
+        "antes": null,
+        "depois": "1.800+ (estimativa da empresa)",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "A fonte informa que o uso se espalhou em semanas; não detalha custo nem prazo de construção.",
+    "como_replicar": [
+      "Junte em um só lugar os dados por cliente (CRM, tickets, notas de reunião) que hoje só a equipe sênior sabe cruzar.",
+      "Crie um agente de perguntas e respostas sobre clientes e deixe novos contratados usarem desde o primeiro dia.",
+      "Automatize os relatórios recorrentes (ex.: revisão trimestral) com um segundo agente que monta o rascunho.",
+      "Registre quanto tempo o novato leva para atender sozinho antes e depois."
+    ],
+    "trecho_comprovante": "What used to take months now takes days.",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "K-005",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "juridico",
+    "setor": "seguros",
+    "tipo": "nominal",
+    "empresa": "Wakam",
+    "pais": "França",
+    "titulo": "Seguradora com 250 funcionários usa agentes para analisar contratos e a equipe jurídica processa o dobro no mesmo tempo",
+    "problema": "O time jurídico passava horas extraindo cláusulas de contratos, o conhecimento estava espalhado entre sistemas e as checagens de conformidade atrasavam aprovações, em inglês e francês.",
+    "solucao": "Três agentes: um analisa, redige, traduz e checa conformidade de contratos; outro extrai prazos, termos financeiros e cláusulas de responsabilidade; um terceiro monitora mudanças regulatórias.",
+    "ferramentas": [
+      "Dust"
+    ],
+    "resultado": "A análise de contratos caiu pela metade, a busca de documentos ficou 40% a 60% mais rápida e a equipe jurídica processa o dobro de contratos no mesmo tempo.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Dust (história de cliente)",
+    "fonte_url": "https://dust.tt/customers/how-wakam-cut-legal-contract-analysis-time-by-50-with-dust",
+    "ano": 2025,
+    "confianca": "alta",
+    "setor_chave": "financeiro_seguros",
+    "funcionarios": 250,
+    "porte_confirmado": true,
+    "data_fonte": "2025-07",
+    "metricas": [
+      {
+        "indicador": "Tempo de análise de contratos",
+        "antes": null,
+        "depois": null,
+        "variacao": "-50%"
+      },
+      {
+        "indicador": "Tempo de busca de documentos",
+        "antes": null,
+        "depois": null,
+        "variacao": "-40% a -60%"
+      },
+      {
+        "indicador": "Contratos processados no mesmo tempo",
+        "antes": "1x",
+        "depois": "2x",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "A empresa tentou construir uma solução própria de dezembro de 2023 a junho de 2024, achou o ritmo lento e migrou para uma plataforma pronta.",
+    "como_replicar": [
+      "Reúna 10 a 20 contratos já revisados e a lista de cláusulas que o jurídico sempre confere.",
+      "Crie um agente que extrai prazos, valores e cláusulas de risco e compara com o contrato-padrão, mostrando a página de origem.",
+      "Peça ao advogado para revisar as primeiras respostas e ajustar as instruções do agente.",
+      "Meça o tempo médio por contrato antes e depois."
+    ],
+    "trecho_comprovante": "twice as many contracts in the same amount of time",
+    "verificado": true,
+    "forca": "forte"
+  },
+  {
+    "id": "K-006",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "capacidade"
+    ],
+    "area": "comercial",
+    "setor": "agência de comunicação e design",
+    "tipo": "nominal",
+    "empresa": "Insign",
+    "pais": "França",
+    "titulo": "Agência alimenta agentes com 20 anos de trabalhos e a análise de editais fica 30% mais rápida",
+    "problema": "A agência precisava escalar o atendimento sem perder a qualidade e analisar editais de 500 páginas levava dias, com risco de perder requisitos.",
+    "solucao": "Alimentou a plataforma com cerca de 20 anos de histórico da agência e criou 42 agentes, entre eles um especialista em editais que cruza legislação, exigências e a resposta da agência, e um planejador que ensinou o vocabulário interno.",
+    "ferramentas": [
+      "Dust"
+    ],
+    "resultado": "Análise de editais 30% mais rápida e 50% de economia de tempo na criação de cronogramas de projeto, com 92% das equipes usando IA diariamente.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Dust (história de cliente)",
+    "fonte_url": "https://dust.tt/customers/how-42-ai-agents-transformed-insigns-end-to-end-consulting-workflow",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "servicos_b2b",
+    "funcionarios": null,
+    "porte_confirmado": true,
+    "data_fonte": "2025-10",
+    "metricas": [
+      {
+        "indicador": "Tempo de análise de editais",
+        "antes": null,
+        "depois": null,
+        "variacao": "-30%"
+      },
+      {
+        "indicador": "Tempo de planejamento de projetos",
+        "antes": null,
+        "depois": null,
+        "variacao": "-50%"
+      },
+      {
+        "indicador": "Equipes que usam IA diariamente",
+        "antes": null,
+        "depois": "92%",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Menos de um ano para sair de processos manuais para 42 agentes, conforme a fonte; cerca de 30 pessoas atuaram como construtoras/embaixadoras.",
+    "como_replicar": [
+      "Selecione propostas, editais respondidos e projetos entregues dos últimos anos e organize em pastas por tipo.",
+      "Crie um agente para a tarefa mais lenta (ex.: ler o edital e listar requisitos e inconsistências) usando esse histórico como base.",
+      "Ensine o vocabulário e as siglas internas nas instruções do agente.",
+      "Escolha um grupo de pessoas para criar novos agentes e acompanhe o uso diário."
+    ],
+    "trecho_comprovante": "30% faster tender analysis",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "K-007",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "comunicacao"
+    ],
+    "area": "juridico",
+    "setor": "tecnologia (privacidade e compliance)",
+    "tipo": "nominal",
+    "empresa": "Didomi",
+    "pais": "França",
+    "titulo": "Diretor de privacidade que era o único a responder dúvidas legais cria agente com suas respostas de dois anos e estima ganhar 50% do tempo",
+    "problema": "O responsável por privacidade respondia sozinho às mesmas dúvidas legais no Slack, funcionando como um sistema de chamados, e um colega-chave estava saindo.",
+    "solucao": "Conectou um agente às respostas que ele deu nos últimos dois anos para responder dúvidas em seu lugar, criou agentes por jurisdição com as leis locais e um agente que revisa os textos de banners de cookies.",
+    "ferramentas": [
+      "Dust",
+      "Slack",
+      "Notion",
+      "Google Drive"
+    ],
+    "resultado": "O diretor estima que 50% do seu tempo foi economizado com a IA; os funcionários passaram a obter respostas preliminares sem esperar por ele.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Dust (história de cliente)",
+    "fonte_url": "https://dust.tt/customers/how-thomas-uses-ai-assistants-to-manage-legal-and-data-privacy-at-didomi",
+    "ano": 2024,
+    "confianca": "media",
+    "setor_chave": "tecnologia",
+    "funcionarios": 100,
+    "porte_confirmado": true,
+    "data_fonte": "2024-07",
+    "metricas": [
+      {
+        "indicador": "Tempo do diretor de privacidade (estimativa dele)",
+        "antes": null,
+        "depois": null,
+        "variacao": "-50%"
+      }
+    ],
+    "esforco_implantacao": "Começou com assinatura pessoal de teste e depois conectou ao canal do Slack; a fonte não informa prazo nem custo.",
+    "como_replicar": [
+      "Exporte as respostas que o especialista já deu (Slack, e-mail, tickets) dos últimos 1 a 2 anos.",
+      "Conecte esse histórico a um assistente de IA e publique-o no canal onde as dúvidas chegam.",
+      "Peça às pessoas que usem o agente primeiro e deixe o especialista só confirmar as respostas a cada poucos dias.",
+      "Crie agentes adicionais para as leis ou normas que ele mais consulta."
+    ],
+    "trecho_comprovante": "50% of my time was saved using AI",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "K-008",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "processo"
+    ],
+    "area": "rh",
+    "setor": "seguros (corretora)",
+    "tipo": "nominal",
+    "empresa": "Trailstone Insurance Group",
+    "pais": "Estados Unidos",
+    "titulo": "Corretora de seguros em que o dono respondia tudo grava vídeos curtos de processos e reduz o onboarding de novos agentes de 3 a 5 dias para 1,5 dia",
+    "problema": "O conhecimento da operação ficava no Google Drive e no Dropbox e os agentes remotos procuravam documentos desatualizados ou chamavam o dono fora do horário.",
+    "solucao": "O dono gravou vídeos de 2 a 3 minutos dos processos mais perguntados, incorporou-os em SOPs pesquisáveis na plataforma de treinamento e transformou isso na trilha de onboarding de novos agentes.",
+    "ferramentas": [
+      "Trainual",
+      "Loom",
+      "RingCentral"
+    ],
+    "resultado": "O onboarding passou de 3 a 5 dias para no máximo um dia e meio (redução de 60%, segundo a fonte), enquanto a equipe cresceu de cerca de 10 para 68 funcionários.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Trainual (história de cliente)",
+    "fonte_url": "https://trainual.com/manual/providing-searchable-sops-and-self-sufficient-onboarding",
+    "ano": 2026,
+    "confianca": "alta",
+    "setor_chave": "financeiro_seguros",
+    "funcionarios": 68,
+    "porte_confirmado": true,
+    "data_fonte": "2026-02",
+    "metricas": [
+      {
+        "indicador": "Tempo de onboarding de novos agentes",
+        "antes": "3 a 5 dias",
+        "depois": "1,5 dia no máximo",
+        "variacao": "-60%"
+      },
+      {
+        "indicador": "Funcionários",
+        "antes": "cerca de 10 (2021)",
+        "depois": "68 (2026)",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Migração do Drive e Dropbox descrita pela fonte como simples (copiar, colar, polir, publicar); a ferramenta é de SOP e treinamento, não de IA generativa.",
+    "como_replicar": [
+      "Liste as 10 perguntas que seus novos funcionários mais fazem e grave um vídeo de 2 a 3 minutos mostrando cada processo na tela.",
+      "Publique os vídeos e os passos escritos em uma base pesquisável (ex.: ferramenta de SOP, wiki ou Notion).",
+      "Monte uma trilha de onboarding com esses itens para os primeiros 30 a 90 dias.",
+      "Revise periodicamente o que está desatualizado e meça o tempo até o novato trabalhar sozinho."
+    ],
+    "trecho_comprovante": "Before, it took 3 to 5 days. With Trainual, it takes one and a half days at the most!",
+    "verificado": true,
+    "forca": "forte"
+  },
+  {
+    "id": "K-009",
+    "porte": "pequena",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "processo"
+    ],
+    "area": "rh",
+    "setor": "serviços automotivos (reparo e funilaria)",
+    "tipo": "nominal",
+    "empresa": "Matt's Automotive",
+    "pais": "Estados Unidos",
+    "titulo": "Oficina com 10 unidades troca SOP de 17 páginas por módulos e vídeos curtos feitos pelo instrutor e reduz o onboarding de 3-4 para 1-2 semanas",
+    "problema": "O instrutor mais experiente, que treinou mais de 100 pessoas, escrevia SOPs enormes que ninguém lia, e o treinamento variava conforme quem ensinava.",
+    "solucao": "Ele passou a gravar vídeos curtos mostrando o trabalho em contexto e a montar módulos de 5 a 10 minutos em uma plataforma de treinamento, e a cada pergunta repetida cria um novo módulo.",
+    "ferramentas": [
+      "Trainual",
+      "Loom"
+    ],
+    "resultado": "Onboarding caiu de 3 a 4 semanas para 1 a 2 semanas e o tempo de criar um módulo caiu de um dia para 5 a 10 minutos.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Trainual (história de cliente)",
+    "fonte_url": "https://trainual.com/manual/matts-automotive",
+    "ano": 2026,
+    "confianca": "alta",
+    "setor_chave": "servicos_b2b",
+    "funcionarios": 30,
+    "porte_confirmado": true,
+    "data_fonte": "2026-07",
+    "metricas": [
+      {
+        "indicador": "Tempo até o novo funcionário ficar pronto",
+        "antes": "3 a 4 semanas",
+        "depois": "1 a 2 semanas",
+        "variacao": null
+      },
+      {
+        "indicador": "Tempo para criar um módulo de treinamento",
+        "antes": "um dia",
+        "depois": "5 a 10 minutos",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Contratada em 2021 e subutilizada por dois anos; a virada veio quando o próprio instrutor assumiu e fez o curso da ferramenta (a fonte pede que se complete antes de julgar).",
+    "como_replicar": [
+      "Peça ao seu melhor instrutor que grave, no celular ou Loom, o passo a passo das 5 tarefas mais repetidas, sem roteiro.",
+      "Publique cada vídeo como módulo curto (3 a 5 minutos) numa plataforma de treinamento ou pasta pesquisável.",
+      "Sempre que uma dúvida se repetir, crie um módulo e mande o link em vez de explicar de novo.",
+      "Meça quantas semanas o novato leva para atender sozinho."
+    ],
+    "trecho_comprovante": "Onboarding cut from 3-4 weeks to 1-2 weeks",
+    "verificado": true,
+    "forca": "forte"
+  },
+  {
+    "id": "K-010",
+    "porte": "pequena",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "decisao"
+    ],
+    "area": "comercial",
+    "setor": "tecnologia (créditos de carbono)",
+    "tipo": "nominal",
+    "empresa": "Patch",
+    "pais": "Estados Unidos",
+    "titulo": "Startup coloca o saber de seus especialistas em clima em agentes para o time comercial, que passa a usar o banco de dados proprietário em 70% das ligações",
+    "problema": "O conhecimento climático dos especialistas era escasso e o time de vendas não sabia avaliar compromissos de sustentabilidade de clientes nem acessar os dados escondidos em telas administrativas.",
+    "solucao": "Foram criados agentes que atuam como estrategista de clima para analisar relatórios de sustentabilidade de prospects, consultar o banco de preços e compras e recomendar projetos entre mais de 25 mil opções.",
+    "ferramentas": [
+      "Dust"
+    ],
+    "resultado": "O uso do banco de dados proprietário passou de cerca de 10% para cerca de 70% das conversas de vendas, e a adoção semanal chegou a 70% do time em 3 meses.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Dust (história de cliente)",
+    "fonte_url": "https://dust.tt/customers/how-patch-empowered-70-of-its-team-to-use-ai-agents-weekly",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "tecnologia",
+    "funcionarios": null,
+    "porte_confirmado": true,
+    "data_fonte": "2025-10",
+    "metricas": [
+      {
+        "indicador": "Conversas de vendas que usam o banco de dados proprietário",
+        "antes": "cerca de 10%",
+        "depois": "cerca de 70%",
+        "variacao": null
+      },
+      {
+        "indicador": "Uso semanal de agentes no time",
+        "antes": null,
+        "depois": "70% em 3 meses",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "O responsável recriou seu caso de uso anterior em cerca de 20 minutos; a fonte não informa custo.",
+    "como_replicar": [
+      "Peça ao especialista que escreva como ele avalia uma proposta ou um prospect (critérios, sinais de alerta, exemplos bons e ruins).",
+      "Transforme isso em instruções de um agente de IA que analisa os documentos públicos do prospect como o especialista faria.",
+      "Conecte o agente aos dados internos que hoje só o time técnico consulta, em linguagem natural.",
+      "Peça ao especialista que revise os primeiros resultados e acompanhe em quantas conversas o dado é usado."
+    ],
+    "trecho_comprovante": "to now using it in around 70% of calls",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "K-011",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "processo"
+    ],
+    "area": "rh",
+    "setor": "serviços residenciais (hidráulica, ar-condicionado e elétrica)",
+    "tipo": "nominal",
+    "empresa": "High 5 Plumbing, HVAC & Electric",
+    "pais": "Estados Unidos",
+    "titulo": "Empresa de serviços com mais de 70 funcionários troca manuais impressos por treinamento digital e reduz o onboarding de 7 horas para 90 minutos",
+    "problema": "Cada novo funcionário levava em média 7 horas de onboarding, com gerentes ensinando todos os sistemas e procedimentos, em manuais impressos desatualizados.",
+    "solucao": "Os manuais foram migrados para uma plataforma pesquisável de treinamento, com materiais e quizzes que o novato faz no próprio ritmo e que dão retorno imediato aos gestores.",
+    "ferramentas": [
+      "Trainual"
+    ],
+    "resultado": "O onboarding caiu de 7 horas para 90 minutos (a fonte fala em redução de 80%).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Trainual (história de cliente)",
+    "fonte_url": "https://trainual.com/manual/high-five",
+    "ano": 2025,
+    "confianca": "alta",
+    "setor_chave": "servicos_b2b",
+    "funcionarios": 70,
+    "porte_confirmado": true,
+    "data_fonte": "2025-04",
+    "metricas": [
+      {
+        "indicador": "Tempo de onboarding por funcionário",
+        "antes": "7 horas",
+        "depois": "90 minutos",
+        "variacao": "-80% (segundo a fonte)"
+      }
+    ],
+    "esforco_implantacao": "A fonte não informa prazo nem custo de implantação.",
+    "como_replicar": [
+      "Pegue o manual que os gerentes repetem para cada contratado e divida em módulos curtos por tarefa.",
+      "Publique numa base pesquisável e acrescente um quiz de 3 a 5 perguntas por módulo.",
+      "Faça o novato completar o treinamento sozinho e use o resultado do quiz para o gerente corrigir só as lacunas.",
+      "Meça as horas de gerente por contratação antes e depois."
+    ],
+    "trecho_comprovante": "dropping from 7 hours to just 90 minutes",
+    "verificado": true,
+    "forca": "forte"
+  },
+  {
+    "id": "K-012",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "capacidade"
+    ],
+    "area": "operacoes",
+    "setor": "controle de pragas",
+    "tipo": "nominal",
+    "empresa": "Debug Pest Control",
+    "pais": "Estados Unidos",
+    "titulo": "Empresa de controle de pragas com mais de 50 funcionários substitui o aprendizado por 'sombra' por trilha de treinamento e o técnico fica pronto em 3-4 semanas, não 6-8",
+    "problema": "Os técnicos aprendiam acompanhando um colega, o que funcionava com 10 pessoas mas fazia a primeira experiência variar conforme o técnico escolhido.",
+    "solucao": "O conhecimento foi documentado em módulos de treinamento e playbook pesquisável, incluindo módulos feitos com ajuda de IA, e a trilha de onboarding foi padronizada para técnicos, vendas e atendimento.",
+    "ferramentas": [
+      "Trainual"
+    ],
+    "resultado": "O onboarding de técnicos caiu de 6 a 8 semanas para 3 a 4, e as notas de segurança dos motoristas subiram cerca de 30% em 18 meses.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Trainual (história de cliente)",
+    "fonte_url": "https://trainual.com/manual/debug-pest-control",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "servicos_b2b",
+    "funcionarios": 50,
+    "porte_confirmado": false,
+    "data_fonte": "2026-08",
+    "metricas": [
+      {
+        "indicador": "Tempo de onboarding de técnicos",
+        "antes": "6 a 8 semanas",
+        "depois": "3 a 4 semanas",
+        "variacao": null
+      },
+      {
+        "indicador": "Nota de segurança dos motoristas",
+        "antes": null,
+        "depois": null,
+        "variacao": "cerca de +30% em 18 meses"
+      }
+    ],
+    "esforco_implantacao": "A fonte não informa prazo nem custo; descreve o trabalho de um diretor de pessoas ao longo de cerca de dois anos e meio.",
+    "como_replicar": [
+      "Liste o que o técnico veterano ensina na prática e grave ou escreva cada tarefa como módulo curto.",
+      "Monte uma trilha única e obrigatória para todo novo técnico, com quiz por etapa.",
+      "Use buscas sem resposta como sinal do que falta documentar e atualize o playbook.",
+      "Compare as semanas até o técnico estar apto a sair sozinho em rota."
+    ],
+    "trecho_comprovante": "Onboarding cut from 6–8 weeks to 3–4",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "K-013",
+    "porte": "grande",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "juridico"
+    ],
+    "area": "juridico",
+    "setor": "segurança patrimonial",
+    "tipo": "nominal",
+    "empresa": "Prosegur",
+    "pais": "Espanha / Brasil",
+    "titulo": "Prosegur desenvolve a LexIA para analisar contratos complexos e diz multiplicar por quatro a capacidade de análise",
+    "problema": "Áreas jurídica, de compras e de TI precisavam analisar documentos contratuais complexos, comparar com contratos-padrão e avaliar impacto de mudanças regulatórias.",
+    "solucao": "Engenheiros da própria empresa criaram a LexIA, que usa processamento de linguagem natural e busca semântica para estruturar dados e interagir com usuários e sistemas na análise de contratos; o Brasil foi um dos quatro primeiros países.",
+    "ferramentas": [
+      "processamento de linguagem natural",
+      "busca semântica"
+    ],
+    "resultado": "Segundo a Prosegur, a LexIA multiplica por quatro a capacidade de análise; a fase inicial atende 98 mil colaboradores e a meta é passar de 175 mil em 36 países em 2026.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Baguete",
+    "fonte_url": "https://www.baguete.com.br/noticias/grupo-prosegur-desenvolve-sua-propria-ia",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "servicos_b2b",
+    "funcionarios": 175000,
+    "porte_confirmado": true,
+    "data_fonte": "2025-08",
+    "metricas": [
+      {
+        "indicador": "Capacidade de análise de contratos",
+        "antes": "1x",
+        "depois": "4x",
+        "variacao": "x4 (segundo a empresa)"
+      }
+    ],
+    "esforco_implantacao": "Desenvolvimento próprio; a fonte não informa prazo nem custo. Solução própria de grande empresa, replicável em escala menor por assistentes de mercado.",
+    "como_replicar": [
+      "Reúna seus contratos-padrão e a lista de cláusulas que o jurídico sempre confere.",
+      "Use um assistente de IA para comparar cada contrato novo com o padrão e destacar desvios, citando o trecho.",
+      "Mantenha o advogado como revisor final e registre o tempo por contrato antes e depois.",
+      "Expanda depois para outras áreas (compras, TI) com os mesmos modelos."
+    ],
+    "trecho_comprovante": "multiplica por quatro a capacidade de análise",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "K-014",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "capacidade"
+    ],
+    "area": "atendimento",
+    "setor": "software (RH)",
+    "tipo": "nominal",
+    "empresa": "HireVue",
+    "pais": "Estados Unidos",
+    "titulo": "HireVue treina novos agentes de suporte com agente de conhecimento no Slack e reduz o onboarding de cinco para duas semanas",
+    "problema": "O onboarding levava cerca de cinco semanas e os novatos dependiam de agentes sêniores para responder, já que nenhum agente era especialista em todos os quatro produtos.",
+    "solucao": "Os novatos recebem acesso à base de conhecimento no primeiro dia, um agente de IA treinado na documentação responde no Slack e a base fica integrada ao Zendesk; a equipe revisou mais de 900 perguntas para ajustar o conteúdo.",
+    "ferramentas": [
+      "Guru",
+      "Slack",
+      "Zendesk",
+      "Lessonly"
+    ],
+    "resultado": "Tempo de rampa reduzido em 60% (de cinco para duas semanas) e perguntas no Slack caíram 40% enquanto os casos de suporte cresceram mais de 500.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Guru (história de cliente)",
+    "fonte_url": "https://www.getguru.com/customers/hirevue-cuts-onboarding-time",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "tecnologia",
+    "funcionarios": 385,
+    "porte_confirmado": false,
+    "data_fonte": "2026-04",
+    "metricas": [
+      {
+        "indicador": "Tempo de onboarding do suporte",
+        "antes": "5 semanas",
+        "depois": "2 semanas",
+        "variacao": "-60%"
+      },
+      {
+        "indicador": "Perguntas no Slack",
+        "antes": null,
+        "depois": null,
+        "variacao": "-40%"
+      }
+    ],
+    "esforco_implantacao": "A fonte informa a revisão de mais de 900 perguntas nas primeiras semanas; não informa custo. Headcount (cerca de 385) é estimativa de terceiros, não da fonte.",
+    "como_replicar": [
+      "Junte a documentação e as respostas verificadas do suporte numa única base.",
+      "Crie um agente no canal onde os novatos perguntam, restrito a essa base, e dê acesso a ele no primeiro dia.",
+      "Revise as perguntas das primeiras semanas para corrigir conteúdo e instruções do agente.",
+      "Meça semanas até o novato atender sozinho e o volume de perguntas aos sêniores."
+    ],
+    "trecho_comprovante": "Ramp Time Cut by 60%",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "K-015",
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "informacao",
+      "juridico"
+    ],
+    "area": "juridico",
+    "setor": "financeiro (gestora de fundos)",
+    "tipo": "nominal",
+    "empresa": "Catálise Investimentos",
+    "pais": "Brasil",
+    "titulo": "Gestora de Curitiba usa chatbot sobre seus contratos e regulamentos e economiza 25 horas mensais por colaborador",
+    "problema": "A gestora precisava analisar contratos e regulamentos do setor financeiro com rapidez e menos erros de interpretação.",
+    "solucao": "A consultoria CloudDog criou um chatbot que analisa apenas os documentos carregados pela empresa, com busca contextual, respostas com fontes citadas e envio em lote; começou no jurídico e outras áreas já pedem acesso.",
+    "ferramentas": [
+      "Amazon Bedrock",
+      "AWS"
+    ],
+    "resultado": "Redução de mais de 60% no tempo de leitura e processamento de documentos operacionais, 70% menos erros de interpretação e economia média de 25 horas mensais por colaborador.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Baguete",
+    "fonte_url": "https://www.baguete.com.br/public/noticias/catalise-investimentos-automatiza-juridico-com-aws",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "financeiro_seguros",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-09",
+    "metricas": [
+      {
+        "indicador": "Tempo de leitura e processamento de documentos operacionais",
+        "antes": null,
+        "depois": null,
+        "variacao": "mais de -60%"
+      },
+      {
+        "indicador": "Erros de interpretação",
+        "antes": null,
+        "depois": null,
+        "variacao": "-70%"
+      },
+      {
+        "indicador": "Horas economizadas por colaborador",
+        "antes": null,
+        "depois": "25 horas por mês (média)",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "A fonte não informa prazo, custo nem a metodologia das medições; os números vêm da reportagem sobre o projeto.",
+    "como_replicar": [
+      "Separe os contratos e regulamentos que o time mais consulta e carregue-os numa base fechada.",
+      "Use um assistente de IA restrito a esses documentos, com respostas que citam o trecho de origem.",
+      "Comece pelo jurídico e peça aos advogados que registrem as respostas erradas.",
+      "Meça o tempo de leitura por documento antes e depois e abra para outras áreas."
+    ],
+    "trecho_comprovante": "uma economia média de 25 horas mensais por colaborador",
+    "verificado": true,
+    "forca": "fraca"
+  }
+]
