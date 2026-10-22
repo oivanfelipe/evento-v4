@@ -76,6 +76,11 @@ async function carregarLeads() {
   });
 }
 
+// concluiu = chegou ao Mapa; parcial = parou no meio (o app guarda checkpoints); so_cadastro = só se identificou.
+const estado = (l) => (!l.resp ? "so_cadastro" : l.resp.mapa && Array.isArray(l.resp.mapa.itens) ? "concluiu" : "parcial");
+const ETAPA = { perfil: "o perfil da empresa", diagnostico: "as situações e as horas perdidas", decisao: "quem decide e o investimento", aprofundar: "a pergunta final" };
+const gargaloReal = (r) => (r && GARGALOS[r.gargalo_principal] ? r.gargalo_principal : null);
+
 function top3(r) {
   if (!r || !r.scores) return [];
   return Object.entries(r.scores).sort((a, b) => b[1] - a[1]).slice(0, 3).filter((x) => x[1] > 0);
@@ -88,9 +93,8 @@ function filtrados() {
   return leads.filter((l) => {
     if (q && !`${l.nome} ${l.empresa} ${l.telefone} ${l.email || ""}`.toLowerCase().includes(q)) return false;
     if (anf && (l.anfitriao || "") !== anf) return false;
-    if (garg && (!l.resp || l.resp.gargalo_principal !== garg)) return false;
-    if (st === "concluiu" && !l.resp) return false;
-    if (st === "abandonou" && l.resp) return false;
+    if (garg && gargaloReal(l.resp) !== garg) return false;
+    if (st && estado(l) !== (st === "abandonou" ? "so_cadastro" : st)) return false;
     return true;
   });
 }
@@ -99,7 +103,7 @@ function soDigitos(t) { return String(t || "").replace(/\D/g, ""); }
 
 function mensagemWhats(l) {
   const primeiro = (l.nome || "").split(" ")[0];
-  const g = l.resp ? nomeGargalo(l.resp.gargalo_principal).toLowerCase() : null;
+  const g = gargaloReal(l.resp) ? nomeGargalo(l.resp.gargalo_principal).toLowerCase() : null;
   return g
     ? `Olá, ${primeiro}! Aqui é da V4 Company. Vi o seu Mapa de Gargalos de hoje no evento: o ponto que mais pesa na ${l.empresa} é ${g}. Posso te mostrar em 15 minutos como empresas parecidas resolveram isso?`
     : `Olá, ${primeiro}! Aqui é da V4 Company. Foi um prazer ter você no evento. Posso te mandar o Mapa de Gargalos da ${l.empresa} e conversar 15 minutos sobre ele?`;
@@ -108,8 +112,8 @@ function mensagemWhats(l) {
 function detalhe(l) {
   const r = l.resp, a = r ? r.respostas || {} : {};
   const linhas = [
-    ["Cargo", l.cargo], ["E-mail", l.email || "—"], ["Autorizou contato", l.consentimento ? "Sim" : "Não"],
-    ["Porte", a.porte], ["Setor", a.setor], ["Área com mais dor", a.area_dor], ["Maior dor", nomeGargalo(a.maior_dor)],
+    ["E-mail", l.email || "—"], 
+    ["Porte", a.porte], ["Setor", a.setor], ["Situações (em ordem)", Array.isArray(a.situacoes) ? a.situacoes.map(nomeGargalo).join(" › ") : null], ["Área com mais dor", a.area_dor], ["Maior dor", a.maior_dor ? nomeGargalo(a.maior_dor) : null],
     ["Faturamento", a.faturamento], ["Maturidade em IA", a.maturidade_ia],
     ["Impacto", a.impacto], ["Horas perdidas/semana", a.horas_perdidas], ["Prazo", a.prazo],
     ["Quem decide", a.quem_decide], ["Investimento mensal", a.investimento],
@@ -121,7 +125,7 @@ function detalhe(l) {
   const caixa = el("div", {},
     el("dl", {}, linhas.flatMap(([k, v]) => [el("dt", {}, k), el("dd", {}, String(v))])),
     abertas.length ? el("div", {}, el("h3", {}, "Nas palavras do participante"), abertas.map(([rotulo, v]) => el("p", { style: "margin:0 0 8px;line-height:1.45" }, el("b", { style: "color:var(--text2);font-weight:500" }, rotulo + ": "), v))) : null,
-    t3.length ? el("div", {}, el("h3", {}, "Top 3 gargalos (pontuação)"), el("div", {}, t3.map(([g, s]) => el("span", { class: "tag p", style: "margin-right:6px" }, `${nomeGargalo(g)} · ${s}`)))) : el("p", { class: "vazio" }, "Não concluiu o diagnóstico. O contato já está autorizado."),
+    t3.length ? el("div", {}, el("h3", {}, "Top 3 gargalos (pontuação)"), el("div", {}, t3.map(([g, s]) => el("span", { class: "tag p", style: "margin-right:6px" }, `${nomeGargalo(g)} · ${s}`)))) : el("p", { class: "vazio" }, estado(l) === "parcial" ? `Parou antes do fim (${ETAPA[l.resp.mapa.etapa] || "no meio"}). O que já respondeu está acima.` : "Só se cadastrou: não respondeu o diagnóstico. O contato já está autorizado."),
     est ? el("p", {}, `Custo estimado do maior problema: ${brl(est.valor_mes)}/mês (${est.horas_semana} h/semana).`) : null,
     el("div", { class: "acoes" },
       soDigitos(l.telefone) ? el("a", { class: "btn p", href: `https://wa.me/${soDigitos(l.telefone)}?text=${encodeURIComponent(mensagemWhats(l))}`, target: "_blank", rel: "noopener noreferrer" }, "Abrir WhatsApp com mensagem") : null,
@@ -131,7 +135,7 @@ function detalhe(l) {
 
 async function copiarResumo(l) {
   const t3 = top3(l.resp).map(([g, s]) => `${nomeGargalo(g)} (${s})`).join(", ");
-  const txt = [`${l.nome} · ${l.cargo} · ${l.empresa}`, `Tel: ${l.telefone}${l.email ? " · " + l.email : ""}`, l.anfitriao ? `Anfitrião: ${l.anfitriao}` : null, t3 ? `Gargalos: ${t3}` : "Não concluiu o diagnóstico"].filter(Boolean).join("\n");
+  const txt = [`${l.nome} · ${l.empresa}`, `Tel: ${l.telefone}${l.email ? " · " + l.email : ""}`, l.anfitriao ? `Anfitrião: ${l.anfitriao}` : null, t3 ? `Gargalos: ${t3}` : estado(l) === "parcial" ? "Parou no meio do diagnóstico" : "Só se cadastrou"].filter(Boolean).join("\n");
   try { await navigator.clipboard.writeText(txt); $("msg-app").textContent = "Resumo copiado."; } catch { $("msg-app").textContent = "Não consegui copiar automaticamente."; }
 }
 
@@ -145,8 +149,8 @@ function desenharTabela() {
     const linha = el("tr", { class: "lead", tabindex: "0" },
       el("td", {}, dataBR(l.created_at)), el("td", {}, l.nome), el("td", {}, l.empresa),
       el("td", {}, l.telefone), el("td", {}, l.anfitriao || "—"),
-      el("td", {}, r ? el("span", { class: "tag p" }, nomeGargalo(r.gargalo_principal)) : "—"),
-      el("td", {}, r ? el("span", { class: "tag ok" }, "Concluiu") : el("span", { class: "tag w" }, "Abandonou")));
+      el("td", {}, gargaloReal(r) ? el("span", { class: "tag p" }, nomeGargalo(r.gargalo_principal)) : "—"),
+      el("td", {}, estado(l) === "concluiu" ? el("span", { class: "tag ok" }, "Concluiu") : estado(l) === "parcial" ? el("span", { class: "tag w" }, "Parou no meio") : el("span", { class: "tag" }, "Só cadastro")));
     const det = el("tr", { class: "det", hidden: true }, el("td", { colspan: "7" }, detalhe(l)));
     const alternar = () => { det.hidden = !det.hidden; };
     linha.addEventListener("click", alternar);
@@ -156,19 +160,19 @@ function desenharTabela() {
 }
 
 function desenharResumo() {
-  const total = leads.length, comp = leads.filter((l) => l.resp).length;
+  const total = leads.length, comp = leads.filter((l) => estado(l) === "concluiu").length, meio = leads.filter((l) => estado(l) === "parcial").length;
   const cont = {}, porAnf = {};
   for (const l of leads) {
-    if (l.resp) cont[l.resp.gargalo_principal] = (cont[l.resp.gargalo_principal] || 0) + 1;
+    if (gargaloReal(l.resp)) cont[l.resp.gargalo_principal] = (cont[l.resp.gargalo_principal] || 0) + 1;
     const a = l.anfitriao || "sem anfitrião";
     porAnf[a] = porAnf[a] || { leads: 0, comp: 0 };
-    porAnf[a].leads++; if (l.resp) porAnf[a].comp++;
+    porAnf[a].leads++; if (estado(l) === "concluiu") porAnf[a].comp++;
   }
   const maisComum = Object.entries(cont).sort((a, b) => b[1] - a[1])[0];
   const kpi = (v, rotulo) => el("div", { class: "kpi" }, el("b", {}, String(v)), el("span", {}, rotulo));
   $("kpis").replaceChildren(
     kpi(total, "leads captados"), kpi(comp, "diagnósticos concluídos"),
-    kpi(total ? Math.round((comp / total) * 100) + "%" : "—", "taxa de conclusão"),
+    kpi(meio, "pararam no meio (com respostas parciais)"), kpi(total ? Math.round((comp / total) * 100) + "%" : "—", "taxa de conclusão"),
     kpi(maisComum ? nomeGargalo(maisComum[0]) : "—", "gargalo mais comum"), kpi(Object.keys(porAnf).length, "anfitriões"));
   const max = Math.max(1, ...Object.values(cont));
   $("dist").replaceChildren(...(Object.keys(cont).length ? Object.entries(cont).sort((a, b) => b[1] - a[1]).map(([g, n]) =>
@@ -192,7 +196,7 @@ function exportarCSV() {
   const cab = ["data", "nome", "empresa", "cargo", "telefone", "email", "anfitriao", "status", "gargalo_1", "pontos_1", "gargalo_2", "gargalo_3", "porte", "setor", "area_dor", "maior_dor", "impacto", "horas_semana", "prazo", "faturamento", "quem_decide", "investimento", "dor_aberta", "historia", "ultima_vez", "ja_tentou", "varinha", "extra_final", "autorizou_contato"];
   const linhas = filtrados().map((l) => {
     const a = (l.resp && l.resp.respostas) || {}, t = top3(l.resp);
-    return [l.created_at, l.nome, l.empresa, l.cargo, l.telefone, l.email, l.anfitriao, l.resp ? "concluiu" : "abandonou",
+    return [l.created_at, l.nome, l.empresa, l.cargo, l.telefone, l.email, l.anfitriao, estado(l) === "concluiu" ? "concluiu" : estado(l) === "parcial" ? "parou_no_meio" : "so_cadastro",
       t[0] ? nomeGargalo(t[0][0]) : "", t[0] ? t[0][1] : "", t[1] ? nomeGargalo(t[1][0]) : "", t[2] ? nomeGargalo(t[2][0]) : "",
       a.porte, a.setor, a.area_dor, a.maior_dor ? nomeGargalo(a.maior_dor) : "", a.impacto, a.horas_perdidas, a.prazo, a.faturamento, a.quem_decide, a.investimento, a.dor_aberta || a.texto_livre, a.historia, a.ultima_vez, a.ja_tentou, a.varinha, a.extra_final, l.consentimento ? "sim" : "nao"].map(celula).join(",");
   });

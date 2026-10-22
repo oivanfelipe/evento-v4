@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#0a0a0a">
-<title>Mapa de Gargalos: V4 Company</title>
+<title>Mapa de Gargalos e Oportunidades: V4 Company</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
@@ -54,6 +54,7 @@ main { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: tou
 .opcoes.lista .op { text-align: left; }
 .op:active { background: var(--accent); border-color: var(--accent); }
 .op.on { background: var(--accent); border-color: var(--accent); }
+.op[data-pos]:not([data-pos=""])::before { content: attr(data-pos); display: inline-block; min-width: 1.4em; margin-right: 8px; font-weight: 700; }
 .btn { min-height: 52px; padding: 0 18px; font-size: 1rem; font-weight: 600; color: var(--text); background: var(--accent); border: 1px solid var(--accent); border-radius: 14px; cursor: pointer; width: 100%; }
 .btn:disabled { opacity: .4; }
 .btn.sec { background: transparent; border-color: var(--border); color: var(--text2); font-weight: 500; min-height: 44px; }
@@ -105,11 +106,12 @@ a { color: var(--accent-l); }
 .acoes { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 28px; }
 @media (prefers-reduced-motion: reduce) { .bolha, .ponto, .giro { animation: none; } .digitando span { animation: none; opacity: .7; } }
 .so-impressao { display: none; }
+.status-salvo { font-size: .8rem; color: var(--text2); margin: 0 0 10px; } .status-salvo.ok { color: var(--ok); } .status-salvo.pend { color: var(--warn); }
 @media print {
   @page { margin: 14mm 12mm; }
   html, body { background: #fff !important; color: #111; height: auto !important; overflow: visible !important; }
   #app { display: block; height: auto !important; max-width: none; }
-  header, #dock, .acoes { display: none !important; }
+  header, #dock, .acoes, .status-salvo { display: none !important; }
   main { display: block; overflow: visible !important; padding: 0; }
   /* só o Mapa: toda a conversa (balões, etapas, indicador) fica fora do PDF */
   #chat > :not(.mapa) { display: none !important; }

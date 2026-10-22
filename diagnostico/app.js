@@ -6,6 +6,12 @@ const SUPABASE_URL = "https://lbqmanwfgnhugjefluzy.supabase.co";
 const SUPABASE_KEY = "sb_publishable_Y6QoY26FFpatQoHpWw-rAw_CwzVmRFE";
 const MAX_AUDIO_S = 90;
 
+// Celulares antigos (iOS < 15.4 / < 14): sem crypto.randomUUID e sem replaceChildren.
+if (!Element.prototype.replaceChildren) {
+  Element.prototype.replaceChildren = function (...nos) { while (this.firstChild) this.removeChild(this.firstChild); this.append(...nos); };
+}
+const uuid = () => (crypto.randomUUID ? crypto.randomUUID() : "10000000-1000-4000-8000-100000000000".replace(/[018]/g, (c) => (c ^ (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))).toString(16)));
+
 const $chat = document.getElementById("chat");
 const $dock = document.getElementById("dock");
 const $barra = document.getElementById("barra");
@@ -20,7 +26,7 @@ let perguntas, casos, passos;
 let idx = 0;
 let minVoltar = 0;     // primeira pergunta depois do consentimento: não dá para voltar para a identificação
 const marcas = [];     // tamanho da conversa logo antes de cada pergunta (para o botão Voltar)
-const leadId = crypto.randomUUID();
+const leadId = uuid();
 let gravacao = null;      // gravação de áudio em andamento
 
 // ---------- util ----------
@@ -72,45 +78,72 @@ function atualizarProgresso() {
 }
 
 // ---------- persistência (insert-only) ----------
+// Regras: 23505 (já existe) = salvo; erro 4xx de validação = definitivo (não adianta repetir);
+// rede/5xx/429/FK (lead ainda não chegou) = tenta de novo. keepalive deixa o envio terminar mesmo se a aba fechar.
 async function inserir(tabela, linha) {
-  const r = await fetch(`${SUPABASE_URL}/rest/v1/${tabela}`, {
-    method: "POST",
-    headers: { apikey: SUPABASE_KEY, "Content-Type": "application/json", Prefer: "return=minimal" },
-    body: JSON.stringify(linha),
-  });
-  if (!r.ok) throw new Error(`${tabela} ${r.status}`);
-}
-function fila(tabela, linha) {
+  const ctl = new AbortController();
+  const t = setTimeout(() => ctl.abort(), 15000);
   try {
-    const q = JSON.parse(localStorage.getItem("v4_fila") || "[]");
-    q.push({ tabela, linha });
-    localStorage.setItem("v4_fila", JSON.stringify(q));
-  } catch {}
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/${tabela}`, {
+      method: "POST", signal: ctl.signal, keepalive: true,
+      headers: { apikey: SUPABASE_KEY, "Content-Type": "application/json", Prefer: "return=minimal" },
+      body: JSON.stringify(linha),
+    });
+    if (r.ok) return;
+    let codigo = "";
+    try { codigo = (await r.json()).code || ""; } catch {}
+    if (r.status === 409 && codigo === "23505") return; // reenvio de algo que já estava salvo
+    const e = new Error(`${tabela} ${r.status} ${codigo}`);
+    e.definitivo = r.status >= 400 && r.status < 500 && ![408, 409, 429].includes(r.status);
+    throw e;
+  } finally { clearTimeout(t); }
 }
+const lerFila = () => { try { return JSON.parse(localStorage.getItem("v4_fila") || "[]"); } catch { return []; } };
+const gravarFila = (q) => { try { localStorage.setItem("v4_fila", JSON.stringify(q)); } catch {} };
+function fila(tabela, linha) { const q = lerFila(); q.push({ tabela, linha }); gravarFila(q); }
 async function salvar(tabela, linha) {
   for (let t = 0; t < 3; t++) {
-    try { return await inserir(tabela, linha); } catch { await pausa(800 * (t + 1)); }
+    try { await inserir(tabela, linha); return true; }
+    catch (e) { if (e.definitivo) { console.warn("não foi possível salvar:", e.message); return false; } await pausa(800 * (t + 1)); }
   }
-  fila(tabela, linha); // reenvia na próxima visita: o lead não se perde por queda de rede
+  fila(tabela, linha); // sem conexão: reenvia quando a rede voltar (evento "online", a cada 20 s ou na próxima visita)
+  return false;
 }
+let reenviando = false;
 async function reenviarFila() {
+  if (reenviando) return;
+  reenviando = true;
   try {
-    const q = JSON.parse(localStorage.getItem("v4_fila") || "[]");
-    if (!q.length) return;
-    const resto = [];
-    for (const it of q) { try { await inserir(it.tabela, it.linha); } catch { resto.push(it); } }
-    localStorage.setItem("v4_fila", JSON.stringify(resto));
-  } catch {}
+    const feitos = new Set();
+    for (const it of lerFila()) {
+      try { await inserir(it.tabela, it.linha); feitos.add(JSON.stringify(it)); }
+      catch (e) { if (e.definitivo) feitos.add(JSON.stringify(it)); else break; } // mantém a ordem: lead antes das respostas
+    }
+    if (feitos.size) gravarFila(lerFila().filter((it) => !feitos.has(JSON.stringify(it))));
+  } finally { reenviando = false; }
 }
+window.addEventListener("online", reenviarFila);
+setInterval(() => { if (lerFila().length) reenviarFila(); }, 20000);
+
+// O lead é gravado assim que o telefone é informado (antes do diagnóstico): entra no CRM mesmo se a pessoa abandonar.
 function salvarLead() {
-  salvar("evento_leads", { id: leadId, nome: resp.nome, empresa: resp.empresa, cargo: resp.cargo, telefone: resp.telefone, email: null, consentimento: true, anfitriao });
+  salvar("evento_leads", { id: leadId, nome: resp.nome, empresa: resp.empresa, cargo: "Não informado", telefone: resp.telefone, email: null, consentimento: true, anfitriao });
 }
 
 // ---------- fluxo ----------
 function normalizarTel(v) {
   const d = v.replace(/\D/g, "");
+  if (v.trim().startsWith("+")) return d.length >= 8 && d.length <= 15 ? `+${d}` : null; // número internacional
   if (d.length < 10 || d.length > 13) return null;
   return d.length <= 11 ? `+55${d}` : `+${d}`;
+}
+
+// Guarda o que já foi respondido ao fim de cada etapa. Se a pessoa abandonar, o comercial ainda recebe
+// o contexto até ali (o painel usa a linha mais recente). A linha final, com o Mapa, substitui estas.
+function checkpoint(etapaId) {
+  const { scores, ranking } = pontuar(resp, perguntas);
+  const temEscala = Array.isArray(resp.situacoes);
+  salvar("evento_respostas", { id: uuid(), lead_id: leadId, respostas: { ...resp }, scores, gargalo_principal: temEscala ? ranking[0] : "pendente", mapa: { parcial: true, etapa: etapaId }, texto_ia: false });
 }
 
 async function proximo() {
@@ -118,6 +151,7 @@ async function proximo() {
   const { etapa, p, primeira } = passos[idx];
   limparDock();
   atualizarProgresso();
+  if (primeira && idx > 0 && passos[idx - 1].etapa.id !== "identificacao") checkpoint(passos[idx - 1].etapa.id);
   if (primeira) {
     $chat.append(h("div", { class: "etapa" }, etapa.titulo));
     for (const m of etapa.abertura || []) await falar(m);
@@ -132,6 +166,7 @@ async function responder(p, valor, rotulo, pulou = false) {
   resp[p.id] = valor;
   eu(rotulo, pulou);
   idx++;
+  if (p.id === "telefone") { minVoltar = idx; salvarLead(); }
   if (p.tipo === "aberta" && !pulou) await falar(sorteia(["Anotado, obrigado por contar.", "Entendi. Isso ajuda muito.", "Boa, isso é exatamente o que eu queria saber."]), true);
   else await pausa(reduz ? 0 : 250);
   proximo();
@@ -172,18 +207,31 @@ function renderEntrada(p) {
         opcs.map((o) => h("button", { class: "op", type: "button", onclick: () => responder(p, o.valor, o.label) }, o.label))),
       p.opcional || botaoVoltar() ? h("div", { class: "rodape" }, botaoVoltar(), p.opcional ? h("button", { class: "btn sec", type: "button", onclick: () => responder(p, null, "Prefiro não responder", true) }, "Pular") : null) : null);
   } else if (p.tipo === "multipla") {
-    const sel = new Set();
+    const sel = []; // na ordem do toque: a primeira escolha é a que mais pesa
+    const min = p.min || 1, max = p.max || p.opcoes.length;
+    const rotulo = (o) => o.label;
     const ok = h("button", { class: "btn", type: "button", disabled: true, style: "margin-top:8px", onclick: () => {
-      const opcs = p.opcoes.filter((o) => sel.has(o.valor));
-      responder(p, opcs.map((o) => o.valor), opcs.map((o) => o.label).join(", "));
+      const opcs = sel.map((v) => p.opcoes.find((o) => o.valor === v));
+      responder(p, sel.slice(), opcs.map(rotulo).join("; "));
     } }, "Continuar");
-    const botoes = p.opcoes.map((o) => h("button", { class: "op", type: "button", "aria-pressed": "false", onclick: (e) => {
-      sel.has(o.valor) ? sel.delete(o.valor) : sel.add(o.valor);
-      e.currentTarget.classList.toggle("on");
-      e.currentTarget.setAttribute("aria-pressed", sel.has(o.valor));
-      ok.disabled = !sel.size;
+    const atualizar = () => {
+      ok.disabled = sel.length < min;
+      ok.textContent = max > 1 && p.min ? `Continuar (${sel.length}/${max})` : "Continuar";
+      botoes.forEach((b, i) => {
+        const pos = sel.indexOf(p.opcoes[i].valor);
+        b.classList.toggle("on", pos >= 0);
+        b.setAttribute("aria-pressed", pos >= 0);
+        b.dataset.pos = pos >= 0 && max > 1 ? String(pos + 1) : "";
+      });
+    };
+    const botoes = p.opcoes.map((o) => h("button", { class: "op", type: "button", "aria-pressed": "false", onclick: () => {
+      const pos = sel.indexOf(o.valor);
+      if (pos >= 0) sel.splice(pos, 1);
+      else if (sel.length < max) sel.push(o.valor);
+      atualizar();
     } }, o.label));
-    montarDock(h("div", { class: "opcoes grade" }, botoes), ok, botaoVoltar() ? h("div", { class: "rodape" }, botaoVoltar()) : null);
+    montarDock(h("div", { class: "opcoes " + (grade(p.opcoes) ? "grade" : "lista") }, botoes), ok, botaoVoltar() ? h("div", { class: "rodape" }, botaoVoltar()) : null);
+    atualizar();
   } else if (p.tipo === "aceite") {
     montarDock(h("button", { class: "btn", type: "button", onclick: () => {
       minVoltar = idx + 1;
@@ -207,7 +255,7 @@ function renderCampo(p) {
   const input = h("input", {
     type: p.tipo === "telefone" ? "tel" : "text", inputmode: p.tipo === "telefone" ? "tel" : "text",
     autocomplete: p.id === "nome" ? "name" : p.tipo === "telefone" ? "tel" : "off", autocapitalize: p.id === "nome" || p.id === "empresa" || p.id === "cargo" ? "words" : "off",
-    placeholder: p.placeholder || "", maxlength: 160, enterkeyhint: "send", "aria-label": p.texto,
+    placeholder: p.placeholder || "", maxlength: p.id === "empresa" ? 160 : 120, enterkeyhint: "send", "aria-label": p.texto,
   });
   const mostrar = (t) => { erro.textContent = t; erro.hidden = false; };
   const enviar = () => {
@@ -329,15 +377,20 @@ async function finalizar() {
   $barra.style.width = "100%"; $passo.textContent = "";
   await falar("Pronto, {nome}. Já tenho tudo que preciso.");
   const dig = h("div", { class: "bolha bot digitando" }, h("span"), h("span"), h("span"));
-  const aviso = falar("Estou cruzando as suas respostas com o banco de casos reais e montando o seu Mapa…", true);
+  const aviso = falar("Estou cruzando as suas respostas com o banco de casos reais e montando o seu Mapa de Gargalos e Oportunidades…", true);
   await aviso;
   $chat.append(dig); rolar();
   let mapa = montarMapa(resp, perguntas, casos);
-  if (!mapa.itens.length) { dig.remove(); return falar("Não consegui montar o Mapa. Chame alguém da equipe V4."); }
+  if (!mapa.itens.length) { dig.remove(); return falar("Não consegui montar o Mapa de Gargalos e Oportunidades. Chame alguém da equipe V4."); }
   mapa = await personalizar(mapa);
   dig.remove();
-  salvar("evento_respostas", { lead_id: leadId, respostas: resp, scores: mapa.scores, gargalo_principal: mapa.gargalo_principal, mapa: { itens: mapa.itens.map((i) => ({ gargalo: i.gargalo, rank: i.rank, casos: i.casos.map((c) => c.id) })), estimativa: mapa.estimativa }, texto_ia: mapa.ia });
+  const gravou = salvar("evento_respostas", { id: uuid(), lead_id: leadId, respostas: resp, scores: mapa.scores, gargalo_principal: mapa.gargalo_principal, mapa: { itens: mapa.itens.map((i) => ({ gargalo: i.gargalo, rank: i.rank, casos: i.casos.map((c) => c.id) })), estimativa: mapa.estimativa }, texto_ia: mapa.ia });
   renderMapa(mapa);
+  const statusSalvo = document.getElementById("status-salvo");
+  if (statusSalvo) gravou.then((ok) => {
+    statusSalvo.textContent = ok ? "✓ Suas respostas foram registradas." : "Sem conexão agora: vamos reenviar as suas respostas assim que a internet voltar. Mantenha esta página aberta.";
+    statusSalvo.className = "status-salvo " + (ok ? "ok" : "pend");
+  });
 }
 
 const FORCA = { forte: "Verificado na fonte", media: "Relato com ressalva" };
@@ -368,7 +421,7 @@ function cartaoCaso(c) {
 function salvarPDF() {
   const original = document.title;
   const limpo = (resp.empresa || "empresa").replace(/[^\p{L}\p{N} ]/gu, "").trim().slice(0, 40);
-  document.title = `Mapa de Gargalos - ${limpo}`;
+  document.title = `Mapa de Gargalos e Oportunidades - ${limpo}`;
   const restaurar = () => { document.title = original; window.removeEventListener("afterprint", restaurar); };
   window.addEventListener("afterprint", restaurar);
   window.print();
@@ -378,9 +431,10 @@ function renderMapa(m) {
   const nome = primeiroNome();
   const hoje = new Date().toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
   const el = h("section", { class: "mapa" },
+    h("p", { class: "status-salvo", id: "status-salvo" }, "Registrando as suas respostas…"),
     h("div", { class: "so-impressao cabecalho-pdf" }, h("b", {}, "V4 Company"), h("span", {}, `Mapa de Gargalos e Oportunidades · ${resp.empresa} · ${hoje}`)),
     h("div", { class: "etapa" }, "Seu resultado"),
-    h("h2", {}, `${nome ? nome + ", este" : "Este"} é o Mapa de Gargalos de ${resp.empresa}`),
+    h("h2", {}, `${nome ? nome + ", este" : "Este"} é o Mapa de Gargalos e Oportunidades de ${resp.empresa}`),
     h("p", { class: "resumo" }, m.resumo || `Suas respostas apontam ${m.itens.map((i) => i.nome.toLowerCase()).join(", ")} como os três pontos que mais seguram a empresa. A ordem abaixo é a ordem em que vale atacar.`),
     m.estimativa ? h("div", { class: "est" }, h("b", {}, `≈ ${brl(m.estimativa.valor_mes)} por mês`), h("small", {}, `Estimativa de custo do seu maior problema: ${m.estimativa.horas_semana} h/semana × 4,3 semanas × R$ ${m.estimativa.custo_hora}/h de referência. Ordem de grandeza, não promessa.`)) : null,
     m.itens.map((i) => h("article", { class: "cartao" },
@@ -393,7 +447,7 @@ function renderMapa(m) {
       h("div", { class: "passo" }, h("h4", {}, "Primeiro passo (próxima semana)"), h("p", {}, i.primeiro_passo)),
       h("div", { class: "passo" }, h("h4", {}, "Quem já fez, com fonte"), i.casos.map(cartaoCaso)))),
     h("p", { class: "nota" }, "Os resultados dos casos foram reportados pelas próprias empresas ou fornecedores nas fontes indicadas e não são promessa de resultado. O texto deste Mapa foi " + (m.ia ? "personalizado com IA a partir" : "montado a partir") + " das suas respostas e do banco de casos da V4 Company."),
-    h("div", { class: "acoes" }, h("button", { class: "btn", type: "button", onclick: salvarPDF }, "Salvar o Mapa em PDF")));
+    h("div", { class: "acoes" }, h("button", { class: "btn", type: "button", onclick: salvarPDF }, "Salvar em PDF")));
   $chat.append(el);
   $chat.scrollTop = el.offsetTop - 12;
 }
@@ -423,7 +477,7 @@ async function iniciar() {
   reenviarFila();
   $chat.append(h("div", { class: "capa" },
     h("h1", {}, "Onde a sua empresa trava?"),
-    h("p", {}, "Responda por toque, texto ou áudio. Em cerca de 5 minutos você recebe o seu Mapa de Gargalos e Oportunidades, com aplicações reais de IA e automação e casos de quem já fez.")));
+    h("p", {}, "Em 10 perguntas rápidas você recebe o seu Mapa de Gargalos e Oportunidades, com aplicações reais de IA e automação e casos de quem já fez.")));
   montarDock(h("button", { class: "btn", type: "button", onclick: () => { $chat.replaceChildren(); proximo(); } }, "Começar"));
 }
 iniciar();
