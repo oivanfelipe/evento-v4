@@ -125,8 +125,9 @@ async function reenviarFila() {
 window.addEventListener("online", reenviarFila);
 setInterval(() => { if (lerFila().length) reenviarFila(); }, 20000);
 
+// O lead é gravado assim que o telefone é informado (antes do diagnóstico): entra no CRM mesmo se a pessoa abandonar.
 function salvarLead() {
-  salvar("evento_leads", { id: leadId, nome: resp.nome, empresa: resp.empresa, cargo: resp.cargo, telefone: resp.telefone, email: null, consentimento: true, anfitriao });
+  salvar("evento_leads", { id: leadId, nome: resp.nome, empresa: resp.empresa, cargo: "Não informado", telefone: resp.telefone, email: null, consentimento: true, anfitriao });
 }
 
 // ---------- fluxo ----------
@@ -141,7 +142,7 @@ function normalizarTel(v) {
 // o contexto até ali (o painel usa a linha mais recente). A linha final, com o Mapa, substitui estas.
 function checkpoint(etapaId) {
   const { scores, ranking } = pontuar(resp, perguntas);
-  const temEscala = Object.keys(resp).some((k) => k.startsWith("q_"));
+  const temEscala = Array.isArray(resp.situacoes);
   salvar("evento_respostas", { id: uuid(), lead_id: leadId, respostas: { ...resp }, scores, gargalo_principal: temEscala ? ranking[0] : "pendente", mapa: { parcial: true, etapa: etapaId }, texto_ia: false });
 }
 
@@ -165,6 +166,7 @@ async function responder(p, valor, rotulo, pulou = false) {
   resp[p.id] = valor;
   eu(rotulo, pulou);
   idx++;
+  if (p.id === "telefone") { minVoltar = idx; salvarLead(); }
   if (p.tipo === "aberta" && !pulou) await falar(sorteia(["Anotado, obrigado por contar.", "Entendi. Isso ajuda muito.", "Boa, isso é exatamente o que eu queria saber."]), true);
   else await pausa(reduz ? 0 : 250);
   proximo();
@@ -205,18 +207,31 @@ function renderEntrada(p) {
         opcs.map((o) => h("button", { class: "op", type: "button", onclick: () => responder(p, o.valor, o.label) }, o.label))),
       p.opcional || botaoVoltar() ? h("div", { class: "rodape" }, botaoVoltar(), p.opcional ? h("button", { class: "btn sec", type: "button", onclick: () => responder(p, null, "Prefiro não responder", true) }, "Pular") : null) : null);
   } else if (p.tipo === "multipla") {
-    const sel = new Set();
+    const sel = []; // na ordem do toque: a primeira escolha é a que mais pesa
+    const min = p.min || 1, max = p.max || p.opcoes.length;
+    const rotulo = (o) => o.label;
     const ok = h("button", { class: "btn", type: "button", disabled: true, style: "margin-top:8px", onclick: () => {
-      const opcs = p.opcoes.filter((o) => sel.has(o.valor));
-      responder(p, opcs.map((o) => o.valor), opcs.map((o) => o.label).join(", "));
+      const opcs = sel.map((v) => p.opcoes.find((o) => o.valor === v));
+      responder(p, sel.slice(), opcs.map(rotulo).join("; "));
     } }, "Continuar");
-    const botoes = p.opcoes.map((o) => h("button", { class: "op", type: "button", "aria-pressed": "false", onclick: (e) => {
-      sel.has(o.valor) ? sel.delete(o.valor) : sel.add(o.valor);
-      e.currentTarget.classList.toggle("on");
-      e.currentTarget.setAttribute("aria-pressed", sel.has(o.valor));
-      ok.disabled = !sel.size;
+    const atualizar = () => {
+      ok.disabled = sel.length < min;
+      ok.textContent = max > 1 && p.min ? `Continuar (${sel.length}/${max})` : "Continuar";
+      botoes.forEach((b, i) => {
+        const pos = sel.indexOf(p.opcoes[i].valor);
+        b.classList.toggle("on", pos >= 0);
+        b.setAttribute("aria-pressed", pos >= 0);
+        b.dataset.pos = pos >= 0 && max > 1 ? String(pos + 1) : "";
+      });
+    };
+    const botoes = p.opcoes.map((o) => h("button", { class: "op", type: "button", "aria-pressed": "false", onclick: () => {
+      const pos = sel.indexOf(o.valor);
+      if (pos >= 0) sel.splice(pos, 1);
+      else if (sel.length < max) sel.push(o.valor);
+      atualizar();
     } }, o.label));
-    montarDock(h("div", { class: "opcoes grade" }, botoes), ok, botaoVoltar() ? h("div", { class: "rodape" }, botaoVoltar()) : null);
+    montarDock(h("div", { class: "opcoes " + (grade(p.opcoes) ? "grade" : "lista") }, botoes), ok, botaoVoltar() ? h("div", { class: "rodape" }, botaoVoltar()) : null);
+    atualizar();
   } else if (p.tipo === "aceite") {
     montarDock(h("button", { class: "btn", type: "button", onclick: () => {
       minVoltar = idx + 1;
@@ -362,11 +377,11 @@ async function finalizar() {
   $barra.style.width = "100%"; $passo.textContent = "";
   await falar("Pronto, {nome}. Já tenho tudo que preciso.");
   const dig = h("div", { class: "bolha bot digitando" }, h("span"), h("span"), h("span"));
-  const aviso = falar("Estou cruzando as suas respostas com o banco de casos reais e montando o seu Mapa…", true);
+  const aviso = falar("Estou cruzando as suas respostas com o banco de casos reais e montando o seu Mapa de Gargalos e Oportunidades…", true);
   await aviso;
   $chat.append(dig); rolar();
   let mapa = montarMapa(resp, perguntas, casos);
-  if (!mapa.itens.length) { dig.remove(); return falar("Não consegui montar o Mapa. Chame alguém da equipe V4."); }
+  if (!mapa.itens.length) { dig.remove(); return falar("Não consegui montar o Mapa de Gargalos e Oportunidades. Chame alguém da equipe V4."); }
   mapa = await personalizar(mapa);
   dig.remove();
   const gravou = salvar("evento_respostas", { id: uuid(), lead_id: leadId, respostas: resp, scores: mapa.scores, gargalo_principal: mapa.gargalo_principal, mapa: { itens: mapa.itens.map((i) => ({ gargalo: i.gargalo, rank: i.rank, casos: i.casos.map((c) => c.id) })), estimativa: mapa.estimativa }, texto_ia: mapa.ia });
@@ -406,7 +421,7 @@ function cartaoCaso(c) {
 function salvarPDF() {
   const original = document.title;
   const limpo = (resp.empresa || "empresa").replace(/[^\p{L}\p{N} ]/gu, "").trim().slice(0, 40);
-  document.title = `Mapa de Gargalos - ${limpo}`;
+  document.title = `Mapa de Gargalos e Oportunidades - ${limpo}`;
   const restaurar = () => { document.title = original; window.removeEventListener("afterprint", restaurar); };
   window.addEventListener("afterprint", restaurar);
   window.print();
@@ -419,7 +434,7 @@ function renderMapa(m) {
     h("p", { class: "status-salvo", id: "status-salvo" }, "Registrando as suas respostas…"),
     h("div", { class: "so-impressao cabecalho-pdf" }, h("b", {}, "V4 Company"), h("span", {}, `Mapa de Gargalos e Oportunidades · ${resp.empresa} · ${hoje}`)),
     h("div", { class: "etapa" }, "Seu resultado"),
-    h("h2", {}, `${nome ? nome + ", este" : "Este"} é o Mapa de Gargalos de ${resp.empresa}`),
+    h("h2", {}, `${nome ? nome + ", este" : "Este"} é o Mapa de Gargalos e Oportunidades de ${resp.empresa}`),
     h("p", { class: "resumo" }, m.resumo || `Suas respostas apontam ${m.itens.map((i) => i.nome.toLowerCase()).join(", ")} como os três pontos que mais seguram a empresa. A ordem abaixo é a ordem em que vale atacar.`),
     m.estimativa ? h("div", { class: "est" }, h("b", {}, `≈ ${brl(m.estimativa.valor_mes)} por mês`), h("small", {}, `Estimativa de custo do seu maior problema: ${m.estimativa.horas_semana} h/semana × 4,3 semanas × R$ ${m.estimativa.custo_hora}/h de referência. Ordem de grandeza, não promessa.`)) : null,
     m.itens.map((i) => h("article", { class: "cartao" },
@@ -432,7 +447,7 @@ function renderMapa(m) {
       h("div", { class: "passo" }, h("h4", {}, "Primeiro passo (próxima semana)"), h("p", {}, i.primeiro_passo)),
       h("div", { class: "passo" }, h("h4", {}, "Quem já fez, com fonte"), i.casos.map(cartaoCaso)))),
     h("p", { class: "nota" }, "Os resultados dos casos foram reportados pelas próprias empresas ou fornecedores nas fontes indicadas e não são promessa de resultado. O texto deste Mapa foi " + (m.ia ? "personalizado com IA a partir" : "montado a partir") + " das suas respostas e do banco de casos da V4 Company."),
-    h("div", { class: "acoes" }, h("button", { class: "btn", type: "button", onclick: salvarPDF }, "Salvar o Mapa em PDF")));
+    h("div", { class: "acoes" }, h("button", { class: "btn", type: "button", onclick: salvarPDF }, "Salvar em PDF")));
   $chat.append(el);
   $chat.scrollTop = el.offsetTop - 12;
 }
@@ -462,7 +477,7 @@ async function iniciar() {
   reenviarFila();
   $chat.append(h("div", { class: "capa" },
     h("h1", {}, "Onde a sua empresa trava?"),
-    h("p", {}, "Responda por toque, texto ou áudio. Em cerca de 5 minutos você recebe o seu Mapa de Gargalos e Oportunidades, com aplicações reais de IA e automação e casos de quem já fez.")));
+    h("p", {}, "Em 10 perguntas rápidas você recebe o seu Mapa de Gargalos e Oportunidades, com aplicações reais de IA e automação e casos de quem já fez.")));
   montarDock(h("button", { class: "btn", type: "button", onclick: () => { $chat.replaceChildren(); proximo(); } }, "Começar"));
 }
 iniciar();

@@ -9,7 +9,7 @@ Documento completo: [`docs/evento-teoria-das-restricoes-ia.md`](docs/evento-teor
 ## Ferramenta de diagnóstico (Mapa de Gargalos e Oportunidades)
 
 - App: `diagnostico/` (chat pensado para celular, com tempo de digitação, botão Voltar e perguntas abertas por texto ou áudio), `api/mapa.js` (personalização via Groq, opcional) e `api/transcrever.js` (áudio vira texto com Whisper; o áudio não é guardado). Variável `GROQ_API_KEY`.
-- Perguntas: `data/perguntas.json`. Banco de casos: `data/pesquisa/casos-final.json` (gerado por `data/pesquisa/consolidar.py` a partir de `data/pesquisa/v2/`; cobertura em `data/pesquisa/COBERTURA.md`).
+- Perguntas: `data/perguntas.json` (10 no total: nome, empresa, telefone, porte, setor, 3 situações em ordem de importância, horas perdidas, quem decide, investimento e 1 aberta por texto ou áudio; o aviso de contato fica na abertura, sem pergunta de consentimento). Banco de casos: `data/pesquisa/casos-final.json` (gerado por `data/pesquisa/consolidar.py` a partir de `data/pesquisa/v2/`; cobertura em `data/pesquisa/COBERTURA.md`).
 - Regras de qualidade do banco: `data/pesquisa/SCHEMA2.md` e `data/pesquisa/LICOES.md`. `verificar_trechos.py` confere o trecho comprovante no HTML bruto da fonte.
 - Testes locais: `bash diagnostico/testar.sh`.
 - Dados dos participantes: tabelas `evento_leads` e `evento_respostas` no Supabase (RLS: o anon só insere).

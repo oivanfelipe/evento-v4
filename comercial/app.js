@@ -78,7 +78,7 @@ async function carregarLeads() {
 
 // concluiu = chegou ao Mapa; parcial = parou no meio (o app guarda checkpoints); so_cadastro = só se identificou.
 const estado = (l) => (!l.resp ? "so_cadastro" : l.resp.mapa && Array.isArray(l.resp.mapa.itens) ? "concluiu" : "parcial");
-const ETAPA = { perfil: "o perfil da empresa", conversa: "a conversa aberta", diagnostico: "as 10 situações", prioridade: "a prioridade", aprofundar: "a pergunta de história", decisao: "as últimas perguntas" };
+const ETAPA = { perfil: "o perfil da empresa", diagnostico: "as situações e as horas perdidas", decisao: "quem decide e o investimento", aprofundar: "a pergunta final" };
 const gargaloReal = (r) => (r && GARGALOS[r.gargalo_principal] ? r.gargalo_principal : null);
 
 function top3(r) {
@@ -112,8 +112,8 @@ function mensagemWhats(l) {
 function detalhe(l) {
   const r = l.resp, a = r ? r.respostas || {} : {};
   const linhas = [
-    ["Cargo", l.cargo], ["E-mail", l.email || "—"], ["Autorizou contato", l.consentimento ? "Sim" : "Não"],
-    ["Porte", a.porte], ["Setor", a.setor], ["Área com mais dor", a.area_dor], ["Maior dor", nomeGargalo(a.maior_dor)],
+    ["E-mail", l.email || "—"], 
+    ["Porte", a.porte], ["Setor", a.setor], ["Situações (em ordem)", Array.isArray(a.situacoes) ? a.situacoes.map(nomeGargalo).join(" › ") : null], ["Área com mais dor", a.area_dor], ["Maior dor", a.maior_dor ? nomeGargalo(a.maior_dor) : null],
     ["Faturamento", a.faturamento], ["Maturidade em IA", a.maturidade_ia],
     ["Impacto", a.impacto], ["Horas perdidas/semana", a.horas_perdidas], ["Prazo", a.prazo],
     ["Quem decide", a.quem_decide], ["Investimento mensal", a.investimento],
@@ -135,7 +135,7 @@ function detalhe(l) {
 
 async function copiarResumo(l) {
   const t3 = top3(l.resp).map(([g, s]) => `${nomeGargalo(g)} (${s})`).join(", ");
-  const txt = [`${l.nome} · ${l.cargo} · ${l.empresa}`, `Tel: ${l.telefone}${l.email ? " · " + l.email : ""}`, l.anfitriao ? `Anfitrião: ${l.anfitriao}` : null, t3 ? `Gargalos: ${t3}` : estado(l) === "parcial" ? "Parou no meio do diagnóstico" : "Só se cadastrou"].filter(Boolean).join("\n");
+  const txt = [`${l.nome} · ${l.empresa}`, `Tel: ${l.telefone}${l.email ? " · " + l.email : ""}`, l.anfitriao ? `Anfitrião: ${l.anfitriao}` : null, t3 ? `Gargalos: ${t3}` : estado(l) === "parcial" ? "Parou no meio do diagnóstico" : "Só se cadastrou"].filter(Boolean).join("\n");
   try { await navigator.clipboard.writeText(txt); $("msg-app").textContent = "Resumo copiado."; } catch { $("msg-app").textContent = "Não consegui copiar automaticamente."; }
 }
 

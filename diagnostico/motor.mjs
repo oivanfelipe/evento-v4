@@ -9,17 +9,23 @@ export const SEMANAS_MES = 4.3;
 const ADJACENTE = { pequena: ["media"], media: ["pequena", "grande"], grande: ["media"] };
 const AREA_CASO = { administrativo: ["administrativo", "rh"], operacoes: ["operacoes", "logistica"] };
 
+// A pergunta "situacoes" traz 3 gargalos na ordem de importância (ordem de toque): pesos 50, 35 e 25.
+// A primeira é a maior dor. Respostas antigas com escala (q_*) e maior_dor continuam valendo.
 export function pontuar(resp, perguntas) {
   const escala = perguntas.etapas.flatMap((e) => e.perguntas).filter((p) => p.tipo === "escala");
   const area = perguntas.regras_pontuacao.area_para_gargalos[resp.area_dor] || [];
+  const pesos = perguntas.regras_pontuacao.pesos_situacoes || [50, 35, 25];
   const ordem = Object.keys(perguntas.gargalos);
+  const sit = Array.isArray(resp.situacoes) ? resp.situacoes.filter((g) => ordem.includes(g)) : [];
+  const maior = sit[0] || resp.maior_dor;
   const scores = {};
   for (const g of ordem) scores[g] = 0;
   for (const p of escala) scores[p.gargalo] += (Number(resp[p.id]) || 0) * 10;
-  if (resp.maior_dor in scores) scores[resp.maior_dor] += 20;
+  sit.forEach((g, i) => { scores[g] += pesos[i] || 0; });
+  if (maior in scores) scores[maior] += 20;
   for (const g of area) scores[g] += 10;
   const ranking = ordem
-    .map((g, i) => ({ g, score: scores[g], i, dor: g === resp.maior_dor ? 1 : 0, area: area.includes(g) ? 1 : 0 }))
+    .map((g, i) => ({ g, score: scores[g], i, dor: g === maior ? 1 : 0, area: area.includes(g) ? 1 : 0 }))
     .sort((a, b) => b.score - a.score || b.dor - a.dor || b.area - a.area || a.i - b.i);
   return { scores, ranking: ranking.map((r) => r.g) };
 }
