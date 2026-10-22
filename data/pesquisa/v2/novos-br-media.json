@@ -3,7 +3,9 @@
     "id": "R-001",
     "porte": "media",
     "gargalo": "comunicacao",
-    "gargalos_secundarios": ["manual_repetitivo"],
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
     "area": "operacoes",
     "setor": "segurança eletrônica (centrais de monitoramento)",
     "setor_chave": "tecnologia",
@@ -13,11 +15,25 @@
     "titulo": "IA generativa padroniza a descrição de eventos de alarme e reduz em mais de 50% o tempo de resposta dos operadores",
     "problema": "Operadores de centrais de monitoramento preenchiam à mão a descrição de milhões de eventos diários, gerando erros, perda de tempo e comunicação inconsistente com os clientes.",
     "solucao": "Um modelo de IA generativa integrado à plataforma SIGMA gera descrições em linguagem natural para cada evento de alarme, em arquitetura serverless com vetorização de dados, implantada com a RealCloud após provas de conceito apoiadas pela AWS.",
-    "ferramentas": ["Amazon Bedrock", "AWS (arquitetura serverless)", "RealCloud (implantação)"],
+    "ferramentas": [
+      "Amazon Bedrock",
+      "AWS (arquitetura serverless)",
+      "RealCloud (implantação)"
+    ],
     "resultado": "Redução de mais de 50% no tempo de resposta dos operadores; erros manuais nas descrições eliminados (sem quantificação); plataforma trata mais de 27 milhões de eventos por dia.",
     "metricas": [
-      {"indicador": "Tempo de resposta dos operadores", "antes": null, "depois": null, "variacao": "-50% ou mais"},
-      {"indicador": "Eventos tratados por dia", "antes": null, "depois": "mais de 27 milhões", "variacao": null}
+      {
+        "indicador": "Tempo de resposta dos operadores",
+        "antes": null,
+        "depois": null,
+        "variacao": "-50% ou mais"
+      },
+      {
+        "indicador": "Eventos tratados por dia",
+        "antes": null,
+        "depois": "mais de 27 milhões",
+        "variacao": null
+      }
     ],
     "complexidade_implantacao": "media",
     "tempo_para_valor": "meses",
@@ -44,7 +60,10 @@
     "id": "R-002",
     "porte": "media",
     "gargalo": "processo",
-    "gargalos_secundarios": ["controle", "manual_repetitivo"],
+    "gargalos_secundarios": [
+      "controle",
+      "manual_repetitivo"
+    ],
     "area": "administrativo",
     "setor": "meios de pagamento",
     "setor_chave": "financeiro_seguros",
@@ -54,12 +73,30 @@
     "titulo": "Onboarding e validação cadastral automatizados reduzem a aprovação de 53 horas para 2h26",
     "problema": "O onboarding e a validação cadastral de clientes e parceiros eram manuais e fragmentados, aumentando o tempo de análise e a carga das equipes.",
     "solucao": "Automatização do fluxo de onboarding e da validação cadastral na plataforma Pipefy, com consultas automatizadas, biometria e trilha auditável de cada etapa (Risk AI Studio para governança de risco).",
-    "ferramentas": ["Pipefy", "Risk AI Studio (Pipefy)"],
+    "ferramentas": [
+      "Pipefy",
+      "Risk AI Studio (Pipefy)"
+    ],
     "resultado": "SLA de análise de cadastros caiu de 26 minutos para 8 minutos; SLA total de aprovação caiu de 53 horas para 2 horas e 26 minutos (-95%); redução de 70% no tempo de análise; 100% das consultas automatizadas.",
     "metricas": [
-      {"indicador": "SLA de análise de cadastro", "antes": "26 minutos", "depois": "8 minutos", "variacao": "-70%"},
-      {"indicador": "SLA total de aprovação", "antes": "53 horas", "depois": "2 horas e 26 minutos", "variacao": "-95%"},
-      {"indicador": "Consultas automatizadas", "antes": null, "depois": "100%", "variacao": null}
+      {
+        "indicador": "SLA de análise de cadastro",
+        "antes": "26 minutos",
+        "depois": "8 minutos",
+        "variacao": "-70%"
+      },
+      {
+        "indicador": "SLA total de aprovação",
+        "antes": "53 horas",
+        "depois": "2 horas e 26 minutos",
+        "variacao": "-95%"
+      },
+      {
+        "indicador": "Consultas automatizadas",
+        "antes": null,
+        "depois": "100%",
+        "variacao": null
+      }
     ],
     "complexidade_implantacao": "media",
     "tempo_para_valor": "meses",
@@ -86,7 +123,10 @@
     "id": "R-003",
     "porte": "media",
     "gargalo": "capacidade",
-    "gargalos_secundarios": ["controle", "manual_repetitivo"],
+    "gargalos_secundarios": [
+      "controle",
+      "manual_repetitivo"
+    ],
     "area": "atendimento",
     "setor": "plataforma de venda de fotos (marketplace para fotógrafos)",
     "setor_chave": "varejo_ecommerce",
@@ -96,13 +136,38 @@
     "titulo": "Agentes de IA no Amazon Bedrock cortam 70% do esforço de atendimento e 60% da análise manual de risco",
     "problema": "Os saques saltaram de cerca de 20 mil para mais de 80 mil em um mês; a análise manual de risco de cada saque e o SAC ficaram inviáveis, e a empresa queria expandir para outros países sem multiplicar a equipe.",
     "solucao": "Agente de IA (Claude Sonnet no Amazon Bedrock) que dá nota de 0 a 100 ao risco de cada saque, implantado em três fases (captura do raciocínio dos analistas, análise assistida com validação humana, aprovação autônoma dos saques de baixo risco), mais agente de atendimento no SAC.",
-    "ferramentas": ["Amazon Bedrock (Claude Sonnet)", "Amazon Rekognition", "AWS Lambda", "Amazon ECS"],
+    "ferramentas": [
+      "Amazon Bedrock (Claude Sonnet)",
+      "Amazon Rekognition",
+      "AWS Lambda",
+      "Amazon ECS"
+    ],
     "resultado": "Redução de 70% no esforço de atendimento e de 60% no trabalho manual de análise de risco; saques de ~20 mil para mais de 80 mil em um mês (4x) com liberação em cerca de um minuto.",
     "metricas": [
-      {"indicador": "Esforço de atendimento", "antes": null, "depois": null, "variacao": "-70%"},
-      {"indicador": "Trabalho manual de análise de risco", "antes": null, "depois": null, "variacao": "-60%"},
-      {"indicador": "Saques por mês", "antes": "~20 mil", "depois": "mais de 80 mil", "variacao": "4x"},
-      {"indicador": "Liberação do saque", "antes": null, "depois": "~1 minuto", "variacao": null}
+      {
+        "indicador": "Esforço de atendimento",
+        "antes": null,
+        "depois": null,
+        "variacao": "-70%"
+      },
+      {
+        "indicador": "Trabalho manual de análise de risco",
+        "antes": null,
+        "depois": null,
+        "variacao": "-60%"
+      },
+      {
+        "indicador": "Saques por mês",
+        "antes": "~20 mil",
+        "depois": "mais de 80 mil",
+        "variacao": "4x"
+      },
+      {
+        "indicador": "Liberação do saque",
+        "antes": null,
+        "depois": "~1 minuto",
+        "variacao": null
+      }
     ],
     "complexidade_implantacao": "alta",
     "tempo_para_valor": "meses",
@@ -129,7 +194,10 @@
     "id": "R-004",
     "porte": "media",
     "gargalo": "capacidade",
-    "gargalos_secundarios": ["demanda_comercial", "manual_repetitivo"],
+    "gargalos_secundarios": [
+      "demanda_comercial",
+      "manual_repetitivo"
+    ],
     "area": "comercial",
     "setor": "autopeças (marketplace B2B)",
     "setor_chave": "varejo_ecommerce",
@@ -139,12 +207,34 @@
     "titulo": "Agente de IA no WhatsApp gera cerca de 300 cotações de autopeças por dia sem ampliar o time de vendas",
     "problema": "Os pedidos de cotação chegavam por WhatsApp em texto, áudio e imagem, com gírias e ambiguidades técnicas, e exigiam equipe manual que não escalaria sem aumentar o time.",
     "solucao": "O agente AI.rton identifica o veículo pela placa, desambigua a peça por perguntas, cruza catálogo, disponibilidade e preço para montar a cotação, processa áudio e imagem e encaminha a humanos os casos fora do escopo.",
-    "ferramentas": ["Amazon Bedrock (Claude Haiku)", "Amazon Bedrock Guardrails", "Amazon Transcribe", "Twilio (WhatsApp)", "AWS Lambda", "Amazon OpenSearch Service"],
+    "ferramentas": [
+      "Amazon Bedrock (Claude Haiku)",
+      "Amazon Bedrock Guardrails",
+      "Amazon Transcribe",
+      "Twilio (WhatsApp)",
+      "AWS Lambda",
+      "Amazon OpenSearch Service"
+    ],
     "resultado": "Perto de 300 cotações geradas por dia e cerca de 1 mil conversas diárias; o agente responde por cerca de 37% do crescimento de cotações da plataforma; mais de 99% de sucesso nos turnos.",
     "metricas": [
-      {"indicador": "Cotações geradas por dia", "antes": null, "depois": "perto de 300", "variacao": null},
-      {"indicador": "Conversas por dia", "antes": null, "depois": "cerca de 1.000", "variacao": "+20% nas duas últimas semanas"},
-      {"indicador": "Participação do agente no crescimento de cotações", "antes": null, "depois": "~37%", "variacao": null}
+      {
+        "indicador": "Cotações geradas por dia",
+        "antes": null,
+        "depois": "perto de 300",
+        "variacao": null
+      },
+      {
+        "indicador": "Conversas por dia",
+        "antes": null,
+        "depois": "cerca de 1.000",
+        "variacao": "+20% nas duas últimas semanas"
+      },
+      {
+        "indicador": "Participação do agente no crescimento de cotações",
+        "antes": null,
+        "depois": "~37%",
+        "variacao": null
+      }
     ],
     "complexidade_implantacao": "alta",
     "tempo_para_valor": "meses",
@@ -171,7 +261,10 @@
     "id": "R-005",
     "porte": "media",
     "gargalo": "controle",
-    "gargalos_secundarios": ["informacao", "capacidade"],
+    "gargalos_secundarios": [
+      "informacao",
+      "capacidade"
+    ],
     "area": "ti",
     "setor": "govtech (plataforma de serviços públicos)",
     "setor_chave": "tecnologia",
@@ -181,13 +274,39 @@
     "titulo": "Observabilidade nativa e refatoração com agente de código: de 48 horas para 2 horas e +180% de desempenho de CPU",
     "problema": "Picos de acesso imprevisíveis (rematrículas, IPTU, chamados de zeladoria) exigiam passar de monitoramento reativo para proativo; a camada de cache da API principal gerava gargalos de memória sob carga.",
     "solucao": "Monitoramento de 7 aplicações críticas com observabilidade nativa da AWS (SLOs e SLIs por serviço e município) e refatoração de mais de 96 arquivos da camada de cache com o agente de código Kiro, com revisão humana.",
-    "ferramentas": ["Amazon CloudWatch", "CloudWatch RUM", "AWS X-Ray", "CloudWatch Application Signals", "Kiro"],
+    "ferramentas": [
+      "Amazon CloudWatch",
+      "CloudWatch RUM",
+      "AWS X-Ray",
+      "CloudWatch Application Signals",
+      "Kiro"
+    ],
     "resultado": "180% de melhoria no desempenho de CPU (cerca de 2,8x mais requisições com a mesma CPU); refatoração de 48 horas (manual) para 2 horas; esforço em tickets críticos -95,8%; investigação de incidentes 3x mais rápida.",
     "metricas": [
-      {"indicador": "Desempenho de CPU", "antes": null, "depois": null, "variacao": "+180%"},
-      {"indicador": "Tempo de refatoração", "antes": "48 horas", "depois": "2 horas", "variacao": null},
-      {"indicador": "Esforço em tickets críticos", "antes": null, "depois": null, "variacao": "-95,8%"},
-      {"indicador": "Velocidade de investigação de incidentes", "antes": null, "depois": null, "variacao": "3x"}
+      {
+        "indicador": "Desempenho de CPU",
+        "antes": null,
+        "depois": null,
+        "variacao": "+180%"
+      },
+      {
+        "indicador": "Tempo de refatoração",
+        "antes": "48 horas",
+        "depois": "2 horas",
+        "variacao": null
+      },
+      {
+        "indicador": "Esforço em tickets críticos",
+        "antes": null,
+        "depois": null,
+        "variacao": "-95,8%"
+      },
+      {
+        "indicador": "Velocidade de investigação de incidentes",
+        "antes": null,
+        "depois": null,
+        "variacao": "3x"
+      }
     ],
     "complexidade_implantacao": "media",
     "tempo_para_valor": "meses",
@@ -214,7 +333,10 @@
     "id": "R-006",
     "porte": "media",
     "gargalo": "processo",
-    "gargalos_secundarios": ["capacidade", "conhecimento"],
+    "gargalos_secundarios": [
+      "capacidade",
+      "conhecimento"
+    ],
     "area": "operacoes",
     "setor": "govtech (plataforma de serviços públicos)",
     "setor_chave": "tecnologia",
@@ -224,12 +346,33 @@
     "titulo": "Gestores públicos criam serviços digitais por conversa com IA generativa: de 3 horas para 10 minutos",
     "problema": "Cada novo tipo de serviço público (fluxos com entrada de dados, tramitação, assinaturas e documentos) tinha alto custo de desenvolvimento e dependia das equipes técnicas.",
     "solucao": "Plataforma no-code/low-code com orquestração visual em BPMN e IA generativa: o gestor descreve o serviço por prompt e o sistema gera o fluxo, com controle de acesso, filtragem de conteúdo, anonimização de dados e auditoria.",
-    "ferramentas": ["Amazon Bedrock (Claude e Llama)", "Amazon Bedrock Guardrails", "LangChain", "AWS Athena", "Amazon Data Firehose"],
+    "ferramentas": [
+      "Amazon Bedrock (Claude e Llama)",
+      "Amazon Bedrock Guardrails",
+      "LangChain",
+      "AWS Athena",
+      "Amazon Data Firehose"
+    ],
     "resultado": "Tempo para criar e lançar um serviço digital caiu de cerca de 3 horas para 10 minutos; mais de 5.000 prompts executados no primeiro mês; média de 4 novos serviços por cliente por mês.",
     "metricas": [
-      {"indicador": "Tempo para criar e lançar um serviço digital", "antes": "~3 horas", "depois": "10 minutos", "variacao": null},
-      {"indicador": "Prompts executados no primeiro mês", "antes": null, "depois": "mais de 5.000", "variacao": null},
-      {"indicador": "Novos serviços por cliente por mês", "antes": null, "depois": "4 (média)", "variacao": null}
+      {
+        "indicador": "Tempo para criar e lançar um serviço digital",
+        "antes": "~3 horas",
+        "depois": "10 minutos",
+        "variacao": null
+      },
+      {
+        "indicador": "Prompts executados no primeiro mês",
+        "antes": null,
+        "depois": "mais de 5.000",
+        "variacao": null
+      },
+      {
+        "indicador": "Novos serviços por cliente por mês",
+        "antes": null,
+        "depois": "4 (média)",
+        "variacao": null
+      }
     ],
     "complexidade_implantacao": "alta",
     "tempo_para_valor": "meses",
@@ -256,7 +399,9 @@
     "id": "R-007",
     "porte": "media",
     "gargalo": "informacao",
-    "gargalos_secundarios": ["controle"],
+    "gargalos_secundarios": [
+      "controle"
+    ],
     "area": "operacoes",
     "setor": "insumos farmacêuticos (planta industrial)",
     "setor_chave": "industria",
@@ -266,11 +411,25 @@
     "titulo": "Monitoramento integrado do chão de fábrica reduz o diagnóstico de falha em CLP de 6-7 horas para minutos",
     "problema": "Redes de CLPs distribuídas em três segmentos (evaporação, secagem e extração) sem visão integrada: localizar uma falha levava horas e a manutenção era reativa.",
     "solucao": "Sensores do Paessler PRTG monitoram o chão de fábrica em tempo integral, integrando os três ambientes em uma única interface, com alertas automáticos para a equipe de manutenção (automação e monitoramento, sem IA generativa).",
-    "ferramentas": ["Paessler PRTG", "CLPs Siemens (TIA Portal)", "RBS Service (parceira)"],
+    "ferramentas": [
+      "Paessler PRTG",
+      "CLPs Siemens (TIA Portal)",
+      "RBS Service (parceira)"
+    ],
     "resultado": "Identificação de problema em CLP, que levaria de 6 a 7 horas, passou a ser feita em minutos; consumo de energia no ambiente monitorado caiu de 3% a 4%.",
     "metricas": [
-      {"indicador": "Tempo para identificar problema em CLP", "antes": "6 a 7 horas", "depois": "minutos", "variacao": null},
-      {"indicador": "Consumo de energia no ambiente monitorado", "antes": null, "depois": null, "variacao": "-3% a -4%"}
+      {
+        "indicador": "Tempo para identificar problema em CLP",
+        "antes": "6 a 7 horas",
+        "depois": "minutos",
+        "variacao": null
+      },
+      {
+        "indicador": "Consumo de energia no ambiente monitorado",
+        "antes": null,
+        "depois": null,
+        "variacao": "-3% a -4%"
+      }
     ],
     "complexidade_implantacao": "media",
     "tempo_para_valor": "meses",
@@ -297,7 +456,10 @@
     "id": "R-008",
     "porte": "media",
     "gargalo": "processo",
-    "gargalos_secundarios": ["controle", "manual_repetitivo"],
+    "gargalos_secundarios": [
+      "controle",
+      "manual_repetitivo"
+    ],
     "area": "logistica",
     "setor": "distribuição (entregas)",
     "setor_chave": "logistica",
@@ -307,10 +469,18 @@
     "titulo": "Roteirizador e ponto digital do motorista reduzem em 20% o tempo de entrega",
     "problema": "Motoristas registravam horas em folhas de ponto físicas, que o RH processava à mão a cada mês, e a criação de rotas era lenta.",
     "solucao": "Sistema de gestão de entregas (DMS) da MáximaTech, com módulo maxMotorista (registro de ponto e painel de monitoramento) e maxRoteirizador (criação de rotas).",
-    "ferramentas": ["MáximaTech maxRoteirizador", "MáximaTech maxMotorista"],
+    "ferramentas": [
+      "MáximaTech maxRoteirizador",
+      "MáximaTech maxMotorista"
+    ],
     "resultado": "Redução de 20% no tempo de entrega com o roteirizador; o tempo de processamento do ponto caiu \"significativamente\" (sem percentual na fonte).",
     "metricas": [
-      {"indicador": "Tempo de entrega", "antes": null, "depois": null, "variacao": "-20%"}
+      {
+        "indicador": "Tempo de entrega",
+        "antes": null,
+        "depois": null,
+        "variacao": "-20%"
+      }
     ],
     "complexidade_implantacao": "baixa",
     "tempo_para_valor": "semanas",
@@ -337,7 +507,10 @@
     "id": "R-009",
     "porte": "media",
     "gargalo": "manual_repetitivo",
-    "gargalos_secundarios": ["capacidade", "processo"],
+    "gargalos_secundarios": [
+      "capacidade",
+      "processo"
+    ],
     "area": "administrativo",
     "setor": "educação a distância (secretaria acadêmica)",
     "setor_chave": "educacao",
@@ -347,13 +520,38 @@
     "titulo": "15 robôs de RPA com IA reduzem o ciclo de certificados e diplomas de até 8 dias para 24 horas",
     "problema": "Processos majoritariamente manuais e conferências repetitivas, com equipes reduzidas em cerca de 20% e mais atendimentos, afetavam prazos, produtividade e clima.",
     "solucao": "RPA da AutomationEdge desenvolvido pela consultoria DT Consult, com IA para análise documental (OCR), reconhecimento de padrões e chatbots; colaboradores internos foram formados como desenvolvedores de RPA.",
-    "ferramentas": ["AutomationEdge (RPA)", "OCR e IA documental", "chatbots integrados aos robôs", "DT Consult (consultoria)"],
+    "ferramentas": [
+      "AutomationEdge (RPA)",
+      "OCR e IA documental",
+      "chatbots integrados aos robôs",
+      "DT Consult (consultoria)"
+    ],
     "resultado": "15 robôs em operação plena em oito meses; ciclo documental de até 8 dias para 24 horas; matrículas de mais de 5 mil horas estimadas para 718 horas; certificações de 1.090 h para 220 h.",
     "metricas": [
-      {"indicador": "Ciclo de certificados e diplomas", "antes": "até 8 dias", "depois": "24 horas", "variacao": null},
-      {"indicador": "Esforço em matrículas (43 mil)", "antes": "mais de 5.000 h (estimado)", "depois": "718 h", "variacao": "-4,3 mil h"},
-      {"indicador": "Esforço em certificações (8,8 mil)", "antes": "1.090 h", "depois": "220 h", "variacao": "-870 h"},
-      {"indicador": "Envio de dados a polos", "antes": "~22 h (90 polos)", "depois": "2 h (720 polos)", "variacao": null}
+      {
+        "indicador": "Ciclo de certificados e diplomas",
+        "antes": "até 8 dias",
+        "depois": "24 horas",
+        "variacao": null
+      },
+      {
+        "indicador": "Esforço em matrículas (43 mil)",
+        "antes": "mais de 5.000 h (estimado)",
+        "depois": "718 h",
+        "variacao": "-4,3 mil h"
+      },
+      {
+        "indicador": "Esforço em certificações (8,8 mil)",
+        "antes": "1.090 h",
+        "depois": "220 h",
+        "variacao": "-870 h"
+      },
+      {
+        "indicador": "Envio de dados a polos",
+        "antes": "~22 h (90 polos)",
+        "depois": "2 h (720 polos)",
+        "variacao": null
+      }
     ],
     "complexidade_implantacao": "media",
     "tempo_para_valor": "meses",
@@ -380,7 +578,10 @@
     "id": "R-010",
     "porte": "media",
     "gargalo": "informacao",
-    "gargalos_secundarios": ["decisao", "comunicacao"],
+    "gargalos_secundarios": [
+      "decisao",
+      "comunicacao"
+    ],
     "area": "operacoes",
     "setor": "cooperativa de distribuição de energia",
     "setor_chave": "outro",
@@ -390,12 +591,32 @@
     "titulo": "Dados integrados em Power BI e Fabric reduzem em até 95% o tempo de geração de relatórios",
     "problema": "Informações descentralizadas e uma ferramenta de extração de dados pouco flexível tornavam lenta a geração de relatórios e limitavam a precisão das análises.",
     "solucao": "Integração de dados com Power BI e Microsoft Fabric, implantada pela consultoria White Cube, e conexão de dados de sensores da rede a IoT e HoloLens para o serviço de campo.",
-    "ferramentas": ["Power BI", "Microsoft Fabric", "IoT", "HoloLens"],
+    "ferramentas": [
+      "Power BI",
+      "Microsoft Fabric",
+      "IoT",
+      "HoloLens"
+    ],
     "resultado": "Redução de até 95% no tempo de geração de relatórios; atendimento ao chamado do cliente cerca de 40% mais ágil; mais de 180 colaboradores com acesso ao Power BI.",
     "metricas": [
-      {"indicador": "Tempo de geração de relatórios", "antes": null, "depois": null, "variacao": "-95% (até)"},
-      {"indicador": "Agilidade no atendimento ao chamado do cliente", "antes": null, "depois": null, "variacao": "+40%"},
-      {"indicador": "Colaboradores com acesso ao Power BI", "antes": null, "depois": "mais de 180", "variacao": null}
+      {
+        "indicador": "Tempo de geração de relatórios",
+        "antes": null,
+        "depois": null,
+        "variacao": "-95% (até)"
+      },
+      {
+        "indicador": "Agilidade no atendimento ao chamado do cliente",
+        "antes": null,
+        "depois": null,
+        "variacao": "+40%"
+      },
+      {
+        "indicador": "Colaboradores com acesso ao Power BI",
+        "antes": null,
+        "depois": "mais de 180",
+        "variacao": null
+      }
     ],
     "complexidade_implantacao": "media",
     "tempo_para_valor": "meses",
@@ -422,7 +643,9 @@
     "id": "R-011",
     "porte": "media",
     "gargalo": "conhecimento",
-    "gargalos_secundarios": ["integracao"],
+    "gargalos_secundarios": [
+      "integracao"
+    ],
     "area": "ti",
     "setor": "seguros (insurtech)",
     "setor_chave": "financeiro_seguros",
@@ -432,10 +655,18 @@
     "titulo": "Copiloto com Gemini gera código de integração à API e leva parceiro a integrar em dois dias",
     "problema": "Integrar-se às APIs de seguradoras é lento e caro para os parceiros, que muitas vezes esperam meses e alguns nunca concluem a integração.",
     "solucao": "O 180 AI Code Buddy, copiloto de IA generativa baseado no Gemini, recebe em linguagem natural a ação desejada (cotar, emitir apólice) e gera o código para a API da 180 Seguros, a partir de contexto da API e da empresa; também responde sobre vendas e reenvia apólices.",
-    "ferramentas": ["Gemini (Google Cloud)", "AWS (produção, multicloud)"],
+    "ferramentas": [
+      "Gemini (Google Cloud)",
+      "AWS (produção, multicloud)"
+    ],
     "resultado": "Um parceiro concluiu a integração em dois dias, contra meses de espera descritos na fonte; a fonte não traz métricas formais de antes e depois.",
     "metricas": [
-      {"indicador": "Tempo de integração de um parceiro (caso citado)", "antes": "meses", "depois": "2 dias", "variacao": null}
+      {
+        "indicador": "Tempo de integração de um parceiro (caso citado)",
+        "antes": "meses",
+        "depois": "2 dias",
+        "variacao": null
+      }
     ],
     "complexidade_implantacao": "media",
     "tempo_para_valor": "semanas",
@@ -462,7 +693,9 @@
     "id": "R-012",
     "porte": "media",
     "gargalo": "comunicacao",
-    "gargalos_secundarios": ["capacidade"],
+    "gargalos_secundarios": [
+      "capacidade"
+    ],
     "area": "atendimento",
     "setor": "apostas esportivas online",
     "setor_chave": "outro",
@@ -472,13 +705,35 @@
     "titulo": "Chatbot de IA responde por 64% dos chamados e reduz a espera de 16 para 3 minutos",
     "problema": "A empresa buscava um atendimento mais resolutivo e com menos tempo de espera.",
     "solucao": "Chatbot Estela construído em três fases (chatbot tradicional, IA conversacional e IA generativa), com autenticação por CPF, detecção de falhas em processos transacionais, interpretação de áudios e transbordo para humano nos casos complexos ou de forte carga emocional.",
-    "ferramentas": ["Blip (plataforma de IA conversacional)"],
+    "ferramentas": [
+      "Blip (plataforma de IA conversacional)"
+    ],
     "resultado": "A Estela responde por 64% dos chamados; tempo médio de espera caiu de 16 para 3 minutos; assertividade de 94%; retenção +20 pontos percentuais; satisfação de 85% para 90%.",
     "metricas": [
-      {"indicador": "Tempo médio de espera", "antes": "16 minutos", "depois": "3 minutos", "variacao": null},
-      {"indicador": "Participação do bot nos chamados", "antes": null, "depois": "64%", "variacao": null},
-      {"indicador": "Assertividade das respostas", "antes": null, "depois": "94%", "variacao": null},
-      {"indicador": "Satisfação do cliente", "antes": "85% (abril)", "depois": "90% (maio)", "variacao": "+5 p.p."}
+      {
+        "indicador": "Tempo médio de espera",
+        "antes": "16 minutos",
+        "depois": "3 minutos",
+        "variacao": null
+      },
+      {
+        "indicador": "Participação do bot nos chamados",
+        "antes": null,
+        "depois": "64%",
+        "variacao": null
+      },
+      {
+        "indicador": "Assertividade das respostas",
+        "antes": null,
+        "depois": "94%",
+        "variacao": null
+      },
+      {
+        "indicador": "Satisfação do cliente",
+        "antes": "85% (abril)",
+        "depois": "90% (maio)",
+        "variacao": "+5 p.p."
+      }
     ],
     "complexidade_implantacao": "media",
     "tempo_para_valor": "meses",
@@ -505,7 +760,10 @@
     "id": "R-013",
     "porte": "media",
     "gargalo": "decisao",
-    "gargalos_secundarios": ["processo", "conhecimento"],
+    "gargalos_secundarios": [
+      "processo",
+      "conhecimento"
+    ],
     "area": "operacoes",
     "setor": "locação de equipamentos pesados (manutenção)",
     "setor_chave": "industria",
@@ -515,12 +773,30 @@
     "titulo": "Agentes de IA interpretam laudos de avarias e cortam a geração de cobranças de 30 dias para menos de 5 minutos",
     "problema": "A análise técnica e a discussão com o cliente sobre reembolso de manutenção de equipamentos pesados levavam, em média, 65 dias.",
     "solucao": "Agentes de IA treinados para interpretar laudos técnicos de avarias mecânicas e gerar pareceres, começando pelo planejamento e controle de manutenção, com expansão prevista para compras, RH e toda a empresa.",
-    "ferramentas": ["Microsoft Copilot Studio", "Microsoft 365"],
+    "ferramentas": [
+      "Microsoft Copilot Studio",
+      "Microsoft 365"
+    ],
     "resultado": "Prazo de geração de cobranças de 30 dias para menos de 5 minutos; time lead de 65 para 20 dias (meta: menos de 10 dias); qualidade dos pareceres técnicos +35%.",
     "metricas": [
-      {"indicador": "Prazo de geração de cobranças", "antes": "30 dias", "depois": "menos de 5 minutos", "variacao": null},
-      {"indicador": "Time lead da análise e reembolso", "antes": "65 dias", "depois": "20 dias", "variacao": "-45 dias"},
-      {"indicador": "Qualidade dos pareceres técnicos", "antes": null, "depois": null, "variacao": "+35% (aprox.)"}
+      {
+        "indicador": "Prazo de geração de cobranças",
+        "antes": "30 dias",
+        "depois": "menos de 5 minutos",
+        "variacao": null
+      },
+      {
+        "indicador": "Time lead da análise e reembolso",
+        "antes": "65 dias",
+        "depois": "20 dias",
+        "variacao": "-45 dias"
+      },
+      {
+        "indicador": "Qualidade dos pareceres técnicos",
+        "antes": null,
+        "depois": null,
+        "variacao": "+35% (aprox.)"
+      }
     ],
     "complexidade_implantacao": "media",
     "tempo_para_valor": "meses",
@@ -547,7 +823,9 @@
     "id": "R-014",
     "porte": "media",
     "gargalo": "conhecimento",
-    "gargalos_secundarios": ["comunicacao"],
+    "gargalos_secundarios": [
+      "comunicacao"
+    ],
     "area": "atendimento",
     "setor": "marketplace de compras e contratações",
     "setor_chave": "tecnologia",
@@ -557,11 +835,23 @@
     "titulo": "Bot com IA generativa passa a responder perguntas abertas de fornecedores e absorve 22% dos atendimentos no primeiro mês",
     "problema": "Os fornecedores recebiam respostas de um menu de textos fixos (FAQ) e dois autosserviços e não podiam fazer perguntas abertas em linguagem natural.",
     "solucao": "A plataforma NIAh, da Neo & Hypeone, combina IA proprietária e IA generativa para o bot responder perguntas abertas nos menus de cadastro de fornecedores e de compras e contratações.",
-    "ferramentas": ["NIAh (Neo & Hypeone)"],
+    "ferramentas": [
+      "NIAh (Neo & Hypeone)"
+    ],
     "resultado": "2,2 mil interações no primeiro mês, cerca de 22% do total de atendimentos; projeto finalizado em cerca de dois meses.",
     "metricas": [
-      {"indicador": "Interações do bot no primeiro mês", "antes": null, "depois": "2,2 mil", "variacao": null},
-      {"indicador": "Participação no total de atendimentos", "antes": null, "depois": "~22%", "variacao": null}
+      {
+        "indicador": "Interações do bot no primeiro mês",
+        "antes": null,
+        "depois": "2,2 mil",
+        "variacao": null
+      },
+      {
+        "indicador": "Participação no total de atendimentos",
+        "antes": null,
+        "depois": "~22%",
+        "variacao": null
+      }
     ],
     "complexidade_implantacao": "media",
     "tempo_para_valor": "meses",
@@ -588,7 +878,10 @@
     "id": "R-015",
     "porte": "media",
     "gargalo": "controle",
-    "gargalos_secundarios": ["processo", "capacidade"],
+    "gargalos_secundarios": [
+      "processo",
+      "capacidade"
+    ],
     "area": "financeiro",
     "setor": "cosméticos (indústria e logística)",
     "setor_chave": "industria",
@@ -598,12 +891,30 @@
     "titulo": "WMS, TMS e faturamento automatizado reduzem o fechamento contábil de 30 para 2 dias",
     "problema": "Processos manuais de estoque, expedição e faturamento, capacidade de armazenagem limitada a 10.000 SKUs, complexidade tributária e equipe de TI sobrecarregada.",
     "solucao": "Implantação de WMS e TMS da Senior com automação do faturamento.",
-    "ferramentas": ["Senior WMS", "Senior TMS"],
+    "ferramentas": [
+      "Senior WMS",
+      "Senior TMS"
+    ],
     "resultado": "Fechamento contábil de 30 para 2 dias; capacidade de armazenagem triplicada sem ampliar o galpão; equipe necessária reduzida em 50%.",
     "metricas": [
-      {"indicador": "Fechamento contábil", "antes": "30 dias", "depois": "2 dias", "variacao": null},
-      {"indicador": "Capacidade de armazenagem", "antes": "10.000 SKUs", "depois": "triplicada", "variacao": "3x"},
-      {"indicador": "Equipe necessária", "antes": null, "depois": null, "variacao": "-50%"}
+      {
+        "indicador": "Fechamento contábil",
+        "antes": "30 dias",
+        "depois": "2 dias",
+        "variacao": null
+      },
+      {
+        "indicador": "Capacidade de armazenagem",
+        "antes": "10.000 SKUs",
+        "depois": "triplicada",
+        "variacao": "3x"
+      },
+      {
+        "indicador": "Equipe necessária",
+        "antes": null,
+        "depois": null,
+        "variacao": "-50%"
+      }
     ],
     "complexidade_implantacao": "alta",
     "tempo_para_valor": "meses",
@@ -624,6 +935,67 @@
     "fonte_nome": "Senior Sistemas (case oficial; página sem data de publicação)",
     "fonte_url": "https://site.senior.com.br/cases/lowell-cosmeticos/",
     "ano": 2026,
+    "confianca": "media"
+  },
+  {
+    "id": "R-016",
+    "porte": "media",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "informacao",
+      "comunicacao"
+    ],
+    "area": "atendimento",
+    "setor": "serviços financeiros / cobrança recorrente (grupo LWSA)",
+    "setor_chave": "financeiro_seguros",
+    "tipo": "nominal",
+    "empresa": "Vindi",
+    "pais": "Brasil",
+    "titulo": "Plataforma única de CRM e atendimento eleva em 95% o nível de serviço e ganha 30 pontos de NPS em três meses",
+    "problema": "Após a integração ao grupo LWSA, a Vindi precisava unificar operações de diferentes unidades de negócio e centralizar dados para ter visão completa do cliente, da captação de leads ao pós-venda.",
+    "solucao": "Ecossistema integrado de serviços financeiros em uma única plataforma Salesforce, com funil de vendas único, atendimento, engajamento digital e IA (Einstein).",
+    "ferramentas": [
+      "Salesforce Sales Cloud",
+      "Service Cloud",
+      "Marketing Cloud",
+      "Digital Engagement",
+      "Einstein",
+      "Data Cloud"
+    ],
+    "resultado": "Aumento de 95% no nível de serviço e ganho de 30 pontos de NPS em três meses (a página não traz valores de referência).",
+    "metricas": [
+      {
+        "indicador": "Nível de serviço",
+        "antes": null,
+        "depois": null,
+        "variacao": "+95%"
+      },
+      {
+        "indicador": "NPS",
+        "antes": null,
+        "depois": null,
+        "variacao": "+30 pontos em 3 meses"
+      }
+    ],
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "esforco_implantacao": "Não informado na fonte.",
+    "como_replicar": [
+      "Mapear onde dados de lead, venda e pós-venda estão em sistemas separados.",
+      "Unificar o funil e o histórico do cliente em um CRM único com atendimento integrado.",
+      "Usar regras e IA do CRM para priorizar e rotear solicitações.",
+      "Medir nível de serviço e NPS antes e depois de cada fase."
+    ],
+    "trecho_comprovante": "um aumento de 95% do nível de serviço",
+    "verificado": true,
+    "forca": "fraca",
+    "funcionarios": 470,
+    "funcionarios_fonte": "LinkedIn (company/vindi): faixa 201-500, 470 funcionários listados",
+    "porte_confirmado": true,
+    "data_fonte": null,
+    "fonte_nome": "Salesforce Brasil (case oficial; página sem data)",
+    "fonte_url": "https://www.salesforce.com/br/customer-stories/grupo-vindi/",
+    "ano": 2025,
     "confianca": "media"
   }
 ]

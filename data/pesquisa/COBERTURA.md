@@ -1,41 +1,41 @@
 # Cobertura do banco de casos
 
-Gerado por `consolidar.py`. Total no app: **181** casos (70 fortes, 111 médios). Fora do app: 50 (fracos, não verificados ou incompletos). Duplicados removidos: 4. Promovidos a forte: 11.
+Gerado por `consolidar.py`. Total no app: **172** casos (67 fortes, 105 médios). Fora do app: 51 (fracos, não verificados ou incompletos) + 9 removidos por verificação bruta/auditoria. Duplicados removidos: 4. Promovidos a forte: 11.
 
 ## Gargalo × porte (forte / total)
 
 | Gargalo | Pequena | Média | Grande | Total |
 |---|---|---|---|---|
 | capacidade | 0/7 | 3/6 | 2/7 | 5/20 |
-| manual_repetitivo | 2/11 | 2/7 | 3/5 | 7/23 |
-| informacao | 1/7 | 2/6 | 6/7 | 9/20 |
-| decisao | 0/3 | 2/5 | 1/6 | 3/14 |
-| processo | 2/7 | 7/7 | 4/6 | 13/20 |
-| integracao | 3/8 | 3/5 | 4/5 | 10/18 |
-| comunicacao | 0/7 | 2/5 | 5/6 | 7/18 |
-| conhecimento | 1/6 | 1/5 | 3/6 | 5/17 |
+| manual_repetitivo | 2/10 | 2/7 | 3/5 | 7/22 |
+| informacao | 1/5 | 2/6 | 6/7 | 9/18 |
+| decisao | 0/2 | 2/5 | 1/6 | 3/13 |
+| processo | 1/6 | 7/7 | 3/6 | 11/19 |
+| integracao | 3/8 | 3/5 | 3/5 | 9/18 |
+| comunicacao | 0/6 | 2/5 | 5/6 | 7/17 |
+| conhecimento | 1/4 | 1/5 | 3/6 | 5/15 |
 | controle | 0/3 | 2/3 | 4/8 | 6/14 |
-| demanda_comercial | 1/9 | 0/1 | 4/7 | 5/17 |
+| demanda_comercial | 1/8 | 0/1 | 4/7 | 5/16 |
 
 ## Setor × porte (total)
 
 | Setor | Pequena | Média | Grande | Total |
 |---|---|---|---|---|
-| agro | 5 | 1 | 1 | 7 |
-| construcao_imoveis | 8 | 1 | 1 | 10 |
+| agro | 2 | 1 | 1 | 4 |
+| construcao_imoveis | 7 | 1 | 1 | 9 |
 | educacao | 2 | 2 | 3 | 7 |
 | financeiro_seguros | 4 | 7 | 20 | 31 |
-| industria | 1 | 6 | 5 | 12 |
+| industria | 0 | 6 | 5 | 11 |
 | logistica | 3 | 5 | 0 | 8 |
-| outro | 5 | 5 | 3 | 13 |
+| outro | 3 | 5 | 3 | 11 |
 | saude | 4 | 5 | 3 | 12 |
 | servicos_b2b | 17 | 3 | 1 | 21 |
 | tecnologia | 7 | 11 | 12 | 30 |
-| varejo_ecommerce | 12 | 4 | 14 | 30 |
+| varejo_ecommerce | 10 | 4 | 14 | 28 |
 
 ## Brasil × exterior
 
-Brasil: 139 · Exterior: 42
+Brasil: 130 · Exterior: 42
 
 ## Células gargalo × porte com menos de 2 casos fortes (lacunas)
 
@@ -43,6 +43,7 @@ Brasil: 139 · Exterior: 42
 - informacao × pequena: 1 forte(s)
 - decisao × pequena: 0 forte(s)
 - decisao × grande: 1 forte(s)
+- processo × pequena: 1 forte(s)
 - comunicacao × pequena: 0 forte(s)
 - conhecimento × pequena: 1 forte(s)
 - conhecimento × media: 1 forte(s)
@@ -52,7 +53,7 @@ Brasil: 139 · Exterior: 42
 
 ## Casos fortes com porte confirmado
 
-36 de 70 fortes.
+33 de 67 fortes.
 
 ## Fora do app
 
@@ -85,6 +86,7 @@ Brasil: 139 · Exterior: 42
 - Q-029 Let's Eat It (fraca)
 - Q-033 Temple (fraca)
 - R-015 Lowell Cosméticos (fraca)
+- R-016 Vindi (fraca)
 - S-011 Huel (fraca)
 - S-016 Wellness Coach (fraca)
 - S-022 Tax Management New Zealand (TMNZ) (fraca)

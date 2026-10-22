@@ -37,7 +37,7 @@ def norm_url(u):
 
 
 def carregar():
-    arquivos = sorted(glob.glob(os.path.join(V2, "*.json")))
+    arquivos = sorted(glob.glob(os.path.join(V2, "enriquecido-*.json")) + glob.glob(os.path.join(V2, "novos-*.json")))
     todos = []
     for f in arquivos:
         for c in json.load(open(f, encoding="utf-8")):
@@ -57,6 +57,41 @@ def main():
                 logs["promovidos"] += 1
             else:
                 logs["promocao_negada"] += 1
+    # verificação no HTML bruto da fonte (verificar_trechos.py)
+    bruta = {}
+    pv = os.path.join(V2, "verificacao-bruta.json")
+    if os.path.exists(pv):
+        bruta = {r["id"]: r for r in json.load(open(pv, encoding="utf-8"))}
+    # auditoria de adequação (auditoria-*.json)
+    aud = {}
+    for f in sorted(glob.glob(os.path.join(V2, "auditoria-*.json"))):
+        for r in json.load(open(f, encoding="utf-8")):
+            aud[r["id"]] = r
+    CAMPOS_TEXTO = {"titulo", "problema", "solucao", "resultado", "como_replicar", "esforco_implantacao"}
+    removidos = {}
+    for c in todos:
+        b = bruta.get(c["id"])
+        c["verificacao_bruta"] = b["status"] if b else "nao_checado"
+        if b and b["status"] == "nao_encontrado":
+            removidos[c["id"]] = "trecho e números não encontrados na página"
+        if b and b["status"] == "indisponivel" and c["forca"] == "forte":
+            c["forca"], c["confianca"] = "media", "media"
+            logs["rebaixados_sem_checagem_bruta"] += 1
+        a = aud.get(c["id"])
+        if a:
+            c["relevancia_pme"] = a.get("relevancia_pme")
+            if a.get("acao") == "remover" or (a.get("relevancia_pme") is not None and a["relevancia_pme"] <= 1):
+                removidos[c["id"]] = "auditoria: " + (a.get("justificativa") or "irrelevante/inadequado")
+            if a.get("acao") == "reclassificar" and a.get("gargalo_sugerido") in GARGALOS:
+                c["gargalo_original"], c["gargalo"] = c["gargalo"], a["gargalo_sugerido"]
+                logs["reclassificados"] += 1
+            if a.get("acao") == "corrigir_texto" and a.get("correcoes"):
+                for k, v in a["correcoes"].items():
+                    if k in CAMPOS_TEXTO and v:
+                        c[k] = v
+                logs["textos_corrigidos"] += 1
+    todos = [c for c in todos if c["id"] not in removidos]
+    logs["removidos_verificacao_ou_auditoria"] = len(removidos)
     # dedupe: mesma fonte_url, ou mesma empresa+título normalizado; mantém a mais forte
     peso = {"forte": 3, "media": 2, "fraca": 1}
     vistos, unicos = {}, []
@@ -92,7 +127,7 @@ def main():
     L.append("# Cobertura do banco de casos\n")
     L.append(f"Gerado por `consolidar.py`. Total no app: **{len(banco)}** casos "
              f"({sum(1 for c in banco if c['forca']=='forte')} fortes, {sum(1 for c in banco if c['forca']=='media')} médios). "
-             f"Fora do app: {len(fora)} (fracos, não verificados ou incompletos). Duplicados removidos: {logs['duplicados']}. "
+             f"Fora do app: {len(fora)} (fracos, não verificados ou incompletos) + {logs['removidos_verificacao_ou_auditoria']} removidos por verificação bruta/auditoria. Duplicados removidos: {logs['duplicados']}. "
              f"Promovidos a forte: {logs['promovidos']}.\n")
     L.append("## Gargalo × porte (forte / total)\n")
     L.append("| Gargalo | Pequena | Média | Grande | Total |\n|---|---|---|---|---|")

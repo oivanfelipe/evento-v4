@@ -35,6 +35,7 @@ function pesoCaso(c, g, resp) {
   if (areas.includes(c.area)) s += 2;
   if (c.setor_chave && c.setor_chave === resp.setor) s += 3;
   if (c.pais === "Brasil") s += 1;
+  if (c.relevancia_pme != null) s += c.relevancia_pme; // 0 a 3, da auditoria de adequação
   if (resp.prazo === "rapido") {
     if (c.complexidade_implantacao === "baixa") s += 2;
     else if (c.complexidade_implantacao === "media") s += 1;

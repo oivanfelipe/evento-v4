@@ -43,7 +43,8 @@
   ],
   "trecho_comprovante": "Cowork has completely changed my business. It's saving me over 21 hours a week.",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "P-007",
@@ -91,7 +92,8 @@
   ],
   "trecho_comprovante": "What used to take our team two days… we now turn around in hours",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "P-010",
@@ -145,7 +147,8 @@
   ],
   "trecho_comprovante": "The agent now resolves 70 to 80 percent of our email tickets",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "P-032",
@@ -203,7 +206,8 @@
   ],
   "trecho_comprovante": "A maioria das empresas pesquisadas disseram usar IA como assistentes virtuais para atendimento ao cliente (69%).",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-003",
@@ -254,7 +258,8 @@
   ],
   "trecho_comprovante": "o crescimento da Virei Contador foi de 300%, e a carteira chegou a 305 clientes ativos",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-025",
@@ -300,7 +305,8 @@
   ],
   "trecho_comprovante": "Em 2-3 dias, os resultados já eram visíveis",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-032",
@@ -351,7 +357,8 @@
   ],
   "trecho_comprovante": "3573 atendimentos automatizados",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-005",
@@ -413,7 +420,8 @@
   "trecho_comprovante": "reduzindo em mais de 50% o tempo operacional dos escritórios de advocacia de massa",
   "verificado": true,
   "forca": "forte",
-  "nota_verificacao": "Página lida (22/05/2026); números confirmados e autodeclarados. A fonte descreve a equipe como 'enxuta' (startup fundada em 2019): é provável que seja pequena, mas não há número; porte não confirmado."
+  "nota_verificacao": "Página lida (22/05/2026); números confirmados e autodeclarados. A fonte descreve a equipe como 'enxuta' (startup fundada em 2019): é provável que seja pequena, mas não há número; porte não confirmado.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "R-003",
@@ -484,7 +492,8 @@
   "fonte_nome": "AWS Brasil Blog",
   "fonte_url": "https://aws.amazon.com/pt/blogs/aws-brasil/como-a-banlek-transforma-o-atendimento-com-ia-generativa-e-agentes-usando-o-amazon-bedrock/",
   "ano": 2026,
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "R-004",
@@ -551,7 +560,8 @@
   "fonte_nome": "AWS Brasil Blog",
   "fonte_url": "https://aws.amazon.com/pt/blogs/aws-brasil/como-a-mecanizou-esta-construindo-um-agente-de-vendas-para-o-mercado-de-autopecas-com-ia-generativa-usando-amazon-bedrock/",
   "ano": 2026,
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-006",
@@ -616,7 +626,8 @@
   "trecho_comprovante": "900+ hours saved monthly for care coordinators, equal to a 13% increase in productivity",
   "verificado": true,
   "forca": "media",
-  "nota_verificacao": "Página lida; números e equipe de 300 pessoas ('Sami's team of 300') confirmados, então porte média confirmado. A página não mostra data de publicação, por isso a força fica em média (forte exigiria data >= 2023 visível). Atenção: o texto fala de enfermeiros e os resultados de coordenadores de cuidado."
+  "nota_verificacao": "Página lida; números e equipe de 300 pessoas ('Sami's team of 300') confirmados, então porte média confirmado. A página não mostra data de publicação, por isso a força fica em média (forte exigiria data >= 2023 visível). Atenção: o texto fala de enfermeiros e os resultados de coordenadores de cuidado.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-007",
@@ -680,7 +691,8 @@
   "trecho_comprovante": "reduces product registration time by 84%",
   "verificado": true,
   "forca": "media",
-  "nota_verificacao": "Página lida; número confirmado. Sem data de publicação (apenas copyright 2026); o ano 2024 era inferência do modelo Claude-2 e não é confirmado. Porte em dúvida: estimativas de terceiros variam de 385 (RocketReach) a 501-1.000 (Indeed) e 'acima de 500' (InfoJobs); pode ser grande."
+  "nota_verificacao": "Página lida; número confirmado. Sem data de publicação (apenas copyright 2026); o ano 2024 era inferência do modelo Claude-2 e não é confirmado. Porte em dúvida: estimativas de terceiros variam de 385 (RocketReach) a 501-1.000 (Indeed) e 'acima de 500' (InfoJobs); pode ser grande.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-017",
@@ -743,7 +755,8 @@
   ],
   "trecho_comprovante": "Em apenas quatro meses, a Dimeg conseguiu remanejar 3.075 horários que seriam desperdiçados.",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-001",
@@ -807,7 +820,8 @@
   ],
   "trecho_comprovante": "handles two-thirds of Klarna’s customer service chats",
   "verificado": true,
-  "forca": "forte"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-003",
@@ -867,7 +881,8 @@
   ],
   "trecho_comprovante": "A taxa de resolução de demandas chega a 82% no primeiro nível de atendimento ao cliente",
   "verificado": true,
-  "forca": "forte"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-004",
@@ -940,7 +955,8 @@
   ],
   "trecho_comprovante": "até 50% das dúvidas de primeiro nível sem necessidade de intervenção humana",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-005",
@@ -999,7 +1015,8 @@
   ],
   "trecho_comprovante": "10% das mediações já são feitas de forma autônoma pelo Verdi.",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-006",
@@ -1060,7 +1077,8 @@
   ],
   "trecho_comprovante": "currently resolving 85 percent of customer queries without human intervention",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-022",
@@ -1125,7 +1143,8 @@
   ],
   "trecho_comprovante": "Nossa ambição é transformar o WhatsApp no principal canal de relacionamento com candidatos e alunos.",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-031",
@@ -1182,7 +1201,8 @@
   ],
   "trecho_comprovante": "A inteligência artificial é potencializadora. Potencializadora da falha, inclusive, se eu tiver erro no fluxo.",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "P-023",
@@ -1236,7 +1256,8 @@
   ],
   "trecho_comprovante": "a gestão de contas a pagar e a receber passou a levar de 5 a 10 minutos",
   "verificado": true,
-  "forca": "forte"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-033",
@@ -1303,7 +1324,8 @@
   ],
   "trecho_comprovante": "Depois de automatizar o processo com a plataforma, esse número caiu para 60 horas.",
   "forca": "forte",
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "P-016",
@@ -1342,49 +1364,8 @@
   ],
   "trecho_comprovante": "usa o aplicativo Gemini para catalogar seu imenso acervo de objetos de cena",
   "verificado": true,
-  "forca": "media"
- },
- {
-  "id": "P-020",
-  "porte": "pequena",
-  "gargalo": "manual_repetitivo",
-  "gargalos_secundarios": [
-   "demanda_comercial"
-  ],
-  "area": "administrativo",
-  "setor": "meio ambiente/bioeconomia",
-  "tipo": "nominal",
-  "empresa": "Ecoporé (Porto Velho, RO)",
-  "pais": "Brasil",
-  "titulo": "Organização ambiental gera o primeiro rascunho de propostas de projeto no Google Docs",
-  "problema": "Redigir propostas de projeto do zero consumia tempo.",
-  "solucao": "Usa o recurso 'Ajude-me a escrever' do Google Docs para criar um rascunho estruturado das propostas.",
-  "ferramentas": [
-   "Google Docs",
-   "Gemini"
-  ],
-  "resultado": "Rascunho gerado 'em segundos' (relato qualitativo; sem métrica de tempo).",
-  "complexidade_implantacao": "baixa",
-  "tempo_para_valor": "dias",
-  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
-  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
-  "ano": 2025,
-  "confianca": "media",
-  "setor_chave": "outro",
-  "funcionarios": null,
-  "porte_confirmado": false,
-  "data_fonte": "2025-10",
-  "metricas": [],
-  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
-  "como_replicar": [
-   "Reunir objetivo, público e orçamento do projeto.",
-   "Pedir ao Google Docs o rascunho estruturado.",
-   "Complementar com dados e a linguagem do edital.",
-   "Revisar antes de enviar."
-  ],
-  "trecho_comprovante": "utiliza o 'Ajude-me a Escrever' no Google Docs para, em segundos, criar uma primeira versão",
-  "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "P-024",
@@ -1432,7 +1413,8 @@
   ],
   "trecho_comprovante": "o que antes tomava cerca de duas horas passou a ser feito em torno de vinte minutos",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "P-030",
@@ -1484,7 +1466,8 @@
   ],
   "trecho_comprovante": "66% dos entrevistados concordam que essas tarefas reduzem a lucratividade do negócio.",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "P-034",
@@ -1545,7 +1528,8 @@
   ],
   "trecho_comprovante": "mais de 3,3 milhões de horas devolvidas aos lojistas.",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-002",
@@ -1590,7 +1574,8 @@
   ],
   "trecho_comprovante": "Folha de pagamento fechada até o dia 2",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-026",
@@ -1641,7 +1626,8 @@
   ],
   "trecho_comprovante": "–30% de redução no trabalho operacional, graças ao chatbot que filtra e qualifica os leads antes do atendimento humano",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-028",
@@ -1694,7 +1680,8 @@
   ],
   "trecho_comprovante": "70% de redução do tempo de resposta com AgentFlow",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-010",
@@ -1744,7 +1731,8 @@
   ],
   "trecho_comprovante": "o tempo necessário para montar uma carga foi reduzido em 60%",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-002",
@@ -1812,7 +1800,8 @@
   "trecho_comprovante": "totalizando cerca de 1,8 mil horas economizadas mensalmente",
   "verificado": true,
   "forca": "forte",
-  "nota_verificacao": "Página lida (30/01/2024); números confirmados. Veloe integra o grupo Elopar (Alelo, Livelo, Veloe), estimado em cerca de 2.058 funcionários (Revelio Labs, set/2025), mas o quadro só da Veloe não foi achado: porte não confirmado e possivelmente diferente de média. Números autodeclarados pelo integrador e pela empresa."
+  "nota_verificacao": "Página lida (30/01/2024); números confirmados. Veloe integra o grupo Elopar (Alelo, Livelo, Veloe), estimado em cerca de 2.058 funcionários (Revelio Labs, set/2025), mas o quadro só da Veloe não foi achado: porte não confirmado e possivelmente diferente de média. Números autodeclarados pelo integrador e pela empresa.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-003",
@@ -1879,7 +1868,8 @@
   "trecho_comprovante": "reduzindo o tempo de análise de currículos de 4 horas para 2 minutos",
   "verificado": true,
   "forca": "forte",
-  "nota_verificacao": "Página lida (14/05/2026); números confirmados e autodeclarados. Quadro da Faceponto não informado (empresa potiguar de ponto eletrônico); os 'de 10 a 12.000 colaboradores' referem-se aos clientes. Porte não confirmado; forte exigiria porte confirmado."
+  "nota_verificacao": "Página lida (14/05/2026); números confirmados e autodeclarados. Quadro da Faceponto não informado (empresa potiguar de ponto eletrônico); os 'de 10 a 12.000 colaboradores' referem-se aos clientes. Porte não confirmado; forte exigiria porte confirmado.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-001",
@@ -1936,7 +1926,8 @@
   "trecho_comprovante": "A digitalização dos dois processos que foram aprimorados economizou em torno de 130 horas por mês de trabalho.",
   "verificado": true,
   "forca": "media",
-  "nota_verificacao": "Página lida; número e data (17/03/2022) confirmados. Funcionários não informados na fonte nem achados em busca; porte mantido como média sem confirmação. Data 2022 limita a força a média."
+  "nota_verificacao": "Página lida; número e data (17/03/2022) confirmados. Funcionários não informados na fonte nem achados em busca; porte mantido como média sem confirmação. Data 2022 limita a força a média.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "R-009",
@@ -2007,7 +1998,8 @@
   "fonte_nome": "Baguete",
   "fonte_url": "https://www.baguete.com.br/noticias/maestra-e-iesde-adotam-rpa-da-automationedge",
   "ano": 2026,
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-002",
@@ -2068,7 +2060,8 @@
   ],
   "trecho_comprovante": "reduzindo o tempo de contratação em 47%",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-004",
@@ -2125,7 +2118,8 @@
   ],
   "trecho_comprovante": "A gente ficava em torno de dois dias inteiros fazendo a análise e o fechamento individual",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-032",
@@ -2192,7 +2186,8 @@
   ],
   "trecho_comprovante": "Mais de 66.000 intimações processadas mensalmente de forma automatizada",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-008",
@@ -2241,7 +2236,8 @@
   ],
   "trecho_comprovante": "recovering 20,000 hours per year for strategy and innovation",
   "verificado": true,
-  "forca": "forte"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-010",
@@ -2304,7 +2300,8 @@
   ],
   "trecho_comprovante": "8.3 less working hours per employee per month",
   "verificado": true,
-  "forca": "forte"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-012",
@@ -2355,7 +2352,8 @@
   ],
   "trecho_comprovante": "reduziu em cerca de 52,2% o volume de chamados direcionados para o Service Desk",
   "verificado": true,
-  "forca": "forte"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-007",
@@ -2404,7 +2402,8 @@
   ],
   "trecho_comprovante": "Mais de 60% de redução no tempo de elaboração",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-009",
@@ -2465,7 +2464,8 @@
   ],
   "trecho_comprovante": "only six months",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-008",
@@ -2536,92 +2536,8 @@
   "trecho_comprovante": "redução de 8 horas para 5 minutos no tempo de geração de um dossiê completo de conta estratégica",
   "verificado": true,
   "forca": "forte",
-  "nota_verificacao": "Página lida (16/03/2026); números confirmados. Porte provavelmente pequeno: reportagem de 2022 (Startupi) cita equipe de 8 pessoas após pré-seed de US$ 130 mil; dado antigo, por isso porte_confirmado=false. Fora da faixa média (51-500) a menos que tenha crescido muito: recomenda-se realocar para o banco de pequenas."
- },
- {
-  "id": "P-014",
-  "porte": "pequena",
-  "gargalo": "informacao",
-  "gargalos_secundarios": [
-   "decisao"
-  ],
-  "area": "operacoes",
-  "setor": "irrigação agrícola",
-  "tipo": "nominal",
-  "empresa": "3V3 (Fortaleza, CE)",
-  "pais": "Brasil",
-  "titulo": "Empresa de irrigação tira insights de planilhas com uma pergunta ao Gemini",
-  "problema": "Dificuldade de transformar dados em insights sem analista dedicado.",
-  "solucao": "Usa o Gemini no Google Planilhas para obter insights dos dados com uma única pergunta.",
-  "ferramentas": [
-   "Google Planilhas",
-   "Gemini"
-  ],
-  "resultado": "Insights obtidos com uma pergunta (relato qualitativo; sem métrica na fonte).",
-  "complexidade_implantacao": "baixa",
-  "tempo_para_valor": "dias",
-  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
-  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
-  "ano": 2025,
-  "confianca": "media",
-  "setor_chave": "agro",
-  "funcionarios": null,
-  "porte_confirmado": false,
-  "data_fonte": "2025-10",
-  "metricas": [],
-  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
-  "como_replicar": [
-   "Organizar os dados de vendas ou operação em uma planilha com cabeçalhos claros.",
-   "Pedir ao Gemini no Planilhas os principais insights.",
-   "Validar os números por amostragem.",
-   "Salvar as perguntas úteis como rotina."
-  ],
-  "trecho_comprovante": "Com o Gemini no Google Planilhas, a empresa transforma os dados em insights com apenas uma pergunta",
-  "verificado": true,
-  "forca": "media"
- },
- {
-  "id": "P-018",
-  "porte": "pequena",
-  "gargalo": "informacao",
-  "gargalos_secundarios": [
-   "comunicacao",
-   "demanda_comercial"
-  ],
-  "area": "comercial",
-  "setor": "chocolate/cacau",
-  "tipo": "nominal",
-  "empresa": "Cacauaré (Mocajuba, PA)",
-  "pais": "Brasil",
-  "titulo": "Produtora de cacau resume e-mails para achar ideias e parcerias com o Gemini no Gmail",
-  "problema": "Dificuldade de identificar novas ideias e parcerias em meio ao volume de e-mails.",
-  "solucao": "Usa o Gemini no Gmail para resumir os pontos principais das mensagens.",
-  "ferramentas": [
-   "Gmail",
-   "Gemini"
-  ],
-  "resultado": "Pontos principais (ideias, parcerias) identificados por resumo automático (relato qualitativo; sem métrica na fonte).",
-  "complexidade_implantacao": "baixa",
-  "tempo_para_valor": "dias",
-  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
-  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
-  "ano": 2025,
-  "confianca": "media",
-  "setor_chave": "agro",
-  "funcionarios": null,
-  "porte_confirmado": false,
-  "data_fonte": "2025-10",
-  "metricas": [],
-  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
-  "como_replicar": [
-   "Ativar o Gemini no Gmail.",
-   "Pedir resumos de threads longos.",
-   "Marcar oportunidades de parceria para acompanhamento.",
-   "Responder às mais relevantes primeiro."
-  ],
-  "trecho_comprovante": "A empresa usa o Gemini no Gmail para obter um resumo dos pontos mais importantes",
-  "verificado": true,
-  "forca": "media"
+  "nota_verificacao": "Página lida (16/03/2026); números confirmados. Porte provavelmente pequeno: reportagem de 2022 (Startupi) cita equipe de 8 pessoas após pré-seed de US$ 130 mil; dado antigo, por isso porte_confirmado=false. Fora da faixa média (51-500) a menos que tenha crescido muito: recomenda-se realocar para o banco de pequenas.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-001",
@@ -2672,7 +2588,8 @@
   ],
   "trecho_comprovante": "Hoje isso vira número: até 4 meses de atraso eliminados, numa estrutura que já são 3 empresas.",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-005",
@@ -2723,7 +2640,8 @@
   ],
   "trecho_comprovante": "Hoje a Syhus atende 200 clientes, que juntos somam R$ 600 milhões em faturamento.",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-006",
@@ -2768,7 +2686,8 @@
   ],
   "trecho_comprovante": "Hoje a Softcon atua com cerca de 300 clientes",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-040",
@@ -2823,7 +2742,8 @@
   ],
   "trecho_comprovante": "Diminuíram em 40% os custos de produção agrícola.",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "R-007",
@@ -2880,7 +2800,8 @@
   "fonte_nome": "IT Forum",
   "fonte_url": "https://itforum.com.br/noticias/centroflora-ambiente-industrial-automacao/",
   "ano": 2024,
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "R-010",
@@ -2945,7 +2866,8 @@
   "fonte_nome": "Baguete",
   "fonte_url": "https://www.baguete.com.br/noticias/coprel-integra-dados-com-microsoft",
   "ano": 2026,
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-009",
@@ -3017,7 +2939,8 @@
   "trecho_comprovante": "Economia de 95% do esforço do time de Pesquisa na análise de comentaríos de stakeholders",
   "verificado": true,
   "forca": "media",
-  "nota_verificacao": "Fonte primária encontrada e lida (página de caso do Google Cloud, lida via download direto), substituindo a lista do blog Google. O 95% é a redução conjunta do esforço da pesquisa; a lista dizia '95% do tempo'. A página não tem data visível (lista do blog: 20/03/2025). Startup spin-off da USP; número de funcionários não achado (porte provavelmente pequeno, não confirmado)."
+  "nota_verificacao": "Fonte primária encontrada e lida (página de caso do Google Cloud, lida via download direto), substituindo a lista do blog Google. O 95% é a redução conjunta do esforço da pesquisa; a lista dizia '95% do tempo'. A página não tem data visível (lista do blog: 20/03/2025). Startup spin-off da USP; número de funcionários não achado (porte provavelmente pequeno, não confirmado).",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-035",
@@ -3072,7 +2995,8 @@
   "forca": "media",
   "confianca": "media",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-012",
@@ -3128,7 +3052,8 @@
   ],
   "trecho_comprovante": "A Nilo Maia Distribuidora registrou um aumento de 26,7% no faturamento",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-016",
@@ -3182,7 +3107,8 @@
   ],
   "trecho_comprovante": "Projeto previa a gestão de mais de 2,5 mil SKUs com a implementação de 32 pontos de coleta de dados.",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-015",
@@ -3230,7 +3156,8 @@
   ],
   "trecho_comprovante": "cutting document review times from one hour to just five minutes",
   "verificado": true,
-  "forca": "forte"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-003",
@@ -3280,7 +3207,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-009",
@@ -3345,7 +3273,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-025",
@@ -3410,7 +3339,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-026",
@@ -3466,7 +3396,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-037",
@@ -3525,7 +3456,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-015",
@@ -3587,7 +3519,8 @@
   "forca": "media",
   "confianca": "media",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-011",
@@ -3651,49 +3584,8 @@
   "trecho_comprovante": "que passou de 90 minutos para 24 segundos com o uso do modelo Gemini",
   "verificado": true,
   "forca": "media",
-  "nota_verificacao": "Página lida (16/05/2025); números confirmados. Número principal e ganhos das imobiliárias são autodeclarados e a fonte é imprensa de startups (secundária ao Google). Porte corrigido para pequena: perfil da Startupi indica 17 funcionários (provavelmente 2023); fora da faixa média, recomenda-se realocar."
- },
- {
-  "id": "P-015",
-  "porte": "pequena",
-  "gargalo": "decisao",
-  "gargalos_secundarios": [
-   "informacao"
-  ],
-  "area": "operacoes",
-  "setor": "brinquedos de madeira (fabricação artesanal)",
-  "tipo": "nominal",
-  "empresa": "Ateliê Materno (Florianópolis, SC)",
-  "pais": "Brasil",
-  "titulo": "Fabricante de brinquedos gera gráficos de vendas e previsão de demanda com o Gemini no Planilhas",
-  "problema": "Dificuldade para prever a demanda a partir dos números de venda.",
-  "solucao": "Usa o Gemini no Google Planilhas para gerar gráficos de vendas automaticamente e melhorar a previsão de demanda.",
-  "ferramentas": [
-   "Google Planilhas",
-   "Gemini"
-  ],
-  "resultado": "Gráficos automáticos e previsão de demanda melhor (relato qualitativo; sem métrica na fonte).",
-  "complexidade_implantacao": "baixa",
-  "tempo_para_valor": "dias",
-  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
-  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
-  "ano": 2025,
-  "confianca": "media",
-  "setor_chave": "industria",
-  "funcionarios": null,
-  "porte_confirmado": false,
-  "data_fonte": "2025-10",
-  "metricas": [],
-  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
-  "como_replicar": [
-   "Consolidar o histórico de vendas mensal por produto em planilha.",
-   "Pedir ao Gemini gráficos de sazonalidade e produtos de maior giro.",
-   "Usar a leitura para planejar a produção.",
-   "Comparar o previsto com o vendido a cada mês."
-  ],
-  "trecho_comprovante": "utiliza o Gemini no Google Planilhas para gerar gráficos de vendas automaticamente",
-  "verificado": true,
-  "forca": "media"
+  "nota_verificacao": "Página lida (16/05/2025); números confirmados. Número principal e ganhos das imobiliárias são autodeclarados e a fonte é imprensa de startups (secundária ao Google). Porte corrigido para pequena: perfil da Startupi indica 17 funcionários (provavelmente 2023); fora da faixa média, recomenda-se realocar.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-014",
@@ -3757,7 +3649,8 @@
   "forca": "media",
   "confianca": "media",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "R-013",
@@ -3820,7 +3713,8 @@
   "fonte_nome": "Baguete",
   "fonte_url": "https://www.baguete.com.br/noticias/wpx-acelera-operacao-com-copilot",
   "ano": 2025,
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-005",
@@ -3871,7 +3765,8 @@
   ],
   "trecho_comprovante": "Toda essa modernização fez com que turnover fosse reduzido de 10% para 0,5%",
   "forca": "forte",
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-012",
@@ -3928,7 +3823,8 @@
   "trecho_comprovante": "uma redução superior a 50% no esforço de atendimento",
   "verificado": true,
   "forca": "media",
-  "nota_verificacao": "Página lida via WebFetch (12/08/2026); a verificação por download direto foi bloqueada (paywall), então o trecho vem apenas da leitura da ferramenta. Quadro de funcionários da CS Frotas/Triggo não informado; porte não confirmado (a Triggo foi fundada em 2021 segundo a matéria). Sem valor para o tempo de decisão."
+  "nota_verificacao": "Página lida via WebFetch (12/08/2026); a verificação por download direto foi bloqueada (paywall), então o trecho vem apenas da leitura da ferramenta. Quadro de funcionários da CS Frotas/Triggo não informado; porte não confirmado (a Triggo foi fundada em 2021 segundo a matéria). Sem valor para o tempo de decisão.",
+  "verificacao_bruta": "numeros_ok"
  },
  {
   "id": "S-036",
@@ -3986,7 +3882,8 @@
   "forca": "media",
   "confianca": "media",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-009",
@@ -4047,7 +3944,8 @@
   ],
   "trecho_comprovante": "redução de 20% nos custos de entrega",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-028",
@@ -4096,7 +3994,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-020",
@@ -4162,7 +4061,8 @@
   ],
   "trecho_comprovante": "closes deals with 68% of the suppliers with which it's used",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_parcial"
  },
  {
   "id": "G-021",
@@ -4208,7 +4108,8 @@
   ],
   "trecho_comprovante": "de um dia para dez minutos",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-022",
@@ -4262,7 +4163,8 @@
   ],
   "trecho_comprovante": "com um salto de 10 vezes na velocidade de análise de risco de crédito",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-027",
@@ -4317,7 +4219,8 @@
   "forca": "media",
   "confianca": "media",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-029",
@@ -4371,7 +4274,8 @@
   "forca": "media",
   "confianca": "media",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "P-008",
@@ -4426,99 +4330,8 @@
   ],
   "trecho_comprovante": "took their fuel tax filing error rate from 7% to zero",
   "verificado": true,
-  "forca": "forte"
- },
- {
-  "id": "S-018",
-  "porte": "pequena",
-  "gargalo": "processo",
-  "gargalos_secundarios": [
-   "integracao",
-   "manual_repetitivo"
-  ],
-  "area": "administrativo",
-  "setor": "terceiro setor",
-  "setor_chave": "outro",
-  "empresa": "OCC (Obras de Caridade, ONG para migrantes e refugiados)",
-  "pais": "Grécia",
-  "funcionarios": 20,
-  "porte_confirmado": true,
-  "titulo": "ONG de 20 pessoas automatiza folha, despesas e conciliação bancária com Make e Airtable",
-  "problema": "Com equipe e verba limitadas, o backoffice consumia tempo que deveria ir para os programas.",
-  "solucao": "Make e Airtable automatizam recibos de pagamento, lembretes de despesas, emissão e arquivamento de faturas e sincronização com transações bancárias.",
-  "ferramentas": [
-   "Make",
-   "Airtable"
-  ],
-  "resultado": "Economia estimada de 8 a 10 horas por semana.",
-  "metricas": [
-   {
-    "indicador": "Horas poupadas por semana",
-    "antes": null,
-    "depois": "8-10 h (estimativa)",
-    "variacao": null
-   }
-  ],
-  "esforco_implantacao": null,
-  "como_replicar": [
-   "Listar as tarefas administrativas recorrentes.",
-   "Centralizar dados em Airtable/planilha.",
-   "Automatizar documentos e lembretes.",
-   "Sincronizar com extratos bancários."
-  ],
-  "trecho_comprovante": "They confidently estimate about an 8-10 hour-per-week time savings thanks to their use of Airtable and Make.",
-  "complexidade_implantacao": "baixa",
-  "tempo_para_valor": "semanas",
-  "fonte_nome": "Make - OCC",
-  "fonte_url": "https://www.make.com/en/success-stories/refugees-automation-project",
-  "ano": 2023,
-  "data_fonte": "2023-08",
   "forca": "forte",
-  "confianca": "alta",
-  "tipo": "nominal",
-  "verificado": true
- },
- {
-  "id": "P-019",
-  "porte": "pequena",
-  "gargalo": "processo",
-  "gargalos_secundarios": [
-   "comunicacao"
-  ],
-  "area": "administrativo",
-  "setor": "papel reciclado com sementes",
-  "tipo": "nominal",
-  "empresa": "Papel Semente (São Gonçalo, RJ)",
-  "pais": "Brasil",
-  "titulo": "Empresa organiza decisões e próximos passos de reuniões com o Gemini no Meet",
-  "problema": "Dificuldade de organizar resultados e próximos passos das reuniões.",
-  "solucao": "Usa o Gemini no Google Meet para anotar, resumir e organizar os próximos passos.",
-  "ferramentas": [
-   "Google Meet",
-   "Gemini"
-  ],
-  "resultado": "Atas e próximos passos gerados automaticamente (relato qualitativo; sem métrica na fonte).",
-  "complexidade_implantacao": "baixa",
-  "tempo_para_valor": "dias",
-  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
-  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
-  "ano": 2025,
-  "confianca": "media",
-  "setor_chave": "outro",
-  "funcionarios": null,
-  "porte_confirmado": false,
-  "data_fonte": "2025-10",
-  "metricas": [],
-  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
-  "como_replicar": [
-   "Ativar a anotação com Gemini no Meet.",
-   "Revisar a ata ao fim da reunião.",
-   "Enviar os próximos passos ao grupo com responsáveis.",
-   "Acompanhar os itens na reunião seguinte."
-  ],
-  "trecho_comprovante": "A empresa usa o Gemini no Meet para anotar tudo o que é discutido em reunião",
-  "verificado": true,
-  "forca": "media"
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-018",
@@ -4571,7 +4384,8 @@
   ],
   "trecho_comprovante": "o volume de vendas cresceu 135%, passando de 129 unidades em 2024 para 303 unidades em 2025",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-034",
@@ -4623,7 +4437,59 @@
   ],
   "trecho_comprovante": "A plataforma chegou para preencher uma lacuna.",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "S-018",
+  "porte": "pequena",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "integracao",
+   "manual_repetitivo"
+  ],
+  "area": "administrativo",
+  "setor": "terceiro setor",
+  "setor_chave": "outro",
+  "empresa": "OCC (Obras de Caridade, ONG para migrantes e refugiados)",
+  "pais": "Grécia",
+  "funcionarios": 20,
+  "porte_confirmado": true,
+  "titulo": "ONG de 20 pessoas automatiza folha, despesas e conciliação bancária com Make e Airtable",
+  "problema": "Com equipe e verba limitadas, o backoffice consumia tempo que deveria ir para os programas.",
+  "solucao": "Make e Airtable automatizam recibos de pagamento, lembretes de despesas, emissão e arquivamento de faturas e sincronização com transações bancárias.",
+  "ferramentas": [
+   "Make",
+   "Airtable"
+  ],
+  "resultado": "Economia estimada de 8 a 10 horas por semana.",
+  "metricas": [
+   {
+    "indicador": "Horas poupadas por semana",
+    "antes": null,
+    "depois": "8-10 h (estimativa)",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Listar as tarefas administrativas recorrentes.",
+   "Centralizar dados em Airtable/planilha.",
+   "Automatizar documentos e lembretes.",
+   "Sincronizar com extratos bancários."
+  ],
+  "trecho_comprovante": "They confidently estimate about an 8-10 hour-per-week time savings thanks to their use of Airtable and Make.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Make - OCC",
+  "fonte_url": "https://www.make.com/en/success-stories/refugees-automation-project",
+  "ano": 2023,
+  "data_fonte": "2023-08",
+  "forca": "media",
+  "confianca": "media",
+  "tipo": "nominal",
+  "verificado": true,
+  "verificacao_bruta": "indisponivel"
  },
  {
   "id": "T-027",
@@ -4675,7 +4541,8 @@
   ],
   "trecho_comprovante": "Empresa reduziu em 85% o tempo de formalização de contratos.",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-035",
@@ -4730,7 +4597,8 @@
   ],
   "trecho_comprovante": "uma operação que costumava levar de 3 a 4 horas passou a ser concluída em apenas uma",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-014",
@@ -4787,7 +4655,8 @@
   "trecho_comprovante": "Antes da automação, o preenchimento de laudos técnicos levava cerca de três horas. Agora, o processo é concluído em três minutos.",
   "verificado": true,
   "forca": "forte",
-  "nota_verificacao": "Página lida (06/07/2023); números confirmados. A matéria cita 11 escritórios e mais de 8 mil empresas clientes, mas não o quadro de funcionários da Maxipas (só os ~1,4 mil da Selbetti); franquia com 16 unidades segundo o Portal do Franchising. Porte não confirmado."
+  "nota_verificacao": "Página lida (06/07/2023); números confirmados. A matéria cita 11 escritórios e mais de 8 mil empresas clientes, mas não o quadro de funcionários da Maxipas (só os ~1,4 mil da Selbetti); franquia com 16 unidades segundo o Portal do Franchising. Porte não confirmado.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "R-002",
@@ -4850,7 +4719,8 @@
   "fonte_nome": "Baguete",
   "fonte_url": "https://www.baguete.com.br/public/noticias/evoluservices-automatiza-onboarding-com-pipefy",
   "ano": 2025,
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "R-006",
@@ -4916,7 +4786,8 @@
   "fonte_nome": "AWS Brasil Blog",
   "fonte_url": "https://aws.amazon.com/pt/blogs/aws-brasil/como-o-colab-e-a-aws-aceleraram-a-criacao-de-servicos-publicos-com-no-code-e-ia-generativa/",
   "ano": 2025,
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "R-008",
@@ -4967,7 +4838,8 @@
   "fonte_nome": "Baguete",
   "fonte_url": "https://www.baguete.com.br/public/noticias/pedroso-adota-solucoes-da-maximatech",
   "ano": 2026,
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-005",
@@ -5025,7 +4897,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-007",
@@ -5086,7 +4959,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-001",
@@ -5147,7 +5021,8 @@
   ],
   "trecho_comprovante": "Esses resultados representam a economia de R$ 1.703,44/mês",
   "forca": "forte",
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-025",
@@ -5207,7 +5082,8 @@
   ],
   "trecho_comprovante": "a savings of over 4,500 years of development work",
   "verificado": true,
-  "forca": "forte"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-002",
@@ -5263,62 +5139,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
- },
- {
-  "id": "S-021",
-  "porte": "grande",
-  "gargalo": "processo",
-  "gargalos_secundarios": [
-   "integracao"
-  ],
-  "area": "ti",
-  "setor": "serviços de treinamento",
-  "setor_chave": "educacao",
-  "empresa": "FranklinCovey",
-  "pais": "Estados Unidos",
-  "funcionarios": 3000,
-  "porte_confirmado": true,
-  "titulo": "FranklinCovey substitui barramento de 15 anos por Make: processo de RH cai de 30 dias para 2 horas",
-  "problema": "Barramento de serviços com 15 anos, caro e difícil de manter, e processos manuais; um app financeiro custaria ~US$ 60 mil/ano.",
-  "solucao": "Usou o Make como integração e automação sem mudar sistemas centrais, evitou comprar o app financeiro e criou automações por área.",
-  "ferramentas": [
-   "Make",
-   "Make AI Agents"
-  ],
-  "resultado": "~US$ 60 mil/ano evitados; um processo de RH de 30 dias para 2 horas; centenas de milhares de dólares economizados.",
-  "metricas": [
-   {
-    "indicador": "Processo anual de RH",
-    "antes": "30 dias",
-    "depois": "2 horas",
-    "variacao": null
-   },
-   {
-    "indicador": "Software evitado",
-    "antes": null,
-    "depois": "~US$ 60 mil/ano",
-    "variacao": null
-   }
-  ],
-  "esforco_implantacao": null,
-  "como_replicar": [
-   "Inventariar integrações legadas.",
-   "Reimplementar as de maior custo em plataforma visual.",
-   "Customizar ferramentas em vez de comprar novas.",
-   "Medir dias e horas por processo."
-  ],
-  "trecho_comprovante": "When evaluating a new finance application, FranklinCovey found it would cost around $60,000 per year.",
-  "complexidade_implantacao": "alta",
-  "tempo_para_valor": "meses",
-  "fonte_nome": "Make - Success story FranklinCovey",
-  "fonte_url": "https://www.make.com/en/success-stories/franklin-covey-make-success-story",
-  "ano": 2025,
-  "data_fonte": "2025-09",
-  "forca": "forte",
-  "confianca": "alta",
-  "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-018",
@@ -5380,7 +5202,8 @@
   ],
   "trecho_comprovante": "Ambos os ciclos trouxeram um retorno sobre o investimento de 517%",
   "forca": "forte",
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-024",
@@ -5441,7 +5264,8 @@
   ],
   "trecho_comprovante": "de 18 dias para 14h (automatizado)",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-015",
@@ -5507,7 +5331,64 @@
   "trecho_comprovante": "1.219 pedidos captados (925 toneladas de produtos)",
   "verificado": true,
   "forca": "media",
-  "nota_verificacao": "Página lida; números confirmados. Sem data de publicação (texto indica troca de ERP em dez/2025-jan/2026, logo >= 2026). Porte corrigido para grande por indício: faturamento de cerca de R$ 1,3 bi em 2024 (Diário do Comércio) e 220 vendedores; quadro de funcionários não achado, por isso porte_confirmado=false. Fora da faixa média, recomenda-se realocar."
+  "nota_verificacao": "Página lida; números confirmados. Sem data de publicação (texto indica troca de ERP em dez/2025-jan/2026, logo >= 2026). Porte corrigido para grande por indício: faturamento de cerca de R$ 1,3 bi em 2024 (Diário do Comércio) e 220 vendedores; quadro de funcionários não achado, por isso porte_confirmado=false. Fora da faixa média, recomenda-se realocar.",
+  "verificacao_bruta": "trecho_ok"
+ },
+ {
+  "id": "S-021",
+  "porte": "grande",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "integracao"
+  ],
+  "area": "ti",
+  "setor": "serviços de treinamento",
+  "setor_chave": "educacao",
+  "empresa": "FranklinCovey",
+  "pais": "Estados Unidos",
+  "funcionarios": 3000,
+  "porte_confirmado": true,
+  "titulo": "FranklinCovey substitui barramento de 15 anos por Make: processo de RH cai de 30 dias para 2 horas",
+  "problema": "Barramento de serviços com 15 anos, caro e difícil de manter, e processos manuais; um app financeiro custaria ~US$ 60 mil/ano.",
+  "solucao": "Usou o Make como integração e automação sem mudar sistemas centrais, evitou comprar o app financeiro e criou automações por área.",
+  "ferramentas": [
+   "Make",
+   "Make AI Agents"
+  ],
+  "resultado": "~US$ 60 mil/ano evitados; um processo de RH de 30 dias para 2 horas; centenas de milhares de dólares economizados.",
+  "metricas": [
+   {
+    "indicador": "Processo anual de RH",
+    "antes": "30 dias",
+    "depois": "2 horas",
+    "variacao": null
+   },
+   {
+    "indicador": "Software evitado",
+    "antes": null,
+    "depois": "~US$ 60 mil/ano",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Inventariar integrações legadas.",
+   "Reimplementar as de maior custo em plataforma visual.",
+   "Customizar ferramentas em vez de comprar novas.",
+   "Medir dias e horas por processo."
+  ],
+  "trecho_comprovante": "When evaluating a new finance application, FranklinCovey found it would cost around $60,000 per year.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Make - Success story FranklinCovey",
+  "fonte_url": "https://www.make.com/en/success-stories/franklin-covey-make-success-story",
+  "ano": 2025,
+  "data_fonte": "2025-09",
+  "forca": "media",
+  "confianca": "media",
+  "tipo": "nominal",
+  "verificado": true,
+  "verificacao_bruta": "indisponivel"
  },
  {
   "id": "P-003",
@@ -5564,7 +5445,8 @@
   ],
   "trecho_comprovante": "That work now saves him roughly 5-6 hours a week, almost a full workweek each month",
   "verificado": true,
-  "forca": "forte"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-009",
@@ -5620,7 +5502,8 @@
   ],
   "trecho_comprovante": "ele cresceu 40%",
   "verificado": true,
-  "forca": "forte"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-017",
@@ -5683,7 +5566,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "P-033",
@@ -5735,7 +5619,8 @@
   ],
   "trecho_comprovante": "twice as likely to have an integrated tech stack (66% vs 32%)",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-008",
@@ -5780,7 +5665,8 @@
   ],
   "trecho_comprovante": "a Anexo passou a oferecer 5 novos serviços, de marketing a consultoria",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-019",
@@ -5839,7 +5725,8 @@
   ],
   "trecho_comprovante": "+3k% geração de leads",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "numeros_ok"
  },
  {
   "id": "S-019",
@@ -5900,7 +5787,8 @@
   "forca": "media",
   "confianca": "media",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "indisponivel"
  },
  {
   "id": "T-034",
@@ -5955,7 +5843,8 @@
   ],
   "trecho_comprovante": "Depois que a Conta Azul entrou na rotina contábil, o crescimento da Virei Contador foi de 300%",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-017",
@@ -6026,7 +5915,8 @@
   "trecho_comprovante": "Processo automatizado elimina trabalho manual em até 80%.",
   "verificado": true,
   "forca": "forte",
-  "nota_verificacao": "Página lida (13/05/2025); números confirmados. Funcionários: Exame (2013) cita 371 em 2012 (176 em 2010); atualmente o grupo está em mais de 100 cidades, então o quadro atual pode ser maior: porte não confirmado, possivelmente próximo ou acima de 500."
+  "nota_verificacao": "Página lida (13/05/2025); números confirmados. Funcionários: Exame (2013) cita 371 em 2012 (176 em 2010); atualmente o grupo está em mais de 100 cidades, então o quadro atual pode ser maior: porte não confirmado, possivelmente próximo ou acima de 500.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-018",
@@ -6097,7 +5987,8 @@
   "trecho_comprovante": "Ferramenta permite que cerca de 85% dos atendimentos sejam resolvidos automaticamente.",
   "verificado": true,
   "forca": "forte",
-  "nota_verificacao": "Página lida (02/10/2026); números confirmados, autodeclarados (Baguete, release do integrador). Funcionários não informados nem achados; porte não confirmado."
+  "nota_verificacao": "Página lida (02/10/2026); números confirmados, autodeclarados (Baguete, release do integrador). Funcionários não informados nem achados; porte não confirmado.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-040",
@@ -6149,7 +6040,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-006",
@@ -6220,7 +6112,8 @@
   "forca": "media",
   "confianca": "media",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-041",
@@ -6269,7 +6162,8 @@
   "forca": "media",
   "confianca": "media",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-019",
@@ -6346,7 +6240,8 @@
   "trecho_comprovante": "A iniciativa resultou em uma redução de 28% no tempo médio de atendimento (TMA)",
   "verificado": true,
   "forca": "forte",
-  "nota_verificacao": "Página lida (19/10/2026); números confirmados. Porte corrigido para grande: a própria matéria cita mais de 1,5 milhão de clientes, atuação em mais de 390 cidades e mais de 1.200 profissionais treinados (quadro exato não informado). Caso fora da faixa média: realocar para o banco de grandes. Forte apenas pelos critérios de qualidade da fonte."
+  "nota_verificacao": "Página lida (19/10/2026); números confirmados. Porte corrigido para grande: a própria matéria cita mais de 1,5 milhão de clientes, atuação em mais de 390 cidades e mais de 1.200 profissionais treinados (quadro exato não informado). Caso fora da faixa média: realocar para o banco de grandes. Forte apenas pelos critérios de qualidade da fonte.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-001",
@@ -6410,7 +6305,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-004",
@@ -6469,64 +6365,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
- },
- {
-  "id": "S-039",
-  "porte": "grande",
-  "gargalo": "integracao",
-  "gargalos_secundarios": [
-   "manual_repetitivo",
-   "processo"
-  ],
-  "area": "financeiro",
-  "setor": "tecnologia (software)",
-  "setor_chave": "tecnologia",
-  "empresa": "Celonis",
-  "pais": "Alemanha",
-  "funcionarios": null,
-  "porte_confirmado": true,
-  "titulo": "Celonis liga Brightflag a Workday via Make: fatura sem toque em ~5 min",
-  "problema": "Faturas jurídicas eram redigitadas no Workday e cada integração exigia código.",
-  "solucao": "Pipeline com Make e apps customizados para OpenAI, Gemini e Vertex AI.",
-  "ferramentas": [
-   "Make",
-   "Workday",
-   "Brightflag"
-  ],
-  "resultado": "Integrações 5x mais rápidas; setup -80%; fatura em ~5 minutos.",
-  "metricas": [
-   {
-    "indicador": "Velocidade de integração",
-    "antes": null,
-    "depois": null,
-    "variacao": "5x"
-   },
-   {
-    "indicador": "Setup",
-    "antes": null,
-    "depois": null,
-    "variacao": "-80%"
-   }
-  ],
-  "esforco_implantacao": "Primeiro app em um fim de semana.",
-  "como_replicar": [
-   "Mapear redigitação.",
-   "Fluxo entre sistemas.",
-   "Templates.",
-   "Medir."
-  ],
-  "trecho_comprovante": "Make lets us deliver integrations about 5× faster than legacy tools like Workday Studio.",
-  "complexidade_implantacao": "media",
-  "tempo_para_valor": "semanas",
-  "fonte_nome": "Make - Celonis",
-  "fonte_url": "https://www.make.com/en/success-stories/celonis-business-system-integrations-make",
-  "ano": 2025,
-  "data_fonte": "2025-07",
-  "forca": "forte",
-  "confianca": "alta",
-  "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-026",
@@ -6586,7 +6426,66 @@
   ],
   "trecho_comprovante": "ganho de tempo de até 80%",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "numeros_ok"
+ },
+ {
+  "id": "S-039",
+  "porte": "grande",
+  "gargalo": "integracao",
+  "gargalos_secundarios": [
+   "manual_repetitivo",
+   "processo"
+  ],
+  "area": "financeiro",
+  "setor": "tecnologia (software)",
+  "setor_chave": "tecnologia",
+  "empresa": "Celonis",
+  "pais": "Alemanha",
+  "funcionarios": null,
+  "porte_confirmado": true,
+  "titulo": "Celonis liga Brightflag a Workday via Make: fatura sem toque em ~5 min",
+  "problema": "Faturas jurídicas eram redigitadas no Workday e cada integração exigia código.",
+  "solucao": "Pipeline com Make e apps customizados para OpenAI, Gemini e Vertex AI.",
+  "ferramentas": [
+   "Make",
+   "Workday",
+   "Brightflag"
+  ],
+  "resultado": "Integrações 5x mais rápidas; setup -80%; fatura em ~5 minutos.",
+  "metricas": [
+   {
+    "indicador": "Velocidade de integração",
+    "antes": null,
+    "depois": null,
+    "variacao": "5x"
+   },
+   {
+    "indicador": "Setup",
+    "antes": null,
+    "depois": null,
+    "variacao": "-80%"
+   }
+  ],
+  "esforco_implantacao": "Primeiro app em um fim de semana.",
+  "como_replicar": [
+   "Mapear redigitação.",
+   "Fluxo entre sistemas.",
+   "Templates.",
+   "Medir."
+  ],
+  "trecho_comprovante": "Make lets us deliver integrations about 5× faster than legacy tools like Workday Studio.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Make - Celonis",
+  "fonte_url": "https://www.make.com/en/success-stories/celonis-business-system-integrations-make",
+  "ano": 2025,
+  "data_fonte": "2025-07",
+  "forca": "media",
+  "confianca": "media",
+  "tipo": "nominal",
+  "verificado": true,
+  "verificacao_bruta": "indisponivel"
  },
  {
   "id": "P-011",
@@ -6634,47 +6533,8 @@
   ],
   "trecho_comprovante": "The solution was remarkably easy and fast to implement—taking just 2-3 hours to understand, test, and integrate.",
   "verificado": true,
-  "forca": "media"
- },
- {
-  "id": "P-017",
-  "porte": "pequena",
-  "gargalo": "comunicacao",
-  "gargalos_secundarios": [],
-  "area": "administrativo",
-  "setor": "agricultura (hortifruti com loja própria)",
-  "tipo": "nominal",
-  "empresa": "Sítio Geranium (Taguatinga, DF)",
-  "pais": "Brasil",
-  "titulo": "Sítio agiliza a comunicação com fornecedores usando 'Ajude-me a escrever' no Gmail",
-  "problema": "A comunicação com fornecedores era lenta.",
-  "solucao": "Usa o recurso de escrita assistida do Gemini no Gmail para redigir mensagens a fornecedores.",
-  "ferramentas": [
-   "Gmail",
-   "Gemini"
-  ],
-  "resultado": "Comunicação com fornecedores mais rápida (relato qualitativo; sem métrica na fonte).",
-  "complexidade_implantacao": "baixa",
-  "tempo_para_valor": "dias",
-  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
-  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
-  "ano": 2025,
-  "confianca": "media",
-  "setor_chave": "agro",
-  "funcionarios": null,
-  "porte_confirmado": false,
-  "data_fonte": "2025-10",
-  "metricas": [],
-  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
-  "como_replicar": [
-   "Ativar o 'Ajude-me a escrever' no Gmail.",
-   "Descrever em uma frase o pedido ao fornecedor.",
-   "Revisar tom e valores antes de enviar.",
-   "Guardar modelos de pedido recorrentes."
-  ],
-  "trecho_comprovante": "Utiliza o 'Ajude-me a Escrever' no Gmail para agilizar a comunicação com os fornecedores",
-  "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "P-031",
@@ -6732,7 +6592,8 @@
   ],
   "trecho_comprovante": "chatbots com robôs no Whatsapp (41%)",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-010",
@@ -6783,7 +6644,8 @@
   ],
   "trecho_comprovante": "+15% nas vendas do site",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-035",
@@ -6828,7 +6690,8 @@
   ],
   "trecho_comprovante": "Almost 30% of contracts signed in 2023 came from WhatsApp leads.",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "numeros_ok"
  },
  {
   "id": "Q-036",
@@ -6873,7 +6736,8 @@
   ],
   "trecho_comprovante": "Em apenas um mês, a Silverguard conseguiu realizar 1.400 atendimentos via WhatsApp.",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-020",
@@ -6929,7 +6793,8 @@
   ],
   "trecho_comprovante": "+40% de aumento no faturamento, impulsionado por campanhas automatizadas",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "R-001",
@@ -6986,7 +6851,8 @@
   "fonte_nome": "IT Forum",
   "fonte_url": "https://itforum.com.br/noticias/segware-ia-generativa-operadores/",
   "ano": 2025,
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "R-012",
@@ -7053,7 +6919,8 @@
   "fonte_nome": "Baguete",
   "fonte_url": "https://www.baguete.com.br/noticias/estrelabet-desenvolve-chatbot-com-blip",
   "ano": 2025,
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-021",
@@ -7124,7 +6991,8 @@
   "trecho_comprovante": "alcançou mais de 7 mil agendamentos de consulta de forma totalmente digitalizados em dois anos",
   "verificado": true,
   "forca": "media",
-  "nota_verificacao": "Página lida (27/06/2022); números confirmados (todos cumulativos em 2 anos, sem comparação antes/depois). Data 2022 limita a força a média. Quadro de funcionários não achado (478 médicos cooperados e 68 mil vidas segundo o site da Unimed Caruaru); porte não confirmado."
+  "nota_verificacao": "Página lida (27/06/2022); números confirmados (todos cumulativos em 2 anos, sem comparação antes/depois). Data 2022 limita a força a média. Quadro de funcionários não achado (478 médicos cooperados e 68 mil vidas segundo o site da Unimed Caruaru); porte não confirmado.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-037",
@@ -7186,7 +7054,8 @@
   ],
   "trecho_comprovante": "Estamos muito orgulhosos de alcançar a marca de 1 milhão de horas operacionais economizadas para nossos clientes",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-038",
@@ -7243,7 +7112,8 @@
   ],
   "trecho_comprovante": "reduzir a inadimplência do crédito em até 50%",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-029",
@@ -7290,7 +7160,8 @@
   ],
   "trecho_comprovante": "at least six months to put together",
   "verificado": true,
-  "forca": "forte"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-012",
@@ -7352,7 +7223,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-013",
@@ -7416,7 +7288,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-020",
@@ -7479,7 +7352,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-038",
@@ -7529,7 +7403,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-028",
@@ -7584,7 +7459,8 @@
   ],
   "trecho_comprovante": "resulting in 20% less follow-up contact",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-027",
@@ -7631,88 +7507,8 @@
   ],
   "trecho_comprovante": "Hoje, cerca de 80% dos atendimentos ficam com a IA, e apenas 20% são transferidos para o time",
   "verificado": true,
-  "forca": "forte"
- },
- {
-  "id": "P-012",
-  "porte": "pequena",
-  "gargalo": "conhecimento",
-  "gargalos_secundarios": [
-   "informacao"
-  ],
-  "area": "administrativo",
-  "setor": "assinatura de cafés especiais",
-  "tipo": "nominal",
-  "empresa": "Moka Clube (Curitiba, PR)",
-  "pais": "Brasil",
-  "titulo": "Clube de café encontra informações em e-mails e anexos com o Gemini no Gmail",
-  "problema": "Informações importantes ficavam espalhadas em muitos e-mails e anexos.",
-  "solucao": "Usa o Gemini no Gmail para buscar e resgatar informações na caixa de e-mail.",
-  "ferramentas": [
-   "Google Workspace",
-   "Gemini no Gmail"
-  ],
-  "resultado": "Facilidade para buscar informações no e-mail (relato qualitativo; sem métrica na fonte).",
-  "complexidade_implantacao": "baixa",
-  "tempo_para_valor": "dias",
-  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
-  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
-  "ano": 2025,
-  "confianca": "media",
-  "setor_chave": "varejo_ecommerce",
-  "funcionarios": null,
-  "porte_confirmado": false,
-  "data_fonte": "2025-10",
-  "metricas": [],
-  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
-  "como_replicar": [
-   "Ativar o Gemini no Gmail (Google Workspace).",
-   "Perguntar em linguagem natural por contratos, pedidos ou datas.",
-   "Conferir a resposta no e-mail original.",
-   "Padronizar rótulos para facilitar buscas."
-  ],
-  "trecho_comprovante": "a empresa usa o Gemini no Gmail para facilitar a busca por informações",
-  "verificado": true,
-  "forca": "media"
- },
- {
-  "id": "P-013",
-  "porte": "pequena",
-  "gargalo": "conhecimento",
-  "gargalos_secundarios": [],
-  "area": "operacoes",
-  "setor": "reciclagem de resíduos da construção",
-  "tipo": "nominal",
-  "empresa": "RNV Resíduos (Aparecida de Goiânia, GO)",
-  "pais": "Brasil",
-  "titulo": "Recicladora cruza laudos e documentos técnicos com o NotebookLM",
-  "problema": "As respostas precisas estavam espalhadas em laudos de laboratório, documentos técnicos e relatórios.",
-  "solucao": "Usa o NotebookLM para cruzar laudos, documentos técnicos e relatórios e chegar rápido às respostas.",
-  "ferramentas": [
-   "NotebookLM"
-  ],
-  "resultado": "Respostas obtidas rapidamente (relato qualitativo; sem métrica na fonte).",
-  "complexidade_implantacao": "baixa",
-  "tempo_para_valor": "dias",
-  "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
-  "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
-  "ano": 2025,
-  "confianca": "media",
-  "setor_chave": "construcao_imoveis",
-  "funcionarios": null,
-  "porte_confirmado": false,
-  "data_fonte": "2025-10",
-  "metricas": [],
-  "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
-  "como_replicar": [
-   "Reunir laudos e relatórios em PDF em um caderno do NotebookLM.",
-   "Fazer perguntas de cruzamento (ex.: parâmetros fora do limite).",
-   "Conferir as citações nos documentos originais.",
-   "Atualizar o caderno a cada novo laudo."
-  ],
-  "trecho_comprovante": "A empresa utiliza o NotebookLM para cruzar dados de laudos, documentos técnicos, relatórios",
-  "verificado": true,
-  "forca": "media"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-024",
@@ -7770,7 +7566,8 @@
   ],
   "trecho_comprovante": "A empresa recebia mais de 100 novos leads por dia",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-030",
@@ -7822,7 +7619,8 @@
   ],
   "trecho_comprovante": "A IA é tão humana que muitos acham que estão falando com uma pessoa.",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-029",
@@ -7878,7 +7676,8 @@
   ],
   "trecho_comprovante": "Eu preciso de uma operação que funcione para a Melina real.",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "R-014",
@@ -7933,7 +7732,8 @@
   "fonte_nome": "Baguete",
   "fonte_url": "https://www.baguete.com.br/noticias/petronect-atende-fornecedores-com-neo-hypeone",
   "ano": 2024,
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-027",
@@ -8000,7 +7800,8 @@
   "trecho_comprovante": "Diminuição de 84% nos custos de infraestrutura de TI em dois anos, com arquiteturas autogerenciadas da nuvem",
   "verificado": true,
   "forca": "media",
-  "nota_verificacao": "Fonte primária encontrada e lida (página oficial do Google Cloud, via download direto; a ferramenta de leitura devolveu só o título). Números confirmados. A página não traz data visível (o texto cita gravações desde jan/2025 e dois anos desde out/2023, logo é de fins de 2025 ou posterior): data_fonte fica null e a força, média. O 84% é de custo de infraestrutura (créditos de startup e arquiteturas autogerenciadas), não de IA. A lista do blog Google citava '75%' no tempo de análise; esse número não consta da página primária. Funcionários não achados (LeadIQ estima 51-200, terceiro): porte média plausível, não confirmado."
+  "nota_verificacao": "Fonte primária encontrada e lida (página oficial do Google Cloud, via download direto; a ferramenta de leitura devolveu só o título). Números confirmados. A página não traz data visível (o texto cita gravações desde jan/2025 e dois anos desde out/2023, logo é de fins de 2025 ou posterior): data_fonte fica null e a força, média. O 84% é de custo de infraestrutura (créditos de startup e arquiteturas autogerenciadas), não de IA. A lista do blog Google citava '75%' no tempo de análise; esse número não consta da página primária. Funcionários não achados (LeadIQ estima 51-200, terceiro): porte média plausível, não confirmado.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "R-011",
@@ -8050,7 +7851,8 @@
   "fonte_nome": "Baguete",
   "fonte_url": "https://www.baguete.com.br/noticias/180-seguros-usa-gemini-em-copiloto-para-devs",
   "ano": 2024,
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-007",
@@ -8105,7 +7907,8 @@
   ],
   "trecho_comprovante": "com a implementação das ações, utilizando a plataforma, reduzimos essa taxa em 57%",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-008",
@@ -8156,7 +7959,8 @@
   ],
   "trecho_comprovante": "sem a triagem da Sólides, gastávamos em média 26 dias em processos seletivos, hoje 16 dias.",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-019",
@@ -8232,7 +8036,8 @@
   ],
   "trecho_comprovante": "a 94% containment rate of common questions",
   "verificado": true,
-  "forca": "forte"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-026",
@@ -8296,7 +8101,8 @@
   "trecho_comprovante": "reduziu em 80% o tempo médio para análise de contratos complexos",
   "verificado": true,
   "forca": "forte",
-  "nota_verificacao": "Página lida (26/05/2025); números confirmados. Porte corrigido para grande: Revelio Labs estima cerca de 1.588 funcionários (set/2025), com portfólio de cerca de 35 GW e quase 20 anos de mercado; estimativa de terceiro, por isso porte_confirmado=false. Fora da faixa média: realocar. Força média porque o porte não está confirmado."
+  "nota_verificacao": "Página lida (26/05/2025); números confirmados. Porte corrigido para grande: Revelio Labs estima cerca de 1.588 funcionários (set/2025), com portfólio de cerca de 35 GW e quase 20 anos de mercado; estimativa de terceiro, por isso porte_confirmado=false. Fora da faixa média: realocar. Força média porque o porte não está confirmado.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-010",
@@ -8359,7 +8165,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-017",
@@ -8407,7 +8214,8 @@
   ],
   "trecho_comprovante": "More than 200 employees are currently using the system on a daily basis.",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-018",
@@ -8449,7 +8257,8 @@
   ],
   "trecho_comprovante": "about 600 documents, manuals, spare parts lists and more",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-030",
@@ -8511,7 +8320,8 @@
   ],
   "trecho_comprovante": "Para chegar a grandes resultados, talvez a gente não precise de novos sistemas. A gente precisa olhar para dentro de casa.",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "P-005",
@@ -8559,7 +8369,8 @@
   ],
   "trecho_comprovante": "We got about $180,000 back in shipping overcharges.",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-004",
@@ -8610,7 +8421,8 @@
   ],
   "trecho_comprovante": "pelo menos 15 novos clientes por mês",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-039",
@@ -8659,7 +8471,8 @@
   ],
   "trecho_comprovante": "Economizei mais de 10% parando de fazer manutenções à toa.",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "R-005",
@@ -8731,7 +8544,8 @@
   "fonte_nome": "AWS Brasil Blog",
   "fonte_url": "https://aws.amazon.com/pt/blogs/aws-brasil/como-o-colab-triplicou-a-capacidade-da-sua-plataforma-com-observabilidade-aws/",
   "ano": 2026,
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-011",
@@ -8780,7 +8594,8 @@
   ],
   "trecho_comprovante": "Antes eu gastava sete dias e agora estou gastando quatro",
   "forca": "forte",
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-003",
@@ -8835,7 +8650,8 @@
   ],
   "trecho_comprovante": "ganho muito grande na parte do orçamento",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-030",
@@ -8895,7 +8711,8 @@
   ],
   "trecho_comprovante": "can help financial institutions improve their fraud detection rates by 20%, on average",
   "verificado": true,
-  "forca": "forte"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-020",
@@ -8961,7 +8778,8 @@
   "trecho_comprovante": "o tempo médio por operação caiu para cerca de 50 segundos, resultando em uma redução superior a 70%",
   "verificado": true,
   "forca": "forte",
-  "nota_verificacao": "Página lida (20/05/2026); números confirmados. Porte corrigido para grande por indício: nota da GWM (2024) diz que o grupo tem 96 revendas em 15 estados e 44 anos de mercado; o quadro exato não foi achado (a matéria cita só 'mais de 20 profissionais' no faturamento), por isso porte_confirmado=false. Fora da faixa média: realocar."
+  "nota_verificacao": "Página lida (20/05/2026); números confirmados. Porte corrigido para grande por indício: nota da GWM (2024) diz que o grupo tem 96 revendas em 15 estados e 44 anos de mercado; o quadro exato não foi achado (a matéria cita só 'mais de 20 profissionais' no faturamento), por isso porte_confirmado=false. Fora da faixa média: realocar.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-008",
@@ -9022,7 +8840,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "S-031",
@@ -9078,7 +8897,8 @@
   "forca": "forte",
   "confianca": "alta",
   "tipo": "nominal",
-  "verificado": true
+  "verificado": true,
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-031",
@@ -9124,7 +8944,8 @@
   ],
   "trecho_comprovante": "a acurácia da ferramenta é de quase 99%",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-032",
@@ -9170,7 +8991,8 @@
   ],
   "trecho_comprovante": "analisa 18.000 ligações diárias",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-033",
@@ -9224,7 +9046,8 @@
   ],
   "trecho_comprovante": "has cut scrap by 10-20%, depending on the product",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-004",
@@ -9286,7 +9109,8 @@
   "trecho_comprovante": "reduziu em cerca de dois terços o tempo de processamento de notas fiscais",
   "verificado": true,
   "forca": "media",
-  "nota_verificacao": "Página lida (07/10/2026). Porte corrigido para grande por indício: InfoJobs lista a Guarida como 'Grande (acima de 500 funcionários)' (cadastro sem data), além de ~2.300 condomínios e ~110 mil clientes; fonte oficial de funcionários não achada. Fonte é rádio regional (release); força limitada a média."
+  "nota_verificacao": "Página lida (07/10/2026). Porte corrigido para grande por indício: InfoJobs lista a Guarida como 'Grande (acima de 500 funcionários)' (cadastro sem data), além de ~2.300 condomínios e ~110 mil clientes; fonte oficial de funcionários não achada. Fonte é rádio regional (release); força limitada a média.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "P-004",
@@ -9338,55 +9162,8 @@
   ],
   "trecho_comprovante": "inbound contacts are up about 25%",
   "verificado": true,
-  "forca": "forte"
- },
- {
-  "id": "P-025",
-  "porte": "pequena",
-  "gargalo": "demanda_comercial",
-  "gargalos_secundarios": [
-   "comunicacao"
-  ],
-  "area": "atendimento",
-  "setor": "varejo de móveis",
-  "tipo": "nominal",
-  "empresa": "Bordinho Moveis (MG)",
-  "pais": "Brasil",
-  "titulo": "Loja de móveis testa agente de IA do WhatsApp Business para responder clientes 24 horas por dia",
-  "problema": "Clientes que chegam pelo WhatsApp e não são respondidos rápido se perdem antes da venda.",
-  "solucao": "Testou o Business AI da Meta, agente do WhatsApp Business que responde clientes e sugere itens do catálogo, com o dono podendo assumir a conversa.",
-  "ferramentas": [
-   "WhatsApp Business AI (Meta)"
-  ],
-  "resultado": "Segundo a Meta, o agente respondeu praticamente todos os clientes já nas primeiras interações e ajudou na conversão; sem números para o Brasil (no piloto do México, empresas registraram aumento de 10% nos negócios).",
-  "complexidade_implantacao": "baixa",
-  "tempo_para_valor": "dias",
-  "fonte_nome": "Exame - WhatsApp Business lanca IA para PMEs atenderem clientes 24 horas por dia",
-  "fonte_url": "https://exame.com/negocios/whatsapp-business-lanca-ia-para-pmes-atenderem-clientes-24-horas-por-dia/",
-  "ano": 2026,
-  "confianca": "media",
-  "setor_chave": "varejo_ecommerce",
-  "funcionarios": null,
-  "porte_confirmado": false,
-  "data_fonte": "2026-02",
-  "metricas": [
-   {
-    "indicador": "Negócios (piloto no México, não Bordinho)",
-    "antes": null,
-    "depois": null,
-    "variacao": "+10%"
-   }
-  ],
-  "esforco_implantacao": "Não informado; o porte da Bordinho Móveis também não consta na matéria.",
-  "como_replicar": [
-   "Migrar o atendimento para o WhatsApp Business com catálogo cadastrado.",
-   "Ativar o agente de IA com as regras da loja.",
-   "Definir quando o dono assume a conversa.",
-   "Medir respostas e vendas."
-  ],
-  "trecho_comprovante": "conseguiu responder praticamente todos os clientes nas primeiras interações",
-  "verificado": true,
-  "forca": "media"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-011",
@@ -9431,7 +9208,8 @@
   ],
   "trecho_comprovante": "reduzir seu CAC de R$ 100 para R$ 38",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-012",
@@ -9488,7 +9266,8 @@
   ],
   "trecho_comprovante": "Com a implementação, a Tributei alcançou um aumento de 53% no faturamento de 2024 frente ao ano anterior",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-013",
@@ -9545,7 +9324,8 @@
   ],
   "trecho_comprovante": "Como a Prev Fácil aumentou suas vendas em 39% com o RD Station Marketing",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-014",
@@ -9602,7 +9382,8 @@
   ],
   "trecho_comprovante": "Como a Qualividros aumentou sua receita em mais de 14x com o RD Station Marketing",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-015",
@@ -9653,7 +9434,8 @@
   ],
   "trecho_comprovante": "Em apenas 90 dias, a estratégia conseguiu recuperar mais de 5.000 vendas que antes seriam perdidas no checkout.",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-016",
@@ -9712,7 +9494,8 @@
   ],
   "trecho_comprovante": "O canal que antes não gerava nenhuma venda faturou quase 9 milhões em menos de um ano.",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "Q-031",
@@ -9764,7 +9547,8 @@
   ],
   "trecho_comprovante": "Hoje, 70% do faturamento do setor de CRM da empresa vem do WhatsApp, contra 30% do e-mail.",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-025",
@@ -9828,7 +9612,8 @@
   "trecho_comprovante": "Desde a implantação do Salesforce nós já tivemos um crescimento de 27% em receita.",
   "verificado": true,
   "forca": "media",
-  "nota_verificacao": "Página lida; números confirmados (depoimento da cofundadora, autodeclarado, vendor story). Sem data de publicação; a clínica tem 8 anos. Quadro de funcionários não informado; pelo perfil (clínica com cofundadoras na gestão) pode ser pequena, mas não há número: porte não confirmado. O aumento de receita não é atribuível só à IA."
+  "nota_verificacao": "Página lida; números confirmados (depoimento da cofundadora, autodeclarado, vendor story). Sem data de publicação; a clínica tem 8 anos. Quadro de funcionários não informado; pelo perfil (clínica com cofundadoras na gestão) pode ser pequena, mas não há número: porte não confirmado. O aumento de receita não é atribuível só à IA.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-035",
@@ -9884,7 +9669,8 @@
   ],
   "trecho_comprovante": "um aumento de 46% em conversão de vendas",
   "verificado": true,
-  "forca": "forte"
+  "forca": "forte",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-023",
@@ -9946,7 +9732,8 @@
   "trecho_comprovante": "registrou aumento de 630% no faturamento",
   "verificado": true,
   "forca": "forte",
-  "nota_verificacao": "Página lida (01/09/2025); números confirmados. Porte corrigido para grande por indício: Revelio Labs estima cerca de 957 funcionários (set/2025) e a Mobly é controlada pelo Grupo Toky (Tok&Stok, cerca de 2.500 colaboradores segundo a própria empresa). Estimativa de terceiro, por isso porte_confirmado=false. Fora da faixa média: realocar."
+  "nota_verificacao": "Página lida (01/09/2025); números confirmados. Porte corrigido para grande por indício: Revelio Labs estima cerca de 957 funcionários (set/2025) e a Mobly é controlada pelo Grupo Toky (Tok&Stok, cerca de 2.500 colaboradores segundo a própria empresa). Estimativa de terceiro, por isso porte_confirmado=false. Fora da faixa média: realocar.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "M-024",
@@ -10003,7 +9790,8 @@
   "trecho_comprovante": "fez a rede de lojas de brinquedos Ri Happy aumentar a sua conversão no canal de 4% para 70%",
   "verificado": true,
   "forca": "forte",
-  "nota_verificacao": "Página lida (16/10/2026); número confirmado, mas fornecido via fornecedor (Omnichat) e muito acima dos 25% de outros clientes: tratar com cautela. Porte corrigido para grande por indício: matérias de 2022 citam mais de 3.000 funcionários e mais de 150 lojas (Infojobs/Movimento Econômico), dado antigo, por isso porte_confirmado=false. Fora da faixa média: realocar."
+  "nota_verificacao": "Página lida (16/10/2026); número confirmado, mas fornecido via fornecedor (Omnichat) e muito acima dos 25% de outros clientes: tratar com cautela. Porte corrigido para grande por indício: matérias de 2022 citam mais de 3.000 funcionários e mais de 150 lojas (Infojobs/Movimento Econômico), dado antigo, por isso porte_confirmado=false. Fora da faixa média: realocar.",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-021",
@@ -10067,7 +9855,8 @@
   ],
   "trecho_comprovante": "92% das matrículas com contato iniciado por meio do Contato Inteligente ocorreram sem interação humana.",
   "forca": "forte",
-  "confianca": "alta"
+  "confianca": "alta",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-034",
@@ -10127,7 +9916,8 @@
   ],
   "trecho_comprovante": "Estamos aumentando a conversão em mais de 50% nesse canal",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "G-036",
@@ -10183,7 +9973,8 @@
   ],
   "trecho_comprovante": "taxas de conversão 10% maiores do que no próprio aplicativo da Magalu",
   "verificado": true,
-  "forca": "media"
+  "forca": "media",
+  "verificacao_bruta": "trecho_ok"
  },
  {
   "id": "T-041",
@@ -10241,6 +10032,7 @@
   ],
   "trecho_comprovante": "o projeto elevou o volume de conversas ativas de 420 para mais de 1,4 mil na primeira semana",
   "forca": "media",
-  "confianca": "media"
+  "confianca": "media",
+  "verificacao_bruta": "trecho_ok"
  }
 ]
