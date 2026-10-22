@@ -26,6 +26,10 @@ const mostrar = (id) => { for (const s of ["login", "negado", "app"]) $(s).hidde
 const brl = (n) => Number(n).toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const dataBR = (iso) => new Date(iso).toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
 
+const ABERTAS = [
+  ["dor_aberta", "Onde o tempo/dinheiro vaza"], ["ultima_vez", "Última vez que custou caro"], ["ja_tentou", "O que já tentaram"],
+  ["varinha", "Tarefa que automatizaria amanhã"], ["extra_final", "Recado final"],
+];
 let leads = [];
 
 // ---------- login ----------
@@ -105,13 +109,17 @@ function detalhe(l) {
   const linhas = [
     ["Cargo", l.cargo], ["E-mail", l.email || "—"], ["Autorizou contato", l.consentimento ? "Sim" : "Não"],
     ["Porte", a.porte], ["Setor", a.setor], ["Área com mais dor", a.area_dor], ["Maior dor", nomeGargalo(a.maior_dor)],
+    ["Faturamento", a.faturamento], ["Maturidade em IA", a.maturidade_ia],
     ["Impacto", a.impacto], ["Horas perdidas/semana", a.horas_perdidas], ["Prazo", a.prazo],
-    ["Ferramentas", Array.isArray(a.ferramentas) ? a.ferramentas.join(", ") : a.ferramentas], ["Relato", a.texto_livre],
+    ["Quem decide", a.quem_decide], ["Investimento mensal", a.investimento],
+    ["Ferramentas", Array.isArray(a.ferramentas) ? a.ferramentas.join(", ") : a.ferramentas],
   ].filter(([, v]) => v != null && v !== "");
+  const abertas = ABERTAS.map(([k, rotulo]) => [rotulo, a[k] || (k === "dor_aberta" ? a.texto_livre : null)]).filter(([, v]) => v);
   const est = r && r.mapa && r.mapa.estimativa;
   const t3 = top3(r);
   const caixa = el("div", {},
     el("dl", {}, linhas.flatMap(([k, v]) => [el("dt", {}, k), el("dd", {}, String(v))])),
+    abertas.length ? el("div", {}, el("h3", {}, "Nas palavras do participante"), abertas.map(([rotulo, v]) => el("p", { style: "margin:0 0 8px;line-height:1.45" }, el("b", { style: "color:var(--text2);font-weight:500" }, rotulo + ": "), v))) : null,
     t3.length ? el("div", {}, el("h3", {}, "Top 3 gargalos (pontuação)"), el("div", {}, t3.map(([g, s]) => el("span", { class: "tag p", style: "margin-right:6px" }, `${nomeGargalo(g)} · ${s}`)))) : el("p", { class: "vazio" }, "Não concluiu o diagnóstico. O contato já está autorizado."),
     est ? el("p", {}, `Custo estimado do maior problema: ${brl(est.valor_mes)}/mês (${est.horas_semana} h/semana).`) : null,
     el("div", { class: "acoes" },
@@ -180,12 +188,12 @@ const celula = (v) => {
   return `"${s.replace(/"/g, '""')}"`;
 };
 function exportarCSV() {
-  const cab = ["data", "nome", "empresa", "cargo", "telefone", "email", "anfitriao", "status", "gargalo_1", "pontos_1", "gargalo_2", "gargalo_3", "porte", "setor", "area_dor", "maior_dor", "impacto", "horas_semana", "prazo", "relato", "autorizou_contato"];
+  const cab = ["data", "nome", "empresa", "cargo", "telefone", "email", "anfitriao", "status", "gargalo_1", "pontos_1", "gargalo_2", "gargalo_3", "porte", "setor", "area_dor", "maior_dor", "impacto", "horas_semana", "prazo", "faturamento", "quem_decide", "investimento", "dor_aberta", "ultima_vez", "ja_tentou", "varinha", "extra_final", "autorizou_contato"];
   const linhas = filtrados().map((l) => {
     const a = (l.resp && l.resp.respostas) || {}, t = top3(l.resp);
     return [l.created_at, l.nome, l.empresa, l.cargo, l.telefone, l.email, l.anfitriao, l.resp ? "concluiu" : "abandonou",
       t[0] ? nomeGargalo(t[0][0]) : "", t[0] ? t[0][1] : "", t[1] ? nomeGargalo(t[1][0]) : "", t[2] ? nomeGargalo(t[2][0]) : "",
-      a.porte, a.setor, a.area_dor, a.maior_dor ? nomeGargalo(a.maior_dor) : "", a.impacto, a.horas_perdidas, a.prazo, a.texto_livre, l.consentimento ? "sim" : "nao"].map(celula).join(",");
+      a.porte, a.setor, a.area_dor, a.maior_dor ? nomeGargalo(a.maior_dor) : "", a.impacto, a.horas_perdidas, a.prazo, a.faturamento, a.quem_decide, a.investimento, a.dor_aberta || a.texto_livre, a.ultima_vez, a.ja_tentou, a.varinha, a.extra_final, l.consentimento ? "sim" : "nao"].map(celula).join(",");
   });
   const blob = new Blob(["﻿" + [cab.join(","), ...linhas].join("\r\n")], { type: "text/csv;charset=utf-8" });
   const a = el("a", { href: URL.createObjectURL(blob), download: `leads-evento-${new Date().toISOString().slice(0, 10)}.csv` });

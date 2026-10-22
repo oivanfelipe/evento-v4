@@ -183,3 +183,17 @@ export const AREA_LABEL = {
   atendimento: "Atendimento / pós-venda",
   ti: "TI / dados",
 };
+
+// Rótulos curtos para botões no celular.
+export const CURTO = {
+  capacidade: "Equipe no limite",
+  manual_repetitivo: "Trabalho manual e repetitivo",
+  informacao: "Informação espalhada",
+  decisao: "Decisão lenta",
+  processo: "Processo travado",
+  integracao: "Sistemas que não conversam",
+  comunicacao: "Reuniões e alinhamentos demais",
+  conhecimento: "Saber concentrado em poucos",
+  controle: "Falta de painel e controle",
+  demanda_comercial: "Vendas e funil",
+};

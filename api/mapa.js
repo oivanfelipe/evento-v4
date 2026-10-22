@@ -22,7 +22,7 @@ function sanitizar(body) {
       area_dor: cut(p.area_dor, 30),
       impacto: cut(p.impacto, 20),
       prazo: cut(p.prazo, 20),
-      relato: cut(p.texto_livre, 300),
+      relato: cut(p.texto_livre, 700),
     },
     estimativa: body.estimativa
       ? { horas_semana: Number(body.estimativa.horas_semana) || 0, valor_mes: Number(body.estimativa.valor_mes) || 0 }
