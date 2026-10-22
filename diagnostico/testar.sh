@@ -7,6 +7,7 @@ for f in app.js motor.mjs gargalos.mjs; do
 done
 node --input-type=module --check < comercial/app.js && echo "sintaxe (módulo) ok: comercial/app.js"
 node --check api/mapa.js && echo "sintaxe ok: api/mapa.js"
+node --check api/transcrever.js && echo "sintaxe ok: api/transcrever.js"
 node diagnostico/teste-motor.mjs | tail -1
 node diagnostico/teste-cobertura.mjs | tail -1
 python3 -c "
