@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<script>
+/* Retorno do login do painel comercial: se o Supabase devolver o usuário para a raiz do site, encaminha para /comercial/ com a sessão. */
+(function(){var h=location.hash,q=location.search;if(/access_token=|error_description=|error_code=/.test(h)||/[?&](code|error_description)=/.test(q))location.replace("/comercial/"+q+h);})();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Evento Flagship: Apresentação Interna V4</title>
