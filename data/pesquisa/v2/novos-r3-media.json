@@ -1,0 +1,657 @@
+[
+ {
+  "id": "N-001",
+  "gargalos_secundarios": [
+   "controle"
+  ],
+  "tipo": "nominal",
+  "pais": "Brasil",
+  "verificado": true,
+  "esforco_implantacao": null,
+  "funcionarios": 65,
+  "porte_confirmado": true,
+  "porte": "media",
+  "gargalo": "demanda_comercial",
+  "area": "comercial",
+  "setor": "indústria de cacau (B2B)",
+  "setor_chave": "industria",
+  "empresa": "Fralía Cacau Brasil",
+  "titulo": "Fralía integra marketing e CRM e passa a gerir 935% mais vendas na plataforma",
+  "problema": "Marketing e vendas não conversavam, com dados dispersos e ferramentas subutilizadas, o que travava a geração e o acompanhamento de oportunidades.",
+  "solucao": "Implantou RD Station Marketing e RD Station CRM com funis personalizados, lembretes automáticos, segmentações, réguas de relacionamento automatizadas e novo site focado em SEO, com apoio da agência OUTMarketing.",
+  "ferramentas": [
+   "RD Station Marketing",
+   "RD Station CRM"
+  ],
+  "resultado": "Segundo a fonte: leads na base +115%, conversões orgânicas +222%, leads qualificados para marketing +205%, vendas gerenciadas na plataforma +935% e mais de R$ 5,2 milhões em faturamento gerado por inbound, 148% acima do período anterior. Números divulgados pela RD Station/agência.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete (release RD Station/OUTMarketing)",
+  "fonte_url": "https://www.baguete.com.br/noticias/fralia-adota-solucoes-da-rd-station",
+  "ano": 2026,
+  "data_fonte": "2026-10",
+  "metricas": [
+   {
+    "indicador": "Volume de leads na base",
+    "antes": null,
+    "depois": null,
+    "variacao": "+115%"
+   },
+   {
+    "indicador": "Leads qualificados para marketing",
+    "antes": null,
+    "depois": null,
+    "variacao": "+205%"
+   },
+   {
+    "indicador": "Vendas gerenciadas pela plataforma",
+    "antes": null,
+    "depois": null,
+    "variacao": "+935%"
+   },
+   {
+    "indicador": "Faturamento gerado por inbound",
+    "antes": null,
+    "depois": "R$ 5,2 milhões",
+    "variacao": "+148% vs período anterior"
+   }
+  ],
+  "como_replicar": [
+   "Unifique contatos, funil comercial e formulários do site em um único CRM com etapas padronizadas.",
+   "Defina o critério de lead qualificado entre marketing e vendas e envie ao vendedor só quem o atinge.",
+   "Crie réguas automáticas de relacionamento e lembretes de follow-up por etapa do funil.",
+   "Meça mensalmente leads, conversão por etapa e receita por origem para ajustar o funil."
+  ],
+  "trecho_comprovante": "As vendas gerenciadas cresceram 935% pela plataforma.",
+  "forca": "forte",
+  "confianca": "alta",
+  "observacao_porte_data": "Porte: 65 postos de trabalho segundo Diário do Comércio (2025-09), https://diariodocomercio.com.br/negocios/fralia-expansao-producao-cacau-minas-2026/"
+ },
+ {
+  "id": "N-002",
+  "gargalos_secundarios": [
+   "manual_repetitivo"
+  ],
+  "tipo": "nominal",
+  "pais": "Brasil",
+  "verificado": true,
+  "esforco_implantacao": null,
+  "funcionarios": 75,
+  "porte_confirmado": true,
+  "porte": "media",
+  "gargalo": "demanda_comercial",
+  "area": "comercial",
+  "setor": "fintech de pagamentos e incentivos",
+  "setor_chave": "financeiro_seguros",
+  "empresa": "Bluepay Solutions",
+  "titulo": "Bluepay unifica pré-vendas e vendas na HubSpot e reporta até 5 vezes mais produtividade em pré-vendas",
+  "problema": "Ferramentas desconectadas (Meetime e Digitalk), tarefas manuais, oportunidades duplicadas e conflito entre BDRs e vendedores, sem separar leads em qualificação de oportunidades reais.",
+  "solucao": "Migrou para a HubSpot, criou o objeto Lead com pipelines separados, tarefas automáticas por etapa e status e dashboards por time, com apoio da consultoria Nexforce.",
+  "ferramentas": [
+   "HubSpot Sales Hub",
+   "HubSpot Service Hub",
+   "HubSpot Marketing Hub",
+   "HubSpot Data Hub"
+  ],
+  "resultado": "A fonte reporta produtividade do time de pré-vendas até 5 vezes maior, fim dos conflitos entre BDRs e vendedores e dashboards em tempo real por time (dados do case publicado pela HubSpot).",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "HubSpot Brasil (estudo de caso)",
+  "fonte_url": "https://br.hubspot.com/case-studies/bluepay-solutions",
+  "ano": 2026,
+  "data_fonte": "2026-09",
+  "metricas": [
+   {
+    "indicador": "Produtividade do time de pré-vendas",
+    "antes": null,
+    "depois": null,
+    "variacao": "até 5x"
+   }
+  ],
+  "como_replicar": [
+   "Separe no CRM o estágio de lead em qualificação do de oportunidade real, com pipelines distintos.",
+   "Crie tarefas automáticas por etapa e status para o time de pré-vendas.",
+   "Defina regra clara de passagem de lead entre BDR e vendedor para evitar duplicidade.",
+   "Monte um dashboard por time com backlog, no-show e conversão por etapa."
+  ],
+  "trecho_comprovante": "A produtividade da equipe de Pré-Vendas aumentou em até 5 vezes",
+  "forca": "forte",
+  "confianca": "alta",
+  "observacao_porte_data": "Porte: a própria página informa 'time entre 50 e 100 colaboradores'. Data: metadado hs_published_at da página (2026-09); a página não exibe data visível."
+ },
+ {
+  "id": "N-003",
+  "gargalos_secundarios": [
+   "manual_repetitivo"
+  ],
+  "tipo": "nominal",
+  "pais": "Brasil",
+  "verificado": true,
+  "esforco_implantacao": null,
+  "funcionarios": 100,
+  "porte_confirmado": true,
+  "porte": "media",
+  "gargalo": "demanda_comercial",
+  "area": "comercial",
+  "setor": "fintech para condomínios",
+  "setor_chave": "financeiro_seguros",
+  "empresa": "CondoConta",
+  "titulo": "CondoConta migra CRM e reduz de 30 para 2 minutos o registro comercial dos vendedores",
+  "problema": "CRM engessado exigia checklist de cerca de 30 minutos por oportunidade registrada, havia perda de UTMs e pouca visibilidade de funil e de campanhas.",
+  "solucao": "Migrou do Salesforce para a HubSpot em menos de dois meses, com automações, integração do banco de dados via Data Hub e fluxos de WhatsApp para vendas, onboarding e marketing.",
+  "ferramentas": [
+   "HubSpot Sales Hub",
+   "HubSpot Marketing Hub",
+   "HubSpot Data Hub",
+   "WhatsApp"
+  ],
+  "resultado": "Segundo a fonte: tempo de registro comercial caiu de 30 para 2 minutos (+90% de redução), conversão de lead para oportunidade subiu 76% e 45% das mensagens automáticas de WhatsApp são lidas.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "HubSpot Brasil (estudo de caso)",
+  "fonte_url": "https://br.hubspot.com/case-studies/condoconta",
+  "ano": 2026,
+  "data_fonte": "2026-09",
+  "metricas": [
+   {
+    "indicador": "Tempo de registro comercial no CRM",
+    "antes": "30 min",
+    "depois": "2 min",
+    "variacao": "-93% (fonte cita +90% de redução)"
+   },
+   {
+    "indicador": "Conversão de lead para oportunidade",
+    "antes": null,
+    "depois": null,
+    "variacao": "+76%"
+   },
+   {
+    "indicador": "Leitura de mensagens automáticas no WhatsApp",
+    "antes": null,
+    "depois": "45%",
+    "variacao": null
+   }
+  ],
+  "como_replicar": [
+   "Simplifique o registro de oportunidade a um formulário curto, em vez de cadeia lead-contato-empresa-negócio.",
+   "Preserve UTMs e origem do lead na integração entre site, mídia e CRM.",
+   "Automatize o primeiro contato e a nutrição por WhatsApp para leads novos.",
+   "Revise o funil mensalmente pela taxa de lead para oportunidade."
+  ],
+  "trecho_comprovante": "reduziu de 30 para 2 minutos o tempo de registro comercial",
+  "forca": "forte",
+  "confianca": "alta",
+  "observacao_porte_data": "Porte: 100 funcionários segundo Baguete (2021-09, https://www.baguete.com.br/noticias/condoconta-levanta-mais-r-6-milhoes); número pode estar defasado. Data: metadado hs_published_at da página; o case cita migração do Salesforce em 2025/2026."
+ },
+ {
+  "id": "N-004",
+  "gargalos_secundarios": [
+   "processo"
+  ],
+  "tipo": "nominal",
+  "pais": "Brasil",
+  "verificado": true,
+  "esforco_implantacao": null,
+  "funcionarios": 450,
+  "porte_confirmado": true,
+  "porte": "media",
+  "gargalo": "demanda_comercial",
+  "area": "comercial",
+  "setor": "implementos rodoviários e unidades móveis",
+  "setor_chave": "industria",
+  "empresa": "Truckvan",
+  "titulo": "Truckvan adota CRM Ploomes e reduz de até 90 para 25 a 30 dias o tempo de fechamento",
+  "problema": "Informações sobre clientes e oportunidades dispersas em vários sistemas dificultavam acompanhar negociações e a gestão do pipeline.",
+  "solucao": "Centralizou clientes, oportunidades e propostas no CRM da Ploomes, com gerador de propostas e visibilidade gerencial do funil.",
+  "ferramentas": [
+   "Ploomes CRM"
+  ],
+  "resultado": "Segundo a empresa: ciclo de vendas caiu de até 90 dias para média de 25 a 30 dias (-67%), geração de negócios +60%, cadastro de clientes +80% e volume de propostas enviadas até +50%.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete",
+  "fonte_url": "https://www.baguete.com.br/noticias/truckvan-adota-crm-da-ploomes",
+  "ano": 2026,
+  "data_fonte": "2026-07",
+  "metricas": [
+   {
+    "indicador": "Ciclo de vendas",
+    "antes": "até 90 dias",
+    "depois": "25 a 30 dias",
+    "variacao": "-67%"
+   },
+   {
+    "indicador": "Geração de negócios",
+    "antes": null,
+    "depois": null,
+    "variacao": "+60%"
+   },
+   {
+    "indicador": "Cadastro de clientes",
+    "antes": null,
+    "depois": null,
+    "variacao": "+80%"
+   },
+   {
+    "indicador": "Propostas enviadas",
+    "antes": null,
+    "depois": null,
+    "variacao": "até +50%"
+   }
+  ],
+  "como_replicar": [
+   "Reúna clientes, oportunidades e propostas em um único CRM com funil por tipo de negócio.",
+   "Padronize modelos de proposta gerados a partir do cadastro de produtos.",
+   "Meça o ciclo de vendas por etapa para achar onde o negócio fica parado.",
+   "Dê ao gestor um painel único de pipeline e conversão."
+  ],
+  "trecho_comprovante": "uma redução de 67% no ciclo de vendas",
+  "forca": "forte",
+  "confianca": "alta",
+  "observacao_porte_data": "Porte: 450 colaboradores segundo Vamos, na compra de 2022 (Bloomberg Línea, https://www.bloomberglinea.com.br/2022/03/06/vamos-compra-truckvan-e-inclui-implementos-rodoviarios-em-portfolio/); outras fontes citam 350 a 600; pode estar defasado."
+ },
+ {
+  "id": "N-005",
+  "gargalos_secundarios": [
+   "conhecimento"
+  ],
+  "tipo": "nominal",
+  "pais": "Brasil",
+  "verificado": true,
+  "esforco_implantacao": null,
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "forca": "fraca",
+  "porte": "media",
+  "gargalo": "demanda_comercial",
+  "area": "comercial",
+  "setor": "tecnologia e design digital (B2B)",
+  "setor_chave": "servicos_b2b",
+  "empresa": "Igma",
+  "titulo": "Igma estrutura qualificação e cadências no HubSpot e vê eficiência de lead a fechamento ir de 13% para 22%",
+  "problema": "Sem CRM, o processo comercial vivia na cabeça dos sócios, sem cadência formal, critérios de ICP nem registro confiável de contatos.",
+  "solucao": "Migrou do Pipedrive para a HubSpot e montou método próprio de qualificação com cadências definidas, automações, integração com Slack e Google Workspace e uso de IA.",
+  "ferramentas": [
+   "HubSpot Sales Hub",
+   "Pipedrive",
+   "Slack",
+   "Google Workspace"
+  ],
+  "resultado": "Segundo a fonte: eficiência de lead para oportunidade e fechamento de 13% para 22%, 77% do processo comercial coberto por automações e atividades de vendas atrasadas de quase 60% para cerca de 13%.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "HubSpot Brasil (estudo de caso)",
+  "fonte_url": "https://br.hubspot.com/case-studies/igma",
+  "ano": 2026,
+  "data_fonte": "2026-09",
+  "metricas": [
+   {
+    "indicador": "Eficiência lead-oportunidade-fechamento",
+    "antes": "13%",
+    "depois": "22%",
+    "variacao": null
+   },
+   {
+    "indicador": "Processo comercial coberto por automações",
+    "antes": null,
+    "depois": "77%",
+    "variacao": null
+   },
+   {
+    "indicador": "Oportunidades com atividades atrasadas",
+    "antes": "quase 60%",
+    "depois": "cerca de 13%",
+    "variacao": null
+   }
+  ],
+  "como_replicar": [
+   "Documente critérios de ICP e de qualificação que hoje estão na cabeça dos sócios.",
+   "Defina cadências de contato por etapa e registre cada interação no CRM.",
+   "Automatize lembretes e tarefas para zerar atividades atrasadas.",
+   "Acompanhe mensalmente a conversão de lead a fechamento."
+  ],
+  "trecho_comprovante": "Nossa eficiência em oportunidades, de lead para oportunidade e para fechamento, saiu de 13% para 22%.",
+  "confianca": "media",
+  "observacao_porte_data": "Porte NÃO confirmado: a HubSpot classifica como 'Empresas médias (25-200 funcionários)'; sem headcount exato. Data via metadado da página; o case cita início em 2023 e resultado em agosto."
+ },
+ {
+  "id": "N-006",
+  "gargalos_secundarios": [],
+  "tipo": "nominal",
+  "pais": "Brasil",
+  "verificado": true,
+  "esforco_implantacao": null,
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "forca": "fraca",
+  "porte": "media",
+  "gargalo": "demanda_comercial",
+  "area": "comercial",
+  "setor": "criação de conteúdo por assinatura (SaaS)",
+  "setor_chave": "tecnologia",
+  "empresa": "Faster",
+  "titulo": "Faster integra anúncios, CRM e agentes de IA e eleva conversão de 16% para 24%",
+  "problema": "Jornadas desconectadas entre marketing, vendas e CS, prospecção por Gmail, planilhas e mídia otimizada por volume de leads, não por qualidade.",
+  "solucao": "Unificou marketing, vendas e CS na HubSpot, sincronizou leads qualificados com o Google Ads, adotou agendamento self-service de reuniões e Prospecting Agent com sinais de intenção.",
+  "ferramentas": [
+   "HubSpot",
+   "Google Ads",
+   "HubSpot Prospecting Agent"
+  ],
+  "resultado": "Segundo a fonte: taxa de conversão de 16% para 24%, ciclo comercial -33% (15 dias), custo por lead qualificado -36% e +11% de contatos qualificados que agendam reunião.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "HubSpot Brasil (estudo de caso)",
+  "fonte_url": "https://br.hubspot.com/case-studies/faster",
+  "ano": 2026,
+  "data_fonte": "2026-09",
+  "metricas": [
+   {
+    "indicador": "Taxa de conversão",
+    "antes": "16%",
+    "depois": "24%",
+    "variacao": null
+   },
+   {
+    "indicador": "Ciclo comercial",
+    "antes": null,
+    "depois": null,
+    "variacao": "-33% (15 dias)"
+   },
+   {
+    "indicador": "Custo por lead qualificado",
+    "antes": null,
+    "depois": null,
+    "variacao": "-36%"
+   }
+  ],
+  "como_replicar": [
+   "Envie ao Google Ads só conversões de leads qualificados, não todos os formulários.",
+   "Ofereça calendário de agendamento logo após o formulário para leads qualificados.",
+   "Priorize leads por score e sinais de intenção, como visitas repetidas ao site.",
+   "Sequências automáticas de e-mail para quem demonstra intenção."
+  ],
+  "trecho_comprovante": "aumentando taxa de conversão de 16% para 24%",
+  "confianca": "media",
+  "observacao_porte_data": "Porte NÃO confirmado: HubSpot informa faixa 25-200 funcionários; a empresa começou com 10 pessoas em 2021. Data via metadado da página."
+ },
+ {
+  "id": "N-007",
+  "gargalos_secundarios": [
+   "capacidade"
+  ],
+  "tipo": "nominal",
+  "pais": "Brasil",
+  "verificado": true,
+  "esforco_implantacao": "Cerca de três meses de desenvolvimento e integração, segundo a fonte.",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "forca": "fraca",
+  "porte": "media",
+  "gargalo": "demanda_comercial",
+  "area": "comercial",
+  "setor": "correspondente bancário e fintech de crédito",
+  "setor_chave": "financeiro_seguros",
+  "empresa": "ConCrédito",
+  "titulo": "ConCrédito troca chatbot interno por agente conversacional e passa de 120 mil para 1,1 milhão de atendimentos mensais",
+  "problema": "O chatbot desenvolvido internamente e a equipe de seis pessoas no atendimento sofriam instabilidade nos finais de mês, quando a busca por crédito crescia.",
+  "solucao": "A ColmeIA implantou fluxos conversacionais no WhatsApp para simulação e contratação, transbordo para atendimento humano e disparo ativo de campanhas, com analytics em tempo real; implantação em cerca de três meses.",
+  "ferramentas": [
+   "ColmeIA",
+   "WhatsApp"
+  ],
+  "resultado": "Segundo a fonte: atendimentos mensais de 120 mil para mais de 1,1 milhão, 50 profissionais atendendo simultaneamente e vendas convertidas pelo sistema quase 20% maiores.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete",
+  "fonte_url": "https://www.baguete.com.br/noticias/concredito-atende-no-whatsapp-com-colmeia",
+  "ano": 2026,
+  "data_fonte": "2026-07",
+  "metricas": [
+   {
+    "indicador": "Atendimentos mensais",
+    "antes": "120 mil",
+    "depois": "mais de 1,1 milhão",
+    "variacao": null
+   },
+   {
+    "indicador": "Vendas convertidas de ponta a ponta",
+    "antes": null,
+    "depois": null,
+    "variacao": "quase +20%"
+   }
+  ],
+  "como_replicar": [
+   "Mapeie a jornada de simulação e contratação e automatize as perguntas repetidas no WhatsApp.",
+   "Defina regras de transbordo para atendentes humanos nos leads com condição de fechar.",
+   "Dispare campanhas ativas dentro das políticas da Meta, segmentando por perfil.",
+   "Acompanhe conversão por fluxo em um painel em tempo real."
+  ],
+  "trecho_comprovante": "O volume de atendimentos mensais subiu de 120 mil para mais de 1,1 milhão.",
+  "confianca": "media",
+  "observacao_porte_data": "Porte NÃO confirmado: a fonte cita 50 profissionais atendendo simultaneamente, sem headcount total."
+ },
+ {
+  "id": "N-008",
+  "gargalos_secundarios": [
+   "capacidade"
+  ],
+  "tipo": "nominal",
+  "pais": "Brasil",
+  "verificado": true,
+  "esforco_implantacao": "Seis meses para resolver a falta de histórico e a confirmação por ligações, segundo a fonte.",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "forca": "fraca",
+  "porte": "media",
+  "gargalo": "demanda_comercial",
+  "area": "atendimento",
+  "setor": "hospital oftalmológico",
+  "setor_chave": "saude",
+  "empresa": "Hospital de Olhos do Tocantins",
+  "titulo": "Hospital de Olhos do Tocantins usa chatbot e converte 41% dos atendimentos em consultas",
+  "problema": "Seis pessoas revezavam turnos, sem histórico de conversas, templates ou automação, com fila de espera e uma hora para a primeira resposta.",
+  "solucao": "Chatbot da Botdesigner integrado ao ERP da instituição, com confirmação e agendamento de consultas sem intervenção humana, em seis meses.",
+  "ferramentas": [
+   "Botdesigner",
+   "ERP do hospital"
+  ],
+  "resultado": "Segundo a fonte: tempo de primeira resposta de cerca de uma hora para poucos segundos e 41% dos atendimentos convertidos em consultas.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete",
+  "fonte_url": "https://www.baguete.com.br/noticias/hospital-de-olhos-do-tocantins-tem-chatbot-da-botdesigner",
+  "ano": 2024,
+  "data_fonte": "2024-08",
+  "metricas": [
+   {
+    "indicador": "Tempo de primeira resposta",
+    "antes": "cerca de 1 hora",
+    "depois": "poucos segundos",
+    "variacao": null
+   },
+   {
+    "indicador": "Atendimentos convertidos em consultas",
+    "antes": null,
+    "depois": "41%",
+    "variacao": null
+   }
+  ],
+  "como_replicar": [
+   "Integre o chatbot à agenda ou ao ERP para marcar e confirmar consultas sozinho.",
+   "Crie templates de mensagem e salve o histórico de cada paciente.",
+   "Transfira para humano só os casos que o bot não resolve.",
+   "Meça mensalmente a taxa de atendimentos que viram consulta."
+  ],
+  "trecho_comprovante": "41% dos atendimentos passaram a ser convertidos em consultas",
+  "confianca": "media",
+  "observacao_porte_data": "Porte NÃO confirmado: fonte não informa funcionários (unidades no TO e MA, inaugurado em 2018)."
+ },
+ {
+  "id": "N-009",
+  "gargalos_secundarios": [],
+  "tipo": "nominal",
+  "pais": "Brasil",
+  "verificado": true,
+  "esforco_implantacao": null,
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "forca": "fraca",
+  "porte": "media",
+  "gargalo": "demanda_comercial",
+  "area": "comercial",
+  "setor": "implantes odontológicos",
+  "setor_chave": "saude",
+  "empresa": "Medens Implantes",
+  "titulo": "Medens Implantes organiza o WhatsApp comercial com RD Station Conversas e reporta ROI de 593% em 11 meses",
+  "problema": "Demora nas respostas, falta de visibilidade dos atendimentos e dificuldade de integrar contatos ao CRM geravam perda de oportunidades.",
+  "solucao": "Estruturou números oficiais de WhatsApp com regras de distribuição entre atendentes e departamentos, campanhas de Meta Ads para o WhatsApp e disparos para reativar a base, com a agência Artefato.",
+  "ferramentas": [
+   "RD Station Conversas",
+   "Meta Ads",
+   "WhatsApp"
+  ],
+  "resultado": "A fonte reporta ROI de 593% em 11 meses e menor tempo de resposta, sem outros números (dados divulgados pela RD Station).",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete (release RD Station)",
+  "fonte_url": "https://www.baguete.com.br/noticias/medens-implantes-gera-roi-de-593-com-a-plataforma-rd-station-conversas",
+  "ano": 2026,
+  "data_fonte": "2026-08",
+  "metricas": [
+   {
+    "indicador": "ROI da operação de WhatsApp",
+    "antes": null,
+    "depois": "593% em 11 meses",
+    "variacao": null
+   }
+  ],
+  "como_replicar": [
+   "Centralize o WhatsApp comercial em plataforma com distribuição por departamento e atendente.",
+   "Integre os contatos ao CRM para ver conversão por conversa.",
+   "Rode campanhas de disparo para reativar a base parada.",
+   "Revise mensalmente os relatórios de conversas e conversões."
+  ],
+  "trecho_comprovante": "gerou um ROI de 593% em 11 meses",
+  "confianca": "media",
+  "observacao_porte_data": "Porte NÃO confirmado: nenhuma fonte encontrada com número de funcionários. Número de ROI sem base de cálculo publicada."
+ },
+ {
+  "id": "N-010",
+  "gargalos_secundarios": [],
+  "tipo": "nominal",
+  "pais": "Brasil",
+  "verificado": true,
+  "esforco_implantacao": null,
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "forca": "fraca",
+  "porte": "media",
+  "gargalo": "demanda_comercial",
+  "area": "marketing",
+  "setor": "colégio privado",
+  "setor_chave": "educacao",
+  "empresa": "Colégio Arquidiocesano de Curitiba",
+  "titulo": "Colégio Arquidiocesano integra RD Station Marketing e CRM e atinge 25,7% de conversão de leads em matrículas",
+  "problema": "Baixa geração de contatos interessados, presença digital limitada e etapas comerciais fragmentadas diante da expansão para novos segmentos.",
+  "solucao": "Adotou RD Station Marketing e CRM com jornadas automatizadas para as famílias, funil de ponta a ponta, dashboards e mídia paga, com a Agência Kurytyba.",
+  "ferramentas": [
+   "RD Station Marketing",
+   "RD Station CRM"
+  ],
+  "resultado": "A fonte reporta conversão de leads em vendas de 25,7%, custo por oportunidade de R$ 94,07, CAC de R$ 499,34, ROI de 1.491% em tráfego pago e alunos de 64 para 411 entre 2022 e 2026 (número atribuído ao conjunto marca, agência e plataforma).",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete (release RD Station)",
+  "fonte_url": "https://www.baguete.com.br/noticias/colegio-arquidiocesano-de-curitiba-cresce-mais-de-540-em-matriculas-com-solucoes-da-rd-station",
+  "ano": 2026,
+  "data_fonte": "2026-10",
+  "metricas": [
+   {
+    "indicador": "Conversão de leads em vendas",
+    "antes": null,
+    "depois": "25,7%",
+    "variacao": null
+   },
+   {
+    "indicador": "CAC",
+    "antes": null,
+    "depois": "R$ 499,34",
+    "variacao": null
+   },
+   {
+    "indicador": "Alunos",
+    "antes": "64 (2022)",
+    "depois": "411 (2026)",
+    "variacao": "+542,2%"
+   }
+  ],
+  "como_replicar": [
+   "Mapeie a jornada dos pais e automatize fluxos de relacionamento por etapa.",
+   "Registre cada família no CRM com funil de matrícula padronizado.",
+   "Monitore custo por oportunidade e CAC em dashboard.",
+   "Treine e padronize o processo comercial antes da campanha de matrículas."
+  ],
+  "trecho_comprovante": "taxa de conversão de leads em vendas de 25,7%",
+  "confianca": "media",
+  "observacao_porte_data": "Porte NÃO confirmado: colégio com 411 alunos, provavelmente menos de 100 funcionários; sem fonte."
+ },
+ {
+  "id": "N-011",
+  "gargalos_secundarios": [
+   "decisao"
+  ],
+  "tipo": "nominal",
+  "pais": "Brasil",
+  "verificado": true,
+  "esforco_implantacao": null,
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "forca": "fraca",
+  "porte": "media",
+  "gargalo": "informacao",
+  "area": "operacoes",
+  "setor": "documentos corporativos e comunicação digital",
+  "setor_chave": "tecnologia",
+  "empresa": "Sirius Software (Totaldocs)",
+  "titulo": "Sirius Software usa IA generativa na AWS e reduz 70% o tempo de busca e análise de documentos",
+  "problema": "A busca e a análise de informações em grandes volumes de documentos gerados eram manuais e demoradas.",
+  "solucao": "Documentos passam pelo Amazon Textract, são vetorizados no OpenSearch e o Amazon Bedrock responde perguntas dos usuários internos (RAG), com dashboards no QuickSight.",
+  "ferramentas": [
+   "Amazon Textract",
+   "Amazon OpenSearch Service",
+   "Amazon Bedrock",
+   "Amazon QuickSight"
+  ],
+  "resultado": "Segundo o blog da AWS: redução de 70% no tempo médio de busca e análise de documentos, mais de 90% dos documentos disponíveis em menos de 5 minutos e +30% de engajamento em dashboards.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "AWS Brasil blog",
+  "fonte_url": "https://aws.amazon.com/pt/blogs/aws-brasil/inovacao-em-gestao-documental-totaldocs-moderniza-processos-com-amazon-bedrock-e-ia",
+  "ano": 2025,
+  "data_fonte": "2025-09",
+  "metricas": [
+   {
+    "indicador": "Tempo médio de busca e análise de documentos",
+    "antes": null,
+    "depois": null,
+    "variacao": "-70%"
+   },
+   {
+    "indicador": "Documentos disponíveis para consulta em menos de 5 min",
+    "antes": null,
+    "depois": "mais de 90%",
+    "variacao": null
+   }
+  ],
+  "como_replicar": [
+   "Extraia texto dos documentos e indexe-os em base vetorial.",
+   "Conecte um modelo de linguagem para responder perguntas só com esses documentos.",
+   "Comece por um tipo de documento e meça o tempo de busca antes e depois.",
+   "Exiba os insights em painel para a área de negócio."
+  ],
+  "trecho_comprovante": "redução de 70% no tempo médio de busca e análise de informações documentais",
+  "confianca": "media",
+  "observacao_porte_data": "Porte NÃO confirmado: sem headcount (36 anos de mercado, Brasil e EUA). Solução de maior complexidade técnica; exige parceiro."
+ }
+]
