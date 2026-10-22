@@ -290,7 +290,8 @@ async function transcrever(blob) {
   try {
     const r = await fetch("/api/transcrever", { method: "POST", signal: ctl.signal, headers: { "Content-Type": blob.type.split(";")[0] }, body: blob });
     if (!r.ok) throw new Error(String(r.status));
-    return ((await r.json()).texto || "").trim();
+    const texto = ((await r.json()).texto || "").trim();
+    return /[\p{L}\p{N}]{2}/u.test(texto) ? texto : ""; // "." ou "..." = sem fala
   } finally { clearTimeout(t); }
 }
 

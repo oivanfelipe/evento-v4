@@ -48,7 +48,8 @@ module.exports = async function handler(req, res) {
       return res.status(502).json({ erro: "groq", status: r.status });
     }
     const data = await r.json();
-    const texto = String((data && data.text) || "").replace(/\s+/g, " ").trim().slice(0, 4000);
+    let texto = String((data && data.text) || "").replace(/\s+/g, " ").trim().slice(0, 4000);
+    if (!/[\p{L}\p{N}]{2}/u.test(texto)) texto = ""; // áudio sem fala volta como "." ou "..."
     return res.status(200).json({ texto });
   } catch (e) {
     return res.status(504).json({ erro: "timeout" });
