@@ -6,6 +6,12 @@ const SUPABASE_URL = "https://lbqmanwfgnhugjefluzy.supabase.co";
 const SUPABASE_KEY = "sb_publishable_Y6QoY26FFpatQoHpWw-rAw_CwzVmRFE";
 const MAX_AUDIO_S = 90;
 
+// Celulares antigos (iOS < 15.4 / < 14): sem crypto.randomUUID e sem replaceChildren.
+if (!Element.prototype.replaceChildren) {
+  Element.prototype.replaceChildren = function (...nos) { while (this.firstChild) this.removeChild(this.firstChild); this.append(...nos); };
+}
+const uuid = () => (crypto.randomUUID ? crypto.randomUUID() : "10000000-1000-4000-8000-100000000000".replace(/[018]/g, (c) => (c ^ (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))).toString(16)));
+
 const $chat = document.getElementById("chat");
 const $dock = document.getElementById("dock");
 const $barra = document.getElementById("barra");
@@ -20,7 +26,7 @@ let perguntas, casos, passos;
 let idx = 0;
 let minVoltar = 0;     // primeira pergunta depois do consentimento: não dá para voltar para a identificação
 const marcas = [];     // tamanho da conversa logo antes de cada pergunta (para o botão Voltar)
-const leadId = crypto.randomUUID();
+const leadId = uuid();
 let gravacao = null;      // gravação de áudio em andamento
 
 // ---------- util ----------
@@ -72,36 +78,53 @@ function atualizarProgresso() {
 }
 
 // ---------- persistência (insert-only) ----------
+// Regras: 23505 (já existe) = salvo; erro 4xx de validação = definitivo (não adianta repetir);
+// rede/5xx/429/FK (lead ainda não chegou) = tenta de novo. keepalive deixa o envio terminar mesmo se a aba fechar.
 async function inserir(tabela, linha) {
-  const r = await fetch(`${SUPABASE_URL}/rest/v1/${tabela}`, {
-    method: "POST",
-    headers: { apikey: SUPABASE_KEY, "Content-Type": "application/json", Prefer: "return=minimal" },
-    body: JSON.stringify(linha),
-  });
-  if (!r.ok) throw new Error(`${tabela} ${r.status}`);
-}
-function fila(tabela, linha) {
+  const ctl = new AbortController();
+  const t = setTimeout(() => ctl.abort(), 15000);
   try {
-    const q = JSON.parse(localStorage.getItem("v4_fila") || "[]");
-    q.push({ tabela, linha });
-    localStorage.setItem("v4_fila", JSON.stringify(q));
-  } catch {}
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/${tabela}`, {
+      method: "POST", signal: ctl.signal, keepalive: true,
+      headers: { apikey: SUPABASE_KEY, "Content-Type": "application/json", Prefer: "return=minimal" },
+      body: JSON.stringify(linha),
+    });
+    if (r.ok) return;
+    let codigo = "";
+    try { codigo = (await r.json()).code || ""; } catch {}
+    if (r.status === 409 && codigo === "23505") return; // reenvio de algo que já estava salvo
+    const e = new Error(`${tabela} ${r.status} ${codigo}`);
+    e.definitivo = r.status >= 400 && r.status < 500 && ![408, 409, 429].includes(r.status);
+    throw e;
+  } finally { clearTimeout(t); }
 }
+const lerFila = () => { try { return JSON.parse(localStorage.getItem("v4_fila") || "[]"); } catch { return []; } };
+const gravarFila = (q) => { try { localStorage.setItem("v4_fila", JSON.stringify(q)); } catch {} };
+function fila(tabela, linha) { const q = lerFila(); q.push({ tabela, linha }); gravarFila(q); }
 async function salvar(tabela, linha) {
   for (let t = 0; t < 3; t++) {
-    try { return await inserir(tabela, linha); } catch { await pausa(800 * (t + 1)); }
+    try { await inserir(tabela, linha); return true; }
+    catch (e) { if (e.definitivo) { console.warn("não foi possível salvar:", e.message); return false; } await pausa(800 * (t + 1)); }
   }
-  fila(tabela, linha); // reenvia na próxima visita: o lead não se perde por queda de rede
+  fila(tabela, linha); // sem conexão: reenvia quando a rede voltar (evento "online", a cada 20 s ou na próxima visita)
+  return false;
 }
+let reenviando = false;
 async function reenviarFila() {
+  if (reenviando) return;
+  reenviando = true;
   try {
-    const q = JSON.parse(localStorage.getItem("v4_fila") || "[]");
-    if (!q.length) return;
-    const resto = [];
-    for (const it of q) { try { await inserir(it.tabela, it.linha); } catch { resto.push(it); } }
-    localStorage.setItem("v4_fila", JSON.stringify(resto));
-  } catch {}
+    const feitos = new Set();
+    for (const it of lerFila()) {
+      try { await inserir(it.tabela, it.linha); feitos.add(JSON.stringify(it)); }
+      catch (e) { if (e.definitivo) feitos.add(JSON.stringify(it)); else break; } // mantém a ordem: lead antes das respostas
+    }
+    if (feitos.size) gravarFila(lerFila().filter((it) => !feitos.has(JSON.stringify(it))));
+  } finally { reenviando = false; }
 }
+window.addEventListener("online", reenviarFila);
+setInterval(() => { if (lerFila().length) reenviarFila(); }, 20000);
+
 function salvarLead() {
   salvar("evento_leads", { id: leadId, nome: resp.nome, empresa: resp.empresa, cargo: resp.cargo, telefone: resp.telefone, email: null, consentimento: true, anfitriao });
 }
@@ -109,8 +132,17 @@ function salvarLead() {
 // ---------- fluxo ----------
 function normalizarTel(v) {
   const d = v.replace(/\D/g, "");
+  if (v.trim().startsWith("+")) return d.length >= 8 && d.length <= 15 ? `+${d}` : null; // número internacional
   if (d.length < 10 || d.length > 13) return null;
   return d.length <= 11 ? `+55${d}` : `+${d}`;
+}
+
+// Guarda o que já foi respondido ao fim de cada etapa. Se a pessoa abandonar, o comercial ainda recebe
+// o contexto até ali (o painel usa a linha mais recente). A linha final, com o Mapa, substitui estas.
+function checkpoint(etapaId) {
+  const { scores, ranking } = pontuar(resp, perguntas);
+  const temEscala = Object.keys(resp).some((k) => k.startsWith("q_"));
+  salvar("evento_respostas", { id: uuid(), lead_id: leadId, respostas: { ...resp }, scores, gargalo_principal: temEscala ? ranking[0] : "pendente", mapa: { parcial: true, etapa: etapaId }, texto_ia: false });
 }
 
 async function proximo() {
@@ -118,6 +150,7 @@ async function proximo() {
   const { etapa, p, primeira } = passos[idx];
   limparDock();
   atualizarProgresso();
+  if (primeira && idx > 0 && passos[idx - 1].etapa.id !== "identificacao") checkpoint(passos[idx - 1].etapa.id);
   if (primeira) {
     $chat.append(h("div", { class: "etapa" }, etapa.titulo));
     for (const m of etapa.abertura || []) await falar(m);
@@ -207,7 +240,7 @@ function renderCampo(p) {
   const input = h("input", {
     type: p.tipo === "telefone" ? "tel" : "text", inputmode: p.tipo === "telefone" ? "tel" : "text",
     autocomplete: p.id === "nome" ? "name" : p.tipo === "telefone" ? "tel" : "off", autocapitalize: p.id === "nome" || p.id === "empresa" || p.id === "cargo" ? "words" : "off",
-    placeholder: p.placeholder || "", maxlength: 160, enterkeyhint: "send", "aria-label": p.texto,
+    placeholder: p.placeholder || "", maxlength: p.id === "empresa" ? 160 : 120, enterkeyhint: "send", "aria-label": p.texto,
   });
   const mostrar = (t) => { erro.textContent = t; erro.hidden = false; };
   const enviar = () => {
@@ -336,8 +369,13 @@ async function finalizar() {
   if (!mapa.itens.length) { dig.remove(); return falar("Não consegui montar o Mapa. Chame alguém da equipe V4."); }
   mapa = await personalizar(mapa);
   dig.remove();
-  salvar("evento_respostas", { lead_id: leadId, respostas: resp, scores: mapa.scores, gargalo_principal: mapa.gargalo_principal, mapa: { itens: mapa.itens.map((i) => ({ gargalo: i.gargalo, rank: i.rank, casos: i.casos.map((c) => c.id) })), estimativa: mapa.estimativa }, texto_ia: mapa.ia });
+  const gravou = salvar("evento_respostas", { id: uuid(), lead_id: leadId, respostas: resp, scores: mapa.scores, gargalo_principal: mapa.gargalo_principal, mapa: { itens: mapa.itens.map((i) => ({ gargalo: i.gargalo, rank: i.rank, casos: i.casos.map((c) => c.id) })), estimativa: mapa.estimativa }, texto_ia: mapa.ia });
   renderMapa(mapa);
+  const statusSalvo = document.getElementById("status-salvo");
+  if (statusSalvo) gravou.then((ok) => {
+    statusSalvo.textContent = ok ? "✓ Suas respostas foram registradas." : "Sem conexão agora: vamos reenviar as suas respostas assim que a internet voltar. Mantenha esta página aberta.";
+    statusSalvo.className = "status-salvo " + (ok ? "ok" : "pend");
+  });
 }
 
 const FORCA = { forte: "Verificado na fonte", media: "Relato com ressalva" };
@@ -378,6 +416,7 @@ function renderMapa(m) {
   const nome = primeiroNome();
   const hoje = new Date().toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
   const el = h("section", { class: "mapa" },
+    h("p", { class: "status-salvo", id: "status-salvo" }, "Registrando as suas respostas…"),
     h("div", { class: "so-impressao cabecalho-pdf" }, h("b", {}, "V4 Company"), h("span", {}, `Mapa de Gargalos e Oportunidades · ${resp.empresa} · ${hoje}`)),
     h("div", { class: "etapa" }, "Seu resultado"),
     h("h2", {}, `${nome ? nome + ", este" : "Este"} é o Mapa de Gargalos de ${resp.empresa}`),

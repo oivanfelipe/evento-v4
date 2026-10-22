@@ -105,11 +105,12 @@ a { color: var(--accent-l); }
 .acoes { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 28px; }
 @media (prefers-reduced-motion: reduce) { .bolha, .ponto, .giro { animation: none; } .digitando span { animation: none; opacity: .7; } }
 .so-impressao { display: none; }
+.status-salvo { font-size: .8rem; color: var(--text2); margin: 0 0 10px; } .status-salvo.ok { color: var(--ok); } .status-salvo.pend { color: var(--warn); }
 @media print {
   @page { margin: 14mm 12mm; }
   html, body { background: #fff !important; color: #111; height: auto !important; overflow: visible !important; }
   #app { display: block; height: auto !important; max-width: none; }
-  header, #dock, .acoes { display: none !important; }
+  header, #dock, .acoes, .status-salvo { display: none !important; }
   main { display: block; overflow: visible !important; padding: 0; }
   /* só o Mapa: toda a conversa (balões, etapas, indicador) fica fora do PDF */
   #chat > :not(.mapa) { display: none !important; }
