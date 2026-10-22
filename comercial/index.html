@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Comercial: Leads do Evento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0a; --card: #111; --card2: #1a1a1a; --accent: #E10600; --accent-l: #ff4a42; --glow: rgba(225,6,0,.16);
+  --text: #f5f4f0; --text2: #a8a8a8; --muted: #666; --border: #2a2a2a; --ok: #7b9a7b; --warn: #D4AF37;
+  --serif: "Playfair Display", Georgia, serif; --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+body { min-height: 100dvh; background-image: radial-gradient(circle at 50% -10%, var(--glow), transparent 55%); }
+header { padding: 14px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.brand { font-weight: 600; letter-spacing: .04em; font-size: .85rem; } .brand b { color: var(--accent); }
+.quem { color: var(--text2); font-size: .85rem; display: flex; align-items: center; gap: 10px; }
+main { max-width: 1280px; margin: 0 auto; padding: 20px; }
+h1 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.1; margin: 0 0 10px; }
+.btn, .chip { font: inherit; font-size: .9rem; color: var(--text); background: var(--card); border: 1px solid var(--border); padding: 9px 14px; border-radius: 10px; cursor: pointer; }
+.btn.p { background: var(--accent); border-color: var(--accent); font-weight: 600; }
+.btn:hover:not(:disabled) { border-color: var(--accent); } .btn:disabled { opacity: .4; cursor: default; }
+input, select { font: inherit; font-size: .9rem; color: var(--text); background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 9px 12px; min-width: 0; }
+input:focus, select:focus { outline: none; border-color: var(--accent); }
+.login { max-width: 440px; margin: 9vh auto 0; text-align: center; }
+.login p { color: var(--text2); line-height: 1.5; }
+.login .linha { display: flex; gap: 8px; margin-top: 14px; } .login .linha input { flex: 1; }
+.sep { color: var(--muted); font-size: .8rem; margin: 16px 0 0; }
+.msg { margin-top: 14px; font-size: .9rem; color: var(--text2); min-height: 1.2em; } .msg.erro { color: var(--accent-l); }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 16px 0; }
+.kpi { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px; }
+.kpi b { display: block; font-size: 1.6rem; font-family: var(--serif); font-weight: 400; } .kpi span { color: var(--text2); font-size: .78rem; }
+.painel { display: grid; grid-template-columns: 1fr; gap: 14px; } @media (min-width: 980px) { .painel { grid-template-columns: 2.2fr 1fr; } }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 14px; }
+.card h2 { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-l); margin: 0 0 10px; font-weight: 600; }
+.filtros { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; } .filtros input[type=search] { flex: 1; min-width: 180px; }
+.tabela { overflow-x: auto; } table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+th { text-align: left; color: var(--text2); font-weight: 500; font-size: .75rem; padding: 8px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr.lead { cursor: pointer; } tr.lead:hover td { background: var(--card2); }
+.tag { display: inline-block; font-size: .72rem; padding: 2px 8px; border-radius: 99px; border: 1px solid var(--border); color: var(--text2); white-space: nowrap; }
+.tag.ok { border-color: var(--ok); color: var(--ok); } .tag.p { border-color: var(--accent); color: var(--accent-l); } .tag.w { border-color: var(--warn); color: var(--warn); }
+.det td { background: var(--card2); }
+.det dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; margin: 0 0 10px; font-size: .85rem; } .det dt { color: var(--text2); } .det dd { margin: 0; }
+.det h3 { margin: 12px 0 6px; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-l); }
+.det .acoes { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+a { color: var(--accent-l); }
+.barra { display: grid; grid-template-columns: 130px 1fr 28px; gap: 8px; align-items: center; font-size: .82rem; margin: 6px 0; }
+.barra i { display: block; height: 8px; border-radius: 4px; background: var(--accent); min-width: 2px; } .barra div { background: var(--border); border-radius: 4px; }
+.vazio { color: var(--text2); padding: 22px 6px; text-align: center; }
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">V4 <b>·</b> COMERCIAL</div>
+  <div class="quem" id="quem" hidden><span id="email"></span><button class="btn" id="sair" type="button">Sair</button></div>
+</header>
+<main id="raiz">
+  <section class="login" id="login" hidden>
+    <h1>Leads do evento</h1>
+    <p>Acesso restrito à equipe V4 Company. Entre com o seu e-mail <b>@v4company.com</b>.</p>
+    <button class="btn p" id="google" type="button" style="width:100%">Entrar com Google</button>
+    <p class="sep">ou receba um link no e-mail</p>
+    <form class="linha" id="form-email"><input type="email" id="campo-email" placeholder="voce@v4company.com" required autocomplete="email"><button class="btn" type="submit">Enviar link</button></form>
+    <div class="msg" id="msg-login" role="status"></div>
+  </section>
+  <section id="negado" class="login" hidden>
+    <h1>Acesso restrito</h1>
+    <p>Esta conta não tem permissão para ver os leads. Só e-mails <b>@v4company.com</b> confirmados entram.</p>
+  </section>
+  <section id="app" hidden>
+    <h1>Leads do evento</h1>
+    <div class="kpis" id="kpis"></div>
+    <div class="painel">
+      <div class="card">
+        <h2>Leads</h2>
+        <div class="filtros">
+          <input type="search" id="busca" placeholder="Buscar nome, empresa, telefone">
+          <select id="f-anfitriao"><option value="">Todos os anfitriões</option></select>
+          <select id="f-gargalo"><option value="">Todos os gargalos</option></select>
+          <select id="f-status"><option value="">Todos os status</option><option value="concluiu">Concluiu o diagnóstico</option><option value="abandonou">Abandonou</option></select>
+          <button class="btn p" id="csv" type="button">Exportar CSV</button>
+        </div>
+        <div class="tabela"><table><thead><tr><th>Data</th><th>Nome</th><th>Empresa</th><th>Telefone</th><th>Anfitrião</th><th>Gargalo</th><th>Status</th></tr></thead><tbody id="corpo"></tbody></table></div>
+        <div class="vazio" id="vazio" hidden>Nenhum lead com esses filtros.</div>
+      </div>
+      <div class="card"><h2>Gargalos principais</h2><div id="dist"></div><h2 style="margin-top:18px">Por anfitrião</h2><div id="por-anf"></div></div>
+    </div>
+    <div class="msg" id="msg-app" role="status"></div>
+  </section>
+</main>
+<script src="vendor/supabase.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+// Conteúdo base de cada gargalo: usado no Mapa mesmo sem IA (fallback por regras)
+// e como contexto factual para a personalização da Groq.
+
+export const GARGALOS = {
+  capacidade: {
+    nome: "Capacidade",
+    sintoma: "A equipe vive no limite e os prazos escorregam.",
+    impacto: {
+      receita: "Pedidos, propostas e entregas ficam na fila: receita que existe, mas não é capturada a tempo.",
+      custo: "Hora extra, contratação emergencial e gente cara apagando incêndio.",
+      risco: "Equipe saturada erra mais e pede demissão mais; o cliente sente primeiro.",
+      crescimento: "A empresa só cresce até onde o time aguenta. Vender mais vira problema.",
+    },
+    oportunidade: "Tirar do time o volume que não precisa de julgamento humano e liberar capacidade sem contratar na mesma proporção.",
+    aplicacoes: [
+      "Agentes de IA que respondem e resolvem o volume repetitivo (atendimento, triagem, pedidos)",
+      "Automação do fluxo de entrada: classificar, priorizar e distribuir demanda sozinho",
+      "Copilotos que reduzem o tempo de produção de documentos, propostas e relatórios",
+    ],
+    primeiro_passo: "Medir por uma semana quanto do volume é repetitivo e escolher o tipo de demanda mais frequente para automatizar primeiro.",
+  },
+  manual_repetitivo: {
+    nome: "Manual e repetitivo",
+    sintoma: "Gente qualificada gasta horas copiando, colando e digitando.",
+    impacto: {
+      receita: "Quem deveria vender, atender ou criar está preso em digitação.",
+      custo: "Horas pagas a preço de profissional para fazer trabalho de robô.",
+      risco: "Digitação manual gera erro, retrabalho e inconsistência de dado.",
+      crescimento: "Cada cliente novo vira mais trabalho manual, em vez de ganho de escala.",
+    },
+    oportunidade: "É o gargalo com retorno mais rápido e menor risco: automação de tarefas que já têm regra clara.",
+    aplicacoes: [
+      "Extração automática de dados de documentos, e-mails e notas (OCR + IA) direto para o sistema",
+      "Fluxos no-code (n8n, Make, Zapier) ligando planilhas, CRM e ERP",
+      "Conciliação, cobrança e lançamentos automatizados",
+    ],
+    primeiro_passo: "Listar as 5 tarefas mais repetidas da semana e escolher a que tem entrada e saída mais padronizadas.",
+  },
+  informacao: {
+    nome: "Informação",
+    sintoma: "O dado existe, mas ninguém sabe onde.",
+    impacto: {
+      receita: "Vendedor e atendente sem o histórico do cliente na hora certa perdem a oportunidade.",
+      custo: "Tempo de busca vira custo invisível em todas as áreas.",
+      risco: "Decisão e resposta baseadas em versão desatualizada ou incompleta.",
+      crescimento: "Quanto maior a empresa, mais espalhada a informação e mais lenta a operação.",
+    },
+    oportunidade: "Centralizar o acesso: um assistente que responde em segundos a partir dos documentos e sistemas da própria empresa.",
+    aplicacoes: [
+      "Assistente interno com busca semântica (RAG) sobre contratos, manuais e históricos",
+      "Resumos automáticos de reuniões, chamadas e tickets",
+      "Base de conhecimento viva, atualizada a partir do que a equipe já produz",
+    ],
+    primeiro_passo: "Escolher um tipo de pergunta que a equipe repete todo dia ('onde está o contrato X?') e montar um assistente só para ela.",
+  },
+  decisao: {
+    nome: "Decisão",
+    sintoma: "Existe informação, mas decidir demora e exige várias reuniões.",
+    impacto: {
+      receita: "Oportunidade vencida enquanto a decisão tramita.",
+      custo: "Reuniões longas e repetidas, com gente cara em volta da mesa.",
+      risco: "Decidir tarde costuma ser pior do que decidir imperfeito.",
+      crescimento: "Velocidade de decisão é vantagem competitiva que se perde.",
+    },
+    oportunidade: "Entregar a análise pronta (resumo, comparação, recomendação) para que a reunião seja só de decisão.",
+    aplicacoes: [
+      "Resumos executivos automáticos a partir de dados e documentos",
+      "Alertas e recomendações baseados em regras e previsão",
+      "Pré-análise por IA de propostas, crédito, orçamentos e contratos",
+    ],
+    primeiro_passo: "Escolher a decisão recorrente mais lenta e definir quais 3 informações bastam para tomá-la.",
+  },
+  processo: {
+    nome: "Processo",
+    sintoma: "Etapas demais, retrabalho e aprovações em cascata.",
+    impacto: {
+      receita: "O cliente espera mais para comprar, ser atendido ou receber.",
+      custo: "Cada etapa extra consome horas de gente em cada ciclo.",
+      risco: "Quanto mais etapas manuais, mais pontos de falha e menos rastreabilidade.",
+      crescimento: "Processo mal desenhado não escala: o volume dobra e o caos quadruplica.",
+    },
+    oportunidade: "Redesenhar antes de automatizar: remover etapas e automatizar o que sobra, com aprovações automáticas nos casos de baixo risco.",
+    aplicacoes: [
+      "Fluxos de aprovação automatizados com regras e exceções",
+      "IA que faz a triagem e o pré-preenchimento das etapas burocráticas",
+      "Painel de gargalos do processo (tempo por etapa)",
+    ],
+    primeiro_passo: "Mapear um processo ponta a ponta com o tempo de cada etapa e cortar as duas etapas que ninguém sabe justificar.",
+  },
+  integracao: {
+    nome: "Integração",
+    sintoma: "Os sistemas não conversam e alguém faz a ponte manualmente.",
+    impacto: {
+      receita: "Lead que não chega ao CRM, pedido que não vira faturamento, cliente sem retorno.",
+      custo: "Exportar e importar é trabalho de alto custo e zero valor.",
+      risco: "Dados duplicados e divergentes entre sistemas.",
+      crescimento: "Cada ferramenta nova piora o problema se não estiver conectada.",
+    },
+    oportunidade: "Conectar os sistemas por API e automação, com a IA cobrindo o que não tem API (leitura de documentos, e-mails).",
+    aplicacoes: [
+      "Integrações via n8n, Make ou Zapier entre CRM, ERP, financeiro e atendimento",
+      "IA como camada de tradução entre formatos e sistemas legados",
+      "Sincronização automática de cadastro, status e faturamento",
+    ],
+    primeiro_passo: "Achar o ponto onde alguém exporta/importa planilha toda semana e automatizar esse elo primeiro.",
+  },
+  comunicacao: {
+    nome: "Comunicação",
+    sintoma: "A agenda é tomada por alinhamentos e cobranças de status.",
+    impacto: {
+      receita: "Tempo de gestor e de especialista gasto em conversa em vez de entrega.",
+      custo: "Reuniões de status são o custo mais caro e menos medido.",
+      risco: "Combinados perdidos em chats e e-mails; ninguém sabe o que ficou decidido.",
+      crescimento: "Quanto mais gente, mais alinhamento: a comunicação vira o trabalho.",
+    },
+    oportunidade: "Tirar o status do humano: atualizações, atas e lembretes gerados e distribuídos automaticamente.",
+    aplicacoes: [
+      "Atas e próximos passos gerados por IA a partir das reuniões",
+      "Relatórios de status automáticos a partir das ferramentas de trabalho",
+      "Respostas a dúvidas internas recorrentes por um assistente",
+    ],
+    primeiro_passo: "Eliminar uma reunião de status recorrente e substituí-la por um relatório automático semanal.",
+  },
+  conhecimento: {
+    nome: "Conhecimento",
+    sintoma: "Só uma ou duas pessoas sabem fazer determinadas coisas.",
+    impacto: {
+      receita: "Quando o especialista falta, a venda ou a entrega para.",
+      custo: "Treinamento longo e dependência cara de poucas pessoas.",
+      risco: "Se essa pessoa sair, o conhecimento sai junto.",
+      crescimento: "Não dá para escalar o que mora na cabeça de alguém.",
+    },
+    oportunidade: "Capturar o jeito de fazer do especialista em procedimentos e assistentes que qualquer pessoa da equipe consegue usar.",
+    aplicacoes: [
+      "Assistente treinado com os documentos, e-mails e decisões do especialista",
+      "Gravar e transcrever o 'como fazer' e transformar em procedimento pesquisável",
+      "Copilotos de análise (contratos, propostas, laudos) que elevam o nível de toda a equipe",
+    ],
+    primeiro_passo: "Gravar 3 execuções reais da tarefa do especialista e transformá-las em procedimento com apoio de IA.",
+  },
+  controle: {
+    nome: "Controle",
+    sintoma: "Decisões no feeling, sem um painel confiável.",
+    impacto: {
+      receita: "Você não sabe onde a receita escapa até ser tarde.",
+      custo: "Desperdício que não aparece em lugar nenhum.",
+      risco: "Fraude, erro e desvio só são vistos depois do estrago.",
+      crescimento: "Não se gerencia o que não se mede; a empresa cresce no escuro.",
+    },
+    oportunidade: "Painel único com dados puxados automaticamente dos sistemas, com alertas para o que sair do padrão.",
+    aplicacoes: [
+      "Dashboards automáticos (BI) alimentados por integração, sem planilha manual",
+      "Detecção de anomalias e alertas por IA",
+      "Perguntas em linguagem natural sobre os números da empresa",
+    ],
+    primeiro_passo: "Escolher 5 indicadores que o dono olharia toda segunda de manhã e automatizar a coleta deles.",
+  },
+  demanda_comercial: {
+    nome: "Demanda e comercial",
+    sintoma: "Faltam oportunidades ou elas não viram venda por falta de follow-up.",
+    impacto: {
+      receita: "É o gargalo mais direto: oportunidade perdida é receita perdida.",
+      custo: "Time comercial caro gastando tempo com lead frio e tarefas administrativas.",
+      risco: "Dependência de poucos vendedores e de indicação.",
+      crescimento: "Sem funil previsível não existe crescimento previsível.",
+    },
+    oportunidade: "Automatizar a qualificação e o follow-up para que o humano entre só nas conversas com chance real de fechar.",
+    aplicacoes: [
+      "Qualificação e resposta imediata de leads por IA (WhatsApp, e-mail, site)",
+      "Cadências de follow-up automáticas e personalizadas",
+      "Pontuação de leads e priorização da carteira por probabilidade de compra",
+    ],
+    primeiro_passo: "Medir o tempo entre o lead chegar e o primeiro contato: reduzir isso a minutos costuma ser o maior ganho imediato.",
+  },
+};
+
+export const AREA_LABEL = {
+  comercial: "Comercial / vendas",
+  marketing: "Marketing",
+  financeiro: "Financeiro",
+  administrativo: "Administrativo / RH",
+  operacoes: "Operações / produção",
+  atendimento: "Atendimento / pós-venda",
+  ti: "TI / dados",
+};

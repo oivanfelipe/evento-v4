@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Mapa de Gargalos: V4 Company</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0a; --card: #111; --card2: #1a1a1a; --accent: #E10600; --accent-l: #ff4a42;
+  --glow: rgba(225, 6, 0, .16); --text: #f5f4f0; --text2: #a8a8a8; --muted: #666; --border: #2a2a2a;
+  --ok: #7b9a7b; --warn: #D4AF37;
+  --serif: "Playfair Display", Georgia, serif; --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+body { display: flex; flex-direction: column; min-height: 100dvh; background-image: radial-gradient(circle at 50% -10%, var(--glow), transparent 55%); }
+header { padding: 14px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.brand { font-weight: 600; letter-spacing: .04em; font-size: .85rem; } .brand b { color: var(--accent); }
+.prog { flex: 1; max-width: 220px; height: 4px; background: var(--border); border-radius: 4px; overflow: hidden; }
+.prog i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .3s; }
+main { flex: 1; width: 100%; max-width: 680px; margin: 0 auto; padding: 20px 16px 8px; }
+.bolha { max-width: 88%; padding: 12px 14px; border-radius: 14px; margin: 0 0 10px; line-height: 1.45; font-size: .98rem; animation: sobe .25s ease; white-space: pre-wrap; }
+.bot { background: var(--card2); border: 1px solid var(--border); border-top-left-radius: 4px; }
+.eu { background: var(--accent); margin-left: auto; border-top-right-radius: 4px; }
+.etapa { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-l); margin: 18px 0 8px; }
+.dica { color: var(--text2); font-size: .85rem; margin: 0 0 10px; }
+@keyframes sobe { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+#dock { position: sticky; bottom: 0; background: linear-gradient(transparent, var(--bg) 22%); padding: 16px 16px calc(14px + env(safe-area-inset-bottom)); max-width: 680px; width: 100%; margin: 0 auto; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip, .btn { font: inherit; font-size: .95rem; color: var(--text); background: var(--card); border: 1px solid var(--border); padding: 11px 14px; border-radius: 12px; cursor: pointer; text-align: left; }
+.chip:hover, .chip:focus-visible { border-color: var(--accent); outline: none; }
+.chip.on { background: var(--accent); border-color: var(--accent); }
+.btn { background: var(--accent); border-color: var(--accent); font-weight: 600; text-align: center; }
+.btn.sec { background: transparent; border-color: var(--border); color: var(--text2); }
+.btn:disabled { opacity: .4; cursor: default; }
+.linha { display: flex; gap: 8px; }
+input[type=text], input[type=tel], input[type=email] { flex: 1; min-width: 0; font: inherit; font-size: 1rem; color: var(--text); background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; }
+input:focus { outline: none; border-color: var(--accent); }
+.erro { color: var(--accent-l); font-size: .85rem; margin: 0 0 8px; }
+.capa { text-align: center; padding: 8vh 0 0; }
+.capa h1 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(2rem, 8vw, 3rem); line-height: 1.1; margin: 0 0 14px; }
+.capa p { color: var(--text2); max-width: 460px; margin: 0 auto 24px; line-height: 1.5; }
+.digitando span { display: inline-block; width: 6px; height: 6px; margin-right: 4px; border-radius: 50%; background: var(--text2); animation: pisca 1s infinite; }
+.digitando span:nth-child(2) { animation-delay: .15s; } .digitando span:nth-child(3) { animation-delay: .3s; }
+@keyframes pisca { 50% { opacity: .2; } }
+/* Mapa */
+.mapa h2 { font-family: var(--serif); font-weight: 400; font-size: 1.9rem; line-height: 1.15; margin: 6px 0 10px; }
+.mapa .resumo { color: var(--text2); line-height: 1.55; margin: 0 0 16px; }
+.est { border: 1px solid var(--accent); background: var(--glow); border-radius: 12px; padding: 14px; margin-bottom: 16px; }
+.est b { font-size: 1.35rem; color: var(--accent-l); } .est small { display: block; color: var(--text2); margin-top: 4px; }
+.cartao { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; margin-bottom: 14px; }
+.cartao h3 { font-family: var(--serif); font-weight: 400; font-size: 1.4rem; margin: 0 0 4px; }
+.tag { display: inline-block; font-size: .72rem; padding: 3px 8px; border-radius: 99px; border: 1px solid var(--border); color: var(--text2); margin: 0 6px 6px 0; }
+.tag.p { border-color: var(--accent); color: var(--accent-l); }
+.passo { margin: 12px 0 0; } .passo h4 { margin: 0 0 3px; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-l); font-weight: 600; }
+.passo p, .passo li { margin: 0; line-height: 1.5; color: #ddd; font-size: .95rem; } .passo ul { margin: 0; padding-left: 18px; }
+.caso { margin-top: 10px; padding: 12px; background: var(--card2); border-radius: 10px; border-left: 3px solid var(--accent); }
+.caso strong { display: block; margin-bottom: 4px; } .caso p { margin: 0 0 6px; font-size: .88rem; color: #cfcfcf; line-height: 1.45; }
+.caso a { color: var(--accent-l); font-size: .8rem; word-break: break-all; }
+.nota { color: var(--muted); font-size: .78rem; line-height: 1.5; margin: 14px 0; }
+.acoes { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 28px; }
+@media print {
+  body { background: #fff; color: #111; } header, #dock, .acoes { display: none; }
+  .cartao, .caso, .est { background: #fff; border-color: #bbb; } .passo p, .passo li, .caso p { color: #222; }
+  .mapa .resumo, .nota { color: #444; } .cartao { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">V4 <b>·</b> MAPA DE GARGALOS</div>
+  <div class="prog" aria-hidden="true"><i id="barra"></i></div>
+</header>
+<main id="chat" aria-live="polite"></main>
+<div id="dock"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

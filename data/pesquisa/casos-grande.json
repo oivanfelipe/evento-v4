@@ -1,0 +1,946 @@
+[
+  {
+    "id": "G-001",
+    "porte": "grande",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [],
+    "area": "atendimento",
+    "setor": "fintech / servicos financeiros",
+    "tipo": "nominal",
+    "empresa": "Klarna",
+    "pais": "Suecia",
+    "titulo": "Assistente de IA assume dois tercos dos chats de suporte",
+    "problema": "Volume de chats de suporte exigia milhares de agentes terceirizados.",
+    "solucao": "Assistente de IA generativa responde chats de suporte 24/7 em varios idiomas, com escalonamento a humanos. Nucleo replicavel: bot de primeiro nivel sobre FAQ e historico de pedidos para as perguntas mais frequentes.",
+    "ferramentas": [
+      "OpenAI"
+    ],
+    "resultado": "Em 4 semanas: 2,3 milhoes de conversas (cerca de dois tercos dos chats), equivalente a 700 agentes; resolucao em menos de 2 min (antes 11 min); 25% menos contatos repetidos; satisfacao igual a de humanos; Klarna estimou +US$ 40 milhoes de lucro em 2024 (dados da propria empresa).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Tech.eu",
+    "fonte_url": "https://tech.eu/2024/02/28/power-of-ai-is-happening-right-now-says-klarna-boss-as/",
+    "ano": 2024,
+    "confianca": "alta"
+  },
+  {
+    "id": "G-002",
+    "porte": "grande",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "atendimento",
+    "setor": "transporte / mobilidade",
+    "tipo": "nominal",
+    "empresa": "Lyft",
+    "pais": "Estados Unidos",
+    "titulo": "Claude reduz tempo de resolucao no suporte a motoristas e passageiros",
+    "problema": "Passageiros e motoristas esperavam 30-40 minutos para falar com um agente.",
+    "solucao": "Assistente com Claude investiga o caso e resolve; casos de seguranca ou disputas complexas vao a humanos com resumo gerado por IA. Nucleo replicavel: IA de triagem e resolucao com handoff e resumo para o agente.",
+    "ferramentas": [
+      "Claude (Anthropic)",
+      "Amazon Bedrock"
+    ],
+    "resultado": "Reducao de mais de 87% no tempo de resolucao; ganho de mais de 30% em acuracia de decisao; economia 'na casa dos milhoes' reinvestida em capacitacao dos agentes (dados da empresa; 'resolvido' = cliente responde sim ao bot, segundo TechCrunch).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Claude (Anthropic) - Lyft customer story",
+    "fonte_url": "https://claude.com/customers/lyft",
+    "ano": 2025,
+    "confianca": "alta"
+  },
+  {
+    "id": "G-003",
+    "porte": "grande",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "conhecimento"
+    ],
+    "area": "atendimento",
+    "setor": "bancos",
+    "tipo": "nominal",
+    "empresa": "Bradesco",
+    "pais": "Brasil",
+    "titulo": "BIA e IA generativa resolvem 82% dos atendimentos iniciais",
+    "problema": "Grande base de clientes demandando atendimento no primeiro nivel.",
+    "solucao": "Chat com IA generativa (BIA) no atendimento ao cliente, mais BIA corporativa para funcionarios consultarem produtos e procedimentos.",
+    "ferramentas": [
+      "IA generativa propria (plataforma Bridge)"
+    ],
+    "resultado": "82% de resolucao no primeiro nivel; mais de 10 milhoes de clientes usam o chat com IA; cerca de 450 casos de uso de IA em andamento (Bloomberg Linea, 28/10/2025).",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Bloomberg Linea",
+    "fonte_url": "https://www.bloomberglinea.com.br/negocios/ia-generativa-resolve-82-dos-atendimentos-iniciais-no-bradesco-diz-diretora/",
+    "ano": 2025,
+    "confianca": "alta"
+  },
+  {
+    "id": "G-004",
+    "porte": "grande",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "conhecimento"
+    ],
+    "area": "atendimento",
+    "setor": "bancos digitais",
+    "tipo": "nominal",
+    "empresa": "Nubank",
+    "pais": "Brasil",
+    "titulo": "Copiloto de atendimento e chat com IA reduzem tempo de resposta",
+    "problema": "Volume crescente de contatos e muitas politicas internas para os agentes consultarem.",
+    "solucao": "Chat de IA para clientes (handoff a humano apos ate 5 interacoes) e copiloto para agentes que sugere respostas a partir da base de conhecimento e do historico. Nucleo replicavel: copiloto de agente sobre FAQ interna.",
+    "ferramentas": [
+      "OpenAI GPT-4o"
+    ],
+    "resultado": "Mais de 2 milhoes de interacoes/mes no chat; ate 50% das duvidas de primeiro nivel sem humano; tempo de resposta cerca de 70% menor; resolucao ate 2,3x mais rapida; mais de 5.000 funcionarios usam a busca interna por mes (numeros de Nubank/OpenAI repassados pelo Olhar Digital, sem confirmacao oficial).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Olhar Digital",
+    "fonte_url": "https://olhardigital.com.br/2025/03/09/pro/nubank-aposta-em-parceria-com-openai-para-uso-de-ias-em-seus-servicos/",
+    "ano": 2025,
+    "confianca": "media"
+  },
+  {
+    "id": "G-005",
+    "porte": "grande",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "conhecimento",
+      "controle"
+    ],
+    "area": "atendimento",
+    "setor": "marketplace / e-commerce",
+    "tipo": "nominal",
+    "empresa": "Mercado Livre",
+    "pais": "Argentina/Brasil",
+    "titulo": "Agente Verdi apoia vendedores e faz parte das mediacoes",
+    "problema": "Escala de vendedores e compradores superava a capacidade do suporte humano.",
+    "solucao": "Agente de IA treinado para atendimento a vendedores: avalia qualidade de anuncios, rotula produtos, responde duvidas tributarias e sugere respostas a compradores.",
+    "ferramentas": [],
+    "resultado": "10% das mediacoes feitas de forma autonoma pelo Verdi; NPS superior ao do atendimento humano segundo o diretor; deteccao de fraude com acuracia proxima de 99%; 20% do codigo passa por IA (Mobile Time, 26/09/2025).",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Mobile Time",
+    "fonte_url": "https://www.mobiletime.com.br/?p=836618",
+    "ano": 2025,
+    "confianca": "media"
+  },
+  {
+    "id": "G-006",
+    "porte": "grande",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "demanda_comercial"
+    ],
+    "area": "atendimento",
+    "setor": "software / CRM",
+    "tipo": "nominal",
+    "empresa": "Salesforce",
+    "pais": "Estados Unidos",
+    "titulo": "Agentforce resolve 85% das consultas do proprio suporte",
+    "problema": "Alto volume de consultas de clientes no help site.",
+    "solucao": "Agente de IA responde consultas e escala 15% a humanos; 25 mil vendedores usam o agente como coach de vendas.",
+    "ferramentas": [
+      "Agentforce"
+    ],
+    "resultado": "85% das consultas resolvidas sem humano; mais de 30 mil conversas semanais; 25.000 vendedores usando o coach (CX Today, 2025; dados da propria Salesforce).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "CX Today",
+    "fonte_url": "https://cxtoday.com/salesforce-resolves-85-of-its-customer-queries-with-agentforce",
+    "ano": 2025,
+    "confianca": "media"
+  },
+  {
+    "id": "G-007",
+    "porte": "grande",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "financeiro",
+    "setor": "bancos / mercado de capitais",
+    "tipo": "nominal",
+    "empresa": "Itau Unibanco",
+    "pais": "Brasil",
+    "titulo": "IA generativa corta mais de 60% do tempo de relatorios de analise de mercado",
+    "problema": "Elaboracao manual de relatorios com leitura de documentos extensos.",
+    "solucao": "IA generativa le documentos, organiza dados e redige rascunhos sobre bases proprietarias; analistas revisam e fazem a interpretacao. Nucleo replicavel: rascunho automatico de relatorios recorrentes com revisao humana.",
+    "ferramentas": [
+      "AWS",
+      "GFT Technologies"
+    ],
+    "resultado": "Reducao de mais de 60% no tempo de elaboracao e queda de custo de traducao; em producao; numero vem da parceria do projeto (case AWS de 26/03/2026, reportado pelo Let's Money em 27/04/2026).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Let's Money (citando case AWS)",
+    "fonte_url": "https://www.letsmoney.com.br/ia/itau-corta-tempo-relatorios-ia-generativa/",
+    "ano": 2026,
+    "confianca": "media"
+  },
+  {
+    "id": "G-008",
+    "porte": "grande",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "processo"
+    ],
+    "area": "operacoes",
+    "setor": "fidelidade / varejo",
+    "tipo": "nominal",
+    "empresa": "Livelo",
+    "pais": "Brasil",
+    "titulo": "Automacao de processos recupera 20 mil horas por ano",
+    "problema": "Processos manuais como moderacao de avaliacoes e pipeline de canais e campanhas.",
+    "solucao": "Automacao com Gemini Enterprise e agentes de IA de processos operacionais e de marketing digital. Nucleo replicavel: automatizar moderacao e rotinas de campanha.",
+    "ferramentas": [
+      "Gemini Enterprise",
+      "Google Cloud"
+    ],
+    "resultado": "Cerca de 20.000 horas recuperadas por ano, redirecionadas a estrategia e inovacao (comunicado Google Cloud, 24/09/2026).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Google Cloud Press Corner",
+    "fonte_url": "https://www.googlecloudpresscorner.com/2026-09-24-google-cloud-expands-in-brazil-to-power-the-next-generation-of-agentic-ai",
+    "ano": 2026,
+    "confianca": "alta"
+  },
+  {
+    "id": "G-009",
+    "porte": "grande",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "comunicacao"
+    ],
+    "area": "operacoes",
+    "setor": "industria / infraestrutura predial",
+    "tipo": "nominal",
+    "empresa": "Siemens (Smart Infrastructure)",
+    "pais": "Alemanha/Suica",
+    "titulo": "Copilot gera relatorios de ordem de servico dos tecnicos",
+    "problema": "Qualidade variavel nos relatorios de mais de 1,4 milhao de ordens de servico por ano.",
+    "solucao": "App sobre Copilot para Dynamics 365 Field Service ajuda tecnicos a escrever relatorios padronizados com menos digitacao.",
+    "ferramentas": [
+      "Microsoft Copilot for Dynamics 365",
+      "Dynamics 365 Field Service"
+    ],
+    "resultado": "Mais de 1,4 milhao de relatorios/ano e mais de 10.000 tecnicos no escopo; 6 meses do conceito ao piloto; piloto ampliado a 40 tecnicos. Ganhos de tempo ainda eram metas, nao medidos.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Microsoft Customer Stories",
+    "fonte_url": "https://www.microsoft.com/en/customers/story/19736-siemens-ag-germany-dynamics-365-field-service",
+    "ano": 2024,
+    "confianca": "alta"
+  },
+  {
+    "id": "G-010",
+    "porte": "grande",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "comunicacao"
+    ],
+    "area": "administrativo",
+    "setor": "locacao de veiculos",
+    "tipo": "nominal",
+    "empresa": "Localiza&Co",
+    "pais": "Brasil",
+    "titulo": "Copilot reduz 8,3 horas por funcionario ao mes",
+    "problema": "Tempo gasto em trabalho manual repetitivo (emails, documentos, reunioes).",
+    "solucao": "Rollout do Microsoft 365 Copilot (inicio com 300 licencas em 2023), com treinamento, hackathons e mapeamento de 42 casos de uso. Nucleo replicavel: piloto pequeno com medicao via Viva Insights.",
+    "ferramentas": [
+      "Microsoft 365 Copilot",
+      "Viva Insights",
+      "Copilot Studio"
+    ],
+    "resultado": "Reducao media de 8,3 horas de trabalho por funcionario/mes; cerca de 19 horas/mes para usuarios intensivos; 10,6% de produtividade nesses usuarios vs 4,5% na media.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Microsoft Customer Stories",
+    "fonte_url": "https://www.microsoft.com/en/customers/story/19818-localiza-microsoft-365-copilot",
+    "ano": 2024,
+    "confianca": "alta"
+  },
+  {
+    "id": "G-011",
+    "porte": "grande",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "controle"
+    ],
+    "area": "financeiro",
+    "setor": "energia / petroleo",
+    "tipo": "nominal",
+    "empresa": "Petrobras",
+    "pais": "Brasil",
+    "titulo": "IA generativa no departamento fiscal com automacao de baixo codigo",
+    "problema": "Areas corporativas (fiscal, RH, financas, compras) usavam pouco automacao; 150 paginas de regras tributarias complexas.",
+    "solucao": "Regulamentos fiscais e tres meses de dados carregados em modelo de IA generativa; automacoes criadas com copiloto, reduzindo o desenvolvimento de meses para semanas.",
+    "ferramentas": [
+      "Automation Anywhere Automation Co-Pilot"
+    ],
+    "resultado": "Segundo o fornecedor: US$ 120 milhoes de economia em 3 semanas, projecao de mais de US$ 1 bilhao no ano e 40% de ganho de eficiencia (pagina sem data; numeros nao auditados).",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Automation Anywhere (customer story)",
+    "fonte_url": "https://www.automationanywhere.com/br/resources/customer-stories/petrobras",
+    "ano": 2026,
+    "confianca": "media"
+  },
+  {
+    "id": "G-012",
+    "porte": "grande",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "capacidade"
+    ],
+    "area": "ti",
+    "setor": "meios de pagamento",
+    "tipo": "nominal",
+    "empresa": "Cielo",
+    "pais": "Brasil",
+    "titulo": "Agente de IA reduz 52% dos chamados do service desk de TI",
+    "problema": "Alto volume de chamados rotineiros (senha, VPN).",
+    "solucao": "Agente no Copilot Studio, disponivel no Teams 24/7, que executa acoes (restaurar conta, chave BitLocker, VPN, revogar MFA). Nucleo replicavel: agente de autoatendimento de TI.",
+    "ferramentas": [
+      "Copilot Studio",
+      "Power Apps",
+      "Intune",
+      "Microsoft Fabric"
+    ],
+    "resultado": "Chamados caíram de 3.710 (jul/2025) para 1.776 (abr/2026), cerca de 52,2% (Microsoft LATAM, 17/08/2026).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Microsoft News Latam",
+    "fonte_url": "https://news.microsoft.com/source/latam/ia-pt-br/cielo-aumenta-a-eficiencia-do-atendimento-de-ti-com-agente-de-ia-e-reduz-chamados-em-mais-de-50/?lang=pt-br",
+    "ano": 2026,
+    "confianca": "alta"
+  },
+  {
+    "id": "G-013",
+    "porte": "grande",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "integracao",
+      "controle"
+    ],
+    "area": "logistica",
+    "setor": "logistica global",
+    "tipo": "padrao",
+    "empresa": null,
+    "pais": "Global",
+    "titulo": "Agente GenAI classifica faturas comerciais e atinge 95% sem toque",
+    "problema": "Revisao manual de tarifas e commodities levava ate 1 hora por fatura; volume subiu ate 8x com mudanca de regra de importacao dos EUA em 2025.",
+    "solucao": "Agente de processamento de documentos com GenAI classifica faturas, extrai itens, aplica regras de validacao e encaminha excecoes a especialistas. Empresa nao nomeada na fonte (case do fornecedor).",
+    "ferramentas": [
+      "Tungsten TotalAgility"
+    ],
+    "resultado": "Cerca de 95% de faturas sem toque, 15 milhoes de faturas/ano, pico de 8x absorvido sem aumentar equipe (case do fornecedor, empresa anonima).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Tungsten Automation (case study)",
+    "fonte_url": "https://www.tungstenautomation.com/case-studies/global-logistics-leader-achieves-95-percent-touchless-invoice-processing",
+    "ano": 2026,
+    "confianca": "media"
+  },
+  {
+    "id": "G-014",
+    "porte": "grande",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "conhecimento"
+    ],
+    "area": "juridico",
+    "setor": "escritorio de advocacia",
+    "tipo": "nominal",
+    "empresa": "A&O Shearman",
+    "pais": "Reino Unido",
+    "titulo": "Harvey e ContractMatrix aceleram revisao de contratos",
+    "problema": "Rotinas de redigir, resumir, comparar clausulas e buscar precedentes consumiam tempo dos advogados.",
+    "solucao": "Harvey implantado em toda a firma e ContractMatrix (Harvey + Microsoft) para redigir e negociar contratos com base em precedentes. Nucleo replicavel: assistente de revisao de clausulas contra playbook proprio.",
+    "ferramentas": [
+      "Harvey",
+      "Microsoft"
+    ],
+    "resultado": "Tempo de revisao de contratos 30% menor (ate cerca de 7 horas por revisao); 2-3 horas/semana economizadas por usuario; cerca de 2.000 advogados usam o ContractMatrix diariamente (pagina do fornecedor Harvey).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Harvey (customer story)",
+    "fonte_url": "https://harvey.ai/customers/a-and-o-shearman",
+    "ano": 2025,
+    "confianca": "media"
+  },
+  {
+    "id": "G-015",
+    "porte": "grande",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "financeiro",
+    "setor": "bancos",
+    "tipo": "nominal",
+    "empresa": "Bradesco",
+    "pais": "Brasil",
+    "titulo": "Analise de documentos fiscais, contabeis e contratuais cai de 1 hora para 5 minutos",
+    "problema": "Revisao lenta de documentos fiscais, contabeis e contratuais.",
+    "solucao": "Gemini Enterprise automatiza a analise desses documentos. Nucleo replicavel: extracao e resumo de documentos recorrentes com validacao humana.",
+    "ferramentas": [
+      "Gemini Enterprise"
+    ],
+    "resultado": "Tempo de revisao de 1 hora para 5 minutos (cerca de 92% menos), segundo o Google Cloud (24/09/2026).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Google Cloud Press Corner",
+    "fonte_url": "https://www.googlecloudpresscorner.com/2026-09-24-google-cloud-expands-in-brazil-to-power-the-next-generation-of-agentic-ai",
+    "ano": 2026,
+    "confianca": "alta"
+  },
+  {
+    "id": "G-016",
+    "porte": "grande",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "integracao",
+      "decisao"
+    ],
+    "area": "financeiro",
+    "setor": "varejo e distribuicao",
+    "tipo": "padrao",
+    "empresa": null,
+    "pais": "Estados Unidos",
+    "titulo": "Assistente em linguagem natural entrega relatorios financeiros em segundos",
+    "problema": "Dados de lucro, receita e caixa levavam horas ou dias; filiais com fontes e estruturas diferentes.",
+    "solucao": "Assistente de IA conectado ao ERP, com camada de dados harmonizada e analytics para perguntas em linguagem natural. Cliente nao nomeado (parceiro de implementacao).",
+    "ferramentas": [
+      "SAP Joule",
+      "SAP S/4HANA",
+      "SAP Datasphere",
+      "SAP Analytics Cloud"
+    ],
+    "resultado": "90% de reducao no tempo para obter relatorios financeiros, de horas ou dias para segundos (case do parceiro LeverX; pagina sem data, ano estimado).",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "LeverX (case SAP Joule)",
+    "fonte_url": "https://leverx.com/case-studies/sap-joule-leverx-enabled-an-ai-assistant",
+    "ano": 2025,
+    "confianca": "media"
+  },
+  {
+    "id": "G-017",
+    "porte": "grande",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "outro",
+    "setor": "wealth management",
+    "tipo": "nominal",
+    "empresa": "Morgan Stanley",
+    "pais": "Estados Unidos",
+    "titulo": "Chatbot interno responde duvidas dos consultores com base nos documentos da casa",
+    "problema": "Consultores buscavam respostas em muitos PDFs em sites internos.",
+    "solucao": "Chatbot com GPT-4 que responde em linguagem natural apenas com conteudo proprio e links para as fontes. Nucleo replicavel: busca conversacional sobre a base documental interna.",
+    "ferramentas": [
+      "OpenAI GPT-4"
+    ],
+    "resultado": "No lancamento (2023): mais de 200 funcionarios usavam diariamente; respostas com link para o documento-fonte. Sem metrica de ganho na fonte.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "InvestmentNews",
+    "fonte_url": "https://investmentnews.com/morgan-stanley-partners-with-openai-on-internal-chatbot-for-financial-advisors-235147",
+    "ano": 2023,
+    "confianca": "media"
+  },
+  {
+    "id": "G-018",
+    "porte": "grande",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "operacoes",
+    "setor": "industria",
+    "tipo": "nominal",
+    "empresa": "Siemens",
+    "pais": "Alemanha",
+    "titulo": "Industrial Copilot encontra respostas em cerca de 600 documentos para operadores",
+    "problema": "Operadores gastavam horas procurando respostas em documentacao de maquinas.",
+    "solucao": "Copilot que busca em cerca de 600 documentos e traduz codigos de erro em linguagem simples com sugestao de reparo.",
+    "ferramentas": [
+      "Microsoft Copilot",
+      "Siemens Industrial Copilot"
+    ],
+    "resultado": "Pesquisa que levava horas passa a ser feita pela IA; a empresa cita 10 minutos de maquina parada a menos como ganho relevante (sem total agregado).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Microsoft Source (news)",
+    "fonte_url": "https://news.microsoft.com/source/features/ai/workers-in-all-kinds-of-roles-and-industries-count-on-copilot-to-do-more-in-less-time/",
+    "ano": 2024,
+    "confianca": "media"
+  },
+  {
+    "id": "G-019",
+    "porte": "grande",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "capacidade",
+      "manual_repetitivo"
+    ],
+    "area": "rh",
+    "setor": "tecnologia",
+    "tipo": "nominal",
+    "empresa": "IBM",
+    "pais": "Estados Unidos",
+    "titulo": "AskHR contem 94% das duvidas comuns de RH",
+    "problema": "Politicas diferentes por regiao, processos de RH manuais e canais inconsistentes.",
+    "solucao": "Agente virtual AskHR com LLMs e watsonx Orchestrate: IA responde duvidas rotineiras e executa tarefas; atendentes humanos cuidam dos casos complexos. Nucleo replicavel: agente de RH sobre politicas, integrado a folha e sistema de RH.",
+    "ferramentas": [
+      "watsonx Orchestrate",
+      "Workday",
+      "SAP SuccessFactors",
+      "Concur"
+    ],
+    "resultado": "94% de contencao de duvidas comuns; mais de 80 tarefas automatizadas; 40% menos custo operacional de RH em 4 anos; 75% menos tickets desde 2016; mais de 11,5 milhoes de interacoes em 2024 (case IBM, numeros da propria empresa).",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "IBM Case Studies",
+    "fonte_url": "https://ibm.com/case-studies/ibm-askhr",
+    "ano": 2025,
+    "confianca": "alta"
+  },
+  {
+    "id": "G-020",
+    "porte": "grande",
+    "gargalo": "decisao",
+    "gargalos_secundarios": [
+      "demanda_comercial"
+    ],
+    "area": "administrativo",
+    "setor": "varejo",
+    "tipo": "nominal",
+    "empresa": "Walmart",
+    "pais": "Estados Unidos",
+    "titulo": "Chatbot negocia contratos com fornecedores",
+    "problema": "Muitos contratos de menor valor com fornecedores sem tempo da equipe de compras.",
+    "solucao": "Bot de negociacao autonoma (Pactum) fecha acordos de prazo e preco com fornecedores em paralelo. Nucleo replicavel: negociacao automatizada de contratos de baixo valor com regras definidas.",
+    "ferramentas": [
+      "Pactum"
+    ],
+    "resultado": "Negociacao com ate 2.000 fornecedores simultaneos; acordos com 68% dos abordados; 3% de economia media; 83% acharam facil de usar; cerca de 75% preferem o bot (dados Pactum/Bloomberg via PYMNTS, 2023).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "PYMNTS",
+    "fonte_url": "https://www.pymnts.com/news/artificial-intelligence/2023/walmart-finds-75-percent-vendors-prefer-negotiating-with-chatbot/partial/",
+    "ano": 2023,
+    "confianca": "media"
+  },
+  {
+    "id": "G-021",
+    "porte": "grande",
+    "gargalo": "decisao",
+    "gargalos_secundarios": [
+      "processo"
+    ],
+    "area": "financeiro",
+    "setor": "bancos digitais",
+    "tipo": "nominal",
+    "empresa": "C6 Bank",
+    "pais": "Brasil",
+    "titulo": "IA generativa reduz onboarding PJ de um dia para dez minutos",
+    "problema": "Aprovacao de abertura de conta PJ levava um dia.",
+    "solucao": "IA generativa aplicada ao onboarding e analise de clientes PJ.",
+    "ferramentas": [],
+    "resultado": "Aprovacao caiu de um dia para dez minutos (entrevista ao Mobile Time, 20/07/2026).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Mobile Time",
+    "fonte_url": "https://www.mobiletime.com.br/noticias/20/07/2026/ia-no-backoffice-bancos/",
+    "ano": 2026,
+    "confianca": "media"
+  },
+  {
+    "id": "G-022",
+    "porte": "grande",
+    "gargalo": "decisao",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "financeiro",
+    "setor": "bureau de credito",
+    "tipo": "nominal",
+    "empresa": "Serasa",
+    "pais": "Brasil",
+    "titulo": "Analise de risco de credito 10 vezes mais rapida",
+    "problema": "Volume de cerca de 500 milhoes de transacoes por dia exige analise rapida de risco.",
+    "solucao": "Plataforma de dados e IA em nuvem para analise de risco de credito.",
+    "ferramentas": [
+      "Google Cloud"
+    ],
+    "resultado": "Analise de risco 10x mais rapida; 500 milhoes de transacoes/dia (coluna do O Povo sobre o Google Cloud Summit, 24/09/2026; fala do fornecedor).",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "O Povo",
+    "fonte_url": "https://mais.opovo.com.br/colunistas/beatriz-cavalcante/2026/09/24/foco-em-ia-google-quer-dobrar-infraestrutura-no-brasil-ate-2030.html",
+    "ano": 2026,
+    "confianca": "media"
+  },
+  {
+    "id": "G-023",
+    "porte": "grande",
+    "gargalo": "processo",
+    "gargalos_secundarios": [],
+    "area": "ti",
+    "setor": "e-commerce / internet",
+    "tipo": "nominal",
+    "empresa": "Rakuten",
+    "pais": "Japao",
+    "titulo": "Claude Code reduz tempo de lancamento de funcionalidades em 79%",
+    "problema": "Ciclos de entrega lentos de novas funcionalidades.",
+    "solucao": "Fluxos de desenvolvimento redesenhados em torno do Claude Code; agentes gerenciados tambem em produto, vendas, marketing e financas. Nucleo replicavel: redesenhar o fluxo de trabalho, nao so adicionar a ferramenta.",
+    "ferramentas": [
+      "Claude Code",
+      "Claude Managed Agents"
+    ],
+    "resultado": "Tempo para lancar funcionalidades caiu 79% (24 para 5 dias uteis); 7 horas de codificacao autonoma em refatoracao; entregas a cada 2 semanas (antes trimestrais).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Claude (Anthropic) - Rakuten",
+    "fonte_url": "https://claude.com/customers/rakuten",
+    "ano": 2025,
+    "confianca": "alta"
+  },
+  {
+    "id": "G-024",
+    "porte": "grande",
+    "gargalo": "processo",
+    "gargalos_secundarios": [
+      "capacidade"
+    ],
+    "area": "operacoes",
+    "setor": "bancos",
+    "tipo": "nominal",
+    "empresa": "Itau Unibanco",
+    "pais": "Brasil",
+    "titulo": "Agentes de IA reduzem ciclo de produto de 18 dias para 14 horas (simulacao)",
+    "problema": "Ciclo longo de desenvolvimento de produtos.",
+    "solucao": "Agentes especializados (PM, tech lead, desenvolvedor) em pesquisa, prototipo e validacao com validacao humana.",
+    "ferramentas": [],
+    "resultado": "Em simulacao (Pix por voz) o ciclo foi de 18 dias para cerca de 14 horas, ou 5 dias em modo hibrido; mais de 760 produtos e processos com IA generativa; cerca de 56 mil colaboradores usam GenAI; ganhos de 300% sao relatos de algumas squads (Let's Money, 2026).",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Let's Money",
+    "fonte_url": "https://www.letsmoney.com.br/noticias/itau-acelera-software-agentes-ia-300/",
+    "ano": 2026,
+    "confianca": "media"
+  },
+  {
+    "id": "G-025",
+    "porte": "grande",
+    "gargalo": "processo",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "ti",
+    "setor": "e-commerce / nuvem",
+    "tipo": "nominal",
+    "empresa": "Amazon",
+    "pais": "Estados Unidos",
+    "titulo": "Amazon Q Developer migra aplicacoes para Java 17",
+    "problema": "Atualizar milhares de aplicacoes manualmente exigia cerca de 50 dias de desenvolvedor cada.",
+    "solucao": "Agente de transformacao de codigo do Q Developer automatiza o upgrade e a migracao de dependencias; desenvolvedores revisam.",
+    "ferramentas": [
+      "Amazon Q Developer"
+    ],
+    "resultado": "Mais de 4.500 anos-desenvolvedor economizados; dezenas de milhares de aplicacoes migradas; US$ 260 milhoes/ano de economia estimada (AWS, 01/08/2024; estimativa da propria Amazon).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "AWS DevOps Blog",
+    "fonte_url": "https://aws.amazon.com/blogs/devops/amazon-q-developer-just-reached-a-260-million-dollar-milestone",
+    "ano": 2024,
+    "confianca": "alta"
+  },
+  {
+    "id": "G-026",
+    "porte": "grande",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "processo"
+    ],
+    "area": "ti",
+    "setor": "bancos",
+    "tipo": "nominal",
+    "empresa": "Bradesco",
+    "pais": "Brasil",
+    "titulo": "Agentes de IA aceleram engenharia reversa de codigo legado",
+    "problema": "Decadas de sistemas legados (COBOL, mainframe) dificultam integrar e modernizar.",
+    "solucao": "Agentes de IA fazem engenharia reversa e traducao de codigo legado, alem de gerar codigo novo.",
+    "ferramentas": [],
+    "resultado": "Ate 80% de ganho de tempo na engenharia reversa; ate 25% de eficiencia na geracao de codigo novo; 20% no ciclo completo de desenvolvimento (entrevista ao Mobile Time, 20/07/2026; nao auditado).",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Mobile Time",
+    "fonte_url": "https://www.mobiletime.com.br/noticias/20/07/2026/ia-no-backoffice-bancos/",
+    "ano": 2026,
+    "confianca": "media"
+  },
+  {
+    "id": "G-027",
+    "porte": "grande",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "ti",
+    "setor": "bebidas / bens de consumo",
+    "tipo": "nominal",
+    "empresa": "Heineken",
+    "pais": "Paises Baixos",
+    "titulo": "Plataforma unificada de dados como base para IA",
+    "problema": "Dados fragmentados, sem base confiavel para modelos de IA.",
+    "solucao": "Plataforma Databricks unificando dados para modelos confiaveis e insights em escala. Nucleo replicavel: consolidar dados em uma plataforma unica antes de aplicar IA.",
+    "ferramentas": [
+      "Databricks",
+      "Azure"
+    ],
+    "resultado": "A fonte nao traz metricas quantitativas (pagina do fornecedor sem data; ano estimado).",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Databricks (customer story)",
+    "fonte_url": "https://www.databricks.com/customers/heineken-international",
+    "ano": 2025,
+    "confianca": "media"
+  },
+  {
+    "id": "G-028",
+    "porte": "grande",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [
+      "capacidade"
+    ],
+    "area": "atendimento",
+    "setor": "telecomunicacoes",
+    "tipo": "nominal",
+    "empresa": "Telstra",
+    "pais": "Australia",
+    "titulo": "Resumo de conversas em uma frase reduz recontatos em 20%",
+    "problema": "Agentes perdiam tempo registrando e recuperando o contexto de conversas anteriores.",
+    "solucao": "Ferramenta 'One Sentence Summary' resume as interacoes e o 'Ask Telstra' responde consultas internas; expansao para toda a rede de contact center e lojas.",
+    "ferramentas": [],
+    "resultado": "Nos testes de 2023: 90% dos usuarios relataram ganho de tempo e efetividade e houve 20% menos contatos de acompanhamento; no Ask Telstra, mais de 80% viram impacto positivo (ITWire, 07/02/2024).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "ITWire",
+    "fonte_url": "https://itwire.com/business-it-news/business-technology/telstra-scales-up-ai-adoption-following-%e2%80%98promising-pilots%e2%80%99-of-generative-ai-solutions-improving-customer-experience.html",
+    "ano": 2024,
+    "confianca": "media"
+  },
+  {
+    "id": "G-029",
+    "porte": "grande",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [],
+    "area": "marketing",
+    "setor": "tecnologia financeira",
+    "tipo": "nominal",
+    "empresa": "Finastra",
+    "pais": "Reino Unido",
+    "titulo": "Copilot transcreve entrevistas e acelera campanha para seis semanas",
+    "problema": "Transformar entrevistas em conteudo de campanha tomaria no minimo seis meses.",
+    "solucao": "Equipe de marketing usou o Copilot para transcrever e reaproveitar entrevistas com 50 pessoas.",
+    "ferramentas": [
+      "Microsoft Copilot"
+    ],
+    "resultado": "Campanha de open finance lancada em cerca de seis semanas, contra a estimativa de pelo menos seis meses (Microsoft Source).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Microsoft Source (news)",
+    "fonte_url": "https://news.microsoft.com/source/features/ai/workers-in-all-kinds-of-roles-and-industries-count-on-copilot-to-do-more-in-less-time/",
+    "ano": 2024,
+    "confianca": "media"
+  },
+  {
+    "id": "G-030",
+    "porte": "grande",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "decisao"
+    ],
+    "area": "financeiro",
+    "setor": "meios de pagamento",
+    "tipo": "nominal",
+    "empresa": "Mastercard",
+    "pais": "Estados Unidos",
+    "titulo": "Modelo de IA melhora a deteccao de fraude em tempo real",
+    "problema": "Fraudes em transacoes exigem avaliacao em milissegundos.",
+    "solucao": "Modelo proprio treinado em cerca de 125 bilhoes de transacoes/ano avalia a aderencia do comerciante ao historico do portador (cerca de 50 ms).",
+    "ferramentas": [
+      "Decision Intelligence Pro"
+    ],
+    "resultado": "Deteccao de fraude 20% melhor em media, ate 300% em alguns casos; bancos poderiam economizar ate 20% do custo de revisao (CNBC, 01/02/2024; alegacoes da empresa).",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "CNBC via NBC Connecticut",
+    "fonte_url": "https://www.nbcconnecticut.com/news/business/money-report/mastercard-jumps-into-generative-ai-race-with-model-it-says-can-boost-fraud-detection-by-up-to-300/3208183/",
+    "ano": 2024,
+    "confianca": "alta"
+  },
+  {
+    "id": "G-031",
+    "porte": "grande",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "capacidade"
+    ],
+    "area": "operacoes",
+    "setor": "marketplace / e-commerce",
+    "tipo": "nominal",
+    "empresa": "Mercado Livre",
+    "pais": "Brasil",
+    "titulo": "IA detecta fraude em milhoes de anuncios por dia",
+    "problema": "Volume gigantesco de anuncios para checar fraude.",
+    "solucao": "Modelos de IA analisam anuncios diariamente e sinalizam fraude.",
+    "ferramentas": [],
+    "resultado": "Acuracia proxima de 99% em deteccao de fraude, com milhoes de anuncios analisados por dia (Mobile Time, 26/09/2025; declaracao da empresa).",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Mobile Time",
+    "fonte_url": "https://www.mobiletime.com.br/?p=836618",
+    "ano": 2025,
+    "confianca": "media"
+  },
+  {
+    "id": "G-032",
+    "porte": "grande",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "demanda_comercial"
+    ],
+    "area": "financeiro",
+    "setor": "bancos",
+    "tipo": "nominal",
+    "empresa": "Bradesco",
+    "pais": "Brasil",
+    "titulo": "IA analisa 18 mil ligacoes de cobranca por dia e orienta operadores",
+    "problema": "Baixa visibilidade e padronizacao nas ligacoes de cobranca.",
+    "solucao": "Sistema de IA analisa as ligacoes e orienta os operadores durante o atendimento.",
+    "ferramentas": [],
+    "resultado": "18.000 ligacoes analisadas por dia; a materia associa a iniciativa a mais de R$ 400 milhoes em beneficios capturados em 2025 (Bloomberg Linea; atribuicao exata nao detalhada).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Bloomberg Linea",
+    "fonte_url": "https://www.bloomberglinea.com.br/negocios/ia-generativa-resolve-82-dos-atendimentos-iniciais-no-bradesco-diz-diretora/",
+    "ano": 2025,
+    "confianca": "media"
+  },
+  {
+    "id": "G-033",
+    "porte": "grande",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "processo"
+    ],
+    "area": "operacoes",
+    "setor": "bens de consumo / industria",
+    "tipo": "nominal",
+    "empresa": "Procter & Gamble",
+    "pais": "Estados Unidos",
+    "titulo": "Inspecao visual com IA reduz refugo em 10-20%",
+    "problema": "Sistemas de visao tradicionais nao lidavam com variacao de materiais e exigiam reconfiguracao.",
+    "solucao": "Visual Inspection Cockpit com modelos de deep learning rodando em Industrial Edge ao lado da linha; engenheiros treinam modelos sem time de ciencia de dados no local.",
+    "ferramentas": [
+      "Siemens Industrial Edge",
+      "Nvidia GPU"
+    ],
+    "resultado": "Refugo 10-20% menor conforme o produto; instalacoes 5 a 10 vezes mais rapidas que sistemas de visao convencionais; meta de ate US$ 1,5 bilhao de economia no custo dos produtos (PYMNTS, 29/09/2026; dados da P&G, nao verificados).",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "PYMNTS",
+    "fonte_url": "https://www.pymnts.com/?p=4226544",
+    "ano": 2026,
+    "confianca": "media"
+  },
+  {
+    "id": "G-034",
+    "porte": "grande",
+    "gargalo": "demanda_comercial",
+    "gargalos_secundarios": [
+      "capacidade"
+    ],
+    "area": "comercial",
+    "setor": "varejo",
+    "tipo": "nominal",
+    "empresa": "Casas Bahia",
+    "pais": "Brasil",
+    "titulo": "Copiloto de IA para vendedores no WhatsApp aumenta conversao em mais de 50%",
+    "problema": "Vendedores precisavam personalizar abordagens sem contexto do cliente.",
+    "solucao": "Bah.IA com Gemini analisa historico de navegacao e compras e sugere abordagens e comparacoes ao vendedor durante a conversa no WhatsApp. Nucleo replicavel: copiloto de vendas sobre CRM e historico.",
+    "ferramentas": [
+      "Gemini",
+      "Genesys"
+    ],
+    "resultado": "Conversao do canal 'Me Chama no Zap' mais de 50% maior; mais de 10 mil vendedores; mais de 70 milhoes/mes em vendas; acerto de respostas automaticas em redes sociais de 35% para 70% (Baguete, 12/09/2025).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Baguete",
+    "fonte_url": "https://www.baguete.com.br/noticias/casas-bahia-usa-ia-como-copiloto-dos-vendedores",
+    "ano": 2025,
+    "confianca": "media"
+  },
+  {
+    "id": "G-035",
+    "porte": "grande",
+    "gargalo": "demanda_comercial",
+    "gargalos_secundarios": [],
+    "area": "comercial",
+    "setor": "cosmeticos / varejo",
+    "tipo": "nominal",
+    "empresa": "Grupo Boticario",
+    "pais": "Brasil",
+    "titulo": "Assistente virtual de compras no app aumenta conversao em 46%",
+    "problema": "Levar para o app o atendimento personalizado das consultoras da loja fisica.",
+    "solucao": "Assistente com agente de IA que faz perguntas simples, busca produtos por semantica e exibe vitrine com opcao de carrinho. Nucleo replicavel: assistente de recomendacao no canal digital.",
+    "ferramentas": [
+      "Amazon Bedrock Agents",
+      "Claude Sonnet 4",
+      "Titan Embeddings",
+      "AWS Lambda",
+      "Bedrock Guardrails"
+    ],
+    "resultado": "Conversao de vendas 46% maior no primeiro mes; ticket medio 7,4% maior entre quem usa o assistente (blog AWS, 24/11/2025).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "AWS Blog Brasil",
+    "fonte_url": "https://aws.amazon.com/pt/blogs/aws-brasil/como-o-grupo-boticario-esta-revolucionando-a-experiencia-de-compra-online-com-ia-generativa/",
+    "ano": 2025,
+    "confianca": "alta"
+  },
+  {
+    "id": "G-036",
+    "porte": "grande",
+    "gargalo": "demanda_comercial",
+    "gargalos_secundarios": [
+      "comunicacao"
+    ],
+    "area": "comercial",
+    "setor": "varejo",
+    "tipo": "nominal",
+    "empresa": "Magazine Luiza",
+    "pais": "Brasil",
+    "titulo": "Lu no WhatsApp: compra completa dentro do chat com IA",
+    "problema": "Aumentar conversao e reduzir custo de aquisicao e atendimento.",
+    "solucao": "IA Commerce no WhatsApp: cliente pesquisa, recebe recomendacoes, paga e acompanha pedido no chat.",
+    "ferramentas": [
+      "Meta",
+      "Google"
+    ],
+    "resultado": "Conversao cerca de 10% maior que no app em testes preliminares (BTG); BTG estima 15-20% de reducao de custos de aquisicao e atendimento; fase inicial com 1 milhao de clientes (Money Times, 20/11/2025).",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Money Times",
+    "fonte_url": "https://www.moneytimes.com.br/magazine-luiza-mglu3-tem-potencial-alavanca-de-vendas-com-o-whatsapp-da-lu-entenda-lmrs/",
+    "ano": 2025,
+    "confianca": "media"
+  }
+]

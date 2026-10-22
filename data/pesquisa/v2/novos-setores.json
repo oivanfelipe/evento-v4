@@ -1,0 +1,2682 @@
+[
+  {
+    "id": "T-001",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "processo",
+    "gargalos_secundarios": [
+      "decisao",
+      "controle"
+    ],
+    "area": "rh",
+    "setor": "agronegócio (cooperativa com postos, supermercados e fábrica de ração)",
+    "setor_chave": "agro",
+    "empresa": "Cooperabaeté",
+    "titulo": "Cooperativa centraliza seleção no RH e usa perfil comportamental, cortando pela metade as horas por contratação",
+    "problema": "Os gestores conduziam a seleção por conta própria, em geral só com avaliação técnica, o que gerava contratações ruins e conflitos de equipe; o ciclo levava cerca de 20 dias.",
+    "solucao": "O RH assumiu o recrutamento de forma centralizada e passou a usar o Sólides Profiler (mapeamento comportamental) na seleção, na adequação ao cargo, na gestão de conflitos e em PDIs.",
+    "ferramentas": [
+      "Sólides Profiler"
+    ],
+    "resultado": "Economia de R$ 1.703,44 por mês (R$ 851,72 por processo seletivo); tempo de contratação de 160 h para 80 h por processo; ciclo de cerca de 20 dias para cerca de 10 dias ou menos; 98% dos colaboradores fizeram o Profiler.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Sólides (blog, case Cooperabaeté)",
+    "fonte_url": "https://solides.com.br/blog/case-cooperabaete/",
+    "ano": 2025,
+    "funcionarios": 250,
+    "porte_confirmado": true,
+    "data_fonte": "2025-12",
+    "metricas": [
+      {
+        "indicador": "Horas por processo seletivo",
+        "antes": "160 h",
+        "depois": "80 h",
+        "variacao": "-50%"
+      },
+      {
+        "indicador": "Ciclo de contratação",
+        "antes": "cerca de 20 dias",
+        "depois": "cerca de 10 dias ou menos",
+        "variacao": null
+      },
+      {
+        "indicador": "Economia mensal",
+        "antes": null,
+        "depois": "R$ 1.703,44",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Mapeamento e treinamento do time de gestão e centralização do recrutamento no RH; prazo e custo não informados.",
+    "como_replicar": [
+      "Tirar a condução da seleção dos gestores e concentrá-la em uma pessoa ou time de RH.",
+      "Aplicar uma avaliação comportamental padronizada (ex.: ferramenta de perfil) a todos os candidatos, além do filtro técnico.",
+      "Usar o mesmo mapeamento para decidir adequação ao cargo e tratar conflitos de equipe.",
+      "Medir horas e dias por processo seletivo antes e depois."
+    ],
+    "trecho_comprovante": "Esses resultados representam a economia de R$ 1.703,44/mês",
+    "forca": "forte",
+    "confianca": "alta"
+  },
+  {
+    "id": "T-002",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "decisao"
+    ],
+    "area": "rh",
+    "setor": "reciclagem (indústria)",
+    "setor_chave": "industria",
+    "empresa": "Arplast",
+    "titulo": "Recicladora do Ceará troca triagem manual de currículos por plataforma e reduz em 47% o tempo de contratação",
+    "problema": "A triagem de currículos era manual, consumia tempo e reduzia a produtividade, e não havia uma área de RH estratégica para o desenvolvimento de pessoas.",
+    "solucao": "Adoção da plataforma Sólides para recrutamento e seleção, com mapeamento comportamental (Profiler) e avaliações de desempenho.",
+    "ferramentas": [
+      "Sólides",
+      "Sólides Profiler"
+    ],
+    "resultado": "Redução de 47% no tempo de contratação (cerca de 24 dias a menos); 114 avaliações de desempenho concluídas entre setembro e janeiro; 639 Profilers aplicados entre setembro de 2022 e janeiro de 2023; 21 promoções.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Sólides (blog, case Arplast)",
+    "fonte_url": "https://solides.com.br/blog/case-de-sucesso-arplast/",
+    "ano": 2025,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-05",
+    "metricas": [
+      {
+        "indicador": "Tempo de contratação",
+        "antes": null,
+        "depois": null,
+        "variacao": "-47% (cerca de 24 dias a menos)"
+      },
+      {
+        "indicador": "Avaliações de desempenho concluídas",
+        "antes": null,
+        "depois": "114",
+        "variacao": null
+      },
+      {
+        "indicador": "Profilers aplicados",
+        "antes": null,
+        "depois": "639",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Centralizar currículos e vagas em uma plataforma de recrutamento com filtros.",
+      "Definir critérios mínimos da vaga e filtrar candidatos por eles antes da leitura manual.",
+      "Aplicar avaliação comportamental aos finalistas.",
+      "Registrar o tempo total de contratação por vaga para comparar."
+    ],
+    "trecho_comprovante": "reduzindo o tempo de contratação em 47%",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-003",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "manual_repetitivo",
+      "informacao"
+    ],
+    "area": "rh",
+    "setor": "tecnologia (prevenção a fraudes e verificação de identidade)",
+    "setor_chave": "tecnologia",
+    "empresa": "Who (whoid.com)",
+    "titulo": "Empresa de Belo Horizonte troca relógios de ponto por ponto digital e corta 70% do custo de DP em seis meses",
+    "problema": "Relógios de ponto em manutenção obrigavam o registro manual em planilhas, o rolo de papel acabava e o controle de equipes remotas era lento; o fechamento do ponto levava cerca de sete dias úteis.",
+    "solucao": "Módulo de controle de ponto do Sólides DP, com marcação por app ou web (inclusive offline), validação pelos gestores, alertas automáticos de faltas de marcação, horas extras e banco de horas, e integração com a folha.",
+    "ferramentas": [
+      "Sólides DP"
+    ],
+    "resultado": "Redução de 70% nos custos de DP em seis meses; meta de fechamento do ponto de cerca de 7 dias úteis para 2 dias úteis (355 colaboradores registram ponto, 35 gestores).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Sólides (blog, case Who)",
+    "fonte_url": "https://solides.com.br/blog/case-who/",
+    "ano": 2025,
+    "funcionarios": 355,
+    "porte_confirmado": true,
+    "data_fonte": "2025-08",
+    "metricas": [
+      {
+        "indicador": "Custo do departamento pessoal",
+        "antes": null,
+        "depois": null,
+        "variacao": "-70% em seis meses"
+      },
+      {
+        "indicador": "Fechamento do ponto",
+        "antes": "cerca de 7 dias úteis",
+        "depois": "2 dias úteis (meta)",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Resultado de custo medido em seis meses; sem detalhe de prazo de implantação.",
+    "como_replicar": [
+      "Substituir relógio físico por marcação via app/web com modo offline.",
+      "Configurar alertas automáticos para marcações faltantes, horas extras e banco de horas vencendo.",
+      "Fazer o gestor validar o espelho de ponto em tela antes do fechamento.",
+      "Integrar a exportação ao sistema de folha."
+    ],
+    "trecho_comprovante": "ganho muito grande na parte do orçamento",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-004",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "controle"
+    ],
+    "area": "rh",
+    "setor": "serviços (plataforma de benefícios corporativos)",
+    "setor_chave": "servicos_b2b",
+    "empresa": "Central dos Benefícios",
+    "titulo": "Plataforma de benefícios reduz o fechamento do ponto de dois dias para cerca de uma hora",
+    "problema": "O fechamento do ponto exigia cerca de dois dias de análise individual por colaborador, o controle de férias dependia de planilhas e de dados pedidos à contabilidade a cada três meses.",
+    "solucao": "Adoção do controle de ponto Sólides (web e mobile, com marcação offline) ao migrar para banco de horas, depois somando gestão de férias, admissão digital e GED.",
+    "ferramentas": [
+      "Sólides Controle de Ponto",
+      "Sólides Gestão de Férias",
+      "Sólides Admissão Digital",
+      "GED"
+    ],
+    "resultado": "Fechamento do ponto de cerca de 2 dias para cerca de 1 hora (93,75% de redução no corpo do texto; 93% no título); nenhuma hora extra venceu desde a implantação; 69 colaboradores ativos.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Sólides (blog, case Central dos Benefícios)",
+    "fonte_url": "https://solides.com.br/blog/case-central-dos-beneficios/",
+    "ano": 2026,
+    "funcionarios": 69,
+    "porte_confirmado": true,
+    "data_fonte": "2026-09",
+    "metricas": [
+      {
+        "indicador": "Tempo de fechamento do ponto",
+        "antes": "cerca de 2 dias",
+        "depois": "cerca de 1 hora",
+        "variacao": "-93%"
+      },
+      {
+        "indicador": "Horas extras vencidas",
+        "antes": null,
+        "depois": "0",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Começou pelo ponto e foi ampliado meses depois para férias, admissão digital e GED; prazo exato não informado.",
+    "como_replicar": [
+      "Migrar de horas extras para banco de horas com saldo visível ao colaborador em tempo real.",
+      "Disparar notificações diárias aos gestores sobre pendências de ponto.",
+      "Gerar relatórios de saldo acumulado para evitar vencimento.",
+      "Depois do ponto, digitalizar férias e admissão."
+    ],
+    "trecho_comprovante": "A gente ficava em torno de dois dias inteiros fazendo a análise e o fechamento individual",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-005",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "decisao",
+    "gargalos_secundarios": [
+      "manual_repetitivo",
+      "informacao"
+    ],
+    "area": "rh",
+    "setor": "varejo (joalheria e bijuteria)",
+    "setor_chave": "varejo_ecommerce",
+    "empresa": "Grupo Salsa",
+    "titulo": "Grupo varejista de Recife derruba turnover de 10% para 0,5% ao sair de Excel e indicação",
+    "problema": "Os processos de RH rodavam em Excel e Word, o DP era terceirizado e o recrutamento dependia de indicações, sem avaliar perfil comportamental; o turnover era alto.",
+    "solucao": "Software Sólides para centralizar dados de RH, automatizar tarefas burocráticas e apoiar recrutamento (cadastro do candidato e perfil comportamental), pesquisas de clima e avaliações de desempenho.",
+    "ferramentas": [
+      "Sólides Gestão Pró",
+      "Sólides Gestão",
+      "Sólides Jobs"
+    ],
+    "resultado": "Turnover caiu de 10% para 0,5% (redução de 95%); empresa com 146 colaboradores.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Sólides (blog, case Grupo Salsa)",
+    "fonte_url": "https://solides.com.br/blog/case-de-sucesso-solides-grupo-salsa/",
+    "ano": 2025,
+    "funcionarios": 146,
+    "porte_confirmado": true,
+    "data_fonte": "2025-12",
+    "metricas": [
+      {
+        "indicador": "Turnover",
+        "antes": "10%",
+        "depois": "0,5%",
+        "variacao": "-95%"
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Tirar os dados de RH de planilhas e centralizar em um sistema único.",
+      "Aplicar avaliação de perfil comportamental no processo seletivo, além das indicações.",
+      "Rodar pesquisa de clima e avaliação de desempenho periódicas.",
+      "Acompanhar o turnover mensal como indicador principal."
+    ],
+    "trecho_comprovante": "Toda essa modernização fez com que turnover fosse reduzido de 10% para 0,5%",
+    "forca": "forte",
+    "confianca": "alta"
+  },
+  {
+    "id": "T-006",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "grande",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "processo"
+    ],
+    "area": "rh",
+    "setor": "varejo (moda)",
+    "setor_chave": "varejo_ecommerce",
+    "empresa": "Grupo Soma",
+    "titulo": "Grupo de moda unifica recrutamento e admissão e corta o ciclo de admissão de 20 para 9 dias",
+    "problema": "Informações descentralizadas entre as regiões do grupo atrasavam a contratação, cujo fluxo completo passava de 20 dias.",
+    "solucao": "Unificação de recrutamento e onboarding em uma plataforma, somando o Gupy Admissão ao Gupy Recrutamento e Seleção, com acompanhamento ponta a ponta pelos recrutadores.",
+    "ferramentas": [
+      "Gupy Recrutamento e Seleção",
+      "Gupy Admissão"
+    ],
+    "resultado": "Tempo de admissão reduzido de 20 para 9 dias (55%); aumento de 60% nas admissões de 2023 para 2024; 9 dias para fechar vagas.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Gupy (histórias de sucesso, Grupo Soma)",
+    "fonte_url": "https://www.gupy.io/historias-de-sucesso/gruposoma",
+    "ano": 2024,
+    "funcionarios": 10001,
+    "porte_confirmado": true,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Tempo de admissão",
+        "antes": "20 dias",
+        "depois": "9 dias",
+        "variacao": "-55%"
+      },
+      {
+        "indicador": "Admissões",
+        "antes": null,
+        "depois": null,
+        "variacao": "+60% de 2023 para 2024"
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Juntar vaga, candidatura e documentos de admissão no mesmo fluxo digital.",
+      "Dar a cada região visibilidade da mesma esteira de contratação.",
+      "Medir dias entre oferta aceita e admissão concluída.",
+      "Eliminar etapas em papel e coleta presencial de documentos."
+    ],
+    "trecho_comprovante": "Com o Gupy Admissão, as admissões do Grupo Soma tiveram o tempo reduzido de 20 para 9 dias",
+    "forca": "fraca",
+    "confianca": "media"
+  },
+  {
+    "id": "T-007",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "decisao"
+    ],
+    "area": "rh",
+    "setor": "imobiliário (locação e administração de condomínios)",
+    "setor_chave": "construcao_imoveis",
+    "empresa": "Estasa",
+    "titulo": "Administradora de imóveis do Rio reduz turnover em 57% com mapeamento comportamental e plano de desenvolvimento",
+    "problema": "Turnover em torno de 3% ao mês e colaboradores alocados em funções erradas, o que reduzia produtividade e motivação.",
+    "solucao": "Plataforma Sólides com mapeamento comportamental (Profiler), PDI introduzido em 2022, ciclo de aprendizado a partir das avaliações de desempenho, pesquisas de clima e recrutamento digital com filtro de candidatos.",
+    "ferramentas": [
+      "Sólides",
+      "Sólides Profiler"
+    ],
+    "resultado": "Turnover reduzido em 57% a partir de cerca de 3% ao mês; nenhum mês de 2022 voltou a atingir 3%; tempo administrativo de contratação de cerca de duas semanas para dois dias.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Sólides (blog, case Estasa)",
+    "fonte_url": "https://solides.com.br/blog/case-de-sucesso-estasa/",
+    "ano": 2025,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-05",
+    "metricas": [
+      {
+        "indicador": "Turnover mensal",
+        "antes": "cerca de 3%",
+        "depois": null,
+        "variacao": "-57%"
+      },
+      {
+        "indicador": "Tempo administrativo de contratação",
+        "antes": "cerca de 2 semanas",
+        "depois": "2 dias",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Ciclo de ações ao longo de 2022; custo não informado.",
+    "como_replicar": [
+      "Mapear perfil comportamental de quem já está na equipe e realocar quem está no cargo errado.",
+      "Criar PDI individual para cada colaborador.",
+      "Usar pesquisa de clima para decidir onde agir primeiro.",
+      "Acompanhar o turnover mensalmente."
+    ],
+    "trecho_comprovante": "com a implementação das ações, utilizando a plataforma, reduzimos essa taxa em 57%",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-008",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "informacao",
+      "processo"
+    ],
+    "area": "rh",
+    "setor": "indústria (têxtil)",
+    "setor_chave": "industria",
+    "empresa": "Delfim",
+    "titulo": "Têxtil digitaliza avaliações e recrutamento e reduz o ciclo de seleção de 26 para 16 dias",
+    "problema": "Os processos de RH ficavam centralizados no departamento, sem acesso online dos gestores; avaliações e pesquisas de clima eram em papel, sem consolidação, e a seleção era demorada, sem histórico de candidatos.",
+    "solucao": "Plataforma Sólides com portal de vagas ligado ao site, Profiler, Matcher, avaliações de desempenho, PDIs, 9Box, pesquisas de clima e gestão de treinamentos.",
+    "ferramentas": [
+      "Sólides",
+      "Sólides Profiler",
+      "Sólides Matcher"
+    ],
+    "resultado": "Ciclo de recrutamento de cerca de 26 dias para 16 dias (redução de 38%, segundo o texto); demais ganhos citados de forma qualitativa.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Sólides (blog, case Delfim)",
+    "fonte_url": "https://solides.com.br/blog/case-de-sucesso-delfim/",
+    "ano": 2025,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-07",
+    "metricas": [
+      {
+        "indicador": "Ciclo de recrutamento",
+        "antes": "26 dias",
+        "depois": "16 dias",
+        "variacao": "-38%"
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Publicar as vagas num portal integrado ao site e guardar o histórico dos candidatos.",
+      "Passar avaliações de desempenho e clima do papel para formulários digitais.",
+      "Dar aos gestores acesso online aos dados de suas equipes.",
+      "Medir dias de seleção por vaga."
+    ],
+    "trecho_comprovante": "sem a triagem da Sólides, gastávamos em média 26 dias em processos seletivos, hoje 16 dias.",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-009",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "decisao",
+    "gargalos_secundarios": [
+      "manual_repetitivo",
+      "capacidade"
+    ],
+    "area": "logistica",
+    "setor": "foodtech (entrega de alimentos congelados)",
+    "setor_chave": "logistica",
+    "empresa": "Liv Up",
+    "titulo": "Foodtech troca roteirizador próprio por SaaS de otimização de rotas e corta 20% do custo de entrega",
+    "problema": "A solução própria de roteirização era menos robusta e, com a expansão, a empresa precisou de software especializado para lidar com restrições operacionais.",
+    "solucao": "Implantação, em 2022, do SaaS de otimização de rotas e gestão de entregas da RoutEasy, com algoritmo genético, torre de controle em tempo real e IA.",
+    "ferramentas": [
+      "RoutEasy"
+    ],
+    "resultado": "Redução de 20% nos custos de entrega; redução de 30% no tempo da equipe em roteirização; redução de 30% no número total de rotas.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Mercado & Consumo (Liv Up reduz custos operacionais e despesas em last mile)",
+    "fonte_url": "https://mercadoeconsumo.com.br/31/12/2023/logistica/liv-up-reduz-dos-custos-operacionais-e-despesas-em-last-mile-com-solucao-da-routeasy/",
+    "ano": 2023,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2023-12",
+    "metricas": [
+      {
+        "indicador": "Custos de entrega",
+        "antes": null,
+        "depois": null,
+        "variacao": "-20%"
+      },
+      {
+        "indicador": "Tempo da equipe em roteirização",
+        "antes": null,
+        "depois": null,
+        "variacao": "-30%"
+      },
+      {
+        "indicador": "Número total de rotas",
+        "antes": null,
+        "depois": null,
+        "variacao": "-30%"
+      }
+    ],
+    "esforco_implantacao": "Implantado em 2022; matéria de fim de 2023 reporta os resultados. Custo não informado.",
+    "como_replicar": [
+      "Levantar as restrições reais de entrega (janelas, capacidade, zonas).",
+      "Rodar um roteirizador que consolide pedidos em menos rotas.",
+      "Medir custo por entrega e horas da equipe de planejamento antes e depois.",
+      "Acompanhar o dia em tempo real e reotimizar."
+    ],
+    "trecho_comprovante": "redução de 20% nos custos de entrega",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-010",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "pequena",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "integracao",
+      "capacidade"
+    ],
+    "area": "logistica",
+    "setor": "transporte rodoviário de cargas",
+    "setor_chave": "logistica",
+    "empresa": "JCP Logística",
+    "titulo": "Transportadora baiana reduz em 60% o tempo de montagem de cargas com roteirizador e app de motorista",
+    "problema": "Um sistema que não atendia plenamente levava as equipes a montar cargas e acompanhar entregas manualmente; a falta de integração entre processos elevava risco de erro e tempo de execução.",
+    "solucao": "Adoção do maxRoteirizador e do maxMotorista, da MáximaTech, para montagem de rotas e cargas e acompanhamento das entregas em tempo real.",
+    "ferramentas": [
+      "maxRoteirizador",
+      "maxMotorista (MáximaTech)"
+    ],
+    "resultado": "Tempo para montar uma carga reduzido em 60% (de até 30 minutos para menos de 10 minutos); acompanhamento em tempo real, com menos verificações manuais e ligações aos motoristas.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Portal Logweb",
+    "fonte_url": "https://logweb.com.br/jcp-logistica-reduz-tempo-montagem-cargas-maximatech/",
+    "ano": 2025,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-12",
+    "metricas": [
+      {
+        "indicador": "Tempo para montar uma carga",
+        "antes": "até 30 minutos",
+        "depois": "menos de 10 minutos",
+        "variacao": "-60%"
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Escolher um roteirizador que monte a carga a partir dos pedidos do dia.",
+      "Dar aos motoristas um app para confirmar entregas.",
+      "Substituir ligações de acompanhamento por painel em tempo real.",
+      "Cronometrar a montagem de carga antes e depois."
+    ],
+    "trecho_comprovante": "o tempo necessário para montar uma carga foi reduzido em 60%",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-011",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "manual_repetitivo",
+      "informacao"
+    ],
+    "area": "rh",
+    "setor": "logística (armazenagem e transporte)",
+    "setor_chave": "logistica",
+    "empresa": "SIMASLOG",
+    "titulo": "Operadora logística reduz o fechamento do ponto de 7 para 4 dias com app de ponto e painel de inconsistências",
+    "problema": "O fechamento do ponto demorava e a analista de RH não tinha indicadores nem painéis de gestão de tempo; a empresa usava relógio digital e outro aplicativo menos eficaz.",
+    "solucao": "Adoção, em junho de 2023, do Sólides DP (app e web) com painel de inconsistências e batidas em aberto, espelho de ponto automático, assinatura eletrônica e acesso ao banco de horas.",
+    "ferramentas": [
+      "Sólides DP"
+    ],
+    "resultado": "Fechamento do ponto de 7 dias para 4 dias (3 dias a menos, economia de 42% do tempo, segundo o texto); 172 pessoas usam o app; custo parecido com o do app anterior, com mais funcionalidades.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Sólides (blog, case SIMASLOG)",
+    "fonte_url": "https://solides.com.br/blog/case-simaslog/",
+    "ano": 2025,
+    "funcionarios": 172,
+    "porte_confirmado": true,
+    "data_fonte": "2025-08",
+    "metricas": [
+      {
+        "indicador": "Fechamento do ponto",
+        "antes": "7 dias",
+        "depois": "4 dias",
+        "variacao": "-42%"
+      }
+    ],
+    "esforco_implantacao": "Adoção em junho de 2023; custo semelhante ao do aplicativo anterior.",
+    "como_replicar": [
+      "Usar app de ponto que sinalize batidas em aberto e inconsistências em painel.",
+      "Gerar o espelho de ponto automaticamente.",
+      "Validar com assinatura eletrônica do colaborador.",
+      "Medir os dias de fechamento mês a mês."
+    ],
+    "trecho_comprovante": "Antes eu gastava sete dias e agora estou gastando quatro",
+    "forca": "forte",
+    "confianca": "alta"
+  },
+  {
+    "id": "T-012",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "decisao",
+      "manual_repetitivo"
+    ],
+    "area": "logistica",
+    "setor": "distribuição (atacado no Ceará)",
+    "setor_chave": "logistica",
+    "empresa": "Nilo Maia Distribuidora",
+    "titulo": "Distribuidora cearense sai das planilhas de estoque, reduz 30,7% do excesso e eleva faturamento em 26,7%",
+    "problema": "Com o crescimento e a abertura de filiais, a gestão de estoques era manual, em planilhas, e ineficiente.",
+    "solucao": "Análises avançadas de estoque (Inteligência de Estoque, da Systock/TOTVS) integradas ao ERP Winthor, dimensionando o estoque ideal e reduzindo rupturas e excessos.",
+    "ferramentas": [
+      "Inteligência de Estoque (Systock/TOTVS)",
+      "TOTVS Distribuição e Varejo – Linha Winthor"
+    ],
+    "resultado": "Aumento de 26,7% no faturamento; redução de 30,7% no excesso de estoque desde a implantação, no fim de 2024; ganhos de caixa e menos rupturas (sem percentuais).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Mundo Logística",
+    "fonte_url": "https://mundologistica.com.br/noticias/nilo-mais-aumenta-faturamento-gestao-estoque",
+    "ano": 2025,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-08",
+    "metricas": [
+      {
+        "indicador": "Faturamento",
+        "antes": null,
+        "depois": null,
+        "variacao": "+26,7%"
+      },
+      {
+        "indicador": "Excesso de estoque",
+        "antes": null,
+        "depois": null,
+        "variacao": "-30,7%"
+      }
+    ],
+    "esforco_implantacao": "Implantação no fim de 2024; resultado reportado em agosto de 2025.",
+    "como_replicar": [
+      "Exportar histórico de vendas e estoque do ERP.",
+      "Calcular estoque ideal por item e filial em vez de usar planilha manual.",
+      "Gerar alertas de ruptura e de excesso.",
+      "Acompanhar excesso de estoque e faturamento mensalmente."
+    ],
+    "trecho_comprovante": "A Nilo Maia Distribuidora registrou um aumento de 26,7% no faturamento",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-013",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "grande",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "decisao",
+      "conhecimento"
+    ],
+    "area": "operacoes",
+    "setor": "indústria (papel e tissue)",
+    "setor_chave": "industria",
+    "empresa": "IPEL",
+    "titulo": "Fabricante de papel tissue de SC troca análise preditiva terceirizada por monitoramento online com IA",
+    "problema": "Mesmo com análise preditiva terceirizada, ainda ocorriam falhas em ativos críticos, e a empresa queria reduzir a dependência externa de análise de vibração.",
+    "solucao": "Rede de sensores online de vibração da Tractian nos principais ativos da planta, com plataforma de IA que monitora mais de 70 modos de falha, mais treinamento interno e patrocínio da liderança.",
+    "ferramentas": [
+      "Tractian"
+    ],
+    "resultado": "Em 7 meses: mais de R$ 500 mil em custos evitados e 180 horas de parada evitadas; em um caso de redutor, estimativa de 48 horas de parada evitadas.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Tractian (estudo de caso IPEL)",
+    "fonte_url": "https://tractian.com/casos-de-estudo/ipel",
+    "ano": 2026,
+    "funcionarios": 800,
+    "porte_confirmado": true,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Custos evitados (7 meses)",
+        "antes": null,
+        "depois": "mais de R$ 500 mil",
+        "variacao": null
+      },
+      {
+        "indicador": "Horas de parada evitadas (7 meses)",
+        "antes": null,
+        "depois": "180 h",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Resultados medidos após 7 meses; inclui treinamento interno.",
+    "como_replicar": [
+      "Listar os ativos críticos que já falharam.",
+      "Instalar sensores de vibração e temperatura nesses ativos primeiro.",
+      "Treinar a equipe de manutenção para interpretar os alertas.",
+      "Registrar paradas e custos evitados."
+    ],
+    "trecho_comprovante": "Passamos a ter uma visão muito mais clara do comportamento dos equipamentos e conseguimos agir antes que o problema aconteça.",
+    "forca": "fraca",
+    "confianca": "media"
+  },
+  {
+    "id": "T-014",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "manual_repetitivo",
+      "informacao"
+    ],
+    "area": "operacoes",
+    "setor": "indústria (siderurgia, ferro-gusa)",
+    "setor_chave": "industria",
+    "empresa": "Vetorial Siderurgia",
+    "titulo": "Produtora de ferro-gusa digitaliza manutenção com monitoramento online e elimina 1.200 horas corretivas",
+    "problema": "Quebras inesperadas em ativos de alto-forno apesar de coleta de vibração e rotina preventiva, risco de segurança dos inspetores e ordens de serviço em papel com sistema legado difícil de usar.",
+    "solucao": "Projeto Tractian com monitoramento preditivo online (sensores Smart Trac com diagnóstico automático de falhas) e CMMS com aplicativo móvel.",
+    "ferramentas": [
+      "Tractian Smart Trac",
+      "Tractian CMMS",
+      "Tractian App"
+    ],
+    "resultado": "Economia de 1.200 horas em manutenções corretivas; ROI médio de cerca de 600% em 14 meses; economia estimada de mais de R$ 1,3 milhão; redução de 30% no custo de manutenção; cerca de 11.000 folhas de ordens de serviço em papel eliminadas.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Tractian (estudo de caso Vetorial)",
+    "fonte_url": "https://tractian.com/casos-de-estudo/vetorial",
+    "ano": 2024,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Horas de manutenção corretiva",
+        "antes": null,
+        "depois": null,
+        "variacao": "-1.200 h"
+      },
+      {
+        "indicador": "Custo de manutenção",
+        "antes": null,
+        "depois": null,
+        "variacao": "-30%"
+      },
+      {
+        "indicador": "Ordens de serviço em papel",
+        "antes": null,
+        "depois": null,
+        "variacao": "cerca de 11.000 folhas eliminadas"
+      }
+    ],
+    "esforco_implantacao": "Payback de cerca de 2 meses segundo a fonte; ROI medido em 14 meses.",
+    "como_replicar": [
+      "Mapear os ativos que mais param a produção.",
+      "Monitorar esses ativos com sensores e diagnóstico automático.",
+      "Substituir ordens de serviço em papel por ordens digitais em app.",
+      "Medir horas corretivas e custo de manutenção."
+    ],
+    "trecho_comprovante": "Os sensores Smart Trac foram fundamentais na geração de uma economia de 1.200 horas em manutenções corretivas",
+    "forca": "fraca",
+    "confianca": "media"
+  },
+  {
+    "id": "T-015",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "grande",
+    "gargalo": "decisao",
+    "gargalos_secundarios": [
+      "informacao",
+      "capacidade"
+    ],
+    "area": "operacoes",
+    "setor": "indústria (aditivos alimentares, fosfatos)",
+    "setor_chave": "industria",
+    "empresa": "ICL (planta de São José dos Campos)",
+    "titulo": "Fábrica de fosfatos passa do OEE de 50% para até 91% com manutenção baseada em condição",
+    "problema": "Paradas não planejadas de ativos críticos, manutenção preventiva por tempo que desmontava equipamentos saudáveis e uma parada de 30 dias por falha de lubrificação num moinho central.",
+    "solucao": "Monitoramento online de vibração da Tractian em calcinador, moinhos, torres de secagem e exaustores, com alertas de IA convertidos em ordens priorizadas e revisão do plano de lubrificação.",
+    "ferramentas": [
+      "Tractian"
+    ],
+    "resultado": "OEE nas áreas com sensores subiu de 50% para até 91%; parada anual planejada reduzida em 12 dias, com ganho de 7 a 10 dias de produção; cerca de 400 toneladas a mais por ano.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Tractian (estudo de caso ICL)",
+    "fonte_url": "https://tractian.com/casos-de-estudo/icl",
+    "ano": 2026,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "OEE nas áreas com sensores",
+        "antes": "50%",
+        "depois": "até 91%",
+        "variacao": "+41 pontos"
+      },
+      {
+        "indicador": "Parada anual planejada",
+        "antes": null,
+        "depois": "12 dias a menos",
+        "variacao": null
+      },
+      {
+        "indicador": "Produção",
+        "antes": null,
+        "depois": null,
+        "variacao": "+cerca de 400 t por ano"
+      }
+    ],
+    "esforco_implantacao": "Não informado; integração com CMMS planejada como próximo passo.",
+    "como_replicar": [
+      "Escolher a área que mais derruba o OEE.",
+      "Instalar sensores nos equipamentos críticos dessa área.",
+      "Trocar a manutenção por calendário por intervenção quando o alerta indicar.",
+      "Revisar o plano de lubrificação com base no padrão real de operação."
+    ],
+    "trecho_comprovante": "Indicadores de OEE nas áreas com sensores saltaram de 50% para até 91%.",
+    "forca": "fraca",
+    "confianca": "media"
+  },
+  {
+    "id": "T-016",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "decisao"
+    ],
+    "area": "operacoes",
+    "setor": "indústria (tintas e materiais de arte)",
+    "setor_chave": "industria",
+    "empresa": "Acrilex",
+    "titulo": "Fabricante de tintas ganha dados de produção em tempo real em duas fábricas com 32 pontos de coleta",
+    "problema": "A empresa não tinha visão ampla de suas duas plantas e acompanhava as operações de forma manual.",
+    "solucao": "A Cogtive instalou 32 pontos de coleta de dados ligados a tecnologia baseada em OEE (IoT e IA), disponibilizando dados de produção em tempo real para mais de 2,5 mil SKUs.",
+    "ferramentas": [
+      "Cogtive (IoT e IA, OEE)"
+    ],
+    "resultado": "Projeto previu a gestão de mais de 2,5 mil SKUs com 32 pontos de coleta de dados em duas fábricas; dados em tempo real após a conclusão. A matéria não informa ganho percentual de OEE ou de paradas.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Baguete (Acrilex otimiza chão de fábrica com Cogtive)",
+    "fonte_url": "https://www.baguete.com.br/noticias/acrilex-otimiza-chao-de-fabrica-com-cogtive",
+    "ano": 2024,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2024-06",
+    "metricas": [
+      {
+        "indicador": "Pontos de coleta de dados",
+        "antes": null,
+        "depois": "32",
+        "variacao": null
+      },
+      {
+        "indicador": "SKUs gerenciados",
+        "antes": null,
+        "depois": "mais de 2.500",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Escolher as linhas ou máquinas que concentram a maior parte da produção.",
+      "Coletar tempo de máquina, paradas e produção automaticamente nesses pontos.",
+      "Calcular OEE por linha.",
+      "Usar o painel nas reuniões diárias de produção."
+    ],
+    "trecho_comprovante": "Projeto previa a gestão de mais de 2,5 mil SKUs com a implementação de 32 pontos de coleta de dados.",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-017",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "comunicacao",
+      "integracao"
+    ],
+    "area": "atendimento",
+    "setor": "saúde (clínica popular)",
+    "setor_chave": "saude",
+    "empresa": "Clínica Dimeg",
+    "titulo": "Clínica popular da Grande São Paulo recupera 3.075 horários desperdiçados em quatro meses com confirmação por IA",
+    "problema": "Pacientes faltavam sem aviso e a confirmação antecipada de consultas era uma lacuna da operação.",
+    "solucao": "Plataforma de IA da Nina Tecnologia integrada ao prontuário Doctoralia confirma, cancela e remarca consultas por WhatsApp, telefone, e-mail, SMS e push; a clínica escolhe os tipos de consulta atendidos.",
+    "ferramentas": [
+      "Nina Tecnologia",
+      "Doctoralia",
+      "WhatsApp"
+    ],
+    "resultado": "3.075 horários reocupados em quatro meses (533 em junho, 700 em julho, 852 em agosto, 990 em setembro); 90% de taxa de resposta dos pacientes; presença acima de 95% na maior parte do período avaliado.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Baguete (Dimeg confirma consultas com Nina Tecnologia)",
+    "fonte_url": "https://www.baguete.com.br/noticias/dimeg-confirma-consultas-com-nina-tecnologia",
+    "ano": 2025,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-11",
+    "metricas": [
+      {
+        "indicador": "Horários reocupados por mês",
+        "antes": "533 (junho)",
+        "depois": "990 (setembro)",
+        "variacao": null
+      },
+      {
+        "indicador": "Horários reocupados em 4 meses",
+        "antes": null,
+        "depois": "3.075",
+        "variacao": null
+      },
+      {
+        "indicador": "Taxa de resposta dos pacientes",
+        "antes": null,
+        "depois": "90%",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Medir quantos horários se perdem por falta e cancelamento tardio.",
+      "Automatizar a confirmação 48 h e 24 h antes, com opção de cancelar ou remarcar.",
+      "Ligar a agenda ao prontuário para liberar o horário automaticamente.",
+      "Oferecer o horário liberado a quem está na fila."
+    ],
+    "trecho_comprovante": "Em apenas quatro meses, a Dimeg conseguiu remanejar 3.075 horários que seriam desperdiçados.",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-018",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "grande",
+    "gargalo": "processo",
+    "gargalos_secundarios": [
+      "decisao",
+      "manual_repetitivo"
+    ],
+    "area": "financeiro",
+    "setor": "saúde (rede hospitalar)",
+    "setor_chave": "saude",
+    "empresa": "Rede Mater Dei de Saúde",
+    "titulo": "Rede hospitalar mineira usa agentes de IA no faturamento e na autorização e obtém ROI de 517%",
+    "problema": "Glosas por falhas administrativas e demora na autorização de processos cirúrgicos comprometiam o ciclo de receita.",
+    "solucao": "Conjunto de agentes de IA autônomos (via AWS GenAI Innovation Center e A3Data) atuando como analista de faturamento: contratos, parametrização de preços negociados e autorização no fluxo cirúrgico.",
+    "ferramentas": [
+      "AWS (GenAI Innovation Center)",
+      "A3Data"
+    ],
+    "resultado": "ROI de 517% nos dois primeiros ciclos de agentes; redução de 66% no tempo médio de autorização na unidade de controle; expectativa de redução de 34% no tempo de gestão do ciclo de receita; cerca de 12 agentes adicionais em desenvolvimento.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Baguete (Rede Mater Dei implanta agentes com A3Data)",
+    "fonte_url": "https://www.baguete.com.br/noticias/rede-mater-dei-implanta-agentes-com-a3data",
+    "ano": 2026,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-01",
+    "metricas": [
+      {
+        "indicador": "ROI dos dois primeiros ciclos de agentes",
+        "antes": null,
+        "depois": "517%",
+        "variacao": null
+      },
+      {
+        "indicador": "Tempo médio de autorização cirúrgica",
+        "antes": null,
+        "depois": null,
+        "variacao": "-66%"
+      },
+      {
+        "indicador": "Tempo de gestão do ciclo de receita",
+        "antes": null,
+        "depois": null,
+        "variacao": "-34% (esperado)"
+      }
+    ],
+    "esforco_implantacao": "Dois ciclos iniciais de agentes, começando pelo faturamento; custo não informado.",
+    "como_replicar": [
+      "Escolher uma etapa do ciclo de receita com muita revisão manual (ex.: conferência de contratos e tabelas).",
+      "Treinar um agente para revisar e apontar divergências antes do envio, com validação humana.",
+      "Medir glosa inicial e tempo de autorização antes e depois.",
+      "Expandir etapa por etapa."
+    ],
+    "trecho_comprovante": "Ambos os ciclos trouxeram um retorno sobre o investimento de 517%",
+    "forca": "forte",
+    "confianca": "alta"
+  },
+  {
+    "id": "T-019",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "grande",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "manual_repetitivo",
+      "comunicacao"
+    ],
+    "area": "atendimento",
+    "setor": "saúde (laboratório de medicina diagnóstica)",
+    "setor_chave": "saude",
+    "empresa": "Grupo Hermes Pardini",
+    "titulo": "Laboratório automatiza agendamento, cancelamento e entrega de resultados no WhatsApp e ganha 30% de eficiência dos atendentes",
+    "problema": "O alto volume diário de contatos, com muitos atendimentos simultâneos, dificultava manter o padrão de excelência no atendimento.",
+    "solucao": "Canal oficial de WhatsApp com a plataforma Blip automatizando agendamentos, cancelamentos e envio de resultados de exames, com transbordo para atendentes humanos nos casos complexos (Blip Desk).",
+    "ferramentas": [
+      "Blip",
+      "Blip Desk",
+      "WhatsApp"
+    ],
+    "resultado": "Mais de 40.000 clientes atendidos; mais de 2 milhões de mensagens; mais de 5.000 resultados de exames entregues automaticamente; aumento de 30% na eficiência operacional dos atendentes; cerca de 8 clientes atendidos simultaneamente por atendente.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Blip (case Hermes Pardini)",
+    "fonte_url": "https://www.blip.ai/en/case/hermes-pardini/",
+    "ano": 2024,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Resultados de exames entregues automaticamente",
+        "antes": null,
+        "depois": "mais de 5.000",
+        "variacao": null
+      },
+      {
+        "indicador": "Eficiência operacional dos atendentes",
+        "antes": null,
+        "depois": null,
+        "variacao": "+30%"
+      },
+      {
+        "indicador": "Clientes atendidos",
+        "antes": null,
+        "depois": "mais de 40.000",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Listar os pedidos mais frequentes (agendar, cancelar, resultado).",
+      "Automatizá-los no canal oficial de WhatsApp com validação de identidade.",
+      "Transferir para humano os casos fora do roteiro.",
+      "Medir atendimentos simultâneos por atendente."
+    ],
+    "trecho_comprovante": "The group has had more than 2 million messages exchanged and more than 40,000 customers served.",
+    "forca": "fraca",
+    "confianca": "media"
+  },
+  {
+    "id": "T-020",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "pequena",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [
+      "demanda_comercial",
+      "manual_repetitivo"
+    ],
+    "area": "atendimento",
+    "setor": "saúde (clínica)",
+    "setor_chave": "saude",
+    "empresa": "Clínica Lucas Miranda",
+    "titulo": "Clínica centraliza o WhatsApp, automatiza agenda e campanhas e reporta 40% mais faturamento",
+    "problema": "Escalar o atendimento por WhatsApp sem perder qualidade; a clínica já tinha testado mais de quatro plataformas da API oficial, com ferramentas rígidas, pouca personalização e suporte ineficiente.",
+    "solucao": "Centralização do atendimento no SleekFlow: gestão de leads, fila única para todos os canais, automação de agendamentos, confirmações e cancelamentos, chatbot que qualifica contatos e campanhas automáticas (ex.: aniversariantes do mês).",
+    "ferramentas": [
+      "SleekFlow",
+      "API oficial do WhatsApp"
+    ],
+    "resultado": "Aumento de cerca de 40% no faturamento, atribuído a campanhas automatizadas; redução de 30% no trabalho operacional (números autodeclarados pelo fornecedor).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "SleekFlow (blog: automação para clínicas)",
+    "fonte_url": "https://sleekflow.io/pt-br/blog/vantagens-da-automacao-para-clinicas-e-empresas-de-saude",
+    "ano": 2026,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-04",
+    "metricas": [
+      {
+        "indicador": "Faturamento",
+        "antes": null,
+        "depois": null,
+        "variacao": "+40%"
+      },
+      {
+        "indicador": "Trabalho operacional",
+        "antes": null,
+        "depois": null,
+        "variacao": "-30%"
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Reunir todos os canais numa fila única de atendimento.",
+      "Automatizar confirmação, cancelamento e remarcação.",
+      "Criar campanhas automáticas por data (ex.: aniversário) para a base de pacientes.",
+      "Usar notas internas no lugar de grupos paralelos."
+    ],
+    "trecho_comprovante": "+40% de aumento no faturamento, impulsionado por campanhas automatizadas",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-021",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "grande",
+    "gargalo": "demanda_comercial",
+    "gargalos_secundarios": [
+      "manual_repetitivo",
+      "capacidade"
+    ],
+    "area": "comercial",
+    "setor": "educação superior",
+    "setor_chave": "educacao",
+    "empresa": "Estácio (Yduqs)",
+    "titulo": "Estácio conduz matrículas por agentes de IA no WhatsApp; 92% dos contatos do canal matriculam sem humano",
+    "problema": "Objetivos de crescer inscrições e matrículas, reduzir custo operacional e tornar a jornada do candidato mais fluida e escalável.",
+    "solucao": "Agentes de IA conversacional no WhatsApp (Blip Studio, \"Contato Inteligente\") identificam interesses, respondem dúvidas, recomendam cursos e ofertas; o Blip Copilot apoia os atendentes humanos; jornadas desenvolvidas pela Skeps.",
+    "ferramentas": [
+      "Blip Studio",
+      "Blip Copilot",
+      "WhatsApp",
+      "Skeps"
+    ],
+    "resultado": "80% das matrículas financeiras da Estácio passaram pelo WhatsApp (janeiro a março); 14% das matrículas financeiras totais da Yduqs vieram do Contato Inteligente; 92% das matrículas de contatos do canal ocorreram sem interação humana; mais de 13.000 tickets resolvidos com o Copilot no 1º tri de 2026.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "ABES (Estácio e Blip)",
+    "fonte_url": "https://abes.org.br/?p=107761",
+    "ano": 2026,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-08",
+    "metricas": [
+      {
+        "indicador": "Matrículas financeiras da Estácio via WhatsApp",
+        "antes": null,
+        "depois": "80%",
+        "variacao": null
+      },
+      {
+        "indicador": "Matrículas da Yduqs vindas do Contato Inteligente",
+        "antes": null,
+        "depois": "14%",
+        "variacao": null
+      },
+      {
+        "indicador": "Matrículas do canal sem interação humana",
+        "antes": null,
+        "depois": "92%",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Mapear a jornada de matrícula e as dúvidas mais comuns.",
+      "Automatizar no WhatsApp a qualificação, a oferta de cursos e a coleta de dados.",
+      "Manter atendente humano apoiado por resumo automático da conversa.",
+      "Medir a parcela de matrículas concluídas sem humano."
+    ],
+    "trecho_comprovante": "92% das matrículas com contato iniciado por meio do Contato Inteligente ocorreram sem interação humana.",
+    "forca": "forte",
+    "confianca": "alta"
+  },
+  {
+    "id": "T-022",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "grande",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "demanda_comercial",
+      "comunicacao"
+    ],
+    "area": "comercial",
+    "setor": "educação superior",
+    "setor_chave": "educacao",
+    "empresa": "Vitru Educação (Uniasselvi e UniCesumar)",
+    "titulo": "Vitru lança assistente SofIA de matrícula 100% digital e converte 24% dos leads sem humano",
+    "problema": "A captação e qualificação de leads dependiam muito de atendimento humano, gerando gargalos, respostas lentas e oportunidades perdidas no funil.",
+    "solucao": "Assistente de IA SofIA (Blip, com Skeps) conduz a matrícula 100% digital por WhatsApp, Instagram e Messenger: qualifica o lead, faz diagnóstico de carreira, recomenda cursos e gera a matrícula, com transbordo para o call center quando necessário.",
+    "ferramentas": [
+      "Blip",
+      "Skeps",
+      "WhatsApp",
+      "Instagram",
+      "Messenger"
+    ],
+    "resultado": "24% de conversão de leads sem intervenção humana; 5% de ganho adicional de conversão para o time de vendas; ganho de 9x em eficiência operacional; redução de 90,2% no tempo médio de resposta; redução de 89% no tempo médio de atendimento; 2% de aumento nas aprovações de pagamento em seis meses.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Baguete (Vitru Educação automatiza atendimento com Blip)",
+    "fonte_url": "https://www.baguete.com.br/noticias/vitru-educacao-automatiza-atendimento-com-blip",
+    "ano": 2026,
+    "funcionarios": 10000,
+    "porte_confirmado": true,
+    "data_fonte": "2026-07",
+    "metricas": [
+      {
+        "indicador": "Conversão de leads sem humano",
+        "antes": null,
+        "depois": "24%",
+        "variacao": null
+      },
+      {
+        "indicador": "Tempo médio de resposta",
+        "antes": null,
+        "depois": null,
+        "variacao": "-90,2%"
+      },
+      {
+        "indicador": "Tempo médio de atendimento",
+        "antes": null,
+        "depois": null,
+        "variacao": "-89%"
+      }
+    ],
+    "esforco_implantacao": "Resultados medidos em seis meses; custo não informado.",
+    "como_replicar": [
+      "Listar as perguntas e dados que o time comercial colhe em todo lead.",
+      "Automatizar a qualificação e a recomendação de curso no WhatsApp.",
+      "Manter transbordo para humano quando o lead pedir.",
+      "Medir conversão sem humano e tempo de resposta."
+    ],
+    "trecho_comprovante": "Nossa ambição é transformar o WhatsApp no principal canal de relacionamento com candidatos e alunos.",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-023",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [
+      "demanda_comercial",
+      "capacidade"
+    ],
+    "area": "atendimento",
+    "setor": "educação superior",
+    "setor_chave": "educacao",
+    "empresa": "Multivix",
+    "titulo": "Faculdade capixaba lança a assistente Malu e vê ligações caírem 16% enquanto as matrículas crescem",
+    "problema": "Com cerca de 50.000 alunos matriculados em mais de 200 cursos, a equipe de atendimento enfrentava demanda crescente de candidatos e alunos.",
+    "solucao": "A assistente Malu (\"Contato Inteligente\", plataforma Blip) responde a candidatos e alunos no WhatsApp, no site e no aplicativo, sobre vestibular, cursos, financeiro, portal e calendário.",
+    "ferramentas": [
+      "Blip",
+      "WhatsApp"
+    ],
+    "resultado": "Em cerca de um ano: aumento de 70,07% no volume de mensagens; crescimento de 213,99% nos usuários dos canais; redução de 16,42% nas ligações recebidas; matrículas +34,97% no vestibular principal, +93,64% no EAD de graduação e +250,97% no EAD BR.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Blip (case Multivix)",
+    "fonte_url": "https://www.blip.ai/case/multivix/",
+    "ano": 2023,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Ligações recebidas",
+        "antes": null,
+        "depois": null,
+        "variacao": "-16,42%"
+      },
+      {
+        "indicador": "Usuários dos canais",
+        "antes": null,
+        "depois": null,
+        "variacao": "+213,99%"
+      },
+      {
+        "indicador": "Matrículas no vestibular principal",
+        "antes": null,
+        "depois": null,
+        "variacao": "+34,97%"
+      }
+    ],
+    "esforco_implantacao": "Malu lançada em 2020 e redesenhada em 2022; resultados medidos em cerca de um ano.",
+    "como_replicar": [
+      "Levantar as 30 perguntas mais frequentes de candidatos e alunos.",
+      "Responder no WhatsApp, site e app com a mesma assistente.",
+      "Medir ligações recebidas e matrículas por canal.",
+      "Revisar o roteiro a cada ciclo de matrícula."
+    ],
+    "trecho_comprovante": "Depois da implementação da Malu, o número de ligações recebidas caiu em mais de 16%.",
+    "forca": "fraca",
+    "confianca": "media"
+  },
+  {
+    "id": "T-024",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "pequena",
+    "gargalo": "demanda_comercial",
+    "gargalos_secundarios": [
+      "comunicacao",
+      "manual_repetitivo"
+    ],
+    "area": "comercial",
+    "setor": "educação (curso de inglês para profissionais de saúde)",
+    "setor_chave": "educacao",
+    "empresa": "Smart Fluency",
+    "titulo": "Curso de inglês para a saúde usa anúncio para WhatsApp com chatbot e quase dobra o faturamento",
+    "problema": "Instabilidade em plataformas de mensagem, pouco suporte humanizado, forte dependência de atendentes no primeiro contato e custo crescente de leads difíceis de converter.",
+    "solucao": "Anúncios click-to-WhatsApp com e-book gratuito, chatbot para o primeiro atendimento, jornada automatizada de suporte pedagógico, transbordo para humanos e painel de produtividade de SDRs e closers (Zenvia).",
+    "ferramentas": [
+      "Zenvia",
+      "Click-to-WhatsApp",
+      "chatbot"
+    ],
+    "resultado": "Faturamento praticamente dobrou desde fevereiro de 2025; mais de 10.000 alunos atendidos; NPS e CSAT acima de 9; CPL menor que em outros formatos.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Zenvia (case Smart Fluency)",
+    "fonte_url": "https://zenvia.com/casos-de-sucesso/smart-fluency/",
+    "ano": 2025,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Faturamento",
+        "antes": null,
+        "depois": null,
+        "variacao": "praticamente dobrou desde fevereiro de 2025"
+      },
+      {
+        "indicador": "Alunos atendidos",
+        "antes": null,
+        "depois": "mais de 10.000",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Anunciar uma isca digital (e-book) com botão para WhatsApp.",
+      "Usar chatbot para entregar a isca e qualificar.",
+      "Passar o lead qualificado ao vendedor com histórico.",
+      "Comparar custo por lead com os outros formatos."
+    ],
+    "trecho_comprovante": "Faturamento praticamente dobrou após início da estratégia",
+    "forca": "fraca",
+    "confianca": "media"
+  },
+  {
+    "id": "T-025",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "demanda_comercial",
+    "gargalos_secundarios": [
+      "comunicacao",
+      "integracao"
+    ],
+    "area": "comercial",
+    "setor": "construção civil (incorporadora residencial, Recife)",
+    "setor_chave": "construcao_imoveis",
+    "empresa": "Construtora Ceta",
+    "titulo": "Construtora do Recife qualifica leads com SDR de IA no WhatsApp e passa de 100 leads em 10 meses para mais de 3.000 em um ano",
+    "problema": "O canal digital gerou só 100 leads em 10 meses, as ferramentas de venda eram desconectadas do marketing, sem qualificação ou nutrição automática, e os contatos de WhatsApp se espalhavam por números pessoais.",
+    "solucao": "RD Station Marketing, RD Station CRM e um SDR automatizado no RD Station Conversas (API oficial do WhatsApp com IA generativa) que qualifica em até 5 minutos, envia resumos ao CRM e distribui os leads aos corretores; site novo, blog e mídia paga, com a agência PHD Virtual.",
+    "ferramentas": [
+      "RD Station Marketing",
+      "RD Station CRM",
+      "RD Station Conversas",
+      "WhatsApp API"
+    ],
+    "resultado": "Leads digitais de 100 em 10 meses para mais de 3.000 em menos de um ano; receita do canal digital de zero para quase R$ 9 milhões; 314 MQLs identificados pela IA; conversão lead-venda de 5%; ROI de 46x; visitas ao site +600%.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "RD Station (história de sucesso Construtora Ceta)",
+    "fonte_url": "https://www.rdstation.com/historias-de-sucesso/construtora-ceta",
+    "ano": 2025,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Leads digitais",
+        "antes": "100 em 10 meses",
+        "depois": "mais de 3.000 em menos de 1 ano",
+        "variacao": "+3.000%"
+      },
+      {
+        "indicador": "Receita do canal digital",
+        "antes": "sem vendas",
+        "depois": "quase R$ 9 milhões",
+        "variacao": null
+      },
+      {
+        "indicador": "ROI",
+        "antes": null,
+        "depois": "46x",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Menos de 1 ano segundo a fonte; resultado reúne site, SEO, mídia paga e automação, então não é atribuível só à IA.",
+    "como_replicar": [
+      "Centralizar o WhatsApp comercial num número oficial ligado ao CRM.",
+      "Usar um agente de IA para a primeira qualificação (renda, interesse, prazo).",
+      "Enviar resumo da conversa ao CRM e distribuir ao corretor.",
+      "Acompanhar leads, MQLs e vendas por canal."
+    ],
+    "trecho_comprovante": "O canal que antes não gerava nenhuma venda faturou quase 9 milhões em menos de um ano.",
+    "forca": "fraca",
+    "confianca": "media"
+  },
+  {
+    "id": "T-026",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "demanda_comercial"
+    ],
+    "area": "comercial",
+    "setor": "construção civil (incorporadora de edifícios em Santos)",
+    "setor_chave": "construcao_imoveis",
+    "empresa": "Engelife Construtora e Incorporadora",
+    "titulo": "Incorporadora de Santos pré-qualifica leads com WhatsApp Flows e reduz 37% o custo por lead qualificado",
+    "problema": "A qualificação de leads era manual e lenta: a equipe conversava com cada prospect no WhatsApp para colher informações.",
+    "solucao": "WhatsApp Flows em anúncios click-to-WhatsApp: o prospect informa nome, e-mail e responde perguntas automáticas sobre interesse e capacidade financeira; depois um corretor agenda visita ou inicia a compra.",
+    "ferramentas": [
+      "WhatsApp Flows",
+      "anúncios click-to-WhatsApp",
+      "Gerenciador de Anúncios",
+      "CRM próprio"
+    ],
+    "resultado": "Em teste de 20/10 a 03/11/2025 (números autodeclarados): +26 pontos na taxa de qualificação de leads, -37% no custo por lead qualificado e -12 minutos no tempo médio de qualificação.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "WhatsApp Business (história de sucesso Engelife)",
+    "fonte_url": "https://whatsappbusiness.com/resources/success-stories/engelife-construtora-e-incorporadora/",
+    "ano": 2025,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Taxa de qualificação de leads",
+        "antes": null,
+        "depois": null,
+        "variacao": "+26 pontos"
+      },
+      {
+        "indicador": "Custo por lead qualificado",
+        "antes": null,
+        "depois": null,
+        "variacao": "-37%"
+      },
+      {
+        "indicador": "Tempo médio de qualificação",
+        "antes": null,
+        "depois": null,
+        "variacao": "-12 minutos"
+      }
+    ],
+    "esforco_implantacao": "Teste de duas semanas (20/10 a 03/11/2025).",
+    "como_replicar": [
+      "Definir 3 a 5 perguntas que separam lead qualificado de curioso.",
+      "Colocá-las num fluxo automático ao clicar no anúncio.",
+      "Marcar o lead como qualificado e passar ao corretor.",
+      "Deixar os não qualificados no CRM para remarketing."
+    ],
+    "trecho_comprovante": "WhatsApp Flows shortens the qualification path and increases our chances of conversion.",
+    "forca": "fraca",
+    "confianca": "media"
+  },
+  {
+    "id": "T-027",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "pequena",
+    "gargalo": "processo",
+    "gargalos_secundarios": [
+      "manual_repetitivo",
+      "conhecimento"
+    ],
+    "area": "juridico",
+    "setor": "imobiliário (imobiliária de alto padrão, Mogi das Cruzes)",
+    "setor_chave": "construcao_imoveis",
+    "empresa": "Argentino Imóveis",
+    "titulo": "Imobiliária de alto padrão reduz 85% o tempo de formalização de contratos com assinatura eletrônica e IA de análise",
+    "problema": "A assinatura de contratos era lenta; a pandemia impediu a assinatura presencial e os atrasos faziam perder oportunidades de venda.",
+    "solucao": "Docusign para assinatura eletrônica e gestão de documentos em nuvem (Workflow Builder, Web Forms, Workspaces), depois estendida aos recursos de IA para analisar cláusulas, prazos e obrigações.",
+    "ferramentas": [
+      "Docusign Workflow Builder",
+      "Docusign Web Forms",
+      "Docusign Workspaces",
+      "Docusign IAM"
+    ],
+    "resultado": "Redução de 85% no tempo de formalização de contratos; uso de papel eliminado.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Baguete (Argentino Imóveis gere acordos com Docusign)",
+    "fonte_url": "https://www.baguete.com.br/noticias/argentino-imoveis-gere-acordos-com-docusign",
+    "ano": 2026,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-07",
+    "metricas": [
+      {
+        "indicador": "Tempo de formalização de contratos",
+        "antes": null,
+        "depois": null,
+        "variacao": "-85%"
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Padronizar os modelos de contrato (venda, locação, administração).",
+      "Preencher os contratos por formulário e enviar para assinatura eletrônica.",
+      "Centralizar os documentos assinados num repositório.",
+      "Medir dias entre proposta aceita e contrato assinado."
+    ],
+    "trecho_comprovante": "Empresa reduziu em 85% o tempo de formalização de contratos.",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-028",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "processo",
+      "manual_repetitivo"
+    ],
+    "area": "operacoes",
+    "setor": "imobiliário (vistoria de locação)",
+    "setor_chave": "construcao_imoveis",
+    "empresa": "Rede Vistorias",
+    "titulo": "Franquia de vistoria imobiliária embute assinatura eletrônica na própria plataforma e cai de 15 dias para 1 dia na assinatura",
+    "problema": "A assinatura de contratos era lenta e cheia de papel, num negócio com alto volume de processos sensíveis ao tempo e que exigem validade jurídica.",
+    "solucao": "Docusign Agreement Cloud integrado à plataforma e ao app da Rede Vistorias: o usuário solicita serviços, acompanha status e laudos, assina e guarda os documentos num só lugar na nuvem.",
+    "ferramentas": [
+      "Docusign Agreement Cloud",
+      "Docusign e-signature"
+    ],
+    "resultado": "Tempo de assinatura de contratos de 15 dias para 1 dia; mais de 40.000 imóveis vistoriados em três anos; presença em mais de 250 cidades.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Docusign (caso Rede Vistorias)",
+    "fonte_url": "https://www.docusign.com/pt-br/casos-de-clientes/rede-vistorias",
+    "ano": 2025,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Tempo de assinatura de contratos",
+        "antes": "15 dias",
+        "depois": "1 dia",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Colocar a assinatura eletrônica dentro do fluxo do pedido, não fora dele.",
+      "Gerar laudo e contrato na mesma plataforma.",
+      "Guardar tudo em repositório digital com status visível ao cliente.",
+      "Medir dias entre solicitação e contrato assinado."
+    ],
+    "trecho_comprovante": "reduziu o tempo de assinatura de contratos de 15 dias para apenas um",
+    "forca": "fraca",
+    "confianca": "media"
+  },
+  {
+    "id": "T-029",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "pequena",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "controle",
+      "comunicacao"
+    ],
+    "area": "juridico",
+    "setor": "advocacia (escritório empresarial)",
+    "setor_chave": "servicos_b2b",
+    "empresa": "Meirelles Ramos Advocacia",
+    "titulo": "Escritório enxuto usa agentes de IA no WhatsApp ligados ao Projuris ADV e encerra a controladoria às 8h20 em vez de 14h",
+    "problema": "A controladoria jurídica tomava a manhã da sócia, começava uma hora antes do expediente e muitas vezes ia até as 14h; a informação circulava por WhatsApp, e-mail, caderno e memória e os relatórios semanais aos clientes deixaram de sair.",
+    "solucao": "Projuris ADV como sistema central, conectado por API a três agentes de IA que conversam com a sócia no WhatsApp: controladoria (andamentos e prazos), demandas e contratos padrão, e financeiro (pagamentos e boletos). Nada é gravado sem aprovação da sócia.",
+    "ferramentas": [
+      "Projuris ADV",
+      "WhatsApp"
+    ],
+    "resultado": "Controladoria diária passou de terminar por volta das 14h para por volta das 8h20; redução de cerca de 90% do tempo de revisar e registrar andamentos (valor informado pelo artigo); escritório atende mais de 75 CNPJs recorrentes e mais de 450 processos ativos.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Projuris (blog, case Meirelles Ramos)",
+    "fonte_url": "https://www.projuris.com.br/blog/produtividade-advocacia-case-meirelles-ramos/",
+    "ano": 2026,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-10",
+    "metricas": [
+      {
+        "indicador": "Fim da controladoria diária",
+        "antes": "por volta das 14h",
+        "depois": "por volta das 8h20",
+        "variacao": null
+      },
+      {
+        "indicador": "Tempo de revisar e registrar andamentos",
+        "antes": null,
+        "depois": null,
+        "variacao": "cerca de -90%"
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Centralizar prazos, andamentos e finanças num sistema único.",
+      "Conectar assistentes de IA por API que classifiquem andamentos e proponham tarefas.",
+      "Exigir aprovação do advogado antes de gravar.",
+      "Retomar o relatório semanal aos clientes a partir dos dados do sistema."
+    ],
+    "trecho_comprovante": "Eu preciso de uma operação que funcione para a Melina real.",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-030",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "grande",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "comunicacao",
+      "controle"
+    ],
+    "area": "juridico",
+    "setor": "varejo (supermercados), departamento jurídico",
+    "setor_chave": "varejo_ecommerce",
+    "empresa": "Grupo Savegnago",
+    "titulo": "Rede de supermercados centraliza escritórios parceiros no Projuris e reduz 71% o tempo de provisionamento jurídico",
+    "problema": "A comunicação com escritórios externos se espalhava por WhatsApp e e-mail, perdendo históricos e análises de risco; os dados do sistema estavam desatualizados e o provisionamento era trimestral, à base de planilhas.",
+    "solucao": "Migração do Projuris Enterprise para o Projuris Empresas, com perfis para escritórios parceiros por região e área, comunicação centralizada na Central de Colaboração, guia de preenchimento e relatórios padrão por usuário.",
+    "ferramentas": [
+      "Projuris Empresas",
+      "Central de Colaboração"
+    ],
+    "resultado": "Após 11 meses: 71% menos tempo de preparação do provisionamento (de ciclo trimestral para mensal); 249 horas economizadas (cerca de 31 dias úteis); 826 e-mails eliminados; 1.068 eventos registrados direto na plataforma pelos parceiros.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Projuris (blog, case Grupo Savegnago)",
+    "fonte_url": "https://www.projuris.com.br/blog/avaliacao-escritorios-terceirizados-case/",
+    "ano": 2026,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-10",
+    "metricas": [
+      {
+        "indicador": "Tempo de preparação do provisionamento",
+        "antes": "ciclo trimestral",
+        "depois": "ciclo mensal",
+        "variacao": "-71%"
+      },
+      {
+        "indicador": "Horas economizadas em 11 meses",
+        "antes": null,
+        "depois": "249 h",
+        "variacao": null
+      },
+      {
+        "indicador": "E-mails eliminados",
+        "antes": null,
+        "depois": "826",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Usou funcionalidades já existentes em vez de construir sistema novo; resultados medidos em 11 meses.",
+    "como_replicar": [
+      "Dar aos escritórios externos acesso direto ao sistema, com permissões por área.",
+      "Publicar um guia de como preencher cada campo.",
+      "Criar relatórios padrão por perfil.",
+      "Passar o provisionamento de trimestral para mensal."
+    ],
+    "trecho_comprovante": "Para chegar a grandes resultados, talvez a gente não precise de novos sistemas. A gente precisa olhar para dentro de casa.",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-031",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "grande",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "manual_repetitivo",
+      "processo"
+    ],
+    "area": "juridico",
+    "setor": "energia elétrica (concessionária)",
+    "setor_chave": "outro",
+    "empresa": "Copel",
+    "titulo": "Copel combina Projuris, robôs Oystr e BPO jurídico e reduz 90% o tempo médio de cadastro de processos",
+    "problema": "Após um ano recorde de mais de 19.000 processos cadastrados, não era possível prever como o cadastro jurídico suportaria o próximo pico, e era preciso padronizar os dados sem crescer o time na mesma proporção.",
+    "solucao": "Modelo de \"servitização\": Projuris como ERP jurídico central, robôs de RPA da Oystr nas etapas repetitivas do cadastro e BPO jurídico da TechPro para análise e revisão; o fluxo foi validado por quem o conhece antes de automatizar.",
+    "ferramentas": [
+      "Projuris",
+      "Oystr (RPA)",
+      "TechPro (BPO jurídico)"
+    ],
+    "resultado": "Redução de 90% no tempo médio de cadastro de processos e 10 vezes mais cadastros no mesmo tempo operacional; base com 33.339 processos ativos; cerca de 50 pessoas na gestão de processos.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Projuris (blog, automação jurídica na Copel)",
+    "fonte_url": "https://www.projuris.com.br/blog/automacao-juridica-na-copel/",
+    "ano": 2026,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-10",
+    "metricas": [
+      {
+        "indicador": "Tempo médio de cadastro de processos",
+        "antes": null,
+        "depois": null,
+        "variacao": "-90%"
+      },
+      {
+        "indicador": "Cadastros no mesmo tempo operacional",
+        "antes": null,
+        "depois": null,
+        "variacao": "10x"
+      }
+    ],
+    "esforco_implantacao": "Mapeamento do processo validado antes da automação; prazo e custo não informados.",
+    "como_replicar": [
+      "Mapear o fluxo de cadastro com quem o executa.",
+      "Automatizar só as etapas estruturadas e repetitivas.",
+      "Deixar para uma equipe de revisão as exceções.",
+      "Medir tempo médio de cadastro e volume por período."
+    ],
+    "trecho_comprovante": "A inteligência artificial é potencializadora. Potencializadora da falha, inclusive, se eu tiver erro no fluxo.",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-032",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "capacidade",
+      "processo"
+    ],
+    "area": "juridico",
+    "setor": "serviços financeiros (crédito para classes C, D e E)",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "Omni&Co",
+    "titulo": "Fintech de crédito usa \"Advogado Virtual\" com IA generativa para classificar 66.000 intimações por mês",
+    "problema": "Fluxos jurídicos manuais causavam erros, retrabalho e lentidão, e o crescimento projetado os tornaria insustentáveis sem automação.",
+    "solucao": "\"Advogado Virtual\", sistema híbrido que usa XGBoost para classificação supervisionada e IA generativa (Amazon Bedrock) para interpretar intimações em linguagem natural; a classificação de intimações foi o primeiro fluxo automatizado.",
+    "ferramentas": [
+      "Amazon Bedrock",
+      "Amazon SageMaker",
+      "Amazon EMR",
+      "AWS Lambda",
+      "Amazon S3",
+      "Amazon API Gateway",
+      "Amazon RDS"
+    ],
+    "resultado": "Mais de 66.000 intimações processadas por mês de forma automatizada; 98% de acurácia na classificação; mais de 250 horas de trabalho manual economizadas no último mês.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "AWS Brasil (blog, Omni&Co)",
+    "fonte_url": "https://aws.amazon.com/pt/blogs/aws-brasil/omnico-como-o-advogado-virtual-com-ia-generativa-processa-66-000-intimacoes-mensais/",
+    "ano": 2025,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-08",
+    "metricas": [
+      {
+        "indicador": "Intimações processadas por mês",
+        "antes": null,
+        "depois": "mais de 66.000",
+        "variacao": null
+      },
+      {
+        "indicador": "Acurácia da classificação",
+        "antes": null,
+        "depois": "98%",
+        "variacao": null
+      },
+      {
+        "indicador": "Horas manuais economizadas (último mês)",
+        "antes": null,
+        "depois": "mais de 250 h",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Reunir um histórico de intimações já classificadas por advogados.",
+      "Treinar um classificador supervisionado e usar IA generativa para os textos ambíguos.",
+      "Manter revisão humana por amostragem.",
+      "Medir horas economizadas e acurácia."
+    ],
+    "trecho_comprovante": "Mais de 66.000 intimações processadas mensalmente de forma automatizada",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-033",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "pequena",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "controle",
+      "capacidade"
+    ],
+    "area": "financeiro",
+    "setor": "contabilidade (fiscal)",
+    "setor_chave": "servicos_b2b",
+    "empresa": "Dipaz Consultoria Contábil",
+    "titulo": "Escritório contábil automatiza o fiscal com a Jettax, vai de 240 para 60 horas semanais e passa de 80 para 120 clientes com 2 pessoas",
+    "problema": "O fiscal era manual: conferir notas uma a uma, calcular impostos à mão, emitir guias individualmente e monitorar mensagens do e-CAC; só organizar documentos fiscais consumia 240 horas por semana.",
+    "solucao": "Plataforma Jettax que captura NF-e, NFS-e e CT-e, audita, calcula impostos (inclusive Simples Nacional), emite e envia guias aos clientes e monitora o e-CAC.",
+    "ferramentas": [
+      "Jettax"
+    ],
+    "resultado": "Organização fiscal semanal de 240 para 60 horas; fechamento mensal completo de 480 para 80 horas; produtividade fiscal +50%; custo do fiscal -40%; carteira de 80 para 120 clientes; equipe fiscal de 4 para 2 pessoas.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Jettax (blog, depoimento Dipaz)",
+    "fonte_url": "https://www.jettax.com.br/blog/depoimento-cliente-jettax-por-que-escritorios-que-automatizaram-fecham-o-mes-sem-estresse/",
+    "ano": 2026,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-07",
+    "metricas": [
+      {
+        "indicador": "Organização fiscal semanal",
+        "antes": "240 h",
+        "depois": "60 h",
+        "variacao": "-75%"
+      },
+      {
+        "indicador": "Fechamento mensal completo",
+        "antes": "480 h",
+        "depois": "80 h",
+        "variacao": null
+      },
+      {
+        "indicador": "Carteira de clientes",
+        "antes": "80",
+        "depois": "120",
+        "variacao": null
+      },
+      {
+        "indicador": "Equipe fiscal",
+        "antes": "4 pessoas",
+        "depois": "2 pessoas",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Medir as horas por tarefa fiscal (captura de notas, cálculo, guias, e-CAC).",
+      "Automatizar a captura e a auditoria de notas.",
+      "Gerar e enviar as guias automaticamente.",
+      "Reinvestir o tempo liberado em novos clientes."
+    ],
+    "trecho_comprovante": "Depois de automatizar o processo com a plataforma, esse número caiu para 60 horas.",
+    "forca": "forte",
+    "confianca": "alta"
+  },
+  {
+    "id": "T-034",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "pequena",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "manual_repetitivo",
+      "capacidade"
+    ],
+    "area": "financeiro",
+    "setor": "contabilidade (online)",
+    "setor_chave": "servicos_b2b",
+    "empresa": "Virei Contador (Newcont)",
+    "titulo": "Contabilidade online do ES elimina a transferência manual de dados com a Conta Azul e cresce 300%",
+    "problema": "A transferência manual de dados dos clientes atrasava a equipe, e o escritório precisava escalar o serviço de contabilidade digital.",
+    "solucao": "Implantação totalmente online da Conta Azul, que removeu a transferência manual e automatizou a coleta e o processamento de dados.",
+    "ferramentas": [
+      "Conta Azul"
+    ],
+    "resultado": "Crescimento de 300% e 305 clientes ativos na carteira.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Conta Azul (case Virei Contador)",
+    "fonte_url": "https://contaazul.com/cases-de-sucesso/virei-contador/",
+    "ano": 2026,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-09",
+    "metricas": [
+      {
+        "indicador": "Crescimento do negócio",
+        "antes": null,
+        "depois": null,
+        "variacao": "+300%"
+      },
+      {
+        "indicador": "Clientes ativos",
+        "antes": null,
+        "depois": "305",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Implantação 100% online; prazo não informado. Data da página é de última atualização.",
+    "como_replicar": [
+      "Pedir ao cliente que lance ou conecte os dados no sistema, em vez de enviar planilhas e papéis.",
+      "Automatizar a coleta (extrato, notas).",
+      "Padronizar o onboarding online de novos clientes.",
+      "Acompanhar clientes ativos por colaborador."
+    ],
+    "trecho_comprovante": "Depois que a Conta Azul entrou na rotina contábil, o crescimento da Virei Contador foi de 300%",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-035",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "pequena",
+    "gargalo": "processo",
+    "gargalos_secundarios": [
+      "manual_repetitivo",
+      "informacao"
+    ],
+    "area": "financeiro",
+    "setor": "contabilidade",
+    "setor_chave": "servicos_b2b",
+    "empresa": "Diretrizes Contabilidade",
+    "titulo": "Escritório contábil tira o papel, fecha a contabilidade do cliente 4 vezes mais rápido e corta quase 1 tonelada de papel",
+    "problema": "O escritório dependia de arquivo em papel, as operações eram lentas e o dono se sentia preso ao escritório.",
+    "solucao": "Migração do trabalho convencional para o digital, começando pela eliminação do papel e usando a Conta Azul, com acesso à informação de qualquer lugar.",
+    "ferramentas": [
+      "Conta Azul"
+    ],
+    "resultado": "Fechamento contábil do cliente de 3 a 4 horas para cerca de 1 hora (4 vezes mais rápido); quase 1 tonelada de papel eliminada; em um cliente, a mensalidade da contabilidade caiu pela metade.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Conta Azul (case Diretrizes Contabilidade)",
+    "fonte_url": "https://contaazul.com/cases-de-sucesso/diretrizes-contabilidade/",
+    "ano": 2026,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-09",
+    "metricas": [
+      {
+        "indicador": "Fechamento contábil do cliente",
+        "antes": "3 a 4 horas",
+        "depois": "cerca de 1 hora",
+        "variacao": "4x mais rápido"
+      },
+      {
+        "indicador": "Papel eliminado",
+        "antes": null,
+        "depois": "quase 1 tonelada",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Não informado. Data da página é de última atualização.",
+    "como_replicar": [
+      "Digitalizar o arquivo e parar de receber documentos em papel.",
+      "Centralizar os lançamentos do cliente num sistema em nuvem.",
+      "Cronometrar o fechamento de um cliente antes e depois.",
+      "Aproveitar o tempo liberado para consultoria."
+    ],
+    "trecho_comprovante": "uma operação que costumava levar de 3 a 4 horas passou a ser concluída em apenas uma",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-036",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "pequena",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "manual_repetitivo",
+      "capacidade"
+    ],
+    "area": "financeiro",
+    "setor": "contabilidade",
+    "setor_chave": "servicos_b2b",
+    "empresa": "Tactus Contabilidade",
+    "titulo": "Contabilidade centraliza a gestão financeira dos clientes na Conta Azul e soma 15 novos clientes por mês",
+    "problema": "Faltava estrutura e controle na gestão financeira de uma carteira de clientes crescente, com processos manuais e físicos.",
+    "solucao": "Centralização da gestão financeira dos clientes na Conta Azul e documentação totalmente online.",
+    "ferramentas": [
+      "Conta Azul"
+    ],
+    "resultado": "Pelo menos 15 novos clientes por mês; gestão financeira 100% online.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Conta Azul (case Tactus Contabilidade)",
+    "fonte_url": "https://contaazul.com/cases-de-sucesso/tactus-contabilidade/",
+    "ano": 2026,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-09",
+    "metricas": [
+      {
+        "indicador": "Novos clientes por mês",
+        "antes": null,
+        "depois": "pelo menos 15",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Não informado. Data da página é de última atualização.",
+    "como_replicar": [
+      "Escolher um sistema único para a gestão financeira dos clientes.",
+      "Exigir documentação totalmente online.",
+      "Padronizar o cadastro e o onboarding.",
+      "Medir novos clientes por mês."
+    ],
+    "trecho_comprovante": "Hoje a Tactus soma pelo menos 15 novos clientes por mês",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-037",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [
+      "manual_repetitivo",
+      "controle"
+    ],
+    "area": "financeiro",
+    "setor": "software (autoatendimento de cobrança B2B)",
+    "setor_chave": "tecnologia",
+    "empresa": "Simplifica+ (Adapcon)",
+    "titulo": "Portal de autoatendimento de cobrança B2B soma 1 milhão de horas economizadas e 6,5 milhões de segundas vias automáticas",
+    "problema": "Empresas presas a processos manuais, com colaboradores gastando tempo com e-mails, telefonemas, segundas vias e lembretes de pagamento.",
+    "solucao": "Plataforma B2B de autoatendimento com portal, chatbot e central de atendimento no WhatsApp que automatiza segundas vias, lembretes de pagamento, acompanhamento de pedidos e devoluções, integrada a mais de 60 ERPs e 120 instituições financeiras.",
+    "ferramentas": [
+      "Simplifica+",
+      "WhatsApp"
+    ],
+    "resultado": "Mais de 1 milhão de horas economizadas em 12 meses; mais de R$ 1 bilhão por mês em pagamentos facilitados; mais de 6,5 milhões de segundas vias de boleto emitidas automaticamente; economia de até 92% frente ao processo manual (segundo a empresa); cliente Dalila Têxtil relata +90% de pagamentos em dia.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Baguete (Simplifica+ gera economia de 1 milhão de horas)",
+    "fonte_url": "https://www.baguete.com.br/noticias/simplifica-gera-economia-de-1-milhao-de-horas",
+    "ano": 2023,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2023-11",
+    "metricas": [
+      {
+        "indicador": "Horas economizadas em 12 meses",
+        "antes": null,
+        "depois": "mais de 1 milhão",
+        "variacao": null
+      },
+      {
+        "indicador": "Segundas vias automáticas",
+        "antes": null,
+        "depois": "mais de 6,5 milhões",
+        "variacao": null
+      },
+      {
+        "indicador": "Pagamentos em dia (cliente Dalila Têxtil)",
+        "antes": null,
+        "depois": null,
+        "variacao": "+90%"
+      }
+    ],
+    "esforco_implantacao": "Integra-se a mais de 60 ERPs; prazo por cliente não informado.",
+    "como_replicar": [
+      "Deixar o cliente emitir a segunda via de boleto sozinho num portal ou WhatsApp.",
+      "Disparar lembretes automáticos antes do vencimento.",
+      "Integrar ao ERP para baixar pagamentos.",
+      "Medir pagamentos em dia e chamados evitados."
+    ],
+    "trecho_comprovante": "Estamos muito orgulhosos de alcançar a marca de 1 milhão de horas operacionais economizadas para nossos clientes",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-038",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [
+      "controle",
+      "integracao"
+    ],
+    "area": "financeiro",
+    "setor": "fintech (infraestrutura de crédito e cobrança)",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "Celcoin",
+    "titulo": "Plataforma de cobrança multicanal promete reduzir até 50% a inadimplência de carteiras de crédito",
+    "problema": "Altos índices de inadimplência em carteiras de crédito.",
+    "solucao": "Plataforma de cobrança multicanal (WhatsApp, SMS e e-mail) com fluxos configuráveis, negociação de dívidas, boleto, Pix e Bolepix, negativação e reabilitação via Serasa, Boa Vista e Quod, integração com ERPs e rede de mais de 100 assessorias.",
+    "ferramentas": [
+      "WhatsApp",
+      "SMS",
+      "e-mail",
+      "Pix",
+      "Serasa",
+      "Boa Vista",
+      "Quod",
+      "SAP",
+      "TOTVS"
+    ],
+    "resultado": "Redução da inadimplência do crédito de até 50% (alegação da empresa, em conteúdo patrocinado); mais de 50 clientes e mais de 100 assessorias parceiras.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Finsiders Brasil (conteúdo Celcoin)",
+    "fonte_url": "https://finsidersbrasil.com.br/inovacao/como-a-cobranca-multicanal-da-celcoin-reduz-a-inadimplencia",
+    "ano": 2025,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-01",
+    "metricas": [
+      {
+        "indicador": "Inadimplência de carteiras de crédito",
+        "antes": null,
+        "depois": null,
+        "variacao": "até -50% (alegação da empresa)"
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Montar régua de cobrança por faixa de atraso e canal.",
+      "Oferecer negociação com Pix ou boleto no próprio chat.",
+      "Integrar ao ERP para baixar pagamentos.",
+      "Acompanhar inadimplência por safra."
+    ],
+    "trecho_comprovante": "reduzir a inadimplência do crédito em até 50%",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-039",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "pequena",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "informacao",
+      "decisao"
+    ],
+    "area": "operacoes",
+    "setor": "agropecuária (fazenda em Ponta Porã, MS)",
+    "setor_chave": "agro",
+    "empresa": "Fazenda Graça de Deus",
+    "titulo": "Fazenda de MS corta mais de 10% do custo de manutenção de máquinas ao registrar histórico e planejar preventivas no Aegro",
+    "problema": "Gastos altos com manutenção de máquinas, pouca informação sobre o histórico dos equipamentos, manutenção só após quebras e controle de estoque de peças deficiente.",
+    "solucao": "Software de gestão rural Aegro (web e app): histórico das máquinas, controle de custos e combustível, planejamento de manutenção preventiva, controle de estoque e painéis.",
+    "ferramentas": [
+      "Aegro"
+    ],
+    "resultado": "Redução de mais de 10% nos custos de manutenção de máquinas.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Aegro (caso Fazenda Graça de Deus)",
+    "fonte_url": "https://aegro.com.br/casos-de-sucesso/fazenda-graca-de-deus/",
+    "ano": 2023,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2023-11",
+    "metricas": [
+      {
+        "indicador": "Custos de manutenção de máquinas",
+        "antes": null,
+        "depois": null,
+        "variacao": "mais de -10%"
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Cadastrar cada máquina e registrar toda manutenção e abastecimento.",
+      "Definir plano preventivo por horas de uso.",
+      "Controlar o estoque de peças.",
+      "Comparar o custo de manutenção por máquina a cada safra."
+    ],
+    "trecho_comprovante": "Economizei mais de 10% parando de fazer manutenções à toa.",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-040",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "pequena",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "comunicacao",
+      "controle"
+    ],
+    "area": "operacoes",
+    "setor": "agropecuária (lavoura)",
+    "setor_chave": "agro",
+    "empresa": "Estância Ouro Branco e Sítio Santo Antônio",
+    "titulo": "Fazendas reduzem 40% do custo de produção agrícola ao ratear gastos por talhão no Aegro",
+    "problema": "Comunicação difícil entre equipes, custo por talhão desconhecido (decisões no \"achismo\"), estoque de insumos desorganizado e muita dependência de papel.",
+    "solucao": "Software e app Aegro desde 2016, com treinamento de toda a equipe: manutenção de máquinas, relatórios, rateio de custos, controle de estoque e fechamento de safra.",
+    "ferramentas": [
+      "Aegro"
+    ],
+    "resultado": "Redução de 40% nos custos de produção agrícola (sem base de cálculo informada); fechamento de safra de cerca de um mês para cerca de uma hora; plano de ampliar a área plantada em 25% ao ano.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Aegro (blog, fazendas cortam 40% dos gastos)",
+    "fonte_url": "https://aegro.com.br/blog/fazendas-cortam-40-por-cento-gastos-planejam-crescer-aegro/",
+    "ano": 2024,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2024-03",
+    "metricas": [
+      {
+        "indicador": "Custos de produção agrícola",
+        "antes": null,
+        "depois": null,
+        "variacao": "-40%"
+      },
+      {
+        "indicador": "Fechamento de safra",
+        "antes": "cerca de 1 mês",
+        "depois": "cerca de 1 hora",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Uso desde 2016 com treinamento da equipe; o artigo não informa o período de apuração do ganho.",
+    "como_replicar": [
+      "Lançar todo gasto por talhão.",
+      "Registrar a entrada e a saída de insumos.",
+      "Treinar toda a equipe no app.",
+      "Fechar a safra com os custos já rateados."
+    ],
+    "trecho_comprovante": "Diminuíram em 40% os custos de produção agrícola.",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-041",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "grande",
+    "gargalo": "demanda_comercial",
+    "gargalos_secundarios": [
+      "comunicacao",
+      "capacidade"
+    ],
+    "area": "comercial",
+    "setor": "distribuição de insumos agropecuários",
+    "setor_chave": "agro",
+    "empresa": "Agro Amazônia",
+    "titulo": "Distribuidora de insumos agrícolas leva um SDR de IA ao WhatsApp e triplica as conversas ativas em uma semana",
+    "problema": "A empresa queria estar mais perto do produtor rural e dar suporte e orientação no momento em que ele precisasse.",
+    "solucao": "Meta Business Agent no WhatsApp com o BizAI da Zenvia: agente que qualifica leads, apresenta o portfólio, conduz a compra até o checkout, abre e acompanha chamados técnicos (ServiceNow) e reengaja clientes.",
+    "ferramentas": [
+      "Meta Business Agent",
+      "Zenvia BizAI",
+      "WhatsApp",
+      "ServiceNow"
+    ],
+    "resultado": "Conversas ativas de 420 para mais de 1.400 na primeira semana; mais de 15 leads de alto ticket encaminhados ao time comercial.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Baguete (Agro Amazônia automatiza WhatsApp com Meta)",
+    "fonte_url": "https://www.baguete.com.br/noticias/agro-amazonia-automatiza-whatsapp-com-meta",
+    "ano": 2026,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-07",
+    "metricas": [
+      {
+        "indicador": "Conversas ativas (primeira semana)",
+        "antes": "420",
+        "depois": "mais de 1.400",
+        "variacao": null
+      },
+      {
+        "indicador": "Leads de alto ticket encaminhados",
+        "antes": null,
+        "depois": "mais de 15",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Piloto antes do lançamento público da ferramenta, em junho de 2026; resultados de apenas a primeira semana.",
+    "como_replicar": [
+      "Listar as perguntas e pedidos mais comuns do produtor no WhatsApp.",
+      "Configurar um agente que qualifique e apresente o portfólio.",
+      "Encaminhar leads de maior ticket ao vendedor.",
+      "Acompanhar conversas ativas e leads encaminhados por semana."
+    ],
+    "trecho_comprovante": "o projeto elevou o volume de conversas ativas de 420 para mais de 1,4 mil na primeira semana",
+    "forca": "media",
+    "confianca": "media"
+  },
+  {
+    "id": "T-042",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "grande",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "decisao",
+      "controle"
+    ],
+    "area": "operacoes",
+    "setor": "agroindústria (etanol de milho)",
+    "setor_chave": "agro",
+    "empresa": "Inpasa",
+    "titulo": "Produtora de etanol de milho monitora mais de 2.000 sensores e chega a 99,76% de disponibilidade média",
+    "problema": "Rotas periódicas de inspeção perdiam falhas de evolução rápida, e a gestão queria visibilidade em tempo real da saúde dos equipamentos, com metas de produção mais altas.",
+    "solucao": "Monitoramento online por sensores Smart Trac da Tractian com diagnóstico de falhas por IA e alertas automáticos; depois, CMMS para ordens de serviço digitais e uso em campo.",
+    "ferramentas": [
+      "Tractian Smart Trac",
+      "Tractian CMMS"
+    ],
+    "resultado": "Disponibilidade média anual de 99,76% (sem linha de base informada); ROI médio de 1.359% e payback de 25 dias; 80 horas de parada evitadas em destilaria e caldeiras; mais de 2.000 sensores em 5 unidades.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Tractian (estudo de caso Inpasa)",
+    "fonte_url": "https://tractian.com/casos-de-estudo/inpasa",
+    "ano": 2026,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Disponibilidade média anual",
+        "antes": null,
+        "depois": "99,76%",
+        "variacao": null
+      },
+      {
+        "indicador": "Payback",
+        "antes": null,
+        "depois": "25 dias",
+        "variacao": null
+      },
+      {
+        "indicador": "Paradas evitadas (destilaria e caldeiras)",
+        "antes": null,
+        "depois": "80 h",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Mais de 2.000 sensores em 5 unidades; custo não informado.",
+    "como_replicar": [
+      "Substituir parte das rotas de inspeção por sensores online nos ativos críticos.",
+      "Receber alertas automáticos com diagnóstico da falha.",
+      "Abrir ordens de serviço digitais a partir do alerta.",
+      "Acompanhar disponibilidade por unidade."
+    ],
+    "trecho_comprovante": "impulsionam os resultados de classe mundial apresentados com média de 99,76% de disponibilidade",
+    "forca": "fraca",
+    "confianca": "media"
+  },
+  {
+    "id": "T-043",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "grande",
+    "gargalo": "demanda_comercial",
+    "gargalos_secundarios": [
+      "processo",
+      "integracao"
+    ],
+    "area": "comercial",
+    "setor": "marketing e publicidade (agência/smartech)",
+    "setor_chave": "servicos_b2b",
+    "empresa": "Brivia",
+    "titulo": "Agência cria prospecção ativa e processo de vendas no HubSpot e gera 7 vezes mais oportunidades",
+    "problema": "As vendas dependiam da autonomia de cada um, sem processo padrão, sem rastrear a origem dos negócios nem prever receita; não havia prospecção ativa e os diretores dependiam de indicações.",
+    "solucao": "Parceira Mkt4Sales montou time de prospecção outbound (1 LDR, 2 BDRs e um líder), definiu o perfil de cliente ideal e estruturou o processo comercial; HubSpot (CRM, Marketing Hub e Sales Hub) substituiu o CRM anterior.",
+    "ferramentas": [
+      "HubSpot CRM",
+      "Marketing Hub",
+      "Sales Hub"
+    ],
+    "resultado": "7 vezes mais oportunidades de vendas e 10 vezes mais volume de pipeline; primeiras reuniões já no primeiro mês do novo processo.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "HubSpot Brasil (estudo de caso Brivia)",
+    "fonte_url": "https://br.hubspot.com/case-studies/brivia",
+    "ano": 2026,
+    "funcionarios": 500,
+    "porte_confirmado": true,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Oportunidades de vendas",
+        "antes": null,
+        "depois": null,
+        "variacao": "7x"
+      },
+      {
+        "indicador": "Volume de pipeline",
+        "antes": null,
+        "depois": null,
+        "variacao": "10x"
+      }
+    ],
+    "esforco_implantacao": "Parceira de implantação (Mkt4Sales) e time de prospecção dedicado; prazo total não informado.",
+    "como_replicar": [
+      "Definir o perfil de cliente ideal.",
+      "Criar prospecção ativa com cadência padrão.",
+      "Registrar todos os negócios no CRM com a origem.",
+      "Acompanhar oportunidades e pipeline por mês."
+    ],
+    "trecho_comprovante": "foram 7x mais negócios gerados",
+    "forca": "fraca",
+    "confianca": "media"
+  },
+  {
+    "id": "T-044",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "processo",
+    "gargalos_secundarios": [
+      "integracao",
+      "decisao"
+    ],
+    "area": "comercial",
+    "setor": "serviços financeiros (corretora de investimentos)",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "Terra Investimentos",
+    "titulo": "Corretora estrutura o processo comercial no HubSpot e encurta em 57% o ciclo de MQL a SQL",
+    "problema": "Faltava processo estruturado para leads de marketing, o CRM estava desorganizado e sem padrão, com baixa eficiência por falta de automações e integrações, e havia resistência cultural do time de vendas.",
+    "solucao": "Redesenho e padronização dos processos pela consultoria Nexforce, com funis de vendas e pré-vendas, automação da distribuição de leads e do acompanhamento de negócios, integrações, painéis e treinamento (HubSpot, com integração ao Take Blip).",
+    "ferramentas": [
+      "HubSpot Sales Hub",
+      "Service Hub",
+      "Marketing Hub",
+      "Take Blip"
+    ],
+    "resultado": "Conversão MQL para cliente +18%; conversão de SQL +20%; conversão de oportunidade +39%; redução de 57% no tempo de MQL a SQL nos primeiros cinco meses.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "HubSpot Brasil (estudo de caso Terra Investimentos)",
+    "fonte_url": "https://br.hubspot.com/case-studies/terra-investimentos",
+    "ano": 2026,
+    "funcionarios": 200,
+    "porte_confirmado": false,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Conversão MQL para cliente",
+        "antes": null,
+        "depois": null,
+        "variacao": "+18%"
+      },
+      {
+        "indicador": "Conversão de oportunidade",
+        "antes": null,
+        "depois": null,
+        "variacao": "+39%"
+      },
+      {
+        "indicador": "Tempo de MQL a SQL",
+        "antes": null,
+        "depois": null,
+        "variacao": "-57%"
+      }
+    ],
+    "esforco_implantacao": "Resultados medidos nos primeiros cinco meses; consultoria parceira envolvida.",
+    "como_replicar": [
+      "Definir etapas e critérios de MQL, SQL e oportunidade.",
+      "Distribuir leads automaticamente aos vendedores.",
+      "Automatizar alertas de acompanhamento de negócios.",
+      "Medir a conversão entre cada etapa."
+    ],
+    "trecho_comprovante": "Conseguimos integrar equipes, padronizar processos e oferecer um atendimento mais ágil e personalizado aos nossos clientes.",
+    "forca": "fraca",
+    "confianca": "media"
+  },
+  {
+    "id": "T-045",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "informacao",
+      "demanda_comercial"
+    ],
+    "area": "comercial",
+    "setor": "software (plataforma de dados e IA)",
+    "setor_chave": "tecnologia",
+    "empresa": "Cortex Intelligence",
+    "titulo": "Plataforma de IA unifica marketing, vendas e suporte no HubSpot e reduz 40% o ciclo de vendas",
+    "problema": "Processos descentralizados em ferramentas separadas de marketing, vendas, pós-venda e suporte criavam silos, sem fonte única de verdade e com dados de clientes desorganizados.",
+    "solucao": "Substituição do CRM anterior pelo HubSpot completo, customizado com a parceira Mkt4Sales, integrado à plataforma da própria Cortex, Jira, Google Sheets, Take, Callrox e Zendesk.",
+    "ferramentas": [
+      "HubSpot",
+      "Jira",
+      "Zendesk",
+      "Take",
+      "Callrox"
+    ],
+    "resultado": "Ciclo de vendas -40%; receita +75%; desempenho do time de vendas +40%; satisfação do cliente +18%; uso do HubSpot como principal ferramenta do time +60%.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "HubSpot Brasil (estudo de caso Cortex Intelligence)",
+    "fonte_url": "https://br.hubspot.com/case-studies/cortex-intelligence",
+    "ano": 2026,
+    "funcionarios": 200,
+    "porte_confirmado": false,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Duração do ciclo de vendas",
+        "antes": null,
+        "depois": null,
+        "variacao": "-40%"
+      },
+      {
+        "indicador": "Receita",
+        "antes": null,
+        "depois": null,
+        "variacao": "+75%"
+      },
+      {
+        "indicador": "Desempenho do time de vendas",
+        "antes": null,
+        "depois": null,
+        "variacao": "+40%"
+      }
+    ],
+    "esforco_implantacao": "Implantação com parceira; prazo não informado.",
+    "como_replicar": [
+      "Juntar marketing, vendas e suporte no mesmo CRM.",
+      "Integrar o CRM aos sistemas do produto e do suporte.",
+      "Padronizar o funil.",
+      "Medir duração do ciclo de vendas antes e depois."
+    ],
+    "trecho_comprovante": "conseguiu alavancar os resultados de geração de demanda em todos os indicadores, incluindo vendas",
+    "forca": "fraca",
+    "confianca": "media"
+  },
+  {
+    "id": "T-046",
+    "tipo": "nominal",
+    "pais": "Brasil",
+    "verificado": true,
+    "porte": "media",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "demanda_comercial",
+      "comunicacao"
+    ],
+    "area": "comercial",
+    "setor": "serviços financeiros (banco)",
+    "setor_chave": "financeiro_seguros",
+    "empresa": "Banco BS2",
+    "titulo": "Banco centraliza geração de leads, roteamento e SLA no HubSpot: leads +200% e validação de lead de uma semana para 2 horas",
+    "problema": "A equipe de growth precisava escalar aquisição e retenção rápido: mais leads qualificados para contas de crédito, lançar landing pages mais rápido, integrar dados de várias fontes, ter métricas em tempo real e automatizar jornadas.",
+    "solucao": "HubSpot como plataforma central: landing pages rápidas para campanhas, roteamento automático de leads ao inside sales, enriquecimento automático via bureau de dados, gestão de funil e cadências, painéis e pesquisas de NPS.",
+    "ferramentas": [
+      "HubSpot Sales Hub",
+      "Service Hub",
+      "Marketing Hub",
+      "Content Hub",
+      "WhatsApp",
+      "Google Ads",
+      "Meta Ads"
+    ],
+    "resultado": "Geração mensal de leads +200%; interações qualificadas no CRM +150%; tempo de resposta comercial -50%; tempo do lead até a oportunidade -30%; validação de lead de até uma semana para cerca de 2 horas; lançamento de landing page de semanas para 1 dia.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "HubSpot Brasil (estudo de caso Banco BS2)",
+    "fonte_url": "https://br.hubspot.com/case-studies/banco-bs2",
+    "ano": 2026,
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Geração mensal de leads",
+        "antes": null,
+        "depois": null,
+        "variacao": "+200%"
+      },
+      {
+        "indicador": "Tempo de resposta comercial",
+        "antes": null,
+        "depois": null,
+        "variacao": "-50%"
+      },
+      {
+        "indicador": "Validação de lead",
+        "antes": "até 1 semana",
+        "depois": "cerca de 2 horas",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Mais de 300 pessoas usam a plataforma; prazo de implantação não informado.",
+    "como_replicar": [
+      "Rotear leads automaticamente ao vendedor certo.",
+      "Enriquecer o cadastro do lead automaticamente.",
+      "Medir tempo de resposta e tempo até oportunidade.",
+      "Lançar landing pages a partir de modelos."
+    ],
+    "trecho_comprovante": "200% de crescimento em geração de leads mensalmente;",
+    "forca": "fraca",
+    "confianca": "media"
+  }
+]

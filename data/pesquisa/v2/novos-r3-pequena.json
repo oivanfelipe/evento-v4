@@ -1,0 +1,504 @@
+[
+  {
+    "id": "L-001",
+    "porte": "pequena",
+    "gargalo": "decisao",
+    "gargalos_secundarios": [
+      "controle"
+    ],
+    "area": "administrativo",
+    "setor": "mídia e software de IA",
+    "tipo": "nominal",
+    "empresa": "Every",
+    "pais": "Estados Unidos",
+    "titulo": "Equipe de 20 pessoas troca ciclo de planejamento trimestral de semanas por conversa com agente de IA",
+    "problema": "O planejamento trimestral dependia de ciclos longos de documentos e reuniões de alinhamento, atrasando a decisão sobre prioridades.",
+    "solucao": "Um agente de IA dentro do Notion entrevistou cada pessoa sobre seus planos, cruzou com as prioridades definidas pela liderança e devolveu um plano padronizado para aprovação do gestor. Um segundo agente publica todo dia às 7h um placar de metas no Slack.",
+    "ferramentas": [
+      "Notion",
+      "Notion Custom Agents",
+      "Slack"
+    ],
+    "resultado": "O ciclo de planejamento, antes de semanas, foi concluído em cerca de um dia no Q1; o planejamento do Q2 levou cerca de 20 minutos, segundo a empresa.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Notion (história de cliente)",
+    "fonte_url": "https://www.notion.com/customers/every",
+    "ano": 2026,
+    "confianca": "alta",
+    "setor_chave": "tecnologia",
+    "funcionarios": 20,
+    "porte_confirmado": true,
+    "data_fonte": "2026-05",
+    "metricas": [
+      {
+        "indicador": "Tempo de planejamento trimestral",
+        "antes": "ciclo de várias semanas",
+        "depois": "cerca de 1 dia (Q1) e cerca de 20 minutos (Q2)",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "A fonte não informa prazo ou custo; o gestor de crescimento diz que descreve o que quer a um assistente de código, que monta agentes e bancos de dados.",
+    "como_replicar": [
+      "Reunir metas da empresa, notas de reunião e conversas importantes em um único espaço de trabalho que a IA consiga ler (ex.: Notion, Google Drive).",
+      "Criar um agente que entreviste cada responsável com as mesmas perguntas e gere um plano em formato padrão.",
+      "Definir que o gestor apenas revisa e aprova o plano gerado, em vez de redigir e alinhar em reuniões.",
+      "Opcional: publicar um placar diário de metas em canal de mensagens para a liderança enxergar atrasos cedo."
+    ],
+    "trecho_comprovante": "Q2 planning took about 20 minutes.",
+    "verificado": true,
+    "forca": "forte"
+  },
+  {
+    "id": "L-002",
+    "porte": "pequena",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "comunicacao"
+    ],
+    "area": "administrativo",
+    "setor": "software B2B",
+    "tipo": "nominal",
+    "empresa": "Qwilr",
+    "pais": "Austrália",
+    "titulo": "Perguntas internas respondidas pela IA a partir do manual da empresa reduzem consultas rotineiras ao RH",
+    "problema": "A informação ficava espalhada entre Slack, Google Drive e várias ferramentas de projetos, e o RH respondia sempre as mesmas dúvidas.",
+    "solucao": "A empresa consolidou documentos e processos em um único espaço no Notion e passou a usar a IA do Notion para responder, com base no manual e nas conversas conectadas, as dúvidas dos funcionários.",
+    "ferramentas": [
+      "Notion",
+      "Notion AI",
+      "Slack"
+    ],
+    "resultado": "Consultas rotineiras caíram mais de 80% nos primeiros meses, e o tempo semanal de reuniões por funcionário caiu mais de 10 horas, segundo a fonte.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Notion (história de cliente)",
+    "fonte_url": "https://www.notion.com/en-gb/customers/qwilr",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "tecnologia",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-04",
+    "metricas": [
+      {
+        "indicador": "Consultas rotineiras internas",
+        "antes": null,
+        "depois": null,
+        "variacao": "redução de mais de 80%"
+      },
+      {
+        "indicador": "Horas semanais em reuniões por funcionário",
+        "antes": null,
+        "depois": null,
+        "variacao": "queda de mais de 10 horas"
+      }
+    ],
+    "esforco_implantacao": "A fonte não informa prazo nem custo; cita economia imediata com licenças de ferramentas substituídas, sem valor.",
+    "como_replicar": [
+      "Juntar manual de processos, políticas e FAQs em um só lugar pesquisável.",
+      "Ligar um assistente de IA a esse conteúdo e orientar a equipe a perguntar a ele antes de acionar o RH ou o gestor.",
+      "Registrar as perguntas que ele não soube responder e completar a documentação.",
+      "Trocar reuniões de status por páginas de leitura prévia e atualizações automáticas."
+    ],
+    "trecho_comprovante": "reduced routine inquiries by over 80%",
+    "verificado": true,
+    "forca": "fraca",
+    "observacao": "Porte não confirmado (a página não informa número de funcionários); o ganho de reuniões é atribuído também ao trabalho assíncrono, não só à IA."
+  },
+  {
+    "id": "L-003",
+    "porte": "pequena",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [
+      "capacidade"
+    ],
+    "area": "atendimento",
+    "setor": "educação e tecnologia",
+    "tipo": "nominal",
+    "empresa": "Learn It Live",
+    "pais": "Estados Unidos",
+    "titulo": "Chatbot de IA com base de conhecimento responde dúvidas repetidas e reduz chamados de suporte em 40%",
+    "problema": "Uma onda de novos usuários gerou muitos chamados de suporte, e a equipe pequena tinha dificuldade de responder rápido e com qualidade.",
+    "solucao": "A empresa criou, em menos de uma hora, um chatbot de IA no site que usa uma tabela como base de conhecimento para responder perguntas simples e repetitivas.",
+    "ferramentas": [
+      "Zapier Chatbots",
+      "Zapier Tables"
+    ],
+    "resultado": "A equipe de suporte passou a receber 40% menos chamados; a fonte informa implantação do chatbot em menos de uma hora.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Zapier (história de cliente)",
+    "fonte_url": "https://zapier.com/customer-stories/learn-it-live",
+    "ano": 2024,
+    "confianca": "media",
+    "setor_chave": "educacao",
+    "funcionarios": null,
+    "porte_confirmado": true,
+    "data_fonte": "2024",
+    "metricas": [
+      {
+        "indicador": "Chamados de suporte",
+        "antes": null,
+        "depois": null,
+        "variacao": "-40%"
+      },
+      {
+        "indicador": "Tempo de implantação do chatbot",
+        "antes": null,
+        "depois": "menos de 1 hora",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Chatbot montado em menos de uma hora por uma pessoa da área de parcerias e inovação.",
+    "como_replicar": [
+      "Listar as 20 perguntas que mais geram chamados e escrever as respostas em uma tabela ou documento.",
+      "Conectar essa base a um chatbot de IA e publicá-lo no site ou no canal de atendimento.",
+      "Definir regra clara de encaminhamento para uma pessoa quando o bot não souber responder.",
+      "Revisar mensalmente as perguntas sem resposta e ampliar a base."
+    ],
+    "trecho_comprovante": "The Support team now receives 40% fewer tickets",
+    "verificado": true,
+    "forca": "media",
+    "observacao": "Faixa de porte 1-50 informada pela página da Zapier. A página não traz data de publicação no HTML; a captura mais antiga no Internet Archive é de 2024-05, então a data 2024 é um limite superior, não uma data comprovada. O caso é de suporte ao cliente, não de dúvidas internas."
+  },
+  {
+    "id": "L-004",
+    "porte": "pequena",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "manual_repetitivo",
+      "controle"
+    ],
+    "area": "operacoes",
+    "setor": "seguros (corretagem de sinistros)",
+    "tipo": "nominal",
+    "empresa": "Top Tier Public Adjusters",
+    "pais": "Estados Unidos",
+    "titulo": "Empresa de 35 funcionários automatiza 70% das tarefas de sinistros para absorver picos de volume pós-furacão",
+    "problema": "O volume de sinistros oscila 200% a 300% depois de grandes furacões, e processos manuais e falta de visibilidade geravam inconsistências no acompanhamento dos clientes.",
+    "solucao": "A empresa reconfigurou o CRM com etapas detalhadas e automações por webhook que movem o caso de etapa, criam a próxima tarefa, enviam e-mails e documentos e sinalizam casos parados.",
+    "ferramentas": [
+      "Pipedrive",
+      "PandaDoc",
+      "QuickBooks Online"
+    ],
+    "resultado": "Sete em cada dez tarefas passaram a ser automatizadas e a equipe cresceu de 3 para 35 funcionários em três anos, segundo a fonte.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Pipedrive (case de cliente)",
+    "fonte_url": "https://www.pipedrive.com/en/case-studies/top-tier-public-adjusters-case-study",
+    "ano": 2025,
+    "confianca": "alta",
+    "setor_chave": "financeiro_seguros",
+    "funcionarios": 35,
+    "porte_confirmado": true,
+    "data_fonte": "2025-01",
+    "metricas": [
+      {
+        "indicador": "Tarefas automatizadas",
+        "antes": null,
+        "depois": "70%",
+        "variacao": null
+      },
+      {
+        "indicador": "Funcionários",
+        "antes": "3",
+        "depois": "35",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Migração para uma nova instância do CRM em 2023 com scripts próprios; exigiu perfil técnico interno (diretor de operações e tecnologia).",
+    "como_replicar": [
+      "Mapear as etapas reais de cada caso e o tempo médio de cada uma.",
+      "Automatizar a passagem de etapa e a criação da próxima tarefa quando a anterior for concluída.",
+      "Configurar alerta para casos parados além do tempo médio da etapa.",
+      "Medir semanalmente carga e produção por etapa para decidir quando reforçar a equipe."
+    ],
+    "trecho_comprovante": "Seven in ten tasks are now automated by Pipedrive",
+    "verificado": true,
+    "forca": "forte",
+    "observacao": "O ganho em tarefas automatizadas é número da empresa publicado pelo fornecedor; o crescimento de equipe não é atribuído só à automação."
+  },
+  {
+    "id": "L-005",
+    "porte": "pequena",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "comercial",
+    "setor": "serviços financeiros (planejamento financeiro)",
+    "tipo": "nominal",
+    "empresa": "Network Financial Planning",
+    "pais": "Austrália",
+    "titulo": "Consultoria financeira com equipe de seis pessoas passa a concluir mais de 50% mais atividades",
+    "problema": "Com o fundador sem tempo para aprofundar o uso do CRM, a jornada do cliente era tratada de forma pouco padronizada por uma equipe pequena que crescia.",
+    "solucao": "A empresa centralizou a jornada do cliente no CRM, com projetos-modelo por tipo de serviço, chatbot e formulários no site, e-mails padronizados e relatórios de previsão de receita.",
+    "ferramentas": [
+      "Pipedrive",
+      "Pipedrive Projects",
+      "LeadBooster",
+      "Smart Docs"
+    ],
+    "resultado": "A equipe, que cresceu de uma para seis pessoas, passou a concluir mais de 50% mais atividades, e quase 85% dos processos rodam no CRM, segundo a fonte.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Pipedrive (case de cliente)",
+    "fonte_url": "https://www.pipedrive.com/en/case-studies/network-financial-planning-case-study",
+    "ano": 2024,
+    "confianca": "alta",
+    "setor_chave": "financeiro_seguros",
+    "funcionarios": 6,
+    "porte_confirmado": true,
+    "data_fonte": "2024-05",
+    "metricas": [
+      {
+        "indicador": "Atividades concluídas pela equipe",
+        "antes": null,
+        "depois": null,
+        "variacao": "mais de 50% a mais"
+      },
+      {
+        "indicador": "Processos rodando no CRM",
+        "antes": null,
+        "depois": "85%",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "A fonte não informa prazo ou custo; o trabalho foi conduzido pela gerente de desenvolvimento de negócios.",
+    "como_replicar": [
+      "Reunir contatos, propostas e andamento de cada cliente em um único sistema.",
+      "Criar modelos de projeto por tipo de serviço, com tarefas e e-mails padrão.",
+      "Capturar leads do site direto nos campos do sistema, sem digitação.",
+      "Usar relatórios de previsão para planejar a carga de trabalho antes de contratar."
+    ],
+    "trecho_comprovante": "The team now completes over 50% more activities",
+    "verificado": true,
+    "forca": "forte",
+    "observacao": "Solução é CRM com automações; o caso não usa IA generativa."
+  },
+  {
+    "id": "L-006",
+    "porte": "pequena",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "operacoes",
+    "setor": "indústria (prensagem de discos de vinil)",
+    "tipo": "nominal",
+    "empresa": "Gold Rush Vinyl",
+    "pais": "Estados Unidos",
+    "titulo": "Fábrica de discos libera mais de 2.000 horas por ano com 76 automações de atendimento e vendas",
+    "problema": "Com 10 a 50 vezes mais clientes do que outros fabricantes, a equipe fazia atendimento e vendas manualmente e não dava conta.",
+    "solucao": "A fundadora criou 76 automações que tratam cerca de 18 mil tarefas por ano, como salvar PDFs de e-mails no Drive, filtrar e-mails e atualizar registros de clientes.",
+    "ferramentas": [
+      "Zapier",
+      "Gmail",
+      "Google Drive"
+    ],
+    "resultado": "A fonte informa 2.285 horas de trabalho automatizadas e mais de 2.000 horas liberadas por ano para a fundadora e os funcionários.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Zapier (história de cliente)",
+    "fonte_url": "https://zapier.com/customer-stories/gold-rush-vinyl",
+    "ano": 2024,
+    "confianca": "media",
+    "setor_chave": "industria",
+    "funcionarios": null,
+    "porte_confirmado": true,
+    "data_fonte": "2024",
+    "metricas": [
+      {
+        "indicador": "Horas de trabalho automatizadas por ano",
+        "antes": null,
+        "depois": "2.285",
+        "variacao": null
+      },
+      {
+        "indicador": "Automações ativas",
+        "antes": null,
+        "depois": "76",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Montado pela própria fundadora, em etapas, sem equipe de TI citada.",
+    "como_replicar": [
+      "Listar as tarefas repetidas de atendimento e vendas que seguem regra fixa.",
+      "Automatizar primeiro o fluxo mais frequente (ex.: salvar anexos de e-mail na pasta do cliente).",
+      "Adicionar filtros e atrasos para o fluxo só agir quando a condição for atendida.",
+      "Somar mensalmente as horas liberadas e reinvestir em novas linhas de produto ou vendas."
+    ],
+    "trecho_comprovante": "freeing up 2,000+ hours for herself and for her employees",
+    "verificado": true,
+    "forca": "media",
+    "observacao": "Faixa de porte 1-50 informada pela Zapier. Sem data de publicação no HTML; captura mais antiga no Internet Archive em 2024-12 (limite superior). Automação por regras, sem IA generativa."
+  },
+  {
+    "id": "L-007",
+    "porte": "pequena",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "conhecimento"
+    ],
+    "area": "marketing",
+    "setor": "organização sem fins lucrativos",
+    "tipo": "nominal",
+    "empresa": "SisterLove",
+    "pais": "Estados Unidos",
+    "titulo": "Marketing de uma pessoa só usa IA para economizar 192 horas na produção de conteúdo",
+    "problema": "O time de marketing digital era uma pessoa, e criar conteúdo para cada palavra-chave consumia de seis a oito horas.",
+    "solucao": "Preenchendo quatro colunas de uma planilha, uma automação aciona o ChatGPT para redigir blog, e-mail, SMS e redes sociais sobre o tema.",
+    "ferramentas": [
+      "Zapier",
+      "ChatGPT",
+      "Google Sheets"
+    ],
+    "resultado": "Mais de 24 dias úteis (192 horas) economizados em nove meses, segundo a fonte.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Zapier (história de cliente)",
+    "fonte_url": "https://zapier.com/customer-stories/sisterlove",
+    "ano": 2024,
+    "confianca": "media",
+    "setor_chave": "outro",
+    "funcionarios": null,
+    "porte_confirmado": true,
+    "data_fonte": "2024",
+    "metricas": [
+      {
+        "indicador": "Horas de trabalho economizadas",
+        "antes": "6 a 8 horas por tema",
+        "depois": null,
+        "variacao": "192 horas em 9 meses"
+      }
+    ],
+    "esforco_implantacao": "A fonte não informa prazo ou custo; construído pela própria responsável de marketing.",
+    "como_replicar": [
+      "Padronizar um briefing em planilha (tema, público, tom, formato).",
+      "Conectar a planilha a um modelo de IA que gere o primeiro rascunho de cada formato.",
+      "Fazer revisão humana antes de publicar.",
+      "Registrar as horas poupadas por tema para medir o ganho."
+    ],
+    "trecho_comprovante": "saved more than 24 business days of work in nine months",
+    "verificado": true,
+    "forca": "fraca",
+    "observacao": "Sem data de publicação no HTML (captura mais antiga no Internet Archive: 2024-02, limite superior)."
+  },
+  {
+    "id": "L-008",
+    "porte": "pequena",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "operacoes",
+    "setor": "software (SaaS)",
+    "tipo": "nominal",
+    "empresa": "Laudable",
+    "pais": "Estados Unidos",
+    "titulo": "Startup de quatro pessoas usa mais de 200 automações para fazer o trabalho de uma empresa de 10 a 20",
+    "problema": "Com equipe mínima e só dois desenvolvedores, não havia braço para personalizar a experiência do cliente nem testar pedidos sem tirar foco da engenharia.",
+    "solucao": "A fundadora automatizou o cadastro de clientes, usou IA para analisar ligações de onboarding e disparar acompanhamentos personalizados em 30 e 60 dias, e criou soluções sem código.",
+    "ferramentas": [
+      "Zapier",
+      "ChatGPT",
+      "Gong",
+      "Slack",
+      "Salesforce",
+      "Airtable"
+    ],
+    "resultado": "A empresa afirma economizar o equivalente a mais de US$ 240 mil em salários de dois engenheiros em tempo integral, com mais de 200 automações ativas.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Zapier (história de cliente)",
+    "fonte_url": "https://zapier.com/customer-stories/laudable",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "tecnologia",
+    "funcionarios": 4,
+    "porte_confirmado": true,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Custo equivalente de contratações evitadas",
+        "antes": null,
+        "depois": null,
+        "variacao": "mais de US$ 240 mil"
+      },
+      {
+        "indicador": "Automações ativas",
+        "antes": null,
+        "depois": "200+",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "A primeira automação foi montada no primeiro dia de uso, pela própria fundadora, sem formação técnica.",
+    "como_replicar": [
+      "Começar por um fluxo de ponta a ponta (ex.: formulário, agenda e base de clientes) feito em um dia.",
+      "Usar IA para resumir ligações com clientes e enviar o próximo contato personalizado.",
+      "Antes de contratar, perguntar se a tarefa pode virar automação sem código.",
+      "Registrar o custo evitado para decidir onde investir mais."
+    ],
+    "trecho_comprovante": "saves the equivalent cost, $240k+, of hiring two full-time engineers",
+    "verificado": true,
+    "forca": "fraca",
+    "observacao": "Sem data de publicação comprovável (a captura mais antiga do Internet Archive é de 2026-01); o valor em dólares é estimativa da própria empresa."
+  },
+  {
+    "id": "L-009",
+    "porte": "pequena",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "comercial",
+    "setor": "saúde e tecnologia (higiene bucal)",
+    "tipo": "nominal",
+    "empresa": "Y-Brush",
+    "pais": "França",
+    "titulo": "Fabricante de escovas passa de planilhas a relatórios comerciais em tempo real e estima 30% de tempo poupado por lead",
+    "problema": "Desde 2018 a empresa não conseguia mais acompanhar leads e vendedores de campo em planilhas Excel, sem relatórios confiáveis.",
+    "solucao": "Centralizou leads no CRM com aplicativo móvel para os vendedores registrarem dados no local e passou a ter relatórios gerenciais atualizados em tempo real.",
+    "ferramentas": [
+      "Pipedrive"
+    ],
+    "resultado": "Equipe cresceu de 5 para 30 funcionários e a empresa estima 30% de tempo poupado por lead; gestores consultam relatórios em tempo real.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Pipedrive (case de cliente)",
+    "fonte_url": "https://www.pipedrive.com/en/case-studies/y-brush-case-study",
+    "ano": 2024,
+    "confianca": "media",
+    "setor_chave": "saude",
+    "funcionarios": 30,
+    "porte_confirmado": true,
+    "data_fonte": "2024-07",
+    "metricas": [
+      {
+        "indicador": "Tempo por lead",
+        "antes": null,
+        "depois": null,
+        "variacao": "30% de economia (estimada pela empresa)"
+      },
+      {
+        "indicador": "Funcionários",
+        "antes": "5",
+        "depois": "30",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "A fonte não informa prazo ou custo da implantação.",
+    "como_replicar": [
+      "Migrar a planilha de leads para um sistema único com app móvel.",
+      "Definir os 3 a 5 indicadores que o gestor quer ver toda semana.",
+      "Montar o relatório uma vez e deixá-lo atualizado automaticamente.",
+      "Revisar a carteira com base nesse painel, não em relatos."
+    ],
+    "trecho_comprovante": "Estimated time saved per lead",
+    "verificado": true,
+    "forca": "media",
+    "observacao": "O número (30%) é estimativa autodeclarada; o foco da fonte é gestão de leads, e controle é gargalo secundário-principal por causa dos relatórios em tempo real."
+  }
+]

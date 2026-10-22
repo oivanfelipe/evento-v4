@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "html-presentation": {
+      "source": "mathews-tom/armory",
+      "sourceType": "github",
+      "skillPath": "skills/html-presentation/SKILL.md",
+      "computedHash": "f998c1cd27a8162d78ba81853578cb5ee0c6e97af8cca2da1979eb04aa3de928"
+    }
+  }
+}

@@ -1,0 +1,593 @@
+[
+ {
+  "id": "H-001",
+  "porte": "grande",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "manual_repetitivo"
+  ],
+  "area": "financeiro",
+  "setor": "financeiro (banco do varejo)",
+  "tipo": "nominal",
+  "empresa": "Banco Carrefour",
+  "pais": "Brasil",
+  "titulo": "Banco Carrefour passa a conferir faturas com IA e o prazo cai de cerca de cinco dias para 24 horas",
+  "problema": "A fiscalização, verificação e apontamento de discrepâncias nas faturas era feita manualmente e levava cerca de cinco dias.",
+  "solucao": "O banco automatizou a análise das cerca de 800 faturas mensais com a UiPath AI, e o funcionário passou a atuar sobre o que o sistema aponta.",
+  "ferramentas": [
+   "UiPath AI"
+  ],
+  "resultado": "Prazo de análise de faturas reduzido de cerca de cinco dias para 24 horas; a empresa estima economia de R$ 100 mil por ano. Volume: cerca de 800 faturas por mês.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete",
+  "fonte_url": "https://www.baguete.com.br/noticias/banco-carrefour-analisa-de-faturas-com-uipath",
+  "ano": 2025,
+  "confianca": "alta",
+  "setor_chave": "financeiro_seguros",
+  "funcionarios": 95000,
+  "porte_confirmado": true,
+  "data_fonte": "2025-01",
+  "metricas": [
+   {
+    "indicador": "Prazo de conferência das faturas",
+    "antes": "cerca de 5 dias",
+    "depois": "24 horas",
+    "variacao": null
+   },
+   {
+    "indicador": "Economia estimada",
+    "antes": null,
+    "depois": "R$ 100 mil por ano",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Liste o processo de conferência que hoje é feito linha a linha por uma pessoa (faturas, notas, extratos) e meça quantas horas ou dias ele consome por ciclo.",
+   "Escreva as regras que definem uma discrepância (valor, fornecedor, prazo) e entregue ao software de automação ou à IA só a primeira triagem.",
+   "Mantenha a pessoa responsável revisando apenas as exceções apontadas, em vez do lote inteiro.",
+   "Compare prazo e horas antes e depois por dois ciclos mensais antes de ampliar para outros documentos."
+  ],
+  "trecho_comprovante": "demorava cerca de cinco dias para ser concluído. Com a ferramenta, o tempo necessário foi reduzido para apenas 24 horas.",
+  "verificado": true,
+  "forca": "forte"
+ },
+ {
+  "id": "H-002",
+  "porte": "grande",
+  "gargalo": "decisao",
+  "gargalos_secundarios": [
+   "controle",
+   "manual_repetitivo"
+  ],
+  "area": "financeiro",
+  "setor": "distribuição de gás (GLP)",
+  "tipo": "nominal",
+  "empresa": "Copa Energia",
+  "pais": "Brasil",
+  "titulo": "Copa Energia automatiza decisões recorrentes de crédito e reavalia toda a carteira de clientes todo mês",
+  "problema": "Os dados de crédito ficavam em sistemas diferentes e a análise dependia de avaliação manual, com baixa rastreabilidade e pouca visibilidade do risco da carteira.",
+  "solucao": "Um motor de crédito com dados e IA, desenvolvido pela Indicium AI, automatiza decisões recorrentes, registra auditoria e traz um painel de gestão da carteira; analistas ficam com exceções e decisões estratégicas.",
+  "ferramentas": [
+   "Databricks (Lakehouse)",
+   "Mosaic AI",
+   "Indicium AI"
+  ],
+  "resultado": "Redução de R$ 13,5 milhões por ano no risco potencial; capital de crédito exposto à inadimplência caiu de cerca de 21% para 19%; o processo manual consumia mais de 270 horas por mês e cobria cerca de 1,1 mil análises, e hoje toda a base é reavaliada mensalmente.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete",
+  "fonte_url": "https://www.baguete.com.br/noticias/copa-energia-automatiza-analise-de-credito-com-indicium-ai",
+  "ano": 2026,
+  "confianca": "alta",
+  "setor_chave": "outro",
+  "funcionarios": 3700,
+  "porte_confirmado": true,
+  "data_fonte": "2026-04",
+  "metricas": [
+   {
+    "indicador": "Análises de crédito revisadas por mês",
+    "antes": "cerca de 1,1 mil",
+    "depois": "toda a base reavaliada mensalmente",
+    "variacao": null
+   },
+   {
+    "indicador": "Horas mensais do processo manual",
+    "antes": "mais de 270 horas",
+    "depois": null,
+    "variacao": null
+   },
+   {
+    "indicador": "Capital de crédito exposto à inadimplência",
+    "antes": "cerca de 21%",
+    "depois": "19%",
+    "variacao": null
+   },
+   {
+    "indicador": "Risco potencial",
+    "antes": null,
+    "depois": null,
+    "variacao": "redução de R$ 13,5 milhões por ano"
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Reúna num só lugar histórico de pagamento, atraso e limite de cada cliente (pode começar numa planilha consolidada).",
+   "Defina regras e faixas de risco para as decisões repetidas (manter, reduzir ou elevar limite) e automatize só os casos claros.",
+   "Encaminhe para análise humana apenas as exceções e registre o motivo de cada decisão.",
+   "Acompanhe mensalmente um painel com inadimplência por faixa de risco e reavalie a carteira inteira, não só uma amostra."
+  ],
+  "trecho_comprovante": "O processo manual consumia mais de 270 horas por mês e permitia revisar cerca de 1,1 mil análises mensais.",
+  "verificado": true,
+  "forca": "forte"
+ },
+ {
+  "id": "H-003",
+  "porte": "grande",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "demanda_comercial",
+   "capacidade"
+  ],
+  "area": "atendimento",
+  "setor": "varejo de moda e serviços financeiros",
+  "tipo": "nominal",
+  "empresa": "Riachuelo e Midway",
+  "pais": "Brasil",
+  "titulo": "Riachuelo e Midway levam o atendimento para canais digitais e a retenção sai de 30% para 84%",
+  "problema": "Mais de 20% da base ligava todo mês para o call center, a retenção digital era baixa e cada canal tinha um fornecedor diferente, com custo alto e atrito para clientes e atendentes.",
+  "solucao": "Unificaram produto, operação e planejamento, consolidaram fornecedores numa plataforma única, ampliaram o autoatendimento (WhatsApp, app) e depois aplicaram IA a poucas jornadas, com copiloto de atendimento e agentes de cobrança.",
+  "ferramentas": [
+   "Genesys",
+   "WhatsApp",
+   "IA generativa",
+   "Speech Analytics"
+  ],
+  "resultado": "Retenção em canais digitais de 30% para 84% e CSAT +60 pontos; custo do call center de R$ 122 milhões (2022) para meta de R$ 83–85 milhões em 2026, cerca de R$ 20 milhões por ano de economia; venda de empréstimo no canal físico caiu de 90% para 60%; copiloto reduz o tempo médio de atendimento em 25% a 30%.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "IT Forum",
+  "fonte_url": "https://itforum.com.br/noticias/retencao-riachuelo-midway-ia-generativa/",
+  "ano": 2026,
+  "confianca": "alta",
+  "setor_chave": "varejo_ecommerce",
+  "funcionarios": 40000,
+  "porte_confirmado": true,
+  "data_fonte": "2026-09",
+  "metricas": [
+   {
+    "indicador": "Retenção em canais digitais",
+    "antes": "30%",
+    "depois": "84%",
+    "variacao": null
+   },
+   {
+    "indicador": "Custo do call center",
+    "antes": "R$ 122 milhões (2022)",
+    "depois": "R$ 83–85 milhões (meta 2026)",
+    "variacao": "economia de cerca de R$ 20 milhões por ano"
+   },
+   {
+    "indicador": "Venda de empréstimo no canal físico",
+    "antes": "90%",
+    "depois": "60%",
+    "variacao": null
+   },
+   {
+    "indicador": "Tempo médio de atendimento com copiloto",
+    "antes": null,
+    "depois": null,
+    "variacao": "redução de 25% a 30%"
+   }
+  ],
+  "esforco_implantacao": "Plataforma única implantada entre 2024 e início de 2025, após reorganização e consolidação de fornecedores em 2023; a IA veio depois, em poucas jornadas.",
+  "como_replicar": [
+   "Meça por que os clientes ligam e escolha as 2 ou 3 dúvidas mais frequentes para resolver por autoatendimento (menu de WhatsApp ou app).",
+   "Concentre os canais de contato em uma única ferramenta e um único fornecedor para parar de pagar e gerir várias frentes.",
+   "Só depois aplique IA a jornadas específicas (cobrança, troca, segunda via), com um responsável por tema.",
+   "Acompanhe retenção digital, custo por contato e satisfação todo mês e transfira atendentes liberados para tarefas de maior valor."
+  ],
+  "trecho_comprovante": "a retenção em canais digitais saltou de 30% para 84% e o índice de satisfação do cliente (CSAT) subiu 60 pontos.",
+  "verificado": true,
+  "forca": "forte"
+ },
+ {
+  "id": "H-004",
+  "porte": "grande",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [
+   "conhecimento"
+  ],
+  "area": "comercial",
+  "setor": "construção e incorporação",
+  "tipo": "nominal",
+  "empresa": "MRV&Co",
+  "pais": "Brasil",
+  "titulo": "MRV dá aos corretores um assistente de IA e novatos que o usam vendem 23% mais",
+  "problema": "A fonte não descreve um problema explícito; o objetivo era dar aos corretores respostas rápidas sobre empreendimentos, crédito imobiliário e serviços da MRV.",
+  "solucao": "A MRV criou o assistente Marco, que combina vários modelos de IA, e o oferece a mais de 5 mil corretores para tirar dúvidas e apoiar a venda, junto com capacitação intensiva.",
+  "ferramentas": [
+   "Grok 4",
+   "GPT-4.1",
+   "GPT-4o",
+   "Gemini 2.5 Pro",
+   "Claude Opus 4",
+   "DeepSeek"
+  ],
+  "resultado": "Corretores iniciantes que usam o Marco registram 27% mais produtividade e vendem 23% mais do que os que ainda não adotaram; mais de 5 mil corretores usam o assistente e trocaram mais de 70 mil mensagens no último ano.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Baguete",
+  "fonte_url": "https://www.baguete.com.br/noticias/mrv-faz-selecao-de-ias-para-seu-assistente",
+  "ano": 2025,
+  "confianca": "alta",
+  "setor_chave": "construcao_imoveis",
+  "funcionarios": 30000,
+  "porte_confirmado": true,
+  "data_fonte": "2025-09",
+  "metricas": [
+   {
+    "indicador": "Produtividade de corretores iniciantes (com vs. sem o assistente)",
+    "antes": null,
+    "depois": null,
+    "variacao": "+27%"
+   },
+   {
+    "indicador": "Vendas de corretores iniciantes (com vs. sem o assistente)",
+    "antes": null,
+    "depois": null,
+    "variacao": "+23%"
+   }
+  ],
+  "esforco_implantacao": "A fonte atribui o resultado à combinação de tecnologia, capacitação intensiva e cultura de performance.",
+  "como_replicar": [
+   "Reúna as perguntas que os vendedores novatos mais fazem (produto, preço, condições, financiamento) e a resposta aprovada para cada uma.",
+   "Coloque essas respostas num assistente de IA acessível pelo celular ou WhatsApp, limitado ao material da empresa.",
+   "Dê o acesso primeiro aos vendedores novos e compare vendas e produtividade com quem ainda não usa.",
+   "Mantenha treinamento e meta de performance junto: a própria fonte diz que a ferramenta sozinha não explica o ganho."
+  ],
+  "trecho_comprovante": "corretores iniciantes que utilizam o Marco registram 27% mais produtividade e vendem 23% mais do que os que ainda não adotaram a solução",
+  "verificado": true,
+  "forca": "forte"
+ },
+ {
+  "id": "H-005",
+  "porte": "grande",
+  "gargalo": "demanda_comercial",
+  "gargalos_secundarios": [
+   "capacidade"
+  ],
+  "area": "comercial",
+  "setor": "alimentos (indústria de consumo)",
+  "tipo": "nominal",
+  "empresa": "Mondelēz Brasil",
+  "pais": "Brasil",
+  "titulo": "Mondelēz vende mais de 15% a mais no B2B pelo WhatsApp com agentes de IA de vendas, segundo a Yalo",
+  "problema": "Os varejistas já são digitais, e o desafio era encontrá-los nos canais em que estão ativos, sem sobrecarregar a equipe de vendas.",
+  "solucao": "Agentes de IA da Yalo automatizam e personalizam a jornada de compra B2B pelo WhatsApp, liberando os representantes para tarefas mais estratégicas.",
+  "ferramentas": [
+   "Yalo",
+   "WhatsApp"
+  ],
+  "resultado": "Vendas B2B via WhatsApp cresceram mais de 15% e o ticket médio das compras no espaço físico subiu 34%, segundo a Yalo; o número é declarado pelo fornecedor em painel do APAS Show 2025.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "IT Forum",
+  "fonte_url": "https://itforum.com.br/noticias/vendas-mondelez-crescem-34-ia-whatsapp/",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "industria",
+  "funcionarios": 7500,
+  "porte_confirmado": true,
+  "data_fonte": "2025-06",
+  "metricas": [
+   {
+    "indicador": "Vendas B2B via WhatsApp",
+    "antes": null,
+    "depois": null,
+    "variacao": "mais de 15%"
+   },
+   {
+    "indicador": "Ticket médio das compras no espaço físico",
+    "antes": null,
+    "depois": null,
+    "variacao": "+34%"
+   }
+  ],
+  "esforco_implantacao": null,
+  "como_replicar": [
+   "Identifique os clientes B2B pequenos que compram por telefone ou mensagem e que consomem muito tempo do representante.",
+   "Ofereça a eles um canal de pedido por WhatsApp com catálogo, preços e reposição sugerida (ex.: WhatsApp Business com um bot de pedidos).",
+   "Use a IA para sugerir itens e lembrar recompras, e deixe o representante para negociação e clientes maiores.",
+   "Compare vendas e ticket médio dos clientes atendidos pelo canal com um grupo que continua no modelo antigo."
+  ],
+  "trecho_comprovante": "A parceria com a Yalo permitiu que a Mondelēz aumentasse suas vendas B2B em mais de 15% via WhatsApp",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "H-006",
+  "porte": "grande",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "manual_repetitivo",
+   "capacidade"
+  ],
+  "area": "rh",
+  "setor": "logística ferroviária",
+  "tipo": "nominal",
+  "empresa": "MRS Logística",
+  "pais": "Brasil",
+  "titulo": "MRS Logística usa IA no recrutamento e reduz em média 60% o tempo de triagem de candidatos",
+  "problema": "Vagas técnicas recebem muitas candidaturas, e analisar e priorizar currículos exigia grande esforço manual.",
+  "solucao": "Recursos de IA do módulo de recrutamento leem e filtram currículos com critérios objetivos, e a equipe foca em entrevistas e avaliação.",
+  "ferramentas": [
+   "SAP SuccessFactors",
+   "Joule"
+  ],
+  "resultado": "Redução média de 60% no tempo de triagem e retorno garantido a 100% dos participantes dos processos seletivos.",
+  "complexidade_implantacao": "baixa",
+  "tempo_para_valor": "semanas",
+  "fonte_nome": "Sala de Imprensa SAP Brasil",
+  "fonte_url": "https://news.sap.com/brazil/2026/07/mrs-adota-ia-nos-processos-de-selecao-e-reduz-tempo-de-triagem-em-60/",
+  "ano": 2026,
+  "confianca": "alta",
+  "setor_chave": "logistica",
+  "funcionarios": 6000,
+  "porte_confirmado": true,
+  "data_fonte": "2026-07",
+  "metricas": [
+   {
+    "indicador": "Tempo de triagem de candidatos",
+    "antes": null,
+    "depois": null,
+    "variacao": "redução média de 60%"
+   },
+   {
+    "indicador": "Candidatos com retorno garantido",
+    "antes": null,
+    "depois": "100%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Funcionalidade embutida no módulo de recrutamento já usado pela empresa.",
+  "como_replicar": [
+   "Escreva por vaga os 4 ou 5 critérios objetivos que definem um currículo aderente (experiência, certificação, localidade).",
+   "Use a triagem assistida por IA do seu sistema de recrutamento (ex.: ferramentas de ATS) ou uma planilha com IA para ordenar candidatos por aderência.",
+   "Reserve o tempo do RH para entrevistas e avaliação de qualidade, e confira por amostragem os currículos descartados.",
+   "Responda a todos os candidatos com mensagem padrão para manter a marca empregadora."
+  ],
+  "trecho_comprovante": "Tivemos uma redução média de 60% no tempo de triagem, o que libera o time para focar em etapas mais estratégicas",
+  "verificado": true,
+  "forca": "forte"
+ },
+ {
+  "id": "H-007",
+  "porte": "grande",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "capacidade",
+   "demanda_comercial"
+  ],
+  "area": "marketing",
+  "setor": "varejo farmacêutico (retail media)",
+  "tipo": "nominal",
+  "empresa": "Raia Drogasil (Impulso, retail media)",
+  "pais": "Brasil",
+  "titulo": "Impulso, do grupo Raia Drogasil, reduz o prazo de criação de campanhas de três dias para cinco minutos com IA generativa",
+  "problema": "Produzir as peças de cada campanha levava cerca de três dias, o que limitava a escala e os testes A/B para as marcas anunciantes.",
+  "solucao": "IA generativa cria as peças mantendo o tom de voz de Raia e Drogasil; uma pessoa revisa todas as peças e as correções realimentam a ferramenta. Começou por e-commerce e segue para e-mail, push, SMS e vídeo.",
+  "ferramentas": [
+   "IA generativa"
+  ],
+  "resultado": "Prazo de entrega das campanhas de três dias para cinco minutos (o título da matéria diz 3 minutos), o que ampliou a capacidade de testes A/B.",
+  "complexidade_implantacao": "media",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Mercado & Consumo",
+  "fonte_url": "https://mercadoeconsumo.com.br/30/10/2025/retail-media/raia-e-drogasil-reduzem-prazo-de-entrega-de-campanhas-para-3-minutos-com-ia-generativa/",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "varejo_ecommerce",
+  "funcionarios": 65000,
+  "porte_confirmado": true,
+  "data_fonte": "2025-10",
+  "metricas": [
+   {
+    "indicador": "Prazo de entrega de campanha",
+    "antes": "3 dias",
+    "depois": "5 minutos",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "Implantação em fases: e-commerce primeiro, depois e-mail, push e SMS, e vídeo a partir do fim de 2025.",
+  "como_replicar": [
+   "Documente o tom de voz, as regras de marca e 5 a 10 exemplos de peças aprovadas.",
+   "Use uma ferramenta de IA generativa para gerar variações de texto e imagem a partir desse guia, começando por um canal (ex.: e-mail).",
+   "Mantenha uma revisão humana de cada peça e anote as correções para melhorar as instruções.",
+   "Use o tempo ganho para rodar mais testes A/B e meça conversão por variação."
+  ],
+  "trecho_comprovante": "reduziu o prazo de entrega das campanhas de três dias para cinco minutos",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "H-008",
+  "porte": "grande",
+  "gargalo": "processo",
+  "gargalos_secundarios": [
+   "manual_repetitivo",
+   "controle"
+  ],
+  "area": "financeiro",
+  "setor": "antifraude e meios de pagamento",
+  "tipo": "nominal",
+  "empresa": "ClearSale",
+  "pais": "Brasil",
+  "titulo": "ClearSale moderniza o faturamento e otimiza 52% no tempo de execução e 60% nos chamados por falhas cadastrais",
+  "problema": "Modelos de cálculo e customizações acumulados em cerca de 20 anos, com cadastro manual de contratos que gerava risco e baixa qualidade de dados.",
+  "solucao": "Migração para SAP S/4HANA e projeto CLARA, com integração por APIs padrão e fluxo automatizado de cadastro de contratos com validação de governança, com análises no SAP Analytics Cloud.",
+  "ferramentas": [
+   "SAP S/4HANA",
+   "SAP BRIM",
+   "SAP Analytics Cloud"
+  ],
+  "resultado": "52% de otimização no tempo de execução do faturamento, 60% menos chamados por falhas cadastrais, 70% da capacidade do time de contratos liberada e 44% de otimização no tempo de apuração de chargeback, segundo a SAP.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Sala de Imprensa SAP Brasil",
+  "fonte_url": "https://news.sap.com/brazil/2025/09/clearsale-otimiza-52-no-tempo-de-execucao-do-faturamento-com-sap-s-4hana/",
+  "ano": 2025,
+  "confianca": "alta",
+  "setor_chave": "tecnologia",
+  "funcionarios": 3000,
+  "porte_confirmado": true,
+  "data_fonte": "2025-09",
+  "metricas": [
+   {
+    "indicador": "Tempo de execução do faturamento",
+    "antes": null,
+    "depois": null,
+    "variacao": "otimização de 52%"
+   },
+   {
+    "indicador": "Chamados por falhas cadastrais",
+    "antes": null,
+    "depois": null,
+    "variacao": "redução de 60%"
+   },
+   {
+    "indicador": "Capacidade do time de contratos",
+    "antes": null,
+    "depois": null,
+    "variacao": "70% liberada"
+   }
+  ],
+  "esforco_implantacao": "S/4HANA a partir de 2022; projeto CLARA iniciado em fevereiro de 2024, primeira entrada em operação em outubro de 2024 e segunda onda em março de 2025.",
+  "como_replicar": [
+   "Mapeie onde o cadastro de contrato ou cliente é digitado à mão e quais erros de cadastro geram retrabalho e chamados no faturamento.",
+   "Troque a digitação por um fluxo com campos obrigatórios e validação antes de o contrato entrar no sistema.",
+   "Automatize o faturamento recorrente por regra, deixando a equipe só com exceções.",
+   "Meça tempo de faturamento e número de chamados por erro de cadastro antes e depois."
+  ],
+  "trecho_comprovante": "ClearSale otimiza 52% no tempo de execução do faturamento com SAP S/4HANA",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "H-009",
+  "porte": "grande",
+  "gargalo": "decisao",
+  "gargalos_secundarios": [
+   "controle",
+   "manual_repetitivo"
+  ],
+  "area": "operacoes",
+  "setor": "distribuição e varejo de pneus",
+  "tipo": "nominal",
+  "empresa": "Cantu Inc.",
+  "pais": "Brasil",
+  "titulo": "Cantu Inc. reduz de duas semanas para seis horas o tempo da previsão inicial de demanda",
+  "problema": "A previsão manual levava até 14 dias para sair, tinha erro de 62% (WMAPE) e a base de cadastro de produtos era ruim, para mais de 5 mil SKUs em mais de 40 filiais e centros de distribuição.",
+  "solucao": "Nova arquitetura de dados com aprendizado de máquina tradicional, implantada pela A3Data, que gera previsão por SKU e por estado.",
+  "ferramentas": [
+   "AWS Glue",
+   "Amazon S3",
+   "Databricks",
+   "AWS Step Functions",
+   "AWS Lambda"
+  ],
+  "resultado": "Tempo da previsão inicial de demanda de cerca de duas semanas para seis horas; erro de previsão (WMAPE) reduzido em 15% em cerca de 5 meses; a empresa cita economia de dezenas de milhões de reais em caixa, estoques parados e logística, sem valor exato.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "TI Inside",
+  "fonte_url": "https://tiinside.com.br/24/09/2026/cantu-inc-automatiza-gestao-e-reduz-erro-de-previsao-em-15-com-ia/",
+  "ano": 2026,
+  "confianca": "media",
+  "setor_chave": "varejo_ecommerce",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": "2026-09",
+  "metricas": [
+   {
+    "indicador": "Tempo da previsão inicial de demanda",
+    "antes": "cerca de 2 semanas",
+    "depois": "6 horas",
+    "variacao": null
+   },
+   {
+    "indicador": "Erro de previsão (WMAPE)",
+    "antes": "62%",
+    "depois": null,
+    "variacao": "redução de 15%"
+   }
+  ],
+  "esforco_implantacao": "Cerca de 5 meses para chegar à melhoria de 15% no forecast, segundo a empresa.",
+  "como_replicar": [
+   "Limpe primeiro o cadastro de produtos: sem código e descrição consistentes qualquer previsão sai ruim.",
+   "Reúna o histórico de vendas por produto e filial numa base única e atualizada automaticamente.",
+   "Gere a previsão inicial por modelo estatístico simples (ex.: planilha ou BI com previsão) e deixe o comprador ajustar só as exceções.",
+   "Meça o erro de previsão e o tempo gasto a cada ciclo e passe a decidir compras com a base mais frequente."
+  ],
+  "trecho_comprovante": "O tempo necessário para elaborar a previsão inicial de demanda também caiu de cerca de duas semanas para apenas seis horas",
+  "verificado": true,
+  "forca": "media"
+ },
+ {
+  "id": "H-010",
+  "porte": "grande",
+  "gargalo": "conhecimento",
+  "gargalos_secundarios": [
+   "manual_repetitivo",
+   "processo"
+  ],
+  "area": "operacoes",
+  "setor": "dispositivos médicos e odontológicos (assuntos regulatórios)",
+  "tipo": "nominal",
+  "empresa": "Angelus",
+  "pais": "Brasil",
+  "titulo": "Angelus usa o conhecimento do acervo de 50 mil páginas para gerar documentos regulatórios em 10 minutos em vez de 16 horas",
+  "problema": "Um documento regulatório complexo levava 16 horas ou mais de um especialista, e erros de formatação geravam rejeição e custo de nova análise.",
+  "solucao": "Um agente de IA com Gemini, criado com a IPNET by Vivo, consulta o acervo técnico e regulatório da empresa e preenche os modelos oficiais sem alterar a estrutura; a empresa selecionou 39 tipos de documento.",
+  "ferramentas": [
+   "Gemini",
+   "Google Cloud",
+   "Gemini Enterprise"
+  ],
+  "resultado": "Tempo de produção de um documento regulatório de 16 horas para 10 minutos; precisão acima da meta de 90% já na prova de conceito.",
+  "complexidade_implantacao": "alta",
+  "tempo_para_valor": "meses",
+  "fonte_nome": "Google Cloud",
+  "fonte_url": "https://cloud.google.com/customers/intl/pt-br/angelus?hl=pt-BR",
+  "ano": 2025,
+  "confianca": "media",
+  "setor_chave": "saude",
+  "funcionarios": null,
+  "porte_confirmado": false,
+  "data_fonte": null,
+  "metricas": [
+   {
+    "indicador": "Tempo de produção de documento regulatório",
+    "antes": "16 horas ou mais",
+    "depois": "10 minutos",
+    "variacao": null
+   },
+   {
+    "indicador": "Precisão do conteúdo",
+    "antes": null,
+    "depois": "acima da meta de 90%",
+    "variacao": null
+   }
+  ],
+  "esforco_implantacao": "A fonte menciona prova de conceito com o documento mais complexo e depois contratação do Gemini Enterprise para toda a empresa; não informa prazo nem custo.",
+  "como_replicar": [
+   "Reúna os documentos-fonte aprovados (normas, laudos, procedimentos) em um único repositório atualizado.",
+   "Configure um assistente de IA que só responda com base nesse acervo e cite a origem de cada trecho.",
+   "Use os modelos oficiais da empresa como molde para que a IA preencha campos, sem mudar a estrutura.",
+   "Comece pelo documento mais complexo, compare o resultado com o do especialista e só então amplie para outros tipos."
+  ],
+  "trecho_comprovante": "Angelus reduz de 16 horas para 10 minutos o tempo de produção de documentos regulatórios com o Gemini",
+  "verificado": true,
+  "forca": "fraca"
+ }
+]

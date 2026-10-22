@@ -1,0 +1,1699 @@
+[
+  {
+    "id": "P-001",
+    "porte": "pequena",
+    "gargalo": "decisao",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "operacoes",
+    "setor": "restaurantes (franquia)",
+    "tipo": "nominal",
+    "empresa": "Franquia Schlotzsky's e Cinnabon (Ted Taylor, 3 lojas, Novo México)",
+    "pais": "EUA",
+    "titulo": "Franqueado reprecifica o cardápio de 3 lojas com o ChatGPT Work em 1 a 2 horas",
+    "problema": "A revisão anual de preços exigia analisar custo de receita, popularidade, concorrência local e delivery, tomando dias de trabalho do dono.",
+    "solucao": "O dono fornece a lista de itens, os preços atuais e o histórico de vendas ao ChatGPT Work, que devolve uma planilha com preços recomendados para a loja e o delivery; ele revisa e ajusta.",
+    "ferramentas": [
+      "ChatGPT Work"
+    ],
+    "resultado": "Recomendação de preços em 1 a 2 horas em vez de 5 dias (redução de 95% no repricing, segundo a fonte). Não foi possível reabrir a página para reconferir (HTTP 403).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "OpenAI - Franchisee reconciles cash in 94% less time with ChatGPT Work",
+    "fonte_url": "https://openai.com/index/ted-taylor-restaurant/",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "varejo_ecommerce",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026",
+    "metricas": [
+      {
+        "indicador": "Tempo de revisão de preços",
+        "antes": "5 dias",
+        "depois": "1 a 2 horas",
+        "variacao": "-95% (segundo a fonte)"
+      }
+    ],
+    "esforco_implantacao": "Não verificado: página bloqueada (403). A matéria relacionada da OpenAI Academy (6/8/2026) confirma que o casal Taylor tem 3 restaurantes em Albuquerque, Rio Rancho e Santa Fe, mas não traz esses números.",
+    "como_replicar": [
+      "Exportar a lista de itens do cardápio com preço atual, custo e histórico de vendas por item.",
+      "Pedir ao assistente de IA uma planilha com preço recomendado por item, separando loja e delivery e considerando concorrência local.",
+      "Revisar as sugestões item a item e ajustar com o conhecimento do dono antes de publicar.",
+      "Repetir o processo a cada revisão anual ou sempre que os custos mudarem."
+    ],
+    "trecho_comprovante": null,
+    "verificado": false,
+    "forca": "fraca"
+  },
+  {
+    "id": "P-002",
+    "porte": "pequena",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "financeiro",
+    "setor": "restaurantes (franquia)",
+    "tipo": "nominal",
+    "empresa": "Franquia Schlotzsky's e Cinnabon (Ted Taylor, 3 lojas, Novo México)",
+    "pais": "EUA",
+    "titulo": "Conciliação mensal de caixa e folha de pagamento caem de horas para minutos",
+    "problema": "Conciliar o caixa das 3 lojas com os depósitos bancários e resumir os insumos da folha consumia horas manuais a cada mês ou ciclo.",
+    "solucao": "O dono carrega as transações de caixa e os extratos no ChatGPT Work, que compara as transações com os depósitos; a ferramenta também resume os insumos da folha de pagamento.",
+    "ferramentas": [
+      "ChatGPT Work"
+    ],
+    "resultado": "Conciliação mensal de 3 horas para 5 a 10 minutos; 4 horas a menos de trabalho manual por ciclo de folha (segundo a fonte, não reconferido por bloqueio 403).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "OpenAI - Franchisee reconciles cash in 94% less time with ChatGPT Work",
+    "fonte_url": "https://openai.com/index/ted-taylor-restaurant/",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "varejo_ecommerce",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026",
+    "metricas": [
+      {
+        "indicador": "Conciliação mensal de caixa",
+        "antes": "3 horas",
+        "depois": "5 a 10 minutos",
+        "variacao": null
+      },
+      {
+        "indicador": "Trabalho manual por ciclo de folha",
+        "antes": null,
+        "depois": null,
+        "variacao": "-4 horas"
+      }
+    ],
+    "esforco_implantacao": "Não verificado: página bloqueada (403).",
+    "como_replicar": [
+      "Exportar as transações do caixa e o extrato bancário do período em planilha ou CSV.",
+      "Pedir ao assistente de IA que compare as duas listas e aponte divergências.",
+      "Resumir também os insumos da folha (horas, ajustes) para conferência antes do fechamento.",
+      "Revisar as divergências apontadas e fechar o mês."
+    ],
+    "trecho_comprovante": null,
+    "verificado": false,
+    "forca": "fraca"
+  },
+  {
+    "id": "P-003",
+    "porte": "pequena",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "administrativo",
+    "setor": "construção civil (empreiteira)",
+    "tipo": "nominal",
+    "empresa": "Beach Cities Builder",
+    "pais": "EUA",
+    "titulo": "Script com ChatGPT lê notas de subempreiteiros no e-mail e lança no sistema contábil",
+    "problema": "Dezenas de notas de subempreiteiros por dia (cerca de 30 obras ativas) eram lidas, digitadas no Zoho Books e arquivadas à mão no Google Drive.",
+    "solucao": "Com ajuda do ChatGPT, o dono criou um script ligado ao e-mail que reúne as notas em uma pasta, lê o conteúdo, identifica a obra e arquiva cada uma na pasta correta; a primeira versão levou cerca de 2 horas.",
+    "ferramentas": [
+      "ChatGPT",
+      "Zoho Books",
+      "Google Drive",
+      "e-mail"
+    ],
+    "resultado": "Cerca de 5 a 6 horas por semana economizadas; o fluxo de notas é descrito como 'efetivamente 100% preciso' pelo dono.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "OpenAI Academy - How ChatGPT became a contractor's back office",
+    "fonte_url": "https://academy.openai.com/public/blogs/how-chatgpt-became-a-contractors-back-office-2026-05-07",
+    "ano": 2026,
+    "confianca": "alta",
+    "setor_chave": "construcao_imoveis",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-05",
+    "metricas": [
+      {
+        "indicador": "Horas semanais com notas de subempreiteiros",
+        "antes": null,
+        "depois": null,
+        "variacao": "-5 a 6 horas por semana"
+      },
+      {
+        "indicador": "Precisão do fluxo",
+        "antes": null,
+        "depois": "efetivamente 100% preciso",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Primeira versão do script em cerca de 2 horas, construída pelo próprio dono com o ChatGPT.",
+    "como_replicar": [
+      "Direcionar todas as notas recebidas para uma caixa de e-mail ou pasta única.",
+      "Pedir ao assistente de IA para escrever um script que leia cada nota, extraia valor e obra e identifique o projeto.",
+      "Arquivar o arquivo na pasta do projeto e lançar os dados no sistema contábil (ex.: planilha ou ERP com API).",
+      "Conferir uma amostra nas primeiras semanas antes de confiar no fluxo."
+    ],
+    "trecho_comprovante": "That work now saves him roughly 5-6 hours a week, almost a full workweek each month",
+    "verificado": true,
+    "forca": "forte"
+  },
+  {
+    "id": "P-004",
+    "porte": "pequena",
+    "gargalo": "demanda_comercial",
+    "gargalos_secundarios": [],
+    "area": "marketing",
+    "setor": "construção civil (empreiteira)",
+    "tipo": "nominal",
+    "empresa": "Beach Cities Builder",
+    "pais": "EUA",
+    "titulo": "Empreiteira reconstrói páginas de SEO com ChatGPT e relata mais contatos",
+    "problema": "A pequena empreiteira dependia de captação local de clientes sem estrutura de SEO.",
+    "solucao": "O dono usou o ChatGPT para reconstruir as páginas de SEO, escrever metadados e checar palavras-chave.",
+    "ferramentas": [
+      "ChatGPT"
+    ],
+    "resultado": "Contatos de entrada subiram cerca de 25%, o que o dono estima valer cerca de seis dígitos de receita bruta adicional por ano (estimativa do próprio dono).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "OpenAI Academy - How ChatGPT became a contractor's back office",
+    "fonte_url": "https://academy.openai.com/public/blogs/how-chatgpt-became-a-contractors-back-office-2026-05-07",
+    "ano": 2026,
+    "confianca": "alta",
+    "setor_chave": "construcao_imoveis",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-05",
+    "metricas": [
+      {
+        "indicador": "Contatos de entrada (inbound)",
+        "antes": null,
+        "depois": null,
+        "variacao": "+25% (cerca de)"
+      },
+      {
+        "indicador": "Receita bruta adicional estimada",
+        "antes": null,
+        "depois": "seis dígitos por ano",
+        "variacao": "estimativa do dono"
+      }
+    ],
+    "esforco_implantacao": "Não detalhado na fonte além do uso do ChatGPT pelo próprio dono.",
+    "como_replicar": [
+      "Listar os serviços e as cidades atendidas e as palavras-chave que clientes usariam.",
+      "Pedir ao assistente de IA que reescreva cada página de serviço com título, metadescrição e texto focados nessas palavras.",
+      "Publicar as páginas e conferir a indexação no Google Search Console.",
+      "Acompanhar o número de contatos de entrada mês a mês."
+    ],
+    "trecho_comprovante": "inbound contacts are up about 25%",
+    "verificado": true,
+    "forca": "forte"
+  },
+  {
+    "id": "P-005",
+    "porte": "pequena",
+    "gargalo": "controle",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "logistica",
+    "setor": "alimentos (queijos veganos)",
+    "tipo": "nominal",
+    "empresa": "Rebel Cheese",
+    "pais": "EUA",
+    "titulo": "Claude analisa cobranças de frete e recupera cerca de US$ 180 mil em sobrecobranças",
+    "problema": "As sobrecobranças de frete eram difíceis de identificar em meio ao volume de faturas das transportadoras.",
+    "solucao": "A cofundadora usou o Claude para analisar as cobranças de frete e localizar valores cobrados indevidamente.",
+    "ferramentas": [
+      "Claude"
+    ],
+    "resultado": "Cerca de US$ 180.000 recuperados em sobrecobranças de frete (depoimento da cofundadora e CEO).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Anthropic - Claude for Small Business (depoimentos)",
+    "fonte_url": "https://claude.com/solutions/small-business",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "logistica",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Sobrecobranças de frete recuperadas",
+        "antes": null,
+        "depois": "cerca de US$ 180.000",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Não informado na fonte.",
+    "como_replicar": [
+      "Reunir as faturas das transportadoras e os contratos ou tabelas de tarifa em planilha.",
+      "Pedir ao assistente de IA que compare o valor cobrado com a tarifa contratada e liste divergências.",
+      "Contestar com as transportadoras as cobranças indevidas, anexando a evidência.",
+      "Repetir a análise a cada ciclo de faturas."
+    ],
+    "trecho_comprovante": "We got about $180,000 back in shipping overcharges.",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-006",
+    "porte": "pequena",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [],
+    "area": "administrativo",
+    "setor": "comunidade/mídia para pequenos empresários",
+    "tipo": "nominal",
+    "empresa": "Small Business Owners Community (Pat Miller)",
+    "pais": "EUA",
+    "titulo": "Fundador usa o Claude Cowork como assistente executivo e libera mais de 21 horas por semana",
+    "problema": "O fundador solo estava sobrecarregado de tarefas operacionais (produção de podcast diário, administrativo).",
+    "solucao": "Delegou rotinas ao Claude Cowork, tratado como funcionário e assistente executivo.",
+    "ferramentas": [
+      "Claude Cowork"
+    ],
+    "resultado": "Economia de mais de 21 horas por semana (depoimento do fundador).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Anthropic - Claude for Small Business (depoimentos)",
+    "fonte_url": "https://claude.com/solutions/small-business",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "servicos_b2b",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Horas economizadas por semana",
+        "antes": null,
+        "depois": null,
+        "variacao": "mais de 21 horas por semana"
+      }
+    ],
+    "esforco_implantacao": "Não informado na fonte.",
+    "como_replicar": [
+      "Listar as tarefas recorrentes do dono (agenda, e-mails, produção de conteúdo, relatórios).",
+      "Escolher 2 ou 3 tarefas e descrever o passo a passo ao assistente de IA.",
+      "Revisar as entregas nas primeiras semanas e ajustar as instruções.",
+      "Ampliar a delegação para novas tarefas conforme a confiança aumenta."
+    ],
+    "trecho_comprovante": "Cowork has completely changed my business. It's saving me over 21 hours a week.",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-007",
+    "porte": "pequena",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "comunicacao"
+    ],
+    "area": "operacoes",
+    "setor": "serviços profissionais",
+    "tipo": "nominal",
+    "empresa": "Chief of Minds",
+    "pais": "EUA",
+    "titulo": "Trabalho para parceiros que levava dois dias passa a sair em horas com o Claude",
+    "problema": "O prazo de entrega do trabalho para parceiros limitava quanto a equipe pequena conseguia atender.",
+    "solucao": "A CEO usa o Claude para executar o trabalho e a equipe revisa a qualidade.",
+    "ferramentas": [
+      "Claude"
+    ],
+    "resultado": "Tempo de entrega de 'dois dias' para 'horas' (depoimento da CEO); sem número exato.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Anthropic - Claude for Small Business (depoimentos)",
+    "fonte_url": "https://claude.com/solutions/small-business",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "servicos_b2b",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Prazo de entrega ao parceiro",
+        "antes": "dois dias",
+        "depois": "horas",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Não informado na fonte.",
+    "como_replicar": [
+      "Escolher o entregável recorrente que mais atrasa o atendimento a parceiros.",
+      "Documentar o padrão de qualidade esperado e montar instruções para o assistente de IA.",
+      "Fazer a IA produzir a primeira versão e a equipe revisar antes do envio.",
+      "Medir o prazo antes e depois para confirmar o ganho."
+    ],
+    "trecho_comprovante": "What used to take our team two days… we now turn around in hours",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-008",
+    "porte": "pequena",
+    "gargalo": "processo",
+    "gargalos_secundarios": [
+      "controle",
+      "capacidade"
+    ],
+    "area": "operacoes",
+    "setor": "compliance para transporte rodoviário",
+    "tipo": "nominal",
+    "empresa": "Empresa de compliance de caminhoneiros (Tennessee, não nomeada; 5 funcionários)",
+    "pais": "EUA",
+    "titulo": "Escritório de 5 pessoas reconstrói seu sistema com o Claude após aviso de 30 dias do fornecedor de software",
+    "problema": "Perdeu 60% dos clientes numa queda de mercado e recebeu 30 dias de aviso do fornecedor do software central da operação.",
+    "solucao": "Reconstruiu o sistema de processamento com o Claude, sem depender do fornecedor anterior.",
+    "ferramentas": [
+      "Claude"
+    ],
+    "resultado": "Taxa de erro nas declarações de imposto sobre combustível caiu de 7% para zero; a equipe passou a suportar o dobro do pico anterior de volume com as mesmas 5 pessoas.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Anthropic - What 1,000 small business owners taught us about AI",
+    "fonte_url": "https://claude.com/resources/articles/what-1-000-small-business-owners-taught-us-about-ai",
+    "ano": 2026,
+    "confianca": "alta",
+    "setor_chave": "logistica",
+    "funcionarios": 5,
+    "porte_confirmado": true,
+    "data_fonte": "2026-09",
+    "metricas": [
+      {
+        "indicador": "Taxa de erro em declarações de imposto sobre combustível",
+        "antes": "7%",
+        "depois": "0%",
+        "variacao": "-7 p.p."
+      },
+      {
+        "indicador": "Volume de pico suportado",
+        "antes": "pico anterior",
+        "depois": "dobro do pico anterior",
+        "variacao": "2x"
+      }
+    ],
+    "esforco_implantacao": "Prazo imposto de 30 dias pelo fornecedor; a equipe reconstruiu o sistema por conta própria com o Claude (sem custo ou horas detalhados).",
+    "como_replicar": [
+      "Mapear as entradas, regras e saídas do sistema que será substituído.",
+      "Descrever cada regra ao assistente de IA e pedir a reconstrução em partes, testando com casos reais.",
+      "Rodar o sistema novo em paralelo ao antigo em declarações já conhecidas para medir erros.",
+      "Migrar de vez quando a taxa de erro estiver estável."
+    ],
+    "trecho_comprovante": "took their fuel tax filing error rate from 7% to zero",
+    "verificado": true,
+    "forca": "forte"
+  },
+  {
+    "id": "P-009",
+    "porte": "pequena",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "decisao"
+    ],
+    "area": "operacoes",
+    "setor": "fabricação de reboques",
+    "tipo": "nominal",
+    "empresa": "Liberty Trailers",
+    "pais": "EUA",
+    "titulo": "Fabricante de reboques monta ferramenta de reconciliação em 15 minutos e painéis em dias",
+    "problema": "Falta de visibilidade de dados após a aquisição de uma fábrica, com cronogramas de produção em papel; painéis levavam semanas ou meses.",
+    "solucao": "Construiu com o Claude uma ferramenta de reconciliação da fábrica adquirida e painéis ao vivo no lugar dos cronogramas em papel.",
+    "ferramentas": [
+      "Claude"
+    ],
+    "resultado": "Ferramenta de reconciliação criada em cerca de 15 minutos; painéis ao vivo em dias em vez de meses (narrativa do artigo, não citação direta). Porte não confirmado: a empresa tem 3 plantas em Indiana e diretórios divergem (11-50 a 201-500).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Anthropic - What 1,000 small business owners taught us about AI",
+    "fonte_url": "https://claude.com/resources/articles/what-1-000-small-business-owners-taught-us-about-ai",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "industria",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-09",
+    "metricas": [
+      {
+        "indicador": "Tempo para criar ferramenta de reconciliação",
+        "antes": null,
+        "depois": "cerca de 15 minutos",
+        "variacao": null
+      },
+      {
+        "indicador": "Tempo para painéis de produção",
+        "antes": "meses",
+        "depois": "dias",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Ferramenta em cerca de 15 minutos; painéis em dias, feitos pela equipe interna (diretor de TI).",
+    "como_replicar": [
+      "Escolher um processo com dados dispersos (ex.: cronograma de produção em papel).",
+      "Digitalizar ou exportar os dados e pedir ao assistente de IA uma planilha ou painel simples.",
+      "Validar os números com o responsável da área por uma semana.",
+      "Ligar o painel à rotina diária de gestão."
+    ],
+    "trecho_comprovante": "built a reconciliation tool for a newly acquired factory in about 15 minutes",
+    "verificado": true,
+    "forca": "fraca"
+  },
+  {
+    "id": "P-010",
+    "porte": "pequena",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "comunicacao"
+    ],
+    "area": "atendimento",
+    "setor": "educação",
+    "tipo": "nominal",
+    "empresa": "The Knowledge Society",
+    "pais": "Canada",
+    "titulo": "Agente de IA resolve 70 a 80% dos tickets de e-mail de uma equipe pequena",
+    "problema": "Equipe enxuta (classificada pela HubSpot como pequena empresa, 1-25) com fila de tickets de e-mail lenta.",
+    "solucao": "Implantou o Customer Agent da HubSpot para responder aos tickets de e-mail.",
+    "ferramentas": [
+      "HubSpot Customer Agent"
+    ],
+    "resultado": "O agente resolve 70 a 80% dos tickets de e-mail; o tempo até fechar caiu de mais de 16 horas para menos de 10 (depoimento do diretor de operações).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "HubSpot - Agent Hub Customer Success Stories",
+    "fonte_url": "https://www.hubspot.com/products/artificial-intelligence/case-studies",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "educacao",
+    "funcionarios": null,
+    "porte_confirmado": true,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Tickets de e-mail resolvidos pelo agente",
+        "antes": null,
+        "depois": "70 a 80%",
+        "variacao": null
+      },
+      {
+        "indicador": "Tempo até fechar ticket",
+        "antes": "mais de 16 horas",
+        "depois": "menos de 10 horas",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Não informado na fonte (porte indicado pela HubSpot: Small Business 1-25).",
+    "como_replicar": [
+      "Reunir o histórico de tickets e as respostas padrão em uma base de conhecimento.",
+      "Configurar o agente de atendimento (ex.: HubSpot Customer Agent ou similar) sobre essa base.",
+      "Deixar os casos complexos escalarem para uma pessoa.",
+      "Acompanhar taxa de resolução e tempo de fechamento e refinar a base."
+    ],
+    "trecho_comprovante": "The agent now resolves 70 to 80 percent of our email tickets",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-011",
+    "porte": "pequena",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [
+      "capacidade"
+    ],
+    "area": "atendimento",
+    "setor": "varejo (energia solar)",
+    "tipo": "nominal",
+    "empresa": "Mon Kit Solaire",
+    "pais": "França",
+    "titulo": "Varejista pequeno libera a equipe de chats rotineiros com agente de IA configurado em 2 a 3 horas",
+    "problema": "A equipe pequena era consumida por conversas de chat repetitivas, sobrando pouco tempo para agendamentos, ligações e e-mails complexos.",
+    "solucao": "Configurou o Customer Agent da HubSpot para atender as conversas de rotina.",
+    "ferramentas": [
+      "HubSpot Customer Agent"
+    ],
+    "resultado": "Configuração levou 2 a 3 horas; a equipe passou a ter mais tempo para agendamentos, ligações e e-mails complexos (sem métrica de volume na fonte).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "HubSpot - Agent Hub Customer Success Stories",
+    "fonte_url": "https://www.hubspot.com/products/artificial-intelligence/case-studies",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "varejo_ecommerce",
+    "funcionarios": null,
+    "porte_confirmado": true,
+    "data_fonte": null,
+    "metricas": [
+      {
+        "indicador": "Tempo de configuração do agente",
+        "antes": null,
+        "depois": "2 a 3 horas",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "2 a 3 horas para entender, testar e integrar, segundo o diretor de vendas e relacionamento.",
+    "como_replicar": [
+      "Listar as perguntas mais repetidas do chat.",
+      "Alimentar o agente com site, FAQ e políticas.",
+      "Testar com conversas reais antes de ativar no site.",
+      "Direcionar casos complexos para a equipe."
+    ],
+    "trecho_comprovante": "The solution was remarkably easy and fast to implement—taking just 2-3 hours to understand, test, and integrate.",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-012",
+    "porte": "pequena",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "administrativo",
+    "setor": "assinatura de cafés especiais",
+    "tipo": "nominal",
+    "empresa": "Moka Clube (Curitiba, PR)",
+    "pais": "Brasil",
+    "titulo": "Clube de café encontra informações em e-mails e anexos com o Gemini no Gmail",
+    "problema": "Informações importantes ficavam espalhadas em muitos e-mails e anexos.",
+    "solucao": "Usa o Gemini no Gmail para buscar e resgatar informações na caixa de e-mail.",
+    "ferramentas": [
+      "Google Workspace",
+      "Gemini no Gmail"
+    ],
+    "resultado": "Facilidade para buscar informações no e-mail (relato qualitativo; sem métrica na fonte).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+    "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "varejo_ecommerce",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-10",
+    "metricas": [],
+    "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+    "como_replicar": [
+      "Ativar o Gemini no Gmail (Google Workspace).",
+      "Perguntar em linguagem natural por contratos, pedidos ou datas.",
+      "Conferir a resposta no e-mail original.",
+      "Padronizar rótulos para facilitar buscas."
+    ],
+    "trecho_comprovante": "a empresa usa o Gemini no Gmail para facilitar a busca por informações",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-013",
+    "porte": "pequena",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [],
+    "area": "operacoes",
+    "setor": "reciclagem de resíduos da construção",
+    "tipo": "nominal",
+    "empresa": "RNV Resíduos (Aparecida de Goiânia, GO)",
+    "pais": "Brasil",
+    "titulo": "Recicladora cruza laudos e documentos técnicos com o NotebookLM",
+    "problema": "As respostas precisas estavam espalhadas em laudos de laboratório, documentos técnicos e relatórios.",
+    "solucao": "Usa o NotebookLM para cruzar laudos, documentos técnicos e relatórios e chegar rápido às respostas.",
+    "ferramentas": [
+      "NotebookLM"
+    ],
+    "resultado": "Respostas obtidas rapidamente (relato qualitativo; sem métrica na fonte).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+    "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "construcao_imoveis",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-10",
+    "metricas": [],
+    "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+    "como_replicar": [
+      "Reunir laudos e relatórios em PDF em um caderno do NotebookLM.",
+      "Fazer perguntas de cruzamento (ex.: parâmetros fora do limite).",
+      "Conferir as citações nos documentos originais.",
+      "Atualizar o caderno a cada novo laudo."
+    ],
+    "trecho_comprovante": "A empresa utiliza o NotebookLM para cruzar dados de laudos, documentos técnicos, relatórios",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-014",
+    "porte": "pequena",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "decisao"
+    ],
+    "area": "operacoes",
+    "setor": "irrigação agrícola",
+    "tipo": "nominal",
+    "empresa": "3V3 (Fortaleza, CE)",
+    "pais": "Brasil",
+    "titulo": "Empresa de irrigação tira insights de planilhas com uma pergunta ao Gemini",
+    "problema": "Dificuldade de transformar dados em insights sem analista dedicado.",
+    "solucao": "Usa o Gemini no Google Planilhas para obter insights dos dados com uma única pergunta.",
+    "ferramentas": [
+      "Google Planilhas",
+      "Gemini"
+    ],
+    "resultado": "Insights obtidos com uma pergunta (relato qualitativo; sem métrica na fonte).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+    "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "agro",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-10",
+    "metricas": [],
+    "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+    "como_replicar": [
+      "Organizar os dados de vendas ou operação em uma planilha com cabeçalhos claros.",
+      "Pedir ao Gemini no Planilhas os principais insights.",
+      "Validar os números por amostragem.",
+      "Salvar as perguntas úteis como rotina."
+    ],
+    "trecho_comprovante": "Com o Gemini no Google Planilhas, a empresa transforma os dados em insights com apenas uma pergunta",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-015",
+    "porte": "pequena",
+    "gargalo": "decisao",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "operacoes",
+    "setor": "brinquedos de madeira (fabricação artesanal)",
+    "tipo": "nominal",
+    "empresa": "Ateliê Materno (Florianópolis, SC)",
+    "pais": "Brasil",
+    "titulo": "Fabricante de brinquedos gera gráficos de vendas e previsão de demanda com o Gemini no Planilhas",
+    "problema": "Dificuldade para prever a demanda a partir dos números de venda.",
+    "solucao": "Usa o Gemini no Google Planilhas para gerar gráficos de vendas automaticamente e melhorar a previsão de demanda.",
+    "ferramentas": [
+      "Google Planilhas",
+      "Gemini"
+    ],
+    "resultado": "Gráficos automáticos e previsão de demanda melhor (relato qualitativo; sem métrica na fonte).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+    "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "industria",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-10",
+    "metricas": [],
+    "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+    "como_replicar": [
+      "Consolidar o histórico de vendas mensal por produto em planilha.",
+      "Pedir ao Gemini gráficos de sazonalidade e produtos de maior giro.",
+      "Usar a leitura para planejar a produção.",
+      "Comparar o previsto com o vendido a cada mês."
+    ],
+    "trecho_comprovante": "utiliza o Gemini no Google Planilhas para gerar gráficos de vendas automaticamente",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-016",
+    "porte": "pequena",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [],
+    "area": "operacoes",
+    "setor": "locação de objetos de cena",
+    "tipo": "nominal",
+    "empresa": "Acervo Utimura (São Paulo, SP)",
+    "pais": "Brasil",
+    "titulo": "Locadora de objetos de cena cataloga o acervo descrevendo cada peça a partir de uma foto",
+    "problema": "Catalogar manualmente um grande acervo de peças.",
+    "solucao": "Usa o app Gemini para gerar a descrição de cada peça a partir de uma foto.",
+    "ferramentas": [
+      "Gemini"
+    ],
+    "resultado": "Descrição de cada peça gerada a partir de uma foto (relato qualitativo; sem métrica na fonte).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+    "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "outro",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-10",
+    "metricas": [],
+    "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+    "como_replicar": [
+      "Fotografar cada peça com fundo limpo.",
+      "Pedir ao Gemini nome, descrição, época e palavras-chave em formato padrão.",
+      "Revisar e colar em planilha de catálogo.",
+      "Usar os campos para busca e orçamento."
+    ],
+    "trecho_comprovante": "usa o aplicativo Gemini para catalogar seu imenso acervo de objetos de cena",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-017",
+    "porte": "pequena",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [],
+    "area": "administrativo",
+    "setor": "agricultura (hortifruti com loja própria)",
+    "tipo": "nominal",
+    "empresa": "Sítio Geranium (Taguatinga, DF)",
+    "pais": "Brasil",
+    "titulo": "Sítio agiliza a comunicação com fornecedores usando 'Ajude-me a escrever' no Gmail",
+    "problema": "A comunicação com fornecedores era lenta.",
+    "solucao": "Usa o recurso de escrita assistida do Gemini no Gmail para redigir mensagens a fornecedores.",
+    "ferramentas": [
+      "Gmail",
+      "Gemini"
+    ],
+    "resultado": "Comunicação com fornecedores mais rápida (relato qualitativo; sem métrica na fonte).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+    "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "agro",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-10",
+    "metricas": [],
+    "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+    "como_replicar": [
+      "Ativar o 'Ajude-me a escrever' no Gmail.",
+      "Descrever em uma frase o pedido ao fornecedor.",
+      "Revisar tom e valores antes de enviar.",
+      "Guardar modelos de pedido recorrentes."
+    ],
+    "trecho_comprovante": "Utiliza o 'Ajude-me a Escrever' no Gmail para agilizar a comunicação com os fornecedores",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-018",
+    "porte": "pequena",
+    "gargalo": "informacao",
+    "gargalos_secundarios": [
+      "comunicacao",
+      "demanda_comercial"
+    ],
+    "area": "comercial",
+    "setor": "chocolate/cacau",
+    "tipo": "nominal",
+    "empresa": "Cacauaré (Mocajuba, PA)",
+    "pais": "Brasil",
+    "titulo": "Produtora de cacau resume e-mails para achar ideias e parcerias com o Gemini no Gmail",
+    "problema": "Dificuldade de identificar novas ideias e parcerias em meio ao volume de e-mails.",
+    "solucao": "Usa o Gemini no Gmail para resumir os pontos principais das mensagens.",
+    "ferramentas": [
+      "Gmail",
+      "Gemini"
+    ],
+    "resultado": "Pontos principais (ideias, parcerias) identificados por resumo automático (relato qualitativo; sem métrica na fonte).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+    "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "agro",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-10",
+    "metricas": [],
+    "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+    "como_replicar": [
+      "Ativar o Gemini no Gmail.",
+      "Pedir resumos de threads longos.",
+      "Marcar oportunidades de parceria para acompanhamento.",
+      "Responder às mais relevantes primeiro."
+    ],
+    "trecho_comprovante": "A empresa usa o Gemini no Gmail para obter um resumo dos pontos mais importantes",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-019",
+    "porte": "pequena",
+    "gargalo": "processo",
+    "gargalos_secundarios": [
+      "comunicacao"
+    ],
+    "area": "administrativo",
+    "setor": "papel reciclado com sementes",
+    "tipo": "nominal",
+    "empresa": "Papel Semente (São Gonçalo, RJ)",
+    "pais": "Brasil",
+    "titulo": "Empresa organiza decisões e próximos passos de reuniões com o Gemini no Meet",
+    "problema": "Dificuldade de organizar resultados e próximos passos das reuniões.",
+    "solucao": "Usa o Gemini no Google Meet para anotar, resumir e organizar os próximos passos.",
+    "ferramentas": [
+      "Google Meet",
+      "Gemini"
+    ],
+    "resultado": "Atas e próximos passos gerados automaticamente (relato qualitativo; sem métrica na fonte).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+    "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "outro",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-10",
+    "metricas": [],
+    "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+    "como_replicar": [
+      "Ativar a anotação com Gemini no Meet.",
+      "Revisar a ata ao fim da reunião.",
+      "Enviar os próximos passos ao grupo com responsáveis.",
+      "Acompanhar os itens na reunião seguinte."
+    ],
+    "trecho_comprovante": "A empresa usa o Gemini no Meet para anotar tudo o que é discutido em reunião",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-020",
+    "porte": "pequena",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "demanda_comercial"
+    ],
+    "area": "administrativo",
+    "setor": "meio ambiente/bioeconomia",
+    "tipo": "nominal",
+    "empresa": "Ecoporé (Porto Velho, RO)",
+    "pais": "Brasil",
+    "titulo": "Organização ambiental gera o primeiro rascunho de propostas de projeto no Google Docs",
+    "problema": "Redigir propostas de projeto do zero consumia tempo.",
+    "solucao": "Usa o recurso 'Ajude-me a escrever' do Google Docs para criar um rascunho estruturado das propostas.",
+    "ferramentas": [
+      "Google Docs",
+      "Gemini"
+    ],
+    "resultado": "Rascunho gerado 'em segundos' (relato qualitativo; sem métrica de tempo).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Google Brasil - 5 regiões, 10 histórias: como a IA está ajudando pequenas empresas a crescer no Brasil",
+    "fonte_url": "https://blog.google/intl/pt-br/produtos/nas-nuvens/5-regioes-10-historias-como-a-ia-esta-ajudando-pequenas-empresas-a-crescer-no-brasil/",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "outro",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-10",
+    "metricas": [],
+    "esforco_implantacao": "Não informado na fonte (uso de recurso nativo do Google Workspace/Gemini).",
+    "como_replicar": [
+      "Reunir objetivo, público e orçamento do projeto.",
+      "Pedir ao Google Docs o rascunho estruturado.",
+      "Complementar com dados e a linguagem do edital.",
+      "Revisar antes de enviar."
+    ],
+    "trecho_comprovante": "utiliza o 'Ajude-me a Escrever' no Google Docs para, em segundos, criar uma primeira versão",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-021",
+    "porte": "pequena",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [],
+    "area": "operacoes",
+    "setor": "sucata/reciclagem metálica",
+    "tipo": "nominal",
+    "empresa": "Reno Salvage (Nevada)",
+    "pais": "EUA",
+    "titulo": "Ferro-velho usa o ChatGPT para diagnosticar equipamentos e numerar mais de 1.000 peças em uma tarde",
+    "problema": "Máquinas quebram no meio do turno e clientes fazem perguntas técnicas que exigem mais conhecimento do que uma pessoa guarda; o sistema de numeração de peças era adiado por levar semanas.",
+    "solucao": "O gerente usa o ChatGPT para solucionar problemas em tempo real, consultar especificações e organizar um sistema de numeração de mais de 1.000 produtos.",
+    "ferramentas": [
+      "ChatGPT"
+    ],
+    "resultado": "Sistema de numeração de mais de 1.000 produtos organizado em uma tarde (antes visto como trabalho de semanas); mesa de corte a plasma consertada sem esperar técnico por dias. Não reconferido: página da OpenAI bloqueada (403).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "OpenAI - Small business stories, powered by ChatGPT",
+    "fonte_url": "https://openai.com/index/small-business-stories/",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "industria",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026",
+    "metricas": [
+      {
+        "indicador": "Tempo para numerar mais de 1.000 produtos",
+        "antes": "semanas",
+        "depois": "uma tarde",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Não verificado (página bloqueada).",
+    "como_replicar": [
+      "Exportar a lista de itens do estoque.",
+      "Pedir ao assistente de IA uma regra de numeração por categoria.",
+      "Aplicar a regra à lista inteira e revisar exceções.",
+      "Usar o assistente para consultar manuais ao diagnosticar máquinas."
+    ],
+    "trecho_comprovante": null,
+    "verificado": false,
+    "forca": "fraca"
+  },
+  {
+    "id": "P-022",
+    "porte": "pequena",
+    "gargalo": "conhecimento",
+    "gargalos_secundarios": [
+      "informacao"
+    ],
+    "area": "operacoes",
+    "setor": "agricultura (sementes certificadas)",
+    "tipo": "nominal",
+    "empresa": "Sharp & Sharp Certified Seed (Carolina do Sul)",
+    "pais": "EUA",
+    "titulo": "Fazenda familiar digitaliza caderno de safras de 1971 e o torna pesquisável com o ChatGPT",
+    "problema": "Décadas de conhecimento da fazenda estavam em um livro de safras manuscrito, na memória do pai.",
+    "solucao": "A herdeira digitalizou o caderno e o tornou pesquisável no ChatGPT; usa o modo de voz para registrar cargas no campo.",
+    "ferramentas": [
+      "ChatGPT"
+    ],
+    "resultado": "Todas as safras plantadas ficaram acessíveis instantaneamente (datas, produtividade, práticas); sem métrica numérica na fonte. Confirmado apenas por versões traduzidas da página (resultado de busca); a versão em inglês deu 403.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "OpenAI - Small business stories, powered by ChatGPT",
+    "fonte_url": "https://openai.com/index/small-business-stories/",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "agro",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-02",
+    "metricas": [],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Fotografar ou digitalizar os registros manuscritos.",
+      "Transcrever com IA para uma planilha estruturada.",
+      "Consultar o histórico por campo, data e prática.",
+      "Registrar novas cargas por voz."
+    ],
+    "trecho_comprovante": null,
+    "verificado": false,
+    "forca": "fraca"
+  },
+  {
+    "id": "P-023",
+    "porte": "pequena",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "controle"
+    ],
+    "area": "financeiro",
+    "setor": "tecnologia (app de IA para varejo)",
+    "tipo": "nominal",
+    "empresa": "Inside the Box (Florianopolis, SC)",
+    "pais": "Brasil",
+    "titulo": "Startup tem conciliação bancária 100% automática e contas a pagar e receber em 5 a 10 minutos com o Conta Azul",
+    "problema": "Nos primeiros anos o fundador controlava cada centavo do caixa e a conciliação bancária manual era um peso.",
+    "solucao": "Adotou o Conta Azul desde a primeira nota fiscal; os pagamentos chegam conciliados e as notas são enviadas automaticamente; depois somou BPO financeiro e contador parceiro.",
+    "ferramentas": [
+      "Conta Azul"
+    ],
+    "resultado": "Gestão de contas a pagar e receber em 5 a 10 minutos; conciliação bancária 100% automática (relato da empresa em página do fornecedor).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Conta Azul - Case Inside the Box",
+    "fonte_url": "https://contaazul.com/cases-de-sucesso/inside-the-box/",
+    "ano": 2026,
+    "confianca": "alta",
+    "setor_chave": "tecnologia",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-09",
+    "metricas": [
+      {
+        "indicador": "Gestão de contas a pagar e receber",
+        "antes": null,
+        "depois": "5 a 10 minutos",
+        "variacao": null
+      },
+      {
+        "indicador": "Conciliação bancária automática",
+        "antes": null,
+        "depois": "100%",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Adoção desde a emissão da primeira nota fiscal; sem prazo ou custo informados. Página 'Atualizada em 01/09/2026'.",
+    "como_replicar": [
+      "Contratar um ERP financeiro com conciliação (ex.: Conta Azul) já no início.",
+      "Conectar o banco para importar o extrato.",
+      "Emitir as notas pelo sistema para conciliação automática.",
+      "Delegar rotinas a contador ou BPO conforme a empresa cresce."
+    ],
+    "trecho_comprovante": "a gestão de contas a pagar e a receber passou a levar de 5 a 10 minutos",
+    "verificado": true,
+    "forca": "forte"
+  },
+  {
+    "id": "P-024",
+    "porte": "pequena",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "conhecimento"
+    ],
+    "area": "juridico",
+    "setor": "advocacia",
+    "tipo": "nominal",
+    "empresa": "Pallotino Advocacia",
+    "pais": "Brasil",
+    "titulo": "Advogado reduz de 2 horas para 20 minutos a redação de cada petição com IA jurídica",
+    "problema": "Redigir uma petição e pesquisar jurisprudência levava cerca de 2 horas; outras ferramentas de IA davam respostas inconsistentes.",
+    "solucao": "Adotou o Juridico AI, que gera petição estruturada com texto, jurisprudência e fundamentos; o advogado revisa e finaliza.",
+    "ferramentas": [
+      "Juridico AI"
+    ],
+    "resultado": "Tempo por petição de cerca de 2 horas para cerca de 20 minutos (aprox. 83% menos); em caso simples o primeiro rascunho veio cerca de 80% pronto. Depoimento publicado pelo próprio fornecedor.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Juridico AI - Depoimento Leandro Pallotino",
+    "fonte_url": "https://juridico.ai/clientes/leandro-pallotino.md",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "servicos_b2b",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-08",
+    "metricas": [
+      {
+        "indicador": "Tempo por petição",
+        "antes": "cerca de 2 horas",
+        "depois": "cerca de 20 minutos",
+        "variacao": "aprox. -83%"
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Reunir modelos de petição do escritório.",
+      "Usar uma ferramenta de IA jurídica (ex.: Juridico AI) com fatos e pedidos.",
+      "Conferir jurisprudência e fundamentos citados.",
+      "Ajustar o modelo com base nas revisões."
+    ],
+    "trecho_comprovante": "o que antes tomava cerca de duas horas passou a ser feito em torno de vinte minutos",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-025",
+    "porte": "pequena",
+    "gargalo": "demanda_comercial",
+    "gargalos_secundarios": [
+      "comunicacao"
+    ],
+    "area": "atendimento",
+    "setor": "varejo de móveis",
+    "tipo": "nominal",
+    "empresa": "Bordinho Moveis (MG)",
+    "pais": "Brasil",
+    "titulo": "Loja de móveis testa agente de IA do WhatsApp Business para responder clientes 24 horas por dia",
+    "problema": "Clientes que chegam pelo WhatsApp e não são respondidos rápido se perdem antes da venda.",
+    "solucao": "Testou o Business AI da Meta, agente do WhatsApp Business que responde clientes e sugere itens do catálogo, com o dono podendo assumir a conversa.",
+    "ferramentas": [
+      "WhatsApp Business AI (Meta)"
+    ],
+    "resultado": "Segundo a Meta, o agente respondeu praticamente todos os clientes já nas primeiras interações e ajudou na conversão; sem números para o Brasil (no piloto do México, empresas registraram aumento de 10% nos negócios).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Exame - WhatsApp Business lanca IA para PMEs atenderem clientes 24 horas por dia",
+    "fonte_url": "https://exame.com/negocios/whatsapp-business-lanca-ia-para-pmes-atenderem-clientes-24-horas-por-dia/",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "varejo_ecommerce",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026-02",
+    "metricas": [
+      {
+        "indicador": "Negócios (piloto no México, não Bordinho)",
+        "antes": null,
+        "depois": null,
+        "variacao": "+10%"
+      }
+    ],
+    "esforco_implantacao": "Não informado; o porte da Bordinho Móveis também não consta na matéria.",
+    "como_replicar": [
+      "Migrar o atendimento para o WhatsApp Business com catálogo cadastrado.",
+      "Ativar o agente de IA com as regras da loja.",
+      "Definir quando o dono assume a conversa.",
+      "Medir respostas e vendas."
+    ],
+    "trecho_comprovante": "conseguiu responder praticamente todos os clientes nas primeiras interações",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-026",
+    "porte": "pequena",
+    "gargalo": "demanda_comercial",
+    "gargalos_secundarios": [],
+    "area": "comercial",
+    "setor": "estúdio no-code (serviços B2B)",
+    "tipo": "nominal",
+    "empresa": "Sommo",
+    "pais": "EUA",
+    "titulo": "Estúdio no-code cria gerador de especificações com IA e capta 500 a 800 leads extras por mês",
+    "problema": "Dificuldade de se destacar em um mercado de agências saturado e de gerar leads de forma escalável.",
+    "solucao": "Construiu em um dia, no Make, um gerador de especificação de requisitos de software: coleta a ideia do visitante, usa o ChatGPT para redigir e envia o documento por e-mail.",
+    "ferramentas": [
+      "Make",
+      "ChatGPT"
+    ],
+    "resultado": "500 a 800 leads adicionais por mês com até 3% de conversão; usuários ativos no site 5x e tempo de engajamento 2x (números do fornecedor Make). Porte não confirmado (diretórios indicam 10 a 49 funcionários).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Make - How 3 Clients Boosted Lead-Gen With Automation",
+    "fonte_url": "https://www.make.com/en/blog/success-stories-make-it-in-lead-gen-marketing",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "servicos_b2b",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-08",
+    "metricas": [
+      {
+        "indicador": "Leads adicionais por mês",
+        "antes": null,
+        "depois": "500 a 800",
+        "variacao": null
+      },
+      {
+        "indicador": "Conversão",
+        "antes": null,
+        "depois": "até 3%",
+        "variacao": null
+      },
+      {
+        "indicador": "Usuários ativos no site",
+        "antes": null,
+        "depois": "5x",
+        "variacao": null
+      },
+      {
+        "indicador": "Tempo de engajamento",
+        "antes": null,
+        "depois": "2x",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Construído em um dia no Make.",
+    "como_replicar": [
+      "Criar formulário em que o visitante descreve a ideia.",
+      "Montar no Make um fluxo que envia a ideia ao modelo de IA e gera o documento.",
+      "Enviar o documento por e-mail e registrar o lead.",
+      "Acompanhar leads e conversão."
+    ],
+    "trecho_comprovante": "500–800 additional leads every month",
+    "verificado": true,
+    "forca": "fraca"
+  },
+  {
+    "id": "P-027",
+    "porte": "media",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "manual_repetitivo"
+    ],
+    "area": "operacoes",
+    "setor": "serviços B2B (assistentes virtuais)",
+    "tipo": "nominal",
+    "empresa": "Wing Assistant",
+    "pais": "EUA",
+    "titulo": "Make e ChatGPT ligam Pipedrive, Customer.io e Paddle e montam newsletter em horas",
+    "problema": "Dados de clientes eram sincronizados à mão entre Pipedrive, Customer.io e Paddle e a curadoria de uma newsletter levava até 4 dias.",
+    "solucao": "Automatizou no Make a captação, o resumo e a pontuação de notícias com o ChatGPT e a sincronização de dados e descadastros entre os sistemas.",
+    "ferramentas": [
+      "Make",
+      "ChatGPT",
+      "Airtable",
+      "Pipedrive",
+      "Customer.io",
+      "Paddle"
+    ],
+    "resultado": "Produção de newsletter de 4 dias para algumas horas; cerca de 6 horas por mês poupadas na sincronização de dados. Porte corrigido: Wing Assistant tem cerca de 431 a mais de 500 funcionários (diretórios), portanto não é pequena.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Make - Wing Assistant automates newsletter and data sync",
+    "fonte_url": "https://www.make.com/en/success-stories/wing-assistant-automates-newsletter-data-sync",
+    "ano": 2024,
+    "confianca": "media",
+    "setor_chave": "servicos_b2b",
+    "funcionarios": 431,
+    "porte_confirmado": false,
+    "data_fonte": "2024-11",
+    "metricas": [
+      {
+        "indicador": "Produção da newsletter",
+        "antes": "até 4 dias",
+        "depois": "algumas horas",
+        "variacao": null
+      },
+      {
+        "indicador": "Tempo de sincronização de dados",
+        "antes": null,
+        "depois": null,
+        "variacao": "-6 horas por mês"
+      }
+    ],
+    "esforco_implantacao": "Não quantificado na fonte.",
+    "como_replicar": [
+      "Mapear onde os dados são digitados duas vezes.",
+      "Criar cenários no Make que sincronizam os sistemas.",
+      "Usar IA para resumir e pontuar conteúdos.",
+      "Revisar a newsletter antes do envio."
+    ],
+    "trecho_comprovante": "reduced the time spent on newsletters from four days down to just a few hours.",
+    "verificado": true,
+    "forca": "fraca"
+  },
+  {
+    "id": "P-028",
+    "porte": "pequena",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [],
+    "area": "marketing",
+    "setor": "agência criativa",
+    "tipo": "nominal",
+    "empresa": "Basilica",
+    "pais": "EUA",
+    "titulo": "Agência automatiza fluxo de conteúdo no Make com Claude e quase triplica a produção de blogs",
+    "problema": "Precisava entregar vários blogs técnicos em poucos dias junto de outros trabalhos, e prompts manuais no ChatGPT eram lentos e inconsistentes.",
+    "solucao": "Montou no Make um fluxo ponta a ponta (Sheets, Docs, Claude, Slack) com a voz da marca e palavras-chave, estendido depois para posts, anúncios e e-mails.",
+    "ferramentas": [
+      "Make",
+      "Claude",
+      "Google Sheets",
+      "Google Docs",
+      "Slack"
+    ],
+    "resultado": "5 a 6 horas poupadas por blog; produtividade de redação de blogs +167%; quase o triplo de blogs sem recursos adicionais (números do fornecedor Make). Porte não encontrado.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Make - How 3 Clients Scaled Content Production With Automation",
+    "fonte_url": "https://www.make.com/en/blog/success-stories-make-it-in-content-marketing",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "servicos_b2b",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2025-08",
+    "metricas": [
+      {
+        "indicador": "Tempo por blog",
+        "antes": null,
+        "depois": null,
+        "variacao": "-5 a 6 horas"
+      },
+      {
+        "indicador": "Produtividade de redação",
+        "antes": null,
+        "depois": null,
+        "variacao": "+167%"
+      },
+      {
+        "indicador": "Volume de blogs",
+        "antes": null,
+        "depois": "quase o triplo",
+        "variacao": "~3x"
+      }
+    ],
+    "esforco_implantacao": "Não informado.",
+    "como_replicar": [
+      "Registrar a voz da marca e as palavras-chave em planilha.",
+      "Criar no Make um fluxo que gera rascunhos com IA.",
+      "Salvar no Docs e avisar o revisor no Slack.",
+      "Estender para outros formatos."
+    ],
+    "trecho_comprovante": "Nearly triple blog output without increasing resources",
+    "verificado": true,
+    "forca": "fraca"
+  },
+  {
+    "id": "P-029",
+    "porte": "pequena",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [
+      "capacidade"
+    ],
+    "area": "marketing",
+    "setor": "mídia digital (cripto)",
+    "tipo": "nominal",
+    "empresa": "GhostFlow / SpazioCrypto",
+    "pais": "Italia",
+    "titulo": "Site de notícias passa de 2 para 8 idiomas com tradução automática no Make, com 80% de economia",
+    "problema": "O tradutor dinâmico entregava traduções ruins, prejudicava o SEO e deixava o site lento (mais de 10 segundos).",
+    "solucao": "A agência GhostFlow criou 8 sites localizados em Ghost CMS, com conteúdo traduzido automaticamente por cenários no Make (tradução, publicação, SEO e redes sociais).",
+    "ferramentas": [
+      "Make",
+      "Ghost CMS",
+      "DeepL",
+      "IndexNow",
+      "Google Search Console"
+    ],
+    "resultado": "80% de economia mensal frente a tradutores dinâmicos como Weglot ou Lokalise; 8 idiomas em vez de 2. Porte de GhostFlow e SpazioCrypto não informado.",
+    "complexidade_implantacao": "alta",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Make - GhostFlow automated content localization with AI",
+    "fonte_url": "https://www.make.com/en/success-stories/automated-content-locatiozation-with-ai-ghostflow",
+    "ano": 2024,
+    "confianca": "media",
+    "setor_chave": "tecnologia",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2024-07",
+    "metricas": [
+      {
+        "indicador": "Custo mensal com tradução",
+        "antes": null,
+        "depois": null,
+        "variacao": "-80%"
+      },
+      {
+        "indicador": "Idiomas do site",
+        "antes": "2",
+        "depois": "8",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": "Oito instâncias separadas de Ghost CMS; prazo não informado.",
+    "como_replicar": [
+      "Escolher um CMS com uma instância por idioma.",
+      "Traduzir via API (ex.: DeepL).",
+      "Publicar e enviar à indexação.",
+      "Compartilhar nas redes."
+    ],
+    "trecho_comprovante": "80% cost saving every month",
+    "verificado": true,
+    "forca": "fraca"
+  },
+  {
+    "id": "P-030",
+    "porte": "pequena",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "controle"
+    ],
+    "area": "financeiro",
+    "setor": "pequenos negócios (multissetor)",
+    "tipo": "padrao",
+    "empresa": null,
+    "pais": "Brasil",
+    "titulo": "Dono de pequeno negócio gasta cerca de 9 horas por semana em burocracia financeira",
+    "problema": "Tarefas fiscais, emissão de notas, controle de entradas e saídas e conferência manual de pagamentos tomam o tempo do dono.",
+    "solucao": "Padrão de dor que a automação financeira (emissão de notas, conciliação, cobrança) e a IA atacam; a fonte é uma pesquisa de diagnóstico, não um caso de solução.",
+    "ferramentas": [],
+    "resultado": "Pesquisa Bridge Research para o Nu Empresas (1.200 donos de pequenos negócios no Brasil, jul/2026): cerca de 9 horas semanais; obrigações fiscais 43%, controle de entradas e saídas 41%, emissão de notas 40%, conferir manualmente se os pagamentos chegaram 30%; 66% dizem que reduz a lucratividade.",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Finsiders Brasil - pesquisa Nu Empresas/Bridge Research",
+    "fonte_url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/burocracia-consome-tres-meses-de-trabalho-por-ano-dos-pequenos-empreendedores/",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "financeiro_seguros",
+    "funcionarios": null,
+    "porte_confirmado": true,
+    "data_fonte": "2026-10",
+    "metricas": [
+      {
+        "indicador": "Horas semanais em burocracia",
+        "antes": null,
+        "depois": "cerca de 9 horas",
+        "variacao": null
+      },
+      {
+        "indicador": "Donos que concordam que reduz lucratividade",
+        "antes": null,
+        "depois": "66%",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Medir quantas horas por semana o dono gasta em fiscal, notas e conferência.",
+      "Escolher a tarefa de maior peso.",
+      "Automatizar com ERP ou conciliação bancária (ex.).",
+      "Reavaliar as horas depois de 30 dias."
+    ],
+    "trecho_comprovante": "66% dos entrevistados concordam que essas tarefas reduzem a lucratividade do negócio.",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-031",
+    "porte": "pequena",
+    "gargalo": "comunicacao",
+    "gargalos_secundarios": [
+      "demanda_comercial"
+    ],
+    "area": "atendimento",
+    "setor": "pequenos negócios (multissetor)",
+    "tipo": "padrao",
+    "empresa": null,
+    "pais": "Brasil",
+    "titulo": "Chatbots de WhatsApp e de vendas já são usados por 30 a 41% dos pequenos negócios",
+    "problema": "Pequenos negócios vendem e atendem por mensageria e precisam responder rápido com pouca gente.",
+    "solucao": "Padrão de uso de chatbots de WhatsApp e de vendas; o estudo mostra adoção, não resultado.",
+    "ferramentas": [],
+    "resultado": "Sebrae, Transformação Digital nos Pequenos Negócios 2025 (Brasil; amostra e metodologia não informadas na matéria): 41% usam chatbots no WhatsApp, 30% chatbots de vendas, 20% chatbots financeiros; uso espontâneo de IA de 44% (EPP 65%, MEI 35%).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Agencia Sebrae de Noticias - De GPS a ChatGPT",
+    "fonte_url": "https://agenciasebrae.com.br/inovacao-e-tecnologia/de-gps-a-chat-gpt-maioria-dos-pequenos-negocios-abraca-a-inteligencia-artificial-para-aumentar-resultados/",
+    "ano": 2025,
+    "confianca": "media",
+    "setor_chave": "varejo_ecommerce",
+    "funcionarios": null,
+    "porte_confirmado": true,
+    "data_fonte": "2025-06",
+    "metricas": [
+      {
+        "indicador": "Uso de chatbots no WhatsApp",
+        "antes": null,
+        "depois": "41%",
+        "variacao": null
+      },
+      {
+        "indicador": "Uso de chatbots de vendas",
+        "antes": null,
+        "depois": "30%",
+        "variacao": null
+      },
+      {
+        "indicador": "Uso espontâneo de IA",
+        "antes": null,
+        "depois": "44%",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Começar por respostas rápidas no WhatsApp Business.",
+      "Cadastrar as 10 perguntas mais comuns.",
+      "Adicionar um chatbot de vendas.",
+      "Medir tempo de resposta e conversões."
+    ],
+    "trecho_comprovante": "chatbots com robôs no Whatsapp (41%)",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-032",
+    "porte": "pequena",
+    "gargalo": "capacidade",
+    "gargalos_secundarios": [
+      "comunicacao"
+    ],
+    "area": "atendimento",
+    "setor": "MPMEs (multissetor)",
+    "tipo": "padrao",
+    "empresa": null,
+    "pais": "Brasil",
+    "titulo": "MPMEs brasileiras usam IA principalmente em assistentes virtuais de atendimento e na agilização do trabalho",
+    "problema": "Equipes enxutas de micro, pequenas e médias empresas precisam ganhar produtividade e atender melhor sem contratar.",
+    "solucao": "Padrão de uso: assistentes virtuais de atendimento e agilização de tarefas.",
+    "ferramentas": [],
+    "resultado": "Microsoft/Edelman (300 entrevistas online com líderes de MPMEs, dez/2023, Brasil): 74% usam IA sempre ou muitas vezes; assistentes virtuais de atendimento 69%, agilizar o trabalho 64%; benefícios: eficiência e produtividade 72%, melhor atendimento 58%, redução de custos 46%. Pesquisa encomendada pela Microsoft (percepção dos gestores).",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "semanas",
+    "fonte_nome": "Microsoft Brasil - IA ja e parte do dia a dia de 74% das MPMEs brasileiras",
+    "fonte_url": "https://news.microsoft.com/pt-br/inteligencia-artificial-ja-e-parte-do-dia-a-dia-de-74-das-mpmes-brasileiras",
+    "ano": 2024,
+    "confianca": "media",
+    "setor_chave": "servicos_b2b",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2024-03",
+    "metricas": [
+      {
+        "indicador": "Uso de IA sempre ou muitas vezes",
+        "antes": null,
+        "depois": "74%",
+        "variacao": null
+      },
+      {
+        "indicador": "Assistentes virtuais de atendimento",
+        "antes": null,
+        "depois": "69%",
+        "variacao": null
+      },
+      {
+        "indicador": "Ganho de eficiência e produtividade",
+        "antes": null,
+        "depois": "72%",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Começar por um assistente virtual de atendimento.",
+      "Usar IA para tarefas repetitivas.",
+      "Medir produtividade.",
+      "Treinar a equipe."
+    ],
+    "trecho_comprovante": "A maioria das empresas pesquisadas disseram usar IA como assistentes virtuais para atendimento ao cliente (69%).",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-033",
+    "porte": "pequena",
+    "gargalo": "integracao",
+    "gargalos_secundarios": [
+      "decisao"
+    ],
+    "area": "ti",
+    "setor": "PMEs (multissetor, até 200 funcionários)",
+    "tipo": "padrao",
+    "empresa": null,
+    "pais": "Global (inclui América Latina)",
+    "titulo": "PMEs em crescimento têm o dobro de chance de ter stack de tecnologia integrado",
+    "problema": "Sistemas desconectados impedem que a IA gere resultado em PMEs.",
+    "solucao": "Padrão: PMEs que crescem integram sistemas e dados antes ou junto com a IA.",
+    "ferramentas": [],
+    "resultado": "Salesforce SMB Trends (3.350 líderes de empresas de até 200 funcionários, América do Norte, Latina, Ásia-Pacífico e Europa, 3/8 a 16/9/2024): 66% das PMEs em crescimento têm stack integrado contra 32% das em queda; 83% das em crescimento usam IA; 91% dos usuários de IA dizem que ela aumenta a receita (percepção, pesquisa de fornecedor).",
+    "complexidade_implantacao": "media",
+    "tempo_para_valor": "meses",
+    "fonte_nome": "Salesforce - SMB AI trends 2025",
+    "fonte_url": "https://www.salesforce.com/news/stories/smbs-ai-trends-2025",
+    "ano": 2024,
+    "confianca": "media",
+    "setor_chave": "tecnologia",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2024-12",
+    "metricas": [
+      {
+        "indicador": "PMEs com stack integrado (crescimento vs queda)",
+        "antes": "32%",
+        "depois": "66%",
+        "variacao": "2x"
+      },
+      {
+        "indicador": "Uso de IA em PMEs em crescimento",
+        "antes": null,
+        "depois": "83%",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Inventariar sistemas.",
+      "Integrar CRM, financeiro e atendimento.",
+      "Aplicar IA sobre dados integrados.",
+      "Medir receita."
+    ],
+    "trecho_comprovante": "twice as likely to have an integrated tech stack (66% vs 32%)",
+    "verificado": true,
+    "forca": "media"
+  },
+  {
+    "id": "P-034",
+    "porte": "pequena",
+    "gargalo": "manual_repetitivo",
+    "gargalos_secundarios": [
+      "informacao",
+      "demanda_comercial"
+    ],
+    "area": "operacoes",
+    "setor": "e-commerce (lojistas Nuvemshop)",
+    "tipo": "padrao",
+    "empresa": null,
+    "pais": "Brasil",
+    "titulo": "Copiloto de IA da Nuvemshop automatiza cadastro de catálogo e diagnóstico de conversão para lojistas",
+    "problema": "Lojistas pequenos gastam tempo em cadastro de produtos (descrições, SEO, peso, dimensões) e em análise de campanhas e conversão.",
+    "solucao": "A plataforma lançou a Lumi, copiloto com mais de 30 agentes de IA ligado ao catálogo, pedidos e métricas, que automatiza tarefas por comando em linguagem natural.",
+    "ferramentas": [
+      "Nuvemshop Lumi"
+    ],
+    "resultado": "Dados da própria Nuvemshop: mais de 55 mil lojistas engajados, cerca de 1 milhão de interações por mês, mais de 3,3 milhões de horas devolvidas aos lojistas, 92% de satisfação (interna); a data completa não aparece na matéria; lojistas citados relatam ganhos qualitativos, sem números.",
+    "complexidade_implantacao": "baixa",
+    "tempo_para_valor": "dias",
+    "fonte_nome": "Central do Varejo - Nuvemshop lanca Lumi",
+    "fonte_url": "https://centraldovarejo.com.br/nuvemshop-lanca-lumi-ia-que-automatiza-a-gestao-de-e-commerces-e-ja-registra-1-milhao-de-interacoes-por-mes/",
+    "ano": 2026,
+    "confianca": "media",
+    "setor_chave": "varejo_ecommerce",
+    "funcionarios": null,
+    "porte_confirmado": false,
+    "data_fonte": "2026",
+    "metricas": [
+      {
+        "indicador": "Lojistas engajados",
+        "antes": null,
+        "depois": "mais de 55 mil",
+        "variacao": null
+      },
+      {
+        "indicador": "Interações por mês",
+        "antes": null,
+        "depois": "1 milhão",
+        "variacao": null
+      },
+      {
+        "indicador": "Horas devolvidas aos lojistas",
+        "antes": null,
+        "depois": "mais de 3,3 milhões",
+        "variacao": null
+      }
+    ],
+    "esforco_implantacao": null,
+    "como_replicar": [
+      "Usar o copiloto da plataforma.",
+      "Começar por descrições de produtos.",
+      "Pedir diagnóstico de conversão.",
+      "Revisar sugestões."
+    ],
+    "trecho_comprovante": "mais de 3,3 milhões de horas devolvidas aos lojistas.",
+    "verificado": true,
+    "forca": "media"
+  }
+]

@@ -1,0 +1,4 @@
+# O app só precisa de data/perguntas.json e data/pesquisa/casos-final.json.
+# Material bruto da pesquisa e scripts não precisam ir para o site público.
+data/pesquisa/v2
+data/pesquisa/*.py
