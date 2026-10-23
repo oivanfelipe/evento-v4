@@ -105,8 +105,8 @@ function mensagemWhats(l) {
   const primeiro = (l.nome || "").split(" ")[0];
   const g = gargaloReal(l.resp) ? nomeGargalo(l.resp.gargalo_principal).toLowerCase() : null;
   return g
-    ? `Olá, ${primeiro}! Aqui é da V4 Company. Vi o seu Mapa de Gargalos de hoje no evento: o ponto que mais pesa na ${l.empresa} é ${g}. Posso te mostrar em 15 minutos como empresas parecidas resolveram isso?`
-    : `Olá, ${primeiro}! Aqui é da V4 Company. Foi um prazer ter você no evento. Posso te mandar o Mapa de Gargalos da ${l.empresa} e conversar 15 minutos sobre ele?`;
+    ? `Olá, ${primeiro}! Aqui é da V4 Carvalho. Vi o seu Mapa de Gargalos de hoje no evento: o ponto que mais pesa na ${l.empresa} é ${g}. Posso te mostrar em 15 minutos como empresas parecidas resolveram isso?`
+    : `Olá, ${primeiro}! Aqui é da V4 Carvalho. Foi um prazer ter você no evento. Posso te mandar o Mapa de Gargalos da ${l.empresa} e conversar 15 minutos sobre ele?`;
 }
 
 function detalhe(l) {

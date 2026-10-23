@@ -13,9 +13,9 @@ export const GARGALOS = {
     },
     oportunidade: "Tirar do time o volume que não precisa de julgamento humano e liberar capacidade sem contratar na mesma proporção.",
     aplicacoes: [
-      "Agentes de IA que respondem e resolvem o volume repetitivo (atendimento, triagem, pedidos)",
-      "Automação do fluxo de entrada: classificar, priorizar e distribuir demanda sozinho",
-      "Copilotos que reduzem o tempo de produção de documentos, propostas e relatórios",
+      "Assistentes de IA que respondem e resolvem o volume repetitivo (atendimento, separação de pedidos)",
+      "Entrada de demanda automática: classificar, priorizar e distribuir sozinho",
+      "Assistentes de IA que reduzem o tempo de produção de documentos, propostas e relatórios",
     ],
     primeiro_passo: "Medir por uma semana quanto do volume é repetitivo e escolher o tipo de demanda mais frequente para automatizar primeiro.",
   },
@@ -30,8 +30,8 @@ export const GARGALOS = {
     },
     oportunidade: "É o gargalo com retorno mais rápido e menor risco: automação de tarefas que já têm regra clara.",
     aplicacoes: [
-      "Extração automática de dados de documentos, e-mails e notas (OCR + IA) direto para o sistema",
-      "Fluxos no-code (n8n, Make, Zapier) ligando planilhas, CRM e ERP",
+      "Leitura automática de notas, contratos e e-mails, com os dados indo direto para o sistema",
+      "Automações prontas (sem programar) ligando planilhas, CRM e sistema de gestão",
       "Conciliação, cobrança e lançamentos automatizados",
     ],
     primeiro_passo: "Listar as 5 tarefas mais repetidas da semana e escolher a que tem entrada e saída mais padronizadas.",
@@ -47,8 +47,8 @@ export const GARGALOS = {
     },
     oportunidade: "Centralizar o acesso: um assistente que responde em segundos a partir dos documentos e sistemas da própria empresa.",
     aplicacoes: [
-      "Assistente interno com busca semântica (RAG) sobre contratos, manuais e históricos",
-      "Resumos automáticos de reuniões, chamadas e tickets",
+      "Assistente interno que responde em segundos usando seus contratos, manuais e históricos",
+      "Resumos automáticos de reuniões, ligações e chamados",
       "Base de conhecimento viva, atualizada a partir do que a equipe já produz",
     ],
     primeiro_passo: "Escolher um tipo de pergunta que a equipe repete todo dia ('onde está o contrato X?') e montar um assistente só para ela.",
@@ -82,7 +82,7 @@ export const GARGALOS = {
     oportunidade: "Redesenhar antes de automatizar: remover etapas e automatizar o que sobra, com aprovações automáticas nos casos de baixo risco.",
     aplicacoes: [
       "Fluxos de aprovação automatizados com regras e exceções",
-      "IA que faz a triagem e o pré-preenchimento das etapas burocráticas",
+      "IA que faz a pré-análise e o preenchimento das etapas burocráticas",
       "Painel de gargalos do processo (tempo por etapa)",
     ],
     primeiro_passo: "Mapear um processo ponta a ponta com o tempo de cada etapa e cortar as duas etapas que ninguém sabe justificar.",
@@ -96,9 +96,9 @@ export const GARGALOS = {
       risco: "Dados duplicados e divergentes entre sistemas.",
       crescimento: "Cada ferramenta nova piora o problema se não estiver conectada.",
     },
-    oportunidade: "Conectar os sistemas por API e automação, com a IA cobrindo o que não tem API (leitura de documentos, e-mails).",
+    oportunidade: "Conectar os sistemas entre si de forma automática, com a IA cobrindo o que não dá para conectar (leitura de documentos e e-mails).",
     aplicacoes: [
-      "Integrações via n8n, Make ou Zapier entre CRM, ERP, financeiro e atendimento",
+      "Integração automática entre CRM, sistema de gestão, financeiro e atendimento",
       "IA como camada de tradução entre formatos e sistemas legados",
       "Sincronização automática de cadastro, status e faturamento",
     ],
@@ -134,7 +134,7 @@ export const GARGALOS = {
     aplicacoes: [
       "Assistente treinado com os documentos, e-mails e decisões do especialista",
       "Gravar e transcrever o 'como fazer' e transformar em procedimento pesquisável",
-      "Copilotos de análise (contratos, propostas, laudos) que elevam o nível de toda a equipe",
+      "Assistentes de IA de análise (contratos, propostas, laudos) que elevam o nível de toda a equipe",
     ],
     primeiro_passo: "Gravar 3 execuções reais da tarefa do especialista e transformá-las em procedimento com apoio de IA.",
   },
@@ -160,17 +160,17 @@ export const GARGALOS = {
     sintoma: "Faltam oportunidades ou elas não viram venda por falta de follow-up.",
     impacto: {
       receita: "É o gargalo mais direto: oportunidade perdida é receita perdida.",
-      custo: "Time comercial caro gastando tempo com lead frio e tarefas administrativas.",
+      custo: "Time comercial caro gastando tempo com contato frio e tarefas administrativas.",
       risco: "Dependência de poucos vendedores e de indicação.",
       crescimento: "Sem funil previsível não existe crescimento previsível.",
     },
     oportunidade: "Automatizar a qualificação e o follow-up para que o humano entre só nas conversas com chance real de fechar.",
     aplicacoes: [
-      "Qualificação e resposta imediata de leads por IA (WhatsApp, e-mail, site)",
+      "Atendimento e qualificação imediata de contatos de venda por IA (WhatsApp, e-mail, site)",
       "Cadências de follow-up automáticas e personalizadas",
-      "Pontuação de leads e priorização da carteira por probabilidade de compra",
+      "Priorização da carteira de clientes pela chance de compra",
     ],
-    primeiro_passo: "Medir o tempo entre o lead chegar e o primeiro contato: reduzir isso a minutos costuma ser o maior ganho imediato.",
+    primeiro_passo: "Medir o tempo entre o contato chegar e a primeira resposta: reduzir isso a minutos costuma ser o maior ganho imediato.",
   },
 };
 

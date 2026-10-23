@@ -432,7 +432,7 @@ function renderMapa(m) {
   const hoje = new Date().toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
   const el = h("section", { class: "mapa" },
     h("p", { class: "status-salvo", id: "status-salvo" }, "Registrando as suas respostas…"),
-    h("div", { class: "so-impressao cabecalho-pdf" }, h("b", {}, "V4 Company"), h("span", {}, `Mapa de Gargalos e Oportunidades · ${resp.empresa} · ${hoje}`)),
+    h("div", { class: "so-impressao cabecalho-pdf" }, h("b", {}, "V4 Carvalho"), h("span", {}, `Mapa de Gargalos e Oportunidades · ${resp.empresa} · ${hoje}`)),
     h("div", { class: "etapa" }, "Seu resultado"),
     h("h2", {}, `${nome ? nome + ", este" : "Este"} é o Mapa de Gargalos e Oportunidades de ${resp.empresa}`),
     h("p", { class: "resumo" }, m.resumo || `Suas respostas apontam ${m.itens.map((i) => i.nome.toLowerCase()).join(", ")} como os três pontos que mais seguram a empresa. A ordem abaixo é a ordem em que vale atacar.`),
@@ -446,7 +446,7 @@ function renderMapa(m) {
       h("div", { class: "passo" }, h("h4", {}, "Onde aplicar IA e automação"), h("ul", {}, i.aplicacoes.map((a) => h("li", {}, a)))),
       h("div", { class: "passo" }, h("h4", {}, "Primeiro passo (próxima semana)"), h("p", {}, i.primeiro_passo)),
       h("div", { class: "passo" }, h("h4", {}, "Quem já fez, com fonte"), i.casos.map(cartaoCaso)))),
-    h("p", { class: "nota" }, "Os resultados dos casos foram reportados pelas próprias empresas ou fornecedores nas fontes indicadas e não são promessa de resultado. O texto deste Mapa foi " + (m.ia ? "personalizado com IA a partir" : "montado a partir") + " das suas respostas e do banco de casos da V4 Company."),
+    h("p", { class: "nota" }, "Os resultados dos casos foram reportados pelas próprias empresas ou fornecedores nas fontes indicadas e não são promessa de resultado. O texto deste Mapa foi " + (m.ia ? "personalizado com IA a partir" : "montado a partir") + " das suas respostas e do banco de casos da V4 Carvalho."),
     h("div", { class: "acoes" }, h("button", { class: "btn", type: "button", onclick: salvarPDF }, "Salvar em PDF")));
   $chat.append(el);
   $chat.scrollTop = el.offsetTop - 12;
