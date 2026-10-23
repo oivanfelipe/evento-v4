@@ -55,7 +55,7 @@ Use como argumento, sem despejar tudo de uma vez:
 
 **Programação (ordem):** IA e automação → cases reais → Teoria das Restrições → diagnóstico ao vivo → apresentação V4 (10 a 15 min) → networking.
 
-**Arte do convite:** existe uma imagem oficial do evento (título, data, local e botão "Confirme sua presença"). Envie a imagem junto com a Etapa 2, depois que o lead disser "pode" ou demonstrar interesse, e nunca na abertura. Reenvie se ele pedir o endereço ou os detalhes.
+**Arte do convite** (arquivo: `docs/assets/convite-ia-aplicada-aos-negocios.webp`): existe uma imagem oficial do evento (título, data, local e botão "Confirme sua presença"). Envie a imagem junto com a Etapa 2, depois que o lead disser "pode" ou demonstrar interesse, e nunca na abertura. Reenvie se ele pedir o endereço ou os detalhes.
 
 **Regra de uso:** na primeira mensagem, cite no máximo **uma** oportunidade, de preferência o Mapa. O resto, só se o lead demonstrar interesse ou perguntar.
 
