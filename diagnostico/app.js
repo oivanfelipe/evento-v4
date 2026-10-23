@@ -47,7 +47,11 @@ const montarDock = (...itens) => $dock.append(...itens.filter(Boolean));
 const limparDock = () => { if (gravacao) { gravacao.cancelar(); gravacao = null; } $dock.replaceChildren(); };
 const brl = (n) => n.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const primeiroNome = () => (resp.nome || "").trim().split(/\s+/)[0] || "";
-const tpl = (t) => t.replace("{nome}", primeiroNome());
+const tpl = (t) => t
+  .replace("{nome}", primeiroNome())
+  .replace("{empresa}", resp.empresa || "empresa")
+  .replace("{total}", String(passos.length))
+  .replace("{situacao_principal}", (Array.isArray(resp.situacoes) && CURTO[resp.situacoes[0]]) || "o problema que você apontou");
 const sorteia = (a) => a[Math.floor(Math.random() * a.length)];
 const ICONES = {
   mic: '<svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>',
@@ -477,7 +481,7 @@ async function iniciar() {
   reenviarFila();
   $chat.append(h("div", { class: "capa" },
     h("h1", {}, "Onde a sua empresa trava?"),
-    h("p", {}, "Em 10 perguntas rápidas você recebe o seu Mapa de Gargalos e Oportunidades, com aplicações reais de IA e automação e casos de quem já fez.")));
+    h("p", {}, `Em ${passos.length} perguntas rápidas você recebe o seu Mapa de Gargalos e Oportunidades, com aplicações reais de IA e automação e casos de quem já fez.`)));
   montarDock(h("button", { class: "btn", type: "button", onclick: () => { $chat.replaceChildren(); proximo(); } }, "Começar"));
 }
 iniciar();

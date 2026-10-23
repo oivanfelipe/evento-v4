@@ -78,7 +78,7 @@ async function carregarLeads() {
 
 // concluiu = chegou ao Mapa; parcial = parou no meio (o app guarda checkpoints); so_cadastro = só se identificou.
 const estado = (l) => (!l.resp ? "so_cadastro" : l.resp.mapa && Array.isArray(l.resp.mapa.itens) ? "concluiu" : "parcial");
-const ETAPA = { perfil: "o perfil da empresa", diagnostico: "as situações e as horas perdidas", decisao: "quem decide e o investimento", aprofundar: "a pergunta final" };
+const ETAPA = { perfil: "o perfil da empresa", diagnostico: "as situações, o impacto e as horas perdidas", decisao: "uso de IA, quem decide, investimento e prazo", aprofundar: "a pergunta final" };
 const gargaloReal = (r) => (r && GARGALOS[r.gargalo_principal] ? r.gargalo_principal : null);
 
 function top3(r) {

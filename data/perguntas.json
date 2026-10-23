@@ -1,5 +1,5 @@
 {
-  "versao": 3,
+  "versao": 4,
   "gargalos": {
     "capacidade": "Capacidade",
     "manual_repetitivo": "Manual/repetitivo",
@@ -37,7 +37,7 @@
       "salvar_imediatamente": true,
       "abertura": [
         "Oi! Eu sou o assistente da V4 Carvalho.",
-        "Em 10 perguntas rápidas eu monto o Mapa de Gargalos e Oportunidades da sua empresa: onde o tempo e o dinheiro estão vazando e como outras empresas resolveram isso com IA e automação.",
+        "Em {total} perguntas rápidas eu monto o Mapa de Gargalos e Oportunidades da sua empresa: onde o tempo e o dinheiro estão vazando e como outras empresas resolveram isso com IA e automação.",
         "Ao continuar, você aceita que a V4 Carvalho entre em contato sobre o seu resultado."
       ],
       "perguntas": [
@@ -192,6 +192,29 @@
           "min": 3
         },
         {
+          "id": "impacto",
+          "tipo": "escolha_unica",
+          "texto": "E esse problema custa principalmente…",
+          "opcoes": [
+            {
+              "valor": "receita",
+              "label": "Receita que deixamos de ganhar"
+            },
+            {
+              "valor": "custo",
+              "label": "Custo e horas pagas à toa"
+            },
+            {
+              "valor": "risco",
+              "label": "Risco: erro, multa ou perda de cliente"
+            },
+            {
+              "valor": "crescimento",
+              "label": "Trava o nosso crescimento"
+            }
+          ]
+        },
+        {
           "id": "horas_perdidas",
           "tipo": "escolha_unica",
           "texto": "Quantas horas por semana o time gasta com esses problemas?",
@@ -227,6 +250,29 @@
         "Quase lá. Duas perguntas rápidas."
       ],
       "perguntas": [
+        {
+          "id": "maturidade_ia",
+          "tipo": "escolha_unica",
+          "texto": "E como vocês usam IA hoje?",
+          "opcoes": [
+            {
+              "valor": "nenhuma",
+              "label": "Ainda não usamos"
+            },
+            {
+              "valor": "individual",
+              "label": "Algumas pessoas usam por conta própria"
+            },
+            {
+              "valor": "alguns_processos",
+              "label": "Temos alguns processos com IA"
+            },
+            {
+              "valor": "estruturado",
+              "label": "Temos uma estratégia estruturada"
+            }
+          ]
+        },
         {
           "id": "quem_decide",
           "tipo": "escolha_unica",
@@ -276,6 +322,25 @@
               "label": "Ainda não sei"
             }
           ]
+        },
+        {
+          "id": "prazo",
+          "tipo": "escolha_unica",
+          "texto": "Em que ritmo vocês querem começar?",
+          "opcoes": [
+            {
+              "valor": "rapido",
+              "label": "Uma vitória em até 30 dias"
+            },
+            {
+              "valor": "medio",
+              "label": "Projeto em 2 a 3 meses"
+            },
+            {
+              "valor": "explorando",
+              "label": "Ainda estou explorando"
+            }
+          ]
         }
       ]
     },
@@ -290,8 +355,8 @@
           "id": "dor_aberta",
           "tipo": "aberta",
           "opcional": true,
-          "texto": "Para fechar: conta com as suas palavras onde o tempo ou o dinheiro da empresa mais vaza e o que já tentaram para resolver.",
-          "dica": "Pode ser áudio ou texto, bem curto. Quanto mais detalhe, mais certeiro o seu Mapa de Gargalos e Oportunidades."
+          "texto": "Você apontou “{situacao_principal}” como o que mais pesa na {empresa}. Na sua visão, o que causa isso e o que vocês já tentaram para resolver?",
+          "dica": "Pode ser áudio ou texto, bem curto. Quanto mais detalhe, mais certeiro fica o seu Mapa de Gargalos e Oportunidades."
         }
       ]
     }
@@ -308,7 +373,7 @@
     "origem_cliente_anfitriao": "Preenchido pelo link/QR (ex.: ?anfitriao=slug), não perguntado."
   },
   "regras_pontuacao": {
-    "descricao": "Máximo de 10 perguntas. A pergunta 'situacoes' pede 3 situações (uma por gargalo) na ordem de importância: pesos 50, 35 e 25; a primeira é a maior dor (+20). O Mapa mostra exatamente esses gargalos. Impacto financeiro estimado = horas_perdidas x 4,3 semanas x custo/hora de referência, sempre como estimativa.",
+    "descricao": "Máximo de 13 perguntas. A pergunta 'situacoes' pede 3 situações (uma por gargalo) na ordem de importância: pesos 50, 35 e 25; a primeira é a maior dor (+20). O Mapa mostra exatamente esses gargalos. 'impacto' escolhe o texto de impacto de cada gargalo e 'prazo' favorece casos de implantação rápida. Impacto financeiro estimado = horas_perdidas x 4,3 semanas x custo/hora de referência, sempre como estimativa.",
     "area_para_gargalos": {
       "comercial": [
         "demanda_comercial"
