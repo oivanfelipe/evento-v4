@@ -36,9 +36,9 @@
       "titulo": "Vamos começar",
       "salvar_imediatamente": true,
       "abertura": [
-        "Oi! Eu sou o assistente da V4 Company.",
-        "Em 10 perguntas rápidas eu monto o seu Mapa de Gargalos e Oportunidades, com ideias reais de IA e automação e casos de quem já fez.",
-        "Ao continuar, você aceita que a V4 Company entre em contato sobre o seu resultado."
+        "Oi! Eu sou o assistente da V4 Carvalho.",
+        "Em 10 perguntas rápidas eu monto o Mapa de Gargalos e Oportunidades da sua empresa: onde o tempo e o dinheiro estão vazando e como outras empresas resolveram isso com IA e automação.",
+        "Ao continuar, você aceita que a V4 Carvalho entre em contato sobre o seu resultado."
       ],
       "perguntas": [
         {
@@ -150,23 +150,23 @@
           "opcoes": [
             {
               "valor": "capacidade",
-              "label": "A equipe vive no limite e os prazos escorregam"
+              "label": "O time vive no limite e os prazos escorregam"
             },
             {
               "valor": "manual_repetitivo",
-              "label": "Gente qualificada perde horas copiando e colando dados entre planilhas e sistemas"
+              "label": "Gente boa perde horas digitando, copiando e conferindo planilhas"
             },
             {
               "valor": "informacao",
-              "label": "Para achar um dado ou contrato, alguém precisa procurar em vários lugares"
+              "label": "Para achar um contrato ou um número, alguém precisa caçar em vários lugares"
             },
             {
               "valor": "decisao",
-              "label": "Temos os números, mas decidir demora ou exige várias reuniões"
+              "label": "Os números existem, mas decidir demora e vira reunião atrás de reunião"
             },
             {
               "valor": "processo",
-              "label": "Aprovações em cascata, retrabalho e etapas que ninguém sabe por que existem"
+              "label": "Aprovações em cascata e retrabalho: etapas que ninguém sabe por que existem"
             },
             {
               "valor": "integracao",
@@ -174,7 +174,7 @@
             },
             {
               "valor": "comunicacao",
-              "label": "A agenda vive tomada por alinhamentos e cobranças de status"
+              "label": "A agenda vive tomada por reunião de alinhamento e cobrança de status"
             },
             {
               "valor": "conhecimento",
@@ -182,11 +182,11 @@
             },
             {
               "valor": "controle",
-              "label": "Decidimos no feeling porque não existe um painel confiável"
+              "label": "Decidimos no feeling: não existe um painel confiável"
             },
             {
               "valor": "demanda_comercial",
-              "label": "Faltam oportunidades no funil, ou elas chegam e não viram venda"
+              "label": "Faltam oportunidades de venda, ou elas chegam e não viram contrato"
             }
           ],
           "min": 3
