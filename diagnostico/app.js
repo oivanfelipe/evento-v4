@@ -47,7 +47,11 @@ const montarDock = (...itens) => $dock.append(...itens.filter(Boolean));
 const limparDock = () => { if (gravacao) { gravacao.cancelar(); gravacao = null; } $dock.replaceChildren(); };
 const brl = (n) => n.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 const primeiroNome = () => (resp.nome || "").trim().split(/\s+/)[0] || "";
-const tpl = (t) => t.replace("{nome}", primeiroNome());
+const tpl = (t) => t
+  .replace("{nome}", primeiroNome())
+  .replace("{empresa}", resp.empresa || "empresa")
+  .replace("{total}", String(passos.length))
+  .replace("{situacao_principal}", (Array.isArray(resp.situacoes) && CURTO[resp.situacoes[0]]) || "o problema que você apontou");
 const sorteia = (a) => a[Math.floor(Math.random() * a.length)];
 const ICONES = {
   mic: '<svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>',
@@ -445,6 +449,7 @@ function renderMapa(m) {
       h("div", { class: "passo" }, h("h4", {}, "Oportunidade"), h("p", {}, i.oportunidade)),
       h("div", { class: "passo" }, h("h4", {}, "Onde aplicar IA e automação"), h("ul", {}, i.aplicacoes.map((a) => h("li", {}, a)))),
       h("div", { class: "passo" }, h("h4", {}, "Primeiro passo (próxima semana)"), h("p", {}, i.primeiro_passo)),
+      i.perguntas_time && i.perguntas_time.length ? h("div", { class: "passo" }, h("h4", {}, "Perguntas para você levar ao seu time"), h("p", { class: "dica-time" }, "Respondê-las com números é o jeito mais rápido de achar o valor real deste problema."), h("ol", {}, i.perguntas_time.map((q) => h("li", {}, q)))) : null,
       h("div", { class: "passo" }, h("h4", {}, "Quem já fez, com fonte"), i.casos.map(cartaoCaso)))),
     h("p", { class: "nota" }, "Os resultados dos casos foram reportados pelas próprias empresas ou fornecedores nas fontes indicadas e não são promessa de resultado. O texto deste Mapa foi " + (m.ia ? "personalizado com IA a partir" : "montado a partir") + " das suas respostas e do banco de casos da V4 Carvalho."),
     h("div", { class: "acoes" }, h("button", { class: "btn", type: "button", onclick: salvarPDF }, "Salvar em PDF")));
@@ -477,7 +482,7 @@ async function iniciar() {
   reenviarFila();
   $chat.append(h("div", { class: "capa" },
     h("h1", {}, "Onde a sua empresa trava?"),
-    h("p", {}, "Em 10 perguntas rápidas você recebe o seu Mapa de Gargalos e Oportunidades, com aplicações reais de IA e automação e casos de quem já fez.")));
+    h("p", {}, `Em ${passos.length} perguntas rápidas você recebe o seu Mapa de Gargalos e Oportunidades, com aplicações reais de IA e automação e casos de quem já fez.`)));
   montarDock(h("button", { class: "btn", type: "button", onclick: () => { $chat.replaceChildren(); proximo(); } }, "Começar"));
 }
 iniciar();

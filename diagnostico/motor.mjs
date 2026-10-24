@@ -100,6 +100,7 @@ export function montarMapa(resp, perguntas, casos) {
       impacto: base.impacto[impactoKey],
       oportunidade: base.oportunidade,
       aplicacoes: base.aplicacoes,
+      perguntas_time: base.perguntas_time || [],
       primeiro_passo: base.primeiro_passo,
       prioridade: prioridade(i, cs),
       casos: cs,

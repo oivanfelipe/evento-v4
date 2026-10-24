@@ -31,6 +31,7 @@ const ABERTAS = [
   // perguntas de versões anteriores do questionário (leads antigos)
   ["ultima_vez", "Última vez que custou caro"], ["ja_tentou", "O que já tentaram"], ["varinha", "Tarefa que automatizaria amanhã"], ["extra_final", "Recado final"],
 ];
+const GUIA = { rapido_confio: "Chega rápido e confia", demora_ou_duvida: "Demora ou desconfia", nunca_medi: "Nunca parou para medir", pessoas: "As pessoas", sistemas: "Os sistemas", caixa: "O caixa", nunca_pensei: "Nunca parou para pensar nisso" };
 let leads = [];
 
 // ---------- login ----------
@@ -78,7 +79,7 @@ async function carregarLeads() {
 
 // concluiu = chegou ao Mapa; parcial = parou no meio (o app guarda checkpoints); so_cadastro = só se identificou.
 const estado = (l) => (!l.resp ? "so_cadastro" : l.resp.mapa && Array.isArray(l.resp.mapa.itens) ? "concluiu" : "parcial");
-const ETAPA = { perfil: "o perfil da empresa", diagnostico: "as situações e as horas perdidas", decisao: "quem decide e o investimento", aprofundar: "a pergunta final" };
+const ETAPA = { perfil: "o perfil da empresa", reflexao: "as duas perguntas para pensar", diagnostico: "as situações e as horas perdidas", decisao: "quem decide e o investimento", aprofundar: "a pergunta final" };
 const gargaloReal = (r) => (r && GARGALOS[r.gargalo_principal] ? r.gargalo_principal : null);
 
 function top3(r) {
@@ -115,7 +116,7 @@ function detalhe(l) {
     ["E-mail", l.email || "—"], 
     ["Porte", a.porte], ["Setor", a.setor], ["Situações (em ordem)", Array.isArray(a.situacoes) ? a.situacoes.map(nomeGargalo).join(" › ") : null], ["Área com mais dor", a.area_dor], ["Maior dor", a.maior_dor ? nomeGargalo(a.maior_dor) : null],
     ["Faturamento", a.faturamento], ["Maturidade em IA", a.maturidade_ia],
-    ["Impacto", a.impacto], ["Horas perdidas/semana", a.horas_perdidas], ["Prazo", a.prazo],
+    ["Número importante da empresa", GUIA[a.guia_numero]], ["Se a demanda dobrar, quebra primeiro", GUIA[a.guia_demanda]], ["Impacto", a.impacto], ["Horas perdidas/semana", a.horas_perdidas], ["Prazo", a.prazo],
     ["Quem decide", a.quem_decide], ["Investimento mensal", a.investimento],
     ["Ferramentas", Array.isArray(a.ferramentas) ? a.ferramentas.join(", ") : a.ferramentas],
   ].filter(([, v]) => v != null && v !== "");
