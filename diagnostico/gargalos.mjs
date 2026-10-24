@@ -3,6 +3,11 @@
 
 export const GARGALOS = {
   capacidade: {
+    perguntas_time: [
+      "Quais prazos escorregaram no último mês e o que causou cada atraso?",
+      "Quanto do tempo do seu time vai para tarefas que se repetem toda semana?",
+      "Se entrasse um cliente grande amanhã, quem absorveria o trabalho e o que deixaria de ser feito?",
+    ],
     nome: "Capacidade",
     sintoma: "A equipe vive no limite e os prazos escorregam.",
     impacto: {
@@ -20,6 +25,11 @@ export const GARGALOS = {
     primeiro_passo: "Medir por uma semana quanto do volume é repetitivo e escolher o tipo de demanda mais frequente para automatizar primeiro.",
   },
   manual_repetitivo: {
+    perguntas_time: [
+      "Quais são as 5 tarefas que mais se repetem na semana, quem faz cada uma e quanto tempo leva?",
+      "Em quais delas alguém copia um dado de um lugar e cola em outro?",
+      "Quantos erros por mês nascem de digitação ou conferência manual, e quanto custa corrigir cada um?",
+    ],
     nome: "Manual e repetitivo",
     sintoma: "Gente qualificada gasta horas copiando, colando e digitando.",
     impacto: {
@@ -37,6 +47,11 @@ export const GARGALOS = {
     primeiro_passo: "Listar as 5 tarefas mais repetidas da semana e escolher a que tem entrada e saída mais padronizadas.",
   },
   informacao: {
+    perguntas_time: [
+      "Das perguntas que sua equipe faz todo dia (“cadê o contrato?”, “qual o status?”), quais se repetem mais?",
+      "Quanto tempo leva, na prática, para achar um documento ou dado importante?",
+      "Existe alguma informação que só uma pessoa sabe onde está?",
+    ],
     nome: "Informação",
     sintoma: "O dado existe, mas ninguém sabe onde.",
     impacto: {
@@ -54,6 +69,11 @@ export const GARGALOS = {
     primeiro_passo: "Escolher um tipo de pergunta que a equipe repete todo dia ('onde está o contrato X?') e montar um assistente só para ela.",
   },
   decisao: {
+    perguntas_time: [
+      "Qual foi a última decisão que demorou mais do que deveria e o que faltava para decidir?",
+      "Quantas reuniões foram necessárias e quem estava na mesa?",
+      "Quais 3 informações bastariam para decidir sem uma nova reunião?",
+    ],
     nome: "Decisão",
     sintoma: "Existe informação, mas decidir demora e exige várias reuniões.",
     impacto: {
@@ -71,6 +91,11 @@ export const GARGALOS = {
     primeiro_passo: "Escolher a decisão recorrente mais lenta e definir quais 3 informações bastam para tomá-la.",
   },
   processo: {
+    perguntas_time: [
+      "Pegue um pedido do começo ao fim: por quantas etapas e pessoas ele passa?",
+      "Quais etapas ninguém sabe justificar ou só existem por hábito?",
+      "Onde o trabalho volta para trás (retrabalho) e quantas vezes por mês isso acontece?",
+    ],
     nome: "Processo",
     sintoma: "Etapas demais, retrabalho e aprovações em cascata.",
     impacto: {
@@ -88,6 +113,11 @@ export const GARGALOS = {
     primeiro_passo: "Mapear um processo ponta a ponta com o tempo de cada etapa e cortar as duas etapas que ninguém sabe justificar.",
   },
   integracao: {
+    perguntas_time: [
+      "Quais sistemas sua equipe usa todo dia e quais deles não conversam entre si?",
+      "Quem faz a ponte na mão (exportar, importar, planilha) e quanto tempo isso leva por semana?",
+      "O que acontece quando o dado de um sistema chega errado no outro?",
+    ],
     nome: "Integração",
     sintoma: "Os sistemas não conversam e alguém faz a ponte manualmente.",
     impacto: {
@@ -105,6 +135,11 @@ export const GARGALOS = {
     primeiro_passo: "Achar o ponto onde alguém exporta/importa planilha toda semana e automatizar esse elo primeiro.",
   },
   comunicacao: {
+    perguntas_time: [
+      "Quantas horas por semana vão para reunião de alinhamento e cobrança de status?",
+      "Quais reuniões poderiam ser trocadas por um relatório automático?",
+      "Quantas vezes por dia alguém interrompe outra pessoa só para perguntar “como está isso?”",
+    ],
     nome: "Comunicação",
     sintoma: "A agenda é tomada por alinhamentos e cobranças de status.",
     impacto: {
@@ -122,6 +157,11 @@ export const GARGALOS = {
     primeiro_passo: "Eliminar uma reunião de status recorrente e substituí-la por um relatório automático semanal.",
   },
   conhecimento: {
+    perguntas_time: [
+      "Quais tarefas só uma ou duas pessoas sabem fazer?",
+      "Se uma delas saísse amanhã, quanto tempo levaria para outra assumir?",
+      "O jeito de fazer está escrito em algum lugar ou só na cabeça de quem faz?",
+    ],
     nome: "Conhecimento",
     sintoma: "Só uma ou duas pessoas sabem fazer determinadas coisas.",
     impacto: {
@@ -139,6 +179,11 @@ export const GARGALOS = {
     primeiro_passo: "Gravar 3 execuções reais da tarefa do especialista e transformá-las em procedimento com apoio de IA.",
   },
   controle: {
+    perguntas_time: [
+      "Quais 3 números você precisaria ver toda manhã e hoje não vê (ou vê atrasado)?",
+      "Quando você pede um relatório, quanto tempo leva e você confia nele?",
+      "Qual foi a última surpresa ruim que um painel teria avisado antes?",
+    ],
     nome: "Controle",
     sintoma: "Decisões no feeling, sem um painel confiável.",
     impacto: {
@@ -156,6 +201,11 @@ export const GARGALOS = {
     primeiro_passo: "Escolher 5 indicadores que o dono olharia toda segunda de manhã e automatizar a coleta deles.",
   },
   demanda_comercial: {
+    perguntas_time: [
+      "Dos últimos 10 contatos que chegaram querendo comprar, quantos foram respondidos em menos de 1 hora?",
+      "Quantos contatos ficaram sem retorno nos últimos 30 dias e quanto valia cada um?",
+      "Em que etapa do caminho até a venda mais gente desaparece?",
+    ],
     nome: "Demanda e comercial",
     sintoma: "Faltam oportunidades ou elas não viram venda por falta de follow-up.",
     impacto: {
